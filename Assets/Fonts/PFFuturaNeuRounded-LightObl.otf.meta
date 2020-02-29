@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 665cabf0e1115e14d9a7ea936d193507
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: PF FuturaNeu Rounded
+  fontNames:
+  - PF FuturaNeu Rounded
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 694afe33a365a8245a1fea7a18879d46, type: 3}
+  - {fileID: 12800000, guid: fca1130a344ec0f4995751f6c20b5074, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -16,11 +16,13 @@ namespace ARPolis.UI
         private void Awake()
         {
             OnIntroFinished += ShowMenu;
-            if (!B.isEditor) skipIntro = false;
+            AppManager.OnInit += StartIntro;
         }
 
-        void Start()
+        void StartIntro()
         {
+            if (!B.isEditor) skipIntro = false;
+
             if (skipIntro)
             {
                 ShowMenu();

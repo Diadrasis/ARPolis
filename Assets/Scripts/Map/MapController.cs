@@ -8,9 +8,9 @@ namespace ARPolis.Map
     public class MapController : MonoBehaviour
     {
 
-        private readonly string mapboxAccessToken = "pk.eyJ1IjoibWJlc3NhIiwiYSI6ImNrNXpheXJjajBkNmgzb3FnYnU1ZnlvcTgifQ.9BQc4FBIa6zvjYDIWO2Wew";
-        private readonly string mapboxMapId = "ck5zbgb6n3eq91jovzkesihm8";
-        private readonly string mapbocUserId = "mbessa";
+        //private readonly string mapboxAccessToken = "pk.eyJ1IjoibWJlc3NhIiwiYSI6ImNrNXpheXJjajBkNmgzb3FnYnU1ZnlvcTgifQ.9BQc4FBIa6zvjYDIWO2Wew";
+        //private readonly string mapboxMapId = "ck5zbgb6n3eq91jovzkesihm8";
+        //private readonly string mapbocUserId = "mbessa";
 
         //Athens
         Vector2 mapInitPos = new Vector2(23.6729876618352f, 37.8665345360163f);

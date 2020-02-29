@@ -2,49 +2,90 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class AutoFitToCanvas : MonoBehaviour {
+namespace ARPolis.UI
+{
 
-	public RectTransform target, father, kanvas;
-	public bool isWidthRelative, isHeightRelative;
-	//the size of canvas during development
-	private Vector2 initKanvasSize = new Vector2(1280f, 800f);
-	bool hasLayoutElement;
-	LayoutElement layOutElem;
+    public class AutoFitToCanvas : MonoBehaviour
+    {
 
-	void OnEnable () {
-		layOutElem = target.gameObject.GetComponent<LayoutElement>();
-		if(layOutElem != null && !hasLayoutElement){
-			hasLayoutElement=true;
-		}
+        public RectTransform target, kanvas;
+        public bool isWidthRelative, isHeightRelative;
+        //the size of canvas during development
+        public Vector2 initKanvasSize = new Vector2(1080f, 1920f);
+        bool hasLayoutElement;
+        LayoutElement layOutElem;
 
-		Vector2 size = target.sizeDelta;
-		
-		if(isWidthRelative){
+        private void OnEnable()
+        {
+            Init();
+        }
 
-			float val = (size.x / initKanvasSize.x) * target.sizeDelta.x;
+        [ContextMenu("Test Layout")]
+        void Init()
+        {
 
-			if(hasLayoutElement){
-				layOutElem.minWidth = val;
-				layOutElem.preferredWidth = val;
-			}else{
-				size.x = val ;
-			}
-		}
+            initKanvasSize = kanvas.sizeDelta;
 
-		if(isHeightRelative){
-			
-			float val = (size.y / initKanvasSize.y) * target.sizeDelta.y;
-			
-			if(hasLayoutElement){
-				layOutElem.minHeight = val;
-				layOutElem.preferredHeight = val;
-			}else{
-				size.y = val ;
-			}
-		}
 
-		target.sizeDelta = size;
-	}
-	
+            layOutElem = target.gameObject.GetComponent<LayoutElement>();
+            if (layOutElem != null && !hasLayoutElement)
+            {
+                hasLayoutElement = true;
+            }
+
+            Vector2 size = target.sizeDelta;
+
+            if (isWidthRelative)
+            {
+
+                float val = (size.x / initKanvasSize.x) * target.sizeDelta.x;
+
+                if (hasLayoutElement)
+                {
+                    layOutElem.minWidth = val;
+                    layOutElem.preferredWidth = val;
+                }
+                else
+                {
+                    size.x = val;
+                }
+            }
+
+            if (isHeightRelative)
+            {
+
+                float val = (size.y / initKanvasSize.y) * target.sizeDelta.y;
+
+                if (hasLayoutElement)
+                {
+                    layOutElem.minHeight = val;
+                    layOutElem.preferredHeight = val;
+                }
+                else
+                {
+                    size.y = val;
+                }
+            }
+
+            if (!isWidthRelative && !isHeightRelative)
+            {
+                target.sizeDelta = initKanvasSize;
+            }
+            else
+            {
+                target.sizeDelta = size;
+            }
+
+
+            ForceRebuildLayout();
+        }
+
+
+        void ForceRebuildLayout()
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(target);
+        }
+
+    }
 
 }

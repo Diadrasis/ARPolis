@@ -9,7 +9,6 @@ namespace ARPolis.UI
 {
 
     [RequireComponent(typeof(ScrollRect))]
-    [AddComponentMenu("Layout/Extensions/ARPolis/Custom Horizontal Scroll Snap")]
     public class ScrollSnapCustom : ScrollSnapBase, IEndDragHandler
     {
         bool hasInit;
@@ -34,6 +33,12 @@ namespace ARPolis.UI
                 panelDimensions = gameObject.GetComponent<RectTransform>().rect;
                 UpdateLayout();
             }
+        }
+
+        public void SetFirstPage()
+        {
+            GoToScreen(StartingScreen);
+            PrevButton.gameObject.SetActive(false);
         }
 
 

@@ -23,8 +23,8 @@ namespace ARPolis.UI
             UIController.OnMenuShow += ShowMenu;
 
             OnSiteManager.OnGpsOff += SetStatusOffSite;
-            OnSiteManager.OnFarAway += SetStatusOffSite;
-            OnSiteManager.OnCloseToPath += SetStatusOnSite;
+            OnSiteManager.OnGpsFar += SetStatusOffSite;
+            OnSiteManager.OnGpsClose += SetStatusOnSite;
 
             btnToggleSite.onClick.AddListener(() => ToggleSiteMode());
 
@@ -52,10 +52,14 @@ namespace ARPolis.UI
         void ShowButtons(bool val)
         {
             scrollRect.enabled = val;
-            if (val == false) snapCustom.Init();
+            snapCustom.Init();
+            snapCustom.SetFirstPage();
             snapCustom.enabled = val;
-            btnNextCity.SetActive(val);
-            btnPrevCity.SetActive(val);
+            if (val == false)
+            {
+                btnNextCity.SetActive(val);
+                btnPrevCity.SetActive(val);
+            }
         }
 
         void SetStatusOffSite()

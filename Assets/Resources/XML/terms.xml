@@ -1,0 +1,709 @@
+<terms version="2.1">
+	<term>
+		<name>internetError</name>
+		<value>
+			<gr><![CDATA[Παρακαλώ συνδεθείτε στο διαδίκτυο και ξαναπροσπαθήστε.]]></gr>
+			<en><![CDATA[Please check your internet connection and try again.]]></en>
+		</value>
+	</term>
+	<term>
+		<name>help_area</name>
+		<value>
+			<gr><![CDATA[Περιοχή\nενδιαφέροντος]]></gr>
+			<en><![CDATA[Region\nof interest]]></en>
+		</value>
+	</term>
+  <term>
+    <name>language</name>
+    <value>
+      <gr><![CDATA[Γλώσσα]]></gr>
+      <en><![CDATA[Language]]></en>
+    </value>
+  </term>
+	<term>
+		<name>popWait</name>
+		<value>
+			<gr>Παρακαλώ περιμένετε...</gr>
+			<en>Please wait...</en>
+		</value>
+	</term>
+	<term>
+		<name>helpHelp</name>
+		<value>
+			<gr>Βοήθεια</gr>
+			<en>Help</en>
+		</value>
+	</term>
+  <term>
+		<name>greditsHelp</name>
+		<value>
+			<gr>Συντελεστές</gr>
+			<en>Credits</en>
+		</value>
+	</term>
+	<term>
+		<name>TextButtonCancel</name>
+		<value>
+			<gr><![CDATA[Ακύρωση]]></gr>
+			<en><![CDATA[Cancel]]></en>
+		</value>
+	</term>
+	<term>
+		<name>TextButtonBuy</name>
+		<value>
+			<gr><![CDATA[Ξεκλείδωμα]]></gr>
+			<en><![CDATA[Unlock]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgCheckingGPSAccuracy</name>
+		<value>
+			<gr><![CDATA[Έλεγχος ακρίβειας GPS...]]></gr>
+			<en><![CDATA[Checking GPS accuracy...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgGPSInaccuracy</name>
+		<value>
+			<gr><![CDATA[Το GPS δεν είναι αρκετά ακριβές...]]></gr>
+			<en><![CDATA[GPS is not accurate...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgLocationNotInitilizedOnTime</name>
+		<value>
+			<gr><![CDATA[Ο εντοπισμός θέσης δεν έγινε έγκαιρα\nή δεν είναι διαθέσιμος...]]></gr>
+			<en><![CDATA[Location service has not initialized on time or is not available...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>cameraHelp</name>
+		<value>
+			<gr><![CDATA[Ρυθμίσεις κάμερας]]></gr>
+			<en><![CDATA[Camera settings]]></en>
+		</value>
+	</term>
+	<term>
+		<name>returnHelp</name>
+		<value>
+			<gr><![CDATA[Επιστροφή]]></gr>
+			<en><![CDATA[Return]]></en>
+		</value>
+	</term>
+	<term>
+		<name>mapHelp</name>
+		<value>
+			<gr><![CDATA[Χάρτης]]></gr>
+			<en><![CDATA[Map]]></en>
+		</value>
+	</term>
+	<term>
+		<name>menuGpsOFF_FirstMessage</name>
+		<value>
+			<gr><![CDATA[Το GPS είναι απενεργοποιημένο!\nΑν επιθυμείτε να πλοηγηθείτε επιτόπια,  ενεργοποιήστε το…]]></gr>
+			<en><![CDATA[GPS is disabled!\nIn order to navigate in onsite mode, you have to enable it…]]></en>
+		</value>
+	</term>
+	<term>
+		<name>term_OK</name>
+		<value>
+			<gr><![CDATA[Εντάξει]]></gr>
+			<en><![CDATA[OK]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgMenuGpsOffTitle</name>
+		<value>
+			<gr><![CDATA[To GPS είναι απενεργοποιημένο!]]></gr>
+			<en><![CDATA[The GPS is disabled!]]></en>
+		</value>
+	</term>
+  <term>
+    <name>msgMenuGpsOffDesc</name>
+    <value>
+      <gr><![CDATA[Μπορείτε να πλοηγηθείτε μόνο απομακρυσμένα…]]></gr>
+      <en><![CDATA[You can only navigate in offsite mode…]]></en>
+    </value>
+  </term>
+  <term>
+    <name>msgMenuGpsOffOpenSettings</name>
+    <value>
+      <gr><![CDATA[Ενεργοποίηση GPS]]></gr>
+      <en><![CDATA[Enable GPS]]></en>
+    </value>
+  </term>
+	<term>
+		<name>msgMenuGpsOnFar</name>
+		<value>
+			<gr><![CDATA[Είστε πολύ μακριά από τις ενεργές περιοχές!\nΜπορείτε να πλοηγηθείτε μόνο απομακρυσμένα…]]></gr>
+			<en><![CDATA[Your are too far from the active areas!\nYou can only navigate in offsite mode…]]></en>
+		</value>
+	</term>
+	<term>
+		<name>menuGpsOnNear</name>
+		<value>
+			<gr><![CDATA[Βρίσκεστε κοντά στις ενεργές περιοχές!\nMετακινηθείτε σε μια από αυτές για να μπορέσετε να πλοηγηθείτε επτόπια…Μέχρι τότε, μπορείτε να πλοηγηθείτε απομακρυσμένα…]]></gr>
+			<en><![CDATA[You are close to active areas!\nMove inside one of them in order  to be able to navigate in onsite mode…Until then, you can only navigate in offsite mode…]]></en>
+		</value>
+	</term>
+	<term>
+		<name>menuGpsOnInside</name>
+		<value>
+			<gr><![CDATA[Βρίσκεστε εντός ενεργής περιοχής, μπορείτε να πλοηγηθείτε επτόπια…]]></gr>
+			<en><![CDATA[You are inside an active area, you are able to navigate onsite ...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>fullMapHelp</name>
+		<value>
+			<gr><![CDATA[Επιλέξτε κάποιο σημείο της περιοχής...]]></gr>
+			<en><![CDATA[Choose a location...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>fullMapHelpOnSite</name>
+		<value>
+			<gr><![CDATA[Είστε εκτός ενεργής περιοχής.\nΜετακινηθείτε πιο κοντά.]]></gr>
+			<en><![CDATA[You are outside the active area.\nMove closer.]]></en>
+		</value>
+	</term>
+	<term>
+		<name>sceneHelp</name>
+		<value>
+			<gr><![CDATA[Επιλέξτε την περιοχή περιήγησης.]]></gr>
+			<en><![CDATA[Select the navigation area.]]></en>
+		</value>
+	</term>
+	<term>
+		<name>settingsHelp</name>
+		<value>
+			<gr><![CDATA[Ρυθμίσεις]]></gr>
+			<en><![CDATA[Settings]]></en>
+		</value>
+	</term>
+	<term>
+		<name>infoLabelHelp</name>
+		<value>
+			<gr><![CDATA[Περισσότερες πληροφορίες]]></gr>
+			<en><![CDATA[Μore info]]></en>
+		</value>
+	</term>
+	<term>
+		<name>quitWarning</name>
+		<value>
+			<gr><![CDATA[Έξοδος απο την εφαρμογή;]]></gr>
+			<en><![CDATA[Do you want to quit?]]></en>
+		</value>
+	</term>
+	<term>
+		<name>modeWarning</name>
+		<value>
+			<gr><![CDATA[Θέλετε επιτόπια περιήγση με τη χρήση GPS;]]></gr>
+			<en><![CDATA[Do you want onsite GPS navigation?]]></en>
+		</value>
+	</term>
+	<term>
+		<name>modeOnSiteWarning</name>
+		<value>
+			<gr><![CDATA[Επιθυμείτε την χρήση της κάμερας;]]></gr>
+			<en><![CDATA[Do you want to use camera?]]></en>
+		</value>
+	</term>
+	<term>
+		<name>userLabel</name>
+		<value>
+			<gr><![CDATA[Βρίσκεσαι εδώ]]></gr>
+			<en><![CDATA[You are here]]></en>
+		</value>
+	</term>
+	<term>
+		<name>navText</name>
+		<value>
+			<gr><![CDATA[χρήση GPS]]></gr>
+			<en><![CDATA[use GPS]]></en>
+		</value>
+	</term>
+	<term>
+		<name>gpsAlert_Title</name>
+		<value>
+			<gr><![CDATA[Προσοχή: Ο εντοπισμός θέσης είναι ανενεργός!]]></gr>
+			<en><![CDATA[Alert: Location service is disabled!]]></en>
+		</value>
+	</term>
+	<term>
+		<name>gpsAlert_Message</name>
+		<value>
+			<gr><![CDATA[Το GPS είναι απενεργοποιημένο, θέλετε να το ενεργοποιήσετε;]]></gr>
+			<en><![CDATA[GPS seems to be disabled, do you want to enable it?]]></en>
+		</value>
+	</term>
+	<term>
+		<name>gpsAlert_ButtonYes</name>
+		<value>
+			<gr><![CDATA[Ναι]]></gr>
+			<en><![CDATA[Yes]]></en>
+		</value>
+	</term>
+	<term>
+		<name>gpsAlert_ButtonNo</name>
+		<value>
+			<gr><![CDATA[Όχι]]></gr>
+			<en><![CDATA[No]]></en>
+		</value>
+	</term>
+	<term>
+		<name>onSiteFlyMode</name>
+		<value>
+			<gr><![CDATA[Επιτόπια Εναέρια]]></gr>
+			<en><![CDATA[On Site Fly Over]]></en>
+		</value>
+	</term>
+	<term>
+		<name>extraModes</name>
+		<value>
+			<gr><![CDATA[Επιπλέον τρόποι πλοήγησης]]></gr>
+			<en><![CDATA[Show extra mode options]]></en>
+		</value>
+	</term>
+	<term>
+		<name>textSpeed</name>
+		<value>
+			<gr><![CDATA[Ταχύτητα Κίνησης]]></gr>
+			<en><![CDATA[Walking speed]]></en>
+		</value>
+	</term>
+	<term>
+		<name>flyHeight</name>
+		<value>
+			<gr><![CDATA[Υψόμετρο]]></gr>
+			<en><![CDATA[Altitude]]></en>
+		</value>
+	</term>
+	<term>
+		<name>flySpeed</name>
+		<value>
+			<gr><![CDATA[Ταχύτητα στον Αέρα]]></gr>
+			<en><![CDATA[Fly Speed]]></en>
+		</value>
+	</term>
+	<term>
+		<name>gpsAccuracy</name>
+		<value>
+			<gr><![CDATA[Ελάχιστη απαιτούμενη ακρίβεια gps]]></gr>
+			<en><![CDATA[Minimum required gps accuracy]]></en>
+		</value>
+	</term>
+	<term>
+		<name>textSelectLanguange</name>
+		<value>
+			<gr><![CDATA[Επιλογή Γλώσσας]]></gr>
+			<en><![CDATA[Select Language]]></en>
+		</value>
+	</term>
+	<term>
+		<name>textFontSize</name>
+		<value>
+			<gr><![CDATA[Μέγεθος Γραμμάτων]]></gr>
+			<en><![CDATA[Font Size]]></en>
+		</value>
+	</term>
+	<term>
+		<name>textFontType</name>
+		<value>
+			<gr><![CDATA[Γραμματοσειρά]]></gr>
+			<en><![CDATA[Font]]></en>
+		</value>
+	</term>
+	<term>
+		<name>textFontStyle</name>
+		<value>
+			<gr><![CDATA[Στυλ Γραμμάτων]]></gr>
+			<en><![CDATA[Font Style]]></en>
+		</value>
+	</term>
+	<term>
+		<name>textLineSpacing</name>
+		<value>
+			<gr><![CDATA[Κενό Γραμμάτων]]></gr>
+			<en><![CDATA[Letter Spacing]]></en>
+		</value>
+	</term>
+	<term>
+		<name>choosePeriod</name>
+		<value>
+			<gr><![CDATA[]]></gr>
+			<en><![CDATA[]]></en>
+		</value>
+	</term>
+	<term>
+		<name>chooseMode</name>
+		<value>
+			<gr><![CDATA[Επιλέξτε Τρόπο Πλοήγησης]]></gr>
+			<en><![CDATA[Select Navigation Mode]]></en>
+		</value>
+	</term>
+	<term>
+		<name>onSiteMode</name>
+		<value>
+			<gr><![CDATA[Επιτόπια]]></gr>
+			<en><![CDATA[On Site]]></en>
+		</value>
+	</term>
+	<term>
+		<name>onSiteMockMode</name>
+		<value>
+			<gr><![CDATA[Εικονική]]></gr>
+			<en><![CDATA[Virtual]]></en>
+		</value>
+	</term>
+	<term>
+		<name>offSiteMode</name>
+		<value>
+			<gr><![CDATA[Επίγεια]]></gr>
+			<en><![CDATA[Ground]]></en>
+		</value>
+	</term>
+	<term>
+		<name>flyMode</name>
+		<value>
+			<gr><![CDATA[Εναέρια]]></gr>
+			<en><![CDATA[Fly Over]]></en>
+		</value>
+	</term>
+	<term>
+		<name>tourMode</name>
+		<value>
+			<gr><![CDATA[Ξενάγηση]]></gr>
+			<en><![CDATA[Tour]]></en>
+		</value>
+	</term>
+	<term>
+		<name>checkGPSMode</name>
+		<value>
+			<gr><![CDATA[έλεγχος GPS]]></gr>
+			<en><![CDATA[check GPS]]></en>
+		</value>
+	</term>
+	<term>
+		<name>settingsMenuText</name>
+		<value>
+			<gr><![CDATA[Επιλέξτε γλώσσα και μέγεθος  γραμματοσειράς]]></gr>
+			<en><![CDATA[Select language and font size]]></en>
+		</value>
+	</term>
+	<term>
+		<name>webHelpHint</name>
+		<value>
+			<gr><![CDATA[Χρησιμοποιήστε το πληκτρολόγιο και το ποντίκι για να πλοηγηθείτε]]></gr>
+			<en><![CDATA[Use your keyboard arrow keys to move in the and the mouse to look around]]></en>
+		</value>
+	</term>
+	<term>
+		<name>restrictedAreaHelpText</name>
+		<value>
+			<gr><![CDATA[Βρίσκεστε εκτός ενεργής περιοχής.]]></gr>
+			<en><![CDATA[You are outside the active area.]]></en>
+		</value>
+	</term>
+	<term>
+		<name>fieldOfViewHelpText</name>
+		<value>
+			<gr><![CDATA[Πεδίο θέασης]]></gr>
+			<en><![CDATA[Field of View]]></en>
+		</value>
+	</term>
+	<term>
+		<name>horAngleHelpText</name>
+		<value>
+			<gr><![CDATA[Οριζόντια Γωνία]]></gr>
+			<en><![CDATA[Horizontal Angle]]></en>
+		</value>
+	</term>
+	<term>
+		<name>vertAngleHelpText</name>
+		<value>
+			<gr><![CDATA[Κάθετη Γωνία]]></gr>
+			<en><![CDATA[Vertical Angle]]></en>
+		</value>
+	</term>
+	<term>
+		<name>compassTurnSpeedText</name>
+		<value>
+			<gr><![CDATA[Ταχύτητα περιστροφής Υ]]></gr>
+			<en><![CDATA[Rotation speed Y]]></en>
+		</value>
+	</term>
+	<term>
+		<name>sensitivityOffsetHelpText</name>
+		<value>
+			<gr><![CDATA[Ευαισθησία]]></gr>
+			<en><![CDATA[Sensitivity]]></en>
+		</value>
+	</term>
+	<term>
+		<name>buttonResetSensor</name>
+		<value>
+			<gr><![CDATA[Επαναφορά αισθητήρα]]></gr>
+			<en><![CDATA[Reset sensors]]></en>
+		</value>
+	</term>
+	<term>
+		<name>joyRightSensitivityHelpText</name>
+		<value>
+			<gr><![CDATA[Ευαισθησία χειριστήριου]]></gr>
+			<en><![CDATA[Joystick sensitivity]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgLoading</name>
+		<value>
+			<gr><![CDATA[Φορτώνει...]]></gr>
+			<en><![CDATA[Loading...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgLoadingScene</name>
+		<value>
+			<gr><![CDATA[Η σκηνή φορτώνει...]]></gr>
+			<en><![CDATA[Loading scene...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgInitialising</name>
+		<value>
+			<gr><![CDATA[Προσπάθεια εντοπισμού θέσης...]]></gr>
+			<en><![CDATA[Initializing...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgInitialised</name>
+		<value>
+			<gr><![CDATA[Θέση εντοπίστηκε...]]></gr>
+			<en><![CDATA[Initialized...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgOK</name>
+		<value>
+			<gr><![CDATA[OK...]]></gr>
+			<en><![CDATA[OK...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgChecking</name>
+		<value>
+			<gr><![CDATA[Έλεγχος συσκευής...]]></gr>
+			<en><![CDATA[Checking device...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgGyroIsSupported</name>
+		<value>
+			<gr><![CDATA[Γυροσκόπιο σε λειτουργία...]]></gr>
+			<en><![CDATA[Gyroscope...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgGyroNotSupported</name>
+		<value>
+			<gr><![CDATA[Η συσκευή δεν υποστηρίζει γυροσκόπιο και η επιτόπια πλοήγηση δεν μπορεί να λειτουργήσει...]]></gr>
+			<en><![CDATA[The device does not have a gyroscope so the onsite mode cannot be activated...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgGyroOptionsDisabled</name>
+		<value>
+			<gr><![CDATA[Οι ρυθμίσεις γυροσκοπίου έχουν απενεργοποιηθεί...]]></gr>
+			<en><![CDATA[Gyro enabled options have been disabled...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgCheckingLocServices</name>
+		<value>
+			<gr><![CDATA[Έλεγχος δυνατότητας εντοπισμού θέσης...]]></gr>
+			<en><![CDATA[Checking location service...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgGPSIsSupported</name>
+		<value>
+			<gr><![CDATA[Διαθέσιμο σύστημα εντοπισμού θέσης. ...]]></gr>
+			<en><![CDATA[Location services are supported...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgGPSNotSupported</name>
+		<value>
+			<gr><![CDATA[Η συσκευή δεν διαθέτει σύστημα εντοπισμού θέσης...]]></gr>
+			<en><![CDATA[The device does not support location services...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgGPSIsActivated</name>
+		<value>
+			<gr><![CDATA[Το σύστημα εντοπισμού θέσης είναι ενεργοποιημένο...]]></gr>
+			<en><![CDATA[Location services have been activated ...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgGPSNotActivated</name>
+		<value>
+			<gr><![CDATA[Το σύστημα εντοπισμού θέσης δεν είναι ενεργοποιημένο...]]></gr>
+			<en><![CDATA[Location services are not activeted...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgTryingToFindLocation</name>
+		<value>
+			<gr><![CDATA[Προσπάθεια εντοπισμού θέσης...]]></gr>
+			<en><![CDATA[Trying to find location...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgCheckingDistance</name>
+		<value>
+			<gr><![CDATA[Έλεγχος απόστασης από την ενεργή περιοχή...]]></gr>
+			<en><![CDATA[Checking distance from active area...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgDistance</name>
+		<value>
+			<gr><![CDATA[Απόσταση από σημείο αναφοράς:]]></gr>
+			<en><![CDATA[Distance from reference point:]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgMaxDistance</name>
+		<value>
+			<gr><![CDATA[μέγιστη αποδεκτή απόσταση:]]></gr>
+			<en><![CDATA[maximum accepted distance:]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgGPSOutOfArea</name>
+		<value>
+			<gr><![CDATA[Βρίσκεστε εκτός της ενεργής περιοχής...]]></gr>
+			<en><![CDATA[You are outside the active area...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgGPSInArea</name>
+		<value>
+			<gr><![CDATA[Η συσκευή βρίσκεται εντός της ενεργής περιοχής...]]></gr>
+			<en><![CDATA[The device is in the active area...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgAccuracy</name>
+		<value>
+			<gr><![CDATA[Ακρίβεια θέσης:]]></gr>
+			<en><![CDATA[Position accuracy:]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgGPSAccuracy</name>
+		<value>
+			<gr><![CDATA[Το σήμα είναι ακριβές...]]></gr>
+			<en><![CDATA[GPS is  accurate...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgLocationOptionsDisabled</name>
+		<value>
+			<gr><![CDATA[Οι δυνατότητες της εφαρμογής που προϋποθέτουν τον εντοπισμό θέσης έχουν απενεργοποιηθεί...]]></gr>
+			<en><![CDATA[Location enabled options have been disabled...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgFail</name>
+		<value>
+			<gr><![CDATA[Ο εντοπισμός θέσης απέτυχε...]]></gr>
+			<en><![CDATA[Starting location services failed...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgLocationInitilized</name>
+		<value>
+			<gr><![CDATA[Η θέση εντοπίστηκε......]]></gr>
+			<en><![CDATA[Your location found...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgLocationNotInitilized</name>
+		<value>
+			<gr><![CDATA[Ο εντοπισμός θέσης απέτυχε...]]></gr>
+			<en><![CDATA[Starting location services failed...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgCheckingConnection</name>
+		<value>
+			<gr><![CDATA[Έλεγχος σύνδεσης......]]></gr>
+			<en><![CDATA[Checking Connection...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgWait</name>
+		<value>
+			<gr><![CDATA[Αναμονή για εκκίνηση...]]></gr>
+			<en><![CDATA[Wait to start...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgWaitCompleted</name>
+		<value>
+			<gr><![CDATA[Ολοκλήρωση αναμονής...]]></gr>
+			<en><![CDATA[Waiting time completed...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgShowMap</name>
+		<value>
+			<gr><![CDATA[Εμφάνιση xάρτη]]></gr>
+			<en><![CDATA[Show map]]></en>
+		</value>
+	</term>
+	<term>
+		<name>gpsTourHint</name>
+		<value>
+			<gr><![CDATA[Δοκιμη gps]]></gr>
+			<en><![CDATA[gps test]]></en>
+		</value>
+	</term>
+	<term>
+		<name>textSnapPath</name>
+		<value>
+			<gr><![CDATA[Κίνηση σε Μονοπάτι]]></gr>
+			<en><![CDATA[Snap to Path]]></en>
+		</value>
+	</term>
+	<term>
+		<name>textPathDistance</name>
+		<value>
+			<gr><![CDATA[Απόσταση απο Μονοπάτι]]></gr>
+			<en><![CDATA[Distance from Path]]></en>
+		</value>
+	</term>
+	<term>
+		<name>snapToPathDistanceGround</name>
+		<value>
+			<gr><![CDATA[Μέγιστη απόσταση απο Μονοπάτι]]></gr>
+			<en><![CDATA[max Distance to Path]]></en>
+		</value>
+	</term>
+	<term>
+		<name>textOffset_X</name>
+		<value>
+			<gr><![CDATA[Απόκλιση gps Χ]]></gr>
+			<en><![CDATA[Offset X gps]]></en>
+		</value>
+	</term>
+	<term>
+		<name>textOffset_Y</name>
+		<value>
+			<gr><![CDATA[Απόκλιση gps Y]]></gr>
+			<en><![CDATA[Offset Y gps]]></en>
+		</value>
+	</term>
+</terms>

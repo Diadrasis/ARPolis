@@ -1,6 +1,6 @@
 ﻿
 
-namespace Stathis.Android
+namespace ARPolis.Android
 {
 
     public static class IntentNames

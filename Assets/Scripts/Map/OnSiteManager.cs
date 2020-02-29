@@ -13,7 +13,7 @@ namespace ARPolis.Map
 
         //manage on site logic and ui messages
         public delegate void ActionMessages();
-        public static ActionMessages OnFarAway, OnCloseToPath, OnCloseToPointOnPath, OnGpsOn, OnGpsOff;
+        public static ActionMessages OnGpsFar, OnGpsClose, OnCloseToPointOnPath, OnGpsOn, OnGpsOff;
 
         public float maxKmDistanceForOnSiteMode = 5f;
 
@@ -24,7 +24,7 @@ namespace ARPolis.Map
 
         public Vector2 userPosition;
         //PathInfoManager pathInfoManager;
-        CustomMarkerGUI markerOnNearestPath;
+        //CustomMarkerGUI markerOnNearestPath;
         MapController mapController;
 
         private void Awake()
@@ -87,10 +87,10 @@ namespace ARPolis.Map
             return OnlineMapsUtils.DistanceBetweenPoints(pA, pB).magnitude;
         }
 
-        void RemovePointOnNearestPath()
-        {
-            CustomMarkerEngineGUI.RemoveMarker(markerOnNearestPath);
-        }
+        //void RemovePointOnNearestPath()
+        //{
+        //    CustomMarkerEngineGUI.RemoveMarker(markerOnNearestPath);
+        //}
 
         void CheckSiteMode()
         {
@@ -105,17 +105,20 @@ namespace ARPolis.Map
             //if distance is more than 10km
             if (dist > maxKmDistanceForOnSiteMode)
             {
-                OnFarAway?.Invoke();
+                OnGpsFar?.Invoke();
                 siteMode = SiteMode.FAR;
                 //message far away
                 if (B.isEditor) Debug.Log("GPS FAR");
                 return;
             }
 
-            OnCloseToPath?.Invoke();
+            OnGpsClose?.Invoke();
             siteMode = SiteMode.NEAR;
             if (B.isEditor) Debug.Log("GPS CLOSE");
         }
+
+        #region Just Test
+        /*
 
         void SearchNearestPath()
         {
@@ -182,7 +185,8 @@ namespace ARPolis.Map
 
         }
 
-
+        */
+        #endregion
     }
 
 }

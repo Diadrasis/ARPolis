@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Stathis.Android
+namespace ARPolis.Android
 {
     public static class AndroidBridge
     {
