@@ -15,7 +15,7 @@ using System.Linq;
 using UnityEngine.Video;
 using System.Threading;
 
-namespace Stathis
+namespace StaGeUnityTools
 {
 	public class Methods : MonoBehaviour
 	{
@@ -1237,30 +1237,77 @@ namespace Stathis
 
 		public enum Mode
 		{
+            none,
 			center,
-			down,
-			up,
-			left,
-			right}
-
-		;
-
-		static float x, y;
+			downCenter,
+            downLeft,
+            downRight,
+			upCenter,
+            upLeft,
+            upRight,
+			leftCenter,
+			rightCenter
+        };
 
 		public static void Move (RectTransform rt, Mode mode)
 		{
-			if (mode == Mode.center) {
+            float x=0.5f, y=0.5f;
+
+            switch (mode)
+            {
+                case Mode.none:
+                    return;
+                case Mode.center:
+                    x = y = 0.5f;
+                    break;
+                case Mode.downCenter:
+                    x = 0.5f;
+                    y = 0f;
+                    break;
+                case Mode.downLeft:
+                    x = 0.0f;
+                    y = 0f;
+                    break;
+                case Mode.downRight:
+                    x = 1.0f;
+                    y = 0.0f;
+                    break;
+                case Mode.upCenter:
+                    x = 0.5f;
+                    y = 1f;
+                    break;
+                case Mode.upLeft:
+                    x = 0.0f;
+                    y = 1f;
+                    break;
+                case Mode.upRight:
+                    x = 1f;
+                    y = 1f;
+                    break;
+                case Mode.leftCenter:
+                    x = 0f;
+                    y = 0.5f;
+                    break;
+                case Mode.rightCenter:
+                    x = 1f;
+                    y = 0.5f;
+                    break;
+                default:
+                    return;
+            }
+
+            if (mode == Mode.center) {
 				x = y = 0.5f;
-			} else if (mode == Mode.down) {
+			} else if (mode == Mode.downCenter) {
 				x = 0.5f;
 				y = 0f;
-			} else if (mode == Mode.up) {
+			} else if (mode == Mode.upCenter) {
 				x = 0.5f;
 				y = 1f;
-			} else if (mode == Mode.left) {
+			} else if (mode == Mode.leftCenter) {
 				x = 0f;
 				y = 0.5f;
-			} else if (mode == Mode.right) {
+			} else if (mode == Mode.rightCenter) {
 				x = 1f;
 				y = 0.5f;
 			}
@@ -1270,9 +1317,9 @@ namespace Stathis
 			rt.pivot = val;
 			rt.anchorMin = val; 
 			rt.anchorMax = val;
-		}
+        }
 
-		public static bool hasChangedSizeDelta (Vector2 currentSize, Vector2 prevFrameSize)
+        public static bool hasChangedSizeDelta (Vector2 currentSize, Vector2 prevFrameSize)
 		{
 			if (prevFrameSize != currentSize) {
 				return true;
@@ -1360,34 +1407,34 @@ namespace Stathis
 			#endif
 		}
 
-		#endregion
+        #endregion
 
 
-		//		public static Rect GetScreenRect(RectTransform rectTransform, Canvas canvas) {
-		//
-		//			Vector3[] corners = new Vector3[4];
-		//			Vector3[] screenCorners = new Vector3[2];
-		//
-		//			rectTransform.GetWorldCorners(corners);
-		//
-		//			if (canvas.renderMode == RenderMode.ScreenSpaceCamera || canvas.renderMode == RenderMode.WorldSpace)
-		//			{
-		//				screenCorners[0] = RectTransformUtility.WorldToScreenPoint(canvas.worldCamera, corners[1]);
-		//				screenCorners[1] = RectTransformUtility.WorldToScreenPoint(canvas.worldCamera, corners[3]);
-		//			}
-		//			else
-		//			{
-		//				screenCorners[0] = RectTransformUtility.WorldToScreenPoint(null, corners[1]);
-		//				screenCorners[1] = RectTransformUtility.WorldToScreenPoint(null, corners[3]);
-		//			}
-		//
-		//			screenCorners[0].y = Screen.height - screenCorners[0].y;
-		//			screenCorners[1].y = Screen.height - screenCorners[1].y;
-		//
-		//			return new Rect(screenCorners[0], screenCorners[1] - screenCorners[0]);
-		//		}
-	}
-	
-	#endregion
+        //		public static Rect GetScreenRect(RectTransform rectTransform, Canvas canvas) {
+        //
+        //			Vector3[] corners = new Vector3[4];
+        //			Vector3[] screenCorners = new Vector3[2];
+        //
+        //			rectTransform.GetWorldCorners(corners);
+        //
+        //			if (canvas.renderMode == RenderMode.ScreenSpaceCamera || canvas.renderMode == RenderMode.WorldSpace)
+        //			{
+        //				screenCorners[0] = RectTransformUtility.WorldToScreenPoint(canvas.worldCamera, corners[1]);
+        //				screenCorners[1] = RectTransformUtility.WorldToScreenPoint(canvas.worldCamera, corners[3]);
+        //			}
+        //			else
+        //			{
+        //				screenCorners[0] = RectTransformUtility.WorldToScreenPoint(null, corners[1]);
+        //				screenCorners[1] = RectTransformUtility.WorldToScreenPoint(null, corners[3]);
+        //			}
+        //
+        //			screenCorners[0].y = Screen.height - screenCorners[0].y;
+        //			screenCorners[1].y = Screen.height - screenCorners[1].y;
+        //
+        //			return new Rect(screenCorners[0], screenCorners[1] - screenCorners[0]);
+        //		}
+    }
+
+    #endregion
 
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace StaGe
+namespace StaGeUnityTools
 {
     
     public class PanelSize : MonoBehaviour

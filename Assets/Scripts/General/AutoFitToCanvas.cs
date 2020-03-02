@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-namespace ARPolis.UI
+namespace StaGeUnityTools
 {
 
     public class AutoFitToCanvas : MonoBehaviour
@@ -10,22 +10,44 @@ namespace ARPolis.UI
 
         public RectTransform target, kanvas;
         public bool isWidthRelative, isHeightRelative;
+
+        [HideInInspector]
+        public float widthPercent, heightPercent;
+
+        public float WidthFinal
+        {
+            get { return (kanvas.sizeDelta.x * widthPercent) / 100f; }
+        }
+
+        public float HeightFinal
+        {
+            get { return (kanvas.sizeDelta.y * heightPercent) / 100f; }
+        }
+
+        public bool isMovable;
+
         //the size of canvas during development
-        public Vector2 initKanvasSize = new Vector2(1080f, 1920f);
+        Vector2 initKanvasSize;// = new Vector2(1080f, 1920f);
         bool hasLayoutElement;
         LayoutElement layOutElem;
 
+        public StaGeUnityTools.Tools_UI.Mode sideMode = StaGeUnityTools.Tools_UI.Mode.none;
+
+        //offset
+
         private void OnEnable()
         {
+            
             Init();
         }
 
         [ContextMenu("Test Layout")]
-        void Init()
+        public void Init()
         {
+            if (target == null) target = GetComponent<RectTransform>();
+            if (kanvas == null) kanvas = FindObjectOfType<Canvas>().GetComponent<RectTransform>();
 
             initKanvasSize = kanvas.sizeDelta;
-
 
             layOutElem = target.gameObject.GetComponent<LayoutElement>();
             if (layOutElem != null && !hasLayoutElement)
@@ -33,7 +55,10 @@ namespace ARPolis.UI
                 hasLayoutElement = true;
             }
 
-            Vector2 size = target.sizeDelta;
+            Vector2 size = initKanvasSize;
+
+            if (widthPercent > 0) size.x = (size.x * widthPercent) / 100f;
+            if (heightPercent > 0) size.y = (size.y * heightPercent) / 100f;
 
             if (isWidthRelative)
             {
@@ -66,18 +91,22 @@ namespace ARPolis.UI
                     size.y = val;
                 }
             }
+            
+            target.sizeDelta = size;
 
-            if (!isWidthRelative && !isHeightRelative)
-            {
-                target.sizeDelta = initKanvasSize;
-            }
-            else
-            {
-                target.sizeDelta = size;
-            }
+            StaGeUnityTools.Tools_UI.Move(target, sideMode);
 
+            target.anchoredPosition = Vector3.zero;
 
             ForceRebuildLayout();
+
+            if (isMovable)
+            {
+                PanelTransitionClass transitionClass = target.gameObject.GetComponent<PanelTransitionClass>();
+                if(transitionClass==null) transitionClass = target.gameObject.AddComponent<PanelTransitionClass>();
+                transitionClass.targetRect = target;
+                transitionClass.sideMode = sideMode;
+            }
         }
 
 
