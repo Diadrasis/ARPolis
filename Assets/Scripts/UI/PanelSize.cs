@@ -148,7 +148,9 @@ namespace StaGeUnityTools
         {
             if (isMoving) yield break;
             isMoving = true;
-            if (B.isEditor) Debug.LogWarning("HideFullLerpPanel");
+
+            if (B.isRealEditor) Debug.LogWarning("HideFullLerpPanel");
+
             while (Vector2.Distance(poiPanel.anchoredPosition, Vector2.zero) > 10f)
             {
                 poiPanel.anchoredPosition = Vector2.Lerp(poiPanel.anchoredPosition, Vector2.zero, Time.deltaTime * moveSpeed);

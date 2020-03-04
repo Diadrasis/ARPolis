@@ -65,7 +65,7 @@ namespace ARPolis.Info
                 textTerms.Add(myTerm);
             }
 
-            if (B.isEditor) Debug.LogWarning("terms are " + textTerms.Count.ToString());
+            if (B.isRealEditor) Debug.LogWarning("terms are " + textTerms.Count.ToString());
 
             OnDataRead?.Invoke();
 

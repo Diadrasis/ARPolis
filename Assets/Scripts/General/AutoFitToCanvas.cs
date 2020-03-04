@@ -24,7 +24,7 @@ namespace StaGeUnityTools
             get { return (kanvas.sizeDelta.y * heightPercent) / 100f; }
         }
 
-        public bool isMovable;
+        public bool isMovable, isVisibleOnStart;
 
         //the size of canvas during development
         Vector2 initKanvasSize;// = new Vector2(1080f, 1920f);
@@ -35,13 +35,11 @@ namespace StaGeUnityTools
 
         //offset
 
-        private void OnEnable()
+        private void Start()
         {
-            
             Init();
         }
 
-        [ContextMenu("Test Layout")]
         public void Init()
         {
             if (target == null) target = GetComponent<RectTransform>();
@@ -103,9 +101,10 @@ namespace StaGeUnityTools
             if (isMovable)
             {
                 PanelTransitionClass transitionClass = target.gameObject.GetComponent<PanelTransitionClass>();
+
                 if(transitionClass==null) transitionClass = target.gameObject.AddComponent<PanelTransitionClass>();
-                transitionClass.targetRect = target;
-                transitionClass.sideMode = sideMode;
+
+                transitionClass.Init(target, sideMode, isVisibleOnStart);
             }
         }
 

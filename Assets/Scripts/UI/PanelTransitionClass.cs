@@ -20,8 +20,94 @@ namespace StaGeUnityTools
         [Header("Custom Move Speed")]
         public float moveSpeedCustom = 250f;
 
-        [ContextMenu("HidePanel")]
-        void HidePanel()
+        Vector2 panelInitPosition, panelHiddenPosition;
+
+        public void Init(RectTransform rect, Tools_UI.Mode mode, bool isVisibleAtStart)
+        {
+            panelInitPosition = targetRect.anchoredPosition;
+            targetRect = rect;
+            sideMode = mode;
+            panelHiddenPosition = HidePosition();
+            CalculateSpeed();
+
+
+            if (!isVisibleAtStart)
+            {
+                if (B.isEditor)
+                {
+                    HidePanel();
+                }
+                else
+                {
+                    targetRect.anchoredPosition = panelHiddenPosition;
+                }
+            }
+        }
+
+        public void TogglePanelAppearance()
+        {
+            if(targetRect.anchoredPosition == panelHiddenPosition) { ShowPanel(); } else { HidePanel(); }
+        }
+
+        public void HidePanel()
+        {
+            StartCoroutine(HideLerpPanel());
+        }
+        
+        IEnumerator HideLerpPanel()
+        {
+            yield return new WaitForEndOfFrame();
+            while (Vector2.Distance(targetRect.anchoredPosition, panelHiddenPosition) > 10f)
+            {
+                targetRect.anchoredPosition = Vector2.MoveTowards(targetRect.anchoredPosition, panelHiddenPosition, Time.smoothDeltaTime * moveSpeedCustom);
+                yield return null;
+            }
+            targetRect.anchoredPosition = panelHiddenPosition;
+
+            yield break;
+        }
+
+        public void ShowPanel()
+        {
+            StartCoroutine(ShowLerpPanel());
+        }
+
+        IEnumerator ShowLerpPanel()
+        {
+            yield return new WaitForEndOfFrame();
+            while (Vector2.Distance(targetRect.anchoredPosition, panelInitPosition) > 10f)
+            {
+                targetRect.anchoredPosition = Vector2.MoveTowards(targetRect.anchoredPosition, panelInitPosition, Time.smoothDeltaTime * moveSpeedCustom);
+                yield return null;
+            }
+            targetRect.anchoredPosition = panelInitPosition;
+
+            yield break;
+        }
+
+        void CalculateSpeed()
+        {
+            //auto set speed from width
+            if (isAutoSpeed)
+            {
+                Vector2 pos = panelHiddenPosition;// HidePosition();
+                if (pos.x != 0)
+                {
+                    moveSpeedCustom = Mathf.Abs(3f * pos.x);// + (pos.x / 2f));
+                }
+                else if (pos.y != 0)
+                {
+                    moveSpeedCustom = Mathf.Abs(3f * pos.y);// + (pos.y / 2f));
+                }
+            }
+            else
+            {
+                if (moveSpeedCustom < 0f) moveSpeedCustom = Mathf.Abs(moveSpeedCustom);
+            }
+        }
+
+
+        Vector2 HidePosition()
         {
             Vector2 hidePos = targetRect.anchoredPosition;
 
@@ -59,32 +145,10 @@ namespace StaGeUnityTools
                     break;
             }
 
-            if (B.isEditor) Debug.Log("Move from "+targetRect.anchoredPosition+" to "+ hidePos);
-            StartCoroutine(HideLerpPanel(hidePos));
+            return hidePos;
         }
 
 
-        IEnumerator HideLerpPanel(Vector2 hidePos)
-        {
-            //auto set speed from width
-            if (hidePos.x > 0)
-            {
-                moveSpeedCustom = hidePos.x + (hidePos.x / 2f);
-            }
-            else if (hidePos.y > 0)
-            {
-                moveSpeedCustom = hidePos.y + (hidePos.y / 2f);
-            }
-            yield return new WaitForEndOfFrame();
-            while (Vector2.Distance(targetRect.anchoredPosition, hidePos) > 10f)
-            {
-                targetRect.anchoredPosition = Vector2.MoveTowards(targetRect.anchoredPosition, hidePos, Time.smoothDeltaTime * moveSpeedCustom);
-                yield return null;
-            }
-            targetRect.anchoredPosition = hidePos;
-
-            yield break;
-        }
     }
 
 }

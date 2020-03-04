@@ -151,11 +151,11 @@ namespace ARPolis.Map
 
         public void ZoomOnMarkers(bool isAuto)
         {
-            if (B.isEditor) Debug.LogWarning("### ZoomOnMarkers ###");
+            if (B.isRealEditor) Debug.LogWarning("### ZoomOnMarkers ###");
 
             if (CustomMarkerEngineGUI.allMarkersPositions().Length <= 0)
             {
-                if (B.isEditor) Debug.LogWarning("### NO Markers TO ZOOM ###");
+                if (B.isRealEditor) Debug.LogWarning("### NO Markers TO ZOOM ###");
                 return;
             }
 

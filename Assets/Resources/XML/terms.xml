@@ -139,6 +139,20 @@
 			<en><![CDATA[Your are too far from the active areas!\nYou can only navigate in offsite mode…]]></en>
 		</value>
 	</term>
+  <term>
+    <name>msgMenuGpsFarTitle</name>
+    <value>
+      <gr><![CDATA[Είστε πολύ μακριά από τις ενεργές περιοχές!]]></gr>
+      <en><![CDATA[Your are too far from the active areas!]]></en>
+    </value>
+  </term>
+  <term>
+    <name>msgMenuGpsFarDesc</name>
+    <value>
+      <gr><![CDATA[Μπορείτε να πλοηγηθείτε μόνο απομακρυσμένα…]]></gr>
+      <en><![CDATA[You can only navigate in offsite mode…]]></en>
+    </value>
+  </term>
 	<term>
 		<name>menuGpsOnNear</name>
 		<value>
@@ -146,6 +160,20 @@
 			<en><![CDATA[You are close to active areas!\nMove inside one of them in order  to be able to navigate in onsite mode…Until then, you can only navigate in offsite mode…]]></en>
 		</value>
 	</term>
+  <term>
+    <name>msgMenuGpsNearTitle</name>
+    <value>
+      <gr><![CDATA[Βρίσκεστε κοντά στις ενεργές περιοχές!]]></gr>
+      <en><![CDATA[You are close to active areas!]]></en>
+    </value>
+  </term>
+  <term>
+    <name>msgMenuGpsNearDesc</name>
+    <value>
+      <gr><![CDATA[Mετακινηθείτε σε μια από αυτές για να μπορέσετε να πλοηγηθείτε επτόπια. Μέχρι τότε, μπορείτε να πλοηγηθείτε απομακρυσμένα.]]></gr>
+      <en><![CDATA[Move inside one of them in order to be able to navigate in onsite mode. Until then, you can only navigate in offsite mode.]]></en>
+    </value>
+  </term>
 	<term>
 		<name>menuGpsOnInside</name>
 		<value>
@@ -153,6 +181,20 @@
 			<en><![CDATA[You are inside an active area, you are able to navigate onsite ...]]></en>
 		</value>
 	</term>
+  <term>
+    <name>msgMenuGpsInsideTitle</name>
+    <value>
+      <gr><![CDATA[Βρίσκεστε εντός ενεργής περιοχής.]]></gr>
+      <en><![CDATA[You are inside an active area.]]></en>
+    </value>
+  </term>
+  <term>
+    <name>msgMenuGpsIndideDesc</name>
+    <value>
+      <gr><![CDATA[Μπορείτε να πλοηγηθείτε επτόπια.]]></gr>
+      <en><![CDATA[You are able to navigate onsite.]]></en>
+    </value>
+  </term>
 	<term>
 		<name>fullMapHelp</name>
 		<value>

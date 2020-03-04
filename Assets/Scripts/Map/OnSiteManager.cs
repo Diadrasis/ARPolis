@@ -54,7 +54,7 @@ namespace ARPolis.Map
 
             if (!OnlineMapsLocationService.instance.IsLocationServiceRunning())
             {
-                if (B.isEditor) Debug.Log("GPS OFF");
+                if (B.isRealEditor) Debug.Log("GPS OFF");
                 OnGpsOff?.Invoke();
                 siteMode = SiteMode.OFF;
             }
@@ -109,13 +109,13 @@ namespace ARPolis.Map
                 OnGpsFar?.Invoke();
                 siteMode = SiteMode.FAR;
                 //message far away
-                if (B.isEditor) Debug.Log("GPS FAR");
+                if (B.isRealEditor) Debug.Log("GPS FAR");
                 return;
             }
 
             OnGpsClose?.Invoke();
             siteMode = SiteMode.NEAR;
-            if (B.isEditor) Debug.Log("GPS CLOSE");
+            if (B.isRealEditor) Debug.Log("GPS CLOSE");
         }
 
         #region Just Test

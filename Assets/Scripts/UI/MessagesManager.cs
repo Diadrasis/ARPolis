@@ -23,9 +23,16 @@ namespace ARPolis
         public Sprite sprOffSite, sprOnSite;
         RectTransform rectPanel;
 
-        enum GpsMessageMode { OFF, ON, FAR, NEAR}
-        GpsMessageMode gpsMessageMode = GpsMessageMode.OFF;
-        void SetGpsMessageMode(GpsMessageMode mode) { gpsMessageMode = mode; }
+        public bool isIntroFinished;
+
+        public enum GpsMessageMode { OFF, ON, FAR, NEAR}
+        public GpsMessageMode gpsMessageMode = GpsMessageMode.OFF;
+
+        void SetGpsMessageMode(GpsMessageMode mode) {
+            if (gpsMessageMode == mode) return;
+            gpsMessageMode = mode;
+            if(isIntroFinished) StartCoroutine(DelayShowMessage(0.2f));
+        }
 
         private void Awake()
         {
@@ -40,7 +47,8 @@ namespace ARPolis
             OnSiteManager.OnGpsOn += GpsIsOn;
             OnSiteManager.OnGpsFar += GpsIsFar;
             OnSiteManager.OnGpsClose += GpsIsNear;
-            UIController.OnIntroFinished += ShowGpsMessage;
+            UIController.OnIntroFinished += ShowGpsMessageOnIntro;
+            MenuPanel.OnUserClickOnSiteModeNotAble += ShowGpsMessageOnUser;
         }
 
         void GpsIsOff() { SetGpsMessageMode(GpsMessageMode.OFF); }
@@ -48,16 +56,33 @@ namespace ARPolis
         void GpsIsFar() { SetGpsMessageMode(GpsMessageMode.FAR); }
         void GpsIsNear() { SetGpsMessageMode(GpsMessageMode.NEAR); }
 
-        void ShowGpsMessage()
+        void ShowGpsMessageOnUser()
         {
+            StartCoroutine(DelayShowMessage(0.0f));
+        }
+
+        void ShowGpsMessageOnIntro()
+        {
+            isIntroFinished = true;
+            StartCoroutine(DelayShowMessage(1f));
+        }
+
+        IEnumerator DelayShowMessage(float delayTime)
+        {
+            ButtonsRemoveListeners();
+
+            yield return new WaitForSeconds(delayTime);
+
             switch (gpsMessageMode)
             {
                 case GpsMessageMode.OFF:
                     ShowMessageGpsOff();
                     break;
                 case GpsMessageMode.FAR:
+                    ShowMessageGpsFar();
                     break;
                 case GpsMessageMode.NEAR:
+                    ShowMessageGpsInsideArea();
                     break;
                 case GpsMessageMode.ON:
                     break;
@@ -65,6 +90,8 @@ namespace ARPolis
                     ShowMessageGpsOff();
                     break;
             }
+
+            yield break;
         }
 
         void ShowMessageGpsOff()
@@ -94,14 +121,61 @@ namespace ARPolis
             ShowPanel();
         }
 
+        void ShowMessageGpsFar()
+        {
+            panelMessage.SetActive(true);
 
+            iconImage.sprite = sprOffSite;
+            iconImage.gameObject.SetActive(true);
+            txtTitle.text = AppData.FindTermValue(StaticData.termGpsFarTitle);
+            txtDesc.text = AppData.FindTermValue(StaticData.termGpsFarDesc);
 
+            btnOK.onClick.AddListener(() => HidePanel());
+            txtBtnOK.text = AppData.FindTermValue(StaticData.termBtnOK);
+            btnOK.gameObject.SetActive(true);
+
+            btnAction2.gameObject.SetActive(false);
+            btnAction1.gameObject.SetActive(false);
+
+            ForceRebuildLayout();
+
+            ShowPanel();
+        }
+
+        void ShowMessageGpsInsideArea()
+        {
+            panelMessage.SetActive(true);
+
+            iconImage.sprite = sprOffSite;
+            iconImage.gameObject.SetActive(true);
+            txtTitle.text = AppData.FindTermValue(StaticData.termGpsNearTitle);
+            txtDesc.text = AppData.FindTermValue(StaticData.termGpsNearDesc);
+
+            btnOK.onClick.AddListener(() => HidePanel());
+            txtBtnOK.text = AppData.FindTermValue(StaticData.termBtnOK);
+            btnOK.gameObject.SetActive(true);
+
+            btnAction2.gameObject.SetActive(false);
+            btnAction1.gameObject.SetActive(false);
+
+            ForceRebuildLayout();
+
+            ShowPanel();
+        }
 
         void ShowPanel() { animPanel.SetBool("show", true); }
 
         void HidePanel() {
             animPanel.SetBool("show", false);
             ButtonsRemoveListeners();
+            StartCoroutine(DelayClosePanel());
+        }
+
+        IEnumerator DelayClosePanel()
+        {
+            yield return new WaitForSeconds(0.5f);
+            panelMessage.SetActive(false);
+            yield break;
         }
 
         void ButtonsRemoveListeners()

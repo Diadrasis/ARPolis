@@ -12,6 +12,8 @@ namespace StaGeUnityTools {
         {
             AutoFitToCanvas[] autoFits = FindObjectsOfType<AutoFitToCanvas>();
             foreach (AutoFitToCanvas fit in autoFits) fit.Init();
+
+            Debug.Log(autoFits.Length + " panels has been updated");
         }
     }
 

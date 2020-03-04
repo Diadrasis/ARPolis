@@ -7,6 +7,7 @@ namespace StaGeUnityTools
 
     public static class B
     {
+        public static bool isRealEditor;
         public static bool isEditor;
         public static bool isMobile;
         public static bool isDesctop;
@@ -20,6 +21,7 @@ namespace StaGeUnityTools
         static B()
         {
             isEditor = Application.platform == RuntimePlatform.WindowsEditor ? true : false;
+            isRealEditor = isEditor;
         }
 
         public static void Init()
@@ -32,6 +34,8 @@ namespace StaGeUnityTools
             if (!isMobile) isMobile = Application.platform == RuntimePlatform.IPhonePlayer ? true : false;
             if (isMobile) { isMobileHaveGyro = SystemInfo.supportsGyroscope; }
             if (isMac || isWindows) { isDesctop = true; } else { isDesctop = false; }
+
+            isRealEditor = isEditor;
         }
     }
 

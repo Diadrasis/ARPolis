@@ -12,8 +12,6 @@ namespace ARPolis.UI
         public delegate void UIAction();
         public static UIAction OnIntroStart, OnIntroFinished, OnMenuShow;
 
-        public bool skipIntro;
-
         private void Awake()
         {
             OnIntroFinished += ShowMenu;
@@ -22,11 +20,9 @@ namespace ARPolis.UI
 
         void StartIntro()
         {
-            if (!B.isEditor) skipIntro = false;
-
-            if (skipIntro)
+            if (B.isEditor)
             {
-                ShowMenu();
+                OnIntroFinished?.Invoke();
             }
             else
             {
