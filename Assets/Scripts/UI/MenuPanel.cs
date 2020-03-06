@@ -10,13 +10,13 @@ namespace ARPolis.UI
 
     public class MenuPanel : MonoBehaviour
     {
-        public Animator animMenuPanel;
+        public Animator animMenuPanel, animTownMenu;
         public GameObject menuPanel, btnPrevCity, btnNextCity, creditsExtraButtonsPanel;
         public ScrollSnapCustom snapCustom;
         public ScrollRect scrollRect;
 
         public Button btnToggleSite, btnToggleSideMenu, btnCloseSideMenuBehind,
-                      btnQuitApp, btnCredits;
+                      btnQuitApp, btnCredits, btnTownMenu;
 
         public Sprite sprOnsite, sprOffSite, sprMenuOn, sprMenuOff;
 
@@ -35,7 +35,11 @@ namespace ARPolis.UI
 
             OnSiteManager.OnGpsOff += SetStatusOffSite;
             OnSiteManager.OnGpsFar += SetStatusOffSite;
-            OnSiteManager.OnGpsClose += SetStatusOnSite;
+            //OnSiteManager.OnGpsClose += SetStatusOnSite;
+
+            OnSiteManager.OnGpsNearAthens += OnGpsNearAthens;
+            OnSiteManager.OnGpsNearHerakleion += OnGpsNearHerakleion;
+            OnSiteManager.OnGpsNearNafpaktos += OnGpsNearNafpaktos;
 
             btnToggleSite.onClick.AddListener(() => ToggleSiteMode());
             btnToggleSideMenu.onClick.AddListener(() => ToggleSideMenu());
@@ -43,7 +47,38 @@ namespace ARPolis.UI
             btnCredits.onClick.AddListener(() => ToggleExtraButtonsCredits());
             btnQuitApp.onClick.AddListener(() => Application.Quit());
 
+            btnTownMenu.onClick.AddListener(() => ShowTownMenu());
+            animTownMenu.gameObject.SetActive(false);
+
             menuPanel.SetActive(false);
+        }
+
+        void ShowTownMenu()
+        {
+            animTownMenu.gameObject.SetActive(true);
+            animTownMenu.SetBool("show", true);
+        }
+
+        void OnGpsNearAthens() {  GoOnsite(0); }
+        void OnGpsNearNafpaktos() { GoOnsite(1); }
+        void OnGpsNearHerakleion() { GoOnsite(2); }
+
+        void GoOnsite(int val) { StartCoroutine(DelaySetOnsite(val)); }
+        IEnumerator DelaySetOnsite(int val)
+        {
+            //wait panel to be enabled
+            while(!menuPanel.activeSelf) yield return new WaitForEndOfFrame();
+            snapCustom.Init();
+            snapCustom.enabled = true;
+            snapCustom.SetCustomPage(val);
+            SetStatusOnSite();
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1)) { snapCustom.SetCustomPage(0); }
+            if (Input.GetKeyDown(KeyCode.Alpha2)) { snapCustom.SetCustomPage(1); }
+            if (Input.GetKeyDown(KeyCode.Alpha3)) { snapCustom.SetCustomPage(2); }
         }
 
         void ToggleExtraButtonsCredits()
@@ -96,7 +131,7 @@ namespace ARPolis.UI
 
         void ToggleSiteMode()
         {
-            if (B.isRealEditor) Debug.Log("ToggleSiteMode");
+            //if (B.isRealEditor) Debug.Log("ToggleSiteMode");
 
             if(btnToggleSite.image.sprite == sprOffSite)
             {
@@ -123,7 +158,7 @@ namespace ARPolis.UI
         {
             scrollRect.enabled = val;
             snapCustom.Init();
-            snapCustom.SetFirstPage();
+            //snapCustom.SetFirstPage();
             snapCustom.enabled = val;
             if (val == false)
             {
@@ -136,6 +171,7 @@ namespace ARPolis.UI
 
         void SetStatusOffSite()
         {
+            if (B.isRealEditor) Debug.Log("SetStatusOffSite");
             btnToggleSite.image.sprite = sprOffSite;
             isAbleToChangeToOnSiteMode = false;
             ShowButtons(true);
@@ -143,6 +179,7 @@ namespace ARPolis.UI
 
         void SetStatusOnSite()
         {
+            if (B.isRealEditor) Debug.Log("SetStatusOnSite");
             btnToggleSite.image.sprite = sprOnsite;
             isAbleToChangeToOnSiteMode = true;
             ShowButtons(false);

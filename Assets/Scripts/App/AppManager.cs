@@ -1,4 +1,5 @@
 ﻿using ARPolis.Info;
+using ARPolis.UI;
 using StaGeUnityTools;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace ARPolis
         private void Awake()
         {
             B.Init();
+            UIController.OnMenuShow += SetModeMenu;
         }
 
         void Start()
@@ -26,9 +28,16 @@ namespace ARPolis
             SetMode(AppMode.INIT);
         }
 
-        void SetMode(AppMode appMode)
+        void SetModeMenu()
         {
-            switch (appMode)
+            SetMode(AppMode.MENU);
+        }
+
+        void SetMode(AppMode mode)
+        {
+            appMode = mode;
+
+            switch (mode)
             {
                 case AppMode.NULL:
                     break;

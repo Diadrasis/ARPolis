@@ -41,6 +41,12 @@ namespace ARPolis.UI
             PrevButton.gameObject.SetActive(false);
         }
 
+        public void SetCustomPage(int numb)
+        {
+            GoToScreen(numb);
+            if(numb == 0) PrevButton.gameObject.SetActive(false);
+            if (numb == 2) NextButton.gameObject.SetActive(false);
+        }
 
         void Update()
         {
