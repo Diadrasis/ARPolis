@@ -20,6 +20,34 @@
       <en><![CDATA[Language]]></en>
     </value>
   </term>
+  <term>
+    <name>languageNow</name>
+    <value>
+      <gr><![CDATA[Ελληνικά]]></gr>
+      <en><![CDATA[English]]></en>
+    </value>
+  </term>
+  <term>
+    <name>instructions</name>
+    <value>
+      <gr><![CDATA[Οδηγίες]]></gr>
+      <en><![CDATA[Instructions]]></en>
+    </value>
+  </term>
+  <term>
+    <name>myplaces</name>
+    <value>
+      <gr><![CDATA[Τα μέρη μου]]></gr>
+      <en><![CDATA[My Places]]></en>
+    </value>
+  </term>
+  <term>
+    <name>credits</name>
+    <value>
+      <gr><![CDATA[Συντελεστές]]></gr>
+      <en><![CDATA[Credits]]></en>
+    </value>
+  </term>
 	<term>
 		<name>popWait</name>
 		<value>
@@ -111,6 +139,13 @@
 			<en><![CDATA[OK]]></en>
 		</value>
 	</term>
+  <term>
+    <name>term_Cancel</name>
+    <value>
+      <gr><![CDATA[Ακύρωση]]></gr>
+      <en><![CDATA[Cancel]]></en>
+    </value>
+  </term>
 	<term>
 		<name>msgMenuGpsOffTitle</name>
 		<value>
@@ -217,7 +252,7 @@
 		</value>
 	</term>
 	<term>
-		<name>settingsHelp</name>
+		<name>settings</name>
 		<value>
 			<gr><![CDATA[Ρυθμίσεις]]></gr>
 			<en><![CDATA[Settings]]></en>
@@ -230,13 +265,27 @@
 			<en><![CDATA[Μore info]]></en>
 		</value>
 	</term>
+  <term>
+    <name>quitApp</name>
+    <value>
+      <gr><![CDATA[Έξοδος]]></gr>
+      <en><![CDATA[Quit]]></en>
+    </value>
+  </term>
 	<term>
-		<name>quitWarning</name>
+		<name>msgQuitAppTitle</name>
 		<value>
 			<gr><![CDATA[Έξοδος απο την εφαρμογή;]]></gr>
 			<en><![CDATA[Do you want to quit?]]></en>
 		</value>
 	</term>
+  <term>
+    <name>msgQuitAppDesc</name>
+    <value>
+      <gr><![CDATA[Έξοδος απο την εφαρμογή;]]></gr>
+      <en><![CDATA[Do you want to quit?]]></en>
+    </value>
+  </term>
 	<term>
 		<name>modeWarning</name>
 		<value>

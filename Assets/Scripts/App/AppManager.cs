@@ -18,7 +18,7 @@ namespace ARPolis
         public static AppAction OnInit, OnExit, OnMessage;
 
         private void Awake()
-        {
+        {            
             B.Init();
             UIController.OnMenuShow += SetModeMenu;
         }

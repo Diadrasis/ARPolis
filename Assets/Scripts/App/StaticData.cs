@@ -11,11 +11,15 @@ public class StaticData
     public static string termGpsOffDesc = "msgMenuGpsOffDesc";
     public static string termBtnEnableGps = "msgMenuGpsOffOpenSettings";
     public static string termBtnOK = "term_OK";
+    public static string termBtnCancel = "term_Cancel";
     public static string termGpsFarTitle = "msgMenuGpsFarTitle";
     public static string termGpsFarDesc = "msgMenuGpsFarDesc";
     public static string termGpsNearTitle = "msgMenuGpsNearTitle";
     public static string termGpsNearDesc = "msgMenuGpsNearDesc";
     public static string termGpsInsideTitle = "msgMenuGpsInsideTitle";
-    public static string termIGpsInsideDesc = "msgMenuGpsIndideDesc";
+    public static string termGpsInsideDesc = "msgMenuGpsIndideDesc";
+
+    public static string termQuitAppTitle = "msgQuitAppTitle";
+    public static string termQuitAppDesc = "msgQuitAppDesc";
 
 }

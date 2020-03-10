@@ -19,7 +19,6 @@ namespace ARPolis.Info
         RawImage myRawImage;
         public Texture grSprite;
         public Texture enSprite;
-        public Texture bgSprite;
 
         public bool autoResizeTextFont, changeLineForStringToAdd;
         //	int tabletFontSize = 17;
@@ -136,7 +135,7 @@ namespace ARPolis.Info
 
         void ReplaceImage()
         {
-            if (myRawImage && grSprite && enSprite && bgSprite)
+            if (myRawImage && grSprite && enSprite)
             {
                 if (myLang == "gr")
                 {
@@ -146,11 +145,6 @@ namespace ARPolis.Info
                 if (myLang == "en")
                 {
                     myRawImage.texture = enSprite;
-                }
-                else
-                if (myLang == "bg")
-                {
-                    myRawImage.texture = bgSprite;
                 }
             }
         }

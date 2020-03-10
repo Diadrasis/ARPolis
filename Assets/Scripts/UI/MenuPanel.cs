@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using ARPolis.Map;
 using StaGeUnityTools;
+using ARPolis.Info;
 
 namespace ARPolis.UI
 {
@@ -16,12 +17,15 @@ namespace ARPolis.UI
         public ScrollRect scrollRect;
 
         public Button btnToggleSite, btnToggleSideMenu, btnCloseSideMenuBehind,
-                      btnQuitApp, btnCredits, btnTownMenu;
+                      btnQuitApp, btnCredits, btnAthensMenu, btnNafpaktosMenu, btnHerakleionMenu,
+                      btnLanguage;
 
-        public Sprite sprOnsite, sprOffSite, sprMenuOn, sprMenuOff;
+        public Image iconBtnLanguage;
+
+        public Sprite sprOnsite, sprOffSite, sprMenuOn, sprMenuOff, sprEng, sprGR;
 
         public delegate void ButtonAction();
-        public static ButtonAction OnUserClickOnSiteModeNotAble;
+        public static ButtonAction OnUserClickOnSiteModeNotAble, OnQuitApp;
 
         public PanelTransitionClass panelSideMenuTransition;
 
@@ -31,6 +35,26 @@ namespace ARPolis.UI
 
         private void Awake()
         {
+
+            if (!PlayerPrefs.HasKey("Lang"))
+            {
+                if (Application.systemLanguage == SystemLanguage.English)
+                {
+                    if (StaticData.lang == "gr") ChangeLanguage();
+                }
+                else
+                {
+                    if (StaticData.lang == "en") ChangeLanguage();
+                }
+            }
+            else
+            {
+                StaticData.lang = PlayerPrefs.GetString("Lang");
+                bool isEng = StaticData.lang == "en";
+                //change icon
+                iconBtnLanguage.sprite = isEng ? sprEng : sprGR;
+            }
+
             UIController.OnMenuShow += ShowMenu;
 
             OnSiteManager.OnGpsOff += SetStatusOffSite;
@@ -45,19 +69,58 @@ namespace ARPolis.UI
             btnToggleSideMenu.onClick.AddListener(() => ToggleSideMenu());
             btnCloseSideMenuBehind.onClick.AddListener(() => ToggleSideMenu());
             btnCredits.onClick.AddListener(() => ToggleExtraButtonsCredits());
-            btnQuitApp.onClick.AddListener(() => Application.Quit());
+            btnQuitApp.onClick.AddListener(() => OnQuitApp?.Invoke());
 
-            btnTownMenu.onClick.AddListener(() => ShowTownMenu());
+            btnAthensMenu.onClick.AddListener(() => ShowAthensMenu());
+            btnNafpaktosMenu.onClick.AddListener(() => ShowNafpaktosMenu());
+            btnHerakleionMenu.onClick.AddListener(() => ShowHerakleionMenu());
+
+            btnLanguage.onClick.AddListener(() => ChangeLanguage());
+
             animTownMenu.gameObject.SetActive(false);
 
+            arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
+
             menuPanel.SetActive(false);
+
         }
 
-        void ShowTownMenu()
+        void ChangeLanguage()
         {
+            bool isEng = StaticData.lang == "en";
+
+            //change icon
+            iconBtnLanguage.sprite = isEng ? sprGR : sprEng;
+            //change lang
+            StaticData.lang = isEng ? "gr" : "en";
+            PlayerPrefs.SetString("Lang", StaticData.lang);
+            PlayerPrefs.Save();
+            //get terms
+            AppData.Init();
+        }
+
+        void ShowAthensMenu()
+        {
+            if (B.isRealEditor) Debug.Log("ShowAthensMenu");
             animTownMenu.gameObject.SetActive(true);
             animTownMenu.SetBool("show", true);
         }
+
+        void ShowNafpaktosMenu()
+        {
+            if (B.isRealEditor) Debug.Log("ShowNafpaktosMenu");
+            //animTownMenu.gameObject.SetActive(true);
+            //animTownMenu.SetBool("show", true);
+        }
+
+        void ShowHerakleionMenu()
+        {
+            if (B.isRealEditor) Debug.Log("ShowHerakleionMenu");
+            //animTownMenu.gameObject.SetActive(true);
+            //animTownMenu.SetBool("show", true);
+        }
+
+        #region select town page from gps coordiness
 
         void OnGpsNearAthens() {  GoOnsite(0); }
         void OnGpsNearNafpaktos() { GoOnsite(1); }
@@ -74,12 +137,14 @@ namespace ARPolis.UI
             SetStatusOnSite();
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1)) { snapCustom.SetCustomPage(0); }
-            if (Input.GetKeyDown(KeyCode.Alpha2)) { snapCustom.SetCustomPage(1); }
-            if (Input.GetKeyDown(KeyCode.Alpha3)) { snapCustom.SetCustomPage(2); }
-        }
+        #endregion
+
+        //private void Update()
+        //{
+        //    if (Input.GetKeyDown(KeyCode.Alpha1)) { snapCustom.SetCustomPage(0); }
+        //    if (Input.GetKeyDown(KeyCode.Alpha2)) { snapCustom.SetCustomPage(1); }
+        //    if (Input.GetKeyDown(KeyCode.Alpha3)) { snapCustom.SetCustomPage(2); }
+        //}
 
         void ToggleExtraButtonsCredits()
         {
@@ -89,12 +154,12 @@ namespace ARPolis.UI
             {
                 creditsExtraButtonsPanel.SetActive(true);
                 StartCoroutine(DelayShowButtons(extraCreditsButtons, true));
-                arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
+                arrowCredits.localEulerAngles = new Vector3(0f, 0f, 90f);
             }
             else
             {
                 StartCoroutine(DelayShowButtons(extraCreditsButtons, false));
-                arrowCredits.localEulerAngles = new Vector3(0f, 0f, 0f);
+                arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
             }
         }
 

@@ -20,7 +20,7 @@ namespace ARPolis
         public Text txtTitle, txtDesc;
         Text txtBtnOK, txtBtnAction1, txtBtnAction2;
         public Image iconImage;
-        public Sprite sprOffSite, sprOnSite;
+        public Sprite sprOffSite, sprOnSite, sprQuitApp;
         RectTransform rectPanel;
 
         public bool isIntroFinished;
@@ -49,12 +49,37 @@ namespace ARPolis
             OnSiteManager.OnGpsClose += GpsIsNear;
             UIController.OnIntroFinished += ShowGpsMessageOnIntro;
             MenuPanel.OnUserClickOnSiteModeNotAble += ShowGpsMessageOnUser;
+            MenuPanel.OnQuitApp += ShowQuitAppWarning;
         }
 
         void GpsIsOff() { SetGpsMessageMode(GpsMessageMode.OFF); }
         void GpsIsOn() { SetGpsMessageMode(GpsMessageMode.ON); }
         void GpsIsFar() { SetGpsMessageMode(GpsMessageMode.FAR); }
         void GpsIsNear() { SetGpsMessageMode(GpsMessageMode.NEAR); }
+
+        void ShowQuitAppWarning()
+        {
+            panelMessage.SetActive(true);
+
+            iconImage.sprite = sprQuitApp;
+            iconImage.gameObject.SetActive(true);
+            txtTitle.text = string.Empty;// AppData.FindTermValue(StaticData.termGpsOffTitle);
+            txtDesc.text = AppData.FindTermValue(StaticData.termQuitAppDesc);
+
+            btnOK.onClick.AddListener(() => Application.Quit());
+            txtBtnOK.text = AppData.FindTermValue(StaticData.termBtnOK);
+            btnOK.gameObject.SetActive(true);
+
+            btnAction2.onClick.AddListener(() => HidePanel());
+            txtBtnAction2.text = AppData.FindTermValue(StaticData.termBtnCancel);
+            btnAction2.gameObject.SetActive(true);
+
+            btnAction1.gameObject.SetActive(false);
+
+            ForceRebuildLayout();
+
+            ShowPanel();
+        }
 
         void ShowGpsMessageOnUser()
         {
