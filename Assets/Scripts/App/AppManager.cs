@@ -1,4 +1,5 @@
-﻿using ARPolis.Info;
+﻿using ARPolis.Data;
+using ARPolis.Info;
 using ARPolis.UI;
 using StaGeUnityTools;
 using System.Collections;
@@ -43,6 +44,7 @@ namespace ARPolis
                     break;
                 case AppMode.INIT:
                     AppData.Init();
+                    InfoManager.Instance.Init();
                     OnInit?.Invoke();
                     break;
                 case AppMode.SITE_SELECTION:

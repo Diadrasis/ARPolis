@@ -1,0 +1,2387 @@
+[
+  {
+    "id": 1,
+    "topic_ID": 1,
+    "person_ID": 732,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Αγρίππας"
+  },
+  {
+    "id": 2,
+    "topic_ID": 1,
+    "person_ID": 609,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Abbet Grasset"
+  },
+  {
+    "id": 3,
+    "topic_ID": 1,
+    "person_ID": 621,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Babin"
+  },
+  {
+    "id": 4,
+    "topic_ID": 1,
+    "person_ID": 667,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Buchon"
+  },
+  {
+    "id": 5,
+    "topic_ID": 1,
+    "person_ID": 575,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Chandler"
+  },
+  {
+    "id": 6,
+    "topic_ID": 1,
+    "person_ID": 649,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Clarke"
+  },
+  {
+    "id": 7,
+    "topic_ID": 1,
+    "person_ID": 584,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Dodwell"
+  },
+  {
+    "id": 8,
+    "topic_ID": 1,
+    "person_ID": 647,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Douglas"
+  },
+  {
+    "id": 9,
+    "topic_ID": 1,
+    "person_ID": 643,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Galt"
+  },
+  {
+    "id": 10,
+    "topic_ID": 1,
+    "person_ID": 623,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Mossé"
+  },
+  {
+    "id": 11,
+    "topic_ID": 1,
+    "person_ID": 663,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Pomardi"
+  },
+  {
+    "id": 12,
+    "topic_ID": 1,
+    "person_ID": 720,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "UNESCO"
+  },
+  {
+    "id": 13,
+    "topic_ID": 1,
+    "person_ID": 577,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Yourcenar"
+  },
+  {
+    "id": 14,
+    "topic_ID": 1,
+    "person_ID": 715,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Αισχύλος"
+  },
+  {
+    "id": 15,
+    "topic_ID": 1,
+    "person_ID": 717,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Αριστοφάνης"
+  },
+  {
+    "id": 16,
+    "topic_ID": 1,
+    "person_ID": 653,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Γκρίτση - Μιλλιέξ"
+  },
+  {
+    "id": 17,
+    "topic_ID": 1,
+    "person_ID": 645,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Δροσίνης"
+  },
+  {
+    "id": 18,
+    "topic_ID": 1,
+    "person_ID": 641,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Θουκυδίδης"
+  },
+  {
+    "id": 19,
+    "topic_ID": 1,
+    "person_ID": 711,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Καραγάτσης"
+  },
+  {
+    "id": 20,
+    "topic_ID": 1,
+    "person_ID": 655,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Λάγκους"
+  },
+  {
+    "id": 21,
+    "topic_ID": 1,
+    "person_ID": 724,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Παράσχος"
+  },
+  {
+    "id": 22,
+    "topic_ID": 1,
+    "person_ID": 603,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Πλούταρχος"
+  },
+  {
+    "id": 23,
+    "topic_ID": 1,
+    "person_ID": 651,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Πορφύρας"
+  },
+  {
+    "id": 24,
+    "topic_ID": 1,
+    "person_ID": 625,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Πουκεβίλ"
+  },
+  {
+    "id": 25,
+    "topic_ID": 1,
+    "person_ID": 659,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Σατωβριάνδος"
+  },
+  {
+    "id": 26,
+    "topic_ID": 1,
+    "person_ID": 670,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Σουρής"
+  },
+  {
+    "id": 27,
+    "topic_ID": 1,
+    "person_ID": 616,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Στράβων"
+  },
+  {
+    "id": 28,
+    "topic_ID": 1,
+    "person_ID": 657,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Τάκερμαν"
+  },
+  {
+    "id": 29,
+    "topic_ID": 1,
+    "person_ID": 569,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Τσελεμπί"
+  },
+  {
+    "id": 30,
+    "topic_ID": 1,
+    "person_ID": 613,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Φίνλεϊ"
+  },
+  {
+    "id": 31,
+    "topic_ID": 1,
+    "person_ID": 722,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Χωνιάτης"
+  },
+  {
+    "id": 32,
+    "topic_ID": 1,
+    "person_ID": 497,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Παυσανίας"
+  },
+  {
+    "id": 33,
+    "topic_ID": 1,
+    "person_ID": 732,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Μάρκος Βιψάνιος"
+  },
+  {
+    "id": 34,
+    "topic_ID": 1,
+    "person_ID": 609,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Thomas"
+  },
+  {
+    "id": 35,
+    "topic_ID": 1,
+    "person_ID": 621,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Jacques Paul"
+  },
+  {
+    "id": 36,
+    "topic_ID": 1,
+    "person_ID": 667,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Jean Alexandre"
+  },
+  {
+    "id": 37,
+    "topic_ID": 1,
+    "person_ID": 575,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Raymond"
+  },
+  {
+    "id": 38,
+    "topic_ID": 1,
+    "person_ID": 649,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Edward"
+  },
+  {
+    "id": 39,
+    "topic_ID": 1,
+    "person_ID": 584,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Edward"
+  },
+  {
+    "id": 40,
+    "topic_ID": 1,
+    "person_ID": 647,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "F.S.N."
+  },
+  {
+    "id": 41,
+    "topic_ID": 1,
+    "person_ID": 643,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "John"
+  },
+  {
+    "id": 42,
+    "topic_ID": 1,
+    "person_ID": 623,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Claude"
+  },
+  {
+    "id": 43,
+    "topic_ID": 1,
+    "person_ID": 663,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Simone"
+  },
+  {
+    "id": 44,
+    "topic_ID": 1,
+    "person_ID": 577,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Marguerite"
+  },
+  {
+    "id": 45,
+    "topic_ID": 1,
+    "person_ID": 653,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Τατιάνα"
+  },
+  {
+    "id": 46,
+    "topic_ID": 1,
+    "person_ID": 645,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Γεώργιος"
+  },
+  {
+    "id": 47,
+    "topic_ID": 1,
+    "person_ID": 711,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Μ."
+  },
+  {
+    "id": 48,
+    "topic_ID": 1,
+    "person_ID": 655,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Βίλχελμ"
+  },
+  {
+    "id": 49,
+    "topic_ID": 1,
+    "person_ID": 724,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Αχιλλέας"
+  },
+  {
+    "id": 50,
+    "topic_ID": 1,
+    "person_ID": 651,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Λάμπρος"
+  },
+  {
+    "id": 51,
+    "topic_ID": 1,
+    "person_ID": 625,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Φραγκίσκος Κάρολος"
+  },
+  {
+    "id": 52,
+    "topic_ID": 1,
+    "person_ID": 659,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Φρανσουά-Ωγκύστ-Ρενέ"
+  },
+  {
+    "id": 53,
+    "topic_ID": 1,
+    "person_ID": 670,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Γεώργιος"
+  },
+  {
+    "id": 54,
+    "topic_ID": 1,
+    "person_ID": 657,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Κάρολος"
+  },
+  {
+    "id": 55,
+    "topic_ID": 1,
+    "person_ID": 569,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Εβλιά"
+  },
+  {
+    "id": 56,
+    "topic_ID": 1,
+    "person_ID": 613,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Τζωρτζ"
+  },
+  {
+    "id": 57,
+    "topic_ID": 1,
+    "person_ID": 722,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Μιχαήλ"
+  },
+  {
+    "id": 58,
+    "topic_ID": 1,
+    "person_ID": 732,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Ιστορικό Πρόσωπο"
+  },
+  {
+    "id": 59,
+    "topic_ID": 1,
+    "person_ID": 609,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 60,
+    "topic_ID": 1,
+    "person_ID": 621,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 61,
+    "topic_ID": 1,
+    "person_ID": 667,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 62,
+    "topic_ID": 1,
+    "person_ID": 575,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 63,
+    "topic_ID": 1,
+    "person_ID": 649,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 64,
+    "topic_ID": 1,
+    "person_ID": 584,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 65,
+    "topic_ID": 1,
+    "person_ID": 647,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 66,
+    "topic_ID": 1,
+    "person_ID": 643,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 67,
+    "topic_ID": 1,
+    "person_ID": 623,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Σύγχρονος"
+  },
+  {
+    "id": 68,
+    "topic_ID": 1,
+    "person_ID": 663,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 69,
+    "topic_ID": 1,
+    "person_ID": 720,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Σύγχρονος"
+  },
+  {
+    "id": 70,
+    "topic_ID": 1,
+    "person_ID": 577,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Λογοτέχνης"
+  },
+  {
+    "id": 71,
+    "topic_ID": 1,
+    "person_ID": 715,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Κλασική"
+  },
+  {
+    "id": 72,
+    "topic_ID": 1,
+    "person_ID": 717,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Κλασική"
+  },
+  {
+    "id": 73,
+    "topic_ID": 1,
+    "person_ID": 653,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Λογοτέχνης"
+  },
+  {
+    "id": 74,
+    "topic_ID": 1,
+    "person_ID": 645,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Λογοτέχνης"
+  },
+  {
+    "id": 75,
+    "topic_ID": 1,
+    "person_ID": 641,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Κλασική"
+  },
+  {
+    "id": 76,
+    "topic_ID": 1,
+    "person_ID": 711,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Λογοτέχνης"
+  },
+  {
+    "id": 77,
+    "topic_ID": 1,
+    "person_ID": 655,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 78,
+    "topic_ID": 1,
+    "person_ID": 724,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Λογοτέχνης"
+  },
+  {
+    "id": 79,
+    "topic_ID": 1,
+    "person_ID": 603,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Ιστορικό Πρόσωπο"
+  },
+  {
+    "id": 80,
+    "topic_ID": 1,
+    "person_ID": 651,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Λογοτέχνης"
+  },
+  {
+    "id": 81,
+    "topic_ID": 1,
+    "person_ID": 625,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 82,
+    "topic_ID": 1,
+    "person_ID": 659,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 83,
+    "topic_ID": 1,
+    "person_ID": 659,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Λογοτέχνης"
+  },
+  {
+    "id": 84,
+    "topic_ID": 1,
+    "person_ID": 670,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Λογοτέχνης"
+  },
+  {
+    "id": 85,
+    "topic_ID": 1,
+    "person_ID": 616,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Αρχαίος περιηγητής"
+  },
+  {
+    "id": 86,
+    "topic_ID": 1,
+    "person_ID": 657,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Πρέσβης"
+  },
+  {
+    "id": 87,
+    "topic_ID": 1,
+    "person_ID": 569,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Νεότερος Περιηγήτης"
+  },
+  {
+    "id": 88,
+    "topic_ID": 1,
+    "person_ID": 613,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Ιστορικός"
+  },
+  {
+    "id": 89,
+    "topic_ID": 1,
+    "person_ID": 722,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Ιστορικό Πρόσωπο"
+  },
+  {
+    "id": 90,
+    "topic_ID": 1,
+    "person_ID": 497,
+    "attribute_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Τύπος Προσώπου",
+    "attribute_Value": "Αρχαίος περιηγητής"
+  },
+  {
+    "id": 91,
+    "topic_ID": 1,
+    "person_ID": 732,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "Περ 64 π.Χ."
+  },
+  {
+    "id": 92,
+    "topic_ID": 1,
+    "person_ID": 621,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1634–1699"
+  },
+  {
+    "id": 93,
+    "topic_ID": 1,
+    "person_ID": 667,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1791 – 1849"
+  },
+  {
+    "id": 94,
+    "topic_ID": 1,
+    "person_ID": 575,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "Foundation"
+  },
+  {
+    "id": 95,
+    "topic_ID": 1,
+    "person_ID": 649,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1769-1822"
+  },
+  {
+    "id": 96,
+    "topic_ID": 1,
+    "person_ID": 584,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1767"
+  },
+  {
+    "id": 97,
+    "topic_ID": 1,
+    "person_ID": 643,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1779-1839"
+  },
+  {
+    "id": 98,
+    "topic_ID": 1,
+    "person_ID": 623,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1924-"
+  },
+  {
+    "id": 99,
+    "topic_ID": 1,
+    "person_ID": 663,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "Ecole Superieure"
+  },
+  {
+    "id": 100,
+    "topic_ID": 1,
+    "person_ID": 577,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1903-1987"
+  },
+  {
+    "id": 101,
+    "topic_ID": 1,
+    "person_ID": 715,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "525/524 π.Χ.-456 π.Χ."
+  },
+  {
+    "id": 102,
+    "topic_ID": 1,
+    "person_ID": 717,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "445-386 π.Χ."
+  },
+  {
+    "id": 103,
+    "topic_ID": 1,
+    "person_ID": 653,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1920-2005"
+  },
+  {
+    "id": 104,
+    "topic_ID": 1,
+    "person_ID": 645,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1859-1951"
+  },
+  {
+    "id": 105,
+    "topic_ID": 1,
+    "person_ID": 641,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "5ος αι. π.Χ."
+  },
+  {
+    "id": 106,
+    "topic_ID": 1,
+    "person_ID": 711,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1908-1960"
+  },
+  {
+    "id": 107,
+    "topic_ID": 1,
+    "person_ID": 655,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1821-1909"
+  },
+  {
+    "id": 108,
+    "topic_ID": 1,
+    "person_ID": 724,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1838-1895"
+  },
+  {
+    "id": 109,
+    "topic_ID": 1,
+    "person_ID": 603,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "45–120 μ.Χ."
+  },
+  {
+    "id": 110,
+    "topic_ID": 1,
+    "person_ID": 625,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1770-1838"
+  },
+  {
+    "id": 111,
+    "topic_ID": 1,
+    "person_ID": 659,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1768-1848"
+  },
+  {
+    "id": 112,
+    "topic_ID": 1,
+    "person_ID": 670,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1953 - 1919"
+  },
+  {
+    "id": 113,
+    "topic_ID": 1,
+    "person_ID": 616,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "64 π.Χ.-24 μ.Χ."
+  },
+  {
+    "id": 114,
+    "topic_ID": 1,
+    "person_ID": 657,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1827-1896"
+  },
+  {
+    "id": 115,
+    "topic_ID": 1,
+    "person_ID": 569,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1611-1682"
+  },
+  {
+    "id": 116,
+    "topic_ID": 1,
+    "person_ID": 613,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1799-1875"
+  },
+  {
+    "id": 117,
+    "topic_ID": 1,
+    "person_ID": 722,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1138-1222"
+  },
+  {
+    "id": 118,
+    "topic_ID": 1,
+    "person_ID": 497,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "2ος αι. μ.Χ."
+  },
+  {
+    "id": 119,
+    "topic_ID": 1,
+    "person_ID": 732,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Ο Μάρκος Βιψάνιος Αγρίππας ήταν Ρωμαίος Στρατηγός και Ύπατος, γαμπρός του Ιουλίου Καίσαρα."
+  },
+  {
+    "id": 120,
+    "topic_ID": 1,
+    "person_ID": 609,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Επιστολές"
+  },
+  {
+    "id": 121,
+    "topic_ID": 1,
+    "person_ID": 621,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Relation de l'etat present de la ville d'Athenes, ancienne capitale de la Grece, bâtie depuis 3400 ans (Lyon 1674)"
+  },
+  {
+    "id": 122,
+    "topic_ID": 1,
+    "person_ID": 667,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "'La Grèce continentale et la Morée: Voyage séjour et études historiques en 1840 et 1841', (1843), [στο: Αικ Κουμαριανού, Αθήνα, η πόλη - οι άνθρωποι. Αφηγήσεις και μαρτυρίες, 12ος - 19ος αιώνας, 2005]"
+  },
+  {
+    "id": 123,
+    "topic_ID": 1,
+    "person_ID": 575,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Travels in Greece, An Account of a Tour made at the expenses of the Society of the Dilettanti, 1776."
+  },
+  {
+    "id": 124,
+    "topic_ID": 1,
+    "person_ID": 649,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Travels in Various Countries of Europe, London 1825"
+  },
+  {
+    "id": 125,
+    "topic_ID": 1,
+    "person_ID": 584,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "A classical and topographical tour through Greece, during the years 1801, 1805, and 1806, Λονδίνο, Rodwell and Martin, 1819."
+  },
+  {
+    "id": 126,
+    "topic_ID": 1,
+    "person_ID": 647,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "An Essay on Certain Points of Resemblance between the Ancient and Modern Greeks, Λονδίνο 1813"
+  },
+  {
+    "id": 127,
+    "topic_ID": 1,
+    "person_ID": 643,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Voyages and Travels in the Years 1809, 1810 and 1811"
+  },
+  {
+    "id": 128,
+    "topic_ID": 1,
+    "person_ID": 623,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Έγκλημα στην Αρχαία Αγορά, 1997 (πρωτ. 1995)"
+  },
+  {
+    "id": 129,
+    "topic_ID": 1,
+    "person_ID": 663,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Viaggio nella Grecia fatto da Simone Pomardi negli anni 1804, 1805, 1806. Roma 1820"
+  },
+  {
+    "id": 130,
+    "topic_ID": 1,
+    "person_ID": 720,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Κατάλογος Παγκόσμιας Πολιτιστικής Κληρονομιάς"
+  },
+  {
+    "id": 131,
+    "topic_ID": 1,
+    "person_ID": 577,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Απομνημονεύματα του Αδριανού"
+  },
+  {
+    "id": 132,
+    "topic_ID": 1,
+    "person_ID": 715,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Ευμενίδες (Ορέστεια)"
+  },
+  {
+    "id": 133,
+    "topic_ID": 1,
+    "person_ID": 717,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Πλούτος"
+  },
+  {
+    "id": 134,
+    "topic_ID": 1,
+    "person_ID": 653,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Από την άλλη όχθη του Χρόνου (1988)"
+  },
+  {
+    "id": 135,
+    "topic_ID": 1,
+    "person_ID": 645,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Σκόρπια φύλλα της ζωής μου (3 τόμοι), 1983-85"
+  },
+  {
+    "id": 136,
+    "topic_ID": 1,
+    "person_ID": 641,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Ιστορίαι"
+  },
+  {
+    "id": 137,
+    "topic_ID": 1,
+    "person_ID": 711,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Επιφυλλίδα στο περιοδικό Ταχυδρόμος 1/9/1956"
+  },
+  {
+    "id": 138,
+    "topic_ID": 1,
+    "person_ID": 655,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Από επιστολή στη μητέρα του [στο: Μπ. Φορσέν, Β. Καρδάσης, 'Αγαπητή μισητή μου Αθήνα!' Στιγμιότυπα από τη ζωή του Φινλανδού ελληνιστή Βίλχελμ Λάγκους, 2009, σελ. 20]"
+  },
+  {
+    "id": 139,
+    "topic_ID": 1,
+    "person_ID": 603,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Βίοι παράλληλοι, Περικλής - Φάβιος Μάξιμος"
+  },
+  {
+    "id": 140,
+    "topic_ID": 1,
+    "person_ID": 651,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "'Σκιές' (1920), [στο: 'Άπαντα', επιμ. Γ. Βαλέτας, 1964, σελ. 132]"
+  },
+  {
+    "id": 141,
+    "topic_ID": 1,
+    "person_ID": 625,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Ταξίδι στην Ελλάδα. Στερεά-Αττική-Κόρινθος, 1995"
+  },
+  {
+    "id": 142,
+    "topic_ID": 1,
+    "person_ID": 659,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Οδοιπορικό από το Παρίσι στην Ιερουσαλήμ (1811), [μετ. Εμμανουήλ Ροΐδης, 1860 (φωτ επαν. με το υπόμν. περί Ελλάδος, Αφοι Τολίδη, 1979)"
+  },
+  {
+    "id": 143,
+    "topic_ID": 1,
+    "person_ID": 670,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "'Στους Στύλους' (1884), [στο: 'Τα Άπαντα', τ. 1]"
+  },
+  {
+    "id": 144,
+    "topic_ID": 1,
+    "person_ID": 616,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Γεωγραφικά"
+  },
+  {
+    "id": 145,
+    "topic_ID": 1,
+    "person_ID": 657,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Οι Έλληνες της σήμερον (1872) [μετ. Α. Ζυγωμαλάς, 1877, ανατ. 1995]"
+  },
+  {
+    "id": 146,
+    "topic_ID": 1,
+    "person_ID": 569,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Ταξίδι στην Ελλάδα (επιμ. Ν. Χειλαδάκης)"
+  },
+  {
+    "id": 147,
+    "topic_ID": 1,
+    "person_ID": 613,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "The history of Greece under Othoman and Venetian domination (1856)"
+  },
+  {
+    "id": 148,
+    "topic_ID": 1,
+    "person_ID": 722,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Λόγος για την ενθρόνισή του στο μητροπολιτικό θρόνο της Αθήνας"
+  },
+  {
+    "id": 149,
+    "topic_ID": 1,
+    "person_ID": 497,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Έργο",
+    "attribute_Value": "Ελλάδος περιήγησης, Αττικά"
+  },
+  {
+    "id": 150,
+    "topic_ID": 1,
+    "person_ID": 732,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Agrippa"
+  },
+  {
+    "id": 151,
+    "topic_ID": 1,
+    "person_ID": 609,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Abbet Grasset"
+  },
+  {
+    "id": 152,
+    "topic_ID": 1,
+    "person_ID": 621,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Babin"
+  },
+  {
+    "id": 153,
+    "topic_ID": 1,
+    "person_ID": 667,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Buchon"
+  },
+  {
+    "id": 154,
+    "topic_ID": 1,
+    "person_ID": 575,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Chandler"
+  },
+  {
+    "id": 155,
+    "topic_ID": 1,
+    "person_ID": 649,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Clarke"
+  },
+  {
+    "id": 156,
+    "topic_ID": 1,
+    "person_ID": 584,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Dodwell"
+  },
+  {
+    "id": 157,
+    "topic_ID": 1,
+    "person_ID": 647,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Douglas"
+  },
+  {
+    "id": 158,
+    "topic_ID": 1,
+    "person_ID": 643,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Galt"
+  },
+  {
+    "id": 159,
+    "topic_ID": 1,
+    "person_ID": 623,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Mossé"
+  },
+  {
+    "id": 160,
+    "topic_ID": 1,
+    "person_ID": 663,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Pomardi"
+  },
+  {
+    "id": 161,
+    "topic_ID": 1,
+    "person_ID": 720,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "UNESCO"
+  },
+  {
+    "id": 162,
+    "topic_ID": 1,
+    "person_ID": 577,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Yourcenar"
+  },
+  {
+    "id": 163,
+    "topic_ID": 1,
+    "person_ID": 715,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Aeschylus"
+  },
+  {
+    "id": 164,
+    "topic_ID": 1,
+    "person_ID": 717,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Aristophanes"
+  },
+  {
+    "id": 165,
+    "topic_ID": 1,
+    "person_ID": 653,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Grizzi-Miliex"
+  },
+  {
+    "id": 166,
+    "topic_ID": 1,
+    "person_ID": 645,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Drosinis"
+  },
+  {
+    "id": 167,
+    "topic_ID": 1,
+    "person_ID": 641,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Thucydides"
+  },
+  {
+    "id": 168,
+    "topic_ID": 1,
+    "person_ID": 711,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Karagatsis"
+  },
+  {
+    "id": 169,
+    "topic_ID": 1,
+    "person_ID": 655,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Langus"
+  },
+  {
+    "id": 170,
+    "topic_ID": 1,
+    "person_ID": 724,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Paraschos"
+  },
+  {
+    "id": 171,
+    "topic_ID": 1,
+    "person_ID": 603,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Plutarch"
+  },
+  {
+    "id": 172,
+    "topic_ID": 1,
+    "person_ID": 651,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Porfyras"
+  },
+  {
+    "id": 173,
+    "topic_ID": 1,
+    "person_ID": 625,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Pouqueville"
+  },
+  {
+    "id": 174,
+    "topic_ID": 1,
+    "person_ID": 659,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Chateaubriand"
+  },
+  {
+    "id": 175,
+    "topic_ID": 1,
+    "person_ID": 670,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Souris"
+  },
+  {
+    "id": 176,
+    "topic_ID": 1,
+    "person_ID": 616,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Strabo"
+  },
+  {
+    "id": 177,
+    "topic_ID": 1,
+    "person_ID": 657,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Tuckerman"
+  },
+  {
+    "id": 178,
+    "topic_ID": 1,
+    "person_ID": 569,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Celebi"
+  },
+  {
+    "id": 179,
+    "topic_ID": 1,
+    "person_ID": 613,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Finlay"
+  },
+  {
+    "id": 180,
+    "topic_ID": 1,
+    "person_ID": 722,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Choniates"
+  },
+  {
+    "id": 181,
+    "topic_ID": 1,
+    "person_ID": 497,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Επώνυμο (en)",
+    "attribute_Value": "Pausanias"
+  },
+  {
+    "id": 182,
+    "topic_ID": 1,
+    "person_ID": 732,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Marcus Vipsanius"
+  },
+  {
+    "id": 183,
+    "topic_ID": 1,
+    "person_ID": 609,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Thomas"
+  },
+  {
+    "id": 184,
+    "topic_ID": 1,
+    "person_ID": 621,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Jacques-Paul"
+  },
+  {
+    "id": 185,
+    "topic_ID": 1,
+    "person_ID": 667,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Jean Alexandre"
+  },
+  {
+    "id": 186,
+    "topic_ID": 1,
+    "person_ID": 575,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Raymond"
+  },
+  {
+    "id": 187,
+    "topic_ID": 1,
+    "person_ID": 649,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Edward"
+  },
+  {
+    "id": 188,
+    "topic_ID": 1,
+    "person_ID": 584,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Edward"
+  },
+  {
+    "id": 189,
+    "topic_ID": 1,
+    "person_ID": 647,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "F.S.N,"
+  },
+  {
+    "id": 190,
+    "topic_ID": 1,
+    "person_ID": 643,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "John"
+  },
+  {
+    "id": 191,
+    "topic_ID": 1,
+    "person_ID": 623,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Claude"
+  },
+  {
+    "id": 192,
+    "topic_ID": 1,
+    "person_ID": 663,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Simone"
+  },
+  {
+    "id": 193,
+    "topic_ID": 1,
+    "person_ID": 577,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Marguerite"
+  },
+  {
+    "id": 194,
+    "topic_ID": 1,
+    "person_ID": 653,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Tatiana"
+  },
+  {
+    "id": 195,
+    "topic_ID": 1,
+    "person_ID": 645,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Georgios"
+  },
+  {
+    "id": 196,
+    "topic_ID": 1,
+    "person_ID": 711,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "M"
+  },
+  {
+    "id": 197,
+    "topic_ID": 1,
+    "person_ID": 655,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Wilhelm"
+  },
+  {
+    "id": 198,
+    "topic_ID": 1,
+    "person_ID": 724,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Achilleus"
+  },
+  {
+    "id": 199,
+    "topic_ID": 1,
+    "person_ID": 651,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Lambros"
+  },
+  {
+    "id": 200,
+    "topic_ID": 1,
+    "person_ID": 625,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Frances Charles"
+  },
+  {
+    "id": 201,
+    "topic_ID": 1,
+    "person_ID": 659,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Francois Auguste Rene"
+  },
+  {
+    "id": 202,
+    "topic_ID": 1,
+    "person_ID": 670,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "George"
+  },
+  {
+    "id": 203,
+    "topic_ID": 1,
+    "person_ID": 657,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Charles"
+  },
+  {
+    "id": 204,
+    "topic_ID": 1,
+    "person_ID": 569,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Evliya"
+  },
+  {
+    "id": 205,
+    "topic_ID": 1,
+    "person_ID": 613,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "George"
+  },
+  {
+    "id": 206,
+    "topic_ID": 1,
+    "person_ID": 722,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Όνομα (en)",
+    "attribute_Value": "Michael"
+  },
+  {
+    "id": 207,
+    "topic_ID": 1,
+    "person_ID": 732,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "ca 64 B.C."
+  },
+  {
+    "id": 208,
+    "topic_ID": 1,
+    "person_ID": 621,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1634-1699"
+  },
+  {
+    "id": 209,
+    "topic_ID": 1,
+    "person_ID": 667,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1791-1849"
+  },
+  {
+    "id": 210,
+    "topic_ID": 1,
+    "person_ID": 575,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "Foundation"
+  },
+  {
+    "id": 211,
+    "topic_ID": 1,
+    "person_ID": 649,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1769-1822"
+  },
+  {
+    "id": 212,
+    "topic_ID": 1,
+    "person_ID": 584,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1832"
+  },
+  {
+    "id": 213,
+    "topic_ID": 1,
+    "person_ID": 643,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1779-1839"
+  },
+  {
+    "id": 214,
+    "topic_ID": 1,
+    "person_ID": 623,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1924-"
+  },
+  {
+    "id": 215,
+    "topic_ID": 1,
+    "person_ID": 663,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "Ecole Superieure"
+  },
+  {
+    "id": 216,
+    "topic_ID": 1,
+    "person_ID": 577,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1903-1987"
+  },
+  {
+    "id": 217,
+    "topic_ID": 1,
+    "person_ID": 715,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "525/4 B.C.-456 B.C."
+  },
+  {
+    "id": 218,
+    "topic_ID": 1,
+    "person_ID": 717,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "445-388 B.C."
+  },
+  {
+    "id": 219,
+    "topic_ID": 1,
+    "person_ID": 653,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1920-2005"
+  },
+  {
+    "id": 220,
+    "topic_ID": 1,
+    "person_ID": 645,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1859-1951"
+  },
+  {
+    "id": 221,
+    "topic_ID": 1,
+    "person_ID": 641,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "5th c. B.C."
+  },
+  {
+    "id": 222,
+    "topic_ID": 1,
+    "person_ID": 711,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1908-1960"
+  },
+  {
+    "id": 223,
+    "topic_ID": 1,
+    "person_ID": 655,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1821-1909"
+  },
+  {
+    "id": 224,
+    "topic_ID": 1,
+    "person_ID": 724,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1838-1895"
+  },
+  {
+    "id": 225,
+    "topic_ID": 1,
+    "person_ID": 603,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "45-120 AD"
+  },
+  {
+    "id": 226,
+    "topic_ID": 1,
+    "person_ID": 625,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1770-1838"
+  },
+  {
+    "id": 227,
+    "topic_ID": 1,
+    "person_ID": 659,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1768-1848"
+  },
+  {
+    "id": 228,
+    "topic_ID": 1,
+    "person_ID": 670,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1953-1919"
+  },
+  {
+    "id": 229,
+    "topic_ID": 1,
+    "person_ID": 616,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "64 BC-24AD"
+  },
+  {
+    "id": 230,
+    "topic_ID": 1,
+    "person_ID": 657,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1827-1896"
+  },
+  {
+    "id": 231,
+    "topic_ID": 1,
+    "person_ID": 569,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1611-1682"
+  },
+  {
+    "id": 232,
+    "topic_ID": 1,
+    "person_ID": 613,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1799-1975"
+  },
+  {
+    "id": 233,
+    "topic_ID": 1,
+    "person_ID": 722,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "1138-1222"
+  },
+  {
+    "id": 234,
+    "topic_ID": 1,
+    "person_ID": 497,
+    "attribute_ID": 8,
+    "attribute_Lang": "en",
+    "attribute_Label": "Γέννηση / Θάνατος (en)",
+    "attribute_Value": "2nd century A.D."
+  },
+  {
+    "id": 235,
+    "topic_ID": 1,
+    "person_ID": 732,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Marcus Vispanisu Agrippa was a Roman Consul and general, son-in-law of Julius Caesar."
+  },
+  {
+    "id": 236,
+    "topic_ID": 1,
+    "person_ID": 609,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Letters"
+  },
+  {
+    "id": 237,
+    "topic_ID": 1,
+    "person_ID": 621,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Relation de l'etat present de la ville d'Athenes, ancienne capitale de la Grece, bâtie depuis 3400 ans (Lyon 1674)"
+  },
+  {
+    "id": 238,
+    "topic_ID": 1,
+    "person_ID": 667,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "'La Grèce continentale et la Morée: Voyage séjour et études historiques en 1840 et 1841', (1843)"
+  },
+  {
+    "id": 239,
+    "topic_ID": 1,
+    "person_ID": 575,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Travels in Greece, An Account of a Tour made at the expenses of the Society of the Dilettanti, 1776."
+  },
+  {
+    "id": 240,
+    "topic_ID": 1,
+    "person_ID": 649,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Travels in Various Countries of Europe, London 1825"
+  },
+  {
+    "id": 241,
+    "topic_ID": 1,
+    "person_ID": 584,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "A classical and topographical tour through Greece, during the years 1801, 1805, and 1806, London"
+  },
+  {
+    "id": 242,
+    "topic_ID": 1,
+    "person_ID": 647,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "An Essay on Certain Points of Resemblance between the Ancient and Modern Greeks, London 1813"
+  },
+  {
+    "id": 243,
+    "topic_ID": 1,
+    "person_ID": 643,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Voyages and Travels in the Years 1809-1812 and 1811"
+  },
+  {
+    "id": 244,
+    "topic_ID": 1,
+    "person_ID": 623,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Murder in the Ancient Agora, 1995"
+  },
+  {
+    "id": 245,
+    "topic_ID": 1,
+    "person_ID": 663,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Viaggio nella Grecia fatto da Simone Pomardi negli anni 1804, 1805, 1806. Roma 1820"
+  },
+  {
+    "id": 246,
+    "topic_ID": 1,
+    "person_ID": 720,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "World Heritage List"
+  },
+  {
+    "id": 247,
+    "topic_ID": 1,
+    "person_ID": 577,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Memoires d'Hadrien"
+  },
+  {
+    "id": 248,
+    "topic_ID": 1,
+    "person_ID": 715,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Eumenides (Oresteia)"
+  },
+  {
+    "id": 249,
+    "topic_ID": 1,
+    "person_ID": 717,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Wealth"
+  },
+  {
+    "id": 250,
+    "topic_ID": 1,
+    "person_ID": 653,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "From the other side of Time (in Greek (1988)"
+  },
+  {
+    "id": 251,
+    "topic_ID": 1,
+    "person_ID": 645,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Scattered leaves of my life (3 vols), 1983-85"
+  },
+  {
+    "id": 252,
+    "topic_ID": 1,
+    "person_ID": 641,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Histories"
+  },
+  {
+    "id": 253,
+    "topic_ID": 1,
+    "person_ID": 711,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Editorial for Tachydromos magazine 1/9/1956"
+  },
+  {
+    "id": 254,
+    "topic_ID": 1,
+    "person_ID": 655,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Letter to his mother [in B. Farsen, V. Kardassis 'Beloved, hateful Athens', mooments from the life of the Finnish Hellenist Wilhelm Langua, 2009, p.20"
+  },
+  {
+    "id": 255,
+    "topic_ID": 1,
+    "person_ID": 603,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Parallel Lives, Pericles-Fabius Maximus"
+  },
+  {
+    "id": 256,
+    "topic_ID": 1,
+    "person_ID": 651,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Shadows (1920) [The Works, ed. G. Valetas, 1964, p. 132]"
+  },
+  {
+    "id": 257,
+    "topic_ID": 1,
+    "person_ID": 625,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Travels in Greece"
+  },
+  {
+    "id": 258,
+    "topic_ID": 1,
+    "person_ID": 659,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Journey from Paris to Jerusalem (1811)"
+  },
+  {
+    "id": 259,
+    "topic_ID": 1,
+    "person_ID": 670,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "'On the Columns' (1884)"
+  },
+  {
+    "id": 260,
+    "topic_ID": 1,
+    "person_ID": 616,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Geography"
+  },
+  {
+    "id": 261,
+    "topic_ID": 1,
+    "person_ID": 657,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "The Greeks of  today (1872)"
+  },
+  {
+    "id": 262,
+    "topic_ID": 1,
+    "person_ID": 569,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Seyahatname"
+  },
+  {
+    "id": 263,
+    "topic_ID": 1,
+    "person_ID": 613,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "The history of Greece under Othoman and Venetian domination (1856)"
+  },
+  {
+    "id": 264,
+    "topic_ID": 1,
+    "person_ID": 722,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Oration upon his appointment as Metropolitan bishop of Athens"
+  },
+  {
+    "id": 265,
+    "topic_ID": 1,
+    "person_ID": 497,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Έργο (en)",
+    "attribute_Value": "Travels in Greece, Attica"
+  }
+]

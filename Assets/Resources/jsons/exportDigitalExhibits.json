@@ -1,0 +1,6761 @@
+[
+  {
+    "id": 1,
+    "topic_ID": 1,
+    "exhibit_ID": 381,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αιάκειον 2"
+  },
+  {
+    "id": 2,
+    "topic_ID": 1,
+    "exhibit_ID": 380,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αιάκειον 1"
+  },
+  {
+    "id": 3,
+    "topic_ID": 1,
+    "exhibit_ID": 382,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αιάκειον 3"
+  },
+  {
+    "id": 4,
+    "topic_ID": 1,
+    "exhibit_ID": 383,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βασίλειος Στοά 1"
+  },
+  {
+    "id": 5,
+    "topic_ID": 1,
+    "exhibit_ID": 384,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βασίλειος Στοά 2"
+  },
+  {
+    "id": 6,
+    "topic_ID": 1,
+    "exhibit_ID": 385,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βασίλειος Στοά 3"
+  },
+  {
+    "id": 7,
+    "topic_ID": 1,
+    "exhibit_ID": 386,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βασίλειος Στοά 4"
+  },
+  {
+    "id": 8,
+    "topic_ID": 1,
+    "exhibit_ID": 388,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βασιλική 1"
+  },
+  {
+    "id": 9,
+    "topic_ID": 1,
+    "exhibit_ID": 389,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βασιλική 2"
+  },
+  {
+    "id": 10,
+    "topic_ID": 1,
+    "exhibit_ID": 390,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βασιλική 3"
+  },
+  {
+    "id": 11,
+    "topic_ID": 1,
+    "exhibit_ID": 391,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βήμα 1"
+  },
+  {
+    "id": 12,
+    "topic_ID": 1,
+    "exhibit_ID": 392,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βήμα 2"
+  },
+  {
+    "id": 13,
+    "topic_ID": 1,
+    "exhibit_ID": 393,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βήμα 3"
+  },
+  {
+    "id": 14,
+    "topic_ID": 1,
+    "exhibit_ID": 395,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βιβλιοθήκη 2"
+  },
+  {
+    "id": 15,
+    "topic_ID": 1,
+    "exhibit_ID": 396,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βιβλιοθήκη 3"
+  },
+  {
+    "id": 16,
+    "topic_ID": 1,
+    "exhibit_ID": 397,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βιβλιοθήκη 4"
+  },
+  {
+    "id": 17,
+    "topic_ID": 1,
+    "exhibit_ID": 398,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βιβλιοθήκη 5"
+  },
+  {
+    "id": 18,
+    "topic_ID": 1,
+    "exhibit_ID": 399,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "12 Θεοί 1"
+  },
+  {
+    "id": 19,
+    "topic_ID": 1,
+    "exhibit_ID": 400,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "12 Θεοί 2"
+  },
+  {
+    "id": 20,
+    "topic_ID": 1,
+    "exhibit_ID": 401,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "12 Θεοί 3"
+  },
+  {
+    "id": 21,
+    "topic_ID": 1,
+    "exhibit_ID": 402,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "12 Θεοί 4"
+  },
+  {
+    "id": 22,
+    "topic_ID": 1,
+    "exhibit_ID": 403,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Θόλος 1"
+  },
+  {
+    "id": 23,
+    "topic_ID": 1,
+    "exhibit_ID": 404,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Θόλος 2"
+  },
+  {
+    "id": 24,
+    "topic_ID": 1,
+    "exhibit_ID": 405,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Θόλος 3"
+  },
+  {
+    "id": 25,
+    "topic_ID": 1,
+    "exhibit_ID": 406,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Θόλος 4"
+  },
+  {
+    "id": 26,
+    "topic_ID": 1,
+    "exhibit_ID": 407,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Θόλος 5"
+  },
+  {
+    "id": 27,
+    "topic_ID": 1,
+    "exhibit_ID": 408,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ιων. Πρόπυλο 1"
+  },
+  {
+    "id": 28,
+    "topic_ID": 1,
+    "exhibit_ID": 409,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ιων. Πρόπυλο 2"
+  },
+  {
+    "id": 29,
+    "topic_ID": 1,
+    "exhibit_ID": 410,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μεσαία 1"
+  },
+  {
+    "id": 30,
+    "topic_ID": 1,
+    "exhibit_ID": 411,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μεσαία 2"
+  },
+  {
+    "id": 31,
+    "topic_ID": 1,
+    "exhibit_ID": 412,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μεσαία 3"
+  },
+  {
+    "id": 32,
+    "topic_ID": 1,
+    "exhibit_ID": 413,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μεσαία 4"
+  },
+  {
+    "id": 33,
+    "topic_ID": 1,
+    "exhibit_ID": 414,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μητρώον 1"
+  },
+  {
+    "id": 34,
+    "topic_ID": 1,
+    "exhibit_ID": 415,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μητρώον 2"
+  },
+  {
+    "id": 35,
+    "topic_ID": 1,
+    "exhibit_ID": 416,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μητρώον 3"
+  },
+  {
+    "id": 36,
+    "topic_ID": 1,
+    "exhibit_ID": 417,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Επωνύμων 1"
+  },
+  {
+    "id": 37,
+    "topic_ID": 1,
+    "exhibit_ID": 418,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Επωνύμων 2"
+  },
+  {
+    "id": 38,
+    "topic_ID": 1,
+    "exhibit_ID": 419,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Επωνύμων 3"
+  },
+  {
+    "id": 39,
+    "topic_ID": 1,
+    "exhibit_ID": 420,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μονόπτερος 1"
+  },
+  {
+    "id": 40,
+    "topic_ID": 1,
+    "exhibit_ID": 421,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μονόπτερος 2"
+  },
+  {
+    "id": 41,
+    "topic_ID": 1,
+    "exhibit_ID": 422,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μονόπτερος 3"
+  },
+  {
+    "id": 42,
+    "topic_ID": 1,
+    "exhibit_ID": 423,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ναός Άρη 1"
+  },
+  {
+    "id": 43,
+    "topic_ID": 1,
+    "exhibit_ID": 424,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ναός Άρη 2"
+  },
+  {
+    "id": 44,
+    "topic_ID": 1,
+    "exhibit_ID": 425,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ναός Άρη 3"
+  },
+  {
+    "id": 45,
+    "topic_ID": 1,
+    "exhibit_ID": 426,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ηφαιστείο 1"
+  },
+  {
+    "id": 46,
+    "topic_ID": 1,
+    "exhibit_ID": 427,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ηφαιστείο 2"
+  },
+  {
+    "id": 47,
+    "topic_ID": 1,
+    "exhibit_ID": 428,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ηφαιστείο 3"
+  },
+  {
+    "id": 48,
+    "topic_ID": 1,
+    "exhibit_ID": 429,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ηφαιστείο 4"
+  },
+  {
+    "id": 49,
+    "topic_ID": 1,
+    "exhibit_ID": 430,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ηφαιστείο 5"
+  },
+  {
+    "id": 50,
+    "topic_ID": 1,
+    "exhibit_ID": 431,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πατρώος 1"
+  },
+  {
+    "id": 51,
+    "topic_ID": 1,
+    "exhibit_ID": 432,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πατρώος 2"
+  },
+  {
+    "id": 52,
+    "topic_ID": 1,
+    "exhibit_ID": 433,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πατρώος 3"
+  },
+  {
+    "id": 53,
+    "topic_ID": 1,
+    "exhibit_ID": 434,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πατρώος 4"
+  },
+  {
+    "id": 54,
+    "topic_ID": 1,
+    "exhibit_ID": 435,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νέο Βουλευτήριο 1"
+  },
+  {
+    "id": 55,
+    "topic_ID": 1,
+    "exhibit_ID": 436,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νέο Βουλευτήριο 2"
+  },
+  {
+    "id": 56,
+    "topic_ID": 1,
+    "exhibit_ID": 437,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νομισματοκοπείο 1"
+  },
+  {
+    "id": 57,
+    "topic_ID": 1,
+    "exhibit_ID": 438,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νομισματοκοπείο 2"
+  },
+  {
+    "id": 58,
+    "topic_ID": 1,
+    "exhibit_ID": 439,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νομισματοκοπείο 3"
+  },
+  {
+    "id": 59,
+    "topic_ID": 1,
+    "exhibit_ID": 440,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νότια Στοά 1"
+  },
+  {
+    "id": 60,
+    "topic_ID": 1,
+    "exhibit_ID": 441,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νότια Στοά 2"
+  },
+  {
+    "id": 61,
+    "topic_ID": 1,
+    "exhibit_ID": 442,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νότια Στοά 3"
+  },
+  {
+    "id": 62,
+    "topic_ID": 1,
+    "exhibit_ID": 443,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νότια Στοά 4"
+  },
+  {
+    "id": 63,
+    "topic_ID": 1,
+    "exhibit_ID": 444,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νότια Στοά 5"
+  },
+  {
+    "id": 64,
+    "topic_ID": 1,
+    "exhibit_ID": 446,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΑ Κρήνη 1"
+  },
+  {
+    "id": 65,
+    "topic_ID": 1,
+    "exhibit_ID": 447,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΑ Κρήνη 2"
+  },
+  {
+    "id": 66,
+    "topic_ID": 1,
+    "exhibit_ID": 448,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΑ Κρήνη 3"
+  },
+  {
+    "id": 67,
+    "topic_ID": 1,
+    "exhibit_ID": 449,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΑ Κρήνη 4"
+  },
+  {
+    "id": 68,
+    "topic_ID": 1,
+    "exhibit_ID": 450,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΑ Κρήνη 5"
+  },
+  {
+    "id": 69,
+    "topic_ID": 1,
+    "exhibit_ID": 451,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΑ Ναός 1"
+  },
+  {
+    "id": 70,
+    "topic_ID": 1,
+    "exhibit_ID": 452,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΑ Ναός 2"
+  },
+  {
+    "id": 71,
+    "topic_ID": 1,
+    "exhibit_ID": 453,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΑ Ναός 3"
+  },
+  {
+    "id": 72,
+    "topic_ID": 1,
+    "exhibit_ID": 454,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΑ Ναός 4"
+  },
+  {
+    "id": 73,
+    "topic_ID": 1,
+    "exhibit_ID": 455,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΔ Κρήνη 1"
+  },
+  {
+    "id": 74,
+    "topic_ID": 1,
+    "exhibit_ID": 456,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΔ Κρήνη 2"
+  },
+  {
+    "id": 75,
+    "topic_ID": 1,
+    "exhibit_ID": 457,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΔ Κρήνη 3"
+  },
+  {
+    "id": 76,
+    "topic_ID": 1,
+    "exhibit_ID": 458,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΔ Κρήνη 4"
+  },
+  {
+    "id": 77,
+    "topic_ID": 1,
+    "exhibit_ID": 459,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΔ Ναός 1"
+  },
+  {
+    "id": 78,
+    "topic_ID": 1,
+    "exhibit_ID": 460,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΔ Ναός 2"
+  },
+  {
+    "id": 79,
+    "topic_ID": 1,
+    "exhibit_ID": 461,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "ΝΔ Ναός 3"
+  },
+  {
+    "id": 80,
+    "topic_ID": 1,
+    "exhibit_ID": 462,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νυμφαίο 1"
+  },
+  {
+    "id": 81,
+    "topic_ID": 1,
+    "exhibit_ID": 463,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νυμφαίο 2"
+  },
+  {
+    "id": 82,
+    "topic_ID": 1,
+    "exhibit_ID": 464,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νυμφαίο 3"
+  },
+  {
+    "id": 83,
+    "topic_ID": 1,
+    "exhibit_ID": 465,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Παλιό Βουλευτήριο 1"
+  },
+  {
+    "id": 84,
+    "topic_ID": 1,
+    "exhibit_ID": 466,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Παλιό Βουλευτήριο 2"
+  },
+  {
+    "id": 85,
+    "topic_ID": 1,
+    "exhibit_ID": 467,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Παλιό Βουλευτήριο 3"
+  },
+  {
+    "id": 86,
+    "topic_ID": 1,
+    "exhibit_ID": 468,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Παλιό Βουλευτήριο 4"
+  },
+  {
+    "id": 87,
+    "topic_ID": 1,
+    "exhibit_ID": 469,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ποικίλη Στοά 1"
+  },
+  {
+    "id": 88,
+    "topic_ID": 1,
+    "exhibit_ID": 470,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ποικίλη Στοά 2"
+  },
+  {
+    "id": 89,
+    "topic_ID": 1,
+    "exhibit_ID": 471,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ποικίλη Στοά 3"
+  },
+  {
+    "id": 90,
+    "topic_ID": 1,
+    "exhibit_ID": 472,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ποικίλη Στοά 4"
+  },
+  {
+    "id": 91,
+    "topic_ID": 1,
+    "exhibit_ID": 473,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Στοά Αττάλου 1"
+  },
+  {
+    "id": 92,
+    "topic_ID": 1,
+    "exhibit_ID": 474,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Στοά Αττάλου 2"
+  },
+  {
+    "id": 93,
+    "topic_ID": 1,
+    "exhibit_ID": 475,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Στοά Αττάλου 3"
+  },
+  {
+    "id": 94,
+    "topic_ID": 1,
+    "exhibit_ID": 476,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Στοά Αττάλου 4"
+  },
+  {
+    "id": 95,
+    "topic_ID": 1,
+    "exhibit_ID": 477,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Στοά Αττάλου 5"
+  },
+  {
+    "id": 96,
+    "topic_ID": 1,
+    "exhibit_ID": 478,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ζεύς Ελευθέριος 1"
+  },
+  {
+    "id": 97,
+    "topic_ID": 1,
+    "exhibit_ID": 479,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ζεύς Ελευθέριος 2"
+  },
+  {
+    "id": 98,
+    "topic_ID": 1,
+    "exhibit_ID": 480,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ζεύς Ελευθέριος 3"
+  },
+  {
+    "id": 99,
+    "topic_ID": 1,
+    "exhibit_ID": 481,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Τετράγωνο Περιστύλιο 1"
+  },
+  {
+    "id": 100,
+    "topic_ID": 1,
+    "exhibit_ID": 482,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Τετράγωνο Περιστύλιο 2"
+  },
+  {
+    "id": 101,
+    "topic_ID": 1,
+    "exhibit_ID": 483,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Τετράγωνο Περιστύλιο 3"
+  },
+  {
+    "id": 102,
+    "topic_ID": 1,
+    "exhibit_ID": 484,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ωδείο Αγρίππα 1"
+  },
+  {
+    "id": 103,
+    "topic_ID": 1,
+    "exhibit_ID": 485,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ωδείο Αγρίππα 2"
+  },
+  {
+    "id": 104,
+    "topic_ID": 1,
+    "exhibit_ID": 486,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ωδείο Αγρίππα 3"
+  },
+  {
+    "id": 105,
+    "topic_ID": 1,
+    "exhibit_ID": 487,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ωδείο Αγρίππα 4"
+  },
+  {
+    "id": 106,
+    "topic_ID": 1,
+    "exhibit_ID": 488,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ολύμπιος Δίας 1"
+  },
+  {
+    "id": 107,
+    "topic_ID": 1,
+    "exhibit_ID": 489,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ολύμπιος Δίας 2"
+  },
+  {
+    "id": 108,
+    "topic_ID": 1,
+    "exhibit_ID": 490,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ολύμπιος Δίας 3"
+  },
+  {
+    "id": 109,
+    "topic_ID": 1,
+    "exhibit_ID": 491,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ολύμπιος Δίας 4"
+  },
+  {
+    "id": 110,
+    "topic_ID": 1,
+    "exhibit_ID": 492,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ολύμπιος Δίας 5"
+  },
+  {
+    "id": 111,
+    "topic_ID": 1,
+    "exhibit_ID": 493,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πύλη Αδριανού 1"
+  },
+  {
+    "id": 112,
+    "topic_ID": 1,
+    "exhibit_ID": 494,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πύλη Αδριανού 2"
+  },
+  {
+    "id": 113,
+    "topic_ID": 1,
+    "exhibit_ID": 495,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πύλη Αδριανού 3"
+  },
+  {
+    "id": 114,
+    "topic_ID": 1,
+    "exhibit_ID": 499,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πομπείον 1"
+  },
+  {
+    "id": 115,
+    "topic_ID": 1,
+    "exhibit_ID": 500,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πομπείον 2"
+  },
+  {
+    "id": 116,
+    "topic_ID": 1,
+    "exhibit_ID": 501,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πομπείον 3"
+  },
+  {
+    "id": 117,
+    "topic_ID": 1,
+    "exhibit_ID": 506,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ιερό Αφροδίτης Ουρανίας"
+  },
+  {
+    "id": 118,
+    "topic_ID": 1,
+    "exhibit_ID": 510,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Κλεψύδρα"
+  },
+  {
+    "id": 119,
+    "topic_ID": 1,
+    "exhibit_ID": 511,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αγλαύρειο"
+  },
+  {
+    "id": 120,
+    "topic_ID": 1,
+    "exhibit_ID": 512,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Σπήλαιο Πανός"
+  },
+  {
+    "id": 121,
+    "topic_ID": 1,
+    "exhibit_ID": 514,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Σπήλαιο του Απόλλωνα Υποακραίου"
+  },
+  {
+    "id": 122,
+    "topic_ID": 1,
+    "exhibit_ID": 516,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ναός Αθηνάς Νίκης"
+  },
+  {
+    "id": 123,
+    "topic_ID": 1,
+    "exhibit_ID": 517,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ναός της Αθηνάς Νίκης (πίνακας)"
+  },
+  {
+    "id": 124,
+    "topic_ID": 1,
+    "exhibit_ID": 519,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Το Ερέχθειο το ηλιοβασίλεμα."
+  },
+  {
+    "id": 125,
+    "topic_ID": 1,
+    "exhibit_ID": 520,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ερέχθειο"
+  },
+  {
+    "id": 126,
+    "topic_ID": 1,
+    "exhibit_ID": 522,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γωνιαία Καρυάτιδα στο Ερέχθειο"
+  },
+  {
+    "id": 127,
+    "topic_ID": 1,
+    "exhibit_ID": 534,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αρρηφόριον"
+  },
+  {
+    "id": 128,
+    "topic_ID": 1,
+    "exhibit_ID": 541,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αρχαία αγορά (γενική άποψη)"
+  },
+  {
+    "id": 129,
+    "topic_ID": 1,
+    "exhibit_ID": 556,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Άρειος Πάγος"
+  },
+  {
+    "id": 130,
+    "topic_ID": 1,
+    "exhibit_ID": 560,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Θέατρο Διονύσου"
+  },
+  {
+    "id": 131,
+    "topic_ID": 1,
+    "exhibit_ID": 561,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Θέατρο Διονύσου, σήμερα"
+  },
+  {
+    "id": 132,
+    "topic_ID": 1,
+    "exhibit_ID": 564,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ασκληπιείο"
+  },
+  {
+    "id": 133,
+    "topic_ID": 1,
+    "exhibit_ID": 394,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βιβλιοθήκη 1"
+  },
+  {
+    "id": 134,
+    "topic_ID": 1,
+    "exhibit_ID": 571,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "τεστ ηρώδειο"
+  },
+  {
+    "id": 135,
+    "topic_ID": 1,
+    "exhibit_ID": 572,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "test hrvdeio 2"
+  },
+  {
+    "id": 136,
+    "topic_ID": 1,
+    "exhibit_ID": 573,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ηρώδειο 1"
+  },
+  {
+    "id": 137,
+    "topic_ID": 1,
+    "exhibit_ID": 586,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αγορανομείον 1"
+  },
+  {
+    "id": 138,
+    "topic_ID": 1,
+    "exhibit_ID": 587,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αέρηδες 2"
+  },
+  {
+    "id": 139,
+    "topic_ID": 1,
+    "exhibit_ID": 588,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αέρηδες 4"
+  },
+  {
+    "id": 140,
+    "topic_ID": 1,
+    "exhibit_ID": 589,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βιβλιοθήκη Αδριανού 2"
+  },
+  {
+    "id": 141,
+    "topic_ID": 1,
+    "exhibit_ID": 590,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βιβλιοθήκη Αδριανού 3"
+  },
+  {
+    "id": 142,
+    "topic_ID": 1,
+    "exhibit_ID": 591,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μεντρεσές 2"
+  },
+  {
+    "id": 143,
+    "topic_ID": 1,
+    "exhibit_ID": 592,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πύλη Αρχηγέτιδος 1"
+  },
+  {
+    "id": 144,
+    "topic_ID": 1,
+    "exhibit_ID": 593,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πύλη Αρχηγέτιδος 5"
+  },
+  {
+    "id": 145,
+    "topic_ID": 1,
+    "exhibit_ID": 594,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ρωμαική Αγορά 2"
+  },
+  {
+    "id": 146,
+    "topic_ID": 1,
+    "exhibit_ID": 595,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Φετιχιέ Τζαμί 1"
+  },
+  {
+    "id": 147,
+    "topic_ID": 1,
+    "exhibit_ID": 596,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ωρολόγιο Κυρρήστου 1"
+  },
+  {
+    "id": 148,
+    "topic_ID": 1,
+    "exhibit_ID": 597,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ωρολόγιο Κυρρήστου 2"
+  },
+  {
+    "id": 149,
+    "topic_ID": 1,
+    "exhibit_ID": 598,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πύλη Αδριανού 4"
+  },
+  {
+    "id": 150,
+    "topic_ID": 1,
+    "exhibit_ID": 599,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ωδείο Περικλή 1"
+  },
+  {
+    "id": 151,
+    "topic_ID": 1,
+    "exhibit_ID": 600,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ηρώδειο 5"
+  },
+  {
+    "id": 152,
+    "topic_ID": 1,
+    "exhibit_ID": 601,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Στοά Ευμένους 3"
+  },
+  {
+    "id": 153,
+    "topic_ID": 1,
+    "exhibit_ID": 604,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Διόνυσος Ελευθέριος 2"
+  },
+  {
+    "id": 154,
+    "topic_ID": 1,
+    "exhibit_ID": 605,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ιερά Πύλη"
+  },
+  {
+    "id": 155,
+    "topic_ID": 1,
+    "exhibit_ID": 606,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Δίπυλον 1"
+  },
+  {
+    "id": 156,
+    "topic_ID": 1,
+    "exhibit_ID": 607,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Δίπυλον 2"
+  },
+  {
+    "id": 157,
+    "topic_ID": 1,
+    "exhibit_ID": 611,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μνημείο Αγρίππα 2"
+  },
+  {
+    "id": 158,
+    "topic_ID": 1,
+    "exhibit_ID": 627,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πρόμαχος 1"
+  },
+  {
+    "id": 159,
+    "topic_ID": 1,
+    "exhibit_ID": 628,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πρόμαχος 3"
+  },
+  {
+    "id": 160,
+    "topic_ID": 1,
+    "exhibit_ID": 629,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Οθωμανικό Ερέχθειο"
+  },
+  {
+    "id": 161,
+    "topic_ID": 1,
+    "exhibit_ID": 630,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πανδρόσειον 1"
+  },
+  {
+    "id": 162,
+    "topic_ID": 1,
+    "exhibit_ID": 631,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πινακοθήκη 2"
+  },
+  {
+    "id": 163,
+    "topic_ID": 1,
+    "exhibit_ID": 632,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Προπύλαια 1"
+  },
+  {
+    "id": 164,
+    "topic_ID": 1,
+    "exhibit_ID": 633,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Προπύλαια 4"
+  },
+  {
+    "id": 165,
+    "topic_ID": 1,
+    "exhibit_ID": 634,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Προπύλαια 5"
+  },
+  {
+    "id": 166,
+    "topic_ID": 1,
+    "exhibit_ID": 635,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Τείχη Ακρόπολης 2"
+  },
+  {
+    "id": 167,
+    "topic_ID": 1,
+    "exhibit_ID": 636,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Παρθενώνας 3"
+  },
+  {
+    "id": 168,
+    "topic_ID": 1,
+    "exhibit_ID": 637,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Παρθενώνας 5"
+  },
+  {
+    "id": 169,
+    "topic_ID": 1,
+    "exhibit_ID": 638,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Παρθενώνας 7"
+  },
+  {
+    "id": 170,
+    "topic_ID": 1,
+    "exhibit_ID": 639,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Παρθενώνας 10"
+  },
+  {
+    "id": 171,
+    "topic_ID": 1,
+    "exhibit_ID": 673,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Hadrian Library 3d"
+  },
+  {
+    "id": 172,
+    "topic_ID": 1,
+    "exhibit_ID": 674,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Φετιχιέ Τζαμί 3d"
+  },
+  {
+    "id": 173,
+    "topic_ID": 1,
+    "exhibit_ID": 675,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "μεντρεσες"
+  },
+  {
+    "id": 174,
+    "topic_ID": 1,
+    "exhibit_ID": 676,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "by William Cole"
+  },
+  {
+    "id": 175,
+    "topic_ID": 1,
+    "exhibit_ID": 677,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "mentreses"
+  },
+  {
+    "id": 176,
+    "topic_ID": 1,
+    "exhibit_ID": 678,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Aerides Ottoman"
+  },
+  {
+    "id": 177,
+    "topic_ID": 1,
+    "exhibit_ID": 679,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "hamam"
+  },
+  {
+    "id": 178,
+    "topic_ID": 1,
+    "exhibit_ID": 680,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "roman agora 3d"
+  },
+  {
+    "id": 179,
+    "topic_ID": 1,
+    "exhibit_ID": 681,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "spiti kamares 3d"
+  },
+  {
+    "id": 180,
+    "topic_ID": 1,
+    "exhibit_ID": 682,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "archigetida3d"
+  },
+  {
+    "id": 181,
+    "topic_ID": 1,
+    "exhibit_ID": 683,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "tekes 3d"
+  },
+  {
+    "id": 182,
+    "topic_ID": 1,
+    "exhibit_ID": 685,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Σωτείρα της Παζαρόπορτας"
+  },
+  {
+    "id": 183,
+    "topic_ID": 1,
+    "exhibit_ID": 686,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Soteira Pazaroportas 3d"
+  },
+  {
+    "id": 184,
+    "topic_ID": 1,
+    "exhibit_ID": 687,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "arriforio 3d"
+  },
+  {
+    "id": 185,
+    "topic_ID": 1,
+    "exhibit_ID": 688,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Erechtheion 3d"
+  },
+  {
+    "id": 186,
+    "topic_ID": 1,
+    "exhibit_ID": 689,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Nike 3d"
+  },
+  {
+    "id": 187,
+    "topic_ID": 1,
+    "exhibit_ID": 690,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Artemis 3d"
+  },
+  {
+    "id": 188,
+    "topic_ID": 1,
+    "exhibit_ID": 691,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "RomeAugust3d"
+  },
+  {
+    "id": 189,
+    "topic_ID": 1,
+    "exhibit_ID": 692,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Propylaea 3d"
+  },
+  {
+    "id": 190,
+    "topic_ID": 1,
+    "exhibit_ID": 693,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Parthenon 3d"
+  },
+  {
+    "id": 191,
+    "topic_ID": 1,
+    "exhibit_ID": 694,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "chalcotheke3d"
+  },
+  {
+    "id": 192,
+    "topic_ID": 1,
+    "exhibit_ID": 695,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "zeus polieus 3d"
+  },
+  {
+    "id": 193,
+    "topic_ID": 1,
+    "exhibit_ID": 696,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Vomos 3d"
+  },
+  {
+    "id": 194,
+    "topic_ID": 1,
+    "exhibit_ID": 697,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "hadrian arch 3d"
+  },
+  {
+    "id": 195,
+    "topic_ID": 1,
+    "exhibit_ID": 698,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Valaneio Olymp 3d"
+  },
+  {
+    "id": 196,
+    "topic_ID": 1,
+    "exhibit_ID": 699,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Olympieion 3d"
+  },
+  {
+    "id": 197,
+    "topic_ID": 1,
+    "exhibit_ID": 700,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Propylo Olympieion 3d"
+  },
+  {
+    "id": 198,
+    "topic_ID": 1,
+    "exhibit_ID": 701,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Odeion Pericles 3d"
+  },
+  {
+    "id": 199,
+    "topic_ID": 1,
+    "exhibit_ID": 702,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Aiakeion 3d"
+  },
+  {
+    "id": 200,
+    "topic_ID": 1,
+    "exhibit_ID": 703,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "eschara 3d"
+  },
+  {
+    "id": 201,
+    "topic_ID": 1,
+    "exhibit_ID": 704,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "vomos 12 3d"
+  },
+  {
+    "id": 202,
+    "topic_ID": 1,
+    "exhibit_ID": 706,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Dipylon3d"
+  },
+  {
+    "id": 203,
+    "topic_ID": 1,
+    "exhibit_ID": 707,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "IeraPyli3d"
+  },
+  {
+    "id": 204,
+    "topic_ID": 1,
+    "exhibit_ID": 708,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "teixi3d"
+  },
+  {
+    "id": 205,
+    "topic_ID": 1,
+    "exhibit_ID": 713,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Εκκλησίες των Ταξιαρχών και του Προφήτη Ηλία στο σταροπάζαρο"
+  },
+  {
+    "id": 206,
+    "topic_ID": 1,
+    "exhibit_ID": 726,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Εγκαίνεια του Μουσείου της Αρχαίας Αγοράς"
+  },
+  {
+    "id": 207,
+    "topic_ID": 1,
+    "exhibit_ID": 727,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Δημοσιεύματα στον τύπο για την αναστήλωση της Στοάς του Αττάλου"
+  },
+  {
+    "id": 208,
+    "topic_ID": 1,
+    "exhibit_ID": 728,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Διθυραμβικά δημοσιεύματα για τον Ροκφέλλερ"
+  },
+  {
+    "id": 209,
+    "topic_ID": 1,
+    "exhibit_ID": 729,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Το Ηφαιστείο στον πίνακα του Peter von Hess"
+  },
+  {
+    "id": 210,
+    "topic_ID": 1,
+    "exhibit_ID": 730,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αποβάτης δρόμος"
+  },
+  {
+    "id": 211,
+    "topic_ID": 1,
+    "exhibit_ID": 381,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 212,
+    "topic_ID": 1,
+    "exhibit_ID": 380,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 213,
+    "topic_ID": 1,
+    "exhibit_ID": 382,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 214,
+    "topic_ID": 1,
+    "exhibit_ID": 383,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "Camp, J, The Athenian Agora, 2003, The American School of Classical Studies at Athens, Princeton NJ, p. 40, fig. 62"
+  },
+  {
+    "id": 215,
+    "topic_ID": 1,
+    "exhibit_ID": 384,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 216,
+    "topic_ID": 1,
+    "exhibit_ID": 385,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 217,
+    "topic_ID": 1,
+    "exhibit_ID": 386,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 218,
+    "topic_ID": 1,
+    "exhibit_ID": 388,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 219,
+    "topic_ID": 1,
+    "exhibit_ID": 389,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 220,
+    "topic_ID": 1,
+    "exhibit_ID": 390,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 221,
+    "topic_ID": 1,
+    "exhibit_ID": 391,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 222,
+    "topic_ID": 1,
+    "exhibit_ID": 392,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 223,
+    "topic_ID": 1,
+    "exhibit_ID": 393,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 224,
+    "topic_ID": 1,
+    "exhibit_ID": 395,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 225,
+    "topic_ID": 1,
+    "exhibit_ID": 396,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 226,
+    "topic_ID": 1,
+    "exhibit_ID": 397,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 227,
+    "topic_ID": 1,
+    "exhibit_ID": 398,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 228,
+    "topic_ID": 1,
+    "exhibit_ID": 399,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 229,
+    "topic_ID": 1,
+    "exhibit_ID": 400,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 230,
+    "topic_ID": 1,
+    "exhibit_ID": 401,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 231,
+    "topic_ID": 1,
+    "exhibit_ID": 402,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 232,
+    "topic_ID": 1,
+    "exhibit_ID": 403,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 233,
+    "topic_ID": 1,
+    "exhibit_ID": 404,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 234,
+    "topic_ID": 1,
+    "exhibit_ID": 405,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 235,
+    "topic_ID": 1,
+    "exhibit_ID": 406,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 236,
+    "topic_ID": 1,
+    "exhibit_ID": 407,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 237,
+    "topic_ID": 1,
+    "exhibit_ID": 408,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 238,
+    "topic_ID": 1,
+    "exhibit_ID": 409,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 239,
+    "topic_ID": 1,
+    "exhibit_ID": 410,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 240,
+    "topic_ID": 1,
+    "exhibit_ID": 411,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 241,
+    "topic_ID": 1,
+    "exhibit_ID": 412,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 242,
+    "topic_ID": 1,
+    "exhibit_ID": 413,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 243,
+    "topic_ID": 1,
+    "exhibit_ID": 414,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 244,
+    "topic_ID": 1,
+    "exhibit_ID": 415,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 245,
+    "topic_ID": 1,
+    "exhibit_ID": 416,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 246,
+    "topic_ID": 1,
+    "exhibit_ID": 417,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 247,
+    "topic_ID": 1,
+    "exhibit_ID": 418,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 248,
+    "topic_ID": 1,
+    "exhibit_ID": 419,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 249,
+    "topic_ID": 1,
+    "exhibit_ID": 420,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 250,
+    "topic_ID": 1,
+    "exhibit_ID": 421,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 251,
+    "topic_ID": 1,
+    "exhibit_ID": 422,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 252,
+    "topic_ID": 1,
+    "exhibit_ID": 423,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 253,
+    "topic_ID": 1,
+    "exhibit_ID": 424,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 254,
+    "topic_ID": 1,
+    "exhibit_ID": 425,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 255,
+    "topic_ID": 1,
+    "exhibit_ID": 426,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "travelogues.gr"
+  },
+  {
+    "id": 256,
+    "topic_ID": 1,
+    "exhibit_ID": 427,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 257,
+    "topic_ID": 1,
+    "exhibit_ID": 428,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 258,
+    "topic_ID": 1,
+    "exhibit_ID": 429,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ouranos.afs.edu.gr"
+  },
+  {
+    "id": 259,
+    "topic_ID": 1,
+    "exhibit_ID": 430,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 260,
+    "topic_ID": 1,
+    "exhibit_ID": 431,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 261,
+    "topic_ID": 1,
+    "exhibit_ID": 432,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 262,
+    "topic_ID": 1,
+    "exhibit_ID": 433,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 263,
+    "topic_ID": 1,
+    "exhibit_ID": 434,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 264,
+    "topic_ID": 1,
+    "exhibit_ID": 435,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 265,
+    "topic_ID": 1,
+    "exhibit_ID": 436,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 266,
+    "topic_ID": 1,
+    "exhibit_ID": 437,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 267,
+    "topic_ID": 1,
+    "exhibit_ID": 438,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 268,
+    "topic_ID": 1,
+    "exhibit_ID": 439,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 269,
+    "topic_ID": 1,
+    "exhibit_ID": 440,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 270,
+    "topic_ID": 1,
+    "exhibit_ID": 441,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 271,
+    "topic_ID": 1,
+    "exhibit_ID": 442,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 272,
+    "topic_ID": 1,
+    "exhibit_ID": 443,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 273,
+    "topic_ID": 1,
+    "exhibit_ID": 444,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 274,
+    "topic_ID": 1,
+    "exhibit_ID": 446,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 275,
+    "topic_ID": 1,
+    "exhibit_ID": 447,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 276,
+    "topic_ID": 1,
+    "exhibit_ID": 448,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 277,
+    "topic_ID": 1,
+    "exhibit_ID": 449,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 278,
+    "topic_ID": 1,
+    "exhibit_ID": 450,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 279,
+    "topic_ID": 1,
+    "exhibit_ID": 451,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 280,
+    "topic_ID": 1,
+    "exhibit_ID": 452,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 281,
+    "topic_ID": 1,
+    "exhibit_ID": 453,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 282,
+    "topic_ID": 1,
+    "exhibit_ID": 454,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 283,
+    "topic_ID": 1,
+    "exhibit_ID": 455,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 284,
+    "topic_ID": 1,
+    "exhibit_ID": 456,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 285,
+    "topic_ID": 1,
+    "exhibit_ID": 457,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 286,
+    "topic_ID": 1,
+    "exhibit_ID": 458,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 287,
+    "topic_ID": 1,
+    "exhibit_ID": 459,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 288,
+    "topic_ID": 1,
+    "exhibit_ID": 460,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 289,
+    "topic_ID": 1,
+    "exhibit_ID": 461,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 290,
+    "topic_ID": 1,
+    "exhibit_ID": 462,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 291,
+    "topic_ID": 1,
+    "exhibit_ID": 463,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 292,
+    "topic_ID": 1,
+    "exhibit_ID": 464,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 293,
+    "topic_ID": 1,
+    "exhibit_ID": 465,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 294,
+    "topic_ID": 1,
+    "exhibit_ID": 466,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "travelogues.gr"
+  },
+  {
+    "id": 295,
+    "topic_ID": 1,
+    "exhibit_ID": 467,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 296,
+    "topic_ID": 1,
+    "exhibit_ID": 468,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 297,
+    "topic_ID": 1,
+    "exhibit_ID": 469,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 298,
+    "topic_ID": 1,
+    "exhibit_ID": 470,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 299,
+    "topic_ID": 1,
+    "exhibit_ID": 471,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 300,
+    "topic_ID": 1,
+    "exhibit_ID": 472,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 301,
+    "topic_ID": 1,
+    "exhibit_ID": 473,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 302,
+    "topic_ID": 1,
+    "exhibit_ID": 474,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 303,
+    "topic_ID": 1,
+    "exhibit_ID": 475,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 304,
+    "topic_ID": 1,
+    "exhibit_ID": 476,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 305,
+    "topic_ID": 1,
+    "exhibit_ID": 477,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 306,
+    "topic_ID": 1,
+    "exhibit_ID": 478,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 307,
+    "topic_ID": 1,
+    "exhibit_ID": 479,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 308,
+    "topic_ID": 1,
+    "exhibit_ID": 480,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 309,
+    "topic_ID": 1,
+    "exhibit_ID": 481,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 310,
+    "topic_ID": 1,
+    "exhibit_ID": 482,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 311,
+    "topic_ID": 1,
+    "exhibit_ID": 483,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 312,
+    "topic_ID": 1,
+    "exhibit_ID": 484,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 313,
+    "topic_ID": 1,
+    "exhibit_ID": 485,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 314,
+    "topic_ID": 1,
+    "exhibit_ID": 486,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 315,
+    "topic_ID": 1,
+    "exhibit_ID": 487,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 316,
+    "topic_ID": 1,
+    "exhibit_ID": 488,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "travelogues.gr"
+  },
+  {
+    "id": 317,
+    "topic_ID": 1,
+    "exhibit_ID": 489,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 318,
+    "topic_ID": 1,
+    "exhibit_ID": 490,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 319,
+    "topic_ID": 1,
+    "exhibit_ID": 491,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "elia.gr"
+  },
+  {
+    "id": 320,
+    "topic_ID": 1,
+    "exhibit_ID": 492,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "travelogues.gr"
+  },
+  {
+    "id": 321,
+    "topic_ID": 1,
+    "exhibit_ID": 493,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "travelogues.gr"
+  },
+  {
+    "id": 322,
+    "topic_ID": 1,
+    "exhibit_ID": 494,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "travelogues.gr"
+  },
+  {
+    "id": 323,
+    "topic_ID": 1,
+    "exhibit_ID": 495,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "travelogues.gr"
+  },
+  {
+    "id": 324,
+    "topic_ID": 1,
+    "exhibit_ID": 499,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "unikoeln.de"
+  },
+  {
+    "id": 325,
+    "topic_ID": 1,
+    "exhibit_ID": 500,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "unikoeln.de"
+  },
+  {
+    "id": 326,
+    "topic_ID": 1,
+    "exhibit_ID": 501,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "unikoeln.de"
+  },
+  {
+    "id": 327,
+    "topic_ID": 1,
+    "exhibit_ID": 510,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://www.athenskey.com/klepsydra.html"
+  },
+  {
+    "id": 328,
+    "topic_ID": 1,
+    "exhibit_ID": 511,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://commons.wikimedia.org/wiki/File:Aglaureion_Acropolis_of_Athens.jpg"
+  },
+  {
+    "id": 329,
+    "topic_ID": 1,
+    "exhibit_ID": 512,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://commons.wikimedia.org/wiki/File:Panas_cave_7233916.JPG"
+  },
+  {
+    "id": 330,
+    "topic_ID": 1,
+    "exhibit_ID": 514,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://www.2steps.gr/index.asp?xkey=818"
+  },
+  {
+    "id": 331,
+    "topic_ID": 1,
+    "exhibit_ID": 516,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://commons.wikimedia.org/wiki/File:Acr%C3%B2poli_d%27Atenes,_temple_d%27Atena_Nik%C3%A9.JPG"
+  },
+  {
+    "id": 332,
+    "topic_ID": 1,
+    "exhibit_ID": 517,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://commons.wikimedia.org/wiki/File:Werner_Carl-Friedrich_-_The_Temple_of_Athena_Nike._View_from_the_North-East_-_Google_Art_Project.jpg"
+  },
+  {
+    "id": 333,
+    "topic_ID": 1,
+    "exhibit_ID": 519,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://el.travelogues.gr/item.php?view=33491"
+  },
+  {
+    "id": 334,
+    "topic_ID": 1,
+    "exhibit_ID": 520,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://el.travelogues.gr/item.php?view=38765"
+  },
+  {
+    "id": 335,
+    "topic_ID": 1,
+    "exhibit_ID": 522,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://el.travelogues.gr/item.php?view=38768"
+  },
+  {
+    "id": 336,
+    "topic_ID": 1,
+    "exhibit_ID": 534,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://ysma.gr/%CE%BC%CE%BD%CE%B7%CE%BC%CE%B5%CE%AF%CE%B1/%CE%B1%CF%81%CF%81%CE%B7%CF%86%CF%8C%CF%81%CE%B9%CE%BF%CE%BD/"
+  },
+  {
+    "id": 337,
+    "topic_ID": 1,
+    "exhibit_ID": 541,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://commons.wikimedia.org/wiki/File:AncientAgoraofAthensColour.jpg"
+  },
+  {
+    "id": 338,
+    "topic_ID": 1,
+    "exhibit_ID": 556,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://el.travelogues.gr/item.php?view=56858"
+  },
+  {
+    "id": 339,
+    "topic_ID": 1,
+    "exhibit_ID": 560,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://el.travelogues.gr/item.php?view=39474"
+  },
+  {
+    "id": 340,
+    "topic_ID": 1,
+    "exhibit_ID": 561,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://www.archaiologia.gr/blog/2012/09/13/%CE%B7%CF%87%CE%B5%CE%AF-%CE%BA%CE%B1%CE%B9-%CF%80%CE%AC%CE%BB%CE%B9-%CF%84%CE%BF-%CE%B1%CF%81%CF%87%CE%B1%CE%AF%CE%BF-%CE%B8%CE%AD%CE%B1%CF%84%CF%81%CE%BF-%CF%84%CE%BF%CF%85-%CE%B4%CE%B9%CE%BF%CE%BD/"
+  },
+  {
+    "id": 341,
+    "topic_ID": 1,
+    "exhibit_ID": 564,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://www.kathimerini.gr/842625/article/epikairothta/ellada/to-asklhpieio-zwntaneyei-3ana"
+  },
+  {
+    "id": 342,
+    "topic_ID": 1,
+    "exhibit_ID": 394,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "ascsa.net"
+  },
+  {
+    "id": 343,
+    "topic_ID": 1,
+    "exhibit_ID": 586,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eliaserver.elia.org.gr:8080/lselia/rec.aspx?id=459565"
+  },
+  {
+    "id": 344,
+    "topic_ID": 1,
+    "exhibit_ID": 587,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=48033"
+  },
+  {
+    "id": 345,
+    "topic_ID": 1,
+    "exhibit_ID": 588,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=54220"
+  },
+  {
+    "id": 346,
+    "topic_ID": 1,
+    "exhibit_ID": 589,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://dlibrary.ascsa.edu.gr/ascsa-omeka/items/show/52654"
+  },
+  {
+    "id": 347,
+    "topic_ID": 1,
+    "exhibit_ID": 590,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=33489"
+  },
+  {
+    "id": 348,
+    "topic_ID": 1,
+    "exhibit_ID": 591,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=32632"
+  },
+  {
+    "id": 349,
+    "topic_ID": 1,
+    "exhibit_ID": 592,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=49664"
+  },
+  {
+    "id": 350,
+    "topic_ID": 1,
+    "exhibit_ID": 593,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=44050"
+  },
+  {
+    "id": 351,
+    "topic_ID": 1,
+    "exhibit_ID": 594,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://dlibrary.ascsa.edu.gr/ascsa-omeka/items/show/52646"
+  },
+  {
+    "id": 352,
+    "topic_ID": 1,
+    "exhibit_ID": 595,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=38690"
+  },
+  {
+    "id": 353,
+    "topic_ID": 1,
+    "exhibit_ID": 596,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://webapps.servers.archetai.gr/scarabaeus/viewer/archetai/viewer.html?t=a08e78b2-ff04-11e4-aa77-00155d10e309&id=1bff9879-0aaa-4822-88cb-4843f531178e"
+  },
+  {
+    "id": 354,
+    "topic_ID": 1,
+    "exhibit_ID": 597,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://webapps.servers.archetai.gr/scarabaeus/viewer/archetai/viewer.html?t=a08e78b2-ff04-11e4-aa77-00155d10e309&id=f1cc67a3-28ad-4ac1-b0a3-a54883ae9219"
+  },
+  {
+    "id": 355,
+    "topic_ID": 1,
+    "exhibit_ID": 598,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=38699"
+  },
+  {
+    "id": 356,
+    "topic_ID": 1,
+    "exhibit_ID": 599,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://webapps.servers.archetai.gr/scarabaeus/viewer/archetai/viewer.html?t=a08e78b2-ff04-11e4-aa77-00155d10e309&id=716c4b81-2910-46d3-848f-fae3701989c9"
+  },
+  {
+    "id": 357,
+    "topic_ID": 1,
+    "exhibit_ID": 600,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=61962"
+  },
+  {
+    "id": 358,
+    "topic_ID": 1,
+    "exhibit_ID": 601,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://webapps.servers.archetai.gr/scarabaeus/viewer/archetai/viewer.html?t=a08e78b2-ff04-11e4-aa77-00155d10e309&id=2c447c07-0013-45d2-9793-203d95a3f9f8"
+  },
+  {
+    "id": 359,
+    "topic_ID": 1,
+    "exhibit_ID": 604,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://webapps.servers.archetai.gr/scarabaeus/viewer/archetai/viewer.html?t=a08e78b2-ff04-11e4-aa77-00155d10e309&id=a824ebde-6a3d-490e-b5b5-7cc02fe7a3b5"
+  },
+  {
+    "id": 360,
+    "topic_ID": 1,
+    "exhibit_ID": 605,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://www.greece-is.com/kerameikos-a-place-of-transition-2/"
+  },
+  {
+    "id": 361,
+    "topic_ID": 1,
+    "exhibit_ID": 606,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=57924"
+  },
+  {
+    "id": 362,
+    "topic_ID": 1,
+    "exhibit_ID": 607,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://el.wikipedia.org/wiki/%CE%91%CE%BC%CF%86%CE%BF%CF%81%CE%AD%CE%B1%CF%82_%CF%84%CE%BF%CF%85_%CE%94%CE%B9%CF%80%CF%8D%CE%BB%CE%BF%CF%85#/media/File:Dipylon_amphora_close_front.jpg"
+  },
+  {
+    "id": 363,
+    "topic_ID": 1,
+    "exhibit_ID": 611,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=40132"
+  },
+  {
+    "id": 364,
+    "topic_ID": 1,
+    "exhibit_ID": 627,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://commons.wikimedia.org/wiki/File:Reconstruction_of_Athena_Promachos_at_Acropolis.jpg"
+  },
+  {
+    "id": 365,
+    "topic_ID": 1,
+    "exhibit_ID": 628,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://commons.wikimedia.org/wiki/File:Neues_Museum_Die_Akropolis_von_Athen_Graeb.jpg"
+  },
+  {
+    "id": 366,
+    "topic_ID": 1,
+    "exhibit_ID": 629,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "https://el.wikipedia.org/wiki/%CE%91%CF%81%CF%87%CE%B5%CE%AF%CE%BF:A_View_of_the_west_end_of_the_Temple_of_Minerva_Polias,_and_of_the_Pandrosium_-_Stuart_James_%26_Revett_Nicholas_-_1787.jpg"
+  },
+  {
+    "id": 367,
+    "topic_ID": 1,
+    "exhibit_ID": 630,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://webapps.servers.archetai.gr/scarabaeus/viewer/archetai/viewer.html?t=a08e78b2-ff04-11e4-aa77-00155d10e309&id=c843b99e-9f9a-4ecc-ab9a-88ab64a57dad"
+  },
+  {
+    "id": 368,
+    "topic_ID": 1,
+    "exhibit_ID": 631,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eliaserver.elia.org.gr:8080/lselia/rec.aspx?id=459533"
+  },
+  {
+    "id": 369,
+    "topic_ID": 1,
+    "exhibit_ID": 632,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=32193"
+  },
+  {
+    "id": 370,
+    "topic_ID": 1,
+    "exhibit_ID": 633,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=44041"
+  },
+  {
+    "id": 371,
+    "topic_ID": 1,
+    "exhibit_ID": 634,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=41848"
+  },
+  {
+    "id": 372,
+    "topic_ID": 1,
+    "exhibit_ID": 635,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "dlibrary.ascsa.edu.gr/ascsa-omeka/items/show/51838"
+  },
+  {
+    "id": 373,
+    "topic_ID": 1,
+    "exhibit_ID": 636,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://webapps.servers.archetai.gr/scarabaeus/viewer/archetai/viewer.html?t=a08e78b2-ff04-11e4-aa77-00155d10e309&id=8064a2ed-ba67-4d25-bde7-6b4e9f842d9f"
+  },
+  {
+    "id": 374,
+    "topic_ID": 1,
+    "exhibit_ID": 637,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=32752"
+  },
+  {
+    "id": 375,
+    "topic_ID": 1,
+    "exhibit_ID": 638,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=38688"
+  },
+  {
+    "id": 376,
+    "topic_ID": 1,
+    "exhibit_ID": 639,
+    "attribute_ID": 23,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Copyright information / URL",
+    "attribute_Value": "http://eng.travelogues.gr/item.php?view=40080"
+  },
+  {
+    "id": 377,
+    "topic_ID": 1,
+    "exhibit_ID": 381,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "aiak2.jpg"
+  },
+  {
+    "id": 378,
+    "topic_ID": 1,
+    "exhibit_ID": 380,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "aiak1.jpg"
+  },
+  {
+    "id": 379,
+    "topic_ID": 1,
+    "exhibit_ID": 382,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "aiak3.jpg"
+  },
+  {
+    "id": 380,
+    "topic_ID": 1,
+    "exhibit_ID": 383,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "basstoa1.jpg"
+  },
+  {
+    "id": 381,
+    "topic_ID": 1,
+    "exhibit_ID": 384,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "basstoa2.jpg"
+  },
+  {
+    "id": 382,
+    "topic_ID": 1,
+    "exhibit_ID": 385,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "basstoa3.jpg"
+  },
+  {
+    "id": 383,
+    "topic_ID": 1,
+    "exhibit_ID": 386,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "basstoa4.jpg"
+  },
+  {
+    "id": 384,
+    "topic_ID": 1,
+    "exhibit_ID": 388,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "basilica1.jpg"
+  },
+  {
+    "id": 385,
+    "topic_ID": 1,
+    "exhibit_ID": 389,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "basilica2.jpg"
+  },
+  {
+    "id": 386,
+    "topic_ID": 1,
+    "exhibit_ID": 390,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "basilica3.jpg"
+  },
+  {
+    "id": 387,
+    "topic_ID": 1,
+    "exhibit_ID": 391,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "vima1.jpg"
+  },
+  {
+    "id": 388,
+    "topic_ID": 1,
+    "exhibit_ID": 392,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "vima2.jpg"
+  },
+  {
+    "id": 389,
+    "topic_ID": 1,
+    "exhibit_ID": 393,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "vima3.jpg"
+  },
+  {
+    "id": 390,
+    "topic_ID": 1,
+    "exhibit_ID": 395,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "library2.jpg"
+  },
+  {
+    "id": 391,
+    "topic_ID": 1,
+    "exhibit_ID": 396,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "library3.jpg"
+  },
+  {
+    "id": 392,
+    "topic_ID": 1,
+    "exhibit_ID": 397,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "library4.jpg"
+  },
+  {
+    "id": 393,
+    "topic_ID": 1,
+    "exhibit_ID": 398,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "library5.jpg"
+  },
+  {
+    "id": 394,
+    "topic_ID": 1,
+    "exhibit_ID": 399,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "12god1.jpg"
+  },
+  {
+    "id": 395,
+    "topic_ID": 1,
+    "exhibit_ID": 400,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "12god2.jpg"
+  },
+  {
+    "id": 396,
+    "topic_ID": 1,
+    "exhibit_ID": 401,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "12god3.jpg"
+  },
+  {
+    "id": 397,
+    "topic_ID": 1,
+    "exhibit_ID": 402,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "12god4.jpg"
+  },
+  {
+    "id": 398,
+    "topic_ID": 1,
+    "exhibit_ID": 403,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "tholos1.jpg"
+  },
+  {
+    "id": 399,
+    "topic_ID": 1,
+    "exhibit_ID": 404,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "tholos2.jpg"
+  },
+  {
+    "id": 400,
+    "topic_ID": 1,
+    "exhibit_ID": 405,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "tholos3.jpg"
+  },
+  {
+    "id": 401,
+    "topic_ID": 1,
+    "exhibit_ID": 406,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "tholos4.jpg"
+  },
+  {
+    "id": 402,
+    "topic_ID": 1,
+    "exhibit_ID": 407,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "tholos5.jpg"
+  },
+  {
+    "id": 403,
+    "topic_ID": 1,
+    "exhibit_ID": 408,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "propylon1.jpg"
+  },
+  {
+    "id": 404,
+    "topic_ID": 1,
+    "exhibit_ID": 409,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "propylon2.jpg"
+  },
+  {
+    "id": 405,
+    "topic_ID": 1,
+    "exhibit_ID": 410,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "midstoa1.jpg"
+  },
+  {
+    "id": 406,
+    "topic_ID": 1,
+    "exhibit_ID": 411,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "midstoa2.jpg"
+  },
+  {
+    "id": 407,
+    "topic_ID": 1,
+    "exhibit_ID": 412,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "midstoa3.jpg"
+  },
+  {
+    "id": 408,
+    "topic_ID": 1,
+    "exhibit_ID": 413,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "midstoa4.jpg"
+  },
+  {
+    "id": 409,
+    "topic_ID": 1,
+    "exhibit_ID": 414,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "metroon1.jpg"
+  },
+  {
+    "id": 410,
+    "topic_ID": 1,
+    "exhibit_ID": 415,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "metroon2.jpg"
+  },
+  {
+    "id": 411,
+    "topic_ID": 1,
+    "exhibit_ID": 416,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "metroon3.jpg"
+  },
+  {
+    "id": 412,
+    "topic_ID": 1,
+    "exhibit_ID": 417,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "epohero1.jpg"
+  },
+  {
+    "id": 413,
+    "topic_ID": 1,
+    "exhibit_ID": 418,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "epohero2.jpg"
+  },
+  {
+    "id": 414,
+    "topic_ID": 1,
+    "exhibit_ID": 419,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "epohero3.jpg"
+  },
+  {
+    "id": 415,
+    "topic_ID": 1,
+    "exhibit_ID": 420,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "mono1.jpg"
+  },
+  {
+    "id": 416,
+    "topic_ID": 1,
+    "exhibit_ID": 421,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "mono2.jpg"
+  },
+  {
+    "id": 417,
+    "topic_ID": 1,
+    "exhibit_ID": 422,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "mono3.jpg"
+  },
+  {
+    "id": 418,
+    "topic_ID": 1,
+    "exhibit_ID": 423,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "tofares1.jpg"
+  },
+  {
+    "id": 419,
+    "topic_ID": 1,
+    "exhibit_ID": 424,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "tofares2.jpg"
+  },
+  {
+    "id": 420,
+    "topic_ID": 1,
+    "exhibit_ID": 425,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "tofares3.jpg"
+  },
+  {
+    "id": 421,
+    "topic_ID": 1,
+    "exhibit_ID": 426,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "heph1.jpg"
+  },
+  {
+    "id": 422,
+    "topic_ID": 1,
+    "exhibit_ID": 427,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "heph2.jpg"
+  },
+  {
+    "id": 423,
+    "topic_ID": 1,
+    "exhibit_ID": 428,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "heph3.jpg"
+  },
+  {
+    "id": 424,
+    "topic_ID": 1,
+    "exhibit_ID": 429,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "heph4.jpg"
+  },
+  {
+    "id": 425,
+    "topic_ID": 1,
+    "exhibit_ID": 430,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "heph5.jpg"
+  },
+  {
+    "id": 426,
+    "topic_ID": 1,
+    "exhibit_ID": 431,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "npa1.jpg"
+  },
+  {
+    "id": 427,
+    "topic_ID": 1,
+    "exhibit_ID": 432,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "npa2.jpg"
+  },
+  {
+    "id": 428,
+    "topic_ID": 1,
+    "exhibit_ID": 433,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "npa3.jpg"
+  },
+  {
+    "id": 429,
+    "topic_ID": 1,
+    "exhibit_ID": 434,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "npa4.jpg"
+  },
+  {
+    "id": 430,
+    "topic_ID": 1,
+    "exhibit_ID": 435,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "newboul1.jpg"
+  },
+  {
+    "id": 431,
+    "topic_ID": 1,
+    "exhibit_ID": 436,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "newboul2.jpg"
+  },
+  {
+    "id": 432,
+    "topic_ID": 1,
+    "exhibit_ID": 437,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "mint1.jpg"
+  },
+  {
+    "id": 433,
+    "topic_ID": 1,
+    "exhibit_ID": 438,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "mint2.jpg"
+  },
+  {
+    "id": 434,
+    "topic_ID": 1,
+    "exhibit_ID": 439,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "mint3.jpg"
+  },
+  {
+    "id": 435,
+    "topic_ID": 1,
+    "exhibit_ID": 440,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sstoa1.jpg"
+  },
+  {
+    "id": 436,
+    "topic_ID": 1,
+    "exhibit_ID": 441,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sstoa2.jpg"
+  },
+  {
+    "id": 437,
+    "topic_ID": 1,
+    "exhibit_ID": 442,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sstoa3.jpg"
+  },
+  {
+    "id": 438,
+    "topic_ID": 1,
+    "exhibit_ID": 443,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sstoa4.jpg"
+  },
+  {
+    "id": 439,
+    "topic_ID": 1,
+    "exhibit_ID": 444,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sstoa5.jpg"
+  },
+  {
+    "id": 440,
+    "topic_ID": 1,
+    "exhibit_ID": 446,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sef1.jpg"
+  },
+  {
+    "id": 441,
+    "topic_ID": 1,
+    "exhibit_ID": 447,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sef2.jpg"
+  },
+  {
+    "id": 442,
+    "topic_ID": 1,
+    "exhibit_ID": 448,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sef3.jpg"
+  },
+  {
+    "id": 443,
+    "topic_ID": 1,
+    "exhibit_ID": 449,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sef4.jpg"
+  },
+  {
+    "id": 444,
+    "topic_ID": 1,
+    "exhibit_ID": 450,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sef5.jpg"
+  },
+  {
+    "id": 445,
+    "topic_ID": 1,
+    "exhibit_ID": 451,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "set1.jpg"
+  },
+  {
+    "id": 446,
+    "topic_ID": 1,
+    "exhibit_ID": 452,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "set2.jpg"
+  },
+  {
+    "id": 447,
+    "topic_ID": 1,
+    "exhibit_ID": 453,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "set3.jpg"
+  },
+  {
+    "id": 448,
+    "topic_ID": 1,
+    "exhibit_ID": 454,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "set4.jpg"
+  },
+  {
+    "id": 449,
+    "topic_ID": 1,
+    "exhibit_ID": 455,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "swf1.jpg"
+  },
+  {
+    "id": 450,
+    "topic_ID": 1,
+    "exhibit_ID": 456,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "swf2.jpg"
+  },
+  {
+    "id": 451,
+    "topic_ID": 1,
+    "exhibit_ID": 457,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "swf3.jpg"
+  },
+  {
+    "id": 452,
+    "topic_ID": 1,
+    "exhibit_ID": 458,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "swf4.jpg"
+  },
+  {
+    "id": 453,
+    "topic_ID": 1,
+    "exhibit_ID": 459,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "swt1.jpg"
+  },
+  {
+    "id": 454,
+    "topic_ID": 1,
+    "exhibit_ID": 460,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "swt2.jpg"
+  },
+  {
+    "id": 455,
+    "topic_ID": 1,
+    "exhibit_ID": 461,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "swt3.jpg"
+  },
+  {
+    "id": 456,
+    "topic_ID": 1,
+    "exhibit_ID": 462,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "nymph1.jpg"
+  },
+  {
+    "id": 457,
+    "topic_ID": 1,
+    "exhibit_ID": 463,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "nymph2.jpg"
+  },
+  {
+    "id": 458,
+    "topic_ID": 1,
+    "exhibit_ID": 464,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "nymph3.jpg"
+  },
+  {
+    "id": 459,
+    "topic_ID": 1,
+    "exhibit_ID": 465,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "oldboul1.jpg"
+  },
+  {
+    "id": 460,
+    "topic_ID": 1,
+    "exhibit_ID": 466,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "oldboul2.jpg"
+  },
+  {
+    "id": 461,
+    "topic_ID": 1,
+    "exhibit_ID": 467,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "oldboul3.jpg"
+  },
+  {
+    "id": 462,
+    "topic_ID": 1,
+    "exhibit_ID": 468,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "oldboul4.jpg"
+  },
+  {
+    "id": 463,
+    "topic_ID": 1,
+    "exhibit_ID": 469,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "poikstoa1.jpg"
+  },
+  {
+    "id": 464,
+    "topic_ID": 1,
+    "exhibit_ID": 470,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "poikstoa2.jpg"
+  },
+  {
+    "id": 465,
+    "topic_ID": 1,
+    "exhibit_ID": 471,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "poikstoa3.jpg"
+  },
+  {
+    "id": 466,
+    "topic_ID": 1,
+    "exhibit_ID": 472,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "poikstoa4.jpg"
+  },
+  {
+    "id": 467,
+    "topic_ID": 1,
+    "exhibit_ID": 473,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "stoat1.jpg"
+  },
+  {
+    "id": 468,
+    "topic_ID": 1,
+    "exhibit_ID": 474,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "stoat2.jpg"
+  },
+  {
+    "id": 469,
+    "topic_ID": 1,
+    "exhibit_ID": 475,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "stoat3.jpg"
+  },
+  {
+    "id": 470,
+    "topic_ID": 1,
+    "exhibit_ID": 476,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "stoat4.jpg"
+  },
+  {
+    "id": 471,
+    "topic_ID": 1,
+    "exhibit_ID": 477,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "stoat5.jpg"
+  },
+  {
+    "id": 472,
+    "topic_ID": 1,
+    "exhibit_ID": 478,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "soz1.jpg"
+  },
+  {
+    "id": 473,
+    "topic_ID": 1,
+    "exhibit_ID": 479,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "soz2.jpg"
+  },
+  {
+    "id": 474,
+    "topic_ID": 1,
+    "exhibit_ID": 480,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "soz3.jpg"
+  },
+  {
+    "id": 475,
+    "topic_ID": 1,
+    "exhibit_ID": 481,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sqper1.jpg"
+  },
+  {
+    "id": 476,
+    "topic_ID": 1,
+    "exhibit_ID": 482,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sqper2.jpg"
+  },
+  {
+    "id": 477,
+    "topic_ID": 1,
+    "exhibit_ID": 483,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sqper3.jpg"
+  },
+  {
+    "id": 478,
+    "topic_ID": 1,
+    "exhibit_ID": 484,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "odeagr1.jpg"
+  },
+  {
+    "id": 479,
+    "topic_ID": 1,
+    "exhibit_ID": 485,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "odeagr2.jpg"
+  },
+  {
+    "id": 480,
+    "topic_ID": 1,
+    "exhibit_ID": 486,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "odeagr3.jpg"
+  },
+  {
+    "id": 481,
+    "topic_ID": 1,
+    "exhibit_ID": 487,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "odeagr4.jpg"
+  },
+  {
+    "id": 482,
+    "topic_ID": 1,
+    "exhibit_ID": 488,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "toz1.jpg"
+  },
+  {
+    "id": 483,
+    "topic_ID": 1,
+    "exhibit_ID": 489,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "toz2.jpg"
+  },
+  {
+    "id": 484,
+    "topic_ID": 1,
+    "exhibit_ID": 490,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "toz3.jpg"
+  },
+  {
+    "id": 485,
+    "topic_ID": 1,
+    "exhibit_ID": 491,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "toz4.jpg"
+  },
+  {
+    "id": 486,
+    "topic_ID": 1,
+    "exhibit_ID": 492,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "toz7.jpg"
+  },
+  {
+    "id": 487,
+    "topic_ID": 1,
+    "exhibit_ID": 493,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "gaha1.jpg"
+  },
+  {
+    "id": 488,
+    "topic_ID": 1,
+    "exhibit_ID": 494,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "gaha2.jpg"
+  },
+  {
+    "id": 489,
+    "topic_ID": 1,
+    "exhibit_ID": 495,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "gaha3.jpg"
+  },
+  {
+    "id": 490,
+    "topic_ID": 1,
+    "exhibit_ID": 499,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "pomp1.jpg"
+  },
+  {
+    "id": 491,
+    "topic_ID": 1,
+    "exhibit_ID": 500,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "pomp2.jpg"
+  },
+  {
+    "id": 492,
+    "topic_ID": 1,
+    "exhibit_ID": 501,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "pomp3.jpg"
+  },
+  {
+    "id": 493,
+    "topic_ID": 1,
+    "exhibit_ID": 506,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "AncientAgora-AphroditeOuraniaAltar.jpg"
+  },
+  {
+    "id": 494,
+    "topic_ID": 1,
+    "exhibit_ID": 510,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "κλεψύδρα.jpg"
+  },
+  {
+    "id": 495,
+    "topic_ID": 1,
+    "exhibit_ID": 511,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "640px-Aglaureion_Acropolis_of_Athens.jpg"
+  },
+  {
+    "id": 496,
+    "topic_ID": 1,
+    "exhibit_ID": 512,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "Panas_cave_7233916.JPG"
+  },
+  {
+    "id": 497,
+    "topic_ID": 1,
+    "exhibit_ID": 514,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "cave_apollo.jpg"
+  },
+  {
+    "id": 498,
+    "topic_ID": 1,
+    "exhibit_ID": 516,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "800px-Acròpoli_d'Atenes,_temple_d'Atena_Niké.JPG"
+  },
+  {
+    "id": 499,
+    "topic_ID": 1,
+    "exhibit_ID": 517,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "800px-Werner_Carl-Friedrich_-_The_Temple_of_Athena_Nike._View_from_the_North-East_-_Google_Art_Project.jpg"
+  },
+  {
+    "id": 500,
+    "topic_ID": 1,
+    "exhibit_ID": 519,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ερεχθειο.jpg"
+  },
+  {
+    "id": 501,
+    "topic_ID": 1,
+    "exhibit_ID": 520,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ερεχθειο_2.jpg"
+  },
+  {
+    "id": 502,
+    "topic_ID": 1,
+    "exhibit_ID": 522,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "καρυατιδα.jpg"
+  },
+  {
+    "id": 503,
+    "topic_ID": 1,
+    "exhibit_ID": 534,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "αρρηφοριο.jpg"
+  },
+  {
+    "id": 504,
+    "topic_ID": 1,
+    "exhibit_ID": 541,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "AncientAgoraofAthensColour.jpg"
+  },
+  {
+    "id": 505,
+    "topic_ID": 1,
+    "exhibit_ID": 556,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "areopag_1s.jpg"
+  },
+  {
+    "id": 506,
+    "topic_ID": 1,
+    "exhibit_ID": 560,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "διον.jpg"
+  },
+  {
+    "id": 507,
+    "topic_ID": 1,
+    "exhibit_ID": 561,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "Dionysus-theatre.jpg"
+  },
+  {
+    "id": 508,
+    "topic_ID": 1,
+    "exhibit_ID": 564,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ασκλ.jpg"
+  },
+  {
+    "id": 509,
+    "topic_ID": 1,
+    "exhibit_ID": 394,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "library1.jpg"
+  },
+  {
+    "id": 510,
+    "topic_ID": 1,
+    "exhibit_ID": 571,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "a7.jpg"
+  },
+  {
+    "id": 511,
+    "topic_ID": 1,
+    "exhibit_ID": 572,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "odeherod1.jpg"
+  },
+  {
+    "id": 512,
+    "topic_ID": 1,
+    "exhibit_ID": 573,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "odeherod3.JPG"
+  },
+  {
+    "id": 513,
+    "topic_ID": 1,
+    "exhibit_ID": 586,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "agoranomeion1.JPG"
+  },
+  {
+    "id": 514,
+    "topic_ID": 1,
+    "exhibit_ID": 587,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "aerides2.jpg"
+  },
+  {
+    "id": 515,
+    "topic_ID": 1,
+    "exhibit_ID": 588,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "aerides4.jpg"
+  },
+  {
+    "id": 516,
+    "topic_ID": 1,
+    "exhibit_ID": 589,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "libadr2.jpg"
+  },
+  {
+    "id": 517,
+    "topic_ID": 1,
+    "exhibit_ID": 590,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "libadr3.jpg"
+  },
+  {
+    "id": 518,
+    "topic_ID": 1,
+    "exhibit_ID": 591,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "medreses2.jpg"
+  },
+  {
+    "id": 519,
+    "topic_ID": 1,
+    "exhibit_ID": 592,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "gatharg1.jpg"
+  },
+  {
+    "id": 520,
+    "topic_ID": 1,
+    "exhibit_ID": 593,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "gatharg5.jpg"
+  },
+  {
+    "id": 521,
+    "topic_ID": 1,
+    "exhibit_ID": 594,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "romagora2.jpg"
+  },
+  {
+    "id": 522,
+    "topic_ID": 1,
+    "exhibit_ID": 595,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "fetihe1.jpg"
+  },
+  {
+    "id": 523,
+    "topic_ID": 1,
+    "exhibit_ID": 596,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "horo1"
+  },
+  {
+    "id": 524,
+    "topic_ID": 1,
+    "exhibit_ID": 597,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "horo2"
+  },
+  {
+    "id": 525,
+    "topic_ID": 1,
+    "exhibit_ID": 598,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "gaha4.jpg"
+  },
+  {
+    "id": 526,
+    "topic_ID": 1,
+    "exhibit_ID": 599,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "odeper1"
+  },
+  {
+    "id": 527,
+    "topic_ID": 1,
+    "exhibit_ID": 600,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "odeherod5.jpg"
+  },
+  {
+    "id": 528,
+    "topic_ID": 1,
+    "exhibit_ID": 601,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "stoaeum3"
+  },
+  {
+    "id": 529,
+    "topic_ID": 1,
+    "exhibit_ID": 604,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "tde1"
+  },
+  {
+    "id": 530,
+    "topic_ID": 1,
+    "exhibit_ID": 605,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "sacred1.jpg"
+  },
+  {
+    "id": 531,
+    "topic_ID": 1,
+    "exhibit_ID": 606,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "dipilon1.jpg"
+  },
+  {
+    "id": 532,
+    "topic_ID": 1,
+    "exhibit_ID": 607,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "dipilon4.jpg"
+  },
+  {
+    "id": 533,
+    "topic_ID": 1,
+    "exhibit_ID": 611,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "monagrippa2.jpg"
+  },
+  {
+    "id": 534,
+    "topic_ID": 1,
+    "exhibit_ID": 627,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "promachos1.jpg"
+  },
+  {
+    "id": 535,
+    "topic_ID": 1,
+    "exhibit_ID": 628,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "promachos3.jpg"
+  },
+  {
+    "id": 536,
+    "topic_ID": 1,
+    "exhibit_ID": 629,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "poliados3.jpg"
+  },
+  {
+    "id": 537,
+    "topic_ID": 1,
+    "exhibit_ID": 630,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "pandrosion1"
+  },
+  {
+    "id": 538,
+    "topic_ID": 1,
+    "exhibit_ID": 631,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "pinakothiki2.JPG"
+  },
+  {
+    "id": 539,
+    "topic_ID": 1,
+    "exhibit_ID": 632,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "propylaea1.jpg"
+  },
+  {
+    "id": 540,
+    "topic_ID": 1,
+    "exhibit_ID": 633,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "propylaea4.jpg"
+  },
+  {
+    "id": 541,
+    "topic_ID": 1,
+    "exhibit_ID": 634,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "propylaea5.jpg"
+  },
+  {
+    "id": 542,
+    "topic_ID": 1,
+    "exhibit_ID": 635,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "acrowalls2.jpg"
+  },
+  {
+    "id": 543,
+    "topic_ID": 1,
+    "exhibit_ID": 636,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "parthenon3"
+  },
+  {
+    "id": 544,
+    "topic_ID": 1,
+    "exhibit_ID": 637,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "parthenon5.jpg"
+  },
+  {
+    "id": 545,
+    "topic_ID": 1,
+    "exhibit_ID": 638,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "parthenon7.jpg"
+  },
+  {
+    "id": 546,
+    "topic_ID": 1,
+    "exhibit_ID": 639,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "parthenon10.jpg"
+  },
+  {
+    "id": 547,
+    "topic_ID": 1,
+    "exhibit_ID": 673,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "hadrian3d.jpg"
+  },
+  {
+    "id": 548,
+    "topic_ID": 1,
+    "exhibit_ID": 674,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "fetcami.jpg"
+  },
+  {
+    "id": 549,
+    "topic_ID": 1,
+    "exhibit_ID": 675,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "mentresses.jpg"
+  },
+  {
+    "id": 550,
+    "topic_ID": 1,
+    "exhibit_ID": 676,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "William Cole.jpg"
+  },
+  {
+    "id": 551,
+    "topic_ID": 1,
+    "exhibit_ID": 677,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "1700.jpg"
+  },
+  {
+    "id": 552,
+    "topic_ID": 1,
+    "exhibit_ID": 678,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "aerides ottoman.jpg"
+  },
+  {
+    "id": 553,
+    "topic_ID": 1,
+    "exhibit_ID": 679,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "hamam.jpg"
+  },
+  {
+    "id": 554,
+    "topic_ID": 1,
+    "exhibit_ID": 680,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "romagora.jpg"
+  },
+  {
+    "id": 555,
+    "topic_ID": 1,
+    "exhibit_ID": 681,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "spitikam.jpg"
+  },
+  {
+    "id": 556,
+    "topic_ID": 1,
+    "exhibit_ID": 682,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "archigetida3d.jpg"
+  },
+  {
+    "id": 557,
+    "topic_ID": 1,
+    "exhibit_ID": 683,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "tekes3d.jpg"
+  },
+  {
+    "id": 558,
+    "topic_ID": 1,
+    "exhibit_ID": 685,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "soteirapazaroportas.jpg"
+  },
+  {
+    "id": 559,
+    "topic_ID": 1,
+    "exhibit_ID": 686,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "soteira3d.jpg"
+  },
+  {
+    "id": 560,
+    "topic_ID": 1,
+    "exhibit_ID": 687,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "arriforio3d.jpg"
+  },
+  {
+    "id": 561,
+    "topic_ID": 1,
+    "exhibit_ID": 688,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "erechtheion3d.jpg"
+  },
+  {
+    "id": 562,
+    "topic_ID": 1,
+    "exhibit_ID": 689,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "nike3d.jpg"
+  },
+  {
+    "id": 563,
+    "topic_ID": 1,
+    "exhibit_ID": 690,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "artemis3d.jpg"
+  },
+  {
+    "id": 564,
+    "topic_ID": 1,
+    "exhibit_ID": 691,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "romeaugustus3d.jpg"
+  },
+  {
+    "id": 565,
+    "topic_ID": 1,
+    "exhibit_ID": 692,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "propylaea3d.jpg"
+  },
+  {
+    "id": 566,
+    "topic_ID": 1,
+    "exhibit_ID": 693,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "parthenon.jpg"
+  },
+  {
+    "id": 567,
+    "topic_ID": 1,
+    "exhibit_ID": 694,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "chalkotheke 3d.jpg"
+  },
+  {
+    "id": 568,
+    "topic_ID": 1,
+    "exhibit_ID": 695,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "zeuspolieus3d.jpg"
+  },
+  {
+    "id": 569,
+    "topic_ID": 1,
+    "exhibit_ID": 696,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "vomos3d.jpg"
+  },
+  {
+    "id": 570,
+    "topic_ID": 1,
+    "exhibit_ID": 697,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "hadrian arch 3d.jpg"
+  },
+  {
+    "id": 571,
+    "topic_ID": 1,
+    "exhibit_ID": 698,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "loutroOlymp3d.jpg"
+  },
+  {
+    "id": 572,
+    "topic_ID": 1,
+    "exhibit_ID": 699,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "olympieion3d.jpg"
+  },
+  {
+    "id": 573,
+    "topic_ID": 1,
+    "exhibit_ID": 700,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "propylo3d.jpg"
+  },
+  {
+    "id": 574,
+    "topic_ID": 1,
+    "exhibit_ID": 701,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "odeion pericles 3d.jpg"
+  },
+  {
+    "id": 575,
+    "topic_ID": 1,
+    "exhibit_ID": 702,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "aiakeion3d.jpg"
+  },
+  {
+    "id": 576,
+    "topic_ID": 1,
+    "exhibit_ID": 703,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "eschara 3d.jpg"
+  },
+  {
+    "id": 577,
+    "topic_ID": 1,
+    "exhibit_ID": 704,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "vomos12 3d.jpg"
+  },
+  {
+    "id": 578,
+    "topic_ID": 1,
+    "exhibit_ID": 706,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "dipylon3d.jpg"
+  },
+  {
+    "id": 579,
+    "topic_ID": 1,
+    "exhibit_ID": 707,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ierapyli3d.jpg"
+  },
+  {
+    "id": 580,
+    "topic_ID": 1,
+    "exhibit_ID": 708,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "teixi3d.jpg"
+  },
+  {
+    "id": 581,
+    "topic_ID": 1,
+    "exhibit_ID": 713,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "αγιοιασωματοι.jpg"
+  },
+  {
+    "id": 582,
+    "topic_ID": 1,
+    "exhibit_ID": 726,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "egainiakaramanlis.JPG"
+  },
+  {
+    "id": 583,
+    "topic_ID": 1,
+    "exhibit_ID": 727,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "publicity7.JPG"
+  },
+  {
+    "id": 584,
+    "topic_ID": 1,
+    "exhibit_ID": 728,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "dimosieumarockefeller.JPG"
+  },
+  {
+    "id": 585,
+    "topic_ID": 1,
+    "exhibit_ID": 729,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "petervonhess.jpg"
+  },
+  {
+    "id": 586,
+    "topic_ID": 1,
+    "exhibit_ID": 730,
+    "attribute_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "panathenaicwayapobates2008.20.0010.jpg"
+  },
+  {
+    "id": 587,
+    "topic_ID": 1,
+    "exhibit_ID": 381,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τρισδιάστατο μοντέλο του Αιάκειου (1965)."
+  },
+  {
+    "id": 588,
+    "topic_ID": 1,
+    "exhibit_ID": 380,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη κάτοψη του Αιάκειου μετά την Ελληνιστική ανακαίνιση. Σχέδιο του Ιωάννη Τραυλού (1965)"
+  },
+  {
+    "id": 589,
+    "topic_ID": 1,
+    "exhibit_ID": 382,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γενική Άποψη του Αιάκειου και της Αγοράς μετά τον καθαρισμό (Αύγουστος 1961)."
+  },
+  {
+    "id": 590,
+    "topic_ID": 1,
+    "exhibit_ID": 383,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αναπαράσταση της Βασιλείου Στοάς όπως θα ήταν γύρω στο 300 π.Χ"
+  },
+  {
+    "id": 591,
+    "topic_ID": 1,
+    "exhibit_ID": 384,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τα ερείπια της Βασιλείου Στοάς (Αύγουστος 1970)"
+  },
+  {
+    "id": 592,
+    "topic_ID": 1,
+    "exhibit_ID": 385,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Μοντέλο της Βασιλείου Στοάς στα τέλη του 5ου αιώνα π.Χ. (Δημητριάδης & Παπούλιας 1992)"
+  },
+  {
+    "id": 593,
+    "topic_ID": 1,
+    "exhibit_ID": 386,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οριζόντια τομή της Βασιλείου Στοάς και της Στοάς του Διός Ελευθέριου κατά το Β΄μισό του 4ου αιώνα (Dinsmoor 1977)"
+  },
+  {
+    "id": 594,
+    "topic_ID": 1,
+    "exhibit_ID": 388,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ερείπια του μαρμάρινου δαπέδου της Βασιλικής (Απρίλιος 1970)"
+  },
+  {
+    "id": 595,
+    "topic_ID": 1,
+    "exhibit_ID": 389,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κάτοψη της Βασιλικής και της Ρωμαικής Οικίας Ε (Dinsmoor 1971)"
+  },
+  {
+    "id": 596,
+    "topic_ID": 1,
+    "exhibit_ID": 390,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο Άγιος Σπυρίδων στην δεξιά αψίδα της Βασιλικής"
+  },
+  {
+    "id": 597,
+    "topic_ID": 1,
+    "exhibit_ID": 391,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η βάση του Βήματος (Αύγουστος 1956)"
+  },
+  {
+    "id": 598,
+    "topic_ID": 1,
+    "exhibit_ID": 392,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η Στοά του Αττάλου και το Βήμα (1949)"
+  },
+  {
+    "id": 599,
+    "topic_ID": 1,
+    "exhibit_ID": 395,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κάτοψη της Βιβλιοθήκης το 100 μ.Χ (2003)"
+  },
+  {
+    "id": 600,
+    "topic_ID": 1,
+    "exhibit_ID": 396,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Επιγραφή με τους κανόνες λειτουργίας της Βιβλιοθήκης."
+  },
+  {
+    "id": 601,
+    "topic_ID": 1,
+    "exhibit_ID": 397,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αναπαράσταση στοάς της Βιβλιοθήκης το 420 μ.Χ"
+  },
+  {
+    "id": 602,
+    "topic_ID": 1,
+    "exhibit_ID": 398,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αναπαράσταση της Βιβλιοθήκης και της Στοάς του Αττάλου (Ιωάννης Τραυλός 1947)"
+  },
+  {
+    "id": 603,
+    "topic_ID": 1,
+    "exhibit_ID": 399,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αναπαράσταση του Βωμού των 12 Θεών"
+  },
+  {
+    "id": 604,
+    "topic_ID": 1,
+    "exhibit_ID": 400,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Μοντέλο του Βωμού των 12 Θεών (Δημητριάδης & Παπούλιας, 1992)"
+  },
+  {
+    "id": 605,
+    "topic_ID": 1,
+    "exhibit_ID": 401,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ανασκαφές στις γραμμές του ΗΣΑΠ για να βρεθούν οι υπόλοιπες γωνίες του Βωμού (1935)"
+  },
+  {
+    "id": 606,
+    "topic_ID": 1,
+    "exhibit_ID": 402,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κάτοψη του Βωμού των 12 Θεών"
+  },
+  {
+    "id": 607,
+    "topic_ID": 1,
+    "exhibit_ID": 403,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη της Θόλου (Μάιος 1934)"
+  },
+  {
+    "id": 608,
+    "topic_ID": 1,
+    "exhibit_ID": 404,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κάτοψη της Θόλου (Τραυλός 1939)"
+  },
+  {
+    "id": 609,
+    "topic_ID": 1,
+    "exhibit_ID": 405,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τρισδιάστατο μοντέλο της Θόλου (Miller 1983)"
+  },
+  {
+    "id": 610,
+    "topic_ID": 1,
+    "exhibit_ID": 406,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη της Θόλου από κοντά (Φεβρουάριος 1934)"
+  },
+  {
+    "id": 611,
+    "topic_ID": 1,
+    "exhibit_ID": 407,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αεροφωτογραφία της Θόλου (1975)"
+  },
+  {
+    "id": 612,
+    "topic_ID": 1,
+    "exhibit_ID": 408,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Λεπτομέρεις της κιονοστοιχίας του Μητρώου και του Ιωνικού Πρόπυλου (Τραυλός 1936)"
+  },
+  {
+    "id": 613,
+    "topic_ID": 1,
+    "exhibit_ID": 409,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το Πρόπυλο μετά την ολοκλήρωση των ανασκαφών (Αύγουστος 1954)"
+  },
+  {
+    "id": 614,
+    "topic_ID": 1,
+    "exhibit_ID": 410,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη άποψη του ΝΑ κρηπιδώματος της Μεσαίας Στοάς (Τραυλός 1964)"
+  },
+  {
+    "id": 615,
+    "topic_ID": 1,
+    "exhibit_ID": 411,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Υδατογραφία του αποκατεστημένου γλυπτού διακόσμου της Μεσαίας Στοάς (Dinsmoor 1966)"
+  },
+  {
+    "id": 616,
+    "topic_ID": 1,
+    "exhibit_ID": 412,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Μοντέλο της Μεσαίας Στοάς"
+  },
+  {
+    "id": 617,
+    "topic_ID": 1,
+    "exhibit_ID": 413,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το ανατολικό άκρο της Μεσαίας Στοάς (1936)"
+  },
+  {
+    "id": 618,
+    "topic_ID": 1,
+    "exhibit_ID": 414,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οριζόντια τομή του Μητρώου κατά τον 2ο αιώνα π.Χ."
+  },
+  {
+    "id": 619,
+    "topic_ID": 1,
+    "exhibit_ID": 415,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τρισδιάσταση αναπαράσταση του Μητρώου το 500 π.Χ. (Δημητριάδης & Παπούλιας 1992)"
+  },
+  {
+    "id": 620,
+    "topic_ID": 1,
+    "exhibit_ID": 416,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σκαλιά και βάση κίονα στο Μητρώο (Ιούνιος 1931)"
+  },
+  {
+    "id": 621,
+    "topic_ID": 1,
+    "exhibit_ID": 417,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κάτοψη κι αναπαράσταση του Μνημείου των Επωνύμων Ηρώων κατά το Β' μισό του 4ου αιώνα π.Χ."
+  },
+  {
+    "id": 622,
+    "topic_ID": 1,
+    "exhibit_ID": 418,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αεροφωτογραφία του Μνημείου των Επωνύμων Ηρώων (Μάιος 1975)"
+  },
+  {
+    "id": 623,
+    "topic_ID": 1,
+    "exhibit_ID": 419,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τρισδιάστατο μοντέλο του Μνημείου των Επωνύμων Ηρώων (Δημητριάδης & Παπούλιας 1992)"
+  },
+  {
+    "id": 624,
+    "topic_ID": 1,
+    "exhibit_ID": 420,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τρισδιάστατο μοντέλο του Μονόπτερου (1961)"
+  },
+  {
+    "id": 625,
+    "topic_ID": 1,
+    "exhibit_ID": 421,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη αναπαράσταση του Μονόπτερου (Dinsmoore 1974)"
+  },
+  {
+    "id": 626,
+    "topic_ID": 1,
+    "exhibit_ID": 422,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τα θεμέλια του Μονόπτερου καθαρισμένα (1951)"
+  },
+  {
+    "id": 627,
+    "topic_ID": 1,
+    "exhibit_ID": 423,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κάτοψη του Ναού του Άρη"
+  },
+  {
+    "id": 628,
+    "topic_ID": 1,
+    "exhibit_ID": 424,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη των θεμελίων του Ναού του Άρη μετά την απομάκρυνση των Βυζαντινών Τειχών (Ιούνιος 1937)"
+  },
+  {
+    "id": 629,
+    "topic_ID": 1,
+    "exhibit_ID": 425,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "ΝΑ γωνία των θεμελίων του Ναού του Άρη"
+  },
+  {
+    "id": 630,
+    "topic_ID": 1,
+    "exhibit_ID": 426,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Χαρακτικό του Ηφαιστείου (Stewart 1829)"
+  },
+  {
+    "id": 631,
+    "topic_ID": 1,
+    "exhibit_ID": 427,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κάτοψη του Ηφαιστείου που δείχνει και την μετατροπή σε Ναό του Αγ. Γεωργίου τον 7ο αιώνα μ.Χ."
+  },
+  {
+    "id": 632,
+    "topic_ID": 1,
+    "exhibit_ID": 428,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο Ναός του Ηφαίστου εν μέσω των ανασκαφών στην Αγορά (1933)"
+  },
+  {
+    "id": 633,
+    "topic_ID": 1,
+    "exhibit_ID": 429,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Καρτ ποστάλ με το Ναό του Ηφαίστου (1925-1930)"
+  },
+  {
+    "id": 634,
+    "topic_ID": 1,
+    "exhibit_ID": 430,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο Ναός του Ηφαίστου μετά την κατεδάφιση του περιβάλλοντος τοίχου (Δεκέμβριος 1954)"
+  },
+  {
+    "id": 635,
+    "topic_ID": 1,
+    "exhibit_ID": 431,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το άγαλμα του Πατρώου Απόλλωνα, φιλοτεχνημένο από τον γλύπτη Ευφράνορα."
+  },
+  {
+    "id": 636,
+    "topic_ID": 1,
+    "exhibit_ID": 432,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη άποψη του Ναού του Απόλλωνα Πατρώου τον 6ο αιώνα π.Χ. (Dinsmoor 1981)"
+  },
+  {
+    "id": 637,
+    "topic_ID": 1,
+    "exhibit_ID": 433,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο Ναός του Πατρώου Απόλλωνα (Ιούλιος 1967)"
+  },
+  {
+    "id": 638,
+    "topic_ID": 1,
+    "exhibit_ID": 434,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη κάτοψη του Ναού του Πατρώοου Απόλλωνα τον 4ο αιώνα π.Χ."
+  },
+  {
+    "id": 639,
+    "topic_ID": 1,
+    "exhibit_ID": 435,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Θεμέλια του Παλαιού Βουλευτηρίου (κέντρο), του Νέου Βουλευτηρίου (αριστερά) και του Ελληνιστικού Μητρώου (πάνω) (1936)"
+  },
+  {
+    "id": 640,
+    "topic_ID": 1,
+    "exhibit_ID": 436,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη του Νέου Βουλευτηρίου σε συνάρτηση με την Θόλο και το Μητρώον (Μάιος 1935)"
+  },
+  {
+    "id": 641,
+    "topic_ID": 1,
+    "exhibit_ID": 437,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη κάτοψη του Νομισματοκοπείου γύρω στο 400 π.Χ."
+  },
+  {
+    "id": 642,
+    "topic_ID": 1,
+    "exhibit_ID": 438,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γενική άποψη της ΝΑ γωνίας του Νομισματοκοπείου. Διαπερνάται από τα Βυζαντινά Τείχη (Μάιος 1959)"
+  },
+  {
+    "id": 643,
+    "topic_ID": 1,
+    "exhibit_ID": 439,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο Δυτικός τοίχος του Νομισματοκοπείου κάτω από την Εκκλησία των Αγ. Αποστόλων (Ιούνιος 1954)"
+  },
+  {
+    "id": 644,
+    "topic_ID": 1,
+    "exhibit_ID": 440,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Απεικόνιση σκηνής δείπνου στην Νότια Στοά."
+  },
+  {
+    "id": 645,
+    "topic_ID": 1,
+    "exhibit_ID": 441,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αεροφωτογραφία του Ανατολικού άκρου της Νότιας Στοάς."
+  },
+  {
+    "id": 646,
+    "topic_ID": 1,
+    "exhibit_ID": 442,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αναπαράσταση και κάτοψη της Νότιας Στοάς (Dinsmoor 1967)"
+  },
+  {
+    "id": 647,
+    "topic_ID": 1,
+    "exhibit_ID": 443,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Δωμάτιο 8 στην Νότια Στοά (Σεπτέμβριος 1966)"
+  },
+  {
+    "id": 648,
+    "topic_ID": 1,
+    "exhibit_ID": 444,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη της Νότιας Στοάς μετά το πέρας της ανασκαφικής περιόδου (Αύγουστος 1966)"
+  },
+  {
+    "id": 649,
+    "topic_ID": 1,
+    "exhibit_ID": 446,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τρισδιάστατο μοντέλο της Νοτιοανατολικής Κρήνης."
+  },
+  {
+    "id": 650,
+    "topic_ID": 1,
+    "exhibit_ID": 447,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη κάτοψη της Νοτιοανατολικής Κρήνης."
+  },
+  {
+    "id": 651,
+    "topic_ID": 1,
+    "exhibit_ID": 448,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σωληνώσεις της Νοτιοανατολικής Κρήνης τον 6ο αιώνα μ.Χ. (Αύγουστος 1955)"
+  },
+  {
+    "id": 652,
+    "topic_ID": 1,
+    "exhibit_ID": 449,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η νότια πλευρά της Αγοράς μετά τις Ελληνιστικές προσθήκες - γύρω στο 140 π.Χ."
+  },
+  {
+    "id": 653,
+    "topic_ID": 1,
+    "exhibit_ID": 450,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γενική άποψη της Νοτιοανατολικής Κρήνης (Ιούνιος 1952)."
+  },
+  {
+    "id": 654,
+    "topic_ID": 1,
+    "exhibit_ID": 451,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σχεδιαστική αναπαράσταση του Νοτιοανατολικού Ναού σε μολύβι και χαρτί (Τραυλός 1967)."
+  },
+  {
+    "id": 655,
+    "topic_ID": 1,
+    "exhibit_ID": 452,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη κάτοψη και πρόσοψη του Νοτιοανατολικού Ναού (Dinsmoor 1981)"
+  },
+  {
+    "id": 656,
+    "topic_ID": 1,
+    "exhibit_ID": 453,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο Νοτιοανατολικός Ναός με φόντο την Οικία Κωλέττη (1959)."
+  },
+  {
+    "id": 657,
+    "topic_ID": 1,
+    "exhibit_ID": 454,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη θεμελίων του Νοτιοανατολικού Ναού κατά τις ανασκαφές (Ιούνιος 1959)."
+  },
+  {
+    "id": 658,
+    "topic_ID": 1,
+    "exhibit_ID": 455,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οριζόντια τομή των Αρχαικών και Κλασικών κτηρίων στο Νότιο τμήμα της Αγοράς."
+  },
+  {
+    "id": 659,
+    "topic_ID": 1,
+    "exhibit_ID": 456,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τρισδιάστατο μοντέλο της Νοτιοδυτικής Κρήνης - γύρω στο 350-325 π.Χ."
+  },
+  {
+    "id": 660,
+    "topic_ID": 1,
+    "exhibit_ID": 457,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σωληνώσεις της Νοτιοδυτικής Κρήνης (Αύγουστος 1961)."
+  },
+  {
+    "id": 661,
+    "topic_ID": 1,
+    "exhibit_ID": 458,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αεροφωτογραφία του Νότιου τμήματος της Αγοράς (Μάιος 1975)."
+  },
+  {
+    "id": 662,
+    "topic_ID": 1,
+    "exhibit_ID": 459,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη κάτοψη και πρόσοψη του Νοτιοδυτικού Ναού (Dinsmoor 1981)."
+  },
+  {
+    "id": 663,
+    "topic_ID": 1,
+    "exhibit_ID": 460,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γενική άποψη του Νοτιοδυτικού Ναού (1951)."
+  },
+  {
+    "id": 664,
+    "topic_ID": 1,
+    "exhibit_ID": 461,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Θεμέλια του Νοτιοδυτικού Ναού (Ιούλιος 1951)."
+  },
+  {
+    "id": 665,
+    "topic_ID": 1,
+    "exhibit_ID": 462,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη αναπαράσταση του Νυμφαίου κατά τον 2ο αιώνα μ.Χ."
+  },
+  {
+    "id": 666,
+    "topic_ID": 1,
+    "exhibit_ID": 463,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τα θεμέλια του Νυμφαίου μπροστά από την Εκκλησία των Αγίων Αποστόλων (Ιούνιος 1954)."
+  },
+  {
+    "id": 667,
+    "topic_ID": 1,
+    "exhibit_ID": 464,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Φωτογραφία από τις ανασκαφές του Νυμφαίου (Ιούνιος 1954)."
+  },
+  {
+    "id": 668,
+    "topic_ID": 1,
+    "exhibit_ID": 465,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη άποψη του εσωτερικού του Παλιού Βουλευτηρίου - γύρω στο 500 π.Χ."
+  },
+  {
+    "id": 669,
+    "topic_ID": 1,
+    "exhibit_ID": 466,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Χαρακτικό που αναπαριστά την Αρχαία Αγορά τον 5ο αιώνα π.Χ. (Falke 1887)"
+  },
+  {
+    "id": 670,
+    "topic_ID": 1,
+    "exhibit_ID": 467,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Μοντέλο του Παλιού Βουλευτηρίου."
+  },
+  {
+    "id": 671,
+    "topic_ID": 1,
+    "exhibit_ID": 468,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γενική άποψη του Μητρώου και του Παλιού Βουλευτηρίου (Μάιος 1934)."
+  },
+  {
+    "id": 672,
+    "topic_ID": 1,
+    "exhibit_ID": 469,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη αναπαράσταση της Ποικίλης Στοάς."
+  },
+  {
+    "id": 673,
+    "topic_ID": 1,
+    "exhibit_ID": 470,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αναπαράσταση της Ποικίλης Στοάς και των κοντινών κτισμάτων (Dinsmoor 1981)"
+  },
+  {
+    "id": 674,
+    "topic_ID": 1,
+    "exhibit_ID": 471,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τα θεμέλια της Ποικίλης Στοάς (Αύγουστος 1984)."
+  },
+  {
+    "id": 675,
+    "topic_ID": 1,
+    "exhibit_ID": 472,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γενική άποψη της Ποικίλης Στοάς στο τέλος της ανασκαφικής περιόδου (Αύγουστος 1981)"
+  },
+  {
+    "id": 676,
+    "topic_ID": 1,
+    "exhibit_ID": 473,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη αναπαράσταση της Στοάς του Αττάλου και της Βιβλιοθήκης του Πανταίνου, στον δρόμο για την Ρωμαική Αγορά (Τραυλός 1946)."
+  },
+  {
+    "id": 677,
+    "topic_ID": 1,
+    "exhibit_ID": 474,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Στιγμιότυπο από την αναστήλωση της Στοάς του Αττάλου (Δεκέμβριος 1955)."
+  },
+  {
+    "id": 678,
+    "topic_ID": 1,
+    "exhibit_ID": 475,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τρισδιάστατη κάθετη τομή της Στοάς του Αττάλου."
+  },
+  {
+    "id": 679,
+    "topic_ID": 1,
+    "exhibit_ID": 476,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Υδατογραφία που αναπαριστά τον άνω όροφο της Στοάς του Αττάλου (Piet de Jong 2006)"
+  },
+  {
+    "id": 680,
+    "topic_ID": 1,
+    "exhibit_ID": 477,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η Στοά του Αττάλου φιλοξένησε την υπογραφή της Συνθήκης Ένταξης 10 νέων κρατών-μελών στην Ευρωπαική Ένωση (16 Απριλίου 2003)."
+  },
+  {
+    "id": 681,
+    "topic_ID": 1,
+    "exhibit_ID": 478,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σχεδιαστική αναπαράσταση της Στοάς του Ελευθερίου Διός γύρω στο 430-420 π.Χ."
+  },
+  {
+    "id": 682,
+    "topic_ID": 1,
+    "exhibit_ID": 479,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη των ανασκαφών της Στοάς του Ελευθερίου Διός (Φεβρουάριος 1932)."
+  },
+  {
+    "id": 683,
+    "topic_ID": 1,
+    "exhibit_ID": 480,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη κάτοψη της Στοάς του Ελευθερίου Διός (Τραυλός 1936)."
+  },
+  {
+    "id": 684,
+    "topic_ID": 1,
+    "exhibit_ID": 481,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Καρτέλα από τις ανασκαφές των ευρημάτων του Τετράγωνου Περιστυλίου."
+  },
+  {
+    "id": 685,
+    "topic_ID": 1,
+    "exhibit_ID": 482,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γείσο από το Τετράγωνο Περισύλιο που βρέθηκε στον χώρο της Μεσαίας Στοάς (Μάιος 1964)."
+  },
+  {
+    "id": 686,
+    "topic_ID": 1,
+    "exhibit_ID": 483,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οριζόντια τομή του Τετράγωνου Περιστύλιου, γύρω στο 300 π.Χ. (Τραυλός 1962)."
+  },
+  {
+    "id": 687,
+    "topic_ID": 1,
+    "exhibit_ID": 484,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σφραγίδες στην οροφή του Ωδείου του Αγρίππα (Τραυλός 1948)."
+  },
+  {
+    "id": 688,
+    "topic_ID": 1,
+    "exhibit_ID": 485,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κάθετη τομή του Ωδείου του Αγρίππα κατά τον 1ο αιώνα π.Χ."
+  },
+  {
+    "id": 689,
+    "topic_ID": 1,
+    "exhibit_ID": 486,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αεροφωτογραφία του Ρωμαικού συμπλέγματος στην Αγορά (Μάιος 1975)."
+  },
+  {
+    "id": 690,
+    "topic_ID": 1,
+    "exhibit_ID": 487,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γενική άποψη του κεντρικού τμήματος της Αγοράς, με τους Γίγαντες του Ωδείου να ξεχωρίζουν (Ιούλιος 1950)."
+  },
+  {
+    "id": 691,
+    "topic_ID": 1,
+    "exhibit_ID": 488,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη του Ναού του Ολυμπίου Διός (Reisinger 1933)"
+  },
+  {
+    "id": 692,
+    "topic_ID": 1,
+    "exhibit_ID": 489,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γυναίκα ποζάρει μπροστά στο Ναό του Ολυμπίου Διός (1933)"
+  },
+  {
+    "id": 693,
+    "topic_ID": 1,
+    "exhibit_ID": 490,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη του Ναού του Ολυμπίου Διός από την Ακρόπολη (1936)"
+  },
+  {
+    "id": 694,
+    "topic_ID": 1,
+    "exhibit_ID": 491,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Καρτ Ποστάλ που απεικονίζει τον Ναό του Ολυμπίου Διός (1901)"
+  },
+  {
+    "id": 695,
+    "topic_ID": 1,
+    "exhibit_ID": 492,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Χαρακτικό που απεικονίζει την Αθήνα του 19ου αιώνα από τις όχθες του Ιλισσού, ο Ναός του Ολυμπίου Διός βρίσκεται στο βάθος (Stackelberg 1854)"
+  },
+  {
+    "id": 696,
+    "topic_ID": 1,
+    "exhibit_ID": 493,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σχέδια πάνω στην αρχιτεκτονική της Πύλης του Αδριανού (Sayer 1759)"
+  },
+  {
+    "id": 697,
+    "topic_ID": 1,
+    "exhibit_ID": 494,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γκραβούρα της Πύλης του Αδριανού (Dodwell 1819)"
+  },
+  {
+    "id": 698,
+    "topic_ID": 1,
+    "exhibit_ID": 495,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Υδατογραφία της θέας από τον λόφο του Φιλοπάππου (Haygarth 1810-1811)"
+  },
+  {
+    "id": 699,
+    "topic_ID": 1,
+    "exhibit_ID": 499,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κάτοψη του Πομπείου"
+  },
+  {
+    "id": 700,
+    "topic_ID": 1,
+    "exhibit_ID": 500,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αποκατεστημένη σχεδιαστική αναπαράσταση του Πομπείου."
+  },
+  {
+    "id": 701,
+    "topic_ID": 1,
+    "exhibit_ID": 501,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Από τις ανασκαφές του Πομπείου."
+  },
+  {
+    "id": 702,
+    "topic_ID": 1,
+    "exhibit_ID": 511,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σπήλαιο της Αγλαύρου"
+  },
+  {
+    "id": 703,
+    "topic_ID": 1,
+    "exhibit_ID": 517,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Πίνακας με το ναό της Αθηνάς Νίκης, από ΒΑ."
+  },
+  {
+    "id": 704,
+    "topic_ID": 1,
+    "exhibit_ID": 520,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το Ερέχθειο"
+  },
+  {
+    "id": 705,
+    "topic_ID": 1,
+    "exhibit_ID": 522,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γωνιαία Καρυάτιδα στο Ερέχθειο"
+  },
+  {
+    "id": 706,
+    "topic_ID": 1,
+    "exhibit_ID": 534,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αρρηφόριον"
+  },
+  {
+    "id": 707,
+    "topic_ID": 1,
+    "exhibit_ID": 541,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σύγχρονη γενική άποψη της Αγοράς της Αθήνας"
+  },
+  {
+    "id": 708,
+    "topic_ID": 1,
+    "exhibit_ID": 556,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο Άρειος Πάγος. Στο βάθος δεξιά ο Ναός του Ηφαίστου (Θησείο)."
+  },
+  {
+    "id": 709,
+    "topic_ID": 1,
+    "exhibit_ID": 560,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το θέατρο του Διονύσου στη Νότια Κλιτύ της Ακρόπολης"
+  },
+  {
+    "id": 710,
+    "topic_ID": 1,
+    "exhibit_ID": 561,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σύγχρονη άποψη του Θεάτρου του Διονύσου"
+  },
+  {
+    "id": 711,
+    "topic_ID": 1,
+    "exhibit_ID": 564,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το Ασκληπιείο"
+  },
+  {
+    "id": 712,
+    "topic_ID": 1,
+    "exhibit_ID": 394,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η βόρεια στοά της Βιβλιοθήκης και η οδός που κατέληγε στην Ρωμαική Αγορά το 100 μ.Χ. (Αύγουστος 1973)"
+  },
+  {
+    "id": 713,
+    "topic_ID": 1,
+    "exhibit_ID": 586,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη του Αγορανομείου τον 19ο αιώνα (1895)"
+  },
+  {
+    "id": 714,
+    "topic_ID": 1,
+    "exhibit_ID": 587,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γκραβούρα των Αέρηδων με τον Σείχη Μουσταφά (Stuart & Revett, 1762)"
+  },
+  {
+    "id": 715,
+    "topic_ID": 1,
+    "exhibit_ID": 588,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Μάζωξη μουσουλμάνων στον Τεκέ του Μπραίμη (Dodwell, 1819)"
+  },
+  {
+    "id": 716,
+    "topic_ID": 1,
+    "exhibit_ID": 589,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η Βιβλιοθήκη του Αδριανού το 1934"
+  },
+  {
+    "id": 717,
+    "topic_ID": 1,
+    "exhibit_ID": 590,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η Βιβλιοθήκη του Αδριανού τον 19ο αιώνα (Thurmer 1819)"
+  },
+  {
+    "id": 718,
+    "topic_ID": 1,
+    "exhibit_ID": 591,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η Πύλη της Αθηνάς Αρχηγέτιδος και ο Μεντρεσές (Wright 1842)"
+  },
+  {
+    "id": 719,
+    "topic_ID": 1,
+    "exhibit_ID": 592,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η Πύλη της Αθηνάς Αρχηγέτιδος ή Παζαρόπορτα (Le Roy 1770)"
+  },
+  {
+    "id": 720,
+    "topic_ID": 1,
+    "exhibit_ID": 593,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η επιγραφή της Πύλης της Αθηνάς Αρχηγέτιδος (μεταγραφή στα Ιταλικά από τον Pomardi, 1804-1806)"
+  },
+  {
+    "id": 721,
+    "topic_ID": 1,
+    "exhibit_ID": 594,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη της Ρωμαικής Αγοράς (1934)"
+  },
+  {
+    "id": 722,
+    "topic_ID": 1,
+    "exhibit_ID": 595,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το Φετιχιέ Τζαμί"
+  },
+  {
+    "id": 723,
+    "topic_ID": 1,
+    "exhibit_ID": 596,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το Ωρολόγιο Κυρρήστου στις αρχές του 20ου αιώνα (1910)"
+  },
+  {
+    "id": 724,
+    "topic_ID": 1,
+    "exhibit_ID": 597,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το εσωτερικό του Ωρολογίου του Κυρρήστου στις αρχές του 20ου αιώνα (1910)"
+  },
+  {
+    "id": 725,
+    "topic_ID": 1,
+    "exhibit_ID": 598,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η Πύλη του Αδριανού και οι Στήλες του Ολυμπίου Διός (μετά το 1834)"
+  },
+  {
+    "id": 726,
+    "topic_ID": 1,
+    "exhibit_ID": 599,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ιχνογραφία του Ωδείου του Περικλή (Καστριώτης 1922)"
+  },
+  {
+    "id": 727,
+    "topic_ID": 1,
+    "exhibit_ID": 600,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το Ωδείο Ηρώδου του Αττικού στις 9 Νοεμβρίου 1810 (Haygarth 1810-1811)"
+  },
+  {
+    "id": 728,
+    "topic_ID": 1,
+    "exhibit_ID": 601,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η ΝΑ πλευρά της Στοάς Ευμένους"
+  },
+  {
+    "id": 729,
+    "topic_ID": 1,
+    "exhibit_ID": 604,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Μαρμάρινος βωμός με ανάγλυφη διακόσμηση, αφιερωμένος από τον Πιστοκράτη και τον Απολλόδωρο στο Ιερό του Διονύσου Ελευθερέως"
+  },
+  {
+    "id": 730,
+    "topic_ID": 1,
+    "exhibit_ID": 605,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αναπαράσταση της Ιεράς Πύλης και του Πομπείου"
+  },
+  {
+    "id": 731,
+    "topic_ID": 1,
+    "exhibit_ID": 606,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Φανταστική αναπαράσταση του Διπύλου κατά την αρχαιότητα (Falke 1887)"
+  },
+  {
+    "id": 732,
+    "topic_ID": 1,
+    "exhibit_ID": 607,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο αμφορέας του Διπύλου (760-750 π.Χ.)"
+  },
+  {
+    "id": 733,
+    "topic_ID": 1,
+    "exhibit_ID": 611,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το Μνημείο του Αγρίππα και τα Προπύλαια τον 19ο αιώνα (Boetticher 1888)"
+  },
+  {
+    "id": 734,
+    "topic_ID": 1,
+    "exhibit_ID": 627,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σχεδιαστική αποκατάσταση του αγάλματος της Αθηνάς Προμάχου και των γύρω αφιερωμάτων (G. P. Stevens)"
+  },
+  {
+    "id": 735,
+    "topic_ID": 1,
+    "exhibit_ID": 628,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Die Akropolis von Athen (Graeb 1898)"
+  },
+  {
+    "id": 736,
+    "topic_ID": 1,
+    "exhibit_ID": 629,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "James and Nicholas, 1787"
+  },
+  {
+    "id": 737,
+    "topic_ID": 1,
+    "exhibit_ID": 630,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η μικρή πόρτα του Ερεχθείου που οδηγεί στο Πανδρόσειον, κατά τα έργα αναστήλωσης (1918)"
+  },
+  {
+    "id": 738,
+    "topic_ID": 1,
+    "exhibit_ID": 631,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τα Προπύλαια και η Πινακοθήκη το 1895"
+  },
+  {
+    "id": 739,
+    "topic_ID": 1,
+    "exhibit_ID": 632,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άποψη και κάτοψη των Προπυλαίων (Barthelemy 1832)"
+  },
+  {
+    "id": 740,
+    "topic_ID": 1,
+    "exhibit_ID": 633,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Προπύλαια (Pomardi 1820)"
+  },
+  {
+    "id": 741,
+    "topic_ID": 1,
+    "exhibit_ID": 634,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "(Du Moncel 1843)"
+  },
+  {
+    "id": 742,
+    "topic_ID": 1,
+    "exhibit_ID": 636,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η αναστήλωση του προνάου του Παρθενώνα το 1931."
+  },
+  {
+    "id": 743,
+    "topic_ID": 1,
+    "exhibit_ID": 637,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο Παρθενώνας (Frommel 1830)"
+  },
+  {
+    "id": 744,
+    "topic_ID": 1,
+    "exhibit_ID": 638,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο Παρθενώνας ως Τζαμί από τα ΒΑ (Peytier 1971)"
+  },
+  {
+    "id": 745,
+    "topic_ID": 1,
+    "exhibit_ID": 639,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κάτοψη του Παρθενώνα ως Χριστιανική Εκκλησία (Boetticher 1888)"
+  },
+  {
+    "id": 746,
+    "topic_ID": 1,
+    "exhibit_ID": 713,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οι Άγιοι Ασώματοι στα σκαλιά (εκκλησία των Ταξιαρχών) και ο Προφήτης Ηλίας Σταροπάζαρου"
+  },
+  {
+    "id": 747,
+    "topic_ID": 1,
+    "exhibit_ID": 726,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Φωτογραφία από τα εγκαίνεια της Στοάς του Αττάλου ως Μουσείου της Αγοράς με τον Κ. Καραμανλή και τον ανασκαφέα Homer Thompson"
+  },
+  {
+    "id": 748,
+    "topic_ID": 1,
+    "exhibit_ID": 727,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Προανάκρουσμα των εγκαινίων του Μουσείο με δημοσίευμα που περιγράφει την αναστήλωση της Στοάς του Αττάλου"
+  },
+  {
+    "id": 749,
+    "topic_ID": 1,
+    "exhibit_ID": 728,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Δημοσιεύματα για τον Ροκφέλλερ, το ίδρυμα του οποίου χρηματοδότησε τις ανασκαφές και αναστηλώσεις στην αρχαία Αγορά"
+  },
+  {
+    "id": 750,
+    "topic_ID": 1,
+    "exhibit_ID": 729,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Peter von Hess, Η άφιξη του Όθωνα στην Ελλάδα"
+  },
+  {
+    "id": 751,
+    "topic_ID": 1,
+    "exhibit_ID": 730,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κατά μήκος της Παναθηναϊκής οδού λάμβανε χώρα το αγώνισμα του αποβάτη δρόμου."
+  }
+]

@@ -1,0 +1,2270 @@
+[
+  {
+    "id": 1,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 496,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ερέχθειο"
+  },
+  {
+    "id": 2,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 496,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Υπάρχει και ένα οικοδόμημα που ονομάζεται Ερέχθειο. Προ της εισόδου του υπάρχει βωμός για τον Ύπατο Δία, όπου δεν γίνονται θυσίες εμψύχων προσφέρουν μόνο πέμματα (γλυκά ψωμάκια) και δεν συνηθίζουν να χρησιμοποιούν κρασί. Μέσα σ᾽ αυτό υπάρχουν βωμοί, ένας για τον Ποσειδώνα, όπου οι Αθηναίοι, συμμορφωνόμενοι με ένα χρησμό, θυσιάζουν και για τον Ερεχθέα, άλλος για τον ήρωα Βούτη και τρίτος για τον Ήφαιστο. Στους τοίχους υπάρχουν ζωγραφιές του (ιερατικού) γένους των Βουταδών. Καθώς το οικοδόμημα είναι διπλό, υπάρχει μέσα και φρέαρ με νερό θαλασσινό. [...]. Σε τούτο όμως το φρέαρ αξιοσημείωτος είναι ένας ήχος κυμάτων που ακούεται άμα φυσήξει νότιος άνεμος. Υπάρχει και σημάδι της τρίαινας στο βράχο. Αυτά λένε πως τα παρουσίασε ο Ποσειδών υποστηρίζοντας την αξίωσή του για την κατοχή της χώρας. (1, 26,5)\\n[...] Το αντικείμενο που από όλους γενικά θεωρήθηκε ως το αγιότατο, πολλά χρόνια προτού από τους δήμους γίνει ο συνοικισμός των Αθηνών, είναι το άγαλμα της Αθηνάς που βρίσκεται στην τώρα ονομαζόμενη Ακρόπολη, τότε όμως πόλη. Για το άγαλμα αυτό υπάρχει η φήμη πως έπεσε από τον ουρανό· δεν θα εξετάσω όμως, αν έτσι έχει το πράγμα ή αλλιώς.  Ο [γλύπτης] Καλλίμαχος έκαμε ένα χρυσό λύχνο για τη θεά· τον λύχνον αυτόν τον γεμίζουν με λάδι για το χρονικό διάστημα ώς την ίδια μέρα του επόμενου έτους και το λάδι είναι επαρκές για να μένει αναμμένος κατά τον ίδιο τρόπο ο λύχνος μέρα και νύχτα στο χρονικό αυτό διάστημα. Η θρυαλλίδα του είναι από Καρπάσιο λινάρι που είναι το μόνο από τα λινάρια που αντέχει στη φωτιά. Ένας χάλκινος φοίνικας πάνω από το λύχνο, που φτάνει ώς την οροφή, βγάζει πάνω τον καπνό. [...] (1, 26,6-7)."
+  },
+  {
+    "id": 3,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 496,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 4,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 496,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Erectheion"
+  },
+  {
+    "id": 5,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 496,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Both the city and the whole of the land are alike sacred to Athena; for even those who in their parishes have an established worship of other gods nevertheless hold Athena in honor. But the most holy symbol, that was so considered by all many years before the unification of the parishes, is the image of Athena which is on what is now called the Acropolis, but in early days the Polis （City）. A legend concerning it says that it fell from heaven; whether this is true or not I shall not discuss. A golden lamp for the goddess was made by Callimachus. [7Having filled the lamp with oil, they wait until the same day next year, and the oil is sufficient for the lamp during the interval, although it is alight both day and night. The wick in it is of Carpasian flax,1 the only kind of flax which is fire-proof, and a bronze palm above the lamp reaches to the roof and draws off the smoke. The Callimachus who made the lamp, although not of the first rank of artists, was yet of unparalleled cleverness, so that he was the first to drill holes through stones, and gave himself the title of Refiner of Art, or perhaps others gave the title and he adopted it as his.] \\n(Pausanias Description of Greece with an English Translation by W.H.S. Jones, Litt.D., and H.A. Ormerod, M.A., in 4 Volumes. Cambridge, MA, Harvard University Press; London, William Heinemann Ltd. 1918., 1.26.6-7)"
+  },
+  {
+    "id": 6,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 502,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Μητρώον"
+  },
+  {
+    "id": 7,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 502,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Εδώ είναι χτισμένο και ένα ιερό της Μητέρας των θεών, της οποίας το άγαλμα έκαμε ο Φειδίας. κοντά σ΄αυτό είναι το βουλευτήριο των λεγόμενων 500, που έχουν το βουλευτικό αξίωμα στην Αθήνα για ένα έτος. Μέσα σε αυτό υπάρχει ξόανο του Διός Βουλαίου και άγαλμα του Απόλλωνα, έργο του Πεισία, και του δήμου, έργο του Λύσωνα. Τη ζωγραφική εικόνα των θεσμοθετών την έκαμε ο Πρωτογένης από την Καύνο, και ο Ολβιάδης παρέστησε τον Κάλλιππο, που οδήγησε στις Θερμοπύλες τους Αθηναίους για να αποκρούσουν την εισβολή των Γαλατών στην Ελλάδα. (1, 3,5)"
+  },
+  {
+    "id": 8,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 502,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 9,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 502,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Metroon"
+  },
+  {
+    "id": 10,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 502,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Here is built a sanctuary of the Mother of gods, whose statue was made by Pheidias; close to it is the bouleuterion of the so-called 500, who hold the counsillor's office in Athens for one year. In it there is a wooden effigy of Boulaios Zeus and a statue of Apollo, made by Peisias, and of the demos, work of Lyson. The painted picture of the thesmothetae was made by Protogenes from Kaunos and Olvades represented Callippus, who led the Athenians to the Thermopylae, in order to withstand the invasion of the Gauls against Greece (1.3.5)"
+  },
+  {
+    "id": 11,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 503,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ιερό του Άρη"
+  },
+  {
+    "id": 12,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 503,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Κοντά στον ανδριάντα του Δημοσθένη είναι το ιερό του Άρη, όπου υπάρχουν δυο αγάλματα της Αφροδίτης [θεωρούνταν σύζυγός του], ένα του Άρη, που το έκαμε ο Αλκαμένης, και ένα της Αθηνάς που το έκαμε ένας Πάριος ονομαζόμενος Λοκρός. Εδώ υπάρχει και άγαλμα της Ενυούς [θεότητα του πολέμου, μητέρα ή αδελφή ή τροφός του Άρη] που το έκαμαν τα παιδιά του Πραξιτέλη. (1, 8,4)"
+  },
+  {
+    "id": 13,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 503,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 14,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 504,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ηφαιστείο"
+  },
+  {
+    "id": 15,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 504,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Πάνω από τον Κεραμεικό και τη στοά που λέγεται Βασίλειος υπάρχει ναός του Ηφαίστου. Το ότι πλάι στο άγαλμα του Ηφαίστου είναι στημένο και ένα άγαλμα της Αθηνάς δεν μου φάνηκε παράξενο, γιατί μου είναι γνωστή η παράδοση για τον Εριχθόνιο. Καθώς όμως έβλεπα το άγαλμα της Αθηνάς να έχει μάτια γαλανά, αναγνώρισα τον σχετικό μύθο των Λιβύων. Γιατί αυτοί λένε ότι η Αθηνά είναι κόρη του Ποσειδώνα και της Τριτωνίδας λίμνης και γι' αυτό τα μάτια της είναι γαλανά, όπως και του Ποσειδώνα. (1, 14,6)"
+  },
+  {
+    "id": 16,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 504,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 17,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 504,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Hephaestion"
+  },
+  {
+    "id": 18,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 504,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Over the Kerameikos and the Basileios Stoa, there is a temple of Hephaestus. The fact that next to the statue of Hephaestus stands also a statue of Athena did not seem to me strange, because I know well the tradition about Erichthonios. While I was seeing the statue of Athena with blue eyes, I recognised the relevant myth of the Libyans. Because they say the Athena is the daughter of Poseidon and the lake Tritonis and therefore her eyes are blue, like those of Poseidon (1.14.6)."
+  },
+  {
+    "id": 19,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 508,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ιερό Αφροδίτης Ουρανίας"
+  },
+  {
+    "id": 20,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 508,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Κοντά βρίσκεται και ένα ιερό της Ουρανίας Αφροδίτης. Η λατρεία της Ουρανίας καθιερώθηκε πρώτη φορά στους Ασσύριους. Μετά τους Ασσύριους στους Παφίους της Κύπρου και στους Φοίνικες που κατοικούν στην Ασκάλωνα της Παλαιστίνης. Από τους Φοίνικες πήραν τη λατρεία της οι Κυθήριοι. Στους Αθηναίους την εισήγαγε ο Αιγέας γιατί πίστευε ότι η οργή της Αφροδίτης ευθύνεται για το γεγονός οτι ούτε ο ίδιος είχε παιδιά - γιατί δεν είχε ακόμη τότε -, αλλά και οι αδελφές του υπέστησαν τη συμφορά. Το άγαλμα, που υπάρχει και στις μέρες μας, είναι κατασκευασμένο από πάριο μάρμαρο και έργο του Φειδία. (1, 14,7)"
+  },
+  {
+    "id": 21,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 508,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 22,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 508,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Sanctuary of Aphrodite Ourania"
+  },
+  {
+    "id": 23,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 508,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "A sanctuary of Aphrodite Ourania is located nearby. The worship of Ourania was established by the Assyrians for the first time. After the Assyrians it spread to the Paphians in Cyprus and to the Phoenicians, who dwell at Ascalon in Palaestine. From the Phoenicians the cult was taken by the Cytherians. Among the Athenians it was introduced by Aigeus, because he believed that the wrath of Aphrodite was responsible for the fact that he didn't have childern, because he didn't yet have children, nor did his sisters who suffered the same calamity. The statue, existing up to our days, is made of Parian marble and is a work of Pheidias (v. 14.7)"
+  },
+  {
+    "id": 24,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 513,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Μνημεία στη βόρεια κλιτύ της Ακρόπολης (Κλεψύδρα, Ιερά Πανός και Άγλαυρης)"
+  },
+  {
+    "id": 25,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 513,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Κατεβαίνοντας κανείς, όχι ως την κάτω πόλη αλλά αμέσως κάτω από τα Προπύλαια, συναντά μια πηγή νερού και κοντά σ' αυτήν ένα ιερό του Απόλλωνα μέσα σε μια σπηλιά. Πιστεύουν πως εδώ ο Απόλλωνας συνευρέθη με την Κρέουσα, την κόρη του Ερεχθέα. \\n[...] ο Φιλιππίδης είχε σταλεί στη Λακεδαίμονα για να φέρει την είδηση πως οι Μήδοι είχαν αποβιβαστεί στη χώρα. Όταν επέστρεψε [...], έλεγε ότι ο Πάνας τον είχε συναντήσει περί το Παρθένιο όρος [στην Αρκαδία] και είχε εκφράσει τόσο την εύνοια του προς τους Αθηναίους όσο και τη συμμετοχή του στη μάχη του Μαραθώνα. Οι Αθηναίοι γι' αυτήν του την τοποθέτηση τον τίμησαν. (1, 28,4)\\nΠάνω από το ιερό των Διοσκούρων βρίσκεται το ιερό της Αγλαύρου. Λέγεται ότι η Αθηνά εμπιστεύτηκε στην Άγλαυρο και στις αδελφές της, Έρση και Πάνδροσο, τον Εριχθόνιο κλεισμένο μέσα σε κιβώτιο απαγορεύοντας τους να είναι περίεργες ως προς το περιεχόμενο. Κατά τα λεγόμενα, λοιπόν, η μεν Πάνδροσος συμμορφώθηκε, οι άλλες δύο όμως άνοιξαν το κιβώτιο και, μόλις είδαν τον Εριχθόνιο, έγιναν μανιακές και ρίχτηκαν κάτω από την Ακρόπολη, στο μέρος που είναι περισσότερο απότομη. Από το σημείο αυτό ανέβηκαν οι Μήδοι και σκότωσαν τους Αθηναίους, οι οποίοι, θεωρώντας ότι κατανοούν καλύτερα τον χρησμό από τον Θεμιστοκλή, τείχισαν την Ακρόπολη με σανίδια καρφωμένα πάνω σε ξύλινους πασσάλους. (1, 18,2)"
+  },
+  {
+    "id": 26,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 513,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 27,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 513,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Monuments on the north slope of the Acropolis (Clepsydra, Sanctuaries of Pan and Aglaura)"
+  },
+  {
+    "id": 28,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 513,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "As one descends to the lower city but straight under the Propylaia, one meets a source of water and close to it a sanctuary of Apollo within a cave. They believe that Apollo had intercourse here with Kreousa, the daughter of Erechtheus. \\n[...] Philippides had been sent to Lacaedemon in order to announce that the Medes had debarked on this land. When he came back [...]  he said that Pan had met him close to Mt. Parthenion [in Arcadia] and had expressed both his favour towards the Athenians and his participation at the battle of Marathon. The Athenians worshipped him for this position of his. (1.28.4)"
+  },
+  {
+    "id": 29,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 515,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ιερό Αθηνάς Νίκης"
+  },
+  {
+    "id": 30,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 515,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Δεξιά των προπυλαίων υπάρχει ένας ναός της Απτέρου Νίκης. Από το μέρος αυτό έχει κανείς μια πανοραμική θέα της θάλασσας• λέγεται πως ο Αιγέας από εδώ ρίχτηκε κάτω και αυτοκτόνησε. Γιατί ναι μεν το πλοίο πού μετέφερε τα παιδιά στην Κρήτη είχε ξεκινήσει με μαύρα πανιά, ο Θησέας όμως, που έφευγε με τολμηρή διάθεση κατά του λεγόμενου ταύρου του Μίνωα, είχε πει στον πατέρα του ότι θα χρησιμοποιήσει λευκά πανιά, αν επέστρεφε νικητής του ταύρου. Αλλά η απώλεια της Αριάδνης τον έκανε να ξεχάσει την αλλαγή, οπότε ό Αιγέας, βλέποντας το πλοίο να επιστρέφει με μαύρα πανιά, νόμισε πως ο γιος του είναι νεκρός, οπότε ρίχτηκε κάτω και σκοτώθηκε. Και υπάρχει γι’ αυτόν μνημείο στην Αθήνα πού λέγεται ηρώο του Αιγέα. (1, 22,4-5)"
+  },
+  {
+    "id": 31,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 515,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 32,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 515,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Temple of Athena Nike"
+  },
+  {
+    "id": 33,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 515,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "To the right of the propylaea there is a temple of Apteros Nike. From here one has a panoramic view of the sea. It is said that Aigeus threw himself down from here and committed suicide. Because although the ship which carried the children to Crete had started with black sails, Theseus, who left with a brave mood against the Minotaur had told his father that he would be using white sails, if he returned victorious. However, the loss of Ariadne had made him forget this change, so Aigeus, seeing the ship coming back with black sails, thought that his son was dead and hence fell of and got killed. There is a monument for his in Athens, called the monument of Aigeus. (1.22.4-5)"
+  },
+  {
+    "id": 34,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 518,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ιερό Διός Πολιέως"
+  },
+  {
+    "id": 35,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 518,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Αναφέρω τον τρόπο που γίνεται η θυσία στον Δία Πολιέα, όχι όμως και τον λόγο που γίνεται έτσι: αφήνουν πάνω στο βωμό του Δία Πολιέα, χωρίς επίβλεψη, κριθάρι ανακατεμένο με σιτάρι. Το βόδι, λοιπόν, που ετοίμασαν για τη θυσία, πηγαίνει στο βωμό και αρχίζει να τρώει τους καρπούς. Τότε ένας από τους ιερείς, που τον ονομάζουν 'βουφόνον', σκοτώνει το βόδι, ρίχνει κάτω το τσεκούρι - έτσι προβλέπεται -, και απομακρύνεται άμεσα. Οι άλλοι, επειδή δεν ξέρουν ποιος έκανε το φόνο, δικάζουν το τσεκούρι. (1, 24,4)"
+  },
+  {
+    "id": 36,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 518,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 37,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 535,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Αρρηφόριο"
+  },
+  {
+    "id": 38,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 535,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Γίνεται και κάτι που μου φάνηκε πολύ παράξενο• επειδή δεν είναι σ’ όλους γνωστό, θα γράψω τί περίπου γίνεται : δυο κοπέλες που από τούς Αθηναίους ονομάζονται «αρρηφόροι», κατοικούν όχι μακριά από το ναό της Πολιάδας. Αυτές ζουν κάμποσον καιρό κοντά στη θεά και όταν φτάσει η μέρα της γιορτής, λαμβάνουν μέρος τη νύχτα στην εξής τελετή: παίρνουν στο κεφάλι τους ό,τι ή ιέρεια της Αθηνάς δίνει σ’ αυτές για να το μεταφέρουν, χωρίς να ξέρει κανείς τί είναι αυτό, ούτε η ιέρεια που το παραδίνει ούτε αυτές που το μεταφέρουν. Υπάρχει μέσα στην πόλη ένας περίβολος, όχι μακριά από το ιερό της λεγόμενης Αφροδίτης της «εν Κήποις» και προς αυτό το μέρος φυσική υπόγεια δίοδος, από την οποία κατεβαίνουν οι κοπέλες• εκεί κάτω αφήνουν αυτά που κουβάλησαν και παίρνουν κάτι άλλο που το μεταφέρουν σκεπασμένο. Τις κοπέλες αυτές τις αφήνουν έπειτα ελεύθερες και στη θέση τους στην Ακρόπολη παίρνουν άλλες. (1, 27,3)"
+  },
+  {
+    "id": 39,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 535,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 40,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 535,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Arrephorio"
+  },
+  {
+    "id": 41,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 535,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "I was much amazed at something which is not generally known, and so I will describe the circumstances. Two maidens dwell not far from the temple of Athena Polias, called by the Athenians Bearers of the Sacred Offerings. For a time they live with the goddess, but when the festival comes round they perform at night the following rites. Having placed on their heads what the priestess of Athena gives them to carry—neither she who gives nor they who carry have any knowledge what it is—the maidens descend by the natural underground passage that goes across the adjacent precincts, within the city, of Aphrodite in the Gardens. They leave down below what they carry and receive something else which they bring back covered up. These maidens they henceforth let go free, and take up to the Acropolis others in their place.(Pausanias, 1.27.3)\\nPausanias. Pausanias Description of Greece with an English Translation by W.H.S. Jones, Litt.D., and H.A. Ormerod, M.A., in 4 Volumes. Cambridge, MA, Harvard University Press; London, William Heinemann Ltd. 1918."
+  },
+  {
+    "id": 42,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 542,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Προς την Αρχαία Αγορά"
+  },
+  {
+    "id": 43,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 542,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Μόλις μπει κανείς στην πόλη [από το Δίπυλο] συναντά ένα κτίσμα, όπου προετοιμάζονται οι πομπές [το Πομπείο], οι όποιες οργανώνονται άλλες κάθε χρόνο, άλλες πιο αραιά.  Κοντά υπάρχει ένας ναός της Δήμητρας με αγάλματα της ίδιας, της Κόρης και του Ιάκχου, ο όποιος κρατάει στο χέρι δάδα• μια επιγραφή στον τοίχο, με γράμματα αττικά, αναφέρει πως είναι έργα του Πραξιτέλη. Όχι μακριά από το ναό υπάρχει έφιππος Ποσειδώνας ο οποίος βάλλει με δόρυ κατά του γίγαντα Πολυβώτη, στον όποιο αναφέρεται ο μύθος των Κώων, ο σχετικός με το ακρωτήριο Χελώνη• το επίγραμμα όμως, που υπάρχει εκεί σήμερα, αποδίδει σ’ άλλον το άγαλμα κι όχι στον Ποσειδώνα. Από τις πύλες του τείχους μέχρι τον Κεραμεικό υπάρχουν στοές και μπροστά τους χάλκινες εικόνες γυναικών και ανδρών που για κάποιο λόγο δοξάστηκαν. Η μια από τις στοές αυτές έχει ιερά θεών και ένα γυμναστήριο, που ονομάζεται 'του Ερμού'. Εντός αυτού είναι το σπίτι του Πουλυτίωνα, όπου λέγεται ότι επιφανέστατοι Αθηναίοι οργάνωσαν τελετή με την οποία παρωδούσαν τα Ελευσίνια Μυστήρια. Στις μέρες μου ο τόπος αυτός είναι αφιερωμένος στο Διόνυσο που τον ονομάζουν Μελπόμενον και, κατ' αναλογία, τον Απόλλωνα Μουσηγέτην. Εδώ υπάρχουν αγάλματα της Αθήνας Παιωνίας, του Δία, της Μνημοσύνης, των Μουσών και τού Απόλλωνα, τα οποία κατασκεύασε και τα αφιέρωσε ο Ευβουλίδης, καθώς και άγαλμα του Ακράτου, ενός δαίμονα της ακολουθίας του Διονύσου, ένα πρόσωπο μόνο χτισμένο στον τοίχο. (1, 2,4-6)"
+  },
+  {
+    "id": 44,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 542,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 45,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 542,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Towards the Ancient Agora"
+  },
+  {
+    "id": 46,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 542,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Once one enters the city [from Dipylon] one sees a building, where the processions are prepared [Pompeion}; these are either organised once a year or from time to time. Close to it is located a temple of Demeter with statues of herself, the Kore and Iakhos, who holds a torch in his hand; an inscription on the wall in Attic letters relates that this is a work by Praxiteles. Not far from this temple there is a mounting Poseidon, who hits with his spear the giant Polyvotes, an incident referred to in the myth of the Coans, relative to the cape Chelone. The epigram still existing there mentions that the statue was dedicated to someone else, not Poseidon. From the gates of the wall down to Kerameikos there are porticoes and in front of them bronze effigies of women and men who, for some reason, were glorified. One of these porticoes bears santuaries of gods and a gymnasium, called 'of Hermes'. In it is located the house of Poulytion, where it is said that illustrious Athenians organized a ceremony which mocked of the Eleusinian Mysteries. In my days, this area is dedicated to Dionysus, called Melpomenos, and to Apollo Mousagetas. There are statues of Athena Paeonia here, of Zeus, Mnemosyne, the Muses and Apollo, which were made and dedicated by Euboulides, as well as a statue of Akratos, a daemon of the fellowship of Dionysus, just a face built in the wall. (1.2.4-6)"
+  },
+  {
+    "id": 47,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 543,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ολυμπιείο"
+  },
+  {
+    "id": 48,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 543,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Αρχαία μέσα στον περίβολο υπάρχουν, [μεταξύ άλλων] ένα τέμενος της Γης, η οποία έχει το προσωνύμιο Ολυμπία. Στο σημείο αυτό υπάρχει στο έδαφος χάσμα ενός περίπου πήχυ, από το οποίο λέγεται πως έφυγε το νερό μετά τον κατακλυσμό που έγινε τον καιρό του Δευκαλίωνα. Μέσα στο χάσμα αυτό ρίχνουν κάθε χρόνο αλεύρι σιταρένιο ανακατεμένο με μέλι. (1, 18,7)"
+  },
+  {
+    "id": 49,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 543,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 50,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 543,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Olympieion"
+  },
+  {
+    "id": 51,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 543,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "[Among other] antiquities within the precinct there are a sanctuary of Earth, addressed as Olympia. At this spot there is a gap on the ground, about 70 cms long, from where it is reported that flew away the water after the Deluge which occurred at the time of Deukalion. Within this gap they throw each year wheat flour mixed with honey (1.18.7)"
+  },
+  {
+    "id": 52,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 545,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Μνημεία στο Ολυμπιείο"
+  },
+  {
+    "id": 53,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 545,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Μετά το ναό του Όλύμπιου Δία, κοντά σ' αυτόν, βρίσκεται άγαλμα του Πύθιου Απόλλωνα. Υπάρχει επίσης κοντά και άλλο ιερό του Απόλλωνα, ο οποίος έχει την επίκληση Δελφίνιος. Λέγεται πως όταν ο ναός του ιερού αυτού είχε τελειώσει ως την οροφή, είχε φτάσει στην πόλη ο Θησέας, άγνωστος ακόμα σ’ όλους. Επειδή φορούσε μακρύ χιτώνα και είχε καλοπλεγμένα τα μαλλιά του, μόλις έφτασε κοντά στο ναό του Δελφινίου, οι ασχολούμενοι με το χτίσιμο της στέγης χλευαστικά αναρωτήθηκαν, γιατί γυρίζει μόνη της αυτή, μιά κοπέλλα σέ ηλικία γάμου. Ο Θησέας, αντί για άλλη απάντηση, λένε πως έλυσε τά βόδια από τό αμάξι που αυτοί είχαν εκεί κοντά και τό έρριξε πιο ψηλά άπό τό σημείο όπου αυτοί έβαζαν τη στέγη του ναού. \\nΣχετικά με τον τόπο που τον λένε Κήπους και το ναό της Αφροδίτης, δεν έχουν στην Αθήνα καμιά παράδοση, αλλά ούτε και για την Αφροδίτη που είναι στημένη κοντά στο ναό. Αυτή έχει τετράγωνο σχήμα, όπως και οι Ερμές, και η επιγραφή της αναφέρει πως ή Ουρανία Αφροδίτη είναι η πρεσβύτερη από τις λεγόμενες Μοίρες. Το άγαλμα όμως της Αφροδίτης της εν Κήποις είναι έργο του Αλκαμένη και ένα από τα λίγα ανάμεσα στα αξιοθέατα της Αθήνας. (1, 19,1-3)"
+  },
+  {
+    "id": 54,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 545,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 55,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 545,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Monument at the Olympieion"
+  },
+  {
+    "id": 56,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 545,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "After the temple of Zeus Olympios, close to it, there is a statue of Pythios Apollo. Nearby there is also another sanctuary of Apollo, who is named Delphinios. It is said that, when the temple of this sanctuary was accomplished up to the roof, Theseus had reached the city, still unknown to all. As he was wearing a long chiton and had finely combed his hair, as soon as he got close to the temple of Delphinios, those engaged with the building of the roof wondered in an ironic way why this girl, at marriage age, roamed around on her own. Theseus, instead of answering in another way, is mentioned to have let loose the oxen from the carriage that these men were keeping nearby and threw the carriage higher up in the air than the height where these men were placing the roof of the temple."
+  },
+  {
+    "id": 57,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 552,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Άρειος Πάγος"
+  },
+  {
+    "id": 58,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 552,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Υπάρχει ένας βράχος που λέγεται Άρειος πάγος, επειδή εδώ δικάστηκε πρώτη φορά ο Άρης• έχω ήδη αναφέρει πως ο Άρης είχε σκοτώσει τον Αλιρρόθιο, καθώς και γιατί τον είχε σκοτώσει. Λέγεται ότι και ο Ορέστης δικάστηκε εδώ αργότερα για το φόνο της μητέρας του• υπάρχει και ένας βωμός της Αρείας Αθηνάς, τον όποιον αφιέρωσε μετά την αθώωσή του. Από τους αλάξευτους λίθους, όπου στέκονται οι κατηγορούμενοι και οι κατήγοροι, τον ένα τον ονομάζουν της Ύβρεως και τον άλλο της Αναιδείας. Κοντά βρίσκεται και ένα ιερό για τις θεές που οι μεν Αθηναίοι τις λένε Σεμνές, ο Ησίοδος όμως, στη Θεογονία, Ερινύες. Αυτές ο Αισχύλος πρώτος τις παρουσίασε να έχουν φίδια μαζί με τα μαλλιά στο κεφάλι. Στα αγάλματά τους δεν υπάρχει τίποτε που να εμπνέει φόβο, αλλά ούτε και στα αγάλματα των άλλων θεών του κάτω κόσμου, τα οποία υπάρχουν εδώ• υπάρχουν και αγάλματα του Πλούτωνα, του Έρμη και της Γης. Όσοι αθωώνονται στον Άρειο πάγο θυσιάζουν εδώ• και για άλλους λόγους θυσιάζουν εδώ, χωρίς διάκριση - τόσο ξένοι όσο και αθηναίοι πολίτες. Μέσα στον περίβολο υπάρχει και μνήμα του Οιδίποδα, τα οστά του οποίου, μετά από προσεκτική έρευνα, βρήκα ότι μεταφέρθηκαν εδώ από τη Θήβα, γιατί αυτά που αναφέρει ο Σοφοκλής σχετικά με το θάνατο του Οιδίποδα δεν μου φαίνονται αξιόπιστα• από τον Όμηρο, μαθαίνουμε ότι ο Μηκιστέας πήγε στη Θήβα μετά το θάνατο του Οιδίποδα για να πάρει μέρος σε επιτάφιους αγώνες. [Ιλ. 23, 678-680] (1, 28,5-8)"
+  },
+  {
+    "id": 59,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 552,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 60,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 552,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Areios Pagos"
+  },
+  {
+    "id": 61,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 552,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "There is also the Hill of Ares, so named because Ares was the first to be tried here; my narrative has already told that he killed Halirrhothius, and what were his grounds for this act. Afterwards, they say, Orestes was tried for killing his mother, and there is an altar to Athena Areia （Warlike）which he dedicated on being acquitted. The unhewn stones on which stand the defendants and the prosecutors, they call the stone of Outrage and the stone of Ruthlessness..Hard by is a sanctuary of the goddesses which the Athenians call the August, but Hesiod in the Theogony1 calls them Erinyes （Furies).. It was Aeschylus who first represented them with snakes in their hair. But on the images neither of these nor of any of the under-world deities is there anything terrible. There are images of Pluto, Hermes, and Earth, by which sacrifice those who have received an acquittal on the Hill of Ares; sacrifices are also offered on other occasions by both citizens and aliens.Within the precincts is a monument to Oedipus, whose bones, after diligent inquiry, I found were brought from Thebes. The account of the death of Oedipus in the drama of Sophocles I am prevented from believing by Homer, who says that after the death of Oedipus Mecisteus came to Thebes and took part in the funeral games. [Iliad. 23, 678-680] (Pausanias, 1, 28,5-8)"
+  },
+  {
+    "id": 62,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 557,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Οδός Τριπόδων"
+  },
+  {
+    "id": 63,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 557,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Από το Πρυτανείο αρχίζει ένας δρόμος, που λέγεται Τρίποδες• σε αυτή την περιοχή συναντά κανείς ναούς τόσο μεγάλους ώστε πάνω τους να στηρίζονται ίσα- ίσα τρίποδες• οι τρίποδες αυτοί είναι χάλκινοι, άλλα το περιεχόμενο των ναών είναι έργα τέχνης αξιομνημόνευτα: υπάρχει ένα άγαλμα Σατύρου, για το όποιο λένε πως ό Πραξιτέλης ήταν περήφανος• κάποτε η Φρύνη του ζήτησε το ωραιότερο από τα έργα του, κ’ εκείνος, λένε, δέχτηκε, ως εραστής της, να της το δώσει, δεν ήθελε όμως να πει ποιο θεωρούσε o ίδιος ως το ωραιότερο. Τότε λοιπόν ένας υπηρέτης της Φρύνης έτρεξε μέσα και είπε πως στο εργαστήριο του Πραξιτέλη έπιασε φωτιά και καταστράφηκαν τα περισσότερα έργα του, όχι όμως όλα. Ο Πραξιτέλης αμέσως όρμησε έξω από την πόρτα λέγοντας πως όλοι οι κόποι του πήγαν χαμένοι, αν η φωτιά κατάστρεψε το, Σάτυρο και τον Έρωτα. Η Φρύνη τότε του είπε να ηρεμήσει και να μη φοβάται, γιατί τίποτε δυσάρεστο δεν έπαθε, αλλά με το τέχνασμα αυτό τον ανάγκασε να μαρτυρήσει τα ωραιότερα έργα του. Έτσι ή Φρύνη διάλεξε τον Έρωτα. Ένα παιδί Σάτυρος που κρατάει ένα κύπελλο βρίσκεται κοντά στον ναό τού Διονύσου• τον Έρωτα που στέκεται μαζί του και με τον Διόνυσο τους έκαμε ο Θυμίλος. (1, 20,1-3)"
+  },
+  {
+    "id": 64,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 557,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 65,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 558,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ιερό του Διονύσου"
+  },
+  {
+    "id": 66,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 558,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Μέσα στον περίβολο υπάρχουν δύο ναοί και δυο αγάλματα του Διονύσου, το άγαλμα του Ελευθερέα και εκείνο που έκαμε ο Αλκαμένης από ελεφαντόδοντο και χρυσάφι. Υπάρχει  και ζωγραφικός διάκοσμος με τον Διόνυσο που μεταφέρει τον Ήφαιστο στον ουρανό. Το θέμα στηρίζεται στην εξής παράδοση των Ελλήνων: η Ήρα όταν γεννήθηκε ο Ήφαιστος τον πέταξε και τότε αυτός, για να την εκδικηθεί, της έστειλε ως δώρο έναν θρόνο με αόρατα δεσμά, τα οποία έδεσαν την Ήρα μόλις κάθισε• ο Ήφαιστος δεν ήθελε τότε να υπακούσει σε κανέναν θεό (και να ελευθερώσει την Ήρα), αλλά ο Διόνυσος, στον οποίο είχε ιδιαίτερη εμπιστοσύνη ο Ήφαιστος - τον μέθυσε και τον έφερε στον ουρανό. Αυτά λοιπόν είναι ζωγραφισμένα• επίσης ο Πενθέας και ο Λυκούργος που τιμωρούνται για την ασέβειά τους προς τον Διόνυσο, και η Αριάδνη που κοιμάται, ενώ ο Θησέας αποπλέει, και ο Διόνυσος που έρχεται για να αρπάξει τη Αριάδνη. (1, 20,3)"
+  },
+  {
+    "id": 67,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 558,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 68,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 558,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Sanctuary of Dionysus"
+  },
+  {
+    "id": 69,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 558,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Within the precinct there are two temples and two statues of Dionysus, the statue of Eleuthereas and the one that Alcamenes made of ivory and gold. There is also painted decoration with Dionysus transporting Hephaestus to heavens. The topic is based on the following tradition of the Greeks: Hera, when Hephaestus was born, threw him away and then he sent her as present a throne with invisible ties, in order to take revenge. These ties tied Hera as soon as she sat. Hephaestus did not want to obey to any god and free Hera, but Dionysus, whom Hephaestus trusted, got him drunk and brought him to heabens. These are painted. Also, Pentheus and Lycourgos, who are punished for their impiety towards Dionysus, as well as Ariadne who is asleep, while Theseus sails away, and Dionysus who comes to snatch Ariadne. (1.20.3)"
+  },
+  {
+    "id": 70,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 559,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Τραγικοί στο θέατρο Διονύσου"
+  },
+  {
+    "id": 71,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 559,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Από τους γνωστούς τραγωδοποιούς έχουν ανδριάντες ο Ευριπίδης και ο Σοφοκλής. Λένε πως μετά το θάνατο του Σοφοκλή, όταν εισέβαλαν στην Αττική οι Λακεδαιμόνιοι, ο αρχηγός τους είδε τον Διόνυσο να παρουσιάζεται στο όνειρό του και να τον διέταξε να τιμούν τη Σειρήνα τη νέα με τις καθιερωμένες για τους νεκρούς τιμές. Και του φαινόταν πως το όνειρο αυτό αναφέρονταν στο Σοφοκλή και την ποίησή του, γιατί συνηθίζεται, και τώρα ακόμα, να παρομοιάζεται η γοητεία του ποιητικού και του πεζού λόγου με Σειρήνα. Η πλαστική εικόνα του Αισχύλου έγινε, θαρρώ, πολύ μετά το θάνατό του και μετά τη ζωγραφική παράσταση της μάχης του Μαραθώνα. Για τον Αισχύλο διηγούνται ότι, όταν ήταν νέος και κοιμόνταν κάποτε στην εξοχή φυλάγοντας σταφύλια, του παρουσιάστηκε ο Διόνυσος, ο οποίος τον παρακίνησε να γράψει τραγωδία. Όταν ξημέρωσε, υπάκουσε πρόθυμα και το δοκίμασε αυτό και από τότε έγραφε με μεγάλη ευκολία. Αυτά τα έλεγε ο ίδιος. (1, 21,1-2)"
+  },
+  {
+    "id": 72,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 559,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 73,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 559,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Tragic poets in the theatre of Dionysus"
+  },
+  {
+    "id": 74,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 559,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Euripides and Sophocles, of the renowned tragedy writers, have their statues there. They say that, after Sophocles' death, when the Lacaedemonians invaded Attica, their leader saw Dionysus in his dream; the god ordered that they should honour the new Siren with the traditional honours for the dead. He thought that this dream referred to Sophocles and his poetry, because it is usual, even now, to simulate the charm of the poetic and literary words with a Siren. The plastic effigy of Sophocles was created, I think, long after his death and later than the painted depiction of the battle of Marathon. They related about Aeschylus that, when he was young and slept in the countryside one day, guarding some vines, Dionysus appeared to him and urged hi to write a tragedy. Upon dawn, he followed the urge and tried it and since then he started writing with great ease. It was himself that told these things (1.21.1-2)"
+  },
+  {
+    "id": 75,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 563,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ασκληπιείο"
+  },
+  {
+    "id": 76,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 563,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Το ιερό του Ασκληπιού είναι αξιοθέατο και για τα αγάλματα του θεού και των παιδιών του που υπάρχουν σ’αυτό και για τον ζωγραφικό διάκοσμο. Μέσα στην περιοχή του υπάρχει μια πηγή, κοντά στην όποια λένε, ότι ο γιος του Ποσειδώνα Αλιρρόθιος ντρόπιασε την Αλκίππη, κόρη του Άρη, ο οποίος σκότωσε τον βιαστή. Έτσι ο Άρης είναι ο πρώτος που προσήχθει στο δικαστήριό του κατηγορούμενος για φόνο. (1, 21,4)"
+  },
+  {
+    "id": 77,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 563,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 78,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 563,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Asclepieion"
+  },
+  {
+    "id": 79,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 563,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "On the way to the Athenian Acropolis from the theater is the tomb of Calos. Daedalus murdered this Calos, who was his sister's son and a student of his craft, and therefore he fled to Crete; afterwards he escaped to Cocalus in Sicily. The sanctuary of Asclepius is worth seeing both for its paintings and for the statues of the god and his children. In it there is a spring, by which they say that Poseidon's son Halirrhothius deflowered Alcippe the daughter of Ares, who killed the ravisher and was the first to be put on his trial for the shedding of blood.(Pausanias, 1.21.4)\\n\\nPausanias. Pausanias Description of Greece with an English Translation by W.H.S. Jones, Litt.D., and H.A. Ormerod, M.A., in 4 Volumes. Cambridge, MA, Harvard University Press; London, William Heinemann Ltd. 1918."
+  },
+  {
+    "id": 80,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 568,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Τσαντίρι του Πλάτωνα"
+  },
+  {
+    "id": 81,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 568,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "'Δίπλα στο παλαιό τζαμί είναι ο τόπος συγκέντρωσης των ιατροφιλόσοφων που αναζητούν την εσώτερη γνώση, που τον λένε «τσαντίρι του Πλάτωνα»', Εβλιά Τσελεμπί, Ταξίδι στην Ελλάδα (Seyahatname)."
+  },
+  {
+    "id": 82,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 568,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "569"
+  },
+  {
+    "id": 83,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 568,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Eflatun Chadiri"
+  },
+  {
+    "id": 84,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 568,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Next to the old mosque is located the place of gathering of the medical philosophers who seek inner wisdom, and it is caled 'Eflatun Chadiri' (i.e. Plato's tent). Evliya Celebi, Seyahatname."
+  },
+  {
+    "id": 85,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 574,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο χορός των Δερβίσηδων στον Πύργο των Ανέμων"
+  },
+  {
+    "id": 86,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 574,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Ο Πύργος των Ανέμων είναι τώρα Τεκκές ή τόπος λατρείας που ανήκει σε ένα τάγμα δερβίσηδων. Ήμουν παρών σε μια θρησκευτική λειτουργία, που ολοκληρώθηκε με το θαυμάσιο χορό τους. Η συντροφιά ήταν καθισμένη σταυροπόδι πάνω σε προβιές στο πάτωμα και σχημάτιζαν έναν μεγάλο κύκλο. Ο επικεφαλής δερβίσης, ένας όμορφος άντρας, με γκρίζα γενειάδα και ωραία παρουσία, ξεκίνησε την προσευχή στην οποία όλοι συμμετείχαν, προσκυνώντας και αγγίζοντας με το μέτωπο το έδαφος, όπως συνηθίζεται. Ξαφνικά αναπήδησαν, πέταξαν τις κάπες τους και, αφού ένωσαν τα χέρια τους, άρχισαν να κινούνται κυκλικά με τη μουσική."
+  },
+  {
+    "id": 87,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 574,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "575"
+  },
+  {
+    "id": 88,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 576,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ολυμπιείο και Παρθενώνας"
+  },
+  {
+    "id": 89,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 576,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Το Ολυμπιείο της Αθήνας όφειλε να γίνει το ακριβές αντίβαρο του Παρθενώνα, εκτεινόμενο στην πεδιάδα ενώ εκείνος υψώνεται στο λόφο, τεράστιο σε αντίθεση με εκείνον που είναι τέλειος: η φλόγα στα γόνατα της ηρεμίας, η μεγαλοπρέπεια στα πόδια της ομορφιάς. (Marguerite Yourcenar, Απομνημονεύματα του Αδριανού)"
+  },
+  {
+    "id": 90,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 576,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "577"
+  },
+  {
+    "id": 91,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 576,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Olympieion and the Parthenon"
+  },
+  {
+    "id": 92,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 576,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "The Olympieion of Athens ought to become the exact counterpart of the Parthenon, stretching on the plaine, whereas the latter dominates the hill, huge in contrast to the Parthenon which is perfect: the flame on the lap of calmness, the majesty on the lap of beauty. (Marguerite Yourcenar, Memoirs of Hadrien)"
+  },
+  {
+    "id": 93,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 579,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Τελετή εγκαινίων Ολυμπιείου"
+  },
+  {
+    "id": 94,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 579,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Στην Αθήνα, τρεις μήνες αργότερα έλαβαν χώρα, με αφορμή την αφιέρωση του Ολυμπιείου, γιορτές που θύμιζαν τις ρωμαϊκές επισημότητες. Όμως ό,τι στη Ρώμη είχε γίνει στο έδαφος, στην Αθήνα εκτυλίχθηκε κάτω από το λαμπρό ουρανό. Ένα ξανθό απόγευμα του φθινοπώρου κάθισα κάτω από το πρόπυλο που είχε σχεδιαστεί στις υπερανθρώπινες διαστάσεις του Δία. Αυτός ο μαρμάρινος ναός, κτισμένος στο σημείο όπου ο Δευκαλίων είδε τον κατακλυσμό να κοπάζει, έμοιαζε να χάνει το βάρος του, να πλέει σαν βαρύ λευκό σύννεφο. Το τελετουργικό μου ένδυμα ταίριαζε με τις βραδινές αποχρώσεις του Υμηττού, που βρίσκεται κοντά. Είχα αναθέσει στον Πολέμωνα το λόγο των εγκαινίων. Εκεί η Ελλάδα μου χάρισε τις προσφωνήσεις όπου διέκρινα ταυτόχρονα μια πηγή κύρους και τον πιο μύχιο σκοπό των έργων αυτών της ζωής μου: Ευεργέτης, Ολύμπιος, Επιφανής, Κύριος των Πάντων. Και ο πιο όμορφος, ο πιο δύσκολος να κερδηθεί: Ίων,  Φιλέλλην.  (M. Yourcenar, Απομνημονεύματα του Αδριανού)"
+  },
+  {
+    "id": 95,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 579,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "577"
+  },
+  {
+    "id": 96,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 579,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Inaugural ceremony of the Olympieion"
+  },
+  {
+    "id": 97,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 579,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Three months later took place in Athens, on the occasion of the dedication of the Olympieion, celebrations that reminded of the Roman solemnities. Yet, what had taken in place in Rome on the ground, in Athens it took place under the shiny sky. One blond afternoon in the fall, I sat under the propylon which had been designed for the superhuman dimensions of Zeus. This marble temple, built on the spot where Deukalion saw the Deluge calming down, seemed like losing its weight, floating like a heavy white cloud. My ceremonius dress matched the evening shades of nearby Hymettus. I had assigned to Polemo to write the inaugaral lectue. There, Greece addressed me with names where I could discern simultaneously a source of status and the deepest aim of these works of my life: Benefactor, Olympian, Master of All, And the most beautiful, the most difficult to earn title: Ion, Philhellen. (M Yourcenar, Memoirs of Hadrien)"
+  },
+  {
+    "id": 98,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 581,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Αδριανός περιγράφει τη βιβλιοθήκη του"
+  },
+  {
+    "id": 99,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 581,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Το σπίτι τους βρισκόταν μερικά μέτρα από τη νέα βιβλιοθήκη με την οποία μόλις είχα προικίσει την Αθήνα και από την οποία δεν έλειπε τίποτε που θα μπορούσε να βοηθήσει το στοχασμό ή την ανάπαυση που προηγείται της πνευματικής δραστηριότητας, όπως αναπαυτικά καθίσματα, επαρκής θέρμανση τους συχνά δύσκολους χειμώνες, σκάλες που προσφέρουν εύκολη πρόσβαση στα βιβλιοστάσια, τον αλάβαστρο και το χρυσό μιας ήπιας και ήρεμης πολυτέλειας.  (M.Yourcenar, Απομνημονεύματα του Αδριανού)"
+  },
+  {
+    "id": 100,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 581,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "577"
+  },
+  {
+    "id": 101,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 602,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η Αθήνα του Περικλή"
+  },
+  {
+    "id": 102,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 602,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Καθώς λοιπόν εκτελούνταν τα έργα, περήφανα στο μέγεθος και αμίμητα στη μορφή και τη χάρη, λόγω του ανταγωνισμού των τεχνιτών να διακριθούν τα έργα τους με την καλλιτεχνία, αξιοθαύμαστη ήταν η ταχύτητα της ολοκλήρωσής τους· γιατί για το καθένα από αυτά που νόμιζαν ότι θα χρειαστούν πολλές θητείες αρχόντων και πολλά χρόνια για να ολοκληρωθούν με κοπιώδη προσπάθεια, όλα αυτά τελείωναν στη θητεία μιας κυβέρνησης."
+  },
+  {
+    "id": 103,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 602,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "603"
+  },
+  {
+    "id": 104,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 602,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Pericles' Athens"
+  },
+  {
+    "id": 105,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 602,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "As the works were carried out, proud in size and unique in form and grace, due to the rivalry of the artists to make their works stand out with their prowess, the speed in which these were accomplished was amazing. For each one of those that people thought it would take several archons' periods of office and many years in order to be accomplished with copious effort, all of them finished within the duty period of one government"
+  },
+  {
+    "id": 106,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 608,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Επιστολή Γκρασέ για Παρθενώνα"
+  },
+  {
+    "id": 107,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 608,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Η κλίμαξ, ήτις διά μέσου των αποθηκών άγει προς τα Προπύλαια, διακόπτεται αιφνιδιως εις το μέσον διά πλαγίων τινών βαθμιδών, αίτινες φέρουσιν εις παράδοξον κρύπτην. Η κρύπτη αύτη, τετράγωνος και μετά μαρμάρινων τοιχωμάτων, κλείεται υπό σιδηρού φράγματος. […]\\nΔιά μέσου των τουρκικών αποθηκών, αίτινες κατακρημνίζονται ήδη, οδός πλήρης τεμαχίων τηλεβόλων και ογκωδών βομβών φέρει προς τον Παρθενώνα. Το αριστούργημα του Ικτίνου έσυλήθη υπό των Τούρκων, οίτινες μετεβάλλον αυτό αναλόγως των περιστάσεων άλλοτε μεν εις πυριτιδαποθήκην και άλλοτε εις τζαμίον. Εκ της τελευταίας ταύτης χρήσεως διεσώθη ήδη, υψών την αιχμήν του υπεράνω του αετώματος, μιναρές φέρων καταφανώς τα ίχνη της προηγηθείσης πυρκαϊάς. Τα εσωτερικά τοιχώματα του Παρθενώνας φέρουσιν εισέτι εικόνας χριστιανικάς της εποχής, καθ’ ην ο Παρθένων είχε μεταποιηθή εις ναόν της Παναγίας. Μίαν των εικόνων τούτων καλύτερον των άλλων διατηρηθεισαν αποκατέστρεψαν οι τελευταίοι Τούρκοι παραδίδοντες την Ακρόπολιν. Ανυπολόγιστος είναι η καταστροφή, ήν ο χρόνος και αι περιπέτειαι, και η σύλησις επέφερον επί των θαυμάσιων μετωπών τού ναού. (από επιστολή του το 1834)"
+  },
+  {
+    "id": 108,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 608,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "609"
+  },
+  {
+    "id": 109,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 608,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Letter of Grasset about the Parthenon"
+  },
+  {
+    "id": 110,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 608,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "The staircase which leads to the Propylaea through the storage rooms is suddenly interrupted in the middle through some side stairs, which lead to a strange crypt. This crypt is square and has marble walls, it is also closed by an iron fence. […]\\nThrough these Turkish storage spaces, which are already derelict, passes a street full of parts of canons and bulky bombs, leading to the Parthenon. The masterpiece of Iktinos has been looted by the Turks, who transformed it depending on the occasions other times into an arsenal and other times into a mosque. Due to this last usage there is still preserved a minaret, with its peak higher than the pediment. It bears clear marks of the fire that had taken place. The interior walls of the Parthenon still bear Christian icons of the period in which the Parthenon had been transformed into a church of the Mother of God. One of these icons, which has been maintained in better condition, was ruined by the last Turks when they were handing the Acropolis over. The destruction caused by time and adventures on the marvellous metops of the temple is immense. (From a letter of 1834)"
+  },
+  {
+    "id": 111,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 610,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η Ακρόπολη του Γκρασσέ"
+  },
+  {
+    "id": 112,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 610,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Από της αγοράς της πόλεως Αθηνών μέχρι της Ακροπόλεως φέρει οδός τραχεία και ανάντης, άλλα και γραφικωτάτη. Παρ’ αυτήν ένθεν και ένθεν ευρίσκονται τα Τουρκικά πρατήρια περιελθόντα ήδη εις ελληνικάς χείρας, διατηρούντα όμως την ανατολικήν αυτών μορφήν. Μόλις αναρριχηθή τις ολίγον επί της ανηφορικής ταύτης οδού βλέπει τον Λυκαβηττόν με την χαρίεσσαν όψιν αυτού, την ίεράν οδόν την φέρουσαν πρός τον κήπον του Χασεκή, τα λείψανα των τουρκικών τειχών της πόλεως, τα οποία εκρημνίσθησαν προ ολίγων ετών, έτι δ’ ανωτέρω αποκαλύπτεται ο λόφος του Φιλοπάππου και όπισθεν αυτού η θάλασσα του Φαλήρου.\\nΗ Ακρόπολις δε φαίνεται εισέτι κεκαλυμμένη υπό σωρών αθλίων οικίσκων, οίτινες εχρησίμευον εις τους Τούρκους φύλακας και υπό σωρών χωμάτων, άτινα εκάλυψαν τον απορρώγα βράχον.\\nΕπί τέλους, εις το υψηλότερον σημείον της οδού, ο επισκέπτης αποκαλύπτει τα παχέα πολεμικά τείχη, άτινα απετέλεσαν την πρώτην βάσιν της πολεμικής χρησιμοποιήσεως του ιερού βράχου. Από των βαρέων όμως άλλα συμμετρικωτάτων τειχών τούτων μέχρι του ύψους σχεδόν των Προπυλαίων, ολόκληρος ο χώρος εχρησιμοποιήθη υπό των Τούρκων προς οικοδόμησιν αποθηκών, δια την κατασκευήν των οποίων εγένετο ασυνείδητος χρήσις πολυτίμων λειψάνων. Εις τον πρώτον τοίχον, τον οποίον προ εμού απήντησα, παρετήρησα κατάπληκτος εμπεπηγμένην πλάκα ενεπίγραφον μετά πλαισιώματος θαυμάσιων γλυφών. Το τεμάχιον τούτο βεβαίως είχεν αποσπασθή από τίνος των επί τού βράχου ιερών, ως μ’ εβεβαίωσε δε ο Σαβιγνύ, φορτία ολόκληρα λίθων κατεβιβάσθησαν από της Ακροπόλεως και ετεμαχίσθησαν όπως χρησιμεύσωσιν ως οικοδομητική ύλη διά τας οικίας των Τούρκων. Και ταύτα, ενώ ολίγα βήματα κάτωθεν της Ακροπόλεως, λόφοι ολόκληροι πετρώδους συστάσεως θα παρείχον υλικόν καλύτερον και θα ημπόδιζον τους δράστας από τοιαύτης ιεροσυλίας. (από επιστολή του το 1834)."
+  },
+  {
+    "id": 113,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 610,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "609"
+  },
+  {
+    "id": 114,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 610,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Acropolis by Grasset"
+  },
+  {
+    "id": 115,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 610,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "From the market of the city of Athens to the Acropolis leads a coarse and difficult street, which is, however, very picturesque. Close to it, on both sides, are located the Turkish shops, which have already passed within Greek hands, but still preserving their oriental form. As soon as someone climbs on the uphill going street, one sees the Lycabettus hill with its charming look, the Sacred Way leading towards the garden of Haseki, the remains of the Turkish walls of the city, which were demolished a few years back; further up the hill of Philopappou is revealed and behind it the sea of Phaleron. The Acropolis looks still covered by a multitude of miserable little houses, which were used by the Turkish guards, as well as by heaps of earth, which has covered the rock. \\nFinally, on the highest point of the city, the visitor reveals the thick walls, which have constituted the first base of the military usage of the sacred rock. But from the heavy but symmetrical walls to the height of the Propylaea almost, the area was used by the Turks for building storage rooms, for the construction of which precious relics had been used. On the first wall, which I saw in front of me, I noticed in awe a walled inscribed slab with a frame of exquisite sculpture. This piece had obviously been detached from some sanctuary of those located on the rock; as Savigny assured me, entire loads of stones had been transported away from the Acropolis and had been cut into pieces, in order to be used as building material for the houses of the Turks. This, as in a few steps below from the Acropolis, entire hills consisting of stone would have offered better material and would have prevented the perpetrators from such a sacrilege (from a Letter of 1834)."
+  },
+  {
+    "id": 116,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 612,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η Ακρόπολη του Μοροζίνι"
+  },
+  {
+    "id": 117,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 612,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "[...] Η πόλη των Αθηνών καταλήφθηκε αμέσως και ξεκίνησε η πολιορκία της Ακρόπολης.  Η επίθεση στόχευε τα Προπύλαια, μπροστά από τα οποία οι Τούρκοι είχαν κατασκευάσει ισχυρά αναχώματα. Ο Παρθενώνας και ο ναός της Αθηνάς Πολιάδος, με τις όμορφες στοές τους, ήταν σχεδόν άθικτοι ακόμη όσον αφορά στην εξωτερική τους αρχιτεκτονική . Ακομη και τα γλυπτά είχαν τόσο λίγο πληγωθεί από το χρόνο, ώστε επεδείκνυαν την αμίμητη τελειότητά τους. Δύο αναχώματα κτίστηκαν, ένα στους πρόποδες του Μουσείου (δηλ. του λόφου των Μουσών) και το άλλο κοντά στην Πνύκα. Κανόνια τοποθετήθηκαν κρυφά στον Άρειο Πάγο, όμως οι βολές τους θεωρήθηκαν αβέβαιες, κι έτσι δύο ακόμη τοποθετήθηκαν καμουφλαρισμένα από τα κτίρια της πόλης, κοντά στη βορειοανατολική γωνία του βράχου. Αυτά έριχναν τα βλήματά τους με ψηλή γωνία και χαμηλό γέμισμα μέσα στην Ακρόπολη. Στις 25 Σεπτεμβρίου, μια βενετική βόμβα ανατίναξε μια μικρή πυριτιδαποθήκη στα Προπύλαια και το επόμενο βράδυ μια ακόμη έπεσε μέσα στον Παρθενώνα, όπου οι Τούρκοι είχαν τοποθετήσει τα πιο πολύτιμα εφόδιά τους, με σημαντική ποσότητα πυρίτιδας και εύφλεκτα υλικά. Μια εκκωφαντική έκρηξη έλαβε χώρα, οι κεντρικές κολώνες του περιστυλίου, οι τοίχοι του άδυτου και τα τεράστια επιστύλια και τα γείσα που υποστήριζαν σκορπίστηκαν γύρω από τα ερείπια του ναού. Πολλά από τα απαράμιλλα γλυπτά παραμορφώθηκαν κι ένα μέρος τους καταστράφηκε εντελώς. Τα υλικά που ήταν αποθηκευμένα μέσα στο κτίριο πήραν επίσης φωτιά και οι φλόγες, που ξεπερνούσαν την Ακρόπολη, φανέρωσαν την καταστροφή στους πολιορκητές, και έβλαψαν πολλά από τα αγάλματα που παρέμεναν στην αρχική τους θέση ακόμη [...] (σελ. 221-222)"
+  },
+  {
+    "id": 118,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 612,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "613"
+  },
+  {
+    "id": 119,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 612,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Morosini's Acropolis"
+  },
+  {
+    "id": 120,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 612,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "[...] The town of Athens was immediately occupied, and the siege of the Acropolis commenced. The attack was directed against the Propylaea, before which the Turks had constructed strong batteries. The Parthenon, and the temple of Minerva Polias, with its beautiful porticoes, were then nearly perfect, as far as regarded their external architecture. Even the sculpture was so little injured by time, that it displayed much of its inimitable excellence. Two batteries were erected, one at the foot of the Museum, and the other near the Pnyx. Mortars were planted under cover of the Areopagus, but their fire proving uncertain, two more were placed under cover of the buildings of the town, near the north-east corner of the rock, which threw their shells at a high angle, with a low charge, into the Acropolis. On the 25th of September a Venetian bomb blew up a small powder- magazine in the Propylaea, and on the following evening another fell in the Parthenon, where the Turks had deposited all their most valuable effects, with a considerable quantity of powder and inflammable materials. A terrific explosion took place; the centre columns of the peristyle, the walls of the cella, and the immense architraves and cornices they supported, were scattered around the remains of the temple. Much of the unrivalled sculpture was defaced, and a part utterly destroyed. The materials heaped up in the building also took fire, and the flames, mounting high over the Acropolis, announced the calamity to the besiegers, and scathed many of the statues which still remained in their original positions. [...] (σελ. 221-222)"
+  },
+  {
+    "id": 121,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 615,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ηριδανός, ένας ακάθαρτος ποταμός"
+  },
+  {
+    "id": 122,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 615,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Περίγελως είναι αυτός που έγραψε ότι οι κόρες των Αθηναίων αντλούσαν καθαρό νερό από τον Ηριδανό, του οποίου τα ζώα που έβοσκαν εκεί δεν πλησίαζαν, τόσο ακάθαρτα ήταν. (Καλλίμαχος στο χαμένο έργο του 'Συναγωγαί Ποταμών'. Μαρτυρείται στον Στράβωνα, Γεωγραφικά, 9.1)"
+  },
+  {
+    "id": 123,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 615,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "616"
+  },
+  {
+    "id": 124,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 615,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Eridanus a filthy river"
+  },
+  {
+    "id": 125,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 615,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "The one who wrote that the maidens of Athens took clear water from Eridanus is ridiculout, because not even the animals who grazed the grass nearby would not go by that water, thus filthy it was. (Callimachus, in the lost work 'Gathering of Rivers'. It is attested by Strabo, Geography, 9.1)"
+  },
+  {
+    "id": 126,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 618,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Μοροζίνι και Παρθενώνας"
+  },
+  {
+    "id": 127,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 618,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "[...] Η τελευταία πράξη του Μοροζινι στην Αθήνα ήταν να μεταφέρει μακριά κάποια μνημεία αρχαιας γλυπτικής ως τρόπαια της νίκης του. Εγινε μια προσπάθεια να μεταφερθεί το άγαλμα του Ποσειδώνα και το Αρμα της Νικης που κοσμούσε το δυτικό αέτωμα του Παρθενώνα, αλλά ως συνέπεια της απροσεξίας των εργατών  και ίσως και εξαιτίας ενός ελαττώματος ή σπασίματος στο μάρμαρο, που προκλήθηκε από την πρόσφατο έκρηξη που κατέστρεψε σημαντικό μέρος του κτιρίου, όλος ο όγκος του μαρμάρου κατέρρευσε στο έδαφος και ό,τι απέμεινε δεν ήταν άξιο μεταφοράς. Αυτή η συμφορά της τέχνης έλαβε χώρα στις 19 Μαρτίου 1688. Αντί για τα πανέμορφα γλυπτά ο Μοροζίνι έπρεπε να αρκεστεί σε τέσσερα λιοντάρια που ακόμη και σήμερα κοσμούν την είσοδο του ναυπηγείου της Βενετίας [...] (π. 225)"
+  },
+  {
+    "id": 128,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 618,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "613"
+  },
+  {
+    "id": 129,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 618,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Morosini and the Parthenon"
+  },
+  {
+    "id": 130,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 618,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "[...] The last act of Morosini at Athens was to carry away some monuments of ancient sculpture as trophies of his victory. An attempt was made to remove the statue of Neptune and the Chariot of Victory, which adorned the western pediment of the Parthenon, but, in consequence of an oversight of the workmen employed, and perhaps partly in consequence of a flaw or crack in the marble, caused by the recent explosion, which destroyed a considerable part of the building, the whole mass of marble was precipitated to the ground, and so shivered to pieces by the fall that the fragments were not deemed worthy of transport. This misfortune to art occurred on the 19th of March 1688. Instead of these magnificent figures from the hand of Phidias, Morosini was obliged to content himself with four lions, which still adorn the entrance of the arsenal at Venice. [...] (σ. 225)"
+  },
+  {
+    "id": 131,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 620,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Οι Αέρηδες του Babin"
+  },
+  {
+    "id": 132,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 620,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Περί το μέσον της πόλεως υπάρχει αρχαίον τι μαρμάρινον ιερόν, σχήματος οκταγώνου, εφ’ ου τας εξωτερικάς επιφάνειας των γωνιών υπάρχουσι καλώς γεγλυμμέναι ανθρώπιναι μορφαί, κεκλιμέναι, έξ ποδών μήκους έκαστη, κρατούσαι εν χερσίν άνθη ή άλλα τινά παρεμφερή πράγματα. Έκαστον ανάγλυφον φέρει διάφορον των λοιπών μορφήν, πάσαι δε παριστώσι τους οκτώ ανέμους, οις πιθανώς ήτον αφιερωμένος ο ωραίος ούτος ναός, όστις άνευ των οκτώ αυτού γωνιών ήθελεν ομοιάζει περιστερεώνι. Ο ναός ούτος όν τινες νομίζουσι τάφον του Σωκράτους, ομοιάζει κατά τι τους αρχαίους εκείνους ναούς των Αιγυπτίων ειδωλολατρών, περικαλλείς εξωτερικώς, έσωθεν όμως γέμοντες μυών, κροκοδείλων και παντός είδους ερπετών. Ούτω και ούτος αφιερωθείς τοις ανέμοις και ωραίος εξωτερικώς, έσωθεν, εξαιρέσει των τοίχων και της μαρμάρινης θολοειδούς οροφής, γέμει επί του εδάφους πάσης ακαθαρσίας."
+  },
+  {
+    "id": 133,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 620,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "621"
+  },
+  {
+    "id": 134,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 620,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Babin's Tower of Winds"
+  },
+  {
+    "id": 135,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 620,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Approximately in the city centre there is an ancient marble sanctuary, in an octogonal shape, on the outer surfaces of which there are nicely sculpted human figures, inclines, six feet long each, holding flowers or other similar things in their hands. Each relief bears a different figure, and all of them represent the eight winds, to whom was apparently dedicated this beautiful temple, which, if it weren't for its eight corners, would look like a pigeon den. This temple, which some people think it was the tomb of Socrates, looks a bit like the ancient temples of the Egyptican pagans, elaborate on the outside, but filled with mice, crocodiles and all kinds of reptiles insie. Thus the temple dedicated to the winds is beautiful on the outside, but inside, to the exception of the walls and the marble dome-like ceiling, is filthy on the ground with all kinds of dirt."
+  },
+  {
+    "id": 136,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 622,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Μια περιγραφή της Αγοράς"
+  },
+  {
+    "id": 137,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 622,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Όταν έφτασα στην Αγορά επικρατούσε, ως συνήθως, συνωστισμός. Οι έμποροι είχαν απλώσει την πραμάτεια τους και διαλαλούσαν τα εμπορεύματά τους. Κόσμος και κοσμάκης περιφερόταν από εδώ κι από κει. Κοίταζαν, δοκίμαζαν, στάθμιζαν προσεκτικά πριν τελικά αγοράσουν, άλλος ψωμί, άλλος αλλαντικά, άλλος βότανα ή λαχανικά. Οι άντρες συγκεντρώνονταν στα καταστήματα γύρω από την Αγορά κι επιδίδονταν σε πολιτικές συζητήσεις. (σ. 228)"
+  },
+  {
+    "id": 138,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 622,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "623"
+  },
+  {
+    "id": 139,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 624,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Το Ηφαιστείο του Πουκεβίλ"
+  },
+  {
+    "id": 140,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 624,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Μπήκαμε στο ναό, που σήμερα είναι αφιερωμένος στον Άγιο Γεώργιο, όπου είδαμε μερικές κολώνες με επιγραφές, δύο από τις οποίες βρίσκονται σήμερα στο μουσείο του Παρισιού. Θα 'ταν ευχής έργο αν μπορούσε κανείς να μεταφέρει εκεί και την κολώνα που είναι σήμερα ενσωματωμένη στον τοίχο του σηκού, για να φράσσει κάποιο άνοιγμα.  [...] Ο κύριος Fauvel μου 'δειξε τον τάφο ενός Άγγλου περιηγητή, ονόματι Tudwell, που τον είχε θάψει στο ναό του Θησέα. (σ. 366)"
+  },
+  {
+    "id": 141,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 624,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "625"
+  },
+  {
+    "id": 142,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 624,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Pouqueville's temple of Hephaestus"
+  },
+  {
+    "id": 143,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 624,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "We entered the temple which nowadays is dedicated to St. George, where we saw some columns with inscriptions, two of which are now located in the museum in Paris. It would be great if one could transfer there, too, the column which is now embedded in the wall of the cella, in order to close some opening. [...] Mister Fauvel showed me the tomb of an English traveller called Tudwell, whom he had buried in the temple of Theseus'."
+  },
+  {
+    "id": 144,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 626,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Παρθενώνας και ο Έλγιν"
+  },
+  {
+    "id": 145,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 626,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Βρισκόμαστε στη βάση του ναού της Αθηνάς κι ο Παρθενώνας είναι μπροστά μας», είπε ο κύριος Fauvel. «Σηκώστε το βλέμμα και θαυμάστε. Ατενίστε αυτά τα αριστουργήματα. Βλέπετε τις πρόσφατες φθορές τους; Είναι αποτέλεσμα της απόπειρας ενός πολιτισμένου βαρβάρου, που ακρωτηρίασε τα έργα του Φειδία. Συνένωσε την ύβρι με την προσβολή και τόλμησε να χαράξει και το όνομά του σ’ αυτά τα μάρμαρα: ELGIN! Ένας συμπατριώτης του, ο λόρδος Byron, έγραψε από κάτω την ακόλουθη φράση, που στο εξής θα περάσει στην ιστορία: Quod Gothi non facerunt, Scotus fecit. Ο Παρθενώνας φαίνεται προορισμένος να πέσει κάτω από τα πλήγματα των Ευρωπαίων. Ωστόσο, παρά τις καταστροφές του, αυτό το μνημείο διατηρείται ακόμα σε καλή κατάσταση για να μπορεί κανείς να διαπιστώνει την ομορφιά των αναλογιών του, την ποίηση των αναγλύφων του και τη μεγαλοπρέπεια του ύφους του. Το βλέπω εδώ και σχεδόν σαράντα χρόνια και κάθε φορά ανακαλύπτω σ' αυτό καινούργιες ομορφιές». […] Θρηνήσαμε για τις ζημιές που είχαν προκληθεί στον Παρθενώνα από τη βόμβα του Μοροζίνι, που τίναξε στον αέρα την πυριτιδαποθήκη των Τούρκων εκεί μέσα. Ο κύριος De Nointel, πρεσβευτής της Γαλλίας, είχε προλάβει να δει αυτό το κτίριο ακέραιο. Η καταστροφή του οφείλεται στους βενετούς και σ’ έναν Άγγλο. (σ. 382-383)"
+  },
+  {
+    "id": 146,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 626,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "625"
+  },
+  {
+    "id": 147,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 640,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Δημόσιον Σήμα"
+  },
+  {
+    "id": 148,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 640,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Τον ίδιο χειμώνα (431/430 π.Χ.) οι Αθηναίοι, ακολουθώντας την πατροπαράδοτη συνήθεια, τέλεσαν δημόσια την ταφή εκείνων που πρώτοι σκοτώθηκαν σε αυτόν τον πόλεμο. Η ταφή γίνεται με τον ακόλουθο τρόπο: Φτιάχνουν μια σκηνή και εκθέτουν τα οστά των νεκρών για δυο μέρες, κι ο καθένας φέρνει στον δικό του κάτι, αν θέλει. Κι όταν έρθει η ώρα της εκφοράς, αμάξια μεταφέρουν κυπαρισσένια φέρετρα, ένα για κάθε φυλή, και τα οστά του καθενός είναι μέσα στο φέρετρο της φυλής του. Ένα όμως φέρετρο άδειο, στρωμένο, το μεταφέρουν στα χέρια. Είναι των αφανών, εκείνων που τα σώματα δε βρέθηκαν να τα σηκώσουν. Την εκφορά παρακολουθεί όποιος θέλει, πολίτης και ξένος. Στον τάφο βρίσκονται και περιμένουν και γυναίκες από το συγγενολόι, που στήνουν θρήνο. Τους αποθέτουν λοιπόν στο δημόσιο νεκροταφείο, που βρίσκεται στο πιο ωραίο προάστιο της πόλης [στον Κεραμεικό] και σ’ αυτό κάθε φορά θάβουν τους νεκρούς του πολέμου, εκτός από κείνους που έπεσαν στο Μαραθώνα. Εκείνων την παλικαριά την έκριναν ξεχωριστή και τους έκαμαν τον τάφο στον τόπο της μάχης. Κι όταν τους σκεπάσουν με το χώμα, ένας άνδρας ορισμένος από την πολιτεία, που και για πολύ συνετό τον ξέρουν και επιβάλλεται με το κύρος του, λέει γι’ αυτούς τον επαινετικό λόγο που ταιριάζει. Ύστερα φεύγουν. Έτσι γίνεται η ταφή. Κι όσο κρατούσε ο πόλεμος, όσες φορές τους τύχαινε να ’χουν νεκρούς, ακολουθούσαν τη συνήθεια. (Θουκυδίδης, Ιστορία 2.34.)"
+  },
+  {
+    "id": 149,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 640,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "641"
+  },
+  {
+    "id": 150,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 640,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Public Sepulchre"
+  },
+  {
+    "id": 151,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 640,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "During the same winter, in accordance with an old national custom, the funeral of those1 who first fell in this war was celebrated by the Athenians at the public charge. The ceremony is as follows: [2] Three days before the celebration they erect a tent in which the bones of the dead are laid out, and every one brings to his own dead any offering which he pleases. [3] At the time of the funeral the bones are placed in chests of cypress wood, which are conveyed on hearses; there is one chest for each tribe. They also carry a single empty litter decked with a pall for all whose bodies are missing, and cannot be recovered after the battle. [4] The procession is accompanied by any one who chooses, whether citizen or stranger, and the female relatives of the deceased are present at the place of interment and make lamentation. [5] The public sepulchre is situated in the most beautiful spot outside the walls; there they always bury those who fall in war; only after the battle of Marathon the dead, in recognition of their pre-eminent valour, were interred on the field. [6] When the remains have been laid in the earth, some man of known ability and high reputation, chosen by the city, delivers a suitable oration over them; after which the people depart. [7] Such is the manner of interment; and the ceremony was repeated from time to time throughout the war. \\nThucydides 2.34 (Perseus Project, Thucydides translated into English; with introduction, marginal analysis, notes, and indices. Volume 1. Thucydides. Benjamin Jowett. translator. Oxford. Clarendon Press. 1881.)"
+  },
+  {
+    "id": 152,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 642,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Οθωμανική επίκληση για βροχή στο χώρο του Ολυμπιείου"
+  },
+  {
+    "id": 153,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 642,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "[Εξαιτίας της ανομβρίας και του λιμού] Δημόσιες προσευχές για βροχή διατάχθηκαν για εννιά συνεχόμενες ημέρες και άρχισαν σήμερα το πρωί. Οι πρώτες τρεις παραχωρήθηκαν στους Οθωμανούς, οι επόμενες στους Άραβες και τους δούλους, και οι τελευταίες τρεις στους Χριστιανούς. [...] Οι τρεις επικεφαλής εμίρηδες, με ένα προπορευόμενο αγόρι ο καθένας, κουβαλώντας το Κοράνι στο κεφάλι τους και ακολουθούμενοι από όλους τους Τούρκους της πόλης, προχώρησαν σε πομπή προς το μέρος όπου βρίσκονται τα ερείπια του ναού του Ολύμπιου Δία.  [...] Οι Εμίρηδες επαναλάμβαναν την προσευχή για την περίσταση αυτή, από χαρτιά που κρατούσαν στα χέρια τους, και οι Τούρκοι αποκρίνονταν Αμήν στο κλείσιμο κάθε πρότασης. (John Galt, Voyages and Travels in the Years 1809, 1810 and 1811, London 1812)"
+  },
+  {
+    "id": 154,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 642,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "643"
+  },
+  {
+    "id": 155,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 642,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "An Ottoman prayer for rain in the Olympieion"
+  },
+  {
+    "id": 156,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 642,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "[Due to the lack of rain ond to famine] It was ordered to hold public prayers for rain for nine consecutive days starting of this morning. The first three were ceded to the Ottomans, the next ones to the Arabs and the slaves and the last ones to the Christians. [...] The three emirs in chief, each one preceded by a young boy, carrying the Quran on their heads and followed by all the Turks of the city, formed a procession walking towards the spot where the remains of the temple of Olympian Zeus lay. [...] The Emirs repeated the prayer for this occasion out of papers that they held in their hands and the Turks replied 'Amen' upon the closure of each sentence. (John Gatt, Voyages and Travels in the Years 1809, 1810 and 1811, London 1812)."
+  },
+  {
+    "id": 157,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 644,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Δροσίνης στο Θέατρο του Διονύσου"
+  },
+  {
+    "id": 158,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 644,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Και το θέατρον του Διονύσου, όταν ετύχαινε να περάσω νωρίς τ’ απογέματα ή το πρωινό της Κυριακής, ήτον σταθμός μου συνηθισμένος. Έπαιρνα μαζί μου κάποιαν αρχαία τραγωδία ή κωμωδία κ’ εδιάβαζα, ζωντανεμένα από τον περίγυρο, ή ολάκερο το κείμενο ή διαλέγοντας κομμάτια. Θρονί μου είχα την αναπαυτική πολυθρόνα του Ιερέως του Ελευθερίου Διός. Και αν με κτυπούσε εκεί ο ήλιος εύρισκα απόσκιο κάτω από τα ρωμαϊκά ανάγλυφα του προσκηνίου όπου εφωτογράφισα κάποτε τον Παλαμά ανάμεσα στην ακολουθία του Διονύσου. [...] Κάποτε μ’ έκοβαν, με το αδιάκριτο κύτταγμά τους, περαστικοί, δικοί μας επαρχιώτες φλύαροι ή αλλόφυλοι λιγόλογοι με τον κόκκινο «Μπαίντεκερ» στα χέρια. (τ. 3, σελ. 98)"
+  },
+  {
+    "id": 159,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 644,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "645"
+  },
+  {
+    "id": 160,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 646,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Θρηνώντας για την χαμένη Καρυάτιδα"
+  },
+  {
+    "id": 161,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 646,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Ένας αγράμματος υπηρέτης του Ντιζντάρη της Αθήνας...με διαβεβαίωσε ότι όταν οι πέντε άλλες [κόρες] έχασαν την αδελφή τους, εκδήλωσαν τον πόνο τους γεμίζοντας τον αέρα του δειλινού με τους πιο θρηνητικούς αναστεναγμούς και μοιρολόγια, έτσι που κι ο ίδιος είχε ακούσει τα παράπονά τους και μάλιστα σε βαθμό που κάθε φορά αναγκαζόταν να αφήσει το κάστρο μέχρι να σταματήσουν. Η απαχθείσα αδελφή δεν κώφευε στις φωνές τους, αλλά εξέπληττε την κάτω πόλη, όπου την είχαν τοποθετήσει, απαντώντας στους ίδιους θρηνητικούς τόνους. Δεν μπορούμε παρά να παραδεχτούμε ότι οι Αθηναίοι δεν είναι τόσο αδιάφοροι στα θαύματα και τα μνημεία της πόλης τους, όσο παρουσιάζεται καμιά φορά."
+  },
+  {
+    "id": 162,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 646,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "647"
+  },
+  {
+    "id": 163,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 646,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Mourning for the lost Caryatid"
+  },
+  {
+    "id": 164,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 646,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "An iliterate servant of the Dizdar of Athens...assured me that when the five other [daughters] lost their sister, expressed their pain by filling the air of the dusk with the most pathetic sighs and laments, so that even himself had hear their complaints and indeed to the degree that each time he had to leave the castle until they stopped. The kidnapped sister was not deaf to their sighs, but surprised the lower town, where she had been placed, by answering at the same pathetic tones. We have to admit that the Athenians were not so indifferent to the miracles and the monuments of their city as it is some times presented."
+  },
+  {
+    "id": 165,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 648,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η καταστροφή του Παρθενώνα"
+  },
+  {
+    "id": 166,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 648,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Κάποιοι εργάτες ασχολήθηκαν τότε με τις προετοιμασίες, σκοινιά και τροχαλίες, για να κατεβάσουν τις μετόπες με τα πιο άθικτα γλυπτά. Ο ίδιος ο Ντιζντάρης είχε έρθει να επιβλέψει τις εργασίες, αλλά με εμφανή δυσαρέσκεια. Κι ο ίδιος ο Λουζιέρι μας είπε ότι με μεγάλη δυσκολία μπορούσε να υλοποιήσει αυτό το μέρος της επιχείρησης εξαιτίας της συναισθηματικής φόρτισης των Τούρκων προς ένα κτίριο που είχαν συνηθίσει να βλέπουν με θρησκευτική ευλάβεια καθώς είχε μετατραπεί σε τζαμί. Ομολογουμένως, συμμεριζόμαστε τα αισθήματα των Τούρκων σ' αυτήν την περίσταση και θα βλέπαμε με χαρά μια διαταγή που θα υποχρέωνε να διασωθεί παρά να καταστραφεί ένα τόσο λαμπρό οικοδόμημα. Μετά από ένα σύντομο διάστημα εξέτασης των διαφόρων μερών του κτιρίου, ένας από τους εργάτες ήρθε να ενημερώσει τον Ντον Μπατίστα ότι ήταν έτοιμοι να κατεβάσουν μια από τις μετόπες. Είδαμε αυτό το υπέροχο γλυπτό να σηκώνεται από τη θέση του ανάμεσα από τα τρίγλυφα αλλά οι εργάτες που προσπαθούσαν να του δώσουν μια θέση σύμφωνα με τη γραμμή καθόδου, ένα μέρος της τοιχοποιίας χαλάρωσε από τα μηχανήματα και πάρτα κάτω τα υπέροχα κομμάτια του Πεντελικού μαρμάρου, σκορπώντας τα κατάλευκα κομμάτια τους με εκκωφαντικό θόρυβο. Ο Ντιζντάρης, όταν το είδε αυτό, δεν μπορούσε πια να συγκρατήσει τα συναισθήματά του αλλά έβγαλε την πίπα από το στόμα του και, αφήνοντας ένα δάκρυ να κυλήσει, είπε με τον πιο εμφατικό τόνο της φωνής 'Τέλος'."
+  },
+  {
+    "id": 167,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 648,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "649"
+  },
+  {
+    "id": 168,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 648,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "The destruction of Parthenon"
+  },
+  {
+    "id": 169,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 648,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Some workers undertook the preparations, ropes and pulleys, in order to take down the metopes with the unscathed sculptures. The Dizdar himself had come to supervise the works, but clearly dissatisfied. Lusieri himself told us that it was with great difficulty that he could implement this part of the undertaking due to the emotional attachment of the Turks towards a building which they had been accustomed to seeing with religious piety, since it had been transformed into a mosque. We share, indeed, the feelings of the Turks in this occasion and we would gladly see an order that would enforce the salvation rather than the destruction of such a magnificent building. After a short period of examination of the various parts of the building, one of the workers came to inform Don Batista that they were ready to take down one of the metopes. We saw this beautiful sculpture being lifted from its position between the triglyphs but the workers trying to give it a position according to the line of descent, a part of the walls loosened by the machinery and the beautiful pieces of Pentelic marble fell on the ground, scattering its white pieces in a deafening noise. Upon seeing this, the Dizdar could no longer retain his feelings but took the pipe off his mouth and, letting a tear fall, said in the most emphatic tone of his voice 'That's enough'."
+  },
+  {
+    "id": 170,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 650,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Κεραμεικός του Πορφύρα"
+  },
+  {
+    "id": 171,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 650,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Όχι, όπως λεν, ότι δε ζουν οι τόσο αγαπημένες\\nοι αρχαίες οι Αττικές μορφές στ’ ανάγλυφα εκεί πέρα\\nτου λιόχαρου Κεραμεικού• νιοί, γέροι, νιές παρθένες,\\nόλοι τους ζουν και χαίρονται το φως και τον αγέρα.\\nΤο ξέρω* η γη τους έλυωσε, πάνε καιροί και χρόνια,\\nαλλά οι λευκές τους οι ψυχές κάτω απ’ τον άδη αγάλι\\nξεφύγαν και στα πέτρινα κορμιά τους και τα αιώνια\\nεδώ που ζούσαν, φώλιασαν, και ζουν μαζί μας πάλι."
+  },
+  {
+    "id": 172,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 650,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "651"
+  },
+  {
+    "id": 173,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 652,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Κεραμεικός στη λογοτεχνία"
+  },
+  {
+    "id": 174,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 652,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Της άρεσε το νεκροταφείο, ήταν μια παρουσία απουσία όλοι αυτοί που στην αντιστροφή τους επιβεβαιώνανε τη συνέχεια της ζωής, του Ιστορικού Χρόνου, όπως της το μάθαιναν στον Κεραμεικό παίζοντας κρυφτό οι επιτύμβιες στήλες, με πρόσωπα, χειρονομίες, γράμματα σαν κι αυτά του αλφαβηταρίου της, παρουσία προαιώνια, άνθρωποι σαν τους γύρω της, ακόμα και το δέσιμο των μαλλιών πίσω στην κάμψη του λαιμού ήταν ίδιο με της μητέρας της που δεν παράλλαζε από τις αρχαίες μορφές παρά μόνο από τα φορέματα, όλοι αυτοί στον Κεραμεικό, τόσο κοντά στο σπίτι της, μπορεί να ήταν και συγγενείς της. Φυσικά το επιβεβαίωσε ο πατέρας, όλοι αυτοί είναι πολύ πολύ μακρινοί συγγενείς."
+  },
+  {
+    "id": 175,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 652,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "653"
+  },
+  {
+    "id": 176,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 654,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Θύελλα γκρεμίζει τον 18ο κίονα"
+  },
+  {
+    "id": 177,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 654,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Η φοβερή καταιγίδα δεν είχε καταστρέψει μόνο σύγχρονα κτήρια. Είχε ρημάξει και ένα από τα ομορφότερα μνημεία [...] των Αθηνών. Ένας από τους τεράστιους κίονες που ανήκει σε έναν από τους μεγαλύτερους ναούς των θεών των Ελλήνων, το ναό του Ολυμπίου Διός, έχει σκύψει το περήφανο κεφάλι του. Αυτή τη στιγμή πλήθος κόσμου κατακλύζει το χώρο και οι δημοσιογράφοι έχουν ορμήσει | σαν όρνια* άλλος ζωγραφίζει, άλλος κάνει με- | τρήσεις, άλλος κρατάει σημειώσεις. Το θλιβερό νέο θα φτάσει σίγουρα σε κάθε γωνιά του κόσμου. Η αξία ενός ήρωα γίνεται κατανοητή μόνο αφού εκείνος πέσει• [...]."
+  },
+  {
+    "id": 178,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 654,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "655"
+  },
+  {
+    "id": 179,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 654,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "A tempest demolishes the 18th column"
+  },
+  {
+    "id": 180,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 654,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "The terrible tempest had not ruined only contemporary buildings. It had ravaged also one of the most beautiful monuments [...] of Athens. One of the huge columns belonging to one of the largest temples of the Gods of the Greeks, namely the temple of Olympian Zeus, has bowed his proud head. At this moment a multitude of people fills the place and the reporters have stormed in like vultures: some of them paint, others count, others take notes. The sad news will reach undoubtedly soon every corner of the world. The value of a hero is appreciated only after he falls [...]"
+  },
+  {
+    "id": 181,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 656,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ένας επίδοξος Έλγιν"
+  },
+  {
+    "id": 182,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 656,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Η πεπτωκυία στήλη προσθέτει πολύ εις την γενικήν εντύπωσιν, ευχής δ’ έργων είναι, αν η πρότασις περί ανεγέρσεως αυτής, από καιρού εις καιρόν γιγνομένη δεν πραγματοποιηθή. Πρό τινων ετών είς των ημετέρων συμπατριωτών, παρακινηθείς αναμφιβόλως εκ της επιτυχίας του λόρδου Έλγιν, προσεπάθησε ν’ αγοράση την στήλην ταύτην, πλην η εποχή της τουρκικής αδηφαγίας ώχετο απιούσα, η δε Ελλάς κατ’ ουδένα λόγον παραπείθεται εις δευτέραν βεβήλωσιν των λειψάνων της. (σελ. 65)"
+  },
+  {
+    "id": 183,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 656,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "657"
+  },
+  {
+    "id": 184,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 656,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "A wannabe Elgin"
+  },
+  {
+    "id": 185,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 656,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "The stele which has fallen down adds much to th general impression and it will remain wishful thinking if the proposal for restoring it, recurrent from time to time, is never realised. A few years ago, one of our fellow citizens, undoubtedly urged by Elgin's success, attempted to buy this stele, yet this was the period when the Turkish greediness was gradually appeased and Greece would for no reason accept a second sacrilege againest its relics. \\nCharles Tuckerman, The Greeks of to-day, p. 65."
+  },
+  {
+    "id": 186,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 658,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Και ένας ερημίτης στους κίονες!"
+  },
+  {
+    "id": 187,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 658,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "[...] κελλείον ερημίτου μένει έτι όρθιον επί των ερειπίων αυτού. Άθλιον εκ γύψου οικητήριον αίρεται εις ύψος επί δύο μαρμαρίνων στηλών, ως θελούσης οιονεί της ειμαρμένης να εκθέση επί των λαμπρών εκείνων υποβάθρων μνημείον των θριάμβων και των ιδιοτροπιών αυτής. (σελ.43)"
+  },
+  {
+    "id": 188,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 658,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "659"
+  },
+  {
+    "id": 189,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 658,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "A hermit on the columns!"
+  },
+  {
+    "id": 190,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 658,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "[...] A cell of a hermit still stands on its ruing. It is a wretched little hut made of plaster, lifted on two marble stelae, as if fate wants to display on those glorious substratum a monuent of its triuphs and peculiarities. (p.43_"
+  },
+  {
+    "id": 191,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 661,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η επιγραφή της Πύλης Αθηνάς Αρχηγέτιδας"
+  },
+  {
+    "id": 192,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 661,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "O ΔΗΜOΣ ΑΠO ΤΩΝ ΔOΘΕΙΣΩΝ ΔΩΡΕΩΝ ΥΠO ΓΑΙOΥ ΙOΥΛΙOΥ ΚΑΙΣΑΡOΣ ΘΕOΥ/ \\nΚΑΙ ΑΥΤOΚΡΑΤOΡOΣ ΘΕOΥ ΥΙOΥ ΣΕΒΑΣΤOΥ/  (IG II3 4 12)\\nΑΘΗΝΑ ΑΡΧΗΓΕΤΙΔΙ ΣΤΡΑΤΗΓOΥΝΤOΣ ΕΠΙ ΤOΥΣ OΠΛΙΤΑΣ ΕΥΚΛΕOΥΣ ΜΑΡΑΘΩΝΙOΥ/ \\nΤOΥ ΚΑΙ ΔΙΑΔΕΞΑΜΕΝOΥ ΤΗΝ ΕΠΙΜΕΛΕΙΑΝ ΥΠΕΡ ΤOΥ ΠΑΤΡOΣ ΗΡΩΔOΥ ΤOΥ ΚΑΙ ΠΡΕΣΒΕΥΣΑΝΤOΣ/ \\nΕΠΙ ΑΡΧOΝΤOΣ ΝΙΚΙOΥ ΤOΥ ΣΑΡΑΠΙΩΝOΣ ΑΘΜOΝΕΩΣ"
+  },
+  {
+    "id": 193,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 661,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "663"
+  },
+  {
+    "id": 194,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 661,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "The inscription on the Gate of Athena Archegetis"
+  },
+  {
+    "id": 195,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 661,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "THE PEOPLE (DEMOS) FROM THE GIFTS THAT WERE GIVEN BY CAIUS JULIUS CAESAR, DIVUS AND EMPEROR SON OF DIVUS SEBASTOS (IG II3 4.12) TO ATHENA ARCHEGETIS DURING THE GENERALSHIP OF EUKLES FROM MARATHON/ WHO UNDERTOOK THE CUSTODY OF HIS FATHER HEROD WHO WAS AMBASSADOR UNDER THE ARCHON NIKIAS SON OF SARAPION FROM THE MUNICIPALITY OF ATHMONON."
+  },
+  {
+    "id": 196,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 664,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Σύγκριση των κιόνων με δέντρα"
+  },
+  {
+    "id": 197,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 664,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "[...] εις τον διακεκριμένον Αμερικανόν, όστις μοι είπέ ποτε, ιστάμενος προ των Ολυμπίων στηλών, ότι αύται δεν ήσαν «όσω τα ημέτερα δένδρα της Καλλιφορνίας υψηλαί». (σελ. 48-49)"
+  },
+  {
+    "id": 198,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 664,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "657"
+  },
+  {
+    "id": 199,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 664,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Comparison of the columns with trees"
+  },
+  {
+    "id": 200,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 664,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "[...] to the distinguished American, who once told me, standing in front of the columns of the Olympieion, 'they are as tall as our trees in California' (pp. 48-49)"
+  },
+  {
+    "id": 201,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 665,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η τελετή εγκαινίων του Ολυμπιείου και η Πύλη του Αδριανού"
+  },
+  {
+    "id": 202,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 665,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Στην Αθήνα, τρεις μήνες αργότερα έλαβαν χώρα, με αφορμή την αφιέρωση του Ολυμπιείου, γιορτές που θύμιζαν τις ρωμαϊκές επισημότητες. Όμως ό,τι στη Ρώμη είχε γίνει στο έδαφος, στην Αθήνα εκτυλίχθηκε κάτω από το λαμπρό ουρανό. Ένα ξανθό απόγευμα του φθινοπώρου κάθισα κάτω από το πρόπυλο που είχε σχεδιαστεί στις υπερανθρώπινες διαστάσεις του Δία. Αυτός ο μαρμάρινος ναός, κτισμένος στο σημείο όπου ο Δευκαλίων είδε τον κατακλυσμό να κοπάζει, έμοιαζε να χάνει το βάρος του, να πλέει σαν βαρύ λευκό σύννεφο. Το τελετουργικό μου ένδυμα ταίριαζε με τις βραδινές αποχρώσεις του Υμηττού, που βρίσκεται κοντά. Είχα αναθέσει στον Πολέμωνα το λόγο των εγκαινίων. Εκεί η Ελλάδα μου χάρισε τις προσφωνήσεις όπου διέκρινα ταυτόχρονα μια πηγή κύρους και τον πιο μύχιο σκοπό των έργων αυτών της ζωής μου: Ευεργέτης, Ολύμπιος, Επιφανής, Κύριος των Πάντων. Και ο πιο όμορφος, ο πιο δύσκολος να κερδηθεί: Ίων,  Φιλέλλην. (Yourcenar, M., Απομνημονεύματα του Αδριανού)"
+  },
+  {
+    "id": 203,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 665,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "577"
+  },
+  {
+    "id": 204,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 665,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "The inaugural ceremony of the Olympieion and the Gate of Hadrian"
+  },
+  {
+    "id": 205,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 665,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "In Athens,on the occasion of the inauguration of the Olympieion,  took place three months later ceremonies which reminded of Roman solemn events,"
+  },
+  {
+    "id": 206,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 666,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Κοντά, στον Ιλισσό"
+  },
+  {
+    "id": 207,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 666,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Οι υπερμεγέθεις στύλοι του, με τα ωραία κιονόκρανα και τις τεράστιες ζωοφόρους, υψώνονται επάνω σε μια πλατεία περιτειχισμένη από τοίχους υποβασταζόμενους από βάθρα επάνω στα οποία υπήρχαν αγάλματα. Στην άκρη της πλατείας κυλά, ή μάλλον θα κυλούσε ο Ιλισσός, που έχει δημιουργήσει, μέσα στην ιστορική διαδρομή περισσότερο θόρυβο από όσον τα σπάνια νερά του καθώς ρέουν μέσα από τις πέτρες της αποξηραμένης κοίτης του. Η πηγή εξάλλου της Καλλιρρόης, που βρίσκεται κι αυτή στην ίδια κοιλάδα, μοιάζει να έχει θρηνήσει, με ολίγα αποστεγνωμένα δάκρυα, την αναχώρηση του αγαπημένου της Ιλισσού, ενώ οι ελάχιστες σταγόνες νερού που συγκεντρώνονται στην βάση των βράχων που την προστατεύουν μοιάζει να αναφέρονται περισσότερο σε μνήμες του παρελθόντος παρά σε ανάγκες του παρόντος. Λίγα βήματα πιο εκεί βρίσκεται το εγκατελειμμένο Στάδιο. (σελ. 366)"
+  },
+  {
+    "id": 208,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 666,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "667"
+  },
+  {
+    "id": 209,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 666,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Close to Ilissus"
+  },
+  {
+    "id": 210,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 666,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "The huge collumns of the temple with the beautiful capitals and the immense friezes stand on a square surrounded by walls which are supported by a pedient on which there were statues. On the edge of the square flows, or rather flowed, the river Ilissus, which has created throughout its historic itinerary more noise than his rare waters, as they flow through the stones of the dried up riverbed. The fountain of Callirhoe, which is located within the same valley, seems to have lamented with a few dried tears the departure of her beloved Ilissus, whereas the few drops of water which are gathered on the base of the rocsk protecting it seem to refer more to memories of the past rather than to needs of the present. A few steps farther there is the abandoned Stadium. (p.366)"
+  },
+  {
+    "id": 211,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 669,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Καφενείο στο Ολυμπιείο"
+  },
+  {
+    "id": 212,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 669,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Βαριά εξαπλωμένος εις του Διός τους Στύλους\\nσαν θεριακλής Σουλτάνος το ναργιλέ ρουφώ,\\nκυττάζω πότε πότε και τους ανεμομύλους,\\nκαι πότε μ’ ένα κι’ άλλο καταφιλοσοφώ.\\nΣτ’ αριστερό μου χέρι στηρίζω το κεφάλι\\nκι’ εις ρεμβασμούς και σκέψεις αφίνομαι και πάλι,\\nΩ! πόσοι δοξασμένοι επέρασαν αιώνες!\\nπόσοι σ’ αυτό το μέρος δεν ήλθαν θεριακλήδες!\\nκαι πόσους τάχα τούταις η θαομασταίς κολώναις\\nέως αυτήν την ώρα δεν είδαν καφετζήδες! \\nΠόσοι εκ των Ελλήνων εδώ των νεωτέρων \\nεσκέφθησαν πολλάκις του έθνους το συμφέρον!\\n[…]\\nΩ! σεις, παληαίς κολώναις, αμέσως γκρεμισθήτε!\\nμη βλέπετε το αίσχος αυτών των νέων χρόνων...\\nκι’ αν στέκεσθε ολόρθαις, ποτέ σας δεν θα δήτε\\nπολεμιστάς και νίκας αρχαίων Μαραθώνων.\\nΔεν θα ιδήτε δόξαν και Περικλή κανένα,\\nθα βλέπετε μονάχα τον καφετζή κι’  εμένα."
+  },
+  {
+    "id": 213,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 669,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "670"
+  },
+  {
+    "id": 214,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 669,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "A coffee shop at the Olympieion"
+  },
+  {
+    "id": 215,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 669,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Heavily lying down at the columns of Zeus\\nI suck on my nargile like a nicotine-addict Sultan, \\nI take a look from time to time of the windmills\\nand one way or another I philosophize. \\nOn my left hand I lean my hand\\nand I let myself again in my thoughts \\nOh! how many glorious centuries passed by!\\nHow many nicotine-addicts have come to this place\\nand how many coffe shop owners \\nhave seen these amazing columns to this moment. \\nHow many of these modern Greeks\\nhave thought of the nation's interest so far! \\n[...]\\nOh you old columns, be demolished right away!\\ndon't look at the disgrace of these modern times...\\nEven if you stand upright, you will never see\\nwarriors and victories of ancient Marathons. \\nYou won'd see the glory and any Pericles, \\nyou will see only the coffee shop owner and me."
+  },
+  {
+    "id": 216,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 709,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Ζωγραφικός διάκοσμος της Στοάς Ελευθερίου Διός"
+  },
+  {
+    "id": 217,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 709,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Εδώ είναι στημένη πλαστική παράσταση του Δία, ο οποίος λέγεται Ελευθέριος, και του βασιλιά Αδριανού, ο οποίος ευεργέτησε και άλλους υπηκόους του, ιδιαίτερα όμως την πόλη των Αθηναίων. Πίσω είναι χτισμένη μια στοά όπου είναι ζωγραφισμένοι οι Δώδεκα Θεοί . Στον αντικρινό τοίχο είναι ζωγραφισμένος ο Θησέας, η Δημοκρατία και ο Δήμος. Η ζωγραφιά αυτή έχει το νόημα πως ο Θησέας έφερε στους Αθηναίους την πολιτική ισότητα. Στους πολλούς είναι διαδεδομένη και μια άλλη ερμηνεία, πως ο Θησέας είχε παραδώσει την εξουσία στο δήμο και πως από τότε οι Αθηναίοι δημοκρατούνταν ώσπου ο Πεισίστρατοςμε επανάσταση έγινε τύραννος. Ο πολύς κόσμος λέει κι άλλα που δεν είναι αληθινά, γιατί δεν έχει μάθει την ιστορία, αλλά συνήθισε να πιστεύει για σωστά όσα άκουγε από την παιδική του ηλικία ακόμη σδτα χορικά άσματα και στις τραγωδίες. […] 3.4 Εδώ είναι ζωγραφισμένο και το περί τη Μαντίνεια κατόρθωμα των Αθηναίων, οι οποίοι είχαν σταλεί για να βοηθήσουν τους Λακεδαιμονίους. […] Στην εικόνα παριστάνεται μια μάχη των ιππέων, όπου τα πιο ονομαστά πρόσωπα είναι ο Γρύλος του Ξενοφώντα ανάμεσα στους Αθηναίους και στο Βοιωτικό ιππικό ο Επαμεινώνδας. Τις εικόνες αυτές τις ζωγράφισε για τους Αθηναίους ο Ευφράνορας, ο οποίος έκαμε και τον Απόλλωνα, το λεγόμενο Πατρώο μέσα στο ναό που βρίσκεται εκεί κοντά. \\n\\n(Παυσανίας, Αττικά, 3.2)"
+  },
+  {
+    "id": 218,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 709,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 219,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 710,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Καραγάτσης γράφει για τη Στοά του Αττάλου"
+  },
+  {
+    "id": 220,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 710,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Με την ευκαιρία των εγκαινίων της αναστηλωμένης Στοάς του Αττάλου, το περιοδικό 'Ταχυδρόμος' ζήτησε από τον κορυφαίο Έλληνα λογοτέχνη Μ.Καραγάτση να γράψει ένα μικρό κείμενο ζωντανεύοντας τη διαδικασία των ανασκαφών. Το κείμενο δημοσιεύτηκε στο τεύχος της 1ης Σεπτεμβρίου 1956.\\n'Τον συνάντησα για πρώτη φορά μια φεγγαρόλουστη νύχτα του 1946.Στεκόταν ανάμεσα στα ερείπια της Αγοράς, κοιτούσε τους Αγίους Αποστόλους, κουνούσε το κεφάλι με οικτιρμό και κάτι μεμψιμοιρούσαν, κάτι μονολογούσαν τα χείλια του, ανάμεσα στ' άσπρα μουστάκια και τ' ανάκατα γένια,[...]Τον πλησίασα πολύ σκανδαλισμένος και τον άκουσα να βρυχάται με φωνή υποκώφως κεραυνώδη.\\n - Ύψιστοι Θεοί! Οπωπού βαρβαρικόν τερατούργημα. Παπαί!\\nΤα λόγια του με φώτισαν. Δημοδιδάσκαλος ήταν που τού'στριψε απ' την πείνα, πισωδρόμηση είκοσι αιώνες και γίνηκε αρχαίος Έλληνας. \\n-Ε, πατριώτη, του λέω. Από το Δρομοκαϊτειο δραπέτεψες;\\n-Δρομοκαϊτειο; Ποιο Δρομοκαϊτειο; απορεί. Δραπέτεψα από το Δίπυλο. Εκεί είναι ο τάφος μου. \\n-Δηλαδή, του λέω, ισχυρίζεσαι πως είσαι πεθαμένος και βρυκολάκιασες; \\n-Και βέβαια. Ετίναξα τα πέταλα το 132 μετά Χριστόν από ασιτία. Οι Αθηναίοι εκείνο τον καιρό δε νοιάζονταν να θρέψουν έναν στωικό φιλόσοφο σαν ελόγου μου [...]\\nΆπλωσε το χέρι, έδειξε ολοτρίγυρα και συνέχισε: \\n-Μωρέ πώς την καταντήσατε την Αθήνα; Δεν αφήσατε λίθον επί λίθου από τα αριστουργηματικά κτίρια που ανεγείραμε εμείς. Και στη θέση τους σκαρώσατε αυτά τα άγαρμπα, τα άχαρα και πανύψηλα τερατουργήματα. [...]\\n-Δεν φταίμε εμείς για την καταστροφή. Οι Ερούλοι τα κάναν γης μαδιάμ το 267 .Χ. \\n- Ναι, θυμάμαι. Τίποτε δεν μου ξέφυγε μες στον τάφο μου στα 1800 χρόνια που είμαι πεθαμένος. Οι Ερούλοι έκαναν την αρχή και οι βυζαντινοί καλόγεροι, οι Φράγκοι, οι Καταλανοί κι οι Τούρκοι αποτέλειωσαν την καταστροφή. Δε μου λες όμως...τώρα τελευταία όλο κάτι γκαπ γκουπ ακούω ολημερίς. Περί τίνος πρόκειται; \\n-Είναι οι Αμερικανοί αρχαιολόγοι που ψάχνουν να βρουν τα ερείπια. \\n[...]\\n-Για να κάμουν ανασκαφές, εκπολιτισμένοι βάρβαροι πρέπει να'ναι. Να, σαν εκείνο τον Άτταλο, λόγου χάρη, το βασιλιά της Περγάμου, που ήταν γόνος φυλής βαρβαρικής και ηγεμών κράτους βαρβάρου. Κι όμως χρησιμοποίησε τον αμέτρητο πλούτο του για τη δόξα και την τιμή του ελληνικού πνεύματος'"
+  },
+  {
+    "id": 221,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 710,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "711"
+  },
+  {
+    "id": 222,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 714,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η Αθηνά μιλάει για τον Άρειο Πάγο στις Ευμενίδες"
+  },
+  {
+    "id": 223,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 714,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Ακούετε τώρα τον θεσμόν μου, ω Αθηναίοι,\\nπου πρώτες δίκες κρίνετε για αίμα χυμένο·\\nκι αυτό των βουλευτών το δικαστήριο, πάντα\\nθα μένη και στο εξής στην πόλι του Αιγέως\\nκαι θα συνεδριάζη εδώ σ' αυτό το βράχο,\\nπου στήσανε τις τέντες των οι Αμαζόνες,\\nσαν ήρθαν με στρατόν, από έχθρα του Θησέως,\\nκαι μπρος στο κάστρο επύργωσαν αυτό το νέο\\nψηλόπυργο και κάμανε θυσίες στον Άρη\\n(που αυτό πήρε τόνομα: Άρειος πάγος).\\nΣ' αυτόν επάνω ο Σεβασμός κι ο αδερφός Φόβος\\nθα συγκρατούν μέρα και νύχτα τους κατοίκους\\nνα μη αδικούν· φτάνει να μην αλλάζουν μόνοι\\nτους νόμους· σαν μολύνης το νερό με λάσπες\\nκαι βρωμερά αποχύματα, πιο δεν θε νάβρης\\nπιοτό καθάριο· συμβουλεύω το λαό μου\\nνα μη δεχτή να σέβεται μήτε αναρχία\\nμήτε δεσποτισμό και μη εξορίση κάθε\\nφόβο απ την πόλι· γιατί ποιος απ τους ανθρώπους\\nσαν δεν φοβάται τίποτε θε νάναι δίκιος;\\nτέτοιο αν τιμάτε ίδρυμα, καθώς του αξίζει,\\nπροπύργιον θενάχετε να σας γλυτώνη\\nτη χώρα και την πόλι σας, που άλλοι δε θάχουν\\nούτε στου Πέλοπος τα μέρη ούτε στους Σκύθες·\\nαδιάφθορο και σεβαστό με αψιά τη γνώμη\\nορίζω το κριτήριο αυτό μέσα στη χώρα\\nάγρυπνος νάναι φύλακας για όταν κοιμούνται.\\n(Αισχύλου 'Ευμενίδες', μτφρ. Ι. Γρυπάρη)"
+  },
+  {
+    "id": 224,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 714,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "715"
+  },
+  {
+    "id": 225,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 714,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Athena talks about Areios Pagos in Eumenides"
+  },
+  {
+    "id": 226,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 714,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Hear now my ordinance, people of Attica, as you judge the first trial for bloodshed. In the future, even as now, this court of judges will always exist for the people of Aegeus. And this Hill of Ares, the seat and camp of the Amazons, [685] when they came with an army in resentment against Theseus, and in those days built up this new citadel with lofty towers to rival his, and sacrificed to Ares, from which this rock takes its name, the Hill of Ares:1 [690] on this hill, the reverence of the citizens, and fear, its kinsman, will hold them back from doing wrong by day and night alike, so long as they themselves do not pollute the laws with evil streams; if you stain clear water with filth, you will never find a drink. [695]\\nNeither anarchy nor tyranny—this I counsel my citizens to support and respect, and not to drive fear wholly out of the city. For who among mortals, if he fears nothing, is righteous? Stand in just awe of such majesty, [700] and you will have a defense for your land and salvation of your city, such as no man has, either among the Scythians or in Pelops' realm. I establish this tribunal, untouched by greed, worthy of reverence, quick to anger, awake on behalf of those who sleep, a guardian of the land. [705]"
+  },
+  {
+    "id": 227,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 716,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Χρεμύλος πηγαίνει στο Ασκληπιείο"
+  },
+  {
+    "id": 228,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 716,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Χρεμύλος\\nμὰ Δί’ ἀλλ’ ὅπερ πάλαι παρεσκευαζόμην410\\nἐγώ, κατακλίνειν αὐτὸν εἰς Ἀσκληπιοῦ\\nκράτιστόν ἐστι.\\nΑριστοφάνη, Πλούτος, 418=421"
+  },
+  {
+    "id": 229,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 716,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "717"
+  },
+  {
+    "id": 230,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 718,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Ερεχθέας και οι μυθικοί βασιλείς της Αθήνας"
+  },
+  {
+    "id": 231,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 718,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Ἐρεχθεύς τέ ἐστιν ἐν τοῖς ἐπωνύμοις, ὃς ἐνίκησεν Ἐλευσινίους μάχῃ καὶ τὸν ἡγούμενον ἀπέκτεινεν Ἰμμάραδον τὸν Εὐμόλπου· Αἰγεύς τέ ἐστι καὶ Οἰνεὺς Πανδίονος υἱὸς νόθος καὶ τῶν Θησέως παίδων Ἀκάμας. [5.3] Κέκροπα δὲ καὶ Πανδίονα—εἶδον γὰρ καὶ τούτων ἐν τοῖς ἐπωνύμοις εἰκόνας—οὐκ οἶδα οὓς ἄγουσιν ἐν τιμῇ· πρότερός τε γὰρ ἦρξε Κέκροψ, ὃς τὴν Ἀκταίου θυγατέρα ἔσχε, καὶ ὕστερος, ὃς δὴ καὶ μετῴκησεν ἐς Εὔβοιαν, Ἐρεχθέως υἱὸς τοῦ Πανδίονος τοῦ Ἐριχθονίου. καὶ δὴ καὶ Πανδίων ἐβασίλευσεν ὅ τε Ἐριχθονίου καὶ ὁ Κέκροπος τοῦ δευτέρου· τοῦτον Μητιονίδαι τῆς ἀρχῆς ἐξελαύνουσι, καί οἱ φυγόντι ἐς Μέγαρα—θυγατέρα γὰρ εἶχε Πύλα τοῦ βασιλεύσαντος ἐν Μεγάροις—συνεκπίπτουσιν οἱ παῖδες. καὶ Πανδίονα μὲν αὐτοῦ λέγεται νοσήσαντα ἀποθανεῖν, καί οἱ πρὸς θαλάσσῃ μνῆμά ἐστιν ἐν τῇ Μεγαρίδι ἐν Ἀθηνᾶς Αἰθυίας καλουμένῳ σκοπέλῳ· [5.4] οἱ δὲ παῖδες κατίασί τε ἐκ τῶν Μεγάρων ἐκβαλόντες Μητιονίδας, καὶ τὴν ἀρχὴν τῶν Ἀθηναίων Αἰγεὺς πρεσβύτατος ὢν ἔσχεν. θυγατέρας δὲ οὐ σὺν ἀγαθῷ δαίμονι ἔθρεψεν ὁ Πανδίων, οὐδέ οἱ τιμωροὶ παῖδες ἀπ᾽ αὐτῶν ἐλείφθησαν· καίτοι δυνάμεώς γε ἕνεκα πρὸς τὸν Θρᾷκα τὸ κῆδος ἐποιήσατο. ἀλλ᾽ οὐδεὶς πόρος ἐστὶν ἀνθρώπῳ παραβῆναι τὸ καθῆκον ἐκ τοῦ θεοῦ· λέγουσιν ὡς Τηρεὺς συνοικῶν Πρόκνῃ Φιλομήλαν ᾔσχυνεν, οὐ κατὰ νόμον δράσας τὸν Ἑλλήνων, καὶ τὸ σῶμα ἔτι λωβησάμενος τῇ παιδὶ ἤγαγεν ἐς ἀνάγκην δίκης τὰς γυναῖκας. Πανδίονι δὲ καὶ ἄλλος ἀνδριάς ἐστιν ἐν ἀκροπόλει θέας ἄξιος."
+  },
+  {
+    "id": 232,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 718,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "497"
+  },
+  {
+    "id": 233,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 719,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Αναγνώριση της Ακρόπολης ως μνημείου Παγκόσμιας Πολιτιστκής Κληρονομιάς"
+  },
+  {
+    "id": 234,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 719,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "https://whc.unesco.org/en/list/404\\nΗ Ακρόπολη των Αθηνών και τα μνημεία της είναι παγκόσμια σύμβολα του κλασικού πνεύματος και πολιτισμού και αποτελούν το σημαντικότερο αρχιτεκτονικό και καλλιτεχνικό σύνολο που κληροδότησε η ελληνική αρχαιότητα στον κόσμο. Στο β' μισό του 5ου αι. π.Χ. η Αθήνα, κατόπιν της νίκης εναντίον των Περσών και μετά την εγκαθίδρυση της δημοκρατίας ανέλαβε ηγετικό ρόλο μεταξύ των άλλων πόλεων-κρατών του αρχαίου κόσμου. Στα χρόνια που ακολούθησαν, καθώς η σκέψη και η τέχνη ανθούσαν, μια εξαιρετική ομάδα καλλιτεχνών υλοποίησαν τα φιλόδοξα σχέδια του Αθηναίου πολιτικού Περικλή, και με την εμπνευσμένη καθοδήγηση του γλύπτη Φειδία, μεταμόρφωσαν το βραχώδη λόφο σε ένα μοναδικό μνημείο σκέψης και τεχνών. Τα πιο σημαντικά μνημεία κτίστηκαν την περίοδο αυτή. Ο Παρθενώνας, που κτίστηκε από τον Ικτίνο, το Ερέχθειο, τα Προπύλαια, η μνημειακή είσοδος στην Ακρόπολη, που σχεδιάστηκαν από το Μνησικλή, και ο μικρός ναός της Αθηνάς Νίκης."
+  },
+  {
+    "id": 235,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 719,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "720"
+  },
+  {
+    "id": 236,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 719,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Listing of the Acropolis in the World Heritage List"
+  },
+  {
+    "id": 237,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 719,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "https://whc.unesco.org/en/list/404\\nThe Acropolis of Athens and its monuments are universal symbols of the classical spirit and civilization and form the greatest architectural and artistic complex bequeathed by Greek Antiquity to the world. In the second half of the fifth century bc, Athens, following the victory against the Persians and the establishment of democracy, took a leading position amongst the other city-states of the ancient world. In the age that followed, as thought and art flourished, an exceptional group of artists put into effect the ambitious plans of Athenian statesman Pericles and, under the inspired guidance of the sculptor Pheidias, transformed the rocky hill into a unique monument of thought and the arts. The most important monuments were built during that time: the Parthenon, built by Ictinus, the Erechtheon, the Propylaea, the monumental entrance to the Acropolis, designed by Mnesicles and the small temple Athena Nike."
+  },
+  {
+    "id": 238,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 721,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η άσβεστη λυχνία στην Παναγία Αθηνιώτισσα"
+  },
+  {
+    "id": 239,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 721,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Στους μεσαιωνικούς χρόνους ένα λυχνάρι έκαιγε νυχθημερόν μέσα στον Παρθενώνα (Παναγία Αθηνιώτισσα). Πολλοί περιηγητές καταγράφουν τις εντυπώσεις τους από αυτό το 'Θείο' φως. Ο Μιχαήλ Χωνιάτης, στον κολοφώνα του λόγου του για την ενθρόνισή του στον επισκοπικό θρόνο της Αθήνας, γράφει τα εξής: \\n«Τι τρομερός τόπος αλήθεια! Και δεν είναι άλλο, παρεκτός οίκος του Θεού και πύλη του ουρανού, από όπου το επουράνιο Φως το ακούραστο χύνεται εδώ μέσα, χωρίς να ξεθωριάζει από το φέγγος της ημέρας, μήτε να παύει μες στη νύχτα, χωρίς να τρέφεται από ξύλο, ένα φως άυλο, καθάριο, αείλαμπρο και αείφωτο στα μάτια τα πιστά και αβέβηλα……Τέτοιο είναι ετούτο το τέμενος, περίκαλλο, oλόφεγγο, ανάκτορο της φωτοδόχου και φωτοδότιδας Παρθένου γεμάτο χάρη, άγιο σκήνωμα του αληθινού φωτός που έλαμψε από μέσα της»."
+  },
+  {
+    "id": 240,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 721,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "722"
+  },
+  {
+    "id": 241,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 721,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "The ever-burning oil lamp in Panagia Athiniotissa"
+  },
+  {
+    "id": 242,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 721,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "In Medeval times a candle burned night and day within the Parthenon, then transformed into the church of Panayia Athiniotissa. Several travelers narrate their impressions from this 'divine' light. Michael Choniates, at the culprit of his oration for his enthrnonement in the episcopal throne of Athens, writes the following: \\n'What an amazing place, indeed! It's nothing else but a house of God and a gate of heavens, from where the divine light, unfatigable, pours in here, without losing its splendour by the light of day, nor does it cease at night, without being fed on a wood, an immaterial light, clear, ever-glaring in the faitful and pure eyes...Such is this shrine, superb, sparkling, a palace of the enlightened and light-emanating Virgin, full of grace, sacred relic of the real light which shone from inside her'."
+  },
+  {
+    "id": 243,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 723,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Χαιρέτα μου τον Πλάτανο"
+  },
+  {
+    "id": 244,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 723,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Ω Πλάτανε του Μενδρεσέ, στοιχειό καταραμένο\\nτης τυραννίας τρόπαιο σε φυλακή υψωμένο..\\nΘα'ρθει η ώρα, Πλάτανε, της χώρας μας Βαστίλη\\nπου ξυλοκόπους η οργή του έθνους θα σου στείλη \\nκαι πέλεκυς στη ρίζα σου ελεύθερα θ' αστράψη.\\nΔε θα σε φαν γεράματα, φωτιά δεν θα σε κάψη, \\nκαι γύρω θα χορέψωμε στη στάχτη σου την κρύα\\nεμείς, που θάφτει σήμερα εδώ η τυραννία."
+  },
+  {
+    "id": 245,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 723,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "724"
+  },
+  {
+    "id": 246,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 723,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "Greet the plane tree for me"
+  },
+  {
+    "id": 247,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 723,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "Oh you, plane tree of the Medrese, you wretched ghost, \\ntrophy of tyranny raised in a prison\\nThe Time will come, oh plane tree, Bastille of our country, \\ntha the wrath of the nation will send you lumberjacks\\nand an ax will shine freely on your root. \\nYou won't be consumed by old age, no fire will burn you, \\nand we will be dancing around your cold ashes, \\nus, that today tyranny buries us here."
+  },
+  {
+    "id": 248,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "testimony_ID": 725,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η αναθηματική επιγραφή του ναού του Πυθίου Απόλλωνα"
+  },
+  {
+    "id": 249,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "testimony_ID": 725,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "μνῆμα τόδ’ ἧς ἀρχῆς Πεισίστρατος Ἱππίου υἱός\\nθῆκεν Ἀπόλλωνος Πυθίου ἐν τεμένει. (Θουκυδίδης, ΣΤ' 54.7-9)"
+  },
+  {
+    "id": 250,
+    "topic_ID": 1,
+    "attribute_ID": 21,
+    "testimony_ID": 725,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "641"
+  },
+  {
+    "id": 251,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "testimony_ID": 725,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος Μαρτυρίας (en)",
+    "attribute_Value": "The dedicatory inscription of the temple of Pythios Apollo"
+  },
+  {
+    "id": 252,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "testimony_ID": 725,
+    "attribute_Lang": "en",
+    "attribute_Label": "Μαρτυρία (en)",
+    "attribute_Value": "“ Pisistratus, the son of Hippias,\\nSet up this record of his archonship\\nIn precinct of Apollo Pythias.\\n(,Thucydides. The Peloponnesian War. London, J. M. Dent; New York, E. P. Dutton. 1910. VI.54, 7-9,"
+  }
+]

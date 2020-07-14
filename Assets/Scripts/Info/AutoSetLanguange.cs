@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using ARPolis.Data;
 
 namespace ARPolis.Info
 {

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using ARPolis.Map;
 using StaGeUnityTools;
 using ARPolis.Info;
+using ARPolis.Data;
 
 namespace ARPolis.UI
 {

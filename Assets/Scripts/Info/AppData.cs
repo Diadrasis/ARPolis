@@ -6,6 +6,7 @@ using System.IO;
 using System.Collections.Generic;
 using ARPolis.Info.Objects;
 using StaGeUnityTools;
+using ARPolis.Data;
 
 namespace ARPolis.Info
 {
