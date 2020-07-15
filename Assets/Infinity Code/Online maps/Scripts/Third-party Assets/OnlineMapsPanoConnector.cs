@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections.Generic;
@@ -9,9 +9,14 @@ using UnityEngine.UI;
 #if UPANO
 using InfinityCode.uPano;
 using InfinityCode.uPano.Controls;
+using InfinityCode.uPano.Directions;
+using InfinityCode.uPano.HotSpots;
+using InfinityCode.uPano.InteractiveElements;
 using InfinityCode.uPano.Plugins;
 using InfinityCode.uPano.Renderers;
 using InfinityCode.uPano.Requests;
+using InfinityCode.uPano.Services;
+using InfinityCode.uPano.Transitions;
 #endif
 
 /// <summary>
@@ -29,12 +34,17 @@ public class OnlineMapsPanoConnector : MonoBehaviour
     public string googleApiKey = "";
 
     /// <summary>
-    /// The minimum zoom for which overlay will be displayed
+    /// The minimum map zoom for which overlay will be displayed
     /// </summary>
     public int minZoom = 10;
 
     /// <summary>
-    /// Use progressive loading panoramas (zoom - 0, 1, 2, 3).
+    /// Maximum panorama zoom level (0 - 4)
+    /// </summary>
+    public int panoramaMaxZoom = 3;
+
+    /// <summary>
+    /// Use progressive loading panoramas (zoom - 0, 1, 2, 3, 4)
     /// </summary>
     public bool usePreview = true;
 
@@ -44,9 +54,19 @@ public class OnlineMapsPanoConnector : MonoBehaviour
     public bool checkOverlayColor = true;
 
     /// <summary>
+    /// Use rotation from Online Maps Camera Orbit
+    /// </summary>
+    public bool useRotation = true;
+
+    /// <summary>
     /// Overlay layer will be drawn
     /// </summary>
     public OverlayLayer overlayLayer = OverlayLayer.front;
+
+    /// <summary>
+    /// Prefab of the arrow to go to the next panorama
+    /// </summary>
+    public GameObject nextDirectionPrefab;
 
     /// <summary>
     /// Prefab of UI button to close the panorama
@@ -75,15 +95,46 @@ public class OnlineMapsPanoConnector : MonoBehaviour
     /// </summary>
     public Shader shader;
 
+    /// <summary>
+    /// Prefab which contains the transition that is played before the panorama is closed
+    /// </summary>
+    [Header("Transitions")]
+    public GameObject beforeTransitionPrefab;
+
+    /// <summary>
+    /// Prefab which contains the transition that is played after the panorama is closed
+    /// </summary>
+    public GameObject afterTransitionPrefab;
+
+    /// <summary>
+    /// Use global transitions if they are not in this component
+    /// </summary>
+    public bool useGlobalTransitions = true;
+
+    /// <summary>
+    /// Use transitions when a panorama is shown
+    /// </summary>
+    public bool useOpenTransition = true;
+
+    /// <summary>
+    /// Use transitions when a panorama is closing
+    /// </summary>
+    public bool useCloseTransition = true;
+
     private OnlineMaps map;
     private Dictionary<ulong, Texture2D> overlays;
     private GameObject closeButtonInstance;
 
 #if UPANO
+    /// <summary>
+    /// Metadata for the panorama displayed
+    /// </summary>
+    public GoogleStreetViewMeta meta;
+
     private SphericalPanoRenderer panoRenderer;
     private GoogleStreetViewRequest currentRequest;
-    private int zoom = 3;
     private double lng, lat;
+    private int zoom;
 
     private bool CheckOverlayColor(double clng, double clat)
     {
@@ -124,6 +175,12 @@ public class OnlineMapsPanoConnector : MonoBehaviour
     /// </summary>
     public void Close()
     {
+        if (useCloseTransition) StartCloseTransition();
+        else CloseImmediately();
+    }
+
+    private void CloseImmediately()
+    {
         if (panoRenderer != null)
         {
             if (panoRenderer.texture != null) Destroy(panoRenderer.texture);
@@ -145,6 +202,35 @@ public class OnlineMapsPanoConnector : MonoBehaviour
         }
 
         if (map != null) map.control.allowUserControl = true;
+    }
+
+    private void CreateDirections(DirectionManager directionManager)
+    {
+        directionManager.Clear();
+
+        try
+        {
+            foreach (GoogleStreetViewDirection item in meta.nearestDirections)
+            {
+                Direction direction = directionManager.Create(item.pan, nextDirectionPrefab);
+                if (!string.IsNullOrEmpty(item.title)) direction.title = item.title;
+                direction["id"] = item.id;
+                direction.OnClick.AddListener(LoadNextPanorama);
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
+    }
+
+    private void LoadNextPanorama(InteractiveElement element)
+    {
+        if (currentRequest != null) currentRequest.Dispose();
+
+        zoom = usePreview? 0: panoramaMaxZoom;
+        GoogleStreetViewRequest request = new GoogleStreetViewRequest(googleApiKey, element["id"] as string, zoom, true);
+        request.OnSuccess += OnGoogleStreetViewSuccess;
     }
 
     private void OnDisable()
@@ -181,44 +267,79 @@ public class OnlineMapsPanoConnector : MonoBehaviour
 
     private void OnGoogleStreetViewSuccess(GoogleStreetViewRequest request)
     {
-        string panoID = request.panoID;
         currentRequest = null;
-        if (!request.hasErrors)
+        if (request.hasErrors)
         {
-            if (panoRenderer == null)
-            {
-                map.control.allowUserControl = false;
-                panoRenderer = SphericalPanoRenderer.CreateSphere(request.texture, radius, segments);
-                panoRenderer.shader = shader != null? shader: Shader.Find("Unlit/Texture");
-                panoRenderer.gameObject.AddComponent<KeyboardControl>();
-                panoRenderer.gameObject.AddComponent<MouseControl>();
-                panoRenderer.gameObject.AddComponent<Limits>();
+            Debug.Log(request.error);
+            return;
+        }
+        string panoID = request.panoID;
 
-                if (closeButtonPrefab != null && closeButtonInstance == null)
+        if (panoRenderer == null)
+        {
+            map.control.allowUserControl = false;
+            panoRenderer = SphericalPanoRenderer.CreateSphere(request.texture, radius, segments);
+
+            if (useRotation && OnlineMapsCameraOrbit.instance != null) panoRenderer.pano.pan = OnlineMapsCameraOrbit.instance.rotation.y;
+            else panoRenderer.pano.pan = 0;
+
+            panoRenderer.shader = shader != null ? shader : Shader.Find("Unlit/Texture");
+            panoRenderer.gameObject.AddComponent<DirectionManager>();
+            panoRenderer.gameObject.AddComponent<HotSpotManager>();
+            panoRenderer.gameObject.AddComponent<KeyboardControl>();
+            panoRenderer.gameObject.AddComponent<MouseControl>();
+            panoRenderer.gameObject.AddComponent<Limits>();
+
+            if (closeButtonPrefab != null && closeButtonInstance == null)
+            {
+                Canvas canvas = CanvasUtils.GetCanvas();
+                if (canvas != null)
                 {
-                    Canvas canvas = CanvasUtils.GetCanvas();
-                    if (canvas != null)
-                    {
-                        closeButtonInstance = Instantiate(closeButtonPrefab);
-                        closeButtonInstance.transform.SetParent(canvas.transform, false);
-                        closeButtonInstance.GetComponentInChildren<Button>().onClick.AddListener(Close);
-                    }
+                    closeButtonInstance = Instantiate(closeButtonPrefab);
+                    closeButtonInstance.transform.SetParent(canvas.transform, false);
+                    closeButtonInstance.GetComponentInChildren<Button>().onClick.AddListener(Close);
                 }
             }
-            else
-            {
-                if (panoRenderer.texture != null) Destroy(panoRenderer.texture);
-                panoRenderer.texture = request.texture;
-            }
-        }
-        else Debug.Log(request.error);
 
-        if (zoom < 3)
+            StartShowTransition();
+        }
+        else
+        {
+            if (panoRenderer.texture != null) Destroy(panoRenderer.texture);
+            panoRenderer.texture = request.texture;
+        }
+
+        DirectionManager directionManager = panoRenderer.GetComponent<DirectionManager>();
+
+        if (request.meta != null)
+        {
+            meta = request.meta;
+
+            float pan = panoRenderer.pano.pan;
+            panoRenderer.pano.northPan = meta.northPan;
+            panoRenderer.pano.pan = pan;
+
+            CreateDirections(directionManager);
+        }
+
+        if (zoom < panoramaMaxZoom)
         {
             zoom++;
             currentRequest = new GoogleStreetViewRequest(googleApiKey, panoID, zoom);
             currentRequest.OnComplete += OnGoogleStreetViewSuccess;
         }
+    }
+
+    protected Transition GetTransition(GameObject prefab)
+    {
+        Debug.Log("GetTransition");
+        if (prefab != null)
+        {
+            GameObject go = Instantiate(prefab);
+            return go.GetComponent<Transition>();
+        }
+
+        return null;
     }
 
     private void OnMapClick()
@@ -248,7 +369,7 @@ public class OnlineMapsPanoConnector : MonoBehaviour
 
     private void OnPanoDestroy(Pano pano)
     {
-        Close();
+        CloseImmediately();
     }
 
     private void OnStartDownloadTile(OnlineMapsTile tile)
@@ -294,6 +415,37 @@ public class OnlineMapsPanoConnector : MonoBehaviour
         Pano.OnPanoDestroy += OnPanoDestroy;
     }
 
+    private void StartCloseTransition()
+    {
+        if (!useCloseTransition) return;
+
+        Transition beforeTransition = GetTransition(beforeTransitionPrefab);
+        if (useGlobalTransitions && beforeTransition == null) beforeTransition = GlobalSettings.GetBeforeTransition();
+        if (beforeTransition != null)
+        {
+            beforeTransition.OnFinish += t1 =>
+            {
+                Destroy(beforeTransition.gameObject);
+
+                CloseImmediately();
+
+                Transition afterTransition = GetTransition(afterTransitionPrefab);
+                if (useGlobalTransitions && afterTransition == null) afterTransition = GlobalSettings.GetAfterTransition();
+
+                if (afterTransition != null)
+                {
+                    afterTransition.OnFinish += t2 =>
+                    {
+                        Destroy(afterTransition.gameObject);
+                    };
+                    afterTransition.Execute(null);
+                }
+            };
+            beforeTransition.Execute(null);
+        }
+        else CloseImmediately();
+    }
+
     private void StartDownloadOverlay(OnlineMapsTile tile)
     {
         if (tile.zoom < minZoom) return;
@@ -318,6 +470,39 @@ public class OnlineMapsPanoConnector : MonoBehaviour
                 map.Redraw();
             }
         };
+    }
+
+    private void StartShowTransition()
+    {
+        if (!useOpenTransition) return;
+
+        Transition beforeTransition = GetTransition(beforeTransitionPrefab);
+        if (useGlobalTransitions && beforeTransition == null) beforeTransition = GlobalSettings.GetBeforeTransition();
+        if (beforeTransition != null)
+        {
+            panoRenderer.pano.locked = true;
+            panoRenderer.gameObject.SetActive(false);
+            beforeTransition.OnFinish += t1 =>
+            {
+                Destroy(beforeTransition.gameObject);
+
+                panoRenderer.pano.locked = false;
+                panoRenderer.gameObject.SetActive(true);
+
+                Transition afterTransition = GetTransition(afterTransitionPrefab);
+                if (useGlobalTransitions && afterTransition == null) afterTransition = GlobalSettings.GetAfterTransition();
+
+                if (afterTransition != null)
+                {
+                    afterTransition.OnFinish += t2 =>
+                    {
+                        Destroy(afterTransition.gameObject);
+                    };
+                    afterTransition.Execute(null);
+                }
+            };
+            beforeTransition.Execute(null);
+        }
     }
 
     private void Update()

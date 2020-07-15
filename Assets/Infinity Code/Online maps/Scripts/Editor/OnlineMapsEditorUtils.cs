@@ -1,10 +1,12 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System.Diagnostics;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public static class OnlineMapsEditorUtils
@@ -82,6 +84,45 @@ public static class OnlineMapsEditorUtils
         }
 
         if (needReimport) AssetDatabase.ImportAsset(textureFilename, ImportAssetOptions.ForceUpdate);
+    }
+
+    /// <summary>
+    /// Returns the current canvas or creates a new one
+    /// </summary>
+    /// <returns>Instance of Canvas</returns>
+    public static Canvas GetCanvas()
+    {
+        Canvas canvas = Object.FindObjectOfType<Canvas>();
+        if (canvas == null)
+        {
+            GameObject canvasGO = new GameObject("Canvas");
+            canvasGO.layer = LayerMask.NameToLayer("UI");
+            canvas = canvasGO.AddComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            canvasGO.AddComponent<CanvasScaler>();
+            canvasGO.AddComponent<GraphicRaycaster>();
+        }
+
+        GetEventSystem();
+
+        return canvas;
+    }
+
+    /// <summary>
+    /// Returns the current event system or creates a new one
+    /// </summary>
+    /// <returns>Instance of event system</returns>
+    public static EventSystem GetEventSystem()
+    {
+        EventSystem eventSystem = Object.FindObjectOfType<EventSystem>();
+        if (eventSystem == null)
+        {
+            GameObject es = new GameObject("EventSystem");
+            es.AddComponent<EventSystem>();
+            es.AddComponent<StandaloneInputModule>();
+        }
+
+        return eventSystem;
     }
 
     public static void HelpButton(string help, string url = null)

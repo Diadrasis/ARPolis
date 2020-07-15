@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 /// <summary>
 /// Base class - singleton for elevation manager

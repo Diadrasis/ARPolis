@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -15,12 +15,12 @@ public class OnlineMapsLimits : MonoBehaviour, IOnlineMapsSavableComponent
     /// <summary>
     /// The minimum zoom value.
     /// </summary>
-    public int minZoom = OnlineMaps.MINZOOM;
+    public float minZoom = OnlineMaps.MINZOOM;
 
     /// <summary>
     /// The maximum zoom value. 
     /// </summary>
-    public int maxZoom = OnlineMaps.MAXZOOM;
+    public float maxZoom = OnlineMaps.MAXZOOM;
 
     /// <summary>
     /// The minimum latitude value.

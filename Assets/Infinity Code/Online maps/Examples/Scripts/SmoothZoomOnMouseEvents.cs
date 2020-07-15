@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using UnityEngine;
 
@@ -9,6 +9,7 @@ namespace InfinityCode.OnlineMapsDemos
     /// Smoothes zoom changes on mouse and double touch events.
     /// </summary>
     [OnlineMapsPlugin("Smooth Zoom On Mouse Events", typeof(OnlineMapsControlBase), true)]
+    [AddComponentMenu("Infinity Code/Online Maps/Plugins/SmoothZoomOnMouseEvents")]
     public class SmoothZoomOnMouseEvents : MonoBehaviour
     {
         /// <summary>

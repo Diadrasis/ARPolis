@@ -1,16 +1,19 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using UnityEditor;
 
-public abstract class OnlineMapsTiledElevationManagerEditor : OnlineMapsElevationManagerBaseEditor
+[CustomEditor(typeof(OnlineMapsTiledElevationManager<>), true)]
+public class OnlineMapsTiledElevationManagerEditor : OnlineMapsElevationManagerBaseEditor
 {
+    public SerializedProperty cacheElevations;
     public SerializedProperty zoomOffset;
 
     protected override void CacheSerializedFields()
     {
         base.CacheSerializedFields();
 
+        cacheElevations = serializedObject.FindProperty("cacheElevations");
         zoomOffset = serializedObject.FindProperty("zoomOffset");
     }
 
@@ -18,6 +21,7 @@ public abstract class OnlineMapsTiledElevationManagerEditor : OnlineMapsElevatio
     {
         base.GenerateLayoutItems();
 
+        rootLayoutItem.Create(cacheElevations);
         rootLayoutItem.Create(zoomOffset);
     }
 }

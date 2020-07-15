@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 /// <summary>
 /// Alignment of marker.
@@ -146,7 +146,9 @@ public enum OnlineMapsSource
 {
     Online,
     Resources,
-    ResourcesAndOnline
+    ResourcesAndOnline,
+    StreamingAssets,
+    StreamingAssetsAndOnline
 }
 
 public enum OnlineMapsTarget

@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using UnityEngine;
 
@@ -8,6 +8,7 @@ namespace InfinityCode.OnlineMapsExamples
     /// <summary>
     /// Example of work with What3Words
     /// </summary>
+    [AddComponentMenu("Infinity Code/Online Maps/Examples (API Usage)/What3WordsExample")]
     public class What3WordsExample : MonoBehaviour
     {
         /// <summary>

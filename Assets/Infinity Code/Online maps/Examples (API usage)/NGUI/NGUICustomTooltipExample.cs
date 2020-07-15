@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 #if NGUI
 
@@ -23,14 +23,14 @@ namespace InfinityCode.OnlineMapsExamples
         {
             OnlineMapsMarkerBase.OnMarkerDrawTooltip = delegate { };
 
-            OnlineMaps.instance.AddMarker(Vector2.zero, "Hello World");
+            OnlineMapsMarkerManager.CreateItem(Vector2.zero, "Hello World");
 
             OnlineMaps.instance.OnUpdateLate += OnUpdateLate;
         }
 
         private void OnUpdateLate()
         {
-            OnlineMapsMarkerBase tooltipMarker = OnlineMaps.instance.tooltipMarker;
+            OnlineMapsMarkerBase tooltipMarker = OnlineMapsTooltipDrawerBase.tooltipMarker;
             if (tooltipMarker != null && !string.IsNullOrEmpty(tooltipMarker.label))
             {
                 if (tooltip == null)

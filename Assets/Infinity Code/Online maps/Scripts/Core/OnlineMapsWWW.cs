@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections;
@@ -255,7 +255,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
         SetURL(url);
         type = RequestType.www;
 
-        if (OnValidate != null && !OnValidate(url))
+        if (OnValidate != null && !OnValidate(this.url))
         {
             currentCoroutineBehaviour = coroutineBehaviour;
             currentCoroutineBehaviour.StartCoroutine(WaitCancel());
@@ -263,10 +263,10 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
         }
 
 #if UNITY_2018_3_OR_NEWER
-        www = UnityWebRequest.Get(url);
+        www = UnityWebRequest.Get(this.url);
         www.SendWebRequest();
 #else
-        www = new WWW(url);
+        www = new WWW(this.url);
 #endif
 
         currentCoroutineBehaviour = coroutineBehaviour;
@@ -293,7 +293,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
         this.type = type;
         SetURL(url);
 
-        if (OnValidate != null && !OnValidate(url))
+        if (OnValidate != null && !OnValidate(this.url))
         {
             currentCoroutineBehaviour = coroutineBehaviour;
             currentCoroutineBehaviour.StartCoroutine(WaitCancel());
@@ -304,10 +304,10 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
         if (type == RequestType.www)
         {
 #if UNITY_2018_3_OR_NEWER
-            www = UnityWebRequest.Get(url);
+            www = UnityWebRequest.Get(this.url);
             www.SendWebRequest();
 #else
-            www = new WWW(url);
+            www = new WWW(this.url);
 #endif
             currentCoroutineBehaviour = coroutineBehaviour;
             currentCoroutineBehaviour.StartCoroutine(WaitResponse());
@@ -506,10 +506,11 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
         url = url.Replace("|", "%7C");
 #endif
 
-#if UNITY_WEBGL && !UNITY_EDITOR
+#if UNITY_WEBGL// && !UNITY_EDITOR
         if (OnlineMaps.instance.useProxy) 
         {
             if (url.Contains(".virtualearth.net")) url = OnlineMaps.instance.proxyURL + url;
+            else if (url.Contains("sampleserver4.arcgisonline.com/ArcGIS/rest/services/Elevation")) url = OnlineMaps.instance.proxyURL + url;
         }
 #endif
         if (OnInit != null) url = OnInit(url);

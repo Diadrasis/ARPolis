@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -117,6 +117,7 @@ public abstract class OnlineMapsControlBaseUI<T> : OnlineMapsControlBase2D where
 #endif
         if (!RectTransformUtility.RectangleContainsScreenPoint(image.rectTransform, position, worldCamera)) return false;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(image.rectTransform, position, worldCamera, out point);
+        if (point == Vector2.zero) return false;
 #if CURVEDUI
         }
 #endif

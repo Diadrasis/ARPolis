@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections;
@@ -579,7 +579,8 @@ public static class OnlineMapsUtils
     /// <param name="markers">Array of markers.</param>
     /// <param name="center">Center point.</param>
     /// <param name="zoom">Best zoom.</param>
-    public static void GetCenterPointAndZoom (OnlineMapsMarkerBase[] markers, out Vector2 center, out int zoom)
+    /// <param name="inset">Inset for finding a cropped zoom level.</param>
+    public static void GetCenterPointAndZoom(OnlineMapsMarkerBase[] markers, out Vector2 center, out int zoom, Vector2 inset = default(Vector2))
     {
         center = new Vector2();
         zoom = OnlineMaps.MINZOOM;
@@ -613,7 +614,7 @@ public static class OnlineMapsUtils
 
         double sx = maxX - minX;
         double sy = maxY - minY;
-        
+
         center = new Vector2((float)(sx / 2 + minX), (float)(sy / 2 + minY));
 
         if (center.x < -180) center.x += 360;
@@ -621,6 +622,9 @@ public static class OnlineMapsUtils
 
         int width = map.width;
         int height = map.height;
+        double xTileOffset = inset.x * width;
+        double yTileOffset = inset.y * height;
+
 
         float countX = width / (float)tileSize / 2;
         float countY = height / (float)tileSize / 2;
@@ -630,7 +634,7 @@ public static class OnlineMapsUtils
         for (int z = OnlineMaps.MAXZOOM; z > OnlineMaps.MINZOOM; z--)
         {
             bool success = true;
-            
+
             double cx, cy;
             projection.CoordinatesToTile(center.x, center.y, z, out cx, out cy);
             int _mx = 1 << z;
@@ -648,13 +652,15 @@ public static class OnlineMapsUtils
 
                 px -= cx - countX;
                 py -= cy - countY;
+                px *= tileSize;
+                py *= tileSize;
 
                 if (marker is OnlineMapsMarker)
                 {
                     useZoomMin = true;
                     OnlineMapsMarker m = marker as OnlineMapsMarker;
-                    OnlineMapsVector2i ip = m.GetAlignedPosition((int) (px * tileSize), (int) (py * tileSize));
-                    if (ip.x < 0 || ip.y < 0 || ip.x + m.width > width || ip.y + m.height > height)
+                    OnlineMapsVector2i ip = m.GetAlignedPosition((int)px, (int)py);
+                    if (ip.x < xTileOffset || ip.y < yTileOffset || ip.x + m.width > width - xTileOffset || ip.y + m.height > height - yTileOffset)
                     {
                         success = false;
                         break;
@@ -662,7 +668,7 @@ public static class OnlineMapsUtils
                 }
                 else if (marker is OnlineMapsMarker3D)
                 {
-                    if (px < 0 || py < 0 || px > width || py > height)
+                    if (px < xTileOffset || py < yTileOffset || px > width - xTileOffset || py > height - yTileOffset)
                     {
                         success = false;
                         break;
@@ -690,7 +696,8 @@ public static class OnlineMapsUtils
     /// <param name="positions">Array of coordinates</param>
     /// <param name="center">Center coordinate</param>
     /// <param name="zoom">Best zoom</param>
-    public static void GetCenterPointAndZoom(Vector2[] positions, out Vector2 center, out int zoom)
+    /// <param name="inset">Inset for finding a cropped zoom level.</param>
+    public static void GetCenterPointAndZoom(Vector2[] positions, out Vector2 center, out int zoom, Vector2 inset = default(Vector2))
     {
         center = new Vector2();
         zoom = OnlineMaps.MINZOOM;
@@ -731,6 +738,8 @@ public static class OnlineMapsUtils
 
         int width = map.width;
         int height = map.height;
+        double xTileOffset = inset.x * width;
+        double yTileOffset = inset.y * height;
 
         float countX = width / (float)tileSize / 2;
         float countY = height / (float)tileSize / 2;
@@ -755,8 +764,10 @@ public static class OnlineMapsUtils
 
                 px -= cx - countX;
                 py -= cy - countY;
+                px *= tileSize;
+                py *= tileSize;
 
-                if (px < 0 || py < 0 || px > width || py > height)
+                if (px < xTileOffset || py < yTileOffset || px > width - xTileOffset || py > height - yTileOffset)
                 {
                     success = false;
                     break;
@@ -773,7 +784,7 @@ public static class OnlineMapsUtils
     }
 
     /// <summary>
-    /// Given a start point, angle and distance, this will calculate the destina­tion point travelling along a (shortest distance) great circle arc.
+    /// Given a start point, angle and distance, this will calculate the destination point travelling along a (shortest distance) great circle arc.
     /// </summary>
     /// <param name="lng">Longitude of start point</param>
     /// <param name="lat">Latitude of start point</param>

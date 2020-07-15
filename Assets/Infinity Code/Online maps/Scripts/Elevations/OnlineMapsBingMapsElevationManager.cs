@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -8,6 +8,7 @@ using UnityEngine;
 /// Implements the use of elevation data from Bing Maps
 /// </summary>
 [OnlineMapsPlugin("Bing Maps Elevations", typeof(OnlineMapsControlBaseDynamicMesh), "Elevations")]
+[AddComponentMenu("Infinity Code/Online Maps/Elevations/Bing Maps")]
 public class OnlineMapsBingMapsElevationManager : OnlineMapsSinglePartElevationManager<OnlineMapsBingMapsElevationManager>
 {
     /// <summary>

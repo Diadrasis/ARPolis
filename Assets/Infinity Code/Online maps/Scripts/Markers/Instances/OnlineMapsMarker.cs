@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -158,6 +158,15 @@ public class OnlineMapsMarker : OnlineMapsMarkerBase
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// Gets or sets the rotation of the marker in degree (0-360)
+    /// </summary>
+    public float rotationDegree
+    {
+        get { return _rotation * 360; }
+        set { rotation = value / 360; }
     }
 
     public override float scale
@@ -385,7 +394,7 @@ public class OnlineMapsMarker : OnlineMapsMarkerBase
         if (OnInitComplete != null) OnInitComplete(this);
     }
 
-    public override void LookToCoordinates(Vector2 coordinates)
+    public override void LookToCoordinates(OnlineMapsVector2d coordinates)
     {
         double p1x, p1y, p2x, p2y;
         map.projection.CoordinatesToTile(coordinates.x, coordinates.y, 20, out p1x, out p1y);

@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -52,19 +52,21 @@ namespace InfinityCode.OnlineMapsExamples
         {
             OnlineMapsTileSetControl control = OnlineMapsTileSetControl.instance;
             if (tilesetCollider == null) tilesetCollider = control.GetComponent<Collider>();
-            Bounds bounds = tilesetCollider.bounds;
 
             // Clear overlay mesh
             overlayMesh.Clear(true);
 
             // Init vertices and normals
-            float y = bounds.max.y + 0.5f;
+            Vector2 size = control.sizeInScene;
+            Vector3 p1 = new Vector3(-size.x, 0, 0);
+            Vector3 p2 = new Vector3(0, 0, size.y);
+            float y = 0.5f;
             overlayMesh.vertices = new[]
             {
-                new Vector3(bounds.min.x, y, bounds.min.z),
-                new Vector3(bounds.min.x, y, bounds.max.z),
-                new Vector3(bounds.max.x, y, bounds.max.z),
-                new Vector3(bounds.max.x, y, bounds.min.z)
+                new Vector3(p1.x, y, p1.z),
+                new Vector3(p1.x, y, p2.z),
+                new Vector3(p2.x, y, p2.z),
+                new Vector3(p2.x, y, p1.z)
             };
 
             overlayMesh.normals = new[]

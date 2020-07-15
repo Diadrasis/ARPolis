@@ -1,6 +1,7 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -43,11 +44,29 @@ public class OnlineMapsMarker3DDrawer : OnlineMapsMarkerDrawerBase
         map.projection.CoordinatesToTile(tlx, tly, zoom, out ttlx, out ttly);
         map.projection.CoordinatesToTile(brx, bry, zoom, out tbrx, out tbry);
 
+        int maxX = 1 << zoom;
+
+        bool isEntireWorld = map.buffer.renderState.width == maxX * OnlineMapsUtils.tileSize;
+        if (isEntireWorld && Math.Abs(tlx - brx) < 180)
+        {
+            if (tlx < 0)
+            {
+                brx += 360;
+                tbrx += maxX;
+            }
+            else
+            {
+                tlx -= 360;
+                ttlx -= maxX;
+            }
+        }
+
         Bounds bounds = control.meshFilter.sharedMesh.bounds;
         float bestYScale = OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry);
 
-        foreach (OnlineMapsMarker3D marker in manager)
+        for (int i = manager.Count - 1; i >= 0; i--)
         {
+            OnlineMapsMarker3D marker = manager[i];
             if (marker.manager == null) marker.manager = manager;
             marker.Update(bounds, tlx, tly, brx, bry, zoom, ttlx, ttly, tbrx, tbry, bestYScale);
         }

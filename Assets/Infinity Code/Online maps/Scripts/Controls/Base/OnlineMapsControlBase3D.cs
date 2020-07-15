@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections.Generic;
@@ -167,7 +167,7 @@ public abstract class OnlineMapsControlBase3D: OnlineMapsControlBase
             (float)(bounds.min.z + bounds.size.z * py)
         );
 
-        Camera cam = activeCamera ?? Camera.main;
+        Camera cam = activeCamera != null? activeCamera: Camera.main;
         return cam.WorldToScreenPoint(worldPos);
     }
 

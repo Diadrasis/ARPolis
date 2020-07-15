@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections.Generic;
@@ -220,6 +220,7 @@ public class OnlineMapsMarkerFlatDrawer : OnlineMapsMarker2DMeshDrawer
 
         Matrix4x4 matrix = new Matrix4x4();
         int meshIndex = 0;
+        bool elevationActive = OnlineMapsElevationManagerBase.useElevation;
         index = -1;
         foreach (OnlineMapsMarker marker in markers)
         {
@@ -229,8 +230,6 @@ public class OnlineMapsMarkerFlatDrawer : OnlineMapsMarker2DMeshDrawer
 
             Vector2 offset = marker.GetAlignOffset();
             offset *= marker.scale;
-
-            //Debug.Log(fx + "   " + tx + "   " + zoomCoof);
 
             fx = fx - tx;
 
@@ -289,7 +288,7 @@ public class OnlineMapsMarkerFlatDrawer : OnlineMapsMarker2DMeshDrawer
                 if (!tilesetBounds.Intersects(new Bounds(markerCenter, markerSize))) continue;
             }
 
-            float y = OnlineMapsElevationManagerBase.GetElevation((rx1 + rx2) / 2, (ry1 + ry2) / 2, yScale, tlx, tly, brx, bry);
+            float y = elevationActive? OnlineMapsElevationManagerBase.GetElevation((rx1 + rx2) / 2, (ry1 + ry2) / 2, yScale, tlx, tly, brx, bry): 0;
             float yOffset = useOffsetY ? offsets[index] : 0;
 
             p1.y = p2.y = p3.y = p4.y = y + yOffset;

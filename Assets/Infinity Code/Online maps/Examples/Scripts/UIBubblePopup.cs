@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -10,6 +10,7 @@ namespace InfinityCode.OnlineMapsDemos
     /// <summary>
     /// Example is how to use a combination of data from Google Places API on bubble popup.
     /// </summary>
+    [AddComponentMenu("Infinity Code/Online Maps/Demos/UIBubblePopup")]
     public class UIBubblePopup : MonoBehaviour
     {
         /// <summary>

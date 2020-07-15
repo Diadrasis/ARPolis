@@ -67,7 +67,7 @@ namespace ARPolis
             txtTitle.text = string.Empty;// AppData.FindTermValue(StaticData.termGpsOffTitle);
             txtDesc.text = AppData.FindTermValue(StaticData.termQuitAppDesc);
 
-            btnOK.onClick.AddListener(() => Application.Quit());
+            btnOK.onClick.AddListener(() => QuitApp());
             txtBtnOK.text = AppData.FindTermValue(StaticData.termBtnOK);
             btnOK.gameObject.SetActive(true);
 
@@ -80,6 +80,15 @@ namespace ARPolis
             ForceRebuildLayout();
 
             ShowPanel();
+        }
+
+        void QuitApp()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
         }
 
         void ShowGpsMessageOnUser()

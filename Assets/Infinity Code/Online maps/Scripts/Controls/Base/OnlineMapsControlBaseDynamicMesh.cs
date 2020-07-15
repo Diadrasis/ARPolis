@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -237,7 +237,7 @@ public abstract class OnlineMapsControlBaseDynamicMesh : OnlineMapsControlBase3D
         mx = -mx / map.width * sizeInScene.x;
         my = my / map.height * sizeInScene.y;
 
-        float y = OnlineMapsElevationManagerBase.GetElevation(mx, my, OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry), tlx, tly, brx, bry);
+        float y = OnlineMapsElevationManagerBase.useElevation? OnlineMapsElevationManagerBase.GetElevation(mx, my, OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry), tlx, tly, brx, bry): 0;
 
         Vector3 offset = transform.rotation * new Vector3((float)mx, y, (float)my);
         offset.Scale(map.transform.lossyScale);

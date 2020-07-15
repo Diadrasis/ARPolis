@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -388,6 +388,7 @@ public class OnlineMapsDrawingRect : OnlineMapsDrawingElement
     public override void Draw(Color32[] buffer, Vector2 bufferPosition, int bufferWidth, int bufferHeight, float zoom, bool invertY = false)
     {
         if (!visible) return;
+        if (range != null && !range.InRange(manager.map.floatZoom)) return;
 
         FillPoly(buffer, bufferPosition, bufferWidth, bufferHeight, zoom, points, backgroundColor, invertY);
         DrawLineToBuffer(buffer, bufferPosition, bufferWidth, bufferHeight, zoom, points, borderColor, borderWidth, true, invertY);
@@ -398,6 +399,12 @@ public class OnlineMapsDrawingRect : OnlineMapsDrawingElement
         base.DrawOnTileset(control, index);
 
         if (!visible)
+        {
+            active = false;
+            return;
+        }
+
+        if (range != null && !range.InRange(control.map.floatZoom))
         {
             active = false;
             return;

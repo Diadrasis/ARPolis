@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 #if (!UNITY_ANDROID && !UNITY_IPHONE) || UNITY_EDITOR
 #define USE_MOUSE_ROTATION
@@ -175,7 +175,10 @@ public class OnlineMapsCameraOrbit : MonoBehaviour, IOnlineMapsSavableComponent
         }
     }
 
-    private void UpdateCameraPosition()
+    /// <summary>
+    /// Updates camera position
+    /// </summary>
+    public void UpdateCameraPosition()
     {
         if (rotation.x > maxRotationX) rotation.x = maxRotationX;
         else if (rotation.x < 0) rotation.x = 0;

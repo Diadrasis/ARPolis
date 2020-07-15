@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Linq;
@@ -287,7 +287,7 @@ public class OnlineMapsProvider
                         urlWithoutLabels = "https://khm{rnd0-3}.googleapis.com/kh?v={version}&hl={lng}&x={x}&y={y}&z={zoom}",
                         extraFields = new []
                         {
-                            new ExtraField("Tile version", "version", "845")
+                            new ExtraField("Tile version", "version", "865")
                         }
                     },
                     new MapType(RELIEF)

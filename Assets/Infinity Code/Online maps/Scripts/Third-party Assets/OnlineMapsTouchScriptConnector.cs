@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -9,6 +9,7 @@ using TouchScript.Gestures.TransformGestures;
 #endif
 
 [OnlineMapsPlugin("TouchScript Connector", typeof(OnlineMapsControlBase))]
+[AddComponentMenu("Infinity Code/Online Maps/Plugins/TouchScript Connector")]
 public class OnlineMapsTouchScriptConnector : MonoBehaviour
 {
 #if TOUCHSCRIPT

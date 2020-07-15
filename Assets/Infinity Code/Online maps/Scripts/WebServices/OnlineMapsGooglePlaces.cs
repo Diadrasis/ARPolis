@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections.Generic;
@@ -354,8 +354,8 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         public string name;
 
         /// <summary>
-        /// Restricts the results to places matching at least one of the specified types. \n
-        /// Types should be separated with a pipe symbol (type1|type2|etc).\n
+        /// Restricts the results to places matching the specified type. \n
+        /// Only one type may be specified (if more than one type is provided, all types following the first entry are ignored).
         /// See the list of supported types:\n
         /// https://developers.google.com/places/documentation/supported_types
         /// </summary>

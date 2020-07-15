@@ -1,6 +1,7 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -8,6 +9,8 @@ using UnityEngine;
 /// </summary>
 public class OnlineMapsGUITooltipDrawer: OnlineMapsTooltipDrawerBase
 {
+    public static Action<GUIStyle, string, Vector2> OnDrawTooltip;
+
     /// <summary>
     /// Allows you to customize the appearance of the tooltip.
     /// </summary>
@@ -56,13 +59,6 @@ public class OnlineMapsGUITooltipDrawer: OnlineMapsTooltipDrawerBase
         tooltipStyle = null;
         map = null;
         control = null;
-    }
-
-    private void OnGUITooltip(GUIStyle style, string text, Vector2 position)
-    {
-        GUIContent tip = new GUIContent(text);
-        Vector2 size = style.CalcSize(tip);
-        GUI.Label(new Rect(position.x - size.x / 2 - 5, Screen.height - position.y - size.y - 20, size.x + 10, size.y + 5), text, style);
     }
 
     private void DrawTooltips()
@@ -220,5 +216,18 @@ public class OnlineMapsGUITooltipDrawer: OnlineMapsTooltipDrawerBase
             else if (OnlineMapsDrawingElement.OnElementDrawTooltip != null) OnlineMapsDrawingElement.OnElementDrawTooltip(tooltipDrawingElement);
             else OnGUITooltip(style, tooltip, inputPosition);
         }
+    }
+
+    private void OnGUITooltip(GUIStyle style, string text, Vector2 position)
+    {
+        if (OnDrawTooltip != null)
+        {
+            OnDrawTooltip(style, text, position);
+            return;
+        }
+
+        GUIContent tip = new GUIContent(text);
+        Vector2 size = style.CalcSize(tip);
+        GUI.Label(new Rect(position.x - size.x / 2 - 5, Screen.height - position.y - size.y - 20, size.x + 10, size.y + 5), text, style);
     }
 }

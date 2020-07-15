@@ -1,28 +1,32 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
-using System;
-using System.Diagnostics;
 using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(OnlineMapsCache), true)]
 public class OnlineMapsCacheEditor:OnlineMapsFormattedEditor
 {
+    private OnlineMaps map;
+    private OnlineMapsCache cache;
     private bool showPathTokens;
 
-    private SerializedProperty pUseMemoryCache;
     private SerializedProperty pUseFileCache;
     private SerializedProperty pFileCacheLocation;
     private SerializedProperty pFileCacheCustomPath;
     private SerializedProperty pFileCacheTilePath;
     private SerializedProperty pMaxFileCacheSize;
+    private SerializedProperty pFileCacheUnloadRate;
+
+    private SerializedProperty pUseMemoryCache;
     private SerializedProperty pMaxMemoryCacheSize;
     private SerializedProperty pMemoryCacheUnloadRate;
-    private SerializedProperty pFileCacheUnloadRate;
-    private OnlineMapsCache cache;
+
+    private SerializedProperty pMaxCustomCacheSize;
+    private SerializedProperty pCustomCacheUnloadRate;
+
+    private int? customCacheSize;
     private int? fileCacheSize;
-    private OnlineMaps map;
 
     protected override void CacheSerializedFields()
     {
@@ -35,9 +39,13 @@ public class OnlineMapsCacheEditor:OnlineMapsFormattedEditor
         pFileCacheCustomPath = serializedObject.FindProperty("fileCacheCustomPath");
         pFileCacheTilePath = serializedObject.FindProperty("fileCacheTilePath");
         pMaxFileCacheSize = serializedObject.FindProperty("maxFileCacheSize");
+        pFileCacheUnloadRate = serializedObject.FindProperty("fileCacheUnloadRate");
+
         pMaxMemoryCacheSize = serializedObject.FindProperty("maxMemoryCacheSize");
         pMemoryCacheUnloadRate = serializedObject.FindProperty("memoryCacheUnloadRate");
-        pFileCacheUnloadRate = serializedObject.FindProperty("fileCacheUnloadRate");
+        
+        pMaxCustomCacheSize = serializedObject.FindProperty("maxCustomCacheSize");
+        pCustomCacheUnloadRate = serializedObject.FindProperty("customCacheUnloadRate");
     }
 
     private void CheckFileCacheSize()
@@ -117,6 +125,20 @@ public class OnlineMapsCacheEditor:OnlineMapsFormattedEditor
         EditorGUILayout.EndHorizontal();
     }
 
+    private void DrawCustomCacheSize()
+    {
+        if (OnlineMaps.isPlaying || !customCacheSize.HasValue) customCacheSize = cache.GetCustomCacheSizeFast();
+
+        float customCacheSizeMb = customCacheSize.Value / 1000000f;
+        string customCacheSizeStr = customCacheSizeMb.ToString("F2");
+        EditorGUILayout.LabelField("Current Size (mb)", customCacheSizeStr);
+        if (GUILayout.Button("Clear"))
+        {
+            cache.ClearCustomCache();
+            customCacheSize = null;
+        }
+    }
+
     private void DrawFileCacheSize()
     {
         if (OnlineMaps.isPlaying || !fileCacheSize.HasValue) fileCacheSize = cache.GetFileCacheSizeFast();
@@ -129,6 +151,11 @@ public class OnlineMapsCacheEditor:OnlineMapsFormattedEditor
             cache.ClearFileCache();
             fileCacheSize = null;
         }
+    }
+
+    private void DrawCustomCacheUnloadRate()
+    {
+        pCustomCacheUnloadRate.floatValue = EditorGUILayout.Slider("Unload (%)", Mathf.RoundToInt(pCustomCacheUnloadRate.floatValue * 100), 1, 50) / 100;
     }
 
     private void DrawFileCacheUnloadRate()
@@ -153,7 +180,7 @@ public class OnlineMapsCacheEditor:OnlineMapsFormattedEditor
 
     private void DrawWebGLWarning()
     {
-        EditorGUILayout.HelpBox("File Cache is not supported for Webplayer and WebGL.", MessageType.Warning);
+        EditorGUILayout.HelpBox("File Cache is not supported for WebGL.", MessageType.Warning);
     }
 
     protected override void GenerateLayoutItems()
@@ -162,6 +189,18 @@ public class OnlineMapsCacheEditor:OnlineMapsFormattedEditor
 
         GenerateFileCacheLayout();
         GenerateMemoryCacheLayout();
+        GenerateCustomCacheLayout();
+    }
+
+    private void GenerateCustomCacheLayout()
+    {
+        LayoutItem lCustomCache = rootLayoutItem.Create("CustomCache");
+        lCustomCache.drawGroup = LayoutItem.Group.always;
+
+        lCustomCache.Create("label", () => EditorGUILayout.LabelField("Custom Cache"));
+        lCustomCache.Create(pMaxCustomCacheSize).content = new GUIContent("Size (mb)");
+        lCustomCache.Create("unloadRate", DrawCustomCacheUnloadRate);
+        lCustomCache.Create("drawSize", DrawCustomCacheSize);
     }
 
     private void GenerateFileCacheLayout()

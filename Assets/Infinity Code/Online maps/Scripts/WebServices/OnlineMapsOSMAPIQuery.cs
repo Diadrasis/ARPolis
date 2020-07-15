@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +21,7 @@ public class OnlineMapsOSMAPIQuery: OnlineMapsTextWebService
     private OnlineMapsOSMAPIQuery(string data)
     {
         _status = OnlineMapsQueryStatus.downloading;
-        string url = "http://overpass.kumi.systems/api/interpreter?data=" + OnlineMapsWWW.EscapeURL(data);
+        string url = "https://overpass.kumi.systems/api/interpreter?data=" + OnlineMapsWWW.EscapeURL(data);
         www = new OnlineMapsWWW(url);
         www.OnComplete += OnRequestComplete;
     }

@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections.Generic;
@@ -170,12 +170,21 @@ public class OnlineMapsMarkerBase: IOnlineMapsInteractiveElement
         }
     }
 
+    /// <summary>
+    /// Reference to Marker Manager
+    /// </summary>
+    public IOnlineMapsInteractiveElementManager manager
+    {
+        get { return _manager != null? _manager: OnlineMapsMarkerManager.instance; }
+        set { _manager = value; }
+    }
+
     protected OnlineMaps map
     {
         get
         {
-            if (_manager == null) return null;
-            return manager.map;
+            if (_manager == null) return OnlineMaps.instance;
+            return _manager.map;
         }
     }
 
@@ -240,12 +249,6 @@ public class OnlineMapsMarkerBase: IOnlineMapsInteractiveElement
     {
         range = new OnlineMapsRange(OnlineMaps.MINZOOM, OnlineMaps.MAXZOOM);
         tags = new List<string>();
-    }
-
-    public IOnlineMapsInteractiveElementManager manager
-    {
-        get { return _manager; }
-        set { _manager = value; }
     }
 
     public virtual void DestroyInstance()
@@ -321,14 +324,31 @@ public class OnlineMapsMarkerBase: IOnlineMapsInteractiveElement
     }
 
     /// <summary>
-    /// Turns the marker in the direction specified coordinates.
+    /// Checks if the marker is in the current map view
     /// </summary>
-    /// <param name="coordinates">
-    /// The coordinates.
-    /// </param>
-    public virtual void LookToCoordinates(Vector2 coordinates)
+    /// <returns>True - in map view. False - outside map view</returns>
+    public bool InMapView()
+    {
+        return map.InMapView(longitude, latitude);
+    }
+
+    /// <summary>
+    /// Turns the marker in the direction specified coordinates
+    /// </summary>
+    /// <param name="coordinates">The coordinates</param>
+    public virtual void LookToCoordinates(OnlineMapsVector2d coordinates)
     {
         
+    }
+
+    /// <summary>
+    /// Turns the marker in the direction specified coordinates
+    /// </summary>
+    /// <param name="longitude">Longitude</param>
+    /// <param name="latitude">Latitude</param>
+    public void LookToCoordinates(double longitude, double latitude)
+    {
+        LookToCoordinates(new OnlineMapsVector2d(longitude, latitude));
     }
 
     private void OnMarkerPress(OnlineMapsMarkerBase marker)
@@ -337,7 +357,7 @@ public class OnlineMapsMarkerBase: IOnlineMapsInteractiveElement
     }
 
     /// <summary>
-    /// Set location of marker.
+    /// Set location of marker
     /// </summary>
     /// <param name="lng">Longitude</param>
     /// <param name="lat">Latitude</param>

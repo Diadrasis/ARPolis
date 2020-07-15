@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections.Generic;
@@ -34,6 +34,11 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
     /// Type of collider: box - for performance, mesh - for elevation.
     /// </summary>
     public OnlineMapsColliderType colliderType = OnlineMapsColliderType.fullMesh;
+
+    /// <summary>
+    /// Plane by using which the map is dragged. Exists only during drag.
+    /// </summary>
+    public Plane? dragPlane;
 
     /// <summary>
     /// Container for drawing elements.
@@ -72,7 +77,6 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
     private RaycastHit lastRaycastHit;
     private MeshCollider meshCollider;
     private Color32[] overlayFrontBuffer;
-    private Plane? dragPlane;
     private Mesh tilesetMesh;
     private int[] triangles;
     private Vector2[] uv;
@@ -200,10 +204,11 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         double tlx, tly, brx, bry;
         map.GetCorners(out tlx, out tly, out brx, out bry);
         float elevationScale = OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry);
-        float elevation = OnlineMapsElevationManagerBase.GetElevation(cpx, cpy, elevationScale, tlx, tly, brx, bry);
+        float elevation = 0;
+        if (OnlineMapsElevationManagerBase.useElevation) elevation = OnlineMapsElevationManagerBase.GetElevation(cpx, cpy, elevationScale, tlx, tly, brx, bry);
         Vector3 worldPos = transform.position + transform.rotation * new Vector3((float)(cpx * transform.lossyScale.x), elevation * transform.lossyScale.y, (float)(cpy * transform.lossyScale.z));
 
-        Camera cam = activeCamera ?? Camera.main;
+        Camera cam = activeCamera != null? activeCamera: Camera.main;
         return cam.WorldToScreenPoint(worldPos);
     }
 
@@ -234,6 +239,7 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         map.GetTilePosition(out tx, out ty);
         tx += countX * r.x * zoomCoof;
         ty -= countY * r.y * zoomCoof;
+
         return true;
     }
 
@@ -851,7 +857,7 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         Texture tileTexture = currentTile != null ? currentTile.texture : null;
         bool sendEvent = true;
 
-        while ((currentTile == null || tileTexture == null) && z > 2)
+        while ((currentTile == null || tileTexture == null) && z > 0)
         {
             z--;
 
@@ -964,11 +970,34 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
                 if (sendEvent && OnChangeMaterialTexture != null) OnChangeMaterialTexture(currentTile, material); 
             }
 
-            if (hasTraffic)
+            if (hasTraffic && map.traffic)
             {
-                material.SetTexture("_TrafficTex", (currentTile as OnlineMapsRasterTile).trafficTexture);
-                material.SetTextureOffset("_TrafficTex", material.mainTextureOffset);
-                material.SetTextureScale("_TrafficTex", material.mainTextureScale);
+                Vector2 trafficTextureOffset = material.mainTextureOffset;
+                Vector2 trafficTextureScale = material.mainTextureScale;
+                Texture2D trafficTexture = (currentTile as OnlineMapsRasterTile).trafficTexture;
+                if (trafficTexture == null)
+                {
+                    OnlineMapsRasterTile t = currentTile.parent as OnlineMapsRasterTile;
+
+                    while (t != null)
+                    {
+                        if (t.trafficTexture != null)
+                        {
+                            int s = 1 << (zoom - t.zoom);
+                            float scale2 = 1f / s;
+                            trafficTextureOffset.x = bx % s * scale2;
+                            trafficTextureOffset.y = (s - by % s - 1) * scale2;
+                            trafficTextureScale = new Vector2(scale2, scale2);
+
+                            trafficTexture = t.trafficTexture;
+                            break;
+                        }
+                        t = t.parent as OnlineMapsRasterTile;
+                    }
+                }
+                material.SetTexture("_TrafficTex", trafficTexture);
+                material.SetTextureOffset("_TrafficTex", trafficTextureOffset);
+                material.SetTextureScale("_TrafficTex", trafficTextureScale);
             }
             if (hasOverlayBack)
             {
@@ -990,7 +1019,7 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
                         }
                         foreach (OnlineMapsDrawingElement drawingElement in drawingElementManager)
                         {
-                            drawingElement.Draw(overlayFrontBuffer, new OnlineMapsVector2i(currentTile.x, currentTile.y), OnlineMapsUtils.tileSize, OnlineMapsUtils.tileSize, currentTile.zoom, true);
+                            drawingElement.Draw(overlayFrontBuffer, new OnlineMapsVector2i(currentTile.x, currentTile.y), OnlineMapsUtils.tileSize, OnlineMapsUtils.tileSize, currentTile.zoom, false);
                         }
                         if (currentTile.overlayFrontTexture == null)
                         {
@@ -1043,13 +1072,18 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         int[] triangles = new int[res * res * 6];
         int ti = 0;
 
+        bool elevationActive = OnlineMapsElevationManagerBase.useElevation;
+
         for (int y = 0; y < r2; y++)
         {
             for (int x = 0; x < r2; x++)
             {
                 float px = sx * x;
                 float pz = sy * y;
-                float py = OnlineMapsElevationManagerBase.GetElevation(px, pz, yScale, tlx, tly, brx, bry);
+
+                float py = 0;
+                if (elevationActive) py = OnlineMapsElevationManagerBase.GetElevation(px, pz, yScale, tlx, tly, brx, bry);
+
                 vertices[y * r2 + x] = new Vector3(sx * x, py, sy * y);
 
                 if (x != 0 && y != 0)

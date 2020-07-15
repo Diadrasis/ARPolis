@@ -1,8 +1,10 @@
-﻿using StaGeUnityTools;
+﻿using ARPolis.UI;
+using StaGeUnityTools;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI.Extensions;
 
 namespace ARPolis.Data
 {
@@ -19,7 +21,7 @@ namespace ARPolis.Data
         public List<JsonClassPerson> jsonClassPersons;
         public List<JsonClassDigitalExhibit> jsonClassDigitalExhibits;
 
-        //public string thematicNowID, tourNowID, poiNowID;
+        public string thematicNowID, tourNowID, poiNowID;
 
         public void Init()
         {
@@ -66,9 +68,7 @@ namespace ARPolis.Data
         }
 
 
-
-
-
+        
     }
 
 }

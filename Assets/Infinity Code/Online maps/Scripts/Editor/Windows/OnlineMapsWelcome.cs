@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Diagnostics;
@@ -27,6 +27,7 @@ public class OnlineMapsWelcome:EditorWindow
     private static Texture2D supportTexture;
     private static GUIStyle copyrightStyle;
     private static OnlineMapsWelcome wnd;
+    private static Texture2D rateTexture;
 
     static OnlineMapsWelcome()
     {
@@ -53,12 +54,7 @@ public class OnlineMapsWelcome:EditorWindow
         Rect rect = GUILayoutUtility.GetLastRect();
         EditorGUIUtility.AddCursorRect(rect, MouseCursor.Link);
 
-#if UNITY_2017_3_OR_NEWER
         bool returnValue = Event.current.type == EventType.MouseDown && rect.Contains(Event.current.mousePosition);
-#else
-        bool returnValue = Event.current.type == EventType.mouseDown && rect.Contains(Event.current.mousePosition);
-#endif
-
         GUILayout.Space(space);
 
         return returnValue;
@@ -98,6 +94,7 @@ public class OnlineMapsWelcome:EditorWindow
             examplesTexture = OnlineMapsEditorUtils.LoadAsset<Texture2D>("Icons\\Editor\\Welcome\\Examples.png", true);
             updateTexture = OnlineMapsEditorUtils.LoadAsset<Texture2D>("Icons\\Editor\\Welcome\\Update.png", true);
             supportTexture = OnlineMapsEditorUtils.LoadAsset<Texture2D>("Icons\\Editor\\Welcome\\Support.png", true);
+            rateTexture = OnlineMapsEditorUtils.LoadAsset<Texture2D>("Icons\\Editor\\Welcome\\Rate.png", true);
 
             inited = true;
         }
@@ -128,6 +125,7 @@ public class OnlineMapsWelcome:EditorWindow
         GUILayoutUtility.GetRect(position.width, 60);
 
         scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
+        EditorGUILayout.Space();
 
         if (DrawButton(wizardTexture, "Map Wizard", "Create your own map for a minute.")) OnlineMapsWizard.OpenWindow();
         if (DrawButton(boltTexture, "Import Bolt Integration Kit", "and interact with the map without C# scripting.")) OnlineMapsPackageManager.ImportBoltIntegrationKit();
@@ -137,10 +135,16 @@ public class OnlineMapsWelcome:EditorWindow
         if (DrawButton(examplesTexture, "Atlas of Examples", "We made a lot of examples. That will help you get started quickly.")) Process.Start("http://infinity-code.com/atlas/online-maps");
         if (DrawButton(supportTexture, "Support", "If you have any problems feel free to contact us.")) Process.Start("mailto:support@infinity-code.com?subject=Online maps");
         if (DrawButton(forumTexture, "Forum", "Official forum of Online Maps.")) Process.Start("http://forum.infinity-code.com");
+        if (DrawButton(rateTexture, "Rate and Review", "Share your impression about the asset.")) RateAndReview();
         if (DrawButton(updateTexture, "Check Updates", "Perhaps a new version is already waiting for you. Check it.")) OnlineMapsUpdater.OpenWindow();
 
         EditorGUILayout.EndScrollView();
         EditorGUILayout.LabelField(copyright, copyrightStyle);
+    }
+
+    public static void RateAndReview()
+    {
+        Process.Start("https://assetstore.unity.com/packages/tools/integration/online-maps-v3-138509/reviews");
     }
 
     private static void OpenAtStartup()

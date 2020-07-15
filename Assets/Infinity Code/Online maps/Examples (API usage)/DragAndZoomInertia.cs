@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +10,7 @@ namespace InfinityCode.OnlineMapsExamples
     /// <summary>
     /// Example of how to make drag and zoom inertia for the map.
     /// </summary>
+    [AddComponentMenu("Infinity Code/Online Maps/Examples (API Usage)/DragAndZoomInertia")]
     public class DragAndZoomInertia : MonoBehaviour
     {
         /// <summary>

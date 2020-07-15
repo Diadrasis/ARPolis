@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using UnityEditor;
 using UnityEngine;
@@ -33,7 +33,7 @@ public class OnlineMapsLimitsEditor:Editor
     private void DrawPositionRangeGUI()
     {
         EditorGUILayout.BeginHorizontal();
-        pUsePositionRange.boolValue = EditorGUILayout.Toggle(pUsePositionRange.boolValue, GUILayout.Width(10));
+        pUsePositionRange.boolValue = EditorGUILayout.Toggle(pUsePositionRange.boolValue, GUILayout.Width(14));
 
         EditorGUI.BeginDisabledGroup(!pUsePositionRange.boolValue);
         EditorGUILayout.LabelField("Position Range");
@@ -63,18 +63,18 @@ public class OnlineMapsLimitsEditor:Editor
     private void DrawZoomRangeGUI()
     {
         EditorGUILayout.BeginHorizontal();
-        pUseZoomRange.boolValue = EditorGUILayout.Toggle(pUseZoomRange.boolValue, GUILayout.Width(10));
-        float min = pMinZoom.intValue;
-        float max = pMaxZoom.intValue;
+        pUseZoomRange.boolValue = EditorGUILayout.Toggle(pUseZoomRange.boolValue, GUILayout.Width(14));
+        float min = pMinZoom.floatValue;
+        float max = pMaxZoom.floatValue;
         EditorGUI.BeginChangeCheck();
         EditorGUI.BeginDisabledGroup(!pUseZoomRange.boolValue);
 
-        EditorGUILayout.MinMaxSlider(new GUIContent("Zoom Range (" + min + "-" + max + ")"), ref min, ref max, OnlineMaps.MINZOOM, OnlineMaps.MAXZOOM);
+        EditorGUILayout.MinMaxSlider(new GUIContent("Zoom Range (" + min.ToString("F1") + "-" + max.ToString("F1") + ")"), ref min, ref max, OnlineMaps.MINZOOM, OnlineMaps.MAXZOOM);
         EditorGUI.EndDisabledGroup();
         if (EditorGUI.EndChangeCheck())
         {
-            pMinZoom.intValue = Mathf.RoundToInt(min);
-            pMaxZoom.intValue = Mathf.RoundToInt(max);
+            pMinZoom.floatValue = Mathf.RoundToInt(min * 10) / 10f;
+            pMaxZoom.floatValue = Mathf.RoundToInt(max * 10) / 10f;
         }
         EditorGUILayout.EndHorizontal();
     }

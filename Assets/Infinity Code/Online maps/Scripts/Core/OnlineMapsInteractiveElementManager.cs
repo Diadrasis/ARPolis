@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections;
@@ -16,6 +16,16 @@ public abstract class OnlineMapsInteractiveElementManager<T, U>: MonoBehaviour, 
     where T: OnlineMapsInteractiveElementManager<T, U>
     where U : IOnlineMapsInteractiveElement
 {
+    /// <summary>
+    /// The event that occurs when an item is added.
+    /// </summary>
+    public static Action<U> OnAddItem;
+
+    /// <summary>
+    /// The event that occurs when an item is removed.
+    /// </summary>
+    public static Action<U> OnRemoveItem;
+
     protected static T _instance;
 
     [SerializeField]
@@ -179,6 +189,7 @@ public abstract class OnlineMapsInteractiveElementManager<T, U>: MonoBehaviour, 
     {
         items.Add(item);
         item.manager = this;
+        if (OnAddItem != null) OnAddItem(item);
         Redraw();
         return item;
     }
@@ -190,7 +201,11 @@ public abstract class OnlineMapsInteractiveElementManager<T, U>: MonoBehaviour, 
     public void AddRange(IEnumerable<U> collection)
     {
         items.AddRange(collection);
-        foreach (U e in collection) e.manager = this;
+        foreach (U item in collection)
+        {
+            item.manager = this;
+            if (OnAddItem != null) OnAddItem(item);
+        }
         Redraw();
     }
 
@@ -222,6 +237,7 @@ public abstract class OnlineMapsInteractiveElementManager<T, U>: MonoBehaviour, 
     /// <returns>True - success, false - otherwise</returns>
     public bool Remove(U item, bool dispose = true)
     {
+        if (OnRemoveItem != null) OnRemoveItem(item);
         item.DestroyInstance();
         if (dispose) item.Dispose();
         Redraw();
@@ -236,6 +252,7 @@ public abstract class OnlineMapsInteractiveElementManager<T, U>: MonoBehaviour, 
     {
         foreach (U item in items)
         {
+            if (OnRemoveItem != null) OnRemoveItem(item);
             item.DestroyInstance();
             if (dispose) item.Dispose();
         }
@@ -255,6 +272,7 @@ public abstract class OnlineMapsInteractiveElementManager<T, U>: MonoBehaviour, 
             U item = items[i];
             if (match(item))
             {
+                if (OnRemoveItem != null) OnRemoveItem(item);
                 item.DestroyInstance();
                 if (dispose) item.Dispose();
                 items.RemoveAt(i);
@@ -274,6 +292,7 @@ public abstract class OnlineMapsInteractiveElementManager<T, U>: MonoBehaviour, 
     {
         if (index < 0 || index >= items.Count) return default(U);
         U item = items[index];
+        if (OnRemoveItem != null) OnRemoveItem(item);
         item.DestroyInstance();
         if (dispose) item.Dispose();
         items.RemoveAt(index);

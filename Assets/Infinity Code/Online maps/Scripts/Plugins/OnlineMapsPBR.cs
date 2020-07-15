@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -9,6 +9,7 @@ using UnityEngine;
 /// </summary>
 [Serializable]
 [OnlineMapsPlugin("PBR Bridge", typeof(OnlineMapsControlBaseDynamicMesh))]
+[AddComponentMenu("Infinity Code/Online Maps/Plugins/PBR Bridge")]
 public class OnlineMapsPBR : MonoBehaviour
 {
     /// <summary>

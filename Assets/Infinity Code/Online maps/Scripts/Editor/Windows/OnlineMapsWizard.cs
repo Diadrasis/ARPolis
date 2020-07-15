@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections.Generic;
@@ -78,6 +78,9 @@ public class OnlineMapsWizard : EditorWindow
     private int textureHeight = 512;
     private int textureWidth = 512;
     private GameObject uGUIParent;
+#if NGUI
+    private GameObject NGUIParent;
+#endif
 
     #endregion
 
@@ -117,6 +120,7 @@ public class OnlineMapsWizard : EditorWindow
                 }
 
                 if (t == typeof(OnlineMapsUIImageControl) || t == typeof(OnlineMapsUIRawImageControl)) control.steps.Add(DrawUGUIParent);
+                else if (t == typeof(OnlineMapsNGUITextureControl)) control.steps.Add(DrawNGUIParent);
                 if (t.IsSubclassOf(typeof(OnlineMapsControlBase3D))) control.steps.Add(DrawCamera);
                 if (t.IsSubclassOf(typeof(OnlineMapsControlBaseDynamicMesh))) control.steps.Add(DrawMeshSize);
                 if (t == typeof(OnlineMapsTileSetControl)) control.steps.Add(DrawMaterialsAndShaders);
@@ -231,6 +235,8 @@ public class OnlineMapsWizard : EditorWindow
 
             if (component is OnlineMapsUIImageControl || component is OnlineMapsUIRawImageControl)
             {
+                if (uGUIParent == null) uGUIParent = OnlineMapsEditorUtils.GetCanvas().gameObject;
+
                 RectTransform rectTransform = go.AddComponent<RectTransform>();
                 rectTransform.SetParent(uGUIParent.transform as RectTransform);
                 go.AddComponent<CanvasRenderer>();
@@ -573,12 +579,20 @@ public class OnlineMapsWizard : EditorWindow
         EditorGUI.EndDisabledGroup();
     }
 
+    private void DrawNGUIParent(ref bool allowCreate)
+    {
+#if NGUI
+        EditorGUILayout.HelpBox("Select the parent GameObject in the scene.", MessageType.Warning);
+        NGUIParent = EditorGUILayout.ObjectField("Parent: ", NGUIParent, typeof(GameObject), true) as GameObject;
+        if (NGUIParent == null) allowCreate = false;
+#endif
+    }
+
     private void DrawUGUIParent(ref bool allowCreate)
     {
         EditorGUILayout.HelpBox("Select the parent GameObject in the scene.", MessageType.Warning);
         uGUIParent = EditorGUILayout.ObjectField("Parent: ", uGUIParent, typeof(GameObject), true) as GameObject;
-        if (uGUIParent == null) allowCreate = false;
-        else if (uGUIParent.GetComponent<CanvasRenderer>() == null && uGUIParent.GetComponent<Canvas>() == null)
+        if (uGUIParent != null && uGUIParent.GetComponent<CanvasRenderer>() == null && uGUIParent.GetComponent<Canvas>() == null)
         {
             EditorGUILayout.HelpBox("Selected the wrong parent. Parent must contain the Canvas or Canvas Renderer.", MessageType.Error);
             allowCreate = false;

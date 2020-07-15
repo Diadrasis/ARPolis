@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections;
@@ -25,6 +25,11 @@ public abstract class OnlineMapsTile
     /// The event, which allows you to control the path of tile in Resources.
     /// </summary>
     public static Func<OnlineMapsTile, string> OnGetResourcesPath;
+
+    /// <summary>
+    /// The event, which allows you to control the path of tile in Streaming Assets.
+    /// </summary>
+    public static Func<OnlineMapsTile, string> OnGetStreamingAssetsPath;
 
     /// <summary>
     /// The event which allows to intercept the replacement tokens in the url.\n
@@ -71,9 +76,10 @@ public abstract class OnlineMapsTile
     /// </summary>
     public static float tryAgainAfterSec = 10;
 
-    //private static Dictionary<ulong, OnlineMapsTile> _dtiles;
-    //private static List<OnlineMapsTile> _tiles;
-    //private static List<OnlineMapsTile> unusedTiles;
+    /// <summary>
+    /// Number of attempts to download a tile
+    /// </summary>
+    public static int countDownloadsAttempts = 3;
 
     #endregion
 
@@ -82,7 +88,7 @@ public abstract class OnlineMapsTile
     /// <summary>
     /// The coordinates of the bottom-right corner of the tile.
     /// </summary>
-    public Vector2 bottomRight;
+    public OnlineMapsVector2d bottomRight;
 
     /// <summary>
     /// This flag indicates whether the cache is checked for a tile.
@@ -135,10 +141,20 @@ public abstract class OnlineMapsTile
     public float overlayFrontAlpha = 1;
 
     /// <summary>
+    /// The tile texture was loaded from Resources
+    /// </summary>
+    public bool loadedFromResources = false;
+
+    /// <summary>
     /// Reference to parent tile.
     /// </summary>
     [NonSerialized]
     public OnlineMapsTile parent;
+
+    /// <summary>
+    /// Number of remaining attempts to download a tile
+    /// </summary>
+    public int remainDownloadsAttempts;
 
     /// <summary>
     /// Status of tile.
@@ -153,7 +169,7 @@ public abstract class OnlineMapsTile
     /// <summary>
     /// The coordinates of the top-left corner of the tile.
     /// </summary>
-    public Vector2 topLeft;
+    public OnlineMapsVector2d topLeft;
 
     /// <summary>
     /// Tile used by map
@@ -243,6 +259,18 @@ public abstract class OnlineMapsTile
         }
     }
 
+    /// <summary>
+    /// Path in Streaming Assets, from where the tile will be loaded.
+    /// </summary>
+    public string streamingAssetsPath
+    {
+        get
+        {
+            if (OnGetStreamingAssetsPath != null) return OnGetStreamingAssetsPath(this);
+            return Regex.Replace(map.streamingAssetsPath, @"{\w+}", CustomProviderReplaceToken);
+        }
+    }
+
     [Obsolete("Use OnlineMapsTileManager.tiles instead.")]
     public static List<OnlineMapsTile> tiles
     {
@@ -289,6 +317,7 @@ public abstract class OnlineMapsTile
     /// <param name="isMapTile">Should this tile be displayed on the map?</param>
     public OnlineMapsTile(int x, int y, int zoom, OnlineMaps map, bool isMapTile = true)
     {
+        remainDownloadsAttempts = countDownloadsAttempts;
         int maxX = 1 << zoom;
         if (x < 0) x += maxX;
         else if (x >= maxX) x -= maxX;
@@ -303,8 +332,8 @@ public abstract class OnlineMapsTile
         double tlx, tly, brx, bry;
         map.projection.TileToCoordinates(x, y, zoom, out tlx, out tly);
         map.projection.TileToCoordinates(x + 1, y + 1, zoom, out brx, out bry);
-        topLeft = new Vector2((float)tlx, (float)tly);
-        bottomRight = new Vector2((float)brx, (float)bry);
+        topLeft = new OnlineMapsVector2d(tlx, tly);
+        bottomRight = new OnlineMapsVector2d(brx, bry);
 
         globalPosition = Vector2.Lerp(topLeft, bottomRight, 0.5f);
         key = OnlineMapsTileManager.GetTileKey(zoom, x, y);
@@ -358,7 +387,11 @@ public abstract class OnlineMapsTile
             map.tileManager.tiles.Remove(this);
         }
 
-        if (texture != null) OnlineMapsUtils.Destroy(texture);
+        if (texture != null)
+        {
+            if (loadedFromResources) Resources.UnloadAsset(texture);
+            else OnlineMapsUtils.Destroy(texture);
+        }
         if (overlayBackTexture != null) OnlineMapsUtils.Destroy(overlayBackTexture);
         if (overlayFrontTexture != null) OnlineMapsUtils.Destroy(overlayFrontTexture);
 
@@ -424,7 +457,7 @@ public abstract class OnlineMapsTile
     /// <returns>Rect of the tile.</returns>
     public Rect GetRect()
     {
-        return new Rect(topLeft.x, topLeft.y, bottomRight.x - topLeft.x, bottomRight.y - topLeft.y);
+        return new Rect((float)topLeft.x, (float)topLeft.y, (float)(bottomRight.x - topLeft.x), (float)(bottomRight.y - topLeft.y));
     }
 
     /// <summary>
@@ -433,7 +466,7 @@ public abstract class OnlineMapsTile
     /// <param name="tl">Coordinates of top-left corner.</param>
     /// <param name="br">Coordinates of bottom-right corner.</param>
     /// <returns>True - if the tile at the specified coordinates, False - if not.</returns>
-    public bool InScreen(Vector2 tl, Vector2 br)
+    public bool InScreen(OnlineMapsVector2d tl, OnlineMapsVector2d br)
     {
         if (bottomRight.x < tl.x) return false;
         if (topLeft.x > br.x) return false;
@@ -471,7 +504,11 @@ public abstract class OnlineMapsTile
         if (OnTileError != null) OnTileError(this);
         if (tryAgainAfterSec >= 0)
         {
-            if (map != null) map.StartCoroutine(TryDownloadAgain());
+            if (map != null && map.source != OnlineMapsSource.Resources && map.source != OnlineMapsSource.StreamingAssets)
+            {
+                remainDownloadsAttempts--;
+                if (remainDownloadsAttempts > 0) map.StartCoroutine(TryDownloadAgain());
+            }
         }
     }
 
@@ -519,7 +556,7 @@ public abstract class OnlineMapsTile
     private IEnumerator TryDownloadAgain()
     {
         if (tryAgainAfterSec < 0) yield break;
-        if (tryAgainAfterSec < 0) yield return new WaitForSeconds(tryAgainAfterSec);
+        if (tryAgainAfterSec > 0) yield return new WaitForSeconds(tryAgainAfterSec);
 
         status = OnlineMapsTileStatus.none;
     }

@@ -1,10 +1,11 @@
-﻿/*     INFINITY CODE 2013-2018      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using UnityEngine;
 
 namespace InfinityCode.OnlineMapsDemos
 {
+    [AddComponentMenu("Infinity Code/Online Maps/Demos/UICompass")]
     public class UICompass : MonoBehaviour
     {
         public bool animated = true;

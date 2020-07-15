@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections;
@@ -191,6 +191,7 @@ public class OnlineMapsDrawingPoly : OnlineMapsDrawingElement
     public override void Draw(Color32[] buffer, Vector2 bufferPosition, int bufferWidth, int bufferHeight, float zoom, bool invertY = false)
     {
         if (!visible) return;
+        if (range != null && !range.InRange(manager.map.floatZoom)) return;
 
         FillPoly(buffer, bufferPosition, bufferWidth, bufferHeight, zoom, points, backgroundColor, invertY);
         DrawLineToBuffer(buffer, bufferPosition, bufferWidth, bufferHeight, zoom, points, borderColor, borderWidth, true, invertY);
@@ -203,6 +204,12 @@ public class OnlineMapsDrawingPoly : OnlineMapsDrawingElement
         base.DrawOnTileset(control, index);
 
         if (!visible)
+        {
+            active = false;
+            return;
+        }
+
+        if (range != null && !range.InRange(control.map.floatZoom))
         {
             active = false;
             return;
@@ -236,8 +243,12 @@ public class OnlineMapsDrawingPoly : OnlineMapsDrawingElement
 
             if (s1 == 1 && s2 == 1)
             {
-                nv1.y = OnlineMapsElevationManagerBase.GetElevation(nv1.x, nv1.z, bestElevationYScale, tlx, tly, brx, bry);
-                nv2.y = OnlineMapsElevationManagerBase.GetElevation(nv2.x, nv2.z, bestElevationYScale, tlx, tly, brx, bry);
+                if (OnlineMapsElevationManagerBase.useElevation)
+                {
+                    nv1.y = OnlineMapsElevationManagerBase.GetElevation(nv1.x, nv1.z, bestElevationYScale, tlx, tly, brx, bry);
+                    nv2.y = OnlineMapsElevationManagerBase.GetElevation(nv2.x, nv2.z, bestElevationYScale, tlx, tly, brx, bry);
+                }
+                
                 vertices[0] = vertices[vertices.Count - 3] = nv1;
                 vertices[3] = vertices[vertices.Count - 2] = nv2;
             }

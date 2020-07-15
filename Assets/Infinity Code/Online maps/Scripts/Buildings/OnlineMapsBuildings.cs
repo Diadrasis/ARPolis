@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections.Generic;
@@ -156,6 +156,11 @@ public class OnlineMapsBuildings : MonoBehaviour, IOnlineMapsSavableComponent
     public int maxBuilding = 0;
 
     /// <summary>
+    /// Building download mode
+    /// </summary>
+    //public Mode mode = Mode.tile;
+
+    /// <summary>
     /// Minimal height of the building.
     /// </summary>
     public float minHeight = 4.5f;
@@ -190,13 +195,10 @@ public class OnlineMapsBuildings : MonoBehaviour, IOnlineMapsSavableComponent
     private bool needUpdatePosition;
     private bool needUpdateScale;
     private Queue<OnlineMapsBuildingsNodeData> newBuildingsData;
-    private double prevUpdateBRX;
-    private double prevUpdateBRY;
-    private double prevUpdateTLX;
-    private double prevUpdateTLY;
     private string requestData;
     private OnlineMapsSavableItem[] savableItems;
     private bool sendBuildingsReceived = false;
+    private Dictionary<ulong, Tile> tiles;
     private OnlineMapsVector2i topLeft;
 
     private Dictionary<string, OnlineMapsBuildingBase> unusedBuildings;
@@ -480,6 +482,11 @@ public class OnlineMapsBuildings : MonoBehaviour, IOnlineMapsSavableComponent
         }
     }
 
+    private void OnDestroy()
+    {
+        OnlineMapsTileManager.OnPrepareDownloadTile -= OnPrepareDownloadTile;
+    }
+
     private void OnEnable()
     {
         map = GetComponent<OnlineMaps>();
@@ -513,14 +520,26 @@ public class OnlineMapsBuildings : MonoBehaviour, IOnlineMapsSavableComponent
 
     private void OnUpdate()
     {
-        if (sendBuildingsReceived)
+        //if (mode == Mode.view)
         {
-            if (OnNewBuildingsReceived != null) OnNewBuildingsReceived();
-            sendBuildingsReceived = false;
+            if (sendBuildingsReceived)
+            {
+                if (OnNewBuildingsReceived != null) OnNewBuildingsReceived();
+                sendBuildingsReceived = false;
+            }
         }
+        /*else if (mode == Mode.tile)
+        {
+            UpdateTiles();
+        }*/
 
         GenerateBuildings();
         UpdateBuildings();
+    }
+
+    private void UpdateTiles()
+    {
+        
     }
 
     private void RemoveAllBuildings()
@@ -601,6 +620,11 @@ public class OnlineMapsBuildings : MonoBehaviour, IOnlineMapsSavableComponent
         map.OnLateUpdateAfter += OnUpdate;
 
         UpdateBuildings();
+    }
+
+    private void OnPrepareDownloadTile(OnlineMapsTile tile)
+    {
+        
     }
 
     private void UpdateBuildings()
@@ -750,40 +774,38 @@ public class OnlineMapsBuildings : MonoBehaviour, IOnlineMapsSavableComponent
     }
 
     #endregion
-}
 
-/// <summary>
-/// It contains a dictionary of nodes and way of a building contour.
-/// </summary>
-public class OnlineMapsBuildingsNodeData
-{
-    /// <summary>
-    /// Way of a building contour.
-    /// </summary>
-    public OnlineMapsOSMWay way;
-
-    /// <summary>
-    /// Dictionary of nodes.
-    /// </summary>
-    public Dictionary<string, OnlineMapsOSMNode> nodes;
-
-    /// <summary>
-    /// Constructor
-    /// </summary>
-    /// <param name="way">Way of a building contour.</param>
-    /// <param name="nodes">Dictionary of nodes.</param>
-    public OnlineMapsBuildingsNodeData(OnlineMapsOSMWay way, Dictionary<string, OnlineMapsOSMNode> nodes)
+    public enum Mode
     {
-        this.way = way;
-        this.nodes = nodes;
+        view,
+        tile
     }
 
-    /// <summary>
-    /// Disposes this object.
-    /// </summary>
-    public void Dispose()
+    public class Tile
     {
-        way = null;
-        nodes = null;
+        /// <summary>
+        /// Is the tile loaded?
+        /// </summary>
+        public bool loaded = false;
+
+        /// <summary>
+        /// Tile X
+        /// </summary>
+        public int x;
+
+        /// <summary>
+        /// Tile Y
+        /// </summary>
+        public int y;
+
+        /// <summary>
+        /// Tile zoom
+        /// </summary>
+        public int zoom;
+
+        public string GetCacheKey(string prefix)
+        {
+            return prefix + OnlineMapsTileManager.GetTileKey(zoom, x, y);
+        }
     }
 }

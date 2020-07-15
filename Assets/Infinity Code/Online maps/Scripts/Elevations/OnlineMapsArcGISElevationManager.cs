@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -8,6 +8,7 @@ using UnityEngine;
 /// Implements the use of elevation data from ArcGIS
 /// </summary>
 [OnlineMapsPlugin("ArcGIS Elevations", typeof(OnlineMapsControlBaseDynamicMesh), "Elevations")]
+[AddComponentMenu("Infinity Code/Online Maps/Elevations/ArcGIS")]
 public class OnlineMapsArcGISElevationManager : OnlineMapsSinglePartElevationManager<OnlineMapsArcGISElevationManager>
 {
     public int resolution = 32;
@@ -157,7 +158,11 @@ public class OnlineMapsArcGISElevationManager : OnlineMapsSinglePartElevationMan
         if (resolution < 16) resolution = 16;
         else if (resolution > 100) resolution = 100;
 
-        string url = "https://sampleserver4.arcgisonline.com/ArcGIS/rest/services/Elevation/ESRI_Elevation_World/MapServer/exts/ElevationsSOE/ElevationLayers/1/GetElevationData?f=json&Extent={%22spatialReference%22:{%22wkid%22:4326},%22ymin%22:" + ey.ToString(OnlineMapsUtils.numberFormat) + ",%22ymax%22:" + sy.ToString(OnlineMapsUtils.numberFormat) + ",%22xmin%22:" + sx.ToString(OnlineMapsUtils.numberFormat) + ",%22xmax%22:" + ex.ToString(OnlineMapsUtils.numberFormat) + "}&Rows=" + resolution + "&Columns=" + resolution;
+        string url = "https://sampleserver4.arcgisonline.com/ArcGIS/rest/services/Elevation/ESRI_Elevation_World/MapServer/exts/ElevationsSOE/ElevationLayers/1/GetElevationData?f=json&Rows=" + resolution + "&Columns=" + resolution + "&Extent=";
+        url += OnlineMapsWWW.EscapeURL("{\"spatialReference\":{\"wkid\":4326},\"ymin\":" + ey.ToString(OnlineMapsUtils.numberFormat) +
+                                       ",\"ymax\":" + sy.ToString(OnlineMapsUtils.numberFormat) +
+                                       ",\"xmin\":" + sx.ToString(OnlineMapsUtils.numberFormat) +
+                                       ",\"xmax\":" + ex.ToString(OnlineMapsUtils.numberFormat) + "}");
         elevationRequest = new OnlineMapsWWW(url);
         elevationRequest.OnComplete += OnElevationRequestComplete;
         elevationDataResolution = resolution;

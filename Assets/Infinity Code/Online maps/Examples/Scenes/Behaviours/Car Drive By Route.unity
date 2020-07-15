@@ -77,15 +77,18 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -107,6 +110,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &784508915
 GameObject:
@@ -151,8 +156,10 @@ MonoBehaviour:
   amap: 
   bingMaps: 
   googleMaps: 
+  hereApiKey: 
   hereAppCode: 
   hereAppID: 
+  mapboxAccessToken: 
   openRouteService: 
   qq: 
   what3Words: 
@@ -258,14 +265,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3c476c58b6b054d9469cbe6c8fa060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customCacheUnloadRate: 0.3
+  maxCustomCacheSize: 100
   fileCacheLocation: 0
   fileCacheCustomPath: 
   fileCacheTilePath: TileCache/{pid}/{mid}/{lbs}/{lng}/{zoom}/{x}/{y}
   fileCacheUnloadRate: 0.3
   maxFileCacheSize: 100
+  useFileCache: 1
   maxMemoryCacheSize: 10
   memoryCacheUnloadRate: 0.3
-  useFileCache: 1
   useMemoryCache: 1
 --- !u!114 &1504040498
 MonoBehaviour:
@@ -281,14 +290,18 @@ MonoBehaviour:
   activeTexture: {fileID: 0}
   allowZoom: 0
   allowUserControl: 0
+  drawingElementManager: {fileID: 0}
   isMapDrag: 0
   invertTouchZoom: 0
+  markerManager: {fileID: 0}
   smoothZoom: 1
   zoomInOnDoubleClick: 1
   zoomMode: 0
+  zoomSensitivity: 1
   activeCamera: {fileID: 0}
   marker2DMode: 0
   marker2DSize: 100
+  marker3DManager: {fileID: 0}
   originalPosition: {x: 0, y: 0, z: 0}
   originalScale: {x: 0, y: 0, z: 0}
   checkMarker2DVisibility: 0
@@ -303,8 +316,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 0}
   tilesetShader: {fileID: 4800000, guid: f65580aa9bbbd7e42b05adab01e1ca2d, type: 3}
   _mipmapForTiles: 0
-  smoothZoomMinScale: -3.4028235e+38
-  smoothZoomMaxScale: 3.4028235e+38
 --- !u!114 &1504040499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,6 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _items: []
+  defaultScale: 1
   defaultTexture: {fileID: 2800000, guid: ea7eb0aa8eaab054a91d4219f9719f63, type: 3}
   defaultAlign: 7
   allowAddMarkerByM: 1
@@ -332,9 +344,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _items: []
+  defaultScale: 1
   allowAddMarker3DByN: 1
   defaultPrefab: {fileID: 0}
-  defaultScale: 1
 --- !u!114 &1504040501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowRedraw: 1
+  countParentLevels: 5
   customProviderURL: 
   customTrafficProviderURL: http://localhost/{zoom}/{y}/{x}
   defaultTileTexture: {fileID: 0}
@@ -363,6 +376,7 @@ MonoBehaviour:
   redrawOnPlay: 1
   renderInThread: 0
   resourcesPath: OnlineMapsTiles/{zoom}/{x}/{y}
+  streamingAssetsPath: OnlineMapsTiles/{zoom}/{x}/{y}.png
   showMarkerTooltip: 0
   source: 0
   stopPlayingWhenScriptsCompile: 1
@@ -379,7 +393,6 @@ MonoBehaviour:
   _zoom: 17
   latitude: 50.5636291503906
   longitude: 8.50045013427734
-  useSmartTexture: 1
 --- !u!4 &1504040502
 Transform:
   m_ObjectHideFlags: 0
@@ -424,10 +437,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjustTo: 0
+  adjustToGameObject: {fileID: 0}
   distance: 300
   maxRotationX: 80
   rotation: {x: 55, y: 0}
   speed: {x: 0, y: 0}
+  lockTilt: 0
+  lockPan: 0
 --- !u!1 &1747343688
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +547,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1876177460}
   - component: {fileID: 1876177459}
-  - component: {fileID: 1876177458}
   - component: {fileID: 1876177457}
   - component: {fileID: 1876177456}
   m_Layer: 0
@@ -549,13 +564,6 @@ AudioListener:
   m_GameObject: {fileID: 1876177455}
   m_Enabled: 1
 --- !u!124 &1876177457
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1876177455}
-  m_Enabled: 1
---- !u!92 &1876177458
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -593,11 +601,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!4 &1876177460
 Transform:
   m_ObjectHideFlags: 0

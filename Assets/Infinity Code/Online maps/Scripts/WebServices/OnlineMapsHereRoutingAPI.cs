@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Linq;
@@ -13,18 +13,31 @@ using UnityEngine;
 /// </summary>
 public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
 {
-    private OnlineMapsHereRoutingAPI(string app_id, string app_code, Waypoint[] waypoints, RoutingMode mode, Params p)
+    private OnlineMapsHereRoutingAPI(string app_id, string app_code, string apiKey, Waypoint[] waypoints, RoutingMode mode, Params p)
     {
         if (string.IsNullOrEmpty(app_code)) app_code = OnlineMapsKeyManager.HereAppCode();
         if (string.IsNullOrEmpty(app_id)) app_id = OnlineMapsKeyManager.HereAppID();
+        if (string.IsNullOrEmpty(apiKey)) apiKey = OnlineMapsKeyManager.HereApiKey();
 
-        if (string.IsNullOrEmpty(app_id)) throw new Exception("app_id can not be empty.");
-        if (string.IsNullOrEmpty(app_code)) throw new Exception("app_code can not be empty.");
+        if (string.IsNullOrEmpty(apiKey) && 
+           (string.IsNullOrEmpty(app_id) || string.IsNullOrEmpty(app_code)))
+        {
+            throw new Exception("HERE requires App ID + App Code or Api Key.");
+        }
+
         if (waypoints == null || waypoints.Length < 2) throw new Exception("Requires 2 or more waypoints.");
 
-        StringBuilder builder = new StringBuilder("https://route.api.here.com/routing/7.2/calculateroute.xml?");
-        builder.Append("app_code=").Append(app_code);
-        builder.Append("&app_id=").Append(app_id);
+        StringBuilder builder = new StringBuilder("https://route.ls.hereapi.com/routing/7.2/calculateroute.xml?");
+        if (!string.IsNullOrEmpty(apiKey))
+        {
+            builder.Append("apiKey=").Append(apiKey);
+        }
+        else
+        {
+            builder.Append("app_code=").Append(app_code);
+            builder.Append("&app_id=").Append(app_id);
+        }
+
 
         for (int i = 0; i < waypoints.Length; i++)
         {
@@ -39,6 +52,29 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         Debug.Log(builder);
         www = new OnlineMapsWWW(builder);
         www.OnComplete += OnRequestComplete;
+    }
+
+    /// <summary>
+    /// Creates a new request for a route search.
+    /// </summary>
+    /// <param name="apiKey">A 43-byte Base64 URL-safe encoded string used for the authentication of the client application.</param>
+    /// <param name="waypoints">
+    /// List of waypoints that define a route. The first element marks the start, the last the end point.\n
+    /// Waypoints in between are interpreted as via points.
+    /// </param>
+    /// <param name="mode">The routing mode determines how the route is calculated.</param>
+    /// <param name="p">Optional request parameters.</param>
+    /// <returns>Query instance to HERE Routing API.</returns>
+
+    public static OnlineMapsTextWebService Find(
+        string apiKey,
+        Waypoint[] waypoints,
+        RoutingMode mode = null,
+        Params p = null
+    )
+    {
+        if (mode == null) mode = new RoutingMode();
+        return new OnlineMapsHereRoutingAPI(null,null, apiKey, waypoints, mode, p);
     }
 
     /// <summary>
@@ -62,7 +98,33 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         )
     {
         if (mode == null) mode = new RoutingMode();
-        return new OnlineMapsHereRoutingAPI(app_id, app_code, waypoints, mode, p);
+        return new OnlineMapsHereRoutingAPI(app_id, app_code, null, waypoints, mode, p);
+    }
+
+    /// <summary>
+    /// Creates a new request for a route search.
+    /// </summary>
+    /// <param name="app_id">A 20 bytes Base64 URL-safe encoded string used for the authentication of the client application.</param>
+    /// <param name="app_code">A 20 bytes Base64 URL-safe encoded string used for the authentication of the client application. </param>
+    /// <param name="apiKey">A 43-byte Base64 URL-safe encoded string used for the authentication of the client application.</param>
+    /// <param name="waypoints">
+    /// List of waypoints that define a route. The first element marks the start, the last the end point.\n
+    /// Waypoints in between are interpreted as via points.
+    /// </param>
+    /// <param name="mode">The routing mode determines how the route is calculated.</param>
+    /// <param name="p">Optional request parameters.</param>
+    /// <returns>Query instance to HERE Routing API.</returns>
+    public static OnlineMapsTextWebService Find(
+        string app_id,
+        string app_code,
+        string apiKey,
+        Waypoint[] waypoints,
+        RoutingMode mode = null,
+        Params p = null
+    )
+    {
+        if (mode == null) mode = new RoutingMode();
+        return new OnlineMapsHereRoutingAPI(app_id, app_code, apiKey, waypoints, mode, p);
     }
 
     /// <summary>

@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using UnityEngine;
 using Debug = UnityEngine.Debug;
@@ -8,6 +8,7 @@ using Debug = UnityEngine.Debug;
 /// Map log manager
 /// </summary>
 [OnlineMapsPlugin("Log", typeof(OnlineMapsControlBase))]
+[AddComponentMenu("Infinity Code/Online Maps/Plugins/Log")]
 public class OnlineMapsLog: MonoBehaviour
 {
     private static OnlineMapsLog _instance;

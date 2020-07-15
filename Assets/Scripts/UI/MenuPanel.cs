@@ -14,6 +14,9 @@ namespace ARPolis.UI
     {
         public Animator animMenuPanel, animTownMenu;
         public GameObject menuPanel, btnPrevCity, btnNextCity, creditsExtraButtonsPanel;
+        /// <summary>
+        /// scroll snap town images (menu)
+        /// </summary>
         public ScrollSnapCustom snapCustom;
         public ScrollRect scrollRect;
 
@@ -21,7 +24,7 @@ namespace ARPolis.UI
                       btnQuitApp, btnCredits, btnAthensMenu, btnNafpaktosMenu, btnHerakleionMenu,
                       btnLanguage;
 
-        public Image iconBtnLanguage;
+        public Image iconBtnLanguage, iconBtnMenu;
 
         public Sprite sprOnsite, sprOffSite, sprMenuOn, sprMenuOff, sprEng, sprGR;
 
@@ -84,6 +87,13 @@ namespace ARPolis.UI
 
             menuPanel.SetActive(false);
 
+            snapCustom.OnSelectionPageChangedEvent.AddListener(OnPageChangeEnd);
+
+        }
+
+        private void OnPageChangeEnd(int pageNo)
+        {
+            if (B.isEditor) Debug.Log("thematic id = " + pageNo);
         }
 
         void ChangeLanguage()
@@ -103,6 +113,7 @@ namespace ARPolis.UI
         void ShowAthensMenu()
         {
             if (B.isRealEditor) Debug.Log("ShowAthensMenu");
+            InfoManager.Instance.thematicNowID = "1";
             animTownMenu.gameObject.SetActive(true);
             animTownMenu.SetBool("show", true);
         }
@@ -110,6 +121,7 @@ namespace ARPolis.UI
         void ShowNafpaktosMenu()
         {
             if (B.isRealEditor) Debug.Log("ShowNafpaktosMenu");
+            InfoManager.Instance.thematicNowID = "2";
             //animTownMenu.gameObject.SetActive(true);
             //animTownMenu.SetBool("show", true);
         }
@@ -117,6 +129,7 @@ namespace ARPolis.UI
         void ShowHerakleionMenu()
         {
             if (B.isRealEditor) Debug.Log("ShowHerakleionMenu");
+            InfoManager.Instance.thematicNowID = "3";
             //animTownMenu.gameObject.SetActive(true);
             //animTownMenu.SetBool("show", true);
         }
@@ -134,7 +147,6 @@ namespace ARPolis.UI
             while(!menuPanel.activeSelf) yield return new WaitForEndOfFrame();
             snapCustom.Init();
             snapCustom.enabled = true;
-            snapCustom.SetCustomPage(val);
             SetStatusOnSite();
         }
 
@@ -179,17 +191,21 @@ namespace ARPolis.UI
         {
             if (B.isRealEditor) Debug.Log("ToggleSideMenu");
 
-            if (btnToggleSideMenu.image.sprite == sprMenuOff)
+            if (iconBtnMenu.sprite == sprMenuOff)
             {
                 //hide panel
-                btnToggleSideMenu.image.sprite = sprMenuOn;
+                //btnToggleSideMenu.image.sprite = sprMenuOn;
+                iconBtnMenu.rectTransform.sizeDelta = new Vector2(100f, 100f);
+                iconBtnMenu.sprite = sprMenuOn;
                 panelSideMenuTransition.HidePanel();
                 btnCloseSideMenuBehind.gameObject.SetActive(false);
             }
             else
             {
                 //show panel
-                btnToggleSideMenu.image.sprite = sprMenuOff;
+                //btnToggleSideMenu.image.sprite = sprMenuOff;
+                iconBtnMenu.rectTransform.sizeDelta = new Vector2(80f, 80f);
+                iconBtnMenu.sprite = sprMenuOff;
                 panelSideMenuTransition.ShowPanel();
                 btnCloseSideMenuBehind.gameObject.SetActive(true);
             }

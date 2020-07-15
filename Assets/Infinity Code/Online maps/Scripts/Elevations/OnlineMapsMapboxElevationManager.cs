@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -8,6 +8,7 @@ using UnityEngine;
 /// Implements the use of elevation data from Mapbox
 /// </summary>
 [OnlineMapsPlugin("Mapbox Elevations", typeof(OnlineMapsControlBaseDynamicMesh), "Elevations")]
+[AddComponentMenu("Infinity Code/Online Maps/Elevations/Mapbox")]
 public class OnlineMapsMapboxElevationManager : OnlineMapsTiledElevationManager<OnlineMapsMapboxElevationManager>
 {
     /// <summary>
@@ -23,6 +24,11 @@ public class OnlineMapsMapboxElevationManager : OnlineMapsTiledElevationManager<
     protected override int tileHeight
     {
         get { return 256; }
+    }
+
+    protected override string cachePrefix
+    {
+        get { return "mapbox_elevation_"; }
     }
 
     public override void CancelCurrentElevationRequest()
@@ -85,6 +91,8 @@ public class OnlineMapsMapboxElevationManager : OnlineMapsTiledElevationManager<
             }
         }
 
+        SetElevationToCache(tile, tile.elevations);
+
         tile.minValue = min;
         tile.maxValue = max;
 
@@ -106,6 +114,8 @@ public class OnlineMapsMapboxElevationManager : OnlineMapsTiledElevationManager<
 
     public override void StartDownloadElevationTile(Tile tile)
     {
+        if (TryLoadFromCache(tile)) return;
+
         string token = !string.IsNullOrEmpty(accessToken) ? accessToken : OnlineMapsKeyManager.Mapbox();
         string url = "https://api.mapbox.com/v4/mapbox.terrain-rgb/" + tile.zoom + "/" + tile.x + "/" + tile.y + ".pngraw?access_token=" + token;
         OnlineMapsWWW www = new OnlineMapsWWW(url);

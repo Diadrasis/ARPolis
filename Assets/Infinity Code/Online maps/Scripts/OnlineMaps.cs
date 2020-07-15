@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections;
@@ -27,7 +27,7 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     /// <summary>
     /// The current version of Online Maps
     /// </summary>
-    public const string version = "3.6.4.1";
+    public const string version = "3.7.3.1";
 
     /// <summary>
     /// The minimum zoom level
@@ -37,9 +37,7 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     /// <summary>
     /// The maximum zoom level
     /// </summary>
-#if ONLINEMAPS_MAXZOOM_23
-    public const int MAXZOOM = 23;
-#elif ONLINEMAPS_MAXZOOM_22
+#if ONLINEMAPS_MAXZOOM_22
     public const int MAXZOOM = 22;
 #elif ONLINEMAPS_MAXZOOM_21
     public const int MAXZOOM = 21;
@@ -47,6 +45,19 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     public const int MAXZOOM = 20;
 #endif
 
+    #region Static Actions
+
+    /// <summary>
+    /// The event is called when the map starts.
+    /// </summary>
+    public static Action<OnlineMaps> OnStart;
+
+    /// <summary>
+    /// The event occurs after generating buffer and before update control to preload tiles for tileset.
+    /// </summary>
+    public static Action<OnlineMaps> OnPreloadTiles;
+
+    #endregion
 
     #region Actions
 
@@ -86,19 +97,9 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     public Action OnLateUpdateBefore;
 
     /// <summary>
-    /// The event is called when the map starts.
-    /// </summary>
-    public static Action<OnlineMaps> OnStart;
-
-    /// <summary>
     /// Event which is called after the redrawing of the map.
     /// </summary>
     public Action OnMapUpdated;
-
-    /// <summary>
-    /// The event occurs after generating buffer and before update control to preload tiles for tileset.
-    /// </summary>
-    public static Action<OnlineMaps> OnPreloadTiles;
 
     /// <summary>
     /// Event is called before Update.
@@ -238,6 +239,12 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     public string resourcesPath = "OnlineMapsTiles/{zoom}/{x}/{y}";
 
     /// <summary>
+    /// Template path in Streaming Assets, from where the tiles will be loaded.\n
+    /// This field supports tokens.
+    /// </summary>
+    public string streamingAssetsPath = "OnlineMapsTiles/{zoom}/{x}/{y}.png";
+
+    /// <summary>
     /// Indicates when the marker will show tips.
     /// </summary>
     public OnlineMapsShowMarkerTooltip showMarkerTooltip = OnlineMapsShowMarkerTooltip.onHover;
@@ -258,19 +265,25 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     /// </summary>
     public Texture2D texture;
 
+    /// <summary>
+    /// Reference to tile manager
+    /// </summary>
     [NonSerialized]
     public OnlineMapsTileManager tileManager;
 
+    /// <summary>
+    /// Reference to tooltip drawer
+    /// </summary>
     [NonSerialized]
     public OnlineMapsTooltipDrawerBase tooltipDrawer;
 
     /// <summary>
-    /// Background texture of tooltip.
+    /// Background texture of tooltip
     /// </summary>
     public Texture2D tooltipBackgroundTexture;
 
     /// <summary>
-    /// Specifies whether to draw traffic.
+    /// Specifies whether to draw traffic
     /// </summary>
     public bool traffic = false;
 
@@ -281,7 +294,7 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     public OnlineMapsTrafficProvider trafficProvider;
 
     /// <summary>
-    /// ID of current traffic provider.
+    /// ID of current traffic provider
     /// </summary>
     public string trafficProviderID = "googlemaps";
 
@@ -1026,6 +1039,28 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
         lat = topLeftLatitude;
     }
 
+    /// <summary>
+    /// Checks if the coordinates are in the map view.
+    /// </summary>
+    /// <param name="lng">Longitude</param>
+    /// <param name="lat">Latitude</param>
+    /// <returns>True - coordinates in map view. False - coordinates outside the map view.</returns>
+    public bool InMapView(double lng, double lat)
+    {
+        if (lat > topLeftLatitude || lat < bottomRightLatitude) return false;
+
+        double tlx = topLeftLongitude;
+        double brx = bottomRightLongitude;
+
+        if (tlx > brx)
+        {
+            brx += 360;
+            if (lng < tlx) lng += 360;
+        }
+
+        return tlx <= lng && brx >= lng;
+    }
+
     private void LateUpdate()
     {
         if (OnLateUpdateBefore != null) OnLateUpdateBefore();
@@ -1091,6 +1126,12 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
                 texture.Apply();
             }
         }
+
+        OnChangePosition = null;
+        OnChangeZoom = null;
+        OnMapUpdated = null;
+        OnUpdateBefore = null;
+        OnUpdateLate = null;
     }
 
     private void OnDisable ()
@@ -1117,15 +1158,6 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
         }
 
         _control = null;
-        OnChangePosition = null;
-        OnChangeZoom = null;
-        OnMapUpdated = null;
-        OnUpdateBefore = null;
-        OnUpdateLate = null;
-        OnlineMapsTile.OnGetResourcesPath = null;
-        OnlineMapsTile.OnTileDownloaded = null;
-        OnlineMapsTile.OnTrafficDownloaded = null;
-        OnlineMapsMarkerBase.OnMarkerDrawTooltip = null;
 
         if (_instance == this) _instance = null;
     }

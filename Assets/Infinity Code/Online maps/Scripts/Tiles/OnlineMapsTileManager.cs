@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections;
@@ -17,6 +17,9 @@ public class OnlineMapsTileManager
     /// </summary>
     public static int maxTileDownloads = 5;
 
+    /// <summary>
+    /// This event is used to load a tile from the cache. Use this event only if you are implementing your own caching system.
+    /// </summary>
     public static Action<OnlineMapsTile> OnLoadFromCache;
 
     /// <summary>
@@ -24,6 +27,9 @@ public class OnlineMapsTileManager
     /// </summary>
     public static Action OnPreloadTiles;
 
+    /// <summary>
+    /// This event is used in preparation for loading a tile.
+    /// </summary>
     public static Action<OnlineMapsTile> OnPrepareDownloadTile;
 
     /// <summary>
@@ -42,17 +48,26 @@ public class OnlineMapsTileManager
     private List<OnlineMapsTile> _tiles;
     private List<OnlineMapsTile> unusedTiles;
 
+    /// <summary>
+    /// Dictionary of tiles
+    /// </summary>
     public Dictionary<ulong, OnlineMapsTile> dTiles
     {
         get { return _dtiles; }
     }
 
+    /// <summary>
+    /// List of tiles
+    /// </summary>
     public List<OnlineMapsTile> tiles
     {
         get { return _tiles; }
         set { _tiles = value; }
     }
 
+    /// <summary>
+    /// Reference to the map
+    /// </summary>
     public OnlineMaps map
     {
         get { return _map; }
@@ -66,6 +81,10 @@ public class OnlineMapsTileManager
         _dtiles = new Dictionary<ulong, OnlineMapsTile>();
     }
 
+    /// <summary>
+    /// Add a tile to the manager
+    /// </summary>
+    /// <param name="tile">Tile</param>
     public void Add(OnlineMapsTile tile)
     {
         tiles.Add(tile);
@@ -157,7 +176,7 @@ public class OnlineMapsTileManager
             return;
         }
 
-        if (!www.hasError)
+        if (!www.hasError && www.bytesDownloaded > 0)
         {
             if (tile.map.control.resultIsTexture)
             {
@@ -269,7 +288,7 @@ public class OnlineMapsTileManager
     }
 
     /// <summary>
-    /// Starts dowloading of specified tile.
+    /// Starts downloading of specified tile.
     /// </summary>
     /// <param name="tile">Tile to be downloaded.</param>
     public static void StartDownloadTile(OnlineMapsTile tile)
@@ -282,41 +301,21 @@ public class OnlineMapsTileManager
     {
         bool loadOnline = true;
 
-        if (tile.map.source != OnlineMapsSource.Online)
+        OnlineMaps map = tile.map;
+        OnlineMapsSource source = map.source;
+        if (source != OnlineMapsSource.Online)
         {
-            ResourceRequest resourceRequest = Resources.LoadAsync(tile.resourcesPath);
-            yield return resourceRequest;
-
-            if (tile.map == null)
+            if (source == OnlineMapsSource.Resources || source == OnlineMapsSource.ResourcesAndOnline)
             {
-                tile.MarkError();
-                yield break;
+                yield return TryLoadFromResources(tile);
+                if (tile.status == OnlineMapsTileStatus.error) yield break;
+                if (tile.status == OnlineMapsTileStatus.loaded) loadOnline = false;
             }
-
-            Texture2D texture = resourceRequest.asset as Texture2D;
-
-            if (texture != null)
+            else if (source == OnlineMapsSource.StreamingAssets || source == OnlineMapsSource.StreamingAssetsAndOnline)
             {
-                texture.wrapMode = TextureWrapMode.Clamp;
-                if (tile.map.control.resultIsTexture)
-                {
-                    (tile as OnlineMapsRasterTile).ApplyTexture(texture);
-                    tile.map.buffer.ApplyTile(tile);
-                    OnlineMapsUtils.Destroy(texture);
-                }
-                else
-                {
-                    tile.texture = texture;
-                    tile.status = OnlineMapsTileStatus.loaded;
-                }
-                tile.MarkLoaded();
-                tile.map.Redraw();
-                loadOnline = false;
-            }
-            else if (tile.map.source == OnlineMapsSource.Resources)
-            {
-                tile.MarkError();
-                yield break;
+                yield return TryLoadFromStreamingAssets(tile);
+                if (tile.status == OnlineMapsTileStatus.error) yield break;
+                if (tile.status == OnlineMapsTileStatus.loaded) loadOnline = false;
             }
         }
 
@@ -336,12 +335,109 @@ public class OnlineMapsTileManager
 
         OnlineMapsRasterTile rTile = tile as OnlineMapsRasterTile;
 
-        if (tile.map.traffic && !string.IsNullOrEmpty(rTile.trafficURL))
+        try
         {
-            rTile.trafficWWW = new OnlineMapsWWW(rTile.trafficURL);
-            rTile.trafficWWW["tile"] = tile;
-            rTile.trafficWWW.OnComplete += OnTrafficWWWComplete;
+            if (map.traffic && !string.IsNullOrEmpty(rTile.trafficURL))
+            {
+                rTile.trafficWWW = new OnlineMapsWWW(rTile.trafficURL);
+                rTile.trafficWWW["tile"] = tile;
+                rTile.trafficWWW.OnComplete += OnTrafficWWWComplete;
+            }
         }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
+        
+    }
+
+    private static IEnumerator TryLoadFromResources(OnlineMapsTile tile)
+    {
+        ResourceRequest resourceRequest = Resources.LoadAsync(tile.resourcesPath);
+        yield return resourceRequest;
+
+        if (tile.map == null)
+        {
+            tile.MarkError();
+            yield break;
+        }
+
+        Texture2D texture = resourceRequest.asset as Texture2D;
+
+        if (texture != null)
+        {
+            texture.wrapMode = TextureWrapMode.Clamp;
+            if (tile.map.control.resultIsTexture)
+            {
+                (tile as OnlineMapsRasterTile).ApplyTexture(texture);
+                tile.map.buffer.ApplyTile(tile);
+                OnlineMapsUtils.Destroy(texture);
+            }
+            else
+            {
+                tile.texture = texture;
+                tile.status = OnlineMapsTileStatus.loaded;
+            }
+            tile.MarkLoaded();
+            tile.loadedFromResources = true;
+            tile.map.Redraw();
+        }
+        else if (tile.map.source == OnlineMapsSource.Resources)
+        {
+            tile.MarkError();
+        }
+    }
+
+    private static IEnumerator TryLoadFromStreamingAssets(OnlineMapsTile tile)
+    {
+        if (tile.map == null)
+        {
+            tile.MarkError();
+            yield break;
+        }
+
+#if !UNITY_WEBGL || UNITY_EDITOR
+        string path = Application.streamingAssetsPath + "/" + tile.streamingAssetsPath;
+#if !UNITY_ANDROID || UNITY_EDITOR
+        if (!System.IO.File.Exists(path))
+        {
+            if (tile.map.source == OnlineMapsSource.StreamingAssets) tile.MarkError();
+            yield break;
+        }
+        byte[] bytes = System.IO.File.ReadAllBytes(path);
+#else
+        OnlineMapsWWW www = new OnlineMapsWWW(path);
+        yield return www;
+
+        if (www.hasError)
+        {
+            if (tile.map.source == OnlineMapsSource.StreamingAssets) tile.MarkError();
+            yield break;
+        }
+        byte[] bytes = www.bytes;
+#endif
+
+        Texture2D texture = new Texture2D(1, 1);
+        texture.LoadImage(bytes);
+
+        texture.wrapMode = TextureWrapMode.Clamp;
+        if (tile.map.control.resultIsTexture)
+        {
+            (tile as OnlineMapsRasterTile).ApplyTexture(texture);
+            tile.map.buffer.ApplyTile(tile);
+            OnlineMapsUtils.Destroy(texture);
+        }
+        else
+        {
+            tile.texture = texture;
+            tile.status = OnlineMapsTileStatus.loaded;
+        }
+
+        tile.MarkLoaded();
+        tile.map.Redraw();
+#else
+        if (tile.map.source == OnlineMapsSource.StreamingAssets) tile.MarkError();
+#endif
     }
 
     public void UnloadUnusedTiles()

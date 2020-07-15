@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -543,7 +543,7 @@ public abstract class OnlineMapsLocationServiceBase : MonoBehaviour, IOnlineMaps
         if (Math.Abs(trueHeading - emulatorCompass) > float.Epsilon)
         {
             compassChanged = true;
-            trueHeading = emulatorCompass;
+            trueHeading = Mathf.Repeat(emulatorCompass, 360);
             if (OnCompassChanged != null) OnCompassChanged(trueHeading / 360);
         }
     }
@@ -573,7 +573,8 @@ public abstract class OnlineMapsLocationServiceBase : MonoBehaviour, IOnlineMaps
                 OnlineMapsMarker m2d = OnlineMapsMarkerManager.CreateItem(position, marker2DTexture, markerTooltip);
                 _marker = m2d;
                 m2d.align = marker2DAlign;
-                if (useCompassForMarker) m2d.rotation = trueHeading / 360;
+                m2d.scale = markerScale;
+                if (useCompassForMarker) m2d.rotationDegree = trueHeading;
             }
             else
             {
@@ -587,6 +588,7 @@ public abstract class OnlineMapsLocationServiceBase : MonoBehaviour, IOnlineMaps
                 OnlineMapsMarker3D m3d = OnlineMapsMarker3DManager.CreateItem(position, marker3DPrefab);
                 _marker = m3d;
                 m3d.sizeType = marker3DSizeType;
+                m3d.scale = markerScale;
                 m3d.label = markerTooltip;
                 if (useCompassForMarker) m3d.rotationY = trueHeading;
             }
@@ -602,7 +604,7 @@ public abstract class OnlineMapsLocationServiceBase : MonoBehaviour, IOnlineMaps
         if (!useCompassForMarker || marker == null) return;
 
         float value;
-        if (markerType == OnlineMapsLocationServiceMarkerType.twoD) value = (_marker as OnlineMapsMarker).rotation * 360;
+        if (markerType == OnlineMapsLocationServiceMarkerType.twoD) value = (_marker as OnlineMapsMarker).rotationDegree;
         else value = (_marker as OnlineMapsMarker3D).rotationY;
 
         if (trueHeading - value > 180) value += 360;
@@ -613,7 +615,7 @@ public abstract class OnlineMapsLocationServiceBase : MonoBehaviour, IOnlineMaps
             if (!lerpCompassValue || Mathf.Abs(trueHeading - value) < 0.003f) value = trueHeading;
             else value = Mathf.Lerp(value, trueHeading, 0.02f);
 
-            if (markerType == OnlineMapsLocationServiceMarkerType.twoD) (_marker as OnlineMapsMarker).rotation = value / 360;
+            if (markerType == OnlineMapsLocationServiceMarkerType.twoD) (_marker as OnlineMapsMarker).rotationDegree = value;
             else (_marker as OnlineMapsMarker3D).rotationY = value;
 
             map.Redraw();

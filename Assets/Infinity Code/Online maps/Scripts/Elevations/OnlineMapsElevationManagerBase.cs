@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -206,7 +206,7 @@ public abstract class OnlineMapsElevationManagerBase : MonoBehaviour
     /// <returns>Elevation value</returns>
     public static float GetElevation(double x, double z, float? yScale = null)
     {
-        if (_instance == null) return 0;
+        if (_instance == null || !_instance.enabled) return 0;
 
         double tlx, tly, brx, bry;
         _instance.map.GetCorners(out tlx, out tly, out brx, out bry);
@@ -227,7 +227,7 @@ public abstract class OnlineMapsElevationManagerBase : MonoBehaviour
     /// <returns>Elevation value</returns>
     public static float GetElevation(double x, double z, float yScale, double tlx, double tly, double brx, double bry)
     {
-        if (_instance == null) return 0;
+        if (_instance == null || !_instance.enabled) return 0;
         return _instance.GetElevationValue(x, z, yScale, tlx, tly, brx, bry);
     }
 
@@ -259,7 +259,7 @@ public abstract class OnlineMapsElevationManagerBase : MonoBehaviour
     /// <returns>Elevation value</returns>
     public static float GetUnscaledElevation(double x, double z)
     {
-        if (_instance == null) return 0;
+        if (_instance == null || !_instance.enabled) return 0;
 
         double tlx, tly, brx, bry;
         _instance.map.GetCorners(out tlx, out tly, out brx, out bry);
@@ -278,11 +278,31 @@ public abstract class OnlineMapsElevationManagerBase : MonoBehaviour
     /// <returns>Elevation value</returns>
     public static float GetUnscaledElevation(double x, double z, double tlx, double tly, double brx, double bry)
     {
-        if (_instance != null) return _instance.GetUnscaledElevationValue(x, z, tlx, tly, brx, bry);
+        if (_instance != null && _instance.enabled) return _instance.GetUnscaledElevationValue(x, z, tlx, tly, brx, bry);
         return 0;
     }
 
     protected abstract float GetUnscaledElevationValue(double x, double z, double tlx, double tly, double brx, double bry);
+
+    /// <summary>
+    /// Returns the unscaled elevation value for a coordinate.
+    /// </summary>
+    /// <param name="lng">Longitude</param>
+    /// <param name="lat">Latitude</param>
+    /// <returns>Elevation value</returns>
+    public static float GetUnscaledElevationByCoordinate(double lng, double lat)
+    {
+        if (_instance == null || !_instance.enabled) return 0;
+
+        double tlx, tly, brx, bry, mx, my;
+        _instance.map.GetCorners(out tlx, out tly, out brx, out bry);
+
+        _instance.control.GetPosition(lng, lat, out mx, out my);
+        mx = -mx / _instance.map.width * _instance.control.sizeInScene.x;
+        my = my / _instance.map.height * _instance.control.sizeInScene.y;
+
+        return _instance.GetUnscaledElevationValue(mx, my, tlx, tly, brx, bry);
+    }
 
     /// <summary>
     /// Downloads new elevation data for area

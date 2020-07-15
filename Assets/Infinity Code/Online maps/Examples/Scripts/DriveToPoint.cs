@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -71,16 +71,8 @@ namespace InfinityCode.OnlineMapsDemos
                 go.transform.SetParent(transform, false);
                 lineRenderer = go.AddComponent<LineRenderer>();
                 lineRenderer.material = lineRendererMaterial;
-#if UNITY_2017_3_OR_NEWER
                 lineRenderer.positionCount = 2;
                 lineRenderer.widthCurve = AnimationCurve.Constant(0, 1, 10);
-#elif UNITY_2017_1_OR_NEWER
-                lineRenderer.positionCount = 2;
-                lineRenderer.widthCurve = AnimationCurve.Linear(0, 10, 1, 10);
-#else
-                lineRenderer.SetVertexCount(2);
-                lineRenderer.SetWidth(10, 10);
-#endif
             }
             else lineRenderer.enabled = true;
 

@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections.Generic;
@@ -55,6 +55,7 @@ public class OnlineMapsEditor : Editor
     private SerializedProperty pLabels;
     private SerializedProperty pCustomProviderURL;
     private SerializedProperty pResourcesPath;
+    private SerializedProperty pStreamingAssetsPath;
     private SerializedProperty pTexture;
     private SerializedProperty pRedrawOnPlay;
     private SerializedProperty pCountParentLevels;
@@ -136,6 +137,7 @@ public class OnlineMapsEditor : Editor
         pCustomProviderURL = serializedObject.FindProperty("customProviderURL");
         pCustomTrafficProviderURL = serializedObject.FindProperty("customTrafficProviderURL");
         pResourcesPath = serializedObject.FindProperty("resourcesPath");
+        pStreamingAssetsPath = serializedObject.FindProperty("streamingAssetsPath");
 
         pLabels = serializedObject.FindProperty("labels");
         pLanguage = serializedObject.FindProperty("language");
@@ -630,7 +632,7 @@ public class OnlineMapsEditor : Editor
         OnlineMapsEditorUtils.PropertyField(pSource, "Source of tiles");
 
 #if UNITY_WEBGL
-        if (pSource.enumValueIndex != (int)OnlineMapsSource.Resources)
+        if (pSource.enumValueIndex != (int)OnlineMapsSource.Resources && pSource.enumValueIndex != (int)OnlineMapsSource.StreamingAssets)
         {
             EditorGUILayout.PropertyField(pUseProxy, new GUIContent("Use Proxy"));
             EditorGUI.BeginDisabledGroup(!pUseProxy.boolValue);
@@ -644,9 +646,19 @@ public class OnlineMapsEditor : Editor
         {
             if (GUILayout.Button("Fix Import Settings for Tiles")) FixImportSettings();
             if (GUILayout.Button("Import from GMapCatcher")) ImportFromGMapCatcher();
-            
-            OnlineMapsEditorUtils.PropertyField(pResourcesPath, "The path pattern inside Resources folder");
-            
+
+            if (pSource.enumValueIndex == (int) OnlineMapsSource.Resources || pSource.enumValueIndex == (int) OnlineMapsSource.ResourcesAndOnline)
+            {
+                OnlineMapsEditorUtils.PropertyField(pResourcesPath, "The path pattern inside Resources folder");
+            }
+            else
+            {
+                OnlineMapsEditorUtils.PropertyField(pStreamingAssetsPath, "The path pattern inside Streaming Assets folder");
+#if UNITY_WEBGL
+                EditorGUILayout.HelpBox("Streaming Assets folder is not available for WebGL!", MessageType.Warning);
+#endif
+            }
+
             EditorGUILayout.BeginVertical(GUI.skin.box);
             showResourcesTokens = Foldout(showResourcesTokens, "Available Tokens");
             if (showResourcesTokens)
@@ -669,6 +681,7 @@ public class OnlineMapsEditor : Editor
     {
         if (control != null && !control.useRasterTiles) return;
         if (pSource.enumValueIndex == (int) OnlineMapsSource.Resources) return;
+        if (pSource.enumValueIndex == (int)OnlineMapsSource.StreamingAssets) return;
 
         DrawProviderGUI();
 
@@ -813,6 +826,7 @@ public class OnlineMapsEditor : Editor
             menu.AddItem(new GUIContent("Check Updates"), false, OnCheckUpdates);
             menu.AddItem(new GUIContent("Support"), false, OnSendMail);
             menu.AddSeparator("");
+            menu.AddItem(new GUIContent("Rate and Review"), false, OnlineMapsWelcome.RateAndReview);
             menu.AddItem(new GUIContent("About"), false, OnAbout);
             menu.ShowAsContext();
         }
@@ -845,23 +859,37 @@ public class OnlineMapsEditor : Editor
 
     private void FixImportSettings()
     {
-        int tokenIndex = pResourcesPath.stringValue.IndexOf("{");
+        string path;
+        string specialFolderName;
 
-        string resourcesFolder = Path.Combine(Application.dataPath, "Resources");
+        if (pSource.enumValueIndex == (int) OnlineMapsSource.Resources || pSource.enumValueIndex == (int) OnlineMapsSource.ResourcesAndOnline)
+        {
+            path = pResourcesPath.stringValue;
+            specialFolderName = "Resources";
+        }
+        else
+        {
+            path = pStreamingAssetsPath.stringValue;
+            specialFolderName = "StreamingAssets";
+        }
+
+        int tokenIndex = path.IndexOf("{");
+
+        string specialFolder = Path.Combine(Application.dataPath, specialFolderName);
 
         if (tokenIndex != -1)
         {
             if (tokenIndex > 1)
             {
-                string folder = pResourcesPath.stringValue.Substring(0, tokenIndex - 1);
-                resourcesFolder = Path.Combine(resourcesFolder, folder);
+                string folder = path.Substring(0, tokenIndex - 1);
+                specialFolder = Path.Combine(specialFolder, folder);
             }
         }
-        else resourcesFolder = Path.Combine(resourcesFolder, "OnlineMapsTiles");
+        else specialFolder = Path.Combine(specialFolder, "OnlineMapsTiles");
 
-        if (!Directory.Exists(resourcesFolder)) return;
+        if (!Directory.Exists(specialFolder)) return;
 
-        string[] tiles = Directory.GetFiles(resourcesFolder, "*.png", SearchOption.AllDirectories);
+        string[] tiles = Directory.GetFiles(specialFolder, "*.png", SearchOption.AllDirectories);
         float count = tiles.Length;
         for (int i = 0; i < tiles.Length; i++)
         {
@@ -900,13 +928,24 @@ public class OnlineMapsEditor : Editor
         string[] files = Directory.GetFiles(folder, "*.png", SearchOption.AllDirectories);
         if (files.Length == 0) return;
 
-        const string resPath = "Assets/Resources/OnlineMapsTiles";
+        string specialFolderName;
+
+        if (pSource.enumValueIndex == (int)OnlineMapsSource.Resources || pSource.enumValueIndex == (int)OnlineMapsSource.ResourcesAndOnline)
+        {
+            specialFolderName = "Resources";
+        }
+        else
+        {
+            specialFolderName = "StreamingAssets";
+        }
+
+        string specialPath = "Assets/" + specialFolderName + "/OnlineMapsTiles";
 
         bool needAsk = true;
         bool overwrite = false;
         foreach (string file in files)
         {
-            if (!ImportTileFromGMapCatcher(file, folder, resPath, ref overwrite, ref needAsk)) break;
+            if (!ImportTileFromGMapCatcher(file, folder, specialPath, ref overwrite, ref needAsk)) break;
         }
 
         AssetDatabase.Refresh();
@@ -1055,7 +1094,7 @@ public class OnlineMapsEditor : Editor
 
     private void OnProductPage()
     {
-        Process.Start("http://infinity-code.com/en/products/online-maps");
+        Process.Start("https://infinity-code.com/en/products/online-maps");
     }
 
     private void OnSendMail()
@@ -1065,21 +1104,21 @@ public class OnlineMapsEditor : Editor
 
     private void OnViewAPI()
     {
-        Process.Start("http://infinity-code.com/en/docs/api/online-maps");
+        Process.Start("https://infinity-code.com/en/docs/api/online-maps");
     }
 
     private void OnViewAtlas()
     {
-        Process.Start("http://infinity-code.com/atlas/online-maps");
+        Process.Start("https://infinity-code.com/atlas/online-maps");
     }
 
     private void OnViewDocs()
     {
-        Process.Start("http://infinity-code.com/en/docs/online-maps");
+        Process.Start("https://infinity-code.com/en/docs/online-maps");
     }
 
     private void OnViewForum()
     {
-        Process.Start("http://forum.infinity-code.com");
+        Process.Start("https://forum.infinity-code.com");
     }
 }

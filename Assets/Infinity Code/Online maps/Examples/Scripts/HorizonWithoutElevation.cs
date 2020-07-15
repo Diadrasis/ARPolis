@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections.Generic;
@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace InfinityCode.OnlineMapsDemos
 {
+    [AddComponentMenu("Infinity Code/Online Maps/Demos/HorizonWithoutElevation")]
     public class HorizonWithoutElevation : MonoBehaviour
     {
         /// <summary>

@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -23,8 +23,11 @@ namespace InfinityCode.OnlineMapsExamples
             // Load overlay for tile from Resources.
             string path = string.Format("OnlineMapsOverlay/{0}/{1}/{2}", tile.zoom, tile.x, tile.y);
             Texture2D texture = Resources.Load<Texture2D>(path);
-            tile.overlayBackTexture = Instantiate(texture);
-            Resources.UnloadAsset(texture);
+            if (texture != null)
+            {
+                tile.overlayBackTexture = Instantiate(texture);
+                Resources.UnloadAsset(texture);
+            }
         }
 
         private void OnStartDownloadTile(OnlineMapsTile tile)

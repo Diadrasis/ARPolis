@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Text.RegularExpressions;
@@ -257,6 +257,8 @@ public class OnlineMapsRasterTile : OnlineMapsTile
 
     protected override void LoadTileFromWWW(OnlineMapsWWW www)
     {
+        if (map == null) return;
+
         if (map.control.resultIsTexture)
         {
             DownloadComplete();

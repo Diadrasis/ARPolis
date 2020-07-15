@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections;
@@ -45,6 +45,11 @@ public abstract class OnlineMapsControlBase : MonoBehaviour, IOnlineMapsSavableC
     /// Event intercepts getting current cursor position.
     /// </summary>
     public Func<Vector2> OnGetInputPosition;
+
+    /// <summary>
+    /// The event intercepts getting of the current multitouch points.
+    /// </summary>
+    public Func<Vector2[]> OnGetMultitouchInputPositions;
 
     /// <summary>
     /// Event intercepts getting number of touches.
@@ -143,6 +148,14 @@ public abstract class OnlineMapsControlBase : MonoBehaviour, IOnlineMapsSavableC
     /// </summary>
     public bool allowUserControl = true;
 
+    /// <summary>
+    /// Check that the input position is on the screen.
+    /// </summary>
+    public bool checkScreenSizeForWheelZoom = true;
+
+    /// <summary>
+    /// Reference to drawing element manager
+    /// </summary>
     public OnlineMapsDrawingElementManager drawingElementManager;
 
     /// <summary>
@@ -156,6 +169,9 @@ public abstract class OnlineMapsControlBase : MonoBehaviour, IOnlineMapsSavableC
     /// </summary>
     public bool invertTouchZoom = false;
 
+    /// <summary>
+    /// Reference to marker manager
+    /// </summary>
     public OnlineMapsMarkerManager markerManager;
 
     /// <summary>
@@ -351,7 +367,7 @@ public abstract class OnlineMapsControlBase : MonoBehaviour, IOnlineMapsSavableC
     protected void DragMarker()
     {
         double lat, lng;
-        bool hit = GetCoords(out lng, out lat);
+        bool hit = GetCoordsInternal(out lng, out lat);
 
         if (!hit) return;
 
@@ -968,7 +984,8 @@ public abstract class OnlineMapsControlBase : MonoBehaviour, IOnlineMapsSavableC
             touchPositions[1] = initialGestureCenter * 2 - (Vector2)Input.mousePosition;
         }
 #else 
-        touchPositions = Input.touches.Select(t => t.position).ToArray();
+        if(OnGetMultitouchInputPositions != null) touchPositions = OnGetMultitouchInputPositions();
+        else touchPositions = Input.touches.Select(t => t.position).ToArray();
 #endif
 
         if (touchCount != lastGestureTouchCount)
@@ -1026,7 +1043,7 @@ public abstract class OnlineMapsControlBase : MonoBehaviour, IOnlineMapsSavableC
     {
         double tx, ty;
         lastInputPosition = GetInputPosition();
-        if (GetTile(lastInputPosition, out tx, out ty))
+        if (GetTileInternal(lastInputPosition, out tx, out ty))
         {
             lastPositionTX = tx;
             lastPositionTY = ty;
@@ -1041,13 +1058,13 @@ public abstract class OnlineMapsControlBase : MonoBehaviour, IOnlineMapsSavableC
     {
         if (!allowUserControl || GetTouchCount() > 1) return;
 
-        double lat, lng;
-        bool hit = GetCoordsInternal(out lng, out lat);
-
         Vector2 inputPosition = GetInputPosition();
 
         if (!mapDragStarted && (lastInputPosition - inputPosition).magnitude < startDragDistance) return;
         mapDragStarted = true;
+
+        double lat, lng;
+        bool hit = GetCoordsInternal(out lng, out lat);
 
         if (!hit || lastInputPosition == inputPosition) return;
 
@@ -1095,7 +1112,7 @@ public abstract class OnlineMapsControlBase : MonoBehaviour, IOnlineMapsSavableC
 
         if (IsCursorOnUIElement(inputPosition)) return;
 
-        if (inputPosition.x <= 0 || inputPosition.x >= Screen.width || inputPosition.y <= 0 || inputPosition.y >= Screen.height) return;
+        if (checkScreenSizeForWheelZoom && (inputPosition.x <= 0 || inputPosition.x >= Screen.width || inputPosition.y <= 0 || inputPosition.y >= Screen.height)) return;
 
         float wheel = Input.GetAxis("Mouse ScrollWheel");
         if (Math.Abs(wheel) < float.Epsilon) return;

@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using UnityEngine;
 
@@ -8,6 +8,7 @@ namespace InfinityCode.OnlineMapsExamples
     /// <summary>
     /// How to make the map follow GameObject
     /// </summary>
+    [AddComponentMenu("Infinity Code/Online Maps/Examples (API Usage)/FollowGameObject")]
     public class FollowGameObject : MonoBehaviour
     {
         /// <summary>
@@ -82,7 +83,7 @@ namespace InfinityCode.OnlineMapsExamples
             Vector2 size = control.sizeInScene;
 
             // Calculate offset (in tile position)
-            Vector3 offset = lastPosition - map.transform.position - control.center;
+            Vector3 offset = map.transform.rotation * (lastPosition - map.transform.position - control.center);
             offset.x = offset.x / OnlineMapsUtils.tileSize / size.x * map.width * map.zoomCoof;
             offset.z = offset.z / OnlineMapsUtils.tileSize / size.y * map.height * map.zoomCoof;
 
@@ -91,7 +92,7 @@ namespace InfinityCode.OnlineMapsExamples
             ty += offset.z;
 
             // Set position of the map center
-            map.SetTilePosition(tx, ty);
+            if (Mathf.Abs(offset.x) > float.Epsilon || Mathf.Abs(offset.z) > float.Epsilon) map.SetTilePosition(tx, ty);
 
             // Update map GameObject position
             map.transform.position = lastPosition - control.center;

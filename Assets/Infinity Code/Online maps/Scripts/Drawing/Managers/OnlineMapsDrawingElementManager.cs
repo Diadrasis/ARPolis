@@ -1,9 +1,12 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
+
+using UnityEngine;
 
 /// <summary>
 /// This component manages drawing elements.
 /// </summary>
+[AddComponentMenu("")]
 public class OnlineMapsDrawingElementManager: OnlineMapsInteractiveElementManager<OnlineMapsDrawingElementManager, OnlineMapsDrawingElement>
 {
     protected override void OnEnable()

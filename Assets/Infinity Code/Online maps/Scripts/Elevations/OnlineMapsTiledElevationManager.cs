@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using System.Collections.Generic;
@@ -27,14 +27,21 @@ public abstract class OnlineMapsTiledElevationManager<T> : OnlineMapsElevationMa
     /// </summary>
     public int zoomOffset = 3;
 
+    /// <summary>
+    /// Cache elevations?
+    /// </summary>
+    public bool cacheElevations = true;
+
     protected Dictionary<ulong, Tile> tiles;
     protected bool needUpdateMinMax = true;
+    private bool needUpdateTiles = true;
 
     private int prevTileX;
     private int prevTileY;
 
     protected abstract int tileWidth { get; }
     protected abstract int tileHeight { get; }
+    protected abstract string cachePrefix { get; }
 
     public override bool hasData
     {
@@ -78,14 +85,14 @@ public abstract class OnlineMapsTiledElevationManager<T> : OnlineMapsElevationMa
 
         ulong key = OnlineMapsTileManager.GetTileKey(zoom, ix, iy);
         Tile tile;
-        bool finded = tiles.TryGetValue(key, out tile);
-        if (finded && !tile.loaded) finded = false;
+        bool hasTile = tiles.TryGetValue(key, out tile);
+        if (hasTile && !tile.loaded) hasTile = false;
 
-        if (!finded)
+        if (!hasTile)
         {
             int nz = zoom;
 
-            while (!finded && nz < OnlineMaps.MAXZOOM)
+            while (!hasTile && nz < OnlineMaps.MAXZOOM)
             {
                 nz++;
                 map.projection.CoordinatesToTile(cx, cz, nz, out tx, out ty);
@@ -93,15 +100,15 @@ public abstract class OnlineMapsTiledElevationManager<T> : OnlineMapsElevationMa
                 iy = (int)ty;
                 key = OnlineMapsTileManager.GetTileKey(nz, ix, iy);
 
-                finded = tiles.TryGetValue(key, out tile) && tile.loaded;
+                hasTile = tiles.TryGetValue(key, out tile) && tile.loaded;
             }
         }
 
-        if (!finded)
+        if (!hasTile)
         {
             int nz = zoom;
 
-            while (!finded && nz > 1)
+            while (!hasTile && nz > 1)
             {
                 nz--;
                 map.projection.CoordinatesToTile(cx, cz, nz, out tx, out ty);
@@ -109,27 +116,14 @@ public abstract class OnlineMapsTiledElevationManager<T> : OnlineMapsElevationMa
                 iy = (int)ty;
                 key = OnlineMapsTileManager.GetTileKey(nz, ix, iy);
 
-                finded = tiles.TryGetValue(key, out tile) && tile.loaded;
+                hasTile = tiles.TryGetValue(key, out tile) && tile.loaded;
             }
         }
 
-        if (!finded) return 0;
+        if (!hasTile) return 0;
 
         map.projection.CoordinatesToTile(cx, cz, tile.zoom, out tx, out ty);
         return tile.GetElevation(tx, ty);
-    }
-
-    private void OnChangePosition()
-    {
-        double tx, ty;
-        map.GetTilePosition(out tx, out ty);
-
-        if (needUpdateMinMax || prevTileX != (int)tx || prevTileY != (int)ty)
-        {
-            UpdateMinMax();
-            prevTileX = (int)tx;
-            prevTileY = (int)ty;
-        }
     }
 
     protected override void OnDestroy()
@@ -139,10 +133,26 @@ public abstract class OnlineMapsTiledElevationManager<T> : OnlineMapsElevationMa
         if (map != null)
         {
             map.OnChangePosition -= OnChangePosition;
+            map.OnChangeZoom -= OnChangeZoom;
             map.OnLateUpdateBefore -= OnLateUpdateBefore;
         }
+    }
 
-        OnlineMapsTileManager.OnPrepareDownloadTile -= OnStartDownloadTile;
+    private void OnChangePosition()
+    {
+        if (needUpdateTiles) return;
+
+        double sx, sy;
+        map.GetTilePosition(out sx, out sy);
+        int isx = (int) sx;
+        int isy = (int) sy;
+
+        if (prevTileX != isx || prevTileY != isy) needUpdateTiles = true;
+    }
+
+    private void OnChangeZoom()
+    {
+        needUpdateTiles = true;
     }
 
     protected override void OnEnable()
@@ -154,41 +164,150 @@ public abstract class OnlineMapsTiledElevationManager<T> : OnlineMapsElevationMa
 
     private void OnLateUpdateBefore()
     {
-        if (needUpdateMinMax) UpdateMinMax();
+        if (!needUpdateTiles)
+        {
+            if (needUpdateMinMax) UpdateMinMax();
+            return;
+        }
+
+        needUpdateTiles = false;
+
+        int zoom = map.zoom - zoomOffset;
+        if (zoom < 1) zoom = 1;
+        if (!zoomRange.InRange(map.zoom)) return;
+
+        int currentOffset = map.zoom - zoom;
+        int coef = (1 << currentOffset) * OnlineMapsUtils.tileSize;
+        int countX = Mathf.CeilToInt(map.width / 2f / coef) * 2 + 2;
+        int countY = Mathf.CeilToInt(map.height / 2f / coef) * 2 + 2;
+
+        double sx, sy;
+        map.GetTilePosition(out sx, out sy, zoom);
+        prevTileX = (int) sx;
+        prevTileY = (int) sy;
+        int isx = prevTileX - countX / 2;
+        int isy = prevTileY - countY / 2;
+
+        int max = 1 << zoom;
+
+        foreach (KeyValuePair<ulong, Tile> pair in tiles)
+        {
+            pair.Value.used = false;
+        }
+
+        for (int x = isx; x < isx + countX; x++)
+        {
+            int cx = x;
+            if (cx < 0) cx += max;
+            else if (cx >= max) cx -= max;
+
+            for (int y = Mathf.Max(isy, 0); y < Mathf.Min(isy + countY, max); y++)
+            {
+                ulong key = OnlineMapsTileManager.GetTileKey(zoom, cx, y);
+                Tile t;
+                if (tiles.TryGetValue(key, out t))
+                {
+                    t.used = true;
+                    continue;
+                }
+
+                t = new Tile
+                {
+                    x = x,
+                    y = y,
+                    zoom = zoom,
+                    width = tileWidth,
+                    height = tileHeight,
+                    used = true
+                };
+                tiles.Add(key, t);
+
+                if (OnDownload != null) OnDownload(t);
+                else StartDownloadElevationTile(t);
+            }
+        }
+
+        double tlx, tly, brx, bry;
+        map.GetTileCorners(out tlx, out tly, out brx, out bry);
+
+        int itlx = (int)tlx;
+        int itly = (int)tly;
+        int ibrx = (int)brx;
+        int ibry = (int)bry;
+
+        List<ulong> unloadKeys = new List<ulong>();
+        foreach (KeyValuePair<ulong, Tile> pair in tiles)
+        {
+            Tile tile = pair.Value;
+            if (tile.used) continue;
+
+            int scale = 1 << (map.zoom - tile.zoom);
+            int tx = tile.x * scale;
+            int ty = tile.y * scale;
+
+            if (ibrx >= tx && itlx <= tx + scale && ibry >= ty && itly <= ty + scale)
+            {
+                if (Mathf.Abs(zoom - tile.zoom) < 3) continue;
+            }
+
+            unloadKeys.Add(pair.Key);
+        }
+
+        foreach (ulong key in unloadKeys) tiles.Remove(key);
+        UpdateMinMax();
     }
 
-    private void OnStartDownloadTile(OnlineMapsTile tile)
+    protected void SetElevationToCache(Tile tile, short[,] elevations)
     {
-        int zoom = map.zoom - zoomOffset;
-        if (tile.zoom < zoom || zoom < 1 || !zoomRange.InRange(map.zoom)) return;
+        if (!cacheElevations) return;
 
-        int s = 1 << (tile.zoom - zoom);
-        int x = tile.x / s;
-        int y = tile.y / s;
+        byte[] cache = new byte[tileWidth * tileHeight * 2];
+        int cacheIndex = 0;
 
-        ulong key = OnlineMapsTileManager.GetTileKey(zoom, x, y);
-        if (tiles.ContainsKey(key)) return;
-
-        Tile t = new Tile
+        for (int y = 0; y < tileHeight; y++)
         {
-            x = x,
-            y = y,
-            zoom = zoom,
-            width = tileWidth,
-            height = tileHeight
-        };
-        tiles.Add(key, t);
+            for (int x = 0; x < tileWidth; x++)
+            {
+                short s = elevations[x, y];
+                cache[cacheIndex++] = (byte)(s & 255);
+                cache[cacheIndex++] = (byte)(s >> 8);
+            }
+        }
 
-        if (OnDownload != null) OnDownload(t);
-        else StartDownloadElevationTile(t);
+        OnlineMapsCache.Add(tile.GetCacheKey(cachePrefix), cache);
+    }
+
+    protected void SetElevationData(Tile tile, short[,] elevations)
+    {
+        tile.elevations = elevations;
+
+        short max = short.MinValue;
+        short min = short.MaxValue;
+
+        for (int y = 0; y < tileHeight; y++)
+        {
+            for (int x = 0; x < tileWidth; x++)
+            {
+                short v = elevations[x, y];
+                if (v < min) min = v;
+                if (v > max) max = v;
+            }
+        }
+
+        tile.minValue = min;
+        tile.maxValue = max;
+
+        tile.loaded = true;
+        needUpdateMinMax = true;
+
+        map.Redraw();
     }
 
     protected override void Start()
     {
         map.OnChangePosition += OnChangePosition;
+        map.OnChangeZoom += OnChangeZoom;
         map.OnLateUpdateBefore += OnLateUpdateBefore;
-
-        OnlineMapsTileManager.OnPrepareDownloadTile += OnStartDownloadTile;
     }
 
     /// <summary>
@@ -197,44 +316,58 @@ public abstract class OnlineMapsTiledElevationManager<T> : OnlineMapsElevationMa
     /// <param name="tile">Tile</param>
     public abstract void StartDownloadElevationTile(Tile tile);
 
-    protected override void UpdateMinMax()
+    protected bool TryLoadFromCache(Tile tile)
     {
-        double tlx, tly, brx, bry;
-        map.GetTileCorners(out tlx, out tly, out brx, out bry);
+        if (!cacheElevations) return false;
 
-        int zoom = map.zoom - zoomOffset;
-        if (zoom < 1)
+        byte[] data = OnlineMapsCache.Get(tile.GetCacheKey(cachePrefix));
+        if (data == null || data.Length != tileWidth * tileHeight * 2) return false;
+
+        short[,] elevations = new short[tileWidth, tileHeight];
+        int dataIndex = 0;
+
+        for (int y = 0; y < tileHeight; y++)
         {
-            minValue = maxValue = 0;
-            return;
+            for (int x = 0; x < tileWidth; x++)
+            {
+                elevations[x, y] = (short)((data[dataIndex + 1] << 8) + data[dataIndex]);
+                dataIndex += 2;
+            }
         }
 
-        int itlx = (int) tlx;
-        int itly = (int) tly;
-        int ibrx = (int) brx;
-        int ibry = (int) bry;
+        SetElevationData(tile, elevations);
+        return true;
+    }
 
-        int s = 1 << zoomOffset;
+    protected override void UpdateMinMax()
+    {
+        needUpdateMinMax = false;
 
-        itlx /= s;
-        itly /= s;
-        ibrx /= s;
-        ibry /= s;
+        double tlx, tly, brx, bry;
+        map.GetTileCorners(out tlx, out tly, out brx, out bry);
 
         minValue = short.MaxValue;
         maxValue = short.MinValue;
 
-        for (int x = itlx; x <= ibrx; x++)
-        {
-            for (int y = itly; y <= ibry; y++)
-            {
-                ulong key = OnlineMapsTileManager.GetTileKey(zoom, x, y);
-                Tile tile;
-                if (!tiles.TryGetValue(key, out tile)) continue;
+        int itlx = (int)tlx;
+        int itly = (int)tly;
+        int ibrx = (int)brx;
+        int ibry = (int)bry;
 
-                if (tile.minValue < minValue) minValue = tile.minValue;
-                if (tile.maxValue > maxValue) maxValue = tile.maxValue;
-            }
+        foreach (KeyValuePair<ulong, Tile> pair in tiles)
+        {
+            Tile tile = pair.Value;
+            if (!tile.loaded) continue;
+
+            int scale = 1 << (map.zoom - tile.zoom);
+            int tx = tile.x * scale;
+            int ty = tile.y * scale;
+
+            if (ibrx < tx || itlx > tx + scale) continue;
+            if (ibry < ty || itly > ty + scale) continue;
+
+            if (tile.minValue < minValue) minValue = tile.minValue;
+            if (tile.maxValue > maxValue) maxValue = tile.maxValue;
         }
     }
 
@@ -288,6 +421,8 @@ public abstract class OnlineMapsTiledElevationManager<T> : OnlineMapsElevationMa
         /// </summary>
         public short[,] elevations;
 
+        public bool used;
+
         /// <summary>
         /// Get elevation value from tile
         /// </summary>
@@ -298,16 +433,16 @@ public abstract class OnlineMapsTiledElevationManager<T> : OnlineMapsElevationMa
         {
             if (!loaded) return 0;
 
-            double rx = (tx - (int)tx) * 255;
-            double ry = (ty - (int)ty) * 255;
+            double rx = (tx - (int)tx) * (width - 1);
+            double ry = (ty - (int)ty) * (height - 1);
 
             int x1 = (int) rx;
             int x2 = x1 + 1;
             int y1 = (int) ry;
             int y2 = y1 + 1;
 
-            if (x2 > 255) x2 = 255;
-            if (y2 > 255) y2 = 255;
+            if (x2 >= width) x2 = width - 1;
+            if (y2 >= height) y2 = height - 1;
 
             double dx = rx - x1;
             double dy = ry - y1;
@@ -320,6 +455,11 @@ public abstract class OnlineMapsTiledElevationManager<T> : OnlineMapsElevationMa
             v1 = (v2 - v1) * dx + v1;
             v2 = (v4 - v3) * dx + v3;
             return (float)((v2 - v1) * dy + v1);
+        }
+
+        public string GetCacheKey(string prefix)
+        {
+            return prefix + OnlineMapsTileManager.GetTileKey(zoom, x, y);
         }
     }
 }

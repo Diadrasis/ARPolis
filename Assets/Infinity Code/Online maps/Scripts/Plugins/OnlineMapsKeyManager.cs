@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using UnityEngine;
 
@@ -26,6 +26,11 @@ public class OnlineMapsKeyManager: MonoBehaviour
     /// Google Maps key
     /// </summary>
     public string googleMaps;
+
+    /// <summary>
+    /// HERE API key
+    /// </summary>
+    public string hereApiKey;
 
     /// <summary>
     /// Here App Code
@@ -82,11 +87,19 @@ public class OnlineMapsKeyManager: MonoBehaviour
     }
 
     /// <summary>
-    /// Is there a key for Here
+    /// Is there a app id and app code for Here
     /// </summary>
     public static bool hasHere
     {
         get { return !string.IsNullOrEmpty(HereAppCode()) && !string.IsNullOrEmpty(HereAppID()); }
+    }
+
+    /// <summary>
+    /// Is there a key for Here
+    /// </summary>
+    public static bool hasHereKey
+    {
+        get { return !string.IsNullOrEmpty(HereApiKey()); }
     }
 
     /// <summary>
@@ -153,6 +166,16 @@ public class OnlineMapsKeyManager: MonoBehaviour
     public static string GoogleMaps()
     {
         if (instance != null) return instance.googleMaps;
+        return null;
+    }
+
+    /// <summary>
+    /// Returns Here Api Key if present
+    /// </summary>
+    /// <returns>Here Api Key or null</returns>
+    public static string HereApiKey()
+    {
+        if (instance != null) return instance.hereApiKey;
         return null;
     }
 

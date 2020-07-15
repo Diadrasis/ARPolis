@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 
@@ -51,4 +51,13 @@ public abstract class OnlineMapsWebServiceAPI
     /// Destroys the current request to webservice.
     /// </summary>
     public abstract void Destroy();
+
+    /// <summary>
+    /// Get request instance
+    /// </summary>
+    /// <returns>Instance of request</returns>
+    public OnlineMapsWWW GetWWW()
+    {
+        return www;
+    }
 }

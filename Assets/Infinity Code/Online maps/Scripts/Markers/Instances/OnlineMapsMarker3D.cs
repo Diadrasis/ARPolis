@@ -1,5 +1,5 @@
-/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -119,7 +119,7 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
     }
 
     /// <summary>
-    /// Y rotation of 3D marker.
+    /// Y rotation of 3D marker (degree).
     /// </summary>
     public float rotationY
     {
@@ -217,7 +217,7 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
         if (OnInitComplete != null) OnInitComplete(this);
     }
 
-    public override void LookToCoordinates(Vector2 coordinates)
+    public override void LookToCoordinates(OnlineMapsVector2d coordinates)
     {
         double p1x, p1y, p2x, p2y;
         map.projection.CoordinatesToTile(coordinates.x, coordinates.y, 20, out p1x, out p1y);
@@ -260,7 +260,8 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
         return base.ToJSON().AppendObject(new
         {
             prefab = prefab != null ? prefab.GetInstanceID() : 0,
-            rotationY = _rotationY
+            rotationY = _rotationY,
+            sizeType = (int)sizeType
         });
     }
 
@@ -284,6 +285,7 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
     /// <param name="zoom">Zoom of the map</param>
     public override void Update(double tlx, double tly, double brx, double bry, int zoom)
     {
+        if (control.meshFilter == null) return;
         double ttlx, ttly, tbrx, tbry;
         map.GetTileCorners(out ttlx, out ttly, out tbrx, out tbry, zoom);
         float bestYScale = OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry);
@@ -314,7 +316,10 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
         else if (checkMapBoundaries)
         {
             if (latitude > tly || latitude < bry) visible = false;
-            else if (tlx < brx && (longitude < tlx || longitude > brx)) visible = false;
+            else if (tlx < brx &&
+                     (longitude < tlx || longitude > brx) &&
+                     (longitude - 360 < tlx || longitude - 360 > brx) &&
+                     (longitude + 360 < tlx || longitude + 360 > brx)) visible = false;
             else if (tlx > brx && longitude < tlx && longitude > brx) visible = false;
             else visible = true;
         }
@@ -362,27 +367,29 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
         {
             Vector3 center = bounds.center;
             Vector3 size = bounds.size;
-            px = center.x - (px - 0.5) * size.x / map.transform.lossyScale.x - map.transform.position.x;
-            pz = center.z + (pz - 0.5) * size.z / map.transform.lossyScale.z - map.transform.position.z;
+            px = center.x - (px - 0.5) * size.x / map.transform.lossyScale.x;
+            pz = center.z + (pz - 0.5) * size.z / map.transform.lossyScale.z;
         }
 
         Vector3 oldPosition = instance.transform.localPosition;
         float y = 0;
 
+        bool elevationActive = OnlineMapsElevationManagerBase.useElevation;
+
         if (altitude.HasValue)
         {
             float yScale = OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry);
             y = altitude.Value;
-            if (altitudeType == OnlineMapsAltitudeType.relative && tsControl != null) y += OnlineMapsElevationManagerBase.GetUnscaledElevation(px, pz, tlx, tly, brx, bry);
+            if (altitudeType == OnlineMapsAltitudeType.relative && tsControl != null && elevationActive) y += OnlineMapsElevationManagerBase.GetUnscaledElevation(px, pz, tlx, tly, brx, bry);
             y *= yScale;
 
-            if (tsControl != null && OnlineMapsElevationManagerBase.isActive)
+            if (tsControl != null && elevationActive)
             {
                 if (OnlineMapsElevationManagerBase.instance.bottomMode == OnlineMapsElevationBottomMode.minValue) y -= OnlineMapsElevationManagerBase.instance.minValue * bestYScale;
                 y *= OnlineMapsElevationManagerBase.instance.scale;
             }
         }
-        else if (tsControl != null)
+        else if (tsControl != null && elevationActive)
         {
             y = OnlineMapsElevationManagerBase.GetElevation(px, pz, bestYScale, tlx, tly, brx, bry);
         }

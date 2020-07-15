@@ -1,5 +1,5 @@
-﻿/*     INFINITY CODE 2013-2019      */
-/*   http://www.infinity-code.com   */
+﻿/*         INFINITY CODE         */
+/*   https://infinity-code.com   */
 
 using System;
 using UnityEngine;
@@ -9,6 +9,7 @@ using UnityEngine;
 /// </summary>
 [Serializable]
 [DisallowMultipleComponent]
+[AddComponentMenu("")]
 public class OnlineMapsMarker3DManager : OnlineMapsMarkerManagerBase<OnlineMapsMarker3DManager, OnlineMapsMarker3D>
 {
     /// <summary>
@@ -140,6 +141,7 @@ public class OnlineMapsMarker3DManager : OnlineMapsMarkerManagerBase<OnlineMapsM
             marker.rotationY = jitem.ChildValue<float>("rotationY");
             marker.scale = jitem.ChildValue<float>("scale");
             marker.enabled = jitem.ChildValue<bool>("enabled");
+            marker.sizeType = (OnlineMapsMarker3D.SizeType)jitem.ChildValue<int>("sizeType");
             Add(marker);
         }
 
