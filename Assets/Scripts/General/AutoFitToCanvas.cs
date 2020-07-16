@@ -37,8 +37,15 @@ namespace StaGeUnityTools
 
         private void Start()
         {
+            if (transform.parent.GetComponent<AutoFitToCanvas>() != null)
+            {
+                Invoke("DelayInit", 1f);
+                return;
+            }
             Init();
         }
+
+        void DelayInit() { Debug.Log("Delay Inited!!"); Init(); }
 
         public void Init()
         {

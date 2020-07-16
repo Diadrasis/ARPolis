@@ -10,11 +10,11 @@ namespace ARPolis.UI
     {
 
         public delegate void UIAction();
-        public static UIAction OnIntroStart, OnIntroFinished, OnMenuShow;
+        public static UIAction OnIntroStart, OnIntroFinished, OnMenuShow, OnLoginShow;
 
         private void Awake()
         {
-            OnIntroFinished += ShowMenu;
+            OnIntroFinished += LoginShow;
             AppManager.OnInit += StartIntro;
         }
 
@@ -33,6 +33,11 @@ namespace ARPolis.UI
         void ShowMenu()
         {
             OnMenuShow?.Invoke();
+        }
+
+        void LoginShow()
+        {
+            OnLoginShow?.Invoke();
         }
     }
 

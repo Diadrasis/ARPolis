@@ -39,6 +39,7 @@ namespace ARPolis.UI
 
         private void Awake()
         {
+            menuPanel.SetActive(true);
 
             if (!PlayerPrefs.HasKey("Lang"))
             {

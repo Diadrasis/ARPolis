@@ -797,4 +797,25 @@
 			<en><![CDATA[Offset Y gps]]></en>
 		</value>
 	</term>
+  <term>
+    <name>usernameEmptyField</name>
+    <value>
+      <gr><![CDATA[Το όνομα χρήστη είναι κενό]]></gr>
+      <en><![CDATA[Username is empty]]></en>
+    </value>
+  </term>
+  <term>
+    <name>passwordEmptyField</name>
+    <value>
+      <gr><![CDATA[Ο κωδικός είναι κενός]]></gr>
+      <en><![CDATA[Password is empty]]></en>
+    </value>
+  </term>
+  <term>
+    <name>passwordsMismatch</name>
+    <value>
+      <gr><![CDATA[Η επιβεβαίωση κωδικού πρόσβασης δεν είναι ίδια με τον κωδικό πρόσβασης που εισαγάγατε]]></gr>
+      <en><![CDATA[Your password and confirmation password do not match]]></en>
+    </value>
+  </term>
 </terms>
