@@ -83,8 +83,9 @@ namespace ARPolis.Map
 
         void OnGpsLocationChanged(Vector2 pos)
         {
+            if (B.isRealEditor) Debug.Log("OnGpsLocationChanged");
             userPosition = pos;
-            //SearchNearestPath();
+            SearchNearestPath();
             //CheckSiteMode();
         }
 
@@ -99,7 +100,7 @@ namespace ARPolis.Map
         //    CustomMarkerEngineGUI.RemoveMarker(markerOnNearestPath);
         //}
 
-        void CheckSiteMode()
+        private bool IsSiteModeFar()
         {
             //set max distance
             float dist = Mathf.Infinity;
@@ -109,19 +110,20 @@ namespace ARPolis.Map
                 dist = GetDistanceBetweenPoints(userPosition, athensCheckPoint);
             }
 
-            //if distance is more than 10km
+            //if distance is more than max km
             if (dist > maxKmDistanceForOnSiteMode)
             {
                 OnGpsFar?.Invoke();
                 siteMode = SiteMode.FAR;
                 //message far away
                 if (B.isRealEditor) Debug.Log("GPS FAR");
-                return;
+                return true;
             }
 
             OnGpsClose?.Invoke();
             siteMode = SiteMode.NEAR;
             if (B.isRealEditor) Debug.Log("GPS CLOSE");
+            return false;
         }
 
         #region Search OnSite Town
@@ -179,7 +181,7 @@ namespace ARPolis.Map
 
             if (B.isRealEditor) Debug.Log("dist = " + dist);
 
-            //if distance is more than 10km
+            //if distance is more than max km
             if (dist > maxKmDistanceForOnSiteMode)
             {
                 //isNear = 0;
@@ -188,6 +190,7 @@ namespace ARPolis.Map
 
                 OnGpsFar?.Invoke();
                 siteMode = SiteMode.FAR;
+                return;
             }
 
             //if (isNear == 0)

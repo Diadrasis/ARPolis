@@ -9,7 +9,7 @@ namespace StaGeUnityTools
     [CustomEditor(typeof(PanelTransitionClass))]
     public class PanelTransitionClassEditor : Editor
     {
-        bool showVariables, isPanelHidden=true;
+        bool showVariables;
         string btnLabel = "Show Script Variables";
 
         public override void OnInspectorGUI()
@@ -40,9 +40,14 @@ namespace StaGeUnityTools
             GUI.color = Color.white;
             if (showVariables) DrawDefaultInspector();
 
+            // Starts a horizontal group
+            GUILayout.BeginHorizontal("box");
             GUI.color = Color.cyan;
-            if (!isPanelHidden) { if (GUILayout.Button("Hide Target")) { myTarget.HidePanel(); isPanelHidden = true; } }
-            else { if (GUILayout.Button("Show Target")) { myTarget.ShowPanel(); isPanelHidden = false; } }
+            TextFieldStyles.normal.textColor = Color.white;
+            if (GUILayout.Button("Show Target", TextFieldStyles)) { myTarget.ShowPanel(); }
+            if (myTarget.isMoveByPercentage) { if (GUILayout.Button("Show Percentage", TextFieldStyles)) { myTarget.ShowPercentagePanel(); } }
+            if (GUILayout.Button("Hide Target", TextFieldStyles)) { myTarget.HidePanel(); }
+            GUILayout.EndHorizontal();
 
 #if UNITY_EDITOR
             // Ensure continuous Update calls.
@@ -52,6 +57,10 @@ namespace StaGeUnityTools
                 UnityEditor.SceneView.RepaintAll();
             }
 #endif
+            
+
+            //GUILayout.Button("I'm the first button");
+            //GUILayout.Button("I'm to the right");
 
         }
     }
