@@ -21,7 +21,7 @@ namespace ARPolis.Data
         public List<JsonClassPerson> jsonClassPersons;
         public List<JsonClassDigitalExhibit> jsonClassDigitalExhibits;
 
-        public string thematicNowID, tourNowID, poiNowID;
+        public string areaNowID, topicNowID, tourNowID, poiNowID;
 
         public void Init()
         {
@@ -67,7 +67,7 @@ namespace ARPolis.Data
             yield break;
         }
 
-
+        //public 
         
     }
 

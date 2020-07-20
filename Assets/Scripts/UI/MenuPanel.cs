@@ -31,7 +31,7 @@ namespace ARPolis.UI
         public delegate void ButtonAction();
         public static ButtonAction OnUserClickOnSiteModeNotAble, OnQuitApp;
 
-        public PanelTransitionClass panelSideMenuTransition;
+        public PanelTransitionClass panelSideMenuTransition, panelTopBarTransition;
 
         public GameObject[] extraCreditsButtons;
         public Transform arrowCredits;
@@ -60,7 +60,11 @@ namespace ARPolis.UI
                 iconBtnLanguage.sprite = isEng ? sprEng : sprGR;
             }
 
-            UIController.OnMenuShow += ShowMenu;
+            UIController.OnShowMenuAreas += ShowMenu;
+            UIController.OnHideMenuAreas += HideMenu;
+
+            UIController.OnShowMenuTopics += ShowMenuTopics;
+            UIController.OnHideMenuTopics += HideMenuTopics;
 
             OnSiteManager.OnGpsOff += SetStatusOffSite;
             OnSiteManager.OnGpsFar += SetStatusOffSite;
@@ -87,6 +91,7 @@ namespace ARPolis.UI
             arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
 
             menuPanel.SetActive(false);
+            panelTopBarTransition.HidePanel();
 
             snapCustom.OnSelectionPageChangedEvent.AddListener(OnPageChangeEnd);
 
@@ -114,15 +119,14 @@ namespace ARPolis.UI
         void ShowAthensMenu()
         {
             if (B.isRealEditor) Debug.Log("ShowAthensMenu");
-            InfoManager.Instance.thematicNowID = "1";
-            animTownMenu.gameObject.SetActive(true);
-            animTownMenu.SetBool("show", true);
+            InfoManager.Instance.areaNowID = "1";
+            UIController.OnShowMenuTopics?.Invoke();
         }
 
         void ShowNafpaktosMenu()
         {
             if (B.isRealEditor) Debug.Log("ShowNafpaktosMenu");
-            InfoManager.Instance.thematicNowID = "2";
+            InfoManager.Instance.areaNowID = "2";
             //animTownMenu.gameObject.SetActive(true);
             //animTownMenu.SetBool("show", true);
         }
@@ -130,7 +134,7 @@ namespace ARPolis.UI
         void ShowHerakleionMenu()
         {
             if (B.isRealEditor) Debug.Log("ShowHerakleionMenu");
-            InfoManager.Instance.thematicNowID = "3";
+            InfoManager.Instance.areaNowID = "3";
             //animTownMenu.gameObject.SetActive(true);
             //animTownMenu.SetBool("show", true);
         }
@@ -272,6 +276,52 @@ namespace ARPolis.UI
         {
             menuPanel.SetActive(true);
             animMenuPanel.SetBool("show", true);
+            panelTopBarTransition.ShowPanel();
+            AppManager.Instance.SetMode(AppManager.AppMode.AREA_SELECTION);
+        }
+
+        void HideMenu()
+        {
+            if (iconBtnMenu.sprite == sprMenuOff)
+            {
+                ToggleSideMenu();
+                return;
+            }
+            UIController.OnLoginShow?.Invoke();
+            animMenuPanel.SetBool("show", false);
+            panelTopBarTransition.HidePanel();
+            StartCoroutine(DelayHide());
+        }
+
+        void ShowMenuTopics()
+        {
+            animTownMenu.gameObject.SetActive(true);
+            animTownMenu.SetBool("show", true);
+            AppManager.Instance.SetMode(AppManager.AppMode.TOPIC_SELECTION);
+        }
+
+        void HideMenuTopics()
+        {
+            if (iconBtnMenu.sprite == sprMenuOff)
+            {
+                ToggleSideMenu();
+                return;
+            }
+            UIController.OnShowMenuAreas?.Invoke();
+            animTownMenu.SetBool("show", false);
+            StartCoroutine(DelayHideTopics());
+        }
+
+        IEnumerator DelayHide()
+        {
+            yield return new WaitForSeconds(0.75f);
+            menuPanel.SetActive(false);
+        }
+
+        IEnumerator DelayHideTopics()
+        {
+            yield return new WaitForSeconds(0.75f);
+            animTownMenu.gameObject.SetActive(false);
         }
     }
 

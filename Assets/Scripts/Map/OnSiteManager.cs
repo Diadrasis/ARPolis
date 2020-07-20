@@ -66,7 +66,7 @@ namespace ARPolis.Map
             OnlineMapsLocationService.instance.OnLocationChanged += OnGpsLocationChanged;
             OnlineMapsLocationService.instance.OnFindLocationByIPComplete += OnFindLocationByIPComplete;
 
-            UIController.OnMenuShow += SearchNearestPath;
+            UIController.OnShowMenuAreas += SearchNearestPath;
 
         }
 

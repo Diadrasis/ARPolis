@@ -14,6 +14,9 @@ namespace ARPolis.UI
         public delegate void ActionObjectlUI(GameObject gb);
         public static ActionObjectlUI OnToggleTarget;
 
+        public delegate void ActionPoi(string poiID, string topicID);
+        public static ActionPoi OnPoiSelected;
+
     }
 
 }

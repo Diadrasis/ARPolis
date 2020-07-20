@@ -9,7 +9,7 @@ namespace StaGeUnityTools
     public class PanelTransitionClass : MonoBehaviour
     {
 
-        public StaGeUnityTools.Tools_UI.Mode sideMode = StaGeUnityTools.Tools_UI.Mode.none;
+        public Tools_UI.Mode sideMode = Tools_UI.Mode.none;
         [Header("Target RectTransform To Move - If empty then nothing happens.")]
         public RectTransform targetRect;
         
@@ -24,11 +24,19 @@ namespace StaGeUnityTools
         public float movePercentage = 100f;
         public bool isMoveByPercentage;
 
+        [Header("Custom Space StartPos")]
+        public float spaceStartPos = 0f;
+        [Header("Custom Space Corner Up or Down Pos")]
+        public float spaceUpDown = 0f;
+
         public enum MoveMode { Hidden, Percentage, Full}
         public MoveMode moveMode = MoveMode.Hidden;
 
         private float GetViewPercentage() { return movePercentage / 100f; }
         Vector2 panelInitPosition, panelHiddenPosition, panelPercentagePosition;
+
+        public UnityEngine.Events.UnityEvent OnHide, OnShowFull, OnShowPercentage;
+
 
         public void Init(RectTransform rect, Tools_UI.Mode mode, bool isVisibleAtStart)
         {
@@ -76,23 +84,23 @@ namespace StaGeUnityTools
                 yield return null;
             }
             targetRect.anchoredPosition = panelHiddenPosition;
-
+            OnHide?.Invoke();
             yield break;
         }
 
         public void ShowPanel()
         {
             moveMode = MoveMode.Full;
-            StartCoroutine(ShowLerpPanel(panelInitPosition));
+            StartCoroutine(ShowLerpPanel(panelInitPosition, true));
         }
 
         public void ShowPercentagePanel()
         {
             moveMode = MoveMode.Percentage;
-            StartCoroutine(ShowLerpPanel(panelPercentagePosition));
+            StartCoroutine(ShowLerpPanel(panelPercentagePosition, false));
         }
 
-        IEnumerator ShowLerpPanel(Vector2 vectorTarget)
+        IEnumerator ShowLerpPanel(Vector2 vectorTarget, bool isFull)
         {
             yield return new WaitForEndOfFrame();
             while (Vector2.Distance(targetRect.anchoredPosition, vectorTarget) > 10f)
@@ -101,7 +109,7 @@ namespace StaGeUnityTools
                 yield return null;
             }
             targetRect.anchoredPosition = vectorTarget;
-
+            if (isFull) { OnShowFull?.Invoke(); } else { OnShowPercentage?.Invoke(); }
             yield break;
         }
 
@@ -132,8 +140,6 @@ namespace StaGeUnityTools
             {
                 float Y = targetRect.rect.height - (targetRect.rect.height * GetViewPercentage());
                 float X = targetRect.rect.width - (targetRect.rect.width * GetViewPercentage());
-
-                Debug.Log(X + " - " + Y);
 
                 switch (sideMode)
                 {
@@ -178,6 +184,8 @@ namespace StaGeUnityTools
             }
         }
 
+        #region simple version
+        /*
         Vector2 HidePosition()
         {
             Vector2 hidePos = targetRect.anchoredPosition;
@@ -211,6 +219,61 @@ namespace StaGeUnityTools
                     break;
                 case Tools_UI.Mode.rightCenter:
                     hidePos = new Vector2(targetRect.rect.width, 0f);
+                    break;
+                default:
+                    break;
+            }
+
+            return hidePos;
+        }
+        */
+        #endregion
+
+        Vector2 HidePosition()
+        {
+            Vector2 hidePos = targetRect.anchoredPosition;
+
+            switch (sideMode)
+            {
+                case Tools_UI.Mode.none:
+                    break;
+                case Tools_UI.Mode.center:
+                    break;
+                case Tools_UI.Mode.downCenter:
+                    hidePos = new Vector2(0f, -targetRect.rect.height);
+                    panelInitPosition.y = panelInitPosition.x + spaceStartPos;
+                    break;
+                case Tools_UI.Mode.downLeft:
+                    hidePos = new Vector2(-targetRect.rect.width, spaceUpDown);
+                    panelInitPosition.x = panelInitPosition.x + spaceStartPos;
+                    panelInitPosition.y = panelInitPosition.y + spaceUpDown;
+                    break;
+                case Tools_UI.Mode.downRight:
+                    hidePos = new Vector2(targetRect.rect.width, spaceUpDown);
+                    panelInitPosition.x = panelInitPosition.x - spaceStartPos;
+                    panelInitPosition.y = panelInitPosition.y + spaceUpDown;
+                    break;
+                case Tools_UI.Mode.upCenter:
+                    hidePos = new Vector2(0f, targetRect.rect.height);
+                    panelInitPosition.y = panelInitPosition.x - spaceStartPos;
+                    break;
+                case Tools_UI.Mode.upLeft:
+                    hidePos = new Vector2(-targetRect.rect.width, -spaceUpDown);
+                    panelInitPosition.x = panelInitPosition.x + spaceStartPos;
+                    panelInitPosition.y = panelInitPosition.y - spaceUpDown;
+                    break;
+                case Tools_UI.Mode.upRight:
+                    hidePos = new Vector2(targetRect.rect.width, -spaceUpDown);
+                    panelInitPosition.x = panelInitPosition.x - spaceStartPos;
+                    panelInitPosition.y = panelInitPosition.y - spaceUpDown;
+                    break;
+                case Tools_UI.Mode.leftCenter:
+                    hidePos = new Vector2(-targetRect.rect.width, 0f);
+                    panelInitPosition.x = panelInitPosition.x + spaceStartPos;
+                    break;
+                case Tools_UI.Mode.rightCenter:
+                    hidePos = new Vector2(targetRect.rect.width, 0f);
+                    panelInitPosition.x = panelInitPosition.x - spaceStartPos;
                     break;
                 default:
                     break;

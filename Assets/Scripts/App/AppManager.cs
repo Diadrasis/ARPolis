@@ -9,32 +9,35 @@ using UnityEngine;
 namespace ARPolis
 {
 
-    public class AppManager : MonoBehaviour
+    public class AppManager : Singleton<AppManager>
     {
-        public enum AppMode { NULL, INIT, SITE_SELECTION, MENU, INFO, MESSAGE, EXIT }
-        public AppMode appMode = AppMode.NULL;
+        protected AppManager() { }
 
+        public enum AppMode { NULL, INTRO, LOGIN, TOPIC_SELECTION, AREA_SELECTION, MAP, MAP_INFO_AREA, MAP_INFO_POI, MESSAGE, EXIT }
+        public AppMode appMode = AppMode.NULL;
+        public AppMode modeMessage = AppMode.NULL;
 
         public delegate void AppAction();
         public static AppAction OnInit, OnExit, OnMessage;
 
         private void Awake()
-        {            
+        {
+            Debug.Log("APP MANAGER INIT");
             B.Init();
-            UIController.OnMenuShow += SetModeMenu;
+            UIController.OnShowMenuAreas += SetModeMenu;
         }
 
         void Start()
         {
-            SetMode(AppMode.INIT);
+            SetMode(AppMode.INTRO);
         }
 
         void SetModeMenu()
         {
-            SetMode(AppMode.MENU);
+            SetMode(AppMode.AREA_SELECTION);
         }
 
-        void SetMode(AppMode mode)
+        public void SetMode(AppMode mode)
         {
             appMode = mode;
 
@@ -42,16 +45,60 @@ namespace ARPolis
             {
                 case AppMode.NULL:
                     break;
-                case AppMode.INIT:
+                case AppMode.INTRO:
                     AppData.Init();
                     InfoManager.Instance.Init();
                     OnInit?.Invoke();
                     break;
-                case AppMode.SITE_SELECTION:
+                case AppMode.TOPIC_SELECTION:
                     break;
-                case AppMode.MENU:
+                case AppMode.MAP:
                     break;
-                case AppMode.INFO:
+                case AppMode.MAP_INFO_AREA:
+                    break;
+                case AppMode.MESSAGE:
+                    break;
+                case AppMode.EXIT:
+                    break;
+                case AppMode.AREA_SELECTION:
+                    break;
+                case AppMode.MAP_INFO_POI:
+                    break;
+                case AppMode.LOGIN:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        [ContextMenu("Return")]
+        public void ReturnMode()
+        {
+            if(modeMessage == AppMode.MESSAGE)
+            {
+                UIController.OnMessageHide?.Invoke();
+                return;
+            }
+
+            switch (appMode)
+            {
+                case AppMode.NULL:
+                    break;
+                case AppMode.INTRO:
+                    break;
+                case AppMode.LOGIN:
+                    break;
+                case AppMode.AREA_SELECTION:
+                    UIController.OnHideMenuAreas?.Invoke();
+                    break;
+                case AppMode.TOPIC_SELECTION:
+                    UIController.OnHideMenuTopics?.Invoke();
+                    break;
+                case AppMode.MAP:
+                    break;
+                case AppMode.MAP_INFO_AREA:
+                    break;
+                case AppMode.MAP_INFO_POI:
                     break;
                 case AppMode.MESSAGE:
                     break;
@@ -61,6 +108,7 @@ namespace ARPolis
                     break;
             }
         }
+
     }
 
 

@@ -10,7 +10,9 @@ namespace ARPolis.UI
     {
 
         public delegate void UIAction();
-        public static UIAction OnIntroStart, OnIntroFinished, OnMenuShow, OnLoginShow;
+        public static UIAction OnIntroStart, OnIntroFinished, OnShowMenuAreas, OnHideMenuAreas,
+            OnShowMenuTopics, OnHideMenuTopics, OnLoginShow,
+            OnInfoAreaShow, OnInfoPoiShow, OnMessageHide;
 
         private void Awake()
         {
@@ -23,18 +25,14 @@ namespace ARPolis.UI
             if (B.isEditor)
             {
                 OnIntroFinished?.Invoke();
+                AppManager.Instance.SetMode(AppManager.AppMode.LOGIN);
             }
             else
             {
                 OnIntroStart?.Invoke();
             }
         }
-
-        void ShowMenu()
-        {
-            OnMenuShow?.Invoke();
-        }
-
+        
         void LoginShow()
         {
             OnLoginShow?.Invoke();

@@ -45,6 +45,7 @@ namespace ARPolis.UI
 
             //invoke end of intro
             UIController.OnIntroFinished?.Invoke();
+            AppManager.Instance.SetMode(AppManager.AppMode.LOGIN);
 
             yield break;
         }

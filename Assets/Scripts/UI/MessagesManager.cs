@@ -22,7 +22,7 @@ namespace ARPolis
         Text txtBtnOK, txtBtnAction1, txtBtnAction2;
         public Image iconImage;
         public Sprite sprOffSite, sprOnSite, sprQuitApp;
-        RectTransform rectPanel;
+        public RectTransform rectPanel, rectContainer, rectButtons;
 
         public bool isIntroFinished;
 
@@ -48,9 +48,11 @@ namespace ARPolis
             OnSiteManager.OnGpsOn += GpsIsOn;
             OnSiteManager.OnGpsFar += GpsIsFar;
             OnSiteManager.OnGpsClose += GpsIsNear;
-            UIController.OnMenuShow += ShowGpsMessageOnIntro;
+            UIController.OnShowMenuAreas += ShowGpsMessageOnIntro;
             MenuPanel.OnUserClickOnSiteModeNotAble += ShowGpsMessageOnUser;
             MenuPanel.OnQuitApp += ShowQuitAppWarning;
+
+            UIController.OnMessageHide += HidePanel;
         }
 
         void GpsIsOff() { SetGpsMessageMode(GpsMessageMode.OFF); }
@@ -61,6 +63,7 @@ namespace ARPolis
         void ShowQuitAppWarning()
         {
             panelMessage.SetActive(true);
+            AppManager.Instance.modeMessage = AppManager.AppMode.MESSAGE;
 
             iconImage.sprite = sprQuitApp;
             iconImage.gameObject.SetActive(true);
@@ -132,6 +135,7 @@ namespace ARPolis
         void ShowMessageGpsOff()
         {
             panelMessage.SetActive(true);
+            AppManager.Instance.modeMessage = AppManager.AppMode.MESSAGE;
 
             iconImage.sprite = sprOffSite;
             iconImage.gameObject.SetActive(true);
@@ -159,6 +163,7 @@ namespace ARPolis
         void ShowMessageGpsFar()
         {
             panelMessage.SetActive(true);
+            AppManager.Instance.modeMessage = AppManager.AppMode.MESSAGE;
 
             iconImage.sprite = sprOffSite;
             iconImage.gameObject.SetActive(true);
@@ -180,6 +185,7 @@ namespace ARPolis
         void ShowMessageGpsInsideArea()
         {
             panelMessage.SetActive(true);
+            AppManager.Instance.modeMessage = AppManager.AppMode.MESSAGE;
 
             iconImage.sprite = sprOffSite;
             iconImage.gameObject.SetActive(true);
@@ -210,6 +216,7 @@ namespace ARPolis
         {
             yield return new WaitForSeconds(0.5f);
             panelMessage.SetActive(false);
+            AppManager.Instance.modeMessage = AppManager.AppMode.NULL;
             yield break;
         }
 
@@ -222,6 +229,8 @@ namespace ARPolis
 
         void ForceRebuildLayout()
         {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(rectButtons);
+            LayoutRebuilder.ForceRebuildLayoutImmediate(rectContainer);
             LayoutRebuilder.ForceRebuildLayoutImmediate(rectPanel);
         }
 

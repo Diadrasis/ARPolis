@@ -71,10 +71,14 @@ namespace ARPolis.UI
             GlobalActionsUI.OnPanelSignUpCancel += PanelSignTypeSelectShow;
             GlobalActionsUI.OnSignUpSubmit += PanelSignTypeSelectShow;
             UIController.OnLoginShow += ShowLogin;
-            UIController.OnMenuShow += HideLogin;
+            UIController.OnShowMenuAreas += HideLogin;
         }
 
-        void ShowLogin() { loginPanel.SetActive(true); animLogin.SetBool("show", true); }
+        void ShowLogin() {
+            loginPanel.SetActive(true);
+            animLogin.SetBool("show", true);
+            AppManager.Instance.SetMode(AppManager.AppMode.LOGIN);
+        }
         void HideLogin() { StartCoroutine(DelayCloseLoginPanel()); }
         IEnumerator DelayCloseLoginPanel()
         {
@@ -184,7 +188,7 @@ namespace ARPolis.UI
 
         void LoginAnonymous()
         {
-            UIController.OnMenuShow?.Invoke();
+            UIController.OnShowMenuAreas?.Invoke();
             ServerController.Instance.LoginAnonymous();
         }
 
