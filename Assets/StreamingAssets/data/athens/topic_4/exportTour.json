@@ -1,0 +1,35 @@
+[
+  {
+    "X": null,
+    "Y": null,
+    "id": 1,
+    "tour_ID": 50,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ήθη και έθιμα"
+  },
+  {
+    "X": null,
+    "Y": null,
+    "id": 2,
+    "tour_ID": 51,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Φιλοσοφία και διατροφή"
+  },
+  {
+    "X": null,
+    "Y": null,
+    "id": 3,
+    "tour_ID": 52,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Χρηστικά αντικείμενα"
+  }
+]

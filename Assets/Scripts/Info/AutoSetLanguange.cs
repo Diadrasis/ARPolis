@@ -38,7 +38,7 @@ namespace ARPolis.Info
 
         void OnEnable()
         {
-            AppData.OnDataRead += ChangeLanguange;
+            AppData.OnDataReaded += ChangeLanguange;
 
             if (!sizeFitter) { sizeFitter = gameObject.GetComponent<ContentSizeFitter>(); }
             if (!myLayOut) myLayOut = GetComponent<LayoutElement>();
@@ -72,7 +72,7 @@ namespace ARPolis.Info
 
         private void OnDisable()
         {
-            AppData.OnDataRead -= ChangeLanguange;
+            AppData.OnDataReaded -= ChangeLanguange;
         }
 
         IEnumerator SetSizeFitterOnDelayed()

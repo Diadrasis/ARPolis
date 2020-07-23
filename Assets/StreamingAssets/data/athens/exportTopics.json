@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "topic_ID": 1,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Ενότητας",
+    "attribute_Value": "Αρχαία Αθήνα"
+  },
+  {
+    "id": 2,
+    "topic_ID": 1,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Περιγραφή Ενόητας",
+    "attribute_Value": "Επισκεφτείτε τα ιστορικά μνημεία της κλασσικής και ρωμαϊκής Αθήνας"
+  },
+  {
+    "id": 3,
+    "topic_ID": 1,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Topic Name",
+    "attribute_Value": "Ancient Athens"
+  },
+  {
+    "id": 4,
+    "topic_ID": 1,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Topic Description",
+    "attribute_Value": "Visit the historical monuments of the Classical and Roman Era."
+  },
+  {
+    "id": 5,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Ενότητας",
+    "attribute_Value": "Φιλοσοφία"
+  },
+  {
+    "id": 6,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Περιγραφή Ενόητας",
+    "attribute_Value": "Η φιλοσοφία,  η πηγή όλων των επιστημών, άνθισε στην Αθήνα του 5ου π.Χ. αιώνα και παρέμεινε ένα από τα σημαντικότερα φιλοσοφικά κέντρα του ελληνορωμαϊκού κόσμου για περισσότερα από 1000 χρόνια. Γνωρίστε τις φιλοσοφικές ιδέες στα σημεία που γεννήθηκαν."
+  },
+  {
+    "id": 7,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Topic Name",
+    "attribute_Value": "Philosophy"
+  },
+  {
+    "id": 8,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Topic Description",
+    "attribute_Value": "Philosophy, the source of all sciences, flourished  in the Athens during the 5th century BC  century and and the city remained one of the most important philosophical centers of the Greco-Roman world for more than 1000 years. Get to know the philosophical ideas in the places where they were born."
+  },
+  {
+    "id": 9,
+    "topic_ID": 3,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Ενότητας",
+    "attribute_Value": "Η Αθήνα της δεκαετίας του 40'"
+  },
+  {
+    "id": 10,
+    "topic_ID": 3,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Περιγραφή Ενόητας",
+    "attribute_Value": "Η πιο ταραγμένη δεκαετία της νεώτερης ιστορίας: πόλεμος, κατοχή, εμφύλιος. Τα σημάδια της δεκαετίας του 40 είναι ακόμα δίπλα μας"
+  },
+  {
+    "id": 11,
+    "topic_ID": 3,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Topic Name",
+    "attribute_Value": "Athens in the 40s"
+  },
+  {
+    "id": 12,
+    "topic_ID": 3,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Topic Description",
+    "attribute_Value": "The most turbulent decade of modern history: war, occupation, civil war. The signs of the 40's are still whispering stories of the past"
+  },
+  {
+    "id": 13,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Ενότητας",
+    "attribute_Value": "Γεύσεις της Αθήνας"
+  },
+  {
+    "id": 14,
+    "topic_ID": 4,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Περιγραφή Ενόητας",
+    "attribute_Value": "Γνώρισε την Αθήνα μέσα από την ιστορία των γεύσεων της, αρχαίων και σύγχρονων."
+  },
+  {
+    "id": 15,
+    "topic_ID": 4,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Topic Name",
+    "attribute_Value": "Athenean Tastes"
+  },
+  {
+    "id": 16,
+    "topic_ID": 4,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Topic Description",
+    "attribute_Value": "Get to know Athens through the history of the city's tastes, both ancient and modern ones"
+  }
+]

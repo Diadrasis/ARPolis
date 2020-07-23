@@ -1,0 +1,406 @@
+[
+  {
+    "poi_ID": 378,
+    "attribute_Value": "Τέθριππο"
+  },
+  {
+    "poi_ID": 38,
+    "attribute_Value": "Ακρόπολη"
+  },
+  {
+    "poi_ID": 46,
+    "attribute_Value": "Ακρόπολη"
+  },
+  {
+    "poi_ID": 56,
+    "attribute_Value": "Akropolis"
+  },
+  {
+    "poi_ID": 72,
+    "attribute_Value": "Τέθριππο"
+  },
+  {
+    "poi_ID": 63,
+    "attribute_Value": "Πομπείον"
+  },
+  {
+    "poi_ID": 27,
+    "attribute_Value": "Νοτιοανατολική κρήνη"
+  },
+  {
+    "poi_ID": 25,
+    "attribute_Value": "Νοτιοδυτική κρήνη"
+  },
+  {
+    "poi_ID": 18,
+    "attribute_Value": "Παλιό Βουλευτήριο"
+  },
+  {
+    "poi_ID": 47,
+    "attribute_Value": "Ωρολόγιο Κυρρήστου"
+  },
+  {
+    "poi_ID": 83,
+    "attribute_Value": "Πανδρόσειον"
+  },
+  {
+    "poi_ID": 85,
+    "attribute_Value": "Πινακοθήκη"
+  },
+  {
+    "poi_ID": 376,
+    "attribute_Value": "Νυμφαίον"
+  },
+  {
+    "poi_ID": 375,
+    "attribute_Value": "Νοτιοδυτικός Ναός"
+  },
+  {
+    "poi_ID": 373,
+    "attribute_Value": "Νοτιοανατολικός Ναός"
+  },
+  {
+    "poi_ID": 26,
+    "attribute_Value": "Νότια Στοά Ι"
+  },
+  {
+    "poi_ID": 74,
+    "attribute_Value": "Ναός Ρώμης και Αυγούστου"
+  },
+  {
+    "poi_ID": 84,
+    "attribute_Value": "Προπύλαια"
+  },
+  {
+    "poi_ID": 70,
+    "attribute_Value": "Παρθενώνας"
+  },
+  {
+    "poi_ID": 44,
+    "attribute_Value": "Πρόπυλο"
+  },
+  {
+    "poi_ID": 562,
+    "attribute_Value": "Ασκληπιείο"
+  },
+  {
+    "poi_ID": 578,
+    "attribute_Value": "Βιβλιοθήκη Αδριανού (Οθωμανική περίοδος)"
+  },
+  {
+    "poi_ID": 31,
+    "attribute_Value": "Ακρόπολη"
+  },
+  {
+    "poi_ID": 66,
+    "attribute_Value": "Ιερά Πύλη"
+  },
+  {
+    "poi_ID": 509,
+    "attribute_Value": "Μνημεία στη βόρεια πλαγιά της Ακρόπολης"
+  },
+  {
+    "poi_ID": 544,
+    "attribute_Value": "Μνημεία στον περίβολο του Ολυμπιείου"
+  },
+  {
+    "poi_ID": 548,
+    "attribute_Value": "Μνημείο Αγρίππα"
+  },
+  {
+    "poi_ID": 45,
+    "attribute_Value": "Νότια κλιτύς Ακρόπολης"
+  },
+  {
+    "poi_ID": 540,
+    "attribute_Value": "Παναθηναϊκή Οδός"
+  },
+  {
+    "poi_ID": 48,
+    "attribute_Value": "Πάνθεον"
+  },
+  {
+    "poi_ID": 538,
+    "attribute_Value": "Άγιοι Απόστολοι Σολάκη"
+  },
+  {
+    "poi_ID": 668,
+    "attribute_Value": "Άγιοι Ασώματοι στα σκαλιά"
+  },
+  {
+    "poi_ID": 51,
+    "attribute_Value": "Αγορανομείον"
+  },
+  {
+    "poi_ID": 336,
+    "attribute_Value": "Αέρηδες - Τεκές του Μπραΐμη"
+  },
+  {
+    "poi_ID": 77,
+    "attribute_Value": "Αθηνά Πρόμαχος"
+  },
+  {
+    "poi_ID": 24,
+    "attribute_Value": "Αιάκειον"
+  },
+  {
+    "poi_ID": 551,
+    "attribute_Value": "Άρειος Πάγος"
+  },
+  {
+    "poi_ID": 565,
+    "attribute_Value": "Ασκληπιείο"
+  },
+  {
+    "poi_ID": 76,
+    "attribute_Value": "Αρρηφόριο"
+  },
+  {
+    "poi_ID": 42,
+    "attribute_Value": "Βαλανείο Ολυμπιείου"
+  },
+  {
+    "poi_ID": 15,
+    "attribute_Value": "Βασίλειος Στοά"
+  },
+  {
+    "poi_ID": 367,
+    "attribute_Value": "Βασιλική"
+  },
+  {
+    "poi_ID": 52,
+    "attribute_Value": "Βεσπασιανές"
+  },
+  {
+    "poi_ID": 369,
+    "attribute_Value": "Βήμα"
+  },
+  {
+    "poi_ID": 49,
+    "attribute_Value": "Βιβλιοθήκη Αδριανού"
+  },
+  {
+    "poi_ID": 377,
+    "attribute_Value": "Βιβλιοθήκη Πανταίνου"
+  },
+  {
+    "poi_ID": 29,
+    "attribute_Value": "Βωμός 12 Θεών"
+  },
+  {
+    "poi_ID": 73,
+    "attribute_Value": "Βωμός Αθηνάς Πολιάδος"
+  },
+  {
+    "poi_ID": 65,
+    "attribute_Value": "Δίπυλον"
+  },
+  {
+    "poi_ID": 82,
+    "attribute_Value": "Ερέχθειο"
+  },
+  {
+    "poi_ID": 582,
+    "attribute_Value": "Ερέχθειο (Οθωμανική περίοδος)"
+  },
+  {
+    "poi_ID": 30,
+    "attribute_Value": "Εσχάρα"
+  },
+  {
+    "poi_ID": 54,
+    "attribute_Value": "Η Ακρόπολη μετά την αρχαιότητα"
+  },
+  {
+    "poi_ID": 69,
+    "attribute_Value": "Ηριδανός"
+  },
+  {
+    "poi_ID": 33,
+    "attribute_Value": "Θέατρο Διονύσου"
+  },
+  {
+    "poi_ID": 619,
+    "attribute_Value": "Θέατρο Διονύσου (Ρωμαϊκή περίοδος)"
+  },
+  {
+    "poi_ID": 20,
+    "attribute_Value": "Θόλος"
+  },
+  {
+    "poi_ID": 81,
+    "attribute_Value": "Ιερό Πανδίονος"
+  },
+  {
+    "poi_ID": 80,
+    "attribute_Value": "Ιερό Αρτέμιδος Βραυρωνίας"
+  },
+  {
+    "poi_ID": 505,
+    "attribute_Value": "Ιερό Ουρανίας Αφροδίτης"
+  },
+  {
+    "poi_ID": 34,
+    "attribute_Value": "Ιερό του Διονύσου Ελευθερέως"
+  },
+  {
+    "poi_ID": 19,
+    "attribute_Value": "Ιωνικό πρόπυλο"
+  },
+  {
+    "poi_ID": 566,
+    "attribute_Value": "Κεραμεικός (αρχαίο Νεκροταφείο)"
+  },
+  {
+    "poi_ID": 68,
+    "attribute_Value": "Κρήνη Διπύλου"
+  },
+  {
+    "poi_ID": 64,
+    "attribute_Value": "Λουτρό του Κεραμεικού"
+  },
+  {
+    "poi_ID": 340,
+    "attribute_Value": "Μεντρεσές (Ιεροδιδασκαλείο)"
+  },
+  {
+    "poi_ID": 370,
+    "attribute_Value": "Μεσαία Στοά"
+  },
+  {
+    "poi_ID": 379,
+    "attribute_Value": "Ωδείο του Αγρίππα"
+  },
+  {
+    "poi_ID": 32,
+    "attribute_Value": "Ωδείο Περικλή"
+  },
+  {
+    "poi_ID": 35,
+    "attribute_Value": "Χορηγικό μνημείο Νικία"
+  },
+  {
+    "poi_ID": 185,
+    "attribute_Value": "Ωδείο Ηρώδου του Αττικού"
+  },
+  {
+    "poi_ID": 337,
+    "attribute_Value": "Χαμάμ - Λουτρό του Σταροπάζαρου"
+  },
+  {
+    "poi_ID": 78,
+    "attribute_Value": "Χαλκοθήκη"
+  },
+  {
+    "poi_ID": 339,
+    "attribute_Value": "Φετιχιέ Τζαμί"
+  },
+  {
+    "poi_ID": 22,
+    "attribute_Value": "Τετράγωνο Περιστύλιο"
+  },
+  {
+    "poi_ID": 341,
+    "attribute_Value": "Τεκές"
+  },
+  {
+    "poi_ID": 371,
+    "attribute_Value": "Μητρώον"
+  },
+  {
+    "poi_ID": 21,
+    "attribute_Value": "Μνημείο Επωνύμων Ηρώων"
+  },
+  {
+    "poi_ID": 372,
+    "attribute_Value": "Μονόπτερος"
+  },
+  {
+    "poi_ID": 539,
+    "attribute_Value": "Μουσείο Αρχαίας Αγοράς (Στοάς Αττάλου)"
+  },
+  {
+    "poi_ID": 86,
+    "attribute_Value": "Ναός Αθηνάς Νίκης"
+  },
+  {
+    "poi_ID": 374,
+    "attribute_Value": "Ναός Άρη"
+  },
+  {
+    "poi_ID": 75,
+    "attribute_Value": "Ναός Διός Πολιέως"
+  },
+  {
+    "poi_ID": 14,
+    "attribute_Value": "Ναός Ηφαίστου"
+  },
+  {
+    "poi_ID": 11,
+    "attribute_Value": "Ναός Πατρώου Απόλλωνα"
+  },
+  {
+    "poi_ID": 23,
+    "attribute_Value": "Ποικίλη Στοά"
+  },
+  {
+    "poi_ID": 17,
+    "attribute_Value": "Νέο Βουλευτήριο"
+  },
+  {
+    "poi_ID": 549,
+    "attribute_Value": "Τείχη της Ακρόπολης"
+  },
+  {
+    "poi_ID": 67,
+    "attribute_Value": "Τείχη της Αθήνας"
+  },
+  {
+    "poi_ID": 71,
+    "attribute_Value": "Τέθριππο Αγρίππα"
+  },
+  {
+    "poi_ID": 684,
+    "attribute_Value": "Σωτείρα της Παζαρόπορτας"
+  },
+  {
+    "poi_ID": 36,
+    "attribute_Value": "Στοά Ευμένους"
+  },
+  {
+    "poi_ID": 16,
+    "attribute_Value": "Στοά Ελευθερίου Διός"
+  },
+  {
+    "poi_ID": 28,
+    "attribute_Value": "Νομισματοκοπείο"
+  },
+  {
+    "poi_ID": 50,
+    "attribute_Value": "Ρωμαϊκή Αγορά"
+  },
+  {
+    "poi_ID": 338,
+    "attribute_Value": "Σπίτι με τις καμάρες"
+  },
+  {
+    "poi_ID": 368,
+    "attribute_Value": "Στοά Αττάλου"
+  },
+  {
+    "poi_ID": 79,
+    "attribute_Value": "Στοά Βραυρωνίας Αρτέμιδος"
+  },
+  {
+    "poi_ID": 53,
+    "attribute_Value": "Πύλη Αθηνάς Αρχηγέτιδος"
+  },
+  {
+    "poi_ID": 43,
+    "attribute_Value": "Πύλη Αδριανού"
+  },
+  {
+    "poi_ID": 189,
+    "attribute_Value": "Ναός του Ολυμπίου Διός"
+  }
+]

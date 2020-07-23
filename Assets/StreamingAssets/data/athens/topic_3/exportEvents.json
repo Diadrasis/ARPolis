@@ -1,0 +1,416 @@
+[
+  {
+    "id": 1,
+    "event_ID": 137,
+    "topic_ID": 3,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Η Ελλάδα στον πόλεμο"
+  },
+  {
+    "id": 2,
+    "event_ID": 137,
+    "topic_ID": 3,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Συνοπτική Περιγραφή",
+    "attribute_Value": "Στις 28 Οκτωβρίου 1940 ο Ιωάννης Μεταξάς απορρίπτει το ιταλικό τελεσίγραφο για ελεύθερη διέλευση των ιταλικών στρατευμάτων από το ελληνικό έδαφος και τον έλεγχο πλήθους στρατηγικών σημείων της χώρας. Η Ιταλία κηρύσσει τον πόλεμο στην Ελλάδα."
+  },
+  {
+    "id": 3,
+    "event_ID": 137,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "143"
+  },
+  {
+    "id": 4,
+    "event_ID": 137,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "144"
+  },
+  {
+    "id": 5,
+    "event_ID": 137,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "145"
+  },
+  {
+    "id": 6,
+    "event_ID": 137,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "173"
+  },
+  {
+    "id": 7,
+    "event_ID": 137,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "174"
+  },
+  {
+    "id": 8,
+    "event_ID": 146,
+    "topic_ID": 3,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γερμανική κατοχή"
+  },
+  {
+    "id": 9,
+    "event_ID": 146,
+    "topic_ID": 3,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Συνοπτική Περιγραφή",
+    "attribute_Value": "Στις 27 Απριλίου η Αθήνα παραδίδεται στους Γερμανούς, οπότε και αρχίζει η τραγωδία της Κατοχής με πείνα, φυλακίσεις, εκτελέσεις, αλλά και αντίσταση κατά των κατακτητών."
+  },
+  {
+    "id": 10,
+    "event_ID": 146,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "217"
+  },
+  {
+    "id": 11,
+    "event_ID": 146,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "218"
+  },
+  {
+    "id": 12,
+    "event_ID": 147,
+    "topic_ID": 3,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αντιστασιακές οργανώσεις κατά την Κατοχή"
+  },
+  {
+    "id": 13,
+    "event_ID": 147,
+    "topic_ID": 3,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Συνοπτική Περιγραφή",
+    "attribute_Value": "Δύο αντιστασιακές οργανώσεις κυριάρχησαν στην κατοχική σκηνή: το ΕΑΜ, με τα παρακλάδια του ΕΠΟΝ και ΕΛΑΣ, και ο ΕΔΕΣ."
+  },
+  {
+    "id": 14,
+    "event_ID": 147,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "148"
+  },
+  {
+    "id": 15,
+    "event_ID": 147,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "149"
+  },
+  {
+    "id": 16,
+    "event_ID": 147,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "150"
+  },
+  {
+    "id": 17,
+    "event_ID": 147,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "151"
+  },
+  {
+    "id": 18,
+    "event_ID": 147,
+    "topic_ID": 3,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Resistance organizations during the German Occupation"
+  },
+  {
+    "id": 19,
+    "event_ID": 147,
+    "topic_ID": 3,
+    "attribute_ID": 4,
+    "attribute_Lang": "en",
+    "attribute_Label": "Short Description",
+    "attribute_Value": "Two organizations dominated the resistance during the Occupation period: the National Liberation Front with its annexes, the United Panhellenic Organization of Youth and  the Greek People's Liberation Army,  and the National Republican Greek League."
+  },
+  {
+    "id": 20,
+    "event_ID": 153,
+    "topic_ID": 3,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Διαδήλωση κατά της επιστράτευσης, 5/3/1943"
+  },
+  {
+    "id": 21,
+    "event_ID": 153,
+    "topic_ID": 3,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Συνοπτική Περιγραφή",
+    "attribute_Value": "Στις 30 Ιανουαρίου 1943 ο αντιστράτηγος Αλεξάντερ Λερ, στρατιωτικός διοικητής των γερμανικών στρατιωτικών δυνάμεων ΝΑ Ευρώπης, εξέδωσε μία διαταγή, η οποία σήμαινε την αποκαλούμενη εργατική επιστράτευση. Στις 5 Μαρτίου προκηρύσσεται γενική απεργία κατά του διατάγματος, με αποτέλεσμα στις 6/3 ουσιαστικά να ανακαλείται."
+  },
+  {
+    "id": 22,
+    "event_ID": 153,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "154"
+  },
+  {
+    "id": 23,
+    "event_ID": 153,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "155"
+  },
+  {
+    "id": 24,
+    "event_ID": 153,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "212"
+  },
+  {
+    "id": 25,
+    "event_ID": 157,
+    "topic_ID": 3,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Η κηδεία του Παλαμά"
+  },
+  {
+    "id": 26,
+    "event_ID": 157,
+    "topic_ID": 3,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Συνοπτική Περιγραφή",
+    "attribute_Value": "Στις 28 Φεβρουαρίου 1943 έγινε στην Αθήνα η κηδεία του ποιητή Κωστή Παλαμά, που μετατράπηκε σε μεγάλη λαϊκή αντικατοχική εκδήλωση."
+  },
+  {
+    "id": 27,
+    "event_ID": 157,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "158"
+  },
+  {
+    "id": 28,
+    "event_ID": 165,
+    "topic_ID": 3,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Διαδήλωση κατά της επέκτασης της βουλγαρικής ζώνης κατοχής στην Κεντρική Μακεδονία"
+  },
+  {
+    "id": 29,
+    "event_ID": 165,
+    "topic_ID": 3,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Συνοπτική Περιγραφή",
+    "attribute_Value": "Στις 22 Ιουλίου 1943 πραγματοποιείται μεγάλη διαδήλωση με αφορμή την πρόθεση των Γερμανών να επεκτείνουν την βουλγαρική κατοχή σε όλη την Μακεδονία. Η διαδήλωση κατέληξε με πολλούς νεκρούς, τραυματίες και συλληφθέντες."
+  },
+  {
+    "id": 30,
+    "event_ID": 165,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "166"
+  },
+  {
+    "id": 31,
+    "event_ID": 165,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "215"
+  },
+  {
+    "id": 32,
+    "event_ID": 167,
+    "topic_ID": 3,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Τα Δεκμβριανά"
+  },
+  {
+    "id": 33,
+    "event_ID": 167,
+    "topic_ID": 3,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Συνοπτική Περιγραφή",
+    "attribute_Value": "Αμέσως μετά την απελευθέρωση, η κυβέρνηση εθνικής ενότητας συγκλονίστηκε από σοβαρότατες αντιθέσεις που σχετίζονταν με την ευρεία κοινωνική και πολιτική αναταραχή σε ολόκληρη τη χώρα και οξύνονταν ακόμα περισσότερο με την ανοιχτή και συστηματική παρέμβαση των Βρετανών, που ήταν αποφασισμένοι να επιλύσουν το ζήτημα σύμφωνα με τις πολιτικές τους βλέψεις."
+  },
+  {
+    "id": 34,
+    "event_ID": 167,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "208"
+  },
+  {
+    "id": 35,
+    "event_ID": 167,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "210"
+  },
+  {
+    "id": 36,
+    "event_ID": 167,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "211"
+  },
+  {
+    "id": 37,
+    "event_ID": 167,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "213"
+  },
+  {
+    "id": 38,
+    "event_ID": 167,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "214"
+  },
+  {
+    "id": 39,
+    "event_ID": 167,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "222"
+  },
+  {
+    "id": 40,
+    "event_ID": 168,
+    "topic_ID": 3,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Η απελευθέρωση της Αθήνας"
+  },
+  {
+    "id": 41,
+    "event_ID": 168,
+    "topic_ID": 3,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Συνοπτική Περιγραφή",
+    "attribute_Value": "Το πρωί της 12ης Οκτωβρίου 1944 οι Γερμανοί αποχωρούν από την Αθήνα και στις 18/10 η ελληνική κυβέρνηση φτάνει στην Αθήνα και αναρτά της ελληνική σημαία στην Ακρόπολη."
+  },
+  {
+    "id": 42,
+    "event_ID": 168,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "175"
+  },
+  {
+    "id": 43,
+    "event_ID": 168,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "176"
+  },
+  {
+    "id": 44,
+    "event_ID": 168,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "209"
+  },
+  {
+    "id": 45,
+    "event_ID": 168,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "220"
+  },
+  {
+    "id": 46,
+    "event_ID": 168,
+    "topic_ID": 3,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Εικόνες",
+    "attribute_Value": "221"
+  }
+]

@@ -1,0 +1,3413 @@
+[
+  {
+    "id": 1,
+    "topic_ID": 3,
+    "exhibit_ID": 15,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Φωτό Προσφυγικά"
+  },
+  {
+    "id": 2,
+    "topic_ID": 3,
+    "exhibit_ID": 16,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ντοκιμαντέρ Προσφυγικά"
+  },
+  {
+    "id": 3,
+    "topic_ID": 3,
+    "exhibit_ID": 59,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Δεκεμβριανά"
+  },
+  {
+    "id": 4,
+    "topic_ID": 3,
+    "exhibit_ID": 128,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πρόγραμμα για 'Πολεμικά Παναθήναια'"
+  },
+  {
+    "id": 5,
+    "topic_ID": 3,
+    "exhibit_ID": 158,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Χαρακτικό του Σπύρου Βασιλείου με την κηδεία του Παλαμά"
+  },
+  {
+    "id": 6,
+    "topic_ID": 3,
+    "exhibit_ID": 37,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γραφεία ΕΣΠΟ"
+  },
+  {
+    "id": 7,
+    "topic_ID": 3,
+    "exhibit_ID": 183,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Φυματικοί φοιτητές"
+  },
+  {
+    "id": 8,
+    "topic_ID": 3,
+    "exhibit_ID": 198,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Κατακτητές και Πανεπιστήμιο"
+  },
+  {
+    "id": 9,
+    "topic_ID": 3,
+    "exhibit_ID": 204,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γκραφιτι_4"
+  },
+  {
+    "id": 10,
+    "topic_ID": 3,
+    "exhibit_ID": 213,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Χαιρετισμός από αμερικανική νεολαία"
+  },
+  {
+    "id": 11,
+    "topic_ID": 3,
+    "exhibit_ID": 205,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Άγγλοι αλεξιπτωτιστές στην Ακρόπολη"
+  },
+  {
+    "id": 12,
+    "topic_ID": 3,
+    "exhibit_ID": 206,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Άγγλοι αλεξιπτωτιστές στο Μουσείο"
+  },
+  {
+    "id": 13,
+    "topic_ID": 3,
+    "exhibit_ID": 100,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αναφορά στην υποστολή της ναζιστικής σημαίας"
+  },
+  {
+    "id": 14,
+    "topic_ID": 3,
+    "exhibit_ID": 175,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Η Απελευθέρωση της Αθήνας στον ημερήσιο τύπο"
+  },
+  {
+    "id": 15,
+    "topic_ID": 3,
+    "exhibit_ID": 130,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Η πρώτη παράσταση του Καρόλου Κουν"
+  },
+  {
+    "id": 16,
+    "topic_ID": 3,
+    "exhibit_ID": 108,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Από την πορεία του ΕΑΜ στο Σύνταγμα"
+  },
+  {
+    "id": 17,
+    "topic_ID": 3,
+    "exhibit_ID": 38,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "O λόγος της απελευθέρωσης"
+  },
+  {
+    "id": 18,
+    "topic_ID": 3,
+    "exhibit_ID": 64,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Άγαλμα Κωστή Παλαμά"
+  },
+  {
+    "id": 19,
+    "topic_ID": 3,
+    "exhibit_ID": 172,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Απελευθέρωση"
+  },
+  {
+    "id": 20,
+    "topic_ID": 3,
+    "exhibit_ID": 214,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βαρβαρότητες του Σκόμπυ"
+  },
+  {
+    "id": 21,
+    "topic_ID": 3,
+    "exhibit_ID": 110,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Βιβλιοπωλείο της Εστίας"
+  },
+  {
+    "id": 22,
+    "topic_ID": 3,
+    "exhibit_ID": 174,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γελοιογραφία"
+  },
+  {
+    "id": 23,
+    "topic_ID": 3,
+    "exhibit_ID": 45,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γερμανική Εισβολή - Κατάθεση Στεφάνου"
+  },
+  {
+    "id": 24,
+    "topic_ID": 3,
+    "exhibit_ID": 194,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γερμανοί στο ΕΚΠΑ"
+  },
+  {
+    "id": 25,
+    "topic_ID": 3,
+    "exhibit_ID": 94,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γκεστάπο"
+  },
+  {
+    "id": 26,
+    "topic_ID": 3,
+    "exhibit_ID": 201,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γκραφιτι_1"
+  },
+  {
+    "id": 27,
+    "topic_ID": 3,
+    "exhibit_ID": 202,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γκραφιτι_2"
+  },
+  {
+    "id": 28,
+    "topic_ID": 3,
+    "exhibit_ID": 203,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γκράφιτι_3"
+  },
+  {
+    "id": 29,
+    "topic_ID": 3,
+    "exhibit_ID": 103,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Διάγραμμα των κινητοποιήσεων στο ΕΜΠ"
+  },
+  {
+    "id": 30,
+    "topic_ID": 3,
+    "exhibit_ID": 221,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Διαδήlωση απελευθέρωσης"
+  },
+  {
+    "id": 31,
+    "topic_ID": 3,
+    "exhibit_ID": 230,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Επιστράτευση 1940"
+  },
+  {
+    "id": 32,
+    "topic_ID": 3,
+    "exhibit_ID": 220,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Η Αθήνα ελεύθερη"
+  },
+  {
+    "id": 33,
+    "topic_ID": 3,
+    "exhibit_ID": 149,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Η σημαία του ΕΔΕΣ"
+  },
+  {
+    "id": 34,
+    "topic_ID": 3,
+    "exhibit_ID": 173,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Θεατρικές παραστάσεις"
+  },
+  {
+    "id": 35,
+    "topic_ID": 3,
+    "exhibit_ID": 189,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Καθαρίστριες πράκτορες ..."
+  },
+  {
+    "id": 36,
+    "topic_ID": 3,
+    "exhibit_ID": 43,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Φυλακές Αβέρωφ"
+  },
+  {
+    "id": 37,
+    "topic_ID": 3,
+    "exhibit_ID": 179,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Φοιτητής στη φυλακή"
+  },
+  {
+    "id": 38,
+    "topic_ID": 3,
+    "exhibit_ID": 188,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Φοιτητής και κομμουνιστής"
+  },
+  {
+    "id": 39,
+    "topic_ID": 3,
+    "exhibit_ID": 181,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Φόβος για απεργία στις 25.3.1942"
+  },
+  {
+    "id": 40,
+    "topic_ID": 3,
+    "exhibit_ID": 98,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ύψωση της γερμανικής ναζιστικής σημαίας"
+  },
+  {
+    "id": 41,
+    "topic_ID": 3,
+    "exhibit_ID": 182,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Υποσιτισμός και άθληση"
+  },
+  {
+    "id": 42,
+    "topic_ID": 3,
+    "exhibit_ID": 212,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Τιμή και δόξα στον ήρωα νεκρό μαθητή Δρακόπουλο"
+  },
+  {
+    "id": 43,
+    "topic_ID": 3,
+    "exhibit_ID": 176,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Σταδιακή επάνοδος της κυβέρνησης"
+  },
+  {
+    "id": 44,
+    "topic_ID": 3,
+    "exhibit_ID": 195,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Σεβασμός στο χώρο!"
+  },
+  {
+    "id": 45,
+    "topic_ID": 3,
+    "exhibit_ID": 62,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Το πρώτο κτίριο του νοσοκομείου 'Ελπίς'"
+  },
+  {
+    "id": 46,
+    "topic_ID": 3,
+    "exhibit_ID": 166,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "22 Ιουλίου 1943"
+  },
+  {
+    "id": 47,
+    "topic_ID": 3,
+    "exhibit_ID": 197,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Προς διδάσκοντες"
+  },
+  {
+    "id": 48,
+    "topic_ID": 3,
+    "exhibit_ID": 210,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πορεία νεκρών"
+  },
+  {
+    "id": 49,
+    "topic_ID": 3,
+    "exhibit_ID": 217,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πείνα Ι"
+  },
+  {
+    "id": 50,
+    "topic_ID": 3,
+    "exhibit_ID": 218,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πείνα 2"
+  },
+  {
+    "id": 51,
+    "topic_ID": 3,
+    "exhibit_ID": 143,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Οπλίτες στο μέτωπο"
+  },
+  {
+    "id": 52,
+    "topic_ID": 3,
+    "exhibit_ID": 60,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Όπερα στο 'Παλλάς'"
+  },
+  {
+    "id": 53,
+    "topic_ID": 3,
+    "exhibit_ID": 207,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Οι πρώτοι πυροβολισμοί"
+  },
+  {
+    "id": 54,
+    "topic_ID": 3,
+    "exhibit_ID": 163,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Οι Άγγλοι στην Ακρόπολη"
+  },
+  {
+    "id": 55,
+    "topic_ID": 3,
+    "exhibit_ID": 208,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Οδόφραγμα στην οδό Αθηνάς"
+  },
+  {
+    "id": 56,
+    "topic_ID": 3,
+    "exhibit_ID": 71,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Οδηγίες για τη διάσωση των αρχαίων στον Β' ΠΠ"
+  },
+  {
+    "id": 57,
+    "topic_ID": 3,
+    "exhibit_ID": 222,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ο Τσώρτσιλ στην Αθήνα"
+  },
+  {
+    "id": 58,
+    "topic_ID": 3,
+    "exhibit_ID": 184,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ο σύλλογος φοιτητών ζητά ..."
+  },
+  {
+    "id": 59,
+    "topic_ID": 3,
+    "exhibit_ID": 193,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ο πρύτανης διαμαρτύρεται ..."
+  },
+  {
+    "id": 60,
+    "topic_ID": 3,
+    "exhibit_ID": 171,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ο λόγος του Γ. Παπανδρέου για την απελευθέρωση"
+  },
+  {
+    "id": 61,
+    "topic_ID": 3,
+    "exhibit_ID": 211,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ο εμφύλιος άρχισε"
+  },
+  {
+    "id": 62,
+    "topic_ID": 3,
+    "exhibit_ID": 185,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ο Διεθνής Ερυθρός Σταυρός ζητά ενημέρωση"
+  },
+  {
+    "id": 63,
+    "topic_ID": 3,
+    "exhibit_ID": 107,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Νεκροί στα κατά την διαδήλωση του ΕΑΜ"
+  },
+  {
+    "id": 64,
+    "topic_ID": 3,
+    "exhibit_ID": 52,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μνημείο για την Παναγιώτα Σταθοπούλου"
+  },
+  {
+    "id": 65,
+    "topic_ID": 3,
+    "exhibit_ID": 42,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μικτή Μακρονήσου: η ομάδα ποδοσφαίρου των εκτοπισθέντων"
+  },
+  {
+    "id": 66,
+    "topic_ID": 3,
+    "exhibit_ID": 209,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Μικροπωλητές"
+  },
+  {
+    "id": 67,
+    "topic_ID": 3,
+    "exhibit_ID": 44,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Λόγος Απελευθέρωσης (Απόσπασμα)"
+  },
+  {
+    "id": 68,
+    "topic_ID": 3,
+    "exhibit_ID": 39,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Λεωφόρος Απελευθέρωση"
+  },
+  {
+    "id": 69,
+    "topic_ID": 3,
+    "exhibit_ID": 65,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Κηδεία του Κ. Παλαμά"
+  },
+  {
+    "id": 70,
+    "topic_ID": 3,
+    "exhibit_ID": 223,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Κελλί στην Γκεστάπο"
+  },
+  {
+    "id": 71,
+    "topic_ID": 3,
+    "exhibit_ID": 196,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Καταστροφές!"
+  },
+  {
+    "id": 72,
+    "topic_ID": 3,
+    "exhibit_ID": 199,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Και νέα άδεια!"
+  },
+  {
+    "id": 73,
+    "topic_ID": 3,
+    "exhibit_ID": 187,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Καθηγητές σε ρόλο αστυνομικού"
+  },
+  {
+    "id": 74,
+    "topic_ID": 3,
+    "exhibit_ID": 186,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Καθηγητές και εποπτεία"
+  },
+  {
+    "id": 75,
+    "topic_ID": 3,
+    "exhibit_ID": 73,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αγάλματα σε ορύγματα κάτω από τις αίθουσες του Εθνικού Αρχαιολογικού μουσείου"
+  },
+  {
+    "id": 76,
+    "topic_ID": 3,
+    "exhibit_ID": 51,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αναμνηστική πλάκα για τους πεσόντες του Ιουλίου 1943"
+  },
+  {
+    "id": 77,
+    "topic_ID": 3,
+    "exhibit_ID": 154,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Αφίσα κατά της επιστράτευσης"
+  },
+  {
+    "id": 78,
+    "topic_ID": 3,
+    "exhibit_ID": 57,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γερμανοί στρατιώτες στο Ζόναρς"
+  },
+  {
+    "id": 79,
+    "topic_ID": 3,
+    "exhibit_ID": 76,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Δεκεμβριανά στο ΕΑΜ"
+  },
+  {
+    "id": 80,
+    "topic_ID": 3,
+    "exhibit_ID": 49,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Διαδήλωση κατά της πολιτικής επιστράτευσης"
+  },
+  {
+    "id": 81,
+    "topic_ID": 3,
+    "exhibit_ID": 151,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Εξώφυλλο του καταστατικού της ΕΠΟΝ"
+  },
+  {
+    "id": 82,
+    "topic_ID": 3,
+    "exhibit_ID": 144,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Επιστράτευση"
+  },
+  {
+    "id": 83,
+    "topic_ID": 3,
+    "exhibit_ID": 70,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ζαλοκώστα 7"
+  },
+  {
+    "id": 84,
+    "topic_ID": 3,
+    "exhibit_ID": 53,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Η αντίδραση των κατακτητών στις διαδηλώσεις της 22ας Ιουλίου"
+  },
+  {
+    "id": 85,
+    "topic_ID": 3,
+    "exhibit_ID": 95,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Η μάχη του Μακρυγιάννη"
+  },
+  {
+    "id": 86,
+    "topic_ID": 3,
+    "exhibit_ID": 148,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Η σημαία του ΕΑΜ"
+  },
+  {
+    "id": 87,
+    "topic_ID": 3,
+    "exhibit_ID": 150,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ίδρυτική αφίασα της ΕΠΟΝ"
+  },
+  {
+    "id": 88,
+    "topic_ID": 3,
+    "exhibit_ID": 54,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ιταλοί έφιπποι καταδιώκουν διαδηλωτές στην κατεχόμενη Αθήνα"
+  },
+  {
+    "id": 89,
+    "topic_ID": 3,
+    "exhibit_ID": 133,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Καζίνο Femina"
+  },
+  {
+    "id": 90,
+    "topic_ID": 3,
+    "exhibit_ID": 47,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Κτίριο Λογοθετόπουλου"
+  },
+  {
+    "id": 91,
+    "topic_ID": 3,
+    "exhibit_ID": 231,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Γήπεδο της Λεωφόρου Αλεξάνδρας"
+  },
+  {
+    "id": 92,
+    "topic_ID": 3,
+    "exhibit_ID": 109,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Λουμίδης"
+  },
+  {
+    "id": 93,
+    "topic_ID": 3,
+    "exhibit_ID": 155,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Με χωνιά κατά της επιστράτευσης"
+  },
+  {
+    "id": 94,
+    "topic_ID": 3,
+    "exhibit_ID": 215,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πλάκα για Σταθοπούλου"
+  },
+  {
+    "id": 95,
+    "topic_ID": 3,
+    "exhibit_ID": 232,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Προσφυγικά Λ. Αλεξάνδρας"
+  },
+  {
+    "id": 96,
+    "topic_ID": 3,
+    "exhibit_ID": 145,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ξένη γελοιογραφία"
+  },
+  {
+    "id": 97,
+    "topic_ID": 3,
+    "exhibit_ID": 106,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πακέτο δυναμίτιδας"
+  },
+  {
+    "id": 98,
+    "topic_ID": 3,
+    "exhibit_ID": 200,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πανεπιστημιακή Λέσχη"
+  },
+  {
+    "id": 99,
+    "topic_ID": 3,
+    "exhibit_ID": 170,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Πλάκα σε ανάμνηση της ανατίναξης της ΕΣΠΟ"
+  },
+  {
+    "id": 100,
+    "topic_ID": 3,
+    "exhibit_ID": 72,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Προετοιμασία αγάλματος για ταφή λίγο πριν την εισβολή των Γερμανών"
+  },
+  {
+    "id": 101,
+    "topic_ID": 3,
+    "exhibit_ID": 48,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Προτομή του Κώστα Περρίκου"
+  },
+  {
+    "id": 102,
+    "topic_ID": 3,
+    "exhibit_ID": 132,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Ρουλέτα Μαυροκέφαλου"
+  },
+  {
+    "id": 103,
+    "topic_ID": 3,
+    "exhibit_ID": 111,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Στοά Νικολούδη"
+  },
+  {
+    "id": 104,
+    "topic_ID": 3,
+    "exhibit_ID": 169,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Τα 'Πολεμικά Παναθήναια'"
+  },
+  {
+    "id": 105,
+    "topic_ID": 3,
+    "exhibit_ID": 91,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Το αναμνηστικό μνημείο επί της οδού Μέρλιν 6"
+  },
+  {
+    "id": 106,
+    "topic_ID": 3,
+    "exhibit_ID": 216,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Το ξενοδοχείο Μεγάλη Βρετανία στην Κατοχή"
+  },
+  {
+    "id": 107,
+    "topic_ID": 3,
+    "exhibit_ID": 58,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Το Μέγαρο του ΜΤΣ από την πλατεία Συντάγματος"
+  },
+  {
+    "id": 108,
+    "topic_ID": 3,
+    "exhibit_ID": 93,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Φυλακές Χατζηκώστα"
+  },
+  {
+    "id": 109,
+    "topic_ID": 3,
+    "exhibit_ID": 101,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Φυλακές Αβέρωφ"
+  },
+  {
+    "id": 110,
+    "topic_ID": 3,
+    "exhibit_ID": 233,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος",
+    "attribute_Value": "Το κτήριο των φυλακών Αβέρωφ"
+  },
+  {
+    "id": 111,
+    "topic_ID": 3,
+    "exhibit_ID": 15,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_1__remote"
+  },
+  {
+    "id": 112,
+    "topic_ID": 3,
+    "exhibit_ID": 16,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_4__remote"
+  },
+  {
+    "id": 113,
+    "topic_ID": 3,
+    "exhibit_ID": 59,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_24_δεκεμβριανα_ερτ.jpg"
+  },
+  {
+    "id": 114,
+    "topic_ID": 3,
+    "exhibit_ID": 128,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_50_παναθ.jpg"
+  },
+  {
+    "id": 115,
+    "topic_ID": 3,
+    "exhibit_ID": 158,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_63_spiros-vasiliou-h-tafi-tou-palama.jpg"
+  },
+  {
+    "id": 116,
+    "topic_ID": 3,
+    "exhibit_ID": 37,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_5__remote"
+  },
+  {
+    "id": 117,
+    "topic_ID": 3,
+    "exhibit_ID": 183,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_77_φυματικοι.jpg"
+  },
+  {
+    "id": 118,
+    "topic_ID": 3,
+    "exhibit_ID": 198,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_90_πανεπ_βδομαδες.jpg"
+  },
+  {
+    "id": 119,
+    "topic_ID": 3,
+    "exhibit_ID": 204,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_97_IMG_3209.JPG"
+  },
+  {
+    "id": 120,
+    "topic_ID": 3,
+    "exhibit_ID": 213,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_107_004.05.045.00071-1.jpg"
+  },
+  {
+    "id": 121,
+    "topic_ID": 3,
+    "exhibit_ID": 205,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_98_page 85.jpg"
+  },
+  {
+    "id": 122,
+    "topic_ID": 3,
+    "exhibit_ID": 206,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_99_page 93.jpg"
+  },
+  {
+    "id": 123,
+    "topic_ID": 3,
+    "exhibit_ID": 100,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_41_eleftheria_25031945_small.jpg"
+  },
+  {
+    "id": 124,
+    "topic_ID": 3,
+    "exhibit_ID": 175,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_72_47_01_HYPER.pdf"
+  },
+  {
+    "id": 125,
+    "topic_ID": 3,
+    "exhibit_ID": 130,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_51_κουν.jpg"
+  },
+  {
+    "id": 126,
+    "topic_ID": 3,
+    "exhibit_ID": 108,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_46_Dekemvriana1944.jpg"
+  },
+  {
+    "id": 127,
+    "topic_ID": 3,
+    "exhibit_ID": 38,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_6__remote"
+  },
+  {
+    "id": 128,
+    "topic_ID": 3,
+    "exhibit_ID": 64,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_38_Kostantinos_Palamas_statue..jpg"
+  },
+  {
+    "id": 129,
+    "topic_ID": 3,
+    "exhibit_ID": 172,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_118_Γ_60.jpg"
+  },
+  {
+    "id": 130,
+    "topic_ID": 3,
+    "exhibit_ID": 214,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_108_004.05.049.00472.jpg"
+  },
+  {
+    "id": 131,
+    "topic_ID": 3,
+    "exhibit_ID": 110,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_48_εστια.jpg"
+  },
+  {
+    "id": 132,
+    "topic_ID": 3,
+    "exhibit_ID": 174,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_71_γελιογραφία_1940.jpg"
+  },
+  {
+    "id": 133,
+    "topic_ID": 3,
+    "exhibit_ID": 45,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_117_Γ_139.jpg"
+  },
+  {
+    "id": 134,
+    "topic_ID": 3,
+    "exhibit_ID": 194,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_86_uoa_0005 ok d.jpg"
+  },
+  {
+    "id": 135,
+    "topic_ID": 3,
+    "exhibit_ID": 94,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_122_Λευκ_22-φ_190.jpg"
+  },
+  {
+    "id": 136,
+    "topic_ID": 3,
+    "exhibit_ID": 201,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_94_20190627_105641.jpg"
+  },
+  {
+    "id": 137,
+    "topic_ID": 3,
+    "exhibit_ID": 202,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_95_20190627_105647.jpg"
+  },
+  {
+    "id": 138,
+    "topic_ID": 3,
+    "exhibit_ID": 203,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_96_20190627_110013.jpg"
+  },
+  {
+    "id": 139,
+    "topic_ID": 3,
+    "exhibit_ID": 103,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_43_polytexneio-diagrammata_0_1.jpg"
+  },
+  {
+    "id": 140,
+    "topic_ID": 3,
+    "exhibit_ID": 221,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_120_Γ_57.jpg"
+  },
+  {
+    "id": 141,
+    "topic_ID": 3,
+    "exhibit_ID": 230,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_55_epistrateusis2.jpg"
+  },
+  {
+    "id": 142,
+    "topic_ID": 3,
+    "exhibit_ID": 220,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_119_Γ_153.jpg"
+  },
+  {
+    "id": 143,
+    "topic_ID": 3,
+    "exhibit_ID": 149,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_58_εδεσ.jpg"
+  },
+  {
+    "id": 144,
+    "topic_ID": 3,
+    "exhibit_ID": 173,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_70_ρεξ.jpg"
+  },
+  {
+    "id": 145,
+    "topic_ID": 3,
+    "exhibit_ID": 189,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_83_nosokomes.jpg"
+  },
+  {
+    "id": 146,
+    "topic_ID": 3,
+    "exhibit_ID": 43,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_9__remote"
+  },
+  {
+    "id": 147,
+    "topic_ID": 3,
+    "exhibit_ID": 179,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_74_foititis.jpg"
+  },
+  {
+    "id": 148,
+    "topic_ID": 3,
+    "exhibit_ID": 188,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_82_foititis.jpg"
+  },
+  {
+    "id": 149,
+    "topic_ID": 3,
+    "exhibit_ID": 181,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_75_απεργια.jpg"
+  },
+  {
+    "id": 150,
+    "topic_ID": 3,
+    "exhibit_ID": 98,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_39_Bundesarchiv_Bild_101I-164-0389-23A,_Athen,_Hissen_der_Hakenkreuzflagge.jpg"
+  },
+  {
+    "id": 151,
+    "topic_ID": 3,
+    "exhibit_ID": 182,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_76_υποσιτισμος_ολα.jpg"
+  },
+  {
+    "id": 152,
+    "topic_ID": 3,
+    "exhibit_ID": 212,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_106_004.05.046.00371.jpg"
+  },
+  {
+    "id": 153,
+    "topic_ID": 3,
+    "exhibit_ID": 176,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_73_48_01_HYPER.pdf"
+  },
+  {
+    "id": 154,
+    "topic_ID": 3,
+    "exhibit_ID": 195,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_87_uoa_0006 ok.jpg"
+  },
+  {
+    "id": 155,
+    "topic_ID": 3,
+    "exhibit_ID": 62,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_26_elpis6-700x418.jpg"
+  },
+  {
+    "id": 156,
+    "topic_ID": 3,
+    "exhibit_ID": 166,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_65_Athens_Nazi-1943.jpg"
+  },
+  {
+    "id": 157,
+    "topic_ID": 3,
+    "exhibit_ID": 197,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_89_προς καθηγητές.jpg"
+  },
+  {
+    "id": 158,
+    "topic_ID": 3,
+    "exhibit_ID": 210,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_104_στηλοι.jpg"
+  },
+  {
+    "id": 159,
+    "topic_ID": 3,
+    "exhibit_ID": 217,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_111_lefk.jpg"
+  },
+  {
+    "id": 160,
+    "topic_ID": 3,
+    "exhibit_ID": 218,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_114_Λευκ_22-φ_35.jpg"
+  },
+  {
+    "id": 161,
+    "topic_ID": 3,
+    "exhibit_ID": 143,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_115_Α_26.jpg"
+  },
+  {
+    "id": 162,
+    "topic_ID": 3,
+    "exhibit_ID": 60,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_25_παλλασ_οπερα.JPG"
+  },
+  {
+    "id": 163,
+    "topic_ID": 3,
+    "exhibit_ID": 207,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_100_page 36.jpg"
+  },
+  {
+    "id": 164,
+    "topic_ID": 3,
+    "exhibit_ID": 163,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_64_δεκε.jpg"
+  },
+  {
+    "id": 165,
+    "topic_ID": 3,
+    "exhibit_ID": 208,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_102_page 54.jpg"
+  },
+  {
+    "id": 166,
+    "topic_ID": 3,
+    "exhibit_ID": 71,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_30_genikai-odigiai-gia-tin-apokrypsi-kai-prostasia.jpg"
+  },
+  {
+    "id": 167,
+    "topic_ID": 3,
+    "exhibit_ID": 222,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_121_Γ_148.jpg"
+  },
+  {
+    "id": 168,
+    "topic_ID": 3,
+    "exhibit_ID": 184,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_78_φοιτητες_νοσος.jpg"
+  },
+  {
+    "id": 169,
+    "topic_ID": 3,
+    "exhibit_ID": 193,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_85_diamartiria.jpg"
+  },
+  {
+    "id": 170,
+    "topic_ID": 3,
+    "exhibit_ID": 171,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_68_παπανδρεου_1944.jpg"
+  },
+  {
+    "id": 171,
+    "topic_ID": 3,
+    "exhibit_ID": 211,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_105_page 65.jpg"
+  },
+  {
+    "id": 172,
+    "topic_ID": 3,
+    "exhibit_ID": 185,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_79_ερυθρος.jpg"
+  },
+  {
+    "id": 173,
+    "topic_ID": 3,
+    "exhibit_ID": 107,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_45_dekembriana2.jpg"
+  },
+  {
+    "id": 174,
+    "topic_ID": 3,
+    "exhibit_ID": 52,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_18_54.JPG"
+  },
+  {
+    "id": 175,
+    "topic_ID": 3,
+    "exhibit_ID": 42,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_8_μακρονησος.jpg"
+  },
+  {
+    "id": 176,
+    "topic_ID": 3,
+    "exhibit_ID": 209,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_103_page 3.jpg"
+  },
+  {
+    "id": 177,
+    "topic_ID": 3,
+    "exhibit_ID": 44,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_10__remote"
+  },
+  {
+    "id": 178,
+    "topic_ID": 3,
+    "exhibit_ID": 39,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_7__remote"
+  },
+  {
+    "id": 179,
+    "topic_ID": 3,
+    "exhibit_ID": 65,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_28_κηδεία.JPG"
+  },
+  {
+    "id": 180,
+    "topic_ID": 3,
+    "exhibit_ID": 223,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_123_Λευκ_22-φ_194.jpg"
+  },
+  {
+    "id": 181,
+    "topic_ID": 3,
+    "exhibit_ID": 196,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_88_uoa_0008 ok cropped.jpg"
+  },
+  {
+    "id": 182,
+    "topic_ID": 3,
+    "exhibit_ID": 199,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_91_νεα αδεια.jpg"
+  },
+  {
+    "id": 183,
+    "topic_ID": 3,
+    "exhibit_ID": 187,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_81_ασχημονουντες.jpg"
+  },
+  {
+    "id": 184,
+    "topic_ID": 3,
+    "exhibit_ID": 186,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_80_καθηγητες.jpg"
+  },
+  {
+    "id": 185,
+    "topic_ID": 3,
+    "exhibit_ID": 73,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_32_plithi-agalmaton-768x548.jpg"
+  },
+  {
+    "id": 186,
+    "topic_ID": 3,
+    "exhibit_ID": 51,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_16_4.jpg"
+  },
+  {
+    "id": 187,
+    "topic_ID": 3,
+    "exhibit_ID": 154,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_61_επιστρατευση.jpg"
+  },
+  {
+    "id": 188,
+    "topic_ID": 3,
+    "exhibit_ID": 57,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_21_germanoi-katoxi-zonars_lifo.jpg"
+  },
+  {
+    "id": 189,
+    "topic_ID": 3,
+    "exhibit_ID": 76,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_33_dekemvris-1944-thraysmata-ovidon-sto-aithrio-toy-moyseioy-768x513.jpg"
+  },
+  {
+    "id": 190,
+    "topic_ID": 3,
+    "exhibit_ID": 49,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_14_politiki_epistratefsi_1943_diadilosi.jpg"
+  },
+  {
+    "id": 191,
+    "topic_ID": 3,
+    "exhibit_ID": 151,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_60_epon.jpg"
+  },
+  {
+    "id": 192,
+    "topic_ID": 3,
+    "exhibit_ID": 144,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_55_epistrateusis2.jpg"
+  },
+  {
+    "id": 193,
+    "topic_ID": 3,
+    "exhibit_ID": 70,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_29_ζαλοκωστα.jpg"
+  },
+  {
+    "id": 194,
+    "topic_ID": 3,
+    "exhibit_ID": 53,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_19_elvima430725.jpg"
+  },
+  {
+    "id": 195,
+    "topic_ID": 3,
+    "exhibit_ID": 95,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_37__remote"
+  },
+  {
+    "id": 196,
+    "topic_ID": 3,
+    "exhibit_ID": 148,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_57_eam-enotita-egxrvmo.jpg"
+  },
+  {
+    "id": 197,
+    "topic_ID": 3,
+    "exhibit_ID": 150,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_59_epon1_0_0_0.jpg"
+  },
+  {
+    "id": 198,
+    "topic_ID": 3,
+    "exhibit_ID": 54,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_20_8.jpg"
+  },
+  {
+    "id": 199,
+    "topic_ID": 3,
+    "exhibit_ID": 133,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_53_femina-480x360.jpg"
+  },
+  {
+    "id": 200,
+    "topic_ID": 3,
+    "exhibit_ID": 47,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_12_1932-1935.jpg"
+  },
+  {
+    "id": 201,
+    "topic_ID": 3,
+    "exhibit_ID": 231,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_124_λεωφόρος.jpeg"
+  },
+  {
+    "id": 202,
+    "topic_ID": 3,
+    "exhibit_ID": 109,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_47_λουμίδης.jpg"
+  },
+  {
+    "id": 203,
+    "topic_ID": 3,
+    "exhibit_ID": 155,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_62_xoniaEAM1.jpg"
+  },
+  {
+    "id": 204,
+    "topic_ID": 3,
+    "exhibit_ID": 215,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_109_IMG_20190801_123628.jpg"
+  },
+  {
+    "id": 205,
+    "topic_ID": 3,
+    "exhibit_ID": 232,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_125_1501743_21034511.jpg"
+  },
+  {
+    "id": 206,
+    "topic_ID": 3,
+    "exhibit_ID": 145,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_56_pi_11.jpg"
+  },
+  {
+    "id": 207,
+    "topic_ID": 3,
+    "exhibit_ID": 106,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_44_δυναμίτης.jpg"
+  },
+  {
+    "id": 208,
+    "topic_ID": 3,
+    "exhibit_ID": 200,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_92_19357326875_572af5dd74_k.jpg"
+  },
+  {
+    "id": 209,
+    "topic_ID": 3,
+    "exhibit_ID": 170,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_67_wknmpt7.jpg"
+  },
+  {
+    "id": 210,
+    "topic_ID": 3,
+    "exhibit_ID": 72,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_31_to-chalkino-agalma-toy-poseidona-toy-artemisioy-tyligmeno-me-pissocharta-768x520.jpg"
+  },
+  {
+    "id": 211,
+    "topic_ID": 3,
+    "exhibit_ID": 48,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_13_Perrikos_statue.jpg"
+  },
+  {
+    "id": 212,
+    "topic_ID": 3,
+    "exhibit_ID": 132,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_52_27969892_Casino.jpg"
+  },
+  {
+    "id": 213,
+    "topic_ID": 3,
+    "exhibit_ID": 111,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_49_νικολούδη.jpg"
+  },
+  {
+    "id": 214,
+    "topic_ID": 3,
+    "exhibit_ID": 169,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_66_ρεξ_στ.jpg"
+  },
+  {
+    "id": 215,
+    "topic_ID": 3,
+    "exhibit_ID": 91,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_34_Gestapo_Athens_Statue.JPG"
+  },
+  {
+    "id": 216,
+    "topic_ID": 3,
+    "exhibit_ID": 216,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_127_Greande_Bretagne.jpeg"
+  },
+  {
+    "id": 217,
+    "topic_ID": 3,
+    "exhibit_ID": 58,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_128_μτσ.jpeg"
+  },
+  {
+    "id": 218,
+    "topic_ID": 3,
+    "exhibit_ID": 93,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_35_123456.jpg"
+  },
+  {
+    "id": 219,
+    "topic_ID": 3,
+    "exhibit_ID": 101,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_42_fylakew-abervf-1944.jpg"
+  },
+  {
+    "id": 220,
+    "topic_ID": 3,
+    "exhibit_ID": 233,
+    "attribute_ID": 30,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Αρχείο",
+    "attribute_Value": "ulf_129_Φυλακές_Αβέρωφ_(1892_-_1971).jpg"
+  },
+  {
+    "id": 221,
+    "topic_ID": 3,
+    "exhibit_ID": 59,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η κηδεία των θυμάτων της 3ης Δεκεμβρίου 1944"
+  },
+  {
+    "id": 222,
+    "topic_ID": 3,
+    "exhibit_ID": 128,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το πρόγραμμα της επιθεώρησης 'Πολεμικά Παναθήναια'"
+  },
+  {
+    "id": 223,
+    "topic_ID": 3,
+    "exhibit_ID": 158,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Χαρακτικό του Σπύρου Βασιλείου με την κηδεία του Παλαμά"
+  },
+  {
+    "id": 224,
+    "topic_ID": 3,
+    "exhibit_ID": 183,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "4/7/1943: Οι φυματικοί φοιτητές έχουν ανάγκη περίθαλψης ..."
+  },
+  {
+    "id": 225,
+    "topic_ID": 3,
+    "exhibit_ID": 198,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "6/3/1942: Οι κατακτητές απαιτούν τη συγκέτρωση όλων των διδασκόντων του ΕΚΠΑ προς ενημέρωσιν!"
+  },
+  {
+    "id": 226,
+    "topic_ID": 3,
+    "exhibit_ID": 204,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "'Κατηγορούμε επί ψεβδομαρυρία. Από ελληνική ρουφιανιά', 4/9/44"
+  },
+  {
+    "id": 227,
+    "topic_ID": 3,
+    "exhibit_ID": 213,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τα Δεκεμβριανά έχουν διεθνή απήχηση. Χαιρετισμός της αμερικανικής δημοκρατικής νεολαίας προς ΕΠΟΝ για τον αγώνα κατά του Σκόμπυ"
+  },
+  {
+    "id": 228,
+    "topic_ID": 3,
+    "exhibit_ID": 205,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οι αλεξιπτωτιστές είχαν καταλάβει την Ακρόπολη στις 6/12/ 1944 για να μην πέσει στα χέρια του ΕΛΑΣ"
+  },
+  {
+    "id": 229,
+    "topic_ID": 3,
+    "exhibit_ID": 206,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κατά τα Δεκεμβριανά Άγγλοι αλεξιπτωτιστές είχαν καταλύσει μέσα στο Μουσείο"
+  },
+  {
+    "id": 230,
+    "topic_ID": 3,
+    "exhibit_ID": 100,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Εφημερίδα 'Ελευθερία', 25/3/1945: Η πρώτη μάχη. 31 Μαίου 1941"
+  },
+  {
+    "id": 231,
+    "topic_ID": 3,
+    "exhibit_ID": 175,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άρθρο για τις εκδηλώσεις της απελευθέρωσης, 'Ελευθερία', 16/10/1944"
+  },
+  {
+    "id": 232,
+    "topic_ID": 3,
+    "exhibit_ID": 130,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Από την πρώτη παράσταση του Θεάτρου Τέχνης, που δόθηκε στις 7 Οκτωβρρίου 1942 στο Θέατρο «Αλίκης», με το έργο «Αγριόπαπια» του Ίψεν. Η Καίτη Λαμπροπούλου και ο Κάρολος Κουν"
+  },
+  {
+    "id": 233,
+    "topic_ID": 3,
+    "exhibit_ID": 108,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Από την πορεία του ΕΑΜ στο Σύνταγμα, 3/12/1944"
+  },
+  {
+    "id": 234,
+    "topic_ID": 3,
+    "exhibit_ID": 38,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο Γεώργιος Παπανδρέου εκφωνεί τον Λόγο της Απελευθέρωσης από τον εξώστη του Μεγάρου Πάλλη."
+  },
+  {
+    "id": 235,
+    "topic_ID": 3,
+    "exhibit_ID": 64,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το άγαλμα του Κωστή Παλαμά στον προαύλιο χώρο του Πνευματικού Κέντρου"
+  },
+  {
+    "id": 236,
+    "topic_ID": 3,
+    "exhibit_ID": 172,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Τιμητική εκδήλωση κατά την απελευθέρωση της Αθήνας"
+  },
+  {
+    "id": 237,
+    "topic_ID": 3,
+    "exhibit_ID": 214,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Δεκέμβριος 1944: Καταγγελία για τις βαρβαρότητες του Σκόμπυ που συνοδεύεται από ανακοίνωση στο αγγλικό ραδιόφωνο."
+  },
+  {
+    "id": 238,
+    "topic_ID": 3,
+    "exhibit_ID": 110,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Βιβλιοπωλείο της Εστίας στη στοά Νικολούδη"
+  },
+  {
+    "id": 239,
+    "topic_ID": 3,
+    "exhibit_ID": 174,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γελοιογραφία του Πολενάκη, ΕΘΝΟΣ, 2/1/1941"
+  },
+  {
+    "id": 240,
+    "topic_ID": 3,
+    "exhibit_ID": 45,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κατάθεση στεφάνου κατά την παράδοση της πόλης στους Γερμανούς"
+  },
+  {
+    "id": 241,
+    "topic_ID": 3,
+    "exhibit_ID": 194,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οι Γερμανοί στην κεντρική αίθουσα του ΕΚΠΑ"
+  },
+  {
+    "id": 242,
+    "topic_ID": 3,
+    "exhibit_ID": 94,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το κτίριο της Γκεστάπο, Μέρλιν, Βασ. Σοφίας και Σέκερη (πρώην Ελληνογαλλική Σχολή Μεταξά)"
+  },
+  {
+    "id": 243,
+    "topic_ID": 3,
+    "exhibit_ID": 201,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "'Αδικα φυλακισθείς. Κρατούμαι ως όμηρος. Μαρτύρια Ιεράς εξέτασης'. Φοιτητής ιατρικής. Είσοδος 15/12/42, έξοδος για τις φυλακές Αβέρωφ 10/1/43."
+  },
+  {
+    "id": 244,
+    "topic_ID": 3,
+    "exhibit_ID": 202,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "'4 ώρες χωρίς φαϊ, χωρίς νερό / Μόνο μυρίζοντας γιασεμί'"
+  },
+  {
+    "id": 245,
+    "topic_ID": 3,
+    "exhibit_ID": 203,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "'Στης φυλακής τα σίδερα παρηγοριά ζητούμε ...', 'Άδικα φυλακισμένα κορίτσια - Μαρία, Κατίνα 1944'"
+  },
+  {
+    "id": 246,
+    "topic_ID": 3,
+    "exhibit_ID": 103,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αναλυτικά διαγράμματα της συμμετοχής σε κάθε είδους συνελεύσεις και κινητοποιήσεις σπουδαστών του ΕΜΠ στο δεκατετράμηνο Σεπτεμβρίου 1941 -Οκτωβρίου 1942, των άρρωστων φοιτητών και σπουδαστών τον χειμώνα του 1941-42 και της οργανωτικής κατάστασης της ΟΚΝΕ Σπουδάζουσας τον Φεβρουάριο του 1942."
+  },
+  {
+    "id": 247,
+    "topic_ID": 3,
+    "exhibit_ID": 221,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οι Αθηναίοι στους δρόμους, πανηγυρίζουν για την απελευθέρωση"
+  },
+  {
+    "id": 248,
+    "topic_ID": 3,
+    "exhibit_ID": 230,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οι άνδρες τρέχουν να καταταγούν κατά την επιστράτευση του 1940"
+  },
+  {
+    "id": 249,
+    "topic_ID": 3,
+    "exhibit_ID": 220,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οι Αθηναίοι γιορτάζουν την απελευθέρψση: Πανώ με όλες τις συμμαχικές σημαίες"
+  },
+  {
+    "id": 250,
+    "topic_ID": 3,
+    "exhibit_ID": 149,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η σημαία του ΕΔΕΣ"
+  },
+  {
+    "id": 251,
+    "topic_ID": 3,
+    "exhibit_ID": 173,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Θεατρικές παραστάσεις σχετικές με τον πόλεμο του '40, 'ΕΘΝΟΣ', 2/1/1941"
+  },
+  {
+    "id": 252,
+    "topic_ID": 3,
+    "exhibit_ID": 189,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "5/2/1944: Ευτυχώς, η καθαρίστρια είναι ακίνδυνη! Από το συγκεκριμένο έγγραφο (αλλά και άλλα) μαθαίνουμε ότι στη Λέσχη στεγάζονταν το 15ο στρατιωτικό Νοσοκομείο."
+  },
+  {
+    "id": 253,
+    "topic_ID": 3,
+    "exhibit_ID": 43,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οι Φυλακές Αβέρωφ το 1940."
+  },
+  {
+    "id": 254,
+    "topic_ID": 3,
+    "exhibit_ID": 179,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Δεκέμβριος 1943. Έγγραφο με το οποίο πιστοποιείται η χρήση του ορφανοτροφείου ως φυλακή"
+  },
+  {
+    "id": 255,
+    "topic_ID": 3,
+    "exhibit_ID": 188,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "27/12/1943: Ήταν τελικά κομμουνιστής ο φοιτητής - υπάλληλος;"
+  },
+  {
+    "id": 256,
+    "topic_ID": 3,
+    "exhibit_ID": 181,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Museum"
+  },
+  {
+    "id": 257,
+    "topic_ID": 3,
+    "exhibit_ID": 98,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γερμανοί στρατιώτες υψώνουν στην Ακρόπολη των Αθηνών την πολεμική σημαία της ναζιστικής Γερμανίας"
+  },
+  {
+    "id": 258,
+    "topic_ID": 3,
+    "exhibit_ID": 182,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σεπτέμβριος 1941: Οι φοιτητές δεν μπορούν λόγω υποσιτισμού να γυμνάζονται τόσο νωρίς"
+  },
+  {
+    "id": 259,
+    "topic_ID": 3,
+    "exhibit_ID": 212,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Στις 24 Φεβρουαρίου του 1943 ο Εξαρχειώτης μαθητής του Ε' Γυμνασίου Γιάννης Δρακόπουλος σκοτώνεται από καραμπινιέρους στη διαδήλωση κατά της επιστράτευσης"
+  },
+  {
+    "id": 260,
+    "topic_ID": 3,
+    "exhibit_ID": 176,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άρθρο για την επιστροφή της κυβέρνησης από τη Μέση Ανατολή"
+  },
+  {
+    "id": 261,
+    "topic_ID": 3,
+    "exhibit_ID": 195,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Καταστροφές από τους Γερμανούς κατά τη διάρκεια εορταστικής εκδήλωσης!"
+  },
+  {
+    "id": 262,
+    "topic_ID": 3,
+    "exhibit_ID": 62,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το νοσοκομείο 'Ελπίς' κατά τον Μεσοπόλεμο και νυν Πνευματικό Κέντρο Δήμου Αθηναίων"
+  },
+  {
+    "id": 263,
+    "topic_ID": 3,
+    "exhibit_ID": 166,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η Παναγιώτα Σταθοπούλου πέφτει νεκρή στη διαδήλωση της 22ας Ιουλίου 1943"
+  },
+  {
+    "id": 264,
+    "topic_ID": 3,
+    "exhibit_ID": 197,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "6/3/1942: Οι κατακτητές θέλουν να μιλήσουν στους διδάσκοντες του Πανεπιστημίου Αθηνών"
+  },
+  {
+    "id": 265,
+    "topic_ID": 3,
+    "exhibit_ID": 210,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η νεκρική πομπή των θυμάτων από την πρώτη μέρα των Δεκεμβριανών"
+  },
+  {
+    "id": 266,
+    "topic_ID": 3,
+    "exhibit_ID": 217,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σκελετωμένες ρακένδυτες γυναίκες στην οδό Σταδίου κατά την περίοδο της γερμανικής Κατοχής."
+  },
+  {
+    "id": 267,
+    "topic_ID": 3,
+    "exhibit_ID": 218,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άνθρωποι ζεσταίνονται πάνω σε σχάρα εξαερισμού στην Ομόνοια"
+  },
+  {
+    "id": 268,
+    "topic_ID": 3,
+    "exhibit_ID": 143,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Μπροστά από τπ κτίριο της Εθνικής βιβλιοθήκης οπλίτες που πηγαίνουν στο ελληνο-ιταλικό μέτωπο"
+  },
+  {
+    "id": 269,
+    "topic_ID": 3,
+    "exhibit_ID": 60,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Σκηνή από την όπερα Τραβιάτα του Βέρντι στο Παλλάς, 1942"
+  },
+  {
+    "id": 270,
+    "topic_ID": 3,
+    "exhibit_ID": 207,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "'Ξαφνικά ακούστηκαν πυροβολισμοί κι ακολούθησε μια ριπή', Δεκέμβριος 1944"
+  },
+  {
+    "id": 271,
+    "topic_ID": 3,
+    "exhibit_ID": 163,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άγγλοι στρατιώτες στην Ακρόπολη κατά τα Δεκεμβριανά"
+  },
+  {
+    "id": 272,
+    "topic_ID": 3,
+    "exhibit_ID": 208,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Οδόφραγμα στην οδό Αθηνάς κατά τα Δεκεμβριανά"
+  },
+  {
+    "id": 273,
+    "topic_ID": 3,
+    "exhibit_ID": 71,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γενικαί τεχνικαί οδηγίαι για την προστασία των αρχαίων των διαφόρων μουσείων από τους εναερίους κινδύνους (11/11/1940)"
+  },
+  {
+    "id": 274,
+    "topic_ID": 3,
+    "exhibit_ID": 222,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο Τσώρτσιλ στην Αθήνα"
+  },
+  {
+    "id": 275,
+    "topic_ID": 3,
+    "exhibit_ID": 184,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "26/11/1942: Η επιτροπή ασθενούντων φοιτητών ζητούν από το κράτος βοήθεια"
+  },
+  {
+    "id": 276,
+    "topic_ID": 3,
+    "exhibit_ID": 193,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "3/1/1942: Ο πρύτανης του ΕΚΠΑ διαμαρτύρεται για τις καταστροφές στην κεντρική αίθουσα του Παν/μίου"
+  },
+  {
+    "id": 277,
+    "topic_ID": 3,
+    "exhibit_ID": 171,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ο λόγος του Γ. Παπανδρέου για την απελευθέρωση"
+  },
+  {
+    "id": 278,
+    "topic_ID": 3,
+    "exhibit_ID": 211,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Άγγλοι στρατιώτες κατά τη διάρκεια των Δεκεμβριανών"
+  },
+  {
+    "id": 279,
+    "topic_ID": 3,
+    "exhibit_ID": 185,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Laboratory"
+  },
+  {
+    "id": 280,
+    "topic_ID": 3,
+    "exhibit_ID": 107,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Νεκροί στη διαδήλωση του ΕΑΜ, Σύνταγμα 3/12/1944"
+  },
+  {
+    "id": 281,
+    "topic_ID": 3,
+    "exhibit_ID": 52,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Μνημείο για την Παναγιώτα Σταθοπούλου"
+  },
+  {
+    "id": 282,
+    "topic_ID": 3,
+    "exhibit_ID": 42,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το εξώφυλλο της 'Ηχούς' την επομένη του αγώνα Ολυμπιακού - Μικτής Μακρονήσου."
+  },
+  {
+    "id": 283,
+    "topic_ID": 3,
+    "exhibit_ID": 209,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Μικροπωλητές στην Αθήνα την επαύριο της Απελευθέρωσης"
+  },
+  {
+    "id": 284,
+    "topic_ID": 3,
+    "exhibit_ID": 44,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Απόσπασμα του λόγου που εκφώνησε ο πρωθυπουργός Γ. Παπανδρέου στους Αθηναίους αμέσως μετά την απελευθέρωση"
+  },
+  {
+    "id": 285,
+    "topic_ID": 3,
+    "exhibit_ID": 39,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Πλήθος και Βρετανοί στρατιωτικοί στο γήπεδο της Λεωφόρου Αλεξάνδρας στους εορτασμούς για την Απελευθέρωση."
+  },
+  {
+    "id": 286,
+    "topic_ID": 3,
+    "exhibit_ID": 65,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η σωρός του Παλαμά περνά από τον χώρο του Πανεπιστημίου"
+  },
+  {
+    "id": 287,
+    "topic_ID": 3,
+    "exhibit_ID": 223,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κελλί στο κρατητήριο της Γκεστάπο"
+  },
+  {
+    "id": 288,
+    "topic_ID": 3,
+    "exhibit_ID": 196,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ανεξήγητος ο λόγος των καταστροφών στο ΕΚΠΑ"
+  },
+  {
+    "id": 289,
+    "topic_ID": 3,
+    "exhibit_ID": 199,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "26/2/1944: Παρά τα όσα έγιναν το 1941, δίνεται νέα άδεια για συγκέντρωση των γερμανών στρατιωτικών διοικητών"
+  },
+  {
+    "id": 290,
+    "topic_ID": 3,
+    "exhibit_ID": 187,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Foundation"
+  },
+  {
+    "id": 291,
+    "topic_ID": 3,
+    "exhibit_ID": 186,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "8/2/1944: Οι καθηγητές είναι για διδάσκουν και να ερευνούν και όχι για να ασυνομεύουν ..."
+  },
+  {
+    "id": 292,
+    "topic_ID": 3,
+    "exhibit_ID": 73,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ένα από τα ορύγματα με τα πλήθη των αγαλμάτων."
+  },
+  {
+    "id": 293,
+    "topic_ID": 3,
+    "exhibit_ID": 51,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αναμνηστική πλάκα για τους πεσόντες της διαδήλωσης του Ιουλίου 1943"
+  },
+  {
+    "id": 294,
+    "topic_ID": 3,
+    "exhibit_ID": 154,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αφίσα κατά της επιστράτευσης"
+  },
+  {
+    "id": 295,
+    "topic_ID": 3,
+    "exhibit_ID": 57,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γερμανοί στρατιώτες στο Ζόναρς"
+  },
+  {
+    "id": 296,
+    "topic_ID": 3,
+    "exhibit_ID": 76,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Μέρος του τοίχου στο αίθριο του Μουσείου, γεμάτος σημάδια από θραύσματα οβίδων όλμων, όπως διατηρείται μέχρι σήμερα."
+  },
+  {
+    "id": 297,
+    "topic_ID": 3,
+    "exhibit_ID": 49,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Διαδήλωση κατά της πολιτικής επιστράτευσης"
+  },
+  {
+    "id": 298,
+    "topic_ID": 3,
+    "exhibit_ID": 151,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Εξώφυλλο του καταστατικού της ΕΠΟΝ"
+  },
+  {
+    "id": 299,
+    "topic_ID": 3,
+    "exhibit_ID": 144,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Κατά την επιστράτευση"
+  },
+  {
+    "id": 300,
+    "topic_ID": 3,
+    "exhibit_ID": 70,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η πολυκατοικία στα υπόγεια της οποίας γίνονταν στην Κατοχή βασανιστήρια"
+  },
+  {
+    "id": 301,
+    "topic_ID": 3,
+    "exhibit_ID": 53,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γνωστοποίηση στον τύπο για τα γεγονότα της 22ας Ιουλίου"
+  },
+  {
+    "id": 302,
+    "topic_ID": 3,
+    "exhibit_ID": 95,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η μάχη του Μακρυγιάννη στα Δεκεμβριανά και το κτίριο Βάιλερ"
+  },
+  {
+    "id": 303,
+    "topic_ID": 3,
+    "exhibit_ID": 148,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η σημαία του ΕΑΜ"
+  },
+  {
+    "id": 304,
+    "topic_ID": 3,
+    "exhibit_ID": 150,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ίδρυτική αφίασα της ΕΠΟΝ"
+  },
+  {
+    "id": 305,
+    "topic_ID": 3,
+    "exhibit_ID": 54,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ιταλοί έφιπποι καταδιώκουν διαδηλωτές στην Αθήνα κατά τα γεγονότα της 22ας Ιουλίου 1943"
+  },
+  {
+    "id": 306,
+    "topic_ID": 3,
+    "exhibit_ID": 133,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Διαφημιστική καταχώρηση για το καζίνο Femina."
+  },
+  {
+    "id": 307,
+    "topic_ID": 3,
+    "exhibit_ID": 47,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το κτίριο Λογοθετόπουλου, που στην Κατοχή φιλοξενούσε υπηρεσίες του Υπουργείου Εργασίας"
+  },
+  {
+    "id": 308,
+    "topic_ID": 3,
+    "exhibit_ID": 231,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Πλήθος και Βρετανοί στρατιωτικοί στο γήπεδο της Λεωφόρου Αλεξάνδρας στους εορτασμούς για την Απελευθέρωση."
+  },
+  {
+    "id": 309,
+    "topic_ID": 3,
+    "exhibit_ID": 109,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το καφενείο του Λουμίδη στη στοά Νικολούδη"
+  },
+  {
+    "id": 310,
+    "topic_ID": 3,
+    "exhibit_ID": 155,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Με χωνιά κατά της επιστράτευσης"
+  },
+  {
+    "id": 311,
+    "topic_ID": 3,
+    "exhibit_ID": 215,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Αναμνηστική πλάκα στο σημείο που ζούσε η Παναγιώτα Σταθοπούλου, στην περιοχή του Πεδίου του Άρεως"
+  },
+  {
+    "id": 312,
+    "topic_ID": 3,
+    "exhibit_ID": 232,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Διακρίνονται τα σημάδια από τις σφαίρες των Άγγλων κατά τα Δεκεμβριανά"
+  },
+  {
+    "id": 313,
+    "topic_ID": 3,
+    "exhibit_ID": 145,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "'Blocking the Kick'"
+  },
+  {
+    "id": 314,
+    "topic_ID": 3,
+    "exhibit_ID": 106,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Πακέτο δυναμίτιδας που βρέθηκε κάτω από το ξενοδοχείο Μεγάλη Βρεττανία"
+  },
+  {
+    "id": 315,
+    "topic_ID": 3,
+    "exhibit_ID": 200,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η Πανεπιστημιακή Λέσχη"
+  },
+  {
+    "id": 316,
+    "topic_ID": 3,
+    "exhibit_ID": 170,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Πλάκα σε ανάμνηση της ανατίναξης της ΕΣΠΟ"
+  },
+  {
+    "id": 317,
+    "topic_ID": 3,
+    "exhibit_ID": 72,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το άγαλμα του Ποσειδώνα του Αρτεμισίου έτοιμο προς ταφή"
+  },
+  {
+    "id": 318,
+    "topic_ID": 3,
+    "exhibit_ID": 48,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Προτομή του Κώστα Περρίκου στη συμβολή των οδών Πατησίων και Γλάδστονος"
+  },
+  {
+    "id": 319,
+    "topic_ID": 3,
+    "exhibit_ID": 132,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Στη διεύθυνση αυτή ήταν ένα από τα μεγαλύτερα καζίνο στην Κατοχή"
+  },
+  {
+    "id": 320,
+    "topic_ID": 3,
+    "exhibit_ID": 111,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η Στοά Νικολούδη σήμερα"
+  },
+  {
+    "id": 321,
+    "topic_ID": 3,
+    "exhibit_ID": 169,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Δημοσίευση της διαφήμισης για τη θεατρική παράσταση 'Πολεμικά Παναθήναια' στο θέατρο Ρεξ"
+  },
+  {
+    "id": 322,
+    "topic_ID": 3,
+    "exhibit_ID": 91,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Γλυπτό στο σημείο που ήταν το κτίριο της Γκεστάπο."
+  },
+  {
+    "id": 323,
+    "topic_ID": 3,
+    "exhibit_ID": 216,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Η είσοδος του ξενοδοχείου Μ. Βρετανία με Γερμανούς, που είχαν στήσει εκεί το αρχηγείο τους"
+  },
+  {
+    "id": 324,
+    "topic_ID": 3,
+    "exhibit_ID": 58,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Το Μέγαρο του ΜΤΣ από την πλατεία Συντάγματος"
+  },
+  {
+    "id": 325,
+    "topic_ID": 3,
+    "exhibit_ID": 93,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Φυλακές Χατζηκώστα"
+  },
+  {
+    "id": 326,
+    "topic_ID": 3,
+    "exhibit_ID": 101,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Λεζάντα",
+    "attribute_Value": "Ανατιναγμένο φυλάκιο της περίφραξης των φυλακών Αβέρωφ κατά τα Δεκεμβριανά"
+  },
+  {
+    "id": 327,
+    "topic_ID": 3,
+    "exhibit_ID": 205,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Dmitri Kessel, Ελλάδα 1944, Εκδόσεις ΑΜΜΟΣ, 1997, σ. 85"
+  },
+  {
+    "id": 328,
+    "topic_ID": 3,
+    "exhibit_ID": 206,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Dmitri Kessel, Ελλάδα 1944, Εκδόσεις ΑΜΜΟΣ, 1997, σ. 93"
+  },
+  {
+    "id": 329,
+    "topic_ID": 3,
+    "exhibit_ID": 108,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Dmitri Kessel, Ελλάδα 1944, Εκδόσεις ΑΜΜΟΣ, 1997, σ. 51: 'Ήταν πιτσιλισμένο με αίμα ...'"
+  },
+  {
+    "id": 330,
+    "topic_ID": 3,
+    "exhibit_ID": 38,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Ελληνικό Λογοτεχνικό και Ιστορικό Αρχείο"
+  },
+  {
+    "id": 331,
+    "topic_ID": 3,
+    "exhibit_ID": 201,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Collective Memory Space, Korai 4"
+  },
+  {
+    "id": 332,
+    "topic_ID": 3,
+    "exhibit_ID": 202,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Collective Memory Space, Korai 4, German Kommandatur"
+  },
+  {
+    "id": 333,
+    "topic_ID": 3,
+    "exhibit_ID": 203,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Collective Memory Space, Korai 4, German Kommandatur"
+  },
+  {
+    "id": 334,
+    "topic_ID": 3,
+    "exhibit_ID": 176,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Πρωτοσέλιδο της 'Ελευθερίας', 17/10/1944/ Front page of the newspaper 'Eleftheria', 17/10/1944"
+  },
+  {
+    "id": 335,
+    "topic_ID": 3,
+    "exhibit_ID": 62,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Ν. Μέλιος, Ε. Μπαφούνη, 'Η Ελπίς. Γενικό Νοσοκομείο Αθηνών 1842-2002', Πειραιάς 2002, σ. 32"
+  },
+  {
+    "id": 336,
+    "topic_ID": 3,
+    "exhibit_ID": 166,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "https://www.facebook.com/FOTOGRAFIZONTAS/photos/a.509408862542093/509410442541935/?type=3&theater"
+  },
+  {
+    "id": 337,
+    "topic_ID": 3,
+    "exhibit_ID": 210,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Dmitri Kessel, Ελλάδα 1944, Εκδόσεις ΑΜΜΟΣ, 1997, σ. 48"
+  },
+  {
+    "id": 338,
+    "topic_ID": 3,
+    "exhibit_ID": 207,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Dmitri Kessel, Ελλάδα 1944, Εκδόσεις ΑΜΜΟΣ, 1997, σ. 36"
+  },
+  {
+    "id": 339,
+    "topic_ID": 3,
+    "exhibit_ID": 163,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Dmitri Kessel, Ελλάδα 1944, Εκδόσεις ΑΜΜΟΣ, 1997 Εκδόσεις ΑΜΜΟΣ, σ. 83"
+  },
+  {
+    "id": 340,
+    "topic_ID": 3,
+    "exhibit_ID": 208,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Dmitri Kessel, Ελλάδα 1944, Εκδόσεις ΑΜΜΟΣ, 1997, σ. 54"
+  },
+  {
+    "id": 341,
+    "topic_ID": 3,
+    "exhibit_ID": 211,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Dmitri Kessel, Ελλάδα 1944, Εκδόσεις ΑΜΜΟΣ, 1997, σ. 65"
+  },
+  {
+    "id": 342,
+    "topic_ID": 3,
+    "exhibit_ID": 107,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Dmitri Kessel, Ελλάδα 1944, Εκδόσεις ΑΜΜΟΣ, 1997, σ. 41: 'Συνολικά η αστυνομία σκότωσε 23 και τραυμάτισε 140, ανάμεσά τους και πολλές γυναίκες."
+  },
+  {
+    "id": 343,
+    "topic_ID": 3,
+    "exhibit_ID": 209,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Dmitri Kessel, Ελλάδα 1944, Εκδόσεις ΑΜΜΟΣ, 1997, σ. 3"
+  },
+  {
+    "id": 344,
+    "topic_ID": 3,
+    "exhibit_ID": 73,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Αρχείο Εθνικού Αρχαιολογικού Μουσείου"
+  },
+  {
+    "id": 345,
+    "topic_ID": 3,
+    "exhibit_ID": 154,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "ΡΙΖΟΣΠΑΣΤΗΣ, 2/3/2008, σ. 21"
+  },
+  {
+    "id": 346,
+    "topic_ID": 3,
+    "exhibit_ID": 57,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "LIFO, 28.10.2019 ühttps://www.lifo.gr/articles/athens_articles/212496/pente-simeia-tis-athinas-poy-thymizoyn-ta-xronia-tis-germanikis-katoxis+"
+  },
+  {
+    "id": 347,
+    "topic_ID": 3,
+    "exhibit_ID": 76,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Αρχείο Εθνικού Αρχαιολογικού Μουσείου"
+  },
+  {
+    "id": 348,
+    "topic_ID": 3,
+    "exhibit_ID": 49,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "https://www.sansimera.gr/articles/220"
+  },
+  {
+    "id": 349,
+    "topic_ID": 3,
+    "exhibit_ID": 151,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "https://pindos-grevena.blogspot.com/2013/02/70.html"
+  },
+  {
+    "id": 350,
+    "topic_ID": 3,
+    "exhibit_ID": 144,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "https://popaganda.gr/stories/28i/"
+  },
+  {
+    "id": 351,
+    "topic_ID": 3,
+    "exhibit_ID": 53,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Εφημερίδα 'Ελεύθερο Βήμα'"
+  },
+  {
+    "id": 352,
+    "topic_ID": 3,
+    "exhibit_ID": 95,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "https://www.youtube.com/watch?v=_9KYY_fFEMA"
+  },
+  {
+    "id": 353,
+    "topic_ID": 3,
+    "exhibit_ID": 148,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "http://agonaskritis.gr/wp-content/uploads/2015/09/eam.jpg"
+  },
+  {
+    "id": 354,
+    "topic_ID": 3,
+    "exhibit_ID": 150,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "https://poreia.net/%CE%AC%CF%81%CE%B8%CF%81%CE%BF/76-%CF%87%CF%81%CF%8C%CE%BD%CE%B9%CE%B1-%CE%B1%CF%80%CF%8C-%CF%84%CE%B7%CE%BD-%CE%AF%CE%B4%CF%81%CF%85%CF%83%CE%B7-%CF%84%CE%B7%CF%82-%CE%B5%CF%80%CE%BF%CE%BD"
+  },
+  {
+    "id": 355,
+    "topic_ID": 3,
+    "exhibit_ID": 54,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "ΡΙΖΟΣΠΑΣΤΗΣ, 22/7/2000, σ. 2: https://www.rizospastis.gr/story.do?id=369988"
+  },
+  {
+    "id": 356,
+    "topic_ID": 3,
+    "exhibit_ID": 133,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "http://www.fantazio.gr/2017/06/feminato-perifimo-kazino-tis-katochis/"
+  },
+  {
+    "id": 357,
+    "topic_ID": 3,
+    "exhibit_ID": 231,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Εφημερίδα Καθημερινή 7/9/2014: Κ. Καλφόπουλος, 'Η Λεωφόρος του πάθους', https://www.kathimerini.gr/783401/article/politismos/vivlio/h-lewforos-toy-pa8oys"
+  },
+  {
+    "id": 358,
+    "topic_ID": 3,
+    "exhibit_ID": 109,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Η. Κατσίκη, 'Καφενεία στην Αθήνα: «Βυθιστείτε» στην νοσταλγία μιας άλλης εποχής!' (6/12/2016), στο: https://frapress.gr/2016/12/kafeniavithistite-stin-nostalgia-mia-allis-athinas/"
+  },
+  {
+    "id": 359,
+    "topic_ID": 3,
+    "exhibit_ID": 155,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "'Το Περιοδικό', 05/03/2015, (admin team): '5 Mαρτίου 1943. H πολιτική επιστράτευση αποτυγχάνει', [http://www.toperiodiko.gr/5-m%CE%B1%CF%81%CF%84%CE%AF%CE%BF%CF%85-1943-h-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CE%BA%CE%AE-%CE%B5%CF%80%CE%B9%CF%83%CF%84%CF%81%CE%AC%CF%84%CE%B5%CF%85%CF%83%CE%B7-%CE%B1%CF%80%CE%BF%CF%84%CF%85/#.Xbxay9Xgrct]"
+  },
+  {
+    "id": 360,
+    "topic_ID": 3,
+    "exhibit_ID": 232,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "LIFO: 'Τα Προσφυγικά της Λεωφόρου Αλεξάνδρας - Η επόμενη μέρα για το τοπόσημο της Αθήνας' [https://www.lifo.gr/now/greece/235565/ta-prosfygika-tis-leoforoy-aleksandras-i-epomeni-mera-gia-to-toposimo-tis-athinas]"
+  },
+  {
+    "id": 361,
+    "topic_ID": 3,
+    "exhibit_ID": 145,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "ΙΜΕ: 'Η Ελλάδα 1923-1945. Η εποχή του Β' ΠΠ'\\nhttp://www.ime.gr/chronos/14/gr/general/gallery/index.html"
+  },
+  {
+    "id": 362,
+    "topic_ID": 3,
+    "exhibit_ID": 106,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "The Pressroom (25/12/17): 'Χριστούγεννα 1944: H άγνωστη επιχείρηση των υπονόμων' (in Greek)[https://www.thepressroom.gr/ellada/christoygenna-1944-h-agnoste-epicheirese-ton-yponomon]"
+  },
+  {
+    "id": 363,
+    "topic_ID": 3,
+    "exhibit_ID": 132,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Εφημερίδα 'Τα Νέα' (3/9/2017) (in Greek), [https://www.tanea.gr/2017/03/09/lifearts/istoria-ta-germanika-ixni-tis-athinas/]"
+  },
+  {
+    "id": 364,
+    "topic_ID": 3,
+    "exhibit_ID": 169,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Τα 'Πολεμικά Παναθήναια', εφ. 'Εθνος', 2/1/1941, σ. 3/ 'War Panathinaia', newspaper 'Ethnos', 2/1/1941, p. 3"
+  },
+  {
+    "id": 365,
+    "topic_ID": 3,
+    "exhibit_ID": 58,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "City Link: https://www.citylink.gr/about-us/"
+  },
+  {
+    "id": 366,
+    "topic_ID": 3,
+    "exhibit_ID": 93,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "Εφημερίδα 'ΑΥΓΗ' (1/2/2019): Α. Μανταδάκης, 'Φυλακές Χατζηκώστα'\\nhttp://www.avgi.gr/article/10812/9553654/phylakes-chatzekosta"
+  },
+  {
+    "id": 367,
+    "topic_ID": 3,
+    "exhibit_ID": 101,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "'Φυλακές Αβέρωφ' (23/2/2016), (in Greek), [https://fortifications.gr/2016/02/23/filakes-averof/]"
+  },
+  {
+    "id": 368,
+    "topic_ID": 3,
+    "exhibit_ID": 233,
+    "attribute_ID": 11,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Πηγή",
+    "attribute_Value": "tvxs: 'Οι φυλακές Αβέρωφ (1892-1971)'\\nhttps://tvxs.gr/news/%CF%84%CE%B1%CE%BE%CE%AF%CE%B4%CE%B9%CE%B1-%CF%83%CF%84%CE%BF-%CF%87%CF%81%CF%8C%CE%BD%CE%BF/%CE%BF%CE%B9-%CF%86%CF%85%CE%BB%CE%B1%CE%BA%CE%AD%CF%82-%CE%B1%CE%B2%CE%AD%CF%81%CF%89%CF%86-%CE%B1%CF%80%CF%8C-%CF%84%CE%BF-1892-%CF%89%CF%82-%CF%84%CE%BF-1971"
+  },
+  {
+    "id": 369,
+    "topic_ID": 3,
+    "exhibit_ID": 205,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος (en)",
+    "attribute_Value": "British parachuters on the Acropolis"
+  },
+  {
+    "id": 370,
+    "topic_ID": 3,
+    "exhibit_ID": 206,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος (en)",
+    "attribute_Value": "British parachuters in the National Archaeological Museum"
+  },
+  {
+    "id": 371,
+    "topic_ID": 3,
+    "exhibit_ID": 100,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος (en)",
+    "attribute_Value": "Reference to the lowering of the Nazi flag"
+  },
+  {
+    "id": 372,
+    "topic_ID": 3,
+    "exhibit_ID": 175,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος (en)",
+    "attribute_Value": "The liberation of Athens in the daily press"
+  },
+  {
+    "id": 373,
+    "topic_ID": 3,
+    "exhibit_ID": 130,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος (en)",
+    "attribute_Value": "Karolos Koun's first performance"
+  },
+  {
+    "id": 374,
+    "topic_ID": 3,
+    "exhibit_ID": 108,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος (en)",
+    "attribute_Value": "Picture from the demonstrations of the National Liberation Front in Syntagma Square"
+  },
+  {
+    "id": 375,
+    "topic_ID": 3,
+    "exhibit_ID": 38,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος (en)",
+    "attribute_Value": "The liberation speech"
+  },
+  {
+    "id": 376,
+    "topic_ID": 3,
+    "exhibit_ID": 51,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος (en)",
+    "attribute_Value": "Commemorative inscription for the dead during July 1943"
+  },
+  {
+    "id": 377,
+    "topic_ID": 3,
+    "exhibit_ID": 231,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος (en)",
+    "attribute_Value": "Football field of Leoforos Alexandras"
+  },
+  {
+    "id": 378,
+    "topic_ID": 3,
+    "exhibit_ID": 232,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος (en)",
+    "attribute_Value": "Refugee houses on Alexandras Avenue"
+  },
+  {
+    "id": 379,
+    "topic_ID": 3,
+    "exhibit_ID": 233,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Τίτλος (en)",
+    "attribute_Value": "The Averoff Prison Building"
+  }
+]

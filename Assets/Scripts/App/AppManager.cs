@@ -47,7 +47,7 @@ namespace ARPolis
                     break;
                 case AppMode.INTRO:
                     AppData.Init();
-                    InfoManager.Instance.Init();
+                    //InfoManager.Instance.Init();
                     OnInit?.Invoke();
                     break;
                 case AppMode.TOPIC_SELECTION:

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace ARPolis.Data
 {
@@ -32,9 +34,21 @@ namespace ARPolis.Data
 
         #region JSONS
 
-        public static string folderImages = "images/";
-        public static string folderJsons = "jsons/";
+        //areas
+        public static string folderAthens = "athens/";
+        //topics
+        public static string FolderTopic(string id) { return "topic_" + id + "/"; }
 
+        //files folders
+        public static string folderNarrations = "narrations/";
+        public static string folderModels = "3D/";
+        public static string folderImages = "images/";
+        public static string folderAudio = "audio/";
+        public static string folderVideos = "videos/";
+        public static string folderJsons = "data/";
+
+        //json files - common names for all area & topics
+        public static string jsonTopicsFileURL = "exportTopics";
         public static string jsonDigitalExhibitsFileURL = "exportDigitalExhibits";
         public static string jsonPersonsFileURL = "exportPersons";
         public static string jsonPOIsFileURL = "exportPOI";
@@ -42,6 +56,7 @@ namespace ARPolis.Data
         public static string jsonTourFileURL = "exportTour";
         public static string jsonPoiTestimonyFileURL = "PoiTestimony";
         public static string jsonTourPoiFileURL = "TourPoi";
+        public static string jsonEventsFileURL = "exportEvents";
 
         /// <summary>
         /// Loads list of objects reading a json file
@@ -65,13 +80,42 @@ namespace ARPolis.Data
             }
         }
 
-        private static string LoadResourceTextfile(string path)
+        public static IEnumerator LoadJsonData<T>(string filename)//, List<T> t)
         {
+            UnityWebRequest www = UnityWebRequest.Get(filename);
+            yield return www.SendWebRequest();
 
-            string filePath = folderJsons + path;//.Replace(".json", "");
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+                yield return null;
+            }
+            else
+            {
+                string jsonData = www.downloadHandler.text;
+                if (string.IsNullOrEmpty(jsonData) || jsonData.Length < 10)
+                {
+                    yield return null;
+                }
+                else
+                {
+                    jsonData = FixJsonItems(www.downloadHandler.text);
+                    yield return JsonHelper.FromJson<T>(jsonData).ToList();
+                }
+            }
+        }
+
+        private static string LoadResourceTextfile(string filename)
+        {
+            string filePath = folderJsons + filename;//.Replace(".json", "");
 
             TextAsset targetFile = Resources.Load<TextAsset>(filePath);
 
+            if (targetFile == null)
+            {
+                Debug.LogWarning(filename + ".json is missing!!!");
+                return string.Empty;
+            }
             return targetFile.text;
         }
 

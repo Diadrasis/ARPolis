@@ -1,0 +1,722 @@
+[
+    {
+        "id": 1,
+        "topic_ID": 2,
+        "exhibit_ID": 20,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Επιτύμβιο επίγραμμα του Πρόκλου για τον Συριανό"
+    },
+    {
+        "id": 2,
+        "topic_ID": 2,
+        "exhibit_ID": 29,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Ψηφαικό μουσείο Πλάτωνα"
+    },
+    {
+        "id": 3,
+        "topic_ID": 2,
+        "exhibit_ID": 30,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Τα κατάλοιπα της οικίας του Σίμωνος στην Αρχαία Αγορά"
+    },
+    {
+        "id": 4,
+        "topic_ID": 2,
+        "exhibit_ID": 31,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Η Σχολή του Πλάτωνα"
+    },
+    {
+        "id": 5,
+        "topic_ID": 2,
+        "exhibit_ID": 34,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Ρωμαϊκό αντίγραφο ελληνιστικής προτομής του Επίκουρου"
+    },
+    {
+        "id": 6,
+        "topic_ID": 2,
+        "exhibit_ID": 32,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Η Σχολή των Αθηνών"
+    },
+    {
+        "id": 7,
+        "topic_ID": 2,
+        "exhibit_ID": 35,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Προτομή του Αριστοτέλη, αντίγραφο έργου του Λυσίππου"
+    },
+    {
+        "id": 8,
+        "topic_ID": 2,
+        "exhibit_ID": 38,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Θέση και κάτοψη της Οικίας Πρόκλου επί της Διονυσίου Αρεοπαγίτου"
+    },
+    {
+        "id": 9,
+        "topic_ID": 2,
+        "exhibit_ID": 60,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Αρχαιολογικός χώρος Ακαδημίας Πλάτωνος"
+    },
+    {
+        "id": 10,
+        "topic_ID": 2,
+        "exhibit_ID": 61,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Αναπαράσταση της Ακαδημίας"
+    },
+    {
+        "id": 11,
+        "topic_ID": 2,
+        "exhibit_ID": 66,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Αντισθένης"
+    },
+    {
+        "id": 12,
+        "topic_ID": 2,
+        "exhibit_ID": 67,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Κατάλοιπα του Γυμνασίου"
+    },
+    {
+        "id": 13,
+        "topic_ID": 2,
+        "exhibit_ID": 70,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Ζήνων ο Κιτιεύς"
+    },
+    {
+        "id": 14,
+        "topic_ID": 2,
+        "exhibit_ID": 73,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Πορτραίτο του Πλάτωνα"
+    },
+    {
+        "id": 15,
+        "topic_ID": 2,
+        "exhibit_ID": 89,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Σχεδιαστική αναπαράσταση της οικίας Ω"
+    },
+    {
+        "id": 16,
+        "topic_ID": 2,
+        "exhibit_ID": 90,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Οικία Ω"
+    },
+    {
+        "id": 17,
+        "topic_ID": 2,
+        "exhibit_ID": 91,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Λατινική μετάφραση έργων του Αριστοτέλη-χειρόγραφο Albertus Magnus"
+    },
+    {
+        "id": 18,
+        "topic_ID": 2,
+        "exhibit_ID": 37,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Το Λύκειο του Αριστοτέλη λίγο μετά τις ανασκαφές"
+    },
+    {
+        "id": 19,
+        "topic_ID": 2,
+        "exhibit_ID": 94,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Η επίδραση του Αριστοτέλη στον αραβικό κόσμο"
+    },
+    {
+        "id": 20,
+        "topic_ID": 2,
+        "exhibit_ID": 95,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Χειρόγραφο της Historia Animalium του Αριστοτέλη"
+    },
+    {
+        "id": 21,
+        "topic_ID": 2,
+        "exhibit_ID": 62,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Ποικίλη Στοά"
+    },
+    {
+        "id": 22,
+        "topic_ID": 2,
+        "exhibit_ID": 33,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Κινητά ευρήματα από την οικία του Σίμωνος"
+    },
+    {
+        "id": 23,
+        "topic_ID": 2,
+        "exhibit_ID": 107,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Αντισθένης"
+    },
+    {
+        "id": 24,
+        "topic_ID": 2,
+        "exhibit_ID": 109,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Προτομή Παυσανία"
+    },
+    {
+        "id": 25,
+        "topic_ID": 2,
+        "exhibit_ID": 110,
+        "attribute_ID": 1,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Τίτλος",
+        "attribute_Value": "Πάπυρος με την Τετραφάρμακο"
+    },
+    {
+        "id": 26,
+        "topic_ID": 2,
+        "exhibit_ID": 91,
+        "attribute_ID": 11,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Πηγή",
+        "attribute_Value": "https://www.e-codices.unifr.ch/en/searchresult/list/one/ebs/0020"
+    },
+    {
+        "id": 27,
+        "topic_ID": 2,
+        "exhibit_ID": 37,
+        "attribute_ID": 11,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Πηγή",
+        "attribute_Value": "https://commons.wikimedia.org/wiki/File:Aristotle%E2%80%99s_Lyceum_(Lykeion),_Athens_(31152932397).jpg"
+    },
+    {
+        "id": 28,
+        "topic_ID": 2,
+        "exhibit_ID": 20,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_1_proclus_epigram.jpg"
+    },
+    {
+        "id": 29,
+        "topic_ID": 2,
+        "exhibit_ID": 29,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_2_ακαδημιαπλατωνος.jpg"
+    },
+    {
+        "id": 30,
+        "topic_ID": 2,
+        "exhibit_ID": 30,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_3_οικιασιμωνος.jpg"
+    },
+    {
+        "id": 31,
+        "topic_ID": 2,
+        "exhibit_ID": 31,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_4_566px-Plato_Academy_MAN_Napoli_Inv124545.jpg"
+    },
+    {
+        "id": 32,
+        "topic_ID": 2,
+        "exhibit_ID": 34,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_7_200px-Epicurus_Massimo_Inv197306.jpg"
+    },
+    {
+        "id": 33,
+        "topic_ID": 2,
+        "exhibit_ID": 32,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_5_Escola_de_atenas_-_vaticano.jpg"
+    },
+    {
+        "id": 34,
+        "topic_ID": 2,
+        "exhibit_ID": 35,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_8_800px-Aristotle_Altemps_Inv8575.jpg"
+    },
+    {
+        "id": 35,
+        "topic_ID": 2,
+        "exhibit_ID": 38,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_10_οικιαπροκλου.jpg"
+    },
+    {
+        "id": 36,
+        "topic_ID": 2,
+        "exhibit_ID": 60,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_11_Akadimia_Platonos.jpg"
+    },
+    {
+        "id": 37,
+        "topic_ID": 2,
+        "exhibit_ID": 61,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_12_ακαδημιααναπαρασταση.png"
+    },
+    {
+        "id": 38,
+        "topic_ID": 2,
+        "exhibit_ID": 66,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_14_200px-Antisthenes_BM_1838.jpg"
+    },
+    {
+        "id": 39,
+        "topic_ID": 2,
+        "exhibit_ID": 67,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_15_κυνοσαργες.JPG"
+    },
+    {
+        "id": 40,
+        "topic_ID": 2,
+        "exhibit_ID": 70,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_16_200px-Paolo_Monti_-_Servizio_fotografico_(Napoli,_1969)_-_BEIC_6353768.jpg"
+    },
+    {
+        "id": 41,
+        "topic_ID": 2,
+        "exhibit_ID": 73,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_17__remote"
+    },
+    {
+        "id": 42,
+        "topic_ID": 2,
+        "exhibit_ID": 89,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_18__remote"
+    },
+    {
+        "id": 43,
+        "topic_ID": 2,
+        "exhibit_ID": 90,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_19_lecture-03888_slide-047.jpg"
+    },
+    {
+        "id": 44,
+        "topic_ID": 2,
+        "exhibit_ID": 91,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_20__remote"
+    },
+    {
+        "id": 45,
+        "topic_ID": 2,
+        "exhibit_ID": 37,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_9_800px-Aristotle’s_Lyceum_(Lykeion),_Athens_(31152932397).jpg"
+    },
+    {
+        "id": 46,
+        "topic_ID": 2,
+        "exhibit_ID": 94,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_21__remote"
+    },
+    {
+        "id": 47,
+        "topic_ID": 2,
+        "exhibit_ID": 95,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_22__remote"
+    },
+    {
+        "id": 48,
+        "topic_ID": 2,
+        "exhibit_ID": 62,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_13_ποικιληστοα.jpg"
+    },
+    {
+        "id": 49,
+        "topic_ID": 2,
+        "exhibit_ID": 33,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_6_σιμωνος.jpg"
+    },
+    {
+        "id": 50,
+        "topic_ID": 2,
+        "exhibit_ID": 107,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_23__remote"
+    },
+    {
+        "id": 51,
+        "topic_ID": 2,
+        "exhibit_ID": 109,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_24__remote"
+    },
+    {
+        "id": 52,
+        "topic_ID": 2,
+        "exhibit_ID": 110,
+        "attribute_ID": 30,
+        "attribute_Lang": "multilang",
+        "attribute_Label": "Αρχείο",
+        "attribute_Value": "ulf_25__remote"
+    },
+    {
+        "id": 53,
+        "topic_ID": 2,
+        "exhibit_ID": 20,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Το επιτύμβιο επίγραμμα που συνέθεσε ο Πρόκλος για τον δάσκαλό του, Συριανό."
+    },
+    {
+        "id": 54,
+        "topic_ID": 2,
+        "exhibit_ID": 29,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Ψηφιακή απεικόνιση εξωτερικής άποψης του Ψηφιακού Μουσείου Πλάτωνα"
+    },
+    {
+        "id": 55,
+        "topic_ID": 2,
+        "exhibit_ID": 30,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Τα κατάλοιπα της οικίας του Σίμωνος στην αγορά μετά την ανασκαφή τους στη δεκαετία του 1950"
+    },
+    {
+        "id": 56,
+        "topic_ID": 2,
+        "exhibit_ID": 31,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Ψηφιδωτό που απεικονίζει την Ακαδημία του Πλάτωνα από τη Νάπολη"
+    },
+    {
+        "id": 57,
+        "topic_ID": 2,
+        "exhibit_ID": 34,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Ρωμαϊκό αντίγραφο του 1ου αι. μ.Χ. από πρωτότυπη ελληνιστική προτομή (3ος αι. π.Χ) του φιλόσοφου Επίκουρου"
+    },
+    {
+        "id": 58,
+        "topic_ID": 2,
+        "exhibit_ID": 32,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Φανταστική απεικόνιση της 'Σχολής των Αθηνών', με τους σημαντικότερους Έλληνες φιλοσόφους."
+    },
+    {
+        "id": 59,
+        "topic_ID": 2,
+        "exhibit_ID": 35,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Ρωμαϊκό αντίγραφο προτομής του Αριστοτέλη φιλοτεχνημένης από τον Λύσιππο περί το 330 π.Χ."
+    },
+    {
+        "id": 60,
+        "topic_ID": 2,
+        "exhibit_ID": 38,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Η κάτοψη της Οικίας του Πρόκλου επί της Διονυσίου Αρεοπαγίτου"
+    },
+    {
+        "id": 61,
+        "topic_ID": 2,
+        "exhibit_ID": 60,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Ο αρχαιολογικός χώρος της Ακαδημίας Πλάτωνος σήμερα"
+    },
+    {
+        "id": 62,
+        "topic_ID": 2,
+        "exhibit_ID": 61,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Σχεδιαστική αποκατάσταση της Ακαδημίας Πλάτωνος την εποχή της ακμής της"
+    },
+    {
+        "id": 63,
+        "topic_ID": 2,
+        "exhibit_ID": 66,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Προτομή του κυνικού φιλοσόφου Αντισθένη"
+    },
+    {
+        "id": 64,
+        "topic_ID": 2,
+        "exhibit_ID": 67,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Το Γυμνάσιο Κυνοσάργους κατά τις ανασκαφές"
+    },
+    {
+        "id": 65,
+        "topic_ID": 2,
+        "exhibit_ID": 70,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Προτομή του Ζήνωνα του Κιτιέα, δημιουργού της Στωικής φιλοσοφίας"
+    },
+    {
+        "id": 66,
+        "topic_ID": 2,
+        "exhibit_ID": 73,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Ρωμαϊκό αντίγραφο προτομής του Πλάτωνα. Σήμερα βρίσκεται στη Γλυπτοθήκη του Μονάχου."
+    },
+    {
+        "id": 67,
+        "topic_ID": 2,
+        "exhibit_ID": 89,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Σχεδιαστική απεικόνιση της οικίας Ω από τα αρχεία της Αμερικανικής Σχολής Κλασικών Σπουδών"
+    },
+    {
+        "id": 68,
+        "topic_ID": 2,
+        "exhibit_ID": 90,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Οικία Ω στην Αγορά. Φωτογραφία της Κλειώς Τσόγκα, Αρχαιολόγου"
+    },
+    {
+        "id": 69,
+        "topic_ID": 2,
+        "exhibit_ID": 91,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Το λατινικό χειρόγραφο του Albertus Magnus (13ος αι.), με έργα του Αριστοτέλη"
+    },
+    {
+        "id": 70,
+        "topic_ID": 2,
+        "exhibit_ID": 37,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Το Λύκειο του Αριστοτέλη στην οδό Ρηγίλλης, λίγο μετά την ολοκλήρωση των ανασκαφών."
+    },
+    {
+        "id": 71,
+        "topic_ID": 2,
+        "exhibit_ID": 94,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Απεικόνιση του Αριστοτέλη στο αραβικό χειρόγραφο 'Ζωοολογίου' του Jabri Ibn Bukhtishu (περ. 1220)"
+    },
+    {
+        "id": 72,
+        "topic_ID": 2,
+        "exhibit_ID": 95,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Ελληνικό χειρόγραφο του 12ου αιώνα με τη Ζωοολογία του Αριστοτέλη"
+    },
+    {
+        "id": 73,
+        "topic_ID": 2,
+        "exhibit_ID": 62,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Σχεδιαστική αναπαράσταση της Ποικίλης Στοάς περί το 400 π.Χ"
+    },
+    {
+        "id": 74,
+        "topic_ID": 2,
+        "exhibit_ID": 33,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Βάση μελαμβαφούς κύλικας με το όνομα ΣΙΜΩΝΟΣ, οστέινα καψούλια και πλατιά καρφιά που βρέθηκαν στην οικία του Σίμωνος στην Αρχαία Αγορά"
+    },
+    {
+        "id": 75,
+        "topic_ID": 2,
+        "exhibit_ID": 107,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Ρωμαϊκό μαρμάρινο αντίγραφο προτομής του Αντισθένη"
+    },
+    {
+        "id": 76,
+        "topic_ID": 2,
+        "exhibit_ID": 109,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Προτομή του Παυσανία από το Μουσείο Καπιτωλίου στη Ρώμη"
+    },
+    {
+        "id": 77,
+        "topic_ID": 2,
+        "exhibit_ID": 110,
+        "attribute_ID": 3,
+        "attribute_Lang": "gr",
+        "attribute_Label": "Λεζάντα",
+        "attribute_Value": "Απόσπασμα από πάπυρο του Herculaneum με την Τετραφάρμακο"
+    },
+    {
+        "id": 78,
+        "topic_ID": 2,
+        "exhibit_ID": 107,
+        "attribute_ID": 4,
+        "attribute_Lang": "en",
+        "attribute_Label": "Label",
+        "attribute_Value": "Roman copy of a marble portrait of Antisthenes."
+    },
+    {
+        "id": 79,
+        "topic_ID": 2,
+        "exhibit_ID": 109,
+        "attribute_ID": 4,
+        "attribute_Lang": "en",
+        "attribute_Label": "Label",
+        "attribute_Value": "Bust of Pausanias at the Capitoline Museum in Rome"
+    },
+    {
+        "id": 80,
+        "topic_ID": 2,
+        "exhibit_ID": 110,
+        "attribute_ID": 4,
+        "attribute_Lang": "en",
+        "attribute_Label": "Label",
+        "attribute_Value": "Piece of a papyrus with the verses of the Tetrapharmakos"
+    }
+]

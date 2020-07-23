@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "topic_ID": 4,
+    "exhibit_ID": 53,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Media item title",
+    "attribute_Value": "Ζαχαροπλαστείο Αριστοκρατικόν"
+  },
+  {
+    "id": 2,
+    "topic_ID": 4,
+    "exhibit_ID": 53,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Media file",
+    "attribute_Value": "ulf_1_aristokratikon.jpg"
+  },
+  {
+    "id": 3,
+    "topic_ID": 4,
+    "exhibit_ID": 56,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Media item title",
+    "attribute_Value": "Ελαιοκομικά προϊόντα στη Βαρβάκειο"
+  },
+  {
+    "id": 4,
+    "topic_ID": 4,
+    "exhibit_ID": 56,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Media file",
+    "attribute_Value": "ulf_3_varvakeios6.jpg"
+  },
+  {
+    "id": 5,
+    "topic_ID": 4,
+    "exhibit_ID": 58,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Media item title",
+    "attribute_Value": "Χύμα προϊόντα στη Βαρβάκειο"
+  },
+  {
+    "id": 6,
+    "topic_ID": 4,
+    "exhibit_ID": 58,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Media file",
+    "attribute_Value": "ulf_4_varvakeios1.jpg"
+  },
+  {
+    "id": 7,
+    "topic_ID": 4,
+    "exhibit_ID": 59,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Media item title",
+    "attribute_Value": "Τυροκομικά προϊόντα στις παρυφές της Βαρβακείου"
+  },
+  {
+    "id": 8,
+    "topic_ID": 4,
+    "exhibit_ID": 59,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Media file",
+    "attribute_Value": "ulf_5_Varvakeios5.jpg"
+  },
+  {
+    "id": 9,
+    "topic_ID": 4,
+    "exhibit_ID": 60,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Media item title",
+    "attribute_Value": "Αρτοποιήματα και φυτά στις παρυφές της Βαρβακείου"
+  },
+  {
+    "id": 10,
+    "topic_ID": 4,
+    "exhibit_ID": 60,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Media file",
+    "attribute_Value": "ulf_6_varvakeios4.jpg"
+  },
+  {
+    "id": 11,
+    "topic_ID": 4,
+    "exhibit_ID": 61,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Media item title",
+    "attribute_Value": "Μπαχαρικά και μυρωδικά στην οδό Σοφοκλέους"
+  },
+  {
+    "id": 12,
+    "topic_ID": 4,
+    "exhibit_ID": 61,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Media file",
+    "attribute_Value": "ulf_7_varvakeios2.jpg"
+  },
+  {
+    "id": 13,
+    "topic_ID": 4,
+    "exhibit_ID": 62,
+    "attribute_ID": 1,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Media item title",
+    "attribute_Value": "'Ιδιαίτερα' γαστρονομικά προϊόντα στις παρυφές της Βαρβακείου"
+  },
+  {
+    "id": 14,
+    "topic_ID": 4,
+    "exhibit_ID": 62,
+    "attribute_ID": 20,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Media file",
+    "attribute_Value": "ulf_8_varvakeios3.jpg"
+  }
+]

@@ -18,7 +18,7 @@ namespace ARPolis.Info
         static string[] savedTermsXml;// = PlayerPrefsX.GetStringArray("fromServer"+xml);
 
         public delegate void DataReadAction();
-        public static DataReadAction OnDataRead;
+        public static DataReadAction OnDataReaded;
 
         public static void Init()
         {
@@ -68,7 +68,7 @@ namespace ARPolis.Info
 
             if (B.isRealEditor) Debug.LogWarning("terms are " + textTerms.Count.ToString());
 
-            OnDataRead?.Invoke();
+            OnDataReaded?.Invoke();
 
         }
 

@@ -1,0 +1,992 @@
+[
+  {
+    "id": 1,
+    "topic_ID": 3,
+    "person_ID": 160,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Σικελιανός"
+  },
+  {
+    "id": 2,
+    "topic_ID": 3,
+    "person_ID": 228,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Σωτηρίου"
+  },
+  {
+    "id": 3,
+    "topic_ID": 3,
+    "person_ID": 225,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Kessel"
+  },
+  {
+    "id": 4,
+    "topic_ID": 3,
+    "person_ID": 162,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Σκίπης"
+  },
+  {
+    "id": 5,
+    "topic_ID": 3,
+    "person_ID": 83,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Φαράκος"
+  },
+  {
+    "id": 6,
+    "topic_ID": 3,
+    "person_ID": 139,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Φακίδης"
+  },
+  {
+    "id": 7,
+    "topic_ID": 3,
+    "person_ID": 35,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Παπανδρέου"
+  },
+  {
+    "id": 8,
+    "topic_ID": 3,
+    "person_ID": 113,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Ζέη"
+  },
+  {
+    "id": 9,
+    "topic_ID": 3,
+    "person_ID": 80,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Καιροφύλλας"
+  },
+  {
+    "id": 10,
+    "topic_ID": 3,
+    "person_ID": 86,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Κυβέλος"
+  },
+  {
+    "id": 11,
+    "topic_ID": 3,
+    "person_ID": 123,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Κουν"
+  },
+  {
+    "id": 12,
+    "topic_ID": 3,
+    "person_ID": 33,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Σταματόπουλος"
+  },
+  {
+    "id": 13,
+    "topic_ID": 3,
+    "person_ID": 88,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Βίρβος"
+  },
+  {
+    "id": 14,
+    "topic_ID": 3,
+    "person_ID": 105,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Γλέζος"
+  },
+  {
+    "id": 15,
+    "topic_ID": 3,
+    "person_ID": 75,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Καρούζου"
+  },
+  {
+    "id": 16,
+    "topic_ID": 3,
+    "person_ID": 90,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Στεφάνου"
+  },
+  {
+    "id": 17,
+    "topic_ID": 3,
+    "person_ID": 126,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Επώνυμο",
+    "attribute_Value": "Ψαθάς"
+  },
+  {
+    "id": 18,
+    "topic_ID": 3,
+    "person_ID": 160,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Άγγελος"
+  },
+  {
+    "id": 19,
+    "topic_ID": 3,
+    "person_ID": 228,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Διδώ"
+  },
+  {
+    "id": 20,
+    "topic_ID": 3,
+    "person_ID": 225,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Dmitri"
+  },
+  {
+    "id": 21,
+    "topic_ID": 3,
+    "person_ID": 162,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Σωτήρης"
+  },
+  {
+    "id": 22,
+    "topic_ID": 3,
+    "person_ID": 83,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Γρηγόρης"
+  },
+  {
+    "id": 23,
+    "topic_ID": 3,
+    "person_ID": 139,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Νάσος"
+  },
+  {
+    "id": 24,
+    "topic_ID": 3,
+    "person_ID": 35,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Γεώργιος"
+  },
+  {
+    "id": 25,
+    "topic_ID": 3,
+    "person_ID": 113,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Άλκη"
+  },
+  {
+    "id": 26,
+    "topic_ID": 3,
+    "person_ID": 80,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Γιάννης"
+  },
+  {
+    "id": 27,
+    "topic_ID": 3,
+    "person_ID": 86,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Χαρ."
+  },
+  {
+    "id": 28,
+    "topic_ID": 3,
+    "person_ID": 123,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Κάρολος"
+  },
+  {
+    "id": 29,
+    "topic_ID": 3,
+    "person_ID": 33,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Ανδρέας"
+  },
+  {
+    "id": 30,
+    "topic_ID": 3,
+    "person_ID": 88,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Κώστας"
+  },
+  {
+    "id": 31,
+    "topic_ID": 3,
+    "person_ID": 105,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Μανώλης"
+  },
+  {
+    "id": 32,
+    "topic_ID": 3,
+    "person_ID": 75,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Σέμνη"
+  },
+  {
+    "id": 33,
+    "topic_ID": 3,
+    "person_ID": 90,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Αγγελική"
+  },
+  {
+    "id": 34,
+    "topic_ID": 3,
+    "person_ID": 126,
+    "attribute_ID": 5,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Όνομα",
+    "attribute_Value": "Δημήτρης"
+  },
+  {
+    "id": 35,
+    "topic_ID": 3,
+    "person_ID": 160,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1884-1951"
+  },
+  {
+    "id": 36,
+    "topic_ID": 3,
+    "person_ID": 228,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1909-2004"
+  },
+  {
+    "id": 37,
+    "topic_ID": 3,
+    "person_ID": 225,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1902–1995"
+  },
+  {
+    "id": 38,
+    "topic_ID": 3,
+    "person_ID": 162,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1881-1952"
+  },
+  {
+    "id": 39,
+    "topic_ID": 3,
+    "person_ID": 83,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1923 - 2007"
+  },
+  {
+    "id": 40,
+    "topic_ID": 3,
+    "person_ID": 35,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1888 - 1968"
+  },
+  {
+    "id": 41,
+    "topic_ID": 3,
+    "person_ID": 113,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1925-"
+  },
+  {
+    "id": 42,
+    "topic_ID": 3,
+    "person_ID": 80,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1927 -"
+  },
+  {
+    "id": 43,
+    "topic_ID": 3,
+    "person_ID": 123,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1908-1987"
+  },
+  {
+    "id": 44,
+    "topic_ID": 3,
+    "person_ID": 88,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1926-2015"
+  },
+  {
+    "id": 45,
+    "topic_ID": 3,
+    "person_ID": 105,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1922 -"
+  },
+  {
+    "id": 46,
+    "topic_ID": 3,
+    "person_ID": 75,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1898(?) - 1994"
+  },
+  {
+    "id": 47,
+    "topic_ID": 3,
+    "person_ID": 126,
+    "attribute_ID": 7,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Γέννηση / Θάνατος",
+    "attribute_Value": "1907-1979"
+  },
+  {
+    "id": 48,
+    "topic_ID": 3,
+    "person_ID": 160,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Έλληνας ποιητής και δημιουργός των Δελφικών γιορτών. Κατά τη διάρκεια της γερμανικής κατοχής, ο Σικελιανός διαδραμάτισε σημαντικό ρόλο στην πνευματική αντίσταση του λαού, με κορυφαία εκδήλωση το ποίημα ('Ηχήστε οι σάλπιγγες') και το λόγο που εκφώνησε στην κηδεία του Παλαμά στις 28 Φεβρουαρίου του 1943. Το 1943-1945 ήταν πρόεδρος της Εταιρίας Ελλήνων Λογοτεχνών"
+  },
+  {
+    "id": 49,
+    "topic_ID": 3,
+    "person_ID": 228,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Η Διδώ Σωτηρίου γεννήθηκε το 1909 στο Αϊδίνι της Μικράς Ασίας. Το 1922 ήρθε πρόσφυγας στην Ελλάδα μαζί με την οικογένειά της. Σπούδασε Γαλλική φιλολογία και συνέχισε τις σπουδές της στη Σορβόννη. Σχετίστηκε με γαλλικούς λογοτεχνικούς κύκλους. Επιστρέφοντας στην Ελλάδα εργάστηκε ως δημοσιογράφος. Κατά τη διάρκεια της Κατοχής εντάχθηκε στην Εθνική Αντίσταση, όμως το Κομμουνιστικό Κόμμα τη διέγραψε το 1947 ως 'αστικής καταγωγής'. Εξέδωσε το πρώτο της μυθιστόρημα το 1959. Στο λογοτεχνικό της έργο κυριαρχούν τα θέματα της μικρασιατικής καταστροφής, της έλευσης των προσφύγων στην Ελλάδα και των κοινωνικών αγώνων, στους οποίους και η ίδια αφιέρωσε μεγάλο μέρος της ζωής της. Υπήρξε ιδρυτικό στέλεχος της Εταιρείας Ελλήνων Συγγραφέων, στην οποία και δώρισε το σπίτι της στην οδό Κοδριγκτώνος. Τα έργα της έχουν μεταφραστεί σε πολλές γλώσσες, ενώ έχει τιμηθεί με πολλά εθνικά και διεθνή βραβεία. Πέθανε το 2004."
+  },
+  {
+    "id": 50,
+    "topic_ID": 3,
+    "person_ID": 225,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Ο Dmitri Kessel γεννήθηκε στο Κίεβο της Ουκρανίας. Μετανάστευσε στην Αμερική το 1923 και εργάστηκε ως φωτογράφος στο περιοδικό 'Life'. Ταξίδεψε σ' ολόκληρο σχεδόν τον κόσμο και οι φωτογραφίες του άντεξαν στο χρόνο. Σήμερα θεωρείται ένας από τους σημαντικότερους φωτορεπόρτερ του κόσμου και η δουλειά του έχει παρουσιαστεί σε πολλά βιβλία. Ο Kessel συνόδεψε τα αμερικανικά στρατεύματα στο Βόρειο Ατλαντικό και κατέγραψε τη Βρετανική «δράση» στην Ελλάδα το Δεκέμβρη του 1944. Οι φωτογραφίες που έβγαλε στην Ελλάδα έμειναν οι περισσότερες ανέκδοτες και παρουσιάστηκαν για πρώτη φορά στο λεύκωμα των εκδόσεων 'Άμμος'."
+  },
+  {
+    "id": 51,
+    "topic_ID": 3,
+    "person_ID": 162,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Ποιητής και ακαδημαϊκός. Ήταν γιος στρατιωτικού και πέρασε τα παιδικά του χρόνια στη Λάρισα. Φοίτησε στην Αθήνα (Δραματική Σχολή του Βασιλικού Θεάτρου) και στο Παρίσι (Αισθητική και Λογοτεχνία). Στην κηδεία του Κωστή Παλαμά, στις 28 Φεβρουαρίου 1943, ήταν ο δεύτερος μετά τον Άγγελο Σικελιανό που απάγγειλε ποίημα."
+  },
+  {
+    "id": 52,
+    "topic_ID": 3,
+    "person_ID": 83,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Έλληνας πολιτικός και συγγραφέας. Υπήρξε Γενικός Γραμματέας της Κεντρικής Επιτροπής του ΚΚΕ, (Ιούλιος 1989 - Φεβρουάριος 1991) και βουλευτής του ΚΚΕ και, αργότερα, του Συνασπισμού. Επίσης διετέλεσε διευθυντής της εφημερίδας «Ριζοσπάστης»."
+  },
+  {
+    "id": 53,
+    "topic_ID": 3,
+    "person_ID": 139,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Μουσικοσυνθέτης σατιρικών τραγουδιών της μεταπολεμικής Ελλάδας, αλλά και συγγραφέας του βιβλίου 'Αθήνα - Τεπελένι', Αθήνα 1946 (εκδόσεις Μάρη)"
+  },
+  {
+    "id": 54,
+    "topic_ID": 3,
+    "person_ID": 35,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Ο Γεώργιος Παπανδρέου ήταν Έλληνας πολιτικός από το Καλέντζι Αχαϊας. Σπούδασε νομικά και πολιτικές επιστήμες στο Βερολίνο, όπου γνώρισε τον Ελευθέριο Βενιζέλο, με τον οποίο συνδέθηκε στενά στο πολιτικό πεδίο. Διετέλεσε τρεις φορές Πρωθυπουργός της Ελλάδας (1944-1945, 1963, 1964-1965), Αντιπρόεδρος της Κυβέρνησης (1950-1952) και πολλές φορές Υπουργός, με πρώτη υπουργική θητεία στην επαναστατική κυβέρνηση του 1922. Απέκτησε το προσωνύμιο «Γέρος της Δημοκρατίας». Κατά την κατοχή της Ελλάδας από τους Γερμανούς στον Β΄ Παγκόσμιο Πόλεμο, συνελήφθη στις αρχές του 1942 από τους Ιταλούς ως εκδότης της παράνομης εφημερίδας Ελευθερία και φυλακίστηκε για ένα τρίμηνο στις φυλακές Αβέρωφ. Στις αρχές του 1944 αποφάσισε να συνταχθεί με την εξόριστη κυβέρνηση στην Αίγυπτο. Στις 14 Απριλίου του 1944 στο Κάιρο για τον σχηματισμό κυβέρνησης εθνικής ενότητας. Τον Μάιο του 1944 οργάνωσε το συνέδριο του Λιβάνου, στο και αποφασίστηκε ο σχηματισμός κυβέρνησης εθνικής ενότητας με συμμετοχή όλων των πολιτικών παρατάξεων υπό την πρωθυπουργία του. Με την αποχώρηση των Γερμανών από την Αθήνα τον Οκτώβριο του 1944 ο Γεώργιος Παπανδρέου επέστρεψε ως ο «πρωθυπουργός της Απελευθερώσεως». Αμέσως μετά ο Σκόμπι εξέδωσε την ξαφνική διαταγή για τον αφοπλισμό των αριστερών οργανώσεων, διαταγή που αποτέλεσε τη θρυαλίδα των Δεκεμβριανών. Ως επικεφαλής της κυβέρνησης, κατηγορήθηκε από το ΕΑΜ ότι έφερε την ευθύνη για το αιματοκύλισμα της διαδήλωσης στις 3 Δεκεμβρίου 1944 στην Πλατεία Συντάγματος, καθώς αρχικά έδωσε την άδεια για την πραγματοποίησή της και στη συνέχεια την ανακάλεσε δίνοντας ταυτόχρονα εντολή για την έναρξη του πυρός κατά των αόπλων διαδηλωτών. Μετά τις μάχες των Δεκεμβριανών παραιτήθηκε από πρωθυπουργός, τον Ιανουάριο του 1945."
+  },
+  {
+    "id": 55,
+    "topic_ID": 3,
+    "person_ID": 113,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Συγγραφέας πολλών παιδικών και νεανικών, αλλά όχι μόνον, διηγημάτων. Το μυθιστόρημα 'Ο μεγάλος περίπατος του Πέτρου' έχει ως θέμα την κατοχή και την απελευθέρωση."
+  },
+  {
+    "id": 56,
+    "topic_ID": 3,
+    "person_ID": 80,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Ο Γιάννης Καιροφύλας (1927) είναι έλληνας δημοσιογράφος και ιστορικός ερευνητής που έχει γράψει πάνω από 30 βιβλία για την ιστορία της Αθήνας. Η ιστορική του έρευνα εντοπίζεται κυρίως στην ιστορία της Αθήνας από το 1834 που έγινε πρωτεύουσα μέχρι την σύγχρονη εποχή."
+  },
+  {
+    "id": 57,
+    "topic_ID": 3,
+    "person_ID": 86,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Ιδιοκτήτης του ξενοδοχείου 'Κρυστάλ', στο οποίο είχε εγκατασταθεί τμήμα της Ειδικής Ασφάλειας. Κατέθεσε ως μάρτυρας στη δίκη του Λάμπρου, διοικητή της Ασφάλειας."
+  },
+  {
+    "id": 58,
+    "topic_ID": 3,
+    "person_ID": 123,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Ο Κάρολος Κουν ήταν Έλληνας Εβραϊκής καταγωγής, προερχόμενος από την Προύσα της Μικράς Ασίας. Ολοκλήρωσε τις εγκύκλιες σπουδές του στην Κωνσταντινούπολη και σπούδασε αισθητική στο Παρίσι. Διορίστηκε ως καθηγητής στο Κολλέγιο Αθηνών (1929) και έκανε τις πρώτες του σκηνοθετικές απόπειρες με μαθητές του. Το 1934 ίδρυσε τη Λαϊκή Σκηνή και το 1942 το Θέατρο Τέχνης αλλά και την ομώνυμη δραματική σχολή, στην οποία μαθήτευσαν πολλοί μεγάλοι καλλιτέχνες της μεταπολεμικής Ελλάδας. Ανέβασε πολλούς 'απαγορευμένους' για την εποχή συγγραφείς, ενώ καθιέρωσε πρωτοποριακές σκηνοθεσίες για έργα της αρχαίας ελληνικής γραμματείας, όπως οι 'Όρνιθες' του Αριστοφάνη. Το 1984 το Υπουργείο Πολιτισμού του παραχώρησε χώρο στην Πλάκα για την ανέγερση του θεάτρου που θα έφερε το όνομά του."
+  },
+  {
+    "id": 59,
+    "topic_ID": 3,
+    "person_ID": 88,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Στιχουργός, με αντιστασιακή δράση. Πολλοί από τους στίχους του περιέχουν εμπειρίες από την Κατοχή."
+  },
+  {
+    "id": 60,
+    "topic_ID": 3,
+    "person_ID": 105,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Ο Μανώλης Γλέζος είναι μια από τις πιο εμβληματικές φυσιογνωμίες της Εθνικής Αντίστασης. Πιο γνωστός έχει γίνει με την πράξη της υποστολής της ναζιστικής σημαίας: Τη νύκτα της 30ης Μαΐου, ξημερώνοντας η 31η Μαΐου του 1941, αυτός και ο Απόστολος Σάντας αφαίρεσαν τη Γερμανική πολεμική σημαία του Γ΄ Ράιχ, που κυμάτιζε σε ιστό στην Ακρόπολη Αθηνών, κυριολεκτικά κάτω από τα μάτια της εκεί φρουράς. Μόλις τον Μάρτιο του 1942 κατόρθωσαν οι Γερμανοί να τους συλλάβουν και να τους φυλακίσουν στις φυλακές Αβέρωφ. Συνολικά ο Γλέσος εξαιτίας της αντιστασιακής δράσης του από το 1942 μέχρι το 1974 πέρασε σε φυλακές 11 χρόνια και 5 μήνες, ενώ πέντε χρόνια και 6 μήνες συμπλήρωσε στην εξορία. Έγιναν εννέα απόπειρες δολοφονίας εναντίον του. Μετά την μεταπολίτευση διετέλεσε βουλευτής και ευροβουλευτής. Έχει τιμηθεί (1963) με το βραβείο Λένιν."
+  },
+  {
+    "id": 61,
+    "topic_ID": 3,
+    "person_ID": 75,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Γεννήθηκε στην Τρίπολη Αρκαδίας, ως Κλεοσέμνη Παπασπυρίδη. Σπούδασε αρχαιολογία στο Πανεπιστήμιο Αθηνών, όπου γνώρισε τον μετέπειτα σύζυγό της Χρήστο Καρούζο. Το 1933 έγινε η πρώτη γυναίκα έφορος αγγείων του Εθνικού Αρχαιολογικού Μουσείου. Με την ένταξη της Ελλάδας στο Β Παγκόσμιο Πόλεμο το ζεύγος Καρούζου, μαζί με αρκετούς άλλους αρχαιολόγους, Έλληνες και ξένους, επιδόθηκαν στο έργο της κατάχωσης των αρχαιοτήτων του Εθνικού Αρχαιολογικού Μουσείου. Το 1964 ολοκλήρωσε μαζί με τον σύζυγό της το έργο επανέκθεσης των αρχαίων στο μουσείο."
+  },
+  {
+    "id": 62,
+    "topic_ID": 3,
+    "person_ID": 90,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Κάτοικος απέναντι από το κτίριο της Γκεστάπο στην οδό Μέρλιν."
+  },
+  {
+    "id": 63,
+    "topic_ID": 3,
+    "person_ID": 126,
+    "attribute_ID": 3,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Βιογραφικό",
+    "attribute_Value": "Ο Δημήτρης Ψαθάς καταγόταν από την Τένεδο αλλά γεννήθηκε στην Τραπεζούντα του Πόντου. Ήρθε πρόσφυγας στην Αθήνα το 1923 και εργάστηκε ως δημοσιογράφος. Το 1940 έγραψε το πρώτο του θεατρικό έργο, το 'Στραβόξυλο'. Η επιτυχία του τον οδήγησε σε μια σειρά από επιτυχημένες κωμωδίες. Ο Ψαθάς εξελίχθηκε σε έναν από τους σημαντικότερους θεατρικούς συγγραφείς του 20ού αιώνα και πολλά έργα του μεταφέρθηκαν τόσο στη μεγάλη όσο και στη μικρή οθόνη."
+  },
+  {
+    "id": 64,
+    "topic_ID": 3,
+    "person_ID": 228,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Soteriou"
+  },
+  {
+    "id": 65,
+    "topic_ID": 3,
+    "person_ID": 225,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Kessel"
+  },
+  {
+    "id": 66,
+    "topic_ID": 3,
+    "person_ID": 162,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Skipis"
+  },
+  {
+    "id": 67,
+    "topic_ID": 3,
+    "person_ID": 83,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Faraskos"
+  },
+  {
+    "id": 68,
+    "topic_ID": 3,
+    "person_ID": 139,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Fakidis"
+  },
+  {
+    "id": 69,
+    "topic_ID": 3,
+    "person_ID": 35,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Papandreou"
+  },
+  {
+    "id": 70,
+    "topic_ID": 3,
+    "person_ID": 113,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Zei"
+  },
+  {
+    "id": 71,
+    "topic_ID": 3,
+    "person_ID": 80,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Kairofyllas"
+  },
+  {
+    "id": 72,
+    "topic_ID": 3,
+    "person_ID": 86,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Kyvelos"
+  },
+  {
+    "id": 73,
+    "topic_ID": 3,
+    "person_ID": 123,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Koun"
+  },
+  {
+    "id": 74,
+    "topic_ID": 3,
+    "person_ID": 33,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Stamatopoulos"
+  },
+  {
+    "id": 75,
+    "topic_ID": 3,
+    "person_ID": 88,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Virvos"
+  },
+  {
+    "id": 76,
+    "topic_ID": 3,
+    "person_ID": 105,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Glezos"
+  },
+  {
+    "id": 77,
+    "topic_ID": 3,
+    "person_ID": 75,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Karouzou"
+  },
+  {
+    "id": 78,
+    "topic_ID": 3,
+    "person_ID": 90,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Stefanou"
+  },
+  {
+    "id": 79,
+    "topic_ID": 3,
+    "person_ID": 126,
+    "attribute_ID": 2,
+    "attribute_Lang": "en",
+    "attribute_Label": "Surname",
+    "attribute_Value": "Psathas"
+  },
+  {
+    "id": 80,
+    "topic_ID": 3,
+    "person_ID": 228,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Dido"
+  },
+  {
+    "id": 81,
+    "topic_ID": 3,
+    "person_ID": 225,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Dmitri"
+  },
+  {
+    "id": 82,
+    "topic_ID": 3,
+    "person_ID": 162,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Sotiris"
+  },
+  {
+    "id": 83,
+    "topic_ID": 3,
+    "person_ID": 83,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Gregory"
+  },
+  {
+    "id": 84,
+    "topic_ID": 3,
+    "person_ID": 139,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Nasos"
+  },
+  {
+    "id": 85,
+    "topic_ID": 3,
+    "person_ID": 35,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "George"
+  },
+  {
+    "id": 86,
+    "topic_ID": 3,
+    "person_ID": 113,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Alki"
+  },
+  {
+    "id": 87,
+    "topic_ID": 3,
+    "person_ID": 80,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Yannis"
+  },
+  {
+    "id": 88,
+    "topic_ID": 3,
+    "person_ID": 86,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Har"
+  },
+  {
+    "id": 89,
+    "topic_ID": 3,
+    "person_ID": 123,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Karolos"
+  },
+  {
+    "id": 90,
+    "topic_ID": 3,
+    "person_ID": 33,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Andreas"
+  },
+  {
+    "id": 91,
+    "topic_ID": 3,
+    "person_ID": 88,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Kostas"
+  },
+  {
+    "id": 92,
+    "topic_ID": 3,
+    "person_ID": 105,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Manolis"
+  },
+  {
+    "id": 93,
+    "topic_ID": 3,
+    "person_ID": 75,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Semni"
+  },
+  {
+    "id": 94,
+    "topic_ID": 3,
+    "person_ID": 90,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Angeliki"
+  },
+  {
+    "id": 95,
+    "topic_ID": 3,
+    "person_ID": 126,
+    "attribute_ID": 6,
+    "attribute_Lang": "en",
+    "attribute_Label": "Name",
+    "attribute_Value": "Dimitris"
+  },
+  {
+    "id": 96,
+    "topic_ID": 3,
+    "person_ID": 228,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Dido Soteriou was born in 1909 in Aydin, Asia Minor. In 1922 she came as a refugee to Greece, along with her family. She studied French literature and continued her studies at the Sorbonne. She was acquainted to French ltierary circles. Upon her return to Greece she worked as a journalist. In the course of the German Occupation she became a member of the Resistance, however the Communist Party proscribed her in 1947 because of her 'bourgeois origins'. She published her first novel in 1959. Her literary work is dominated by the topics of the Asia Minor tragedy of 1922, of the refugees' coming to Greece, of the social struggle, to which she also dedicated a significant part of her life. She was a founding member of the Society of Greek Writers, to which she donated her house on Codrington Street. Her books have been translated in several languages and she was awarded several national and international prizes. She passed away in 2004."
+  },
+  {
+    "id": 97,
+    "topic_ID": 3,
+    "person_ID": 225,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Dmitri Kessel was born in Kiev, Ukraine. He immigrated to the United States in 1923 and worked as a photographer for 'Life' magazine. He travelled almost all over the world and his pictures were long-lasting. Nowadays he is considered one of the most important photojournalists in the world and his work has been presented in many books. Kessel escorted the American troops in the North Atlantic and photographed the British 'action' in Greece, in December 1944. The photographs taken in Greece had remained for a long time unpublished and were presented for the first time in the album by 'Ammos' editions."
+  },
+  {
+    "id": 98,
+    "topic_ID": 3,
+    "person_ID": 162,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Greek poet and academic. The son of a military officer, he spent his childhood in Larisa and studied in Athens (Drama School of the Royal Theatre) and in Paris (Aesthetics and Literature). He spent large part of his life in France. Following Angelos Sikelianos, he was the second literary personality to recite a poem during the funeral of Kostis Palamas, on February 28th 1943."
+  },
+  {
+    "id": 99,
+    "topic_ID": 3,
+    "person_ID": 83,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Greek politician and writer. He was Secretary general of the Central Committee of the Greek Communist Party from July 1989 to February 1991 and an MP of the same party as well as of the left-wing coalition party Synaspismos. He was also director of the newspaper 'Rizospastis'."
+  },
+  {
+    "id": 100,
+    "topic_ID": 3,
+    "person_ID": 139,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Composer and verse-writer of satirical songs in post-war Greece, as well as author of the book 'Athens-Tepeleni', Athens 1946 (Maris edition)"
+  },
+  {
+    "id": 101,
+    "topic_ID": 3,
+    "person_ID": 35,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "George Papandreou was a Greek politician from Kalentzi, prefecture of Achaia. He studied law and political science in Berlin, where he met Eleftherios Venizelos, to whom he became politically linked. He became three times Prime Minister of Greece (1944-45, 1963, 1964-65), Vice-President of the Government (1950-1952) and many times minister (first time in the revolutionaary government of 1922). He was nicknamed 'The Old Man of Democracy'. In the course of the German Occupation he was arrested in the beginning of 1942 as editor of the illegal newspaper 'Freedom' and remained for three months in Averoff prison. In the beginning of 1944 he decided to coalisce with the exiled government in Egypt. ON April 1944"
+  },
+  {
+    "id": 102,
+    "topic_ID": 3,
+    "person_ID": 113,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Alki Zei is the author of several childrens' and adolescents' novels -but she has written also for an adult audience. Her book 'Peter's long stroll' is centered around the Occupation and Liberation period/"
+  },
+  {
+    "id": 103,
+    "topic_ID": 3,
+    "person_ID": 80,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Yannis Kairofyllas (b. 1927) is a Greek journalist and historic researcher who has written more than 30 books on the history of Athens. His historic research is centered mainly around the history of the city since 1834, when it became the capital of Greece, to the modern era."
+  },
+  {
+    "id": 104,
+    "topic_ID": 3,
+    "person_ID": 86,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Proprietor of 'Crystal' hotel, in which a department of Special Security had settled. He testified as a witness at the trial of Lambrou, head of the Security."
+  },
+  {
+    "id": 105,
+    "topic_ID": 3,
+    "person_ID": 123,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Karolos Koun was a Jewish-Greek originating from Bursa in Asia Minor. He accomplished his secondary education in Robert College, Istanbul, and studied aesthetics in Paris. He was appointed professior in Athens' College in 1929 and made his first attempts at directing with some of his students. In 1934 he founded the Popular Scene and in 1942 the Art Theatre as well as the drama school by the same name, in which studied several great artsts of the post-war period. He staged many 'banned' theatrical authors in those days and established some innovative theatricl performances of ancient Greek playwrites, such as 'Ornithers' by Aristophanes. In 1984 the Ministry of Culture adhered to him a space in Plaka for creating the theatre that was going to be named after him."
+  },
+  {
+    "id": 106,
+    "topic_ID": 3,
+    "person_ID": 88,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Lyrics' writer, active in the Resistance. Many of his verses contain experiences from the Occupation days."
+  },
+  {
+    "id": 107,
+    "topic_ID": 3,
+    "person_ID": 105,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Manolis Glezos is one of the most emblematic figures of the Greek National Resistance. He became renowned due to the bringing down of the nazi flag. On the night of the 30th to the 31st of May 1941 Glezos along with Apostolos Santas snatched the German military flag of the Third Reich which was waving on the Acropolis of Athens, literaly under the nose of the guards. In March 1942 the Germans managed to arrest them and to imprison them in Averof prison. Due to his activity in the Resistance and in political struggles, Glezos passed eleven years and five months in total (between 1942 and 1974) in prisons, and 5 years and 6 months he spent in exile. Nine attempts were made against him. After the end of the junta he became an MP and a Euro-MP."
+  },
+  {
+    "id": 108,
+    "topic_ID": 3,
+    "person_ID": 75,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "She was born in Tripoli, Arcadia; her name was Kleosemni Papaspyridi She studied archaeology at the University of Athens, where she met her future husband Christos Karouzos. In 1933 she became the first curator for ancient vases at the National Archaeological Museum. Upon the entrance of Greece to World War II Christos and Semni Karouzou along with several other archaeologists, Greek and foreigners, started the project of the burial of the antiquities of the Museum. It was not until 1964 that the project of re-exhibiting the antiquities was finally accomplished by them."
+  },
+  {
+    "id": 109,
+    "topic_ID": 3,
+    "person_ID": 90,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Athenian inhabitant who lived opposite of the Gestapo building on Merlin street."
+  },
+  {
+    "id": 110,
+    "topic_ID": 3,
+    "person_ID": 126,
+    "attribute_ID": 3,
+    "attribute_Lang": "en",
+    "attribute_Label": "Biography",
+    "attribute_Value": "Dimitris Psathas originated from Tenedos, but was born in Trapezounta, Pontos. He came as a refugeee to Athens in 1923 and worked as a journalist. IN 1940 he wrote his first theatrical play, the 'Curmudgeon'. Its success led to a series of successful comic plays. Psathas evolved into one of the most important playwrights of the 20th century and many works of his were shot as movies for the cinema and TV."
+  }
+]

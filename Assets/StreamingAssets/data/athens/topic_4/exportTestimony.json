@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 42,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Κοτόπουλο μιλανέζα"
+  },
+  {
+    "id": 2,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 74,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Γαλακτομπούρεκο"
+  },
+  {
+    "id": 3,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 75,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Κανταϊφι"
+  },
+  {
+    "id": 4,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 76,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Ρεβυθάδα"
+  },
+  {
+    "id": 5,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 77,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Σαρδέλες ψητές"
+  },
+  {
+    "id": 6,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 78,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Χωριάτικη Σαλάτα"
+  },
+  {
+    "id": 7,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 79,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Φαλάφελ"
+  },
+  {
+    "id": 8,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 80,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Χούμους"
+  },
+  {
+    "id": 9,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 81,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Κοτόπουλο Τίκα"
+  },
+  {
+    "id": 10,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 82,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Κοτόπουλο Μασάλα"
+  },
+  {
+    "id": 11,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 83,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Ρύζι Μπιργιάνι"
+  },
+  {
+    "id": 12,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 84,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Κεφτεδάκια"
+  },
+  {
+    "id": 13,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 85,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Μουσακάς"
+  },
+  {
+    "id": 14,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 86,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Παστίτσιο"
+  },
+  {
+    "id": 15,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 87,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Λαχανοντολμάδες"
+  },
+  {
+    "id": 16,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 88,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Λουκουμάδες"
+  },
+  {
+    "id": 17,
+    "topic_ID": 4,
+    "attribute_ID": 1,
+    "testimony_ID": 89,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Ονομασία Συνταγής",
+    "attribute_Value": "Ψάρι αθηναϊκή μαγιονέζα"
+  }
+]
