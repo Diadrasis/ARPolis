@@ -1,4 +1,5 @@
 ﻿using ARPolis.Data;
+using ARPolis.Info;
 using StaGeUnityTools;
 using System.Collections;
 using UnityEngine;
@@ -18,8 +19,13 @@ namespace ARPolis
 
         private void Awake()
         {
+            StaticData.lang = PlayerPrefs.GetString("Lang");
+            //get terms
+            AppData.Init();
+
             OnDataLoaded += DataLoaded;
             isDataLoaded = false;
+
             InfoManager.Instance.Init();
         }
 
@@ -29,7 +35,7 @@ namespace ARPolis
         {
             while (!isDataLoaded) yield return null;
             yield return new WaitForSeconds(0.25f);
-            loadAsync = SceneManager.LoadSceneAsync(1);
+            loadAsync = SceneManager.LoadSceneAsync(1);//, LoadSceneMode.Additive);
             while (!loadAsync.isDone)
             {
                 //if (B.isEditor) Debug.Log("loading ..." + (loadAsync.progress + 0.1f).ToString());

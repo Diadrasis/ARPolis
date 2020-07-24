@@ -28,13 +28,31 @@ namespace ARPolis.Data
 
         public string areaNowID, topicNowID, tourNowID, poiNowID;
 
+        private bool hasInit;
+
         public void Init()
         {
+            if (hasInit) { if (B.isEditor) Debug.LogWarning("Initializing Aborted!"); return; }
+
             if (B.isEditor) Debug.LogWarning("Initializing Info Data");
 
+            hasInit = true;
             jsonFolder = LoadJsonFolder.STREAMING_ASSETS;
             StartCoroutine(ReadAllData());
         }
+
+        public AreaEntity GetActiveArea()
+        {
+            if (areaNowID == "1") { return areaAthens; }
+
+            return null;
+        }
+
+        public TopicEntity GetActiveTopic()
+        {
+            return GetActiveArea().topics.Find(b => b.id == topicNowID);
+        }
+
 
         private IEnumerator ReadAllData()
         {
@@ -42,6 +60,11 @@ namespace ARPolis.Data
 
             //Athens - area
             areaAthens = new AreaEntity();
+            areaAthens.id = "1";
+            areaAthens.infoGR.name = "Αθήνα";
+            areaAthens.infoEN.name = "Athens";
+            areaAthens.infoGR.desc = "Ανακαλύψτε τις ιστορίες της Αθήνας μέσα απο διαφορετικές θεματικές ενότητες.";
+            areaAthens.infoEN.desc = "Discover the stories of Athens through different thematic units.";
             string folderDataAthens = StaticData.folderJsons + StaticData.folderAthens;
 
             #region get topics
@@ -76,7 +99,6 @@ namespace ARPolis.Data
                 {
                     //topic folder url
                     string topicFolder = folderDataAthens + StaticData.FolderTopic(areaAthens.topics[i].id);
-
 
                     #region get tours 
                     //tours file url
@@ -279,27 +301,11 @@ namespace ARPolis.Data
 
                     areaAthens.topics[i].InitTours();
                 }
-
                 
                 yield return new WaitForEndOfFrame();
             }
             #endregion
-
             
-            //jsonClassTourPois = StaticData.LoadDataFromJson<JsonClassTourPoi>(StaticData.jsonTourPoiFileURL).ToList();
-            //yield return new WaitForEndOfFrame();
-            //jsonClassPoiTestimonies = StaticData.LoadDataFromJson<JsonClassPoiTestimony>(StaticData.jsonPoiTestimonyFileURL).ToList();
-            //yield return new WaitForEndOfFrame();
-            
-            //jsonClassTestimonies = StaticData.LoadDataFromJson<JsonClassTestimony>(StaticData.jsonTestimoniesFileURL).ToList();
-            //yield return new WaitForEndOfFrame();
-            //jsonClassPois = StaticData.LoadDataFromJson<JsonClassPoi>(StaticData.jsonPOIsFileURL).ToList();
-            //yield return new WaitForEndOfFrame();
-            //jsonClassPersons = StaticData.LoadDataFromJson<JsonClassPerson>(StaticData.jsonPersonsFileURL).ToList();
-            //yield return new WaitForEndOfFrame();
-            //jsonClassDigitalExhibits = StaticData.LoadDataFromJson<JsonClassDigitalExhibit>(StaticData.jsonDigitalExhibitsFileURL).ToList();
-            //yield return new WaitForEndOfFrame();
-
             InitApp.OnDataLoaded?.Invoke();
 
             yield break;
@@ -310,95 +316,6 @@ namespace ARPolis.Data
             value = "{\"Items\":" + value + "}";
             return value;
         }
-
-
-        #region Copy Data
-        /*
-
-        IEnumerator Start()
-        {
-
-            if (infoManager.jsonFolder == PathInfoManager.LoadJsonFolder.STREAMING_ASSETS)
-            {
-                //digital exhibits
-                jsonDigitalExhibitFileUrl = Path.Combine(Application.streamingAssetsPath, StaticDataUI.jsonDigitalExhibitsFileName);
-                jsonDigitalExhibitFileUrl += ".json";
-            }
-            else
-            if (infoManager.jsonFolder == PathInfoManager.LoadJsonFolder.RESOURCES)
-            {
-                jsonDigitalExhibitFileUrl = StaticDataUI.jsonDigitalExhibitsFileName;
-                jsonDigitalExhibitFileUrl += ".json";
-            }
-
-            CoroutineWithData cd = new CoroutineWithData(this, GetDigitalExhibitInfo());
-            yield return cd.Coroutine;
-            if (cd.result.ToString() == "fail")
-            {
-                Debug.LogWarning("Error reading " + jsonDigitalExhibitFileUrl);
-            }
-            else
-            {
-                yield return new WaitForEndOfFrame();
-                if (digitExhibitInfos.Length > 0)
-                {
-                    //get all ids 
-                    uniqueExhibitIds = new List<int>();
-                    foreach (DigitalExhibitInfoAttribute digitalExhibit in digitExhibitInfos)
-                    {
-                        if (!uniqueExhibitIds.Contains(digitalExhibit.exhibit_ID))
-                        {
-                            uniqueExhibitIds.Add(digitalExhibit.exhibit_ID);
-                        }
-                    }
-                    yield return new WaitForEndOfFrame();
-                    GroupIDs();
-                }
-            }
-            yield break;
-        }
-
-        IEnumerator GetDigitalExhibitInfo()
-        {
-            if (infoManager.jsonFolder == PathInfoManager.LoadJsonFolder.RESOURCES)
-            {
-                string jsonDigDatas = FixJsonItems(StaticDataUI.LoadResourceTextfile(jsonDigitalExhibitFileUrl));
-                if (string.IsNullOrEmpty(jsonDigDatas))
-                {
-                    Debug.Log("error reading " + jsonDigitalExhibitFileUrl);
-                    yield return "fail";
-                }
-                else
-                {
-                    digitExhibitInfos = JsonHelper.FromJson<DigitalExhibitInfoAttribute>(jsonDigDatas);
-
-                    yield return "success";
-                }
-            }
-            else if (infoManager.jsonFolder == PathInfoManager.LoadJsonFolder.STREAMING_ASSETS)
-            {
-                UnityWebRequest wwwDigitalExhibit = UnityWebRequest.Get(jsonDigitalExhibitFileUrl);
-                yield return wwwDigitalExhibit.SendWebRequest();
-
-                if (wwwDigitalExhibit.isNetworkError || wwwDigitalExhibit.isHttpError)
-                {
-                    Debug.Log(wwwDigitalExhibit.error);
-                    yield return "fail";
-                }
-                else
-                {
-                    string jsonDigitalDatas = FixJsonItems(wwwDigitalExhibit.downloadHandler.text);
-
-                    digitExhibitInfos = JsonHelper.FromJson<DigitalExhibitInfoAttribute>(jsonDigitalDatas);
-
-                    yield return "success";
-                }
-            }
-            yield break;
-        }
-
-        */
-        #endregion
 
     }
 

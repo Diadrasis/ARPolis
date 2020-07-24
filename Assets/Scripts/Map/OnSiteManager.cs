@@ -66,7 +66,7 @@ namespace ARPolis.Map
             OnlineMapsLocationService.instance.OnLocationChanged += OnGpsLocationChanged;
             OnlineMapsLocationService.instance.OnFindLocationByIPComplete += OnFindLocationByIPComplete;
 
-            UIController.OnShowMenuAreas += SearchNearestPath;
+            GlobalActionsUI.OnShowMenuAreas += SearchNearestPath;
 
         }
 
@@ -179,7 +179,7 @@ namespace ARPolis.Map
                 isNear = 5;
             }
 
-            if (B.isRealEditor) Debug.Log("dist = " + dist);
+            //if (B.isRealEditor) Debug.Log("dist = " + dist);
 
             //if distance is more than max km
             if (dist > maxKmDistanceForOnSiteMode)

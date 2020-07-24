@@ -12,7 +12,7 @@ namespace StaGeUnityTools
         public bool isWidthRelative, isHeightRelative;
 
         [HideInInspector]
-        public float widthPercent, heightPercent;
+        public float widthPercent, heightPercent, fixedWidth, fixedHeight;
 
         public float WidthFinal
         {
@@ -64,6 +64,8 @@ namespace StaGeUnityTools
 
             if (widthPercent > 0) size.x = (size.x * widthPercent) / 100f;
             if (heightPercent > 0) size.y = (size.y * heightPercent) / 100f;
+            if (fixedWidth > 0) size.x = fixedWidth;
+            if (fixedHeight > 0) size.y = fixedHeight;
 
             if (isWidthRelative)
             {

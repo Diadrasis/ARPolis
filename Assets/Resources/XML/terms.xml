@@ -14,6 +14,34 @@
 		</value>
 	</term>
   <term>
+    <name>athens</name>
+    <value>
+      <gr><![CDATA[Αθήνα]]></gr>
+      <en><![CDATA[Athens]]></en>
+    </value>
+  </term>
+  <term>
+    <name>heracleion</name>
+    <value>
+      <gr><![CDATA[Ηράκλειο]]></gr>
+      <en><![CDATA[Heracleion]]></en>
+    </value>
+  </term>
+  <term>
+    <name>nafpaktos</name>
+    <value>
+      <gr><![CDATA[Ναύπακτος]]></gr>
+      <en><![CDATA[Nafpaktos]]></en>
+    </value>
+  </term>
+  <term>
+    <name>tours</name>
+    <value>
+      <gr><![CDATA[Ξεναγήσεις]]></gr>
+      <en><![CDATA[Tours]]></en>
+    </value>
+  </term>
+  <term>
     <name>language</name>
     <value>
       <gr><![CDATA[Γλώσσα]]></gr>

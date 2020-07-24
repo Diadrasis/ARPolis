@@ -8,6 +8,23 @@ namespace ARPolis.Data
     [Serializable]
     public class AreaEntity
     {
+        public string id, fotofilename;
+        public AreaLanguange infoGR, infoEN;
+        public string GetName()
+        {
+            if (StaticData.lang == "gr") { return infoGR.name; }
+            else
+            if (StaticData.lang == "en") { return infoEN.name; }
+            return string.Empty;
+        }
+        public string GetDesc()
+        {
+            if (StaticData.lang == "gr") { return infoGR.desc; }
+            else
+            if (StaticData.lang == "en") { return infoEN.desc; }
+            return string.Empty;
+        }
+
         public List<TopicEntity> topics;
 
         [HideInInspector]
@@ -66,6 +83,12 @@ namespace ARPolis.Data
             }
         }
 
+    }
+
+    [Serializable]
+    public struct AreaLanguange
+    {
+        public string name, desc;
     }
 
 }

@@ -7,16 +7,11 @@ namespace ARPolis.UI
 {
 
     public class UIController : MonoBehaviour
-    {
-
-        public delegate void UIAction();
-        public static UIAction OnIntroStart, OnIntroFinished, OnShowMenuAreas, OnHideMenuAreas,
-            OnShowMenuTopics, OnHideMenuTopics, OnLoginShow,
-            OnInfoAreaShow, OnInfoPoiShow, OnMessageHide;
+    { 
 
         private void Awake()
         {
-            OnIntroFinished += LoginShow;
+            GlobalActionsUI.OnIntroFinished += LoginShow;
             AppManager.OnInit += StartIntro;
         }
 
@@ -24,18 +19,18 @@ namespace ARPolis.UI
         {
             if (B.isEditor)
             {
-                OnIntroFinished?.Invoke();
+                GlobalActionsUI.OnIntroFinished?.Invoke();
                 AppManager.Instance.SetMode(AppManager.AppMode.LOGIN);
             }
             else
             {
-                OnIntroStart?.Invoke();
+                GlobalActionsUI.OnIntroStart?.Invoke();
             }
         }
         
         void LoginShow()
         {
-            OnLoginShow?.Invoke();
+            GlobalActionsUI.OnLoginShow?.Invoke();
         }
     }
 

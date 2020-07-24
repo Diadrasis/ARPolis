@@ -70,8 +70,8 @@ namespace ARPolis.UI
 
             GlobalActionsUI.OnPanelSignUpCancel += PanelSignTypeSelectShow;
             GlobalActionsUI.OnSignUpSubmit += PanelSignTypeSelectShow;
-            UIController.OnLoginShow += ShowLogin;
-            UIController.OnShowMenuAreas += HideLogin;
+            GlobalActionsUI.OnLoginShow += ShowLogin;
+            GlobalActionsUI.OnShowMenuAreas += HideLogin;
         }
 
         void ShowLogin() {
@@ -188,7 +188,7 @@ namespace ARPolis.UI
 
         void LoginAnonymous()
         {
-            UIController.OnShowMenuAreas?.Invoke();
+            GlobalActionsUI.OnShowMenuAreas?.Invoke();
             ServerController.Instance.LoginAnonymous();
         }
 

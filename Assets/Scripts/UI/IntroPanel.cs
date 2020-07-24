@@ -12,7 +12,7 @@ namespace ARPolis.UI
 
         private void Awake()
         {
-            UIController.OnIntroStart += StartIntro;
+            GlobalActionsUI.OnIntroStart += StartIntro;
         }
 
         void StartIntro()
@@ -44,7 +44,7 @@ namespace ARPolis.UI
             #endregion
 
             //invoke end of intro
-            UIController.OnIntroFinished?.Invoke();
+            GlobalActionsUI.OnIntroFinished?.Invoke();
             AppManager.Instance.SetMode(AppManager.AppMode.LOGIN);
 
             yield break;

@@ -12,13 +12,15 @@ namespace ARPolis.UI
 
     public class MenuPanel : MonoBehaviour
     {
-        public Animator animMenuPanel, animTownMenu;
+        public Animator animMenuPanel;
         public GameObject menuPanel, btnPrevCity, btnNextCity, creditsExtraButtonsPanel;
         /// <summary>
         /// scroll snap town images (menu)
         /// </summary>
         public ScrollSnapCustom snapCustom;
         public ScrollRect scrollRect;
+        public Text txtMenuAreaName;
+        private string termAreaNameValue;
 
         public Button btnToggleSite, btnToggleSideMenu, btnCloseSideMenuBehind,
                       btnQuitApp, btnCredits, btnAthensMenu, btnNafpaktosMenu, btnHerakleionMenu,
@@ -35,7 +37,6 @@ namespace ARPolis.UI
 
         public GameObject[] extraCreditsButtons;
         public Transform arrowCredits;
-
 
         private void Awake()
         {
@@ -60,11 +61,11 @@ namespace ARPolis.UI
                 iconBtnLanguage.sprite = isEng ? sprEng : sprGR;
             }
 
-            UIController.OnShowMenuAreas += ShowMenu;
-            UIController.OnHideMenuAreas += HideMenu;
+            GlobalActionsUI.OnShowMenuAreas += ShowMenu;
+            GlobalActionsUI.OnHideMenuAreas += HideMenu;
 
-            UIController.OnShowMenuTopics += ShowMenuTopics;
-            UIController.OnHideMenuTopics += HideMenuTopics;
+            GlobalActionsUI.OnHideAreaTopics += HideSideMenuIfVisible;
+            GlobalActionsUI.OnHideTopicTours += HideSideMenuIfVisible;
 
             OnSiteManager.OnGpsOff += SetStatusOffSite;
             OnSiteManager.OnGpsFar += SetStatusOffSite;
@@ -76,17 +77,15 @@ namespace ARPolis.UI
 
             btnToggleSite.onClick.AddListener(() => ToggleSiteMode());
             btnToggleSideMenu.onClick.AddListener(() => ToggleSideMenu());
-            btnCloseSideMenuBehind.onClick.AddListener(() => ToggleSideMenu());
+            btnCloseSideMenuBehind.onClick.AddListener(() => AppManager.Instance.ReturnMode());
             btnCredits.onClick.AddListener(() => ToggleExtraButtonsCredits());
-            btnQuitApp.onClick.AddListener(() => OnQuitApp?.Invoke());
+            btnQuitApp.onClick.AddListener(() => QuitApp());
 
             btnAthensMenu.onClick.AddListener(() => ShowAthensMenu());
             btnNafpaktosMenu.onClick.AddListener(() => ShowNafpaktosMenu());
             btnHerakleionMenu.onClick.AddListener(() => ShowHerakleionMenu());
 
             btnLanguage.onClick.AddListener(() => ChangeLanguage());
-
-            animTownMenu.gameObject.SetActive(false);
 
             arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
 
@@ -95,17 +94,46 @@ namespace ARPolis.UI
 
             snapCustom.OnSelectionPageChangedEvent.AddListener(OnPageChangeEnd);
 
+            
+        }
+
+        private void Start()
+        {
+            //reset text to current languange
+            termAreaNameValue = "athens";
+            txtMenuAreaName.text = AppData.FindTermValue(termAreaNameValue);
+        }
+
+        public void QuitApp()
+        {
+            OnQuitApp?.Invoke();
         }
 
         private void OnPageChangeEnd(int pageNo)
         {
-            if (B.isEditor) Debug.Log("thematic id = " + pageNo);
+            //if (B.isEditor) Debug.Log("thematic id = " + pageNo);
+            if (pageNo == 0)
+            {
+                termAreaNameValue = "athens";
+            }
+            else if (pageNo == 1)
+            {
+                termAreaNameValue = "nafpaktos";
+            }
+            else if (pageNo == 2)
+            {
+                termAreaNameValue = "heracleion";
+            }
+            else
+            {
+                termAreaNameValue = "athens";
+            }
+            txtMenuAreaName.text = AppData.FindTermValue(termAreaNameValue);
         }
 
         void ChangeLanguage()
         {
             bool isEng = StaticData.lang == "en";
-
             //change icon
             iconBtnLanguage.sprite = isEng ? sprGR : sprEng;
             //change lang
@@ -114,13 +142,17 @@ namespace ARPolis.UI
             PlayerPrefs.Save();
             //get terms
             AppData.Init();
+            GlobalActionsUI.OnLangChanged?.Invoke();
+
+            //change area names
+            txtMenuAreaName.text = AppData.FindTermValue(termAreaNameValue);
         }
 
         void ShowAthensMenu()
         {
             if (B.isRealEditor) Debug.Log("ShowAthensMenu");
             InfoManager.Instance.areaNowID = "1";
-            UIController.OnShowMenuTopics?.Invoke();
+            GlobalActionsUI.OnShowAreaTopics?.Invoke();
         }
 
         void ShowNafpaktosMenu()
@@ -145,7 +177,14 @@ namespace ARPolis.UI
         void OnGpsNearNafpaktos() { GoOnsite(1); }
         void OnGpsNearHerakleion() { GoOnsite(2); }
 
-        void GoOnsite(int val) { StartCoroutine(DelaySetOnsite(val)); }
+        void GoOnsite(int val) {
+
+            //check user preferences
+            if (AppManager.Instance.isUserPrefersOffSiteMode) return;
+
+            StartCoroutine(DelaySetOnsite(val));
+        }
+
         IEnumerator DelaySetOnsite(int val)
         {
             //wait panel to be enabled
@@ -204,6 +243,7 @@ namespace ARPolis.UI
                 iconBtnMenu.sprite = sprMenuOn;
                 panelSideMenuTransition.HidePanel();
                 btnCloseSideMenuBehind.gameObject.SetActive(false);
+                AppManager.Instance.isSideMenuOpen = false;
             }
             else
             {
@@ -213,6 +253,7 @@ namespace ARPolis.UI
                 iconBtnMenu.sprite = sprMenuOff;
                 panelSideMenuTransition.ShowPanel();
                 btnCloseSideMenuBehind.gameObject.SetActive(true);
+                AppManager.Instance.isSideMenuOpen = true;
             }
         }
 
@@ -220,10 +261,11 @@ namespace ARPolis.UI
         {
             //if (B.isRealEditor) Debug.Log("ToggleSiteMode");
 
-            if(btnToggleSite.image.sprite == sprOffSite)
+            if(btnToggleSite.image.sprite == sprOffSite)//go on-site
             {
                 if (isAbleToChangeToOnSiteMode)
                 {
+                    AppManager.Instance.isUserPrefersOffSiteMode = false;
                     //go on-site
                     btnToggleSite.image.sprite = sprOnsite;
                     ShowButtons(false);
@@ -235,6 +277,7 @@ namespace ARPolis.UI
             }
             else
             {
+                AppManager.Instance.isUserPrefersOffSiteMode = true;
                 //go off-site
                 btnToggleSite.image.sprite = sprOffSite;
                 ShowButtons(true);
@@ -282,34 +325,23 @@ namespace ARPolis.UI
 
         void HideMenu()
         {
-            if (iconBtnMenu.sprite == sprMenuOff)
+            if (AppManager.Instance.isSideMenuOpen)
             {
                 ToggleSideMenu();
                 return;
             }
-            UIController.OnLoginShow?.Invoke();
+            GlobalActionsUI.OnLoginShow?.Invoke();
             animMenuPanel.SetBool("show", false);
             panelTopBarTransition.HidePanel();
             StartCoroutine(DelayHide());
         }
 
-        void ShowMenuTopics()
+        void HideSideMenuIfVisible()
         {
-            animTownMenu.gameObject.SetActive(true);
-            animTownMenu.SetBool("show", true);
-            AppManager.Instance.SetMode(AppManager.AppMode.TOPIC_SELECTION);
-        }
-
-        void HideMenuTopics()
-        {
-            if (iconBtnMenu.sprite == sprMenuOff)
+            if (AppManager.Instance.isSideMenuOpen)
             {
                 ToggleSideMenu();
-                return;
             }
-            UIController.OnShowMenuAreas?.Invoke();
-            animTownMenu.SetBool("show", false);
-            StartCoroutine(DelayHideTopics());
         }
 
         IEnumerator DelayHide()
@@ -318,11 +350,7 @@ namespace ARPolis.UI
             menuPanel.SetActive(false);
         }
 
-        IEnumerator DelayHideTopics()
-        {
-            yield return new WaitForSeconds(0.75f);
-            animTownMenu.gameObject.SetActive(false);
-        }
+        
     }
 
 }

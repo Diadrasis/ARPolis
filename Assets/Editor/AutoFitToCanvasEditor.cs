@@ -51,7 +51,10 @@ namespace StaGeUnityTools
             myTarget.heightPercent = EditorGUILayout.FloatField("Height Percent", myTarget.heightPercent);
             EditorGUILayout.LabelField("Final Height", myTarget.HeightFinal.ToString());
 
-            if(!showVariables) myTarget.isMovable = EditorGUILayout.Toggle("Is Panel Movable?", myTarget.isMovable);
+            myTarget.fixedWidth = EditorGUILayout.FloatField("Width Fixed", myTarget.fixedWidth);
+            myTarget.fixedHeight = EditorGUILayout.FloatField("Height Fixed", myTarget.fixedHeight);
+
+            if (!showVariables) myTarget.isMovable = EditorGUILayout.Toggle("Is Panel Movable?", myTarget.isMovable);
             if (!showVariables) myTarget.isVisibleOnStart = EditorGUILayout.Toggle("Should Panel be Visible on Start?", myTarget.isVisibleOnStart);
 
             GUI.color = Color.cyan;

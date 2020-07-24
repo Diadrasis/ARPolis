@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -186,6 +187,21 @@ namespace ARPolis.UI
             }
 
             SetScrollContainerPosition();
+        }
+
+        /// <summary>
+        /// Remove all children from this ScrollSnap
+        /// </summary>
+        public void RemoveAllChildren()
+        {
+            Array.Clear(ChildObjects, 0, ChildObjects.Length);
+            
+            _scroll_rect.horizontalNormalizedPosition = 0;
+            CurrentPage = 0;
+            InitialiseChildObjectsFromScene();
+            DistributePages();
+            if (MaskArea)
+                UpdateVisible();
         }
 
         /// <summary>

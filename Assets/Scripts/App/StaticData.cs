@@ -12,6 +12,8 @@ namespace ARPolis.Data
 
         public static string lang = "gr";
 
+        #region terms
+
         public static string termGpsOffTitle = "msgMenuGpsOffTitle";
         public static string termGpsOffDesc = "msgMenuGpsOffDesc";
         public static string termBtnEnableGps = "msgMenuGpsOffOpenSettings";
@@ -31,6 +33,7 @@ namespace ARPolis.Data
         public static string termUsernameEmptyField = "usernameEmptyField";
         public static string termPasswordEmptyField = "passwordEmptyField";
 
+        #endregion
 
         #region JSONS
 
@@ -71,12 +74,19 @@ namespace ARPolis.Data
             if (string.IsNullOrEmpty(jsonDigDatas))
             {
                 Debug.Log("error reading " + jsonFileName);
-                return default(T[]);
+                return null;
             }
             else
             {
-                return JsonHelper.FromJson<T>(jsonDigDatas);
-
+                if(jsonDigDatas.Length < 10)
+                {
+                    Debug.Log("error on file " + jsonFileName);
+                    return null;
+                }
+                else
+                {
+                    return JsonHelper.FromJson<T>(jsonDigDatas);
+                }
             }
         }
 
@@ -126,7 +136,6 @@ namespace ARPolis.Data
         }
 
         #endregion
-
 
     }
 

@@ -48,11 +48,11 @@ namespace ARPolis
             OnSiteManager.OnGpsOn += GpsIsOn;
             OnSiteManager.OnGpsFar += GpsIsFar;
             OnSiteManager.OnGpsClose += GpsIsNear;
-            UIController.OnShowMenuAreas += ShowGpsMessageOnIntro;
+            GlobalActionsUI.OnShowMenuAreas += ShowGpsMessageOnIntro;
             MenuPanel.OnUserClickOnSiteModeNotAble += ShowGpsMessageOnUser;
             MenuPanel.OnQuitApp += ShowQuitAppWarning;
 
-            UIController.OnMessageHide += HidePanel;
+            GlobalActionsUI.OnMessageHide += HidePanel;
         }
 
         void GpsIsOff() { SetGpsMessageMode(GpsMessageMode.OFF); }

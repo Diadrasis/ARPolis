@@ -13,9 +13,11 @@ namespace ARPolis
     {
         protected AppManager() { }
 
-        public enum AppMode { NULL, INTRO, LOGIN, TOPIC_SELECTION, AREA_SELECTION, MAP, MAP_INFO_AREA, MAP_INFO_POI, MESSAGE, EXIT }
+        public enum AppMode { NULL, INTRO, LOGIN, TOPIC_SELECTION, AREA_SELECTION, TOUR_SELECTION, MAP, MAP_INFO_AREA, MAP_INFO_POI, MESSAGE, EXIT }
         public AppMode appMode = AppMode.NULL;
         public AppMode modeMessage = AppMode.NULL;
+
+        public bool isSideMenuOpen, isUserPrefersOffSiteMode;
 
         public delegate void AppAction();
         public static AppAction OnInit, OnExit, OnMessage;
@@ -24,7 +26,7 @@ namespace ARPolis
         {
             Debug.Log("APP MANAGER INIT");
             B.Init();
-            UIController.OnShowMenuAreas += SetModeMenu;
+            GlobalActionsUI.OnShowMenuAreas += SetModeMenu;
         }
 
         void Start()
@@ -47,7 +49,7 @@ namespace ARPolis
                     break;
                 case AppMode.INTRO:
                     AppData.Init();
-                    //InfoManager.Instance.Init();
+                    InfoManager.Instance.Init();
                     OnInit?.Invoke();
                     break;
                 case AppMode.TOPIC_SELECTION:
@@ -66,6 +68,8 @@ namespace ARPolis
                     break;
                 case AppMode.LOGIN:
                     break;
+                case AppMode.TOUR_SELECTION:
+                    break;
                 default:
                     break;
             }
@@ -76,7 +80,7 @@ namespace ARPolis
         {
             if(modeMessage == AppMode.MESSAGE)
             {
-                UIController.OnMessageHide?.Invoke();
+                GlobalActionsUI.OnMessageHide?.Invoke();
                 return;
             }
 
@@ -89,10 +93,15 @@ namespace ARPolis
                 case AppMode.LOGIN:
                     break;
                 case AppMode.AREA_SELECTION:
-                    UIController.OnHideMenuAreas?.Invoke();
+                    GlobalActionsUI.OnHideMenuAreas?.Invoke();
                     break;
                 case AppMode.TOPIC_SELECTION:
-                    UIController.OnHideMenuTopics?.Invoke();
+                    GlobalActionsUI.OnHideAreaTopics?.Invoke();
+                    GlobalActionsUI.OnToggleHideAll?.Invoke();
+                    break;
+                case AppMode.TOUR_SELECTION:
+                    GlobalActionsUI.OnHideTopicTours?.Invoke();
+                    GlobalActionsUI.OnToggleHideAll?.Invoke();
                     break;
                 case AppMode.MAP:
                     break;
