@@ -1,0 +1,117 @@
+fileFormatVersion: 2
+guid: d3f2cd434401bd940b265e48b405da35
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Mesh1
+    100002: //RootNode
+    400000: Mesh1
+    400002: //RootNode
+    2300000: Mesh1
+    2300002: //RootNode
+    3300000: Mesh1
+    3300002: //RootNode
+    4300000: Mesh1
+    4300002: window.001
+    7400000: window.001|balconi.003|balconi.003|Mesh1|Take 001|BaseLayer.001|balconi.00
+    7400002: window.001|balconi.003|balconi.003|Mesh1|Take 001|BaseLayer.002|balconi.00
+    7400004: window.001|balconi.003|balconi.003|Mesh1|Take 001|BaseLayer.003|balconi.00
+    7400006: window.001|balconi.003|balconi.003|Mesh1|Take 001|BaseLayer|balconi.003|Me
+    7400008: window.001|balconi|balconi|Mesh1|Take 001|BaseLayer.001|balconi|Mesh1|Take
+    7400010: window.001|balconi|balconi|Mesh1|Take 001|BaseLayer.002|balconi|Mesh1|Take
+    7400012: window.001|balconi|balconi|Mesh1|Take 001|BaseLayer.003|balconi|Mesh1|Take
+    7400014: window.001|balconi|balconi|Mesh1|Take 001|BaseLayer|balconi|Mesh1|Take
+      001
+    7400016: window.001|caminada2.001|caminada2.001|Mesh1|Take 001|BaseLayer.001|camina
+    7400018: window.001|caminada2.001|caminada2.001|Mesh1|Take 001|BaseLayer.002|camina
+    7400020: window.001|caminada2.001|caminada2.001|Mesh1|Take 001|BaseLayer.003|camina
+    7400022: window.001|caminada2.001|caminada2.001|Mesh1|Take 001|BaseLayer|caminada2.
+    7400024: window.001|Group1|Take 001|BaseLayer
+    7400026: window.001|Mesh1.007|Mesh1|Mesh1|Take 001|BaseLayer.001|Mesh1|Mesh1|Take
+      0
+    7400028: window.001|Mesh1.007|Mesh1|Mesh1|Take 001|BaseLayer.002|Mesh1|Mesh1|Take
+      0
+    7400030: window.001|Mesh1.007|Mesh1|Mesh1|Take 001|BaseLayer.003|Mesh1|Mesh1|Take
+      0
+    7400032: window.001|Mesh1.007|Mesh1|Mesh1|Take 001|BaseLayer|Mesh1|Mesh1|Take
+      001|B
+    7400034: window.001|Mesh1.007|Take 001|BaseLayer
+    7400036: window.001|Model.002|Take 001|BaseLayer
+    7400038: window.001|original|original|Mesh1|Take 001|BaseLayer.001|original|Mesh1|T
+    7400040: window.001|original|original|Mesh1|Take 001|BaseLayer.002|original|Mesh1|T
+    7400042: window.001|original|original|Mesh1|Take 001|BaseLayer.003|original|Mesh1|T
+    7400044: 'window.001|original|original|Mesh1|Take 001|BaseLayer|original|Mesh1|Take '
+    7400046: window.001|window.001|window.001|Mesh1|Take 001|BaseLayer.001|window.001|M
+    7400048: window.001|window.001|window.001|Mesh1|Take 001|BaseLayer.002|window.001|M
+    7400050: window.001|window.001|window.001|Mesh1|Take 001|BaseLayer.003|window.001|M
+    7400052: window.001|window.001|window.001|Mesh1|Take 001|BaseLayer|window.001|Mesh1
+    7400054: window.001|window.002|window.002|Mesh1.001|Take 001|BaseLayer|window.0.000
+    7400056: window.001|window.002|window.002|Mesh1.001|Take 001|BaseLayer|window.0.001
+    7400058: window.001|window.002|window.002|Mesh1.001|Take 001|BaseLayer|window.002|M
+    7400060: window.001|window.002|window.002|Mesh1|Take 001|BaseLayer.001|window.002|M
+    7400062: window.001|window.002|window.002|Mesh1|Take 001|BaseLayer.002|window.002|M
+    7400064: window.001|window.002|window.002|Mesh1|Take 001|BaseLayer.003|window.002|M
+    7400066: window.001|window.002|window.002|Mesh1|Take 001|BaseLayer.004|window.002|M
+    7400068: window.001|window.002|window.002|Mesh1|Take 001|BaseLayer|window.002|Mesh1
+    7400070: window.001|window|window|Mesh1|Take 001|BaseLayer.001|window|Mesh1|Take
+      00
+    7400072: window.001|window|window|Mesh1|Take 001|BaseLayer.002|window|Mesh1|Take
+      00
+    7400074: window.001|window|window|Mesh1|Take 001|BaseLayer.003|window|Mesh1|Take
+      00
+    7400076: window.001|window|window|Mesh1|Take 001|BaseLayer|window|Mesh1|Take 001|Ba
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

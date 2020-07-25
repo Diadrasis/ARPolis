@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 8dbfdc08afc17b743b35289ce1f5d936
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: doric column.000
+    100002: doric column.001
+    100004: doric column.002
+    100006: doric column.003
+    100008: doric column.004
+    100010: doric column.005
+    100012: doric column.006
+    100014: doric column.007
+    100016: doric column.008
+    100018: doric_column.001
+    100020: doric_column.002
+    100022: doric_column.003
+    100024: doric_column.004
+    100026: doric_column.005
+    100028: doric_column.006
+    100030: doric_column.007
+    100032: doric_column.008
+    100034: doric_column.009
+    100036: doric_column.010
+    100038: doric_column.011
+    100040: doric_column.012
+    100042: doric_column.013
+    100044: doric_column.014
+    100046: doric_column.015
+    100048: doric_column.016
+    100050: doric_column.017
+    100052: doric_column.018
+    100054: doric_column.019
+    100056: doric_column.020
+    100058: doric_column.021
+    100060: doric_column.022
+    100062: doric_column.023
+    100064: doric_column.024
+    100066: doric_column.025
+    100068: //RootNode
+    100070: triglifo.008
+    100072: triglifo.008_MeshPart0
+    100074: triglifo.008_MeshPart1
+    400000: doric column.000
+    400002: doric column.001
+    400004: doric column.002
+    400006: doric column.003
+    400008: doric column.004
+    400010: doric column.005
+    400012: doric column.006
+    400014: doric column.007
+    400016: doric column.008
+    400018: doric_column.001
+    400020: doric_column.002
+    400022: doric_column.003
+    400024: doric_column.004
+    400026: doric_column.005
+    400028: doric_column.006
+    400030: doric_column.007
+    400032: doric_column.008
+    400034: doric_column.009
+    400036: doric_column.010
+    400038: doric_column.011
+    400040: doric_column.012
+    400042: doric_column.013
+    400044: doric_column.014
+    400046: doric_column.015
+    400048: doric_column.016
+    400050: doric_column.017
+    400052: doric_column.018
+    400054: doric_column.019
+    400056: doric_column.020
+    400058: doric_column.021
+    400060: doric_column.022
+    400062: doric_column.023
+    400064: doric_column.024
+    400066: doric_column.025
+    400068: //RootNode
+    400070: triglifo.008
+    400072: triglifo.008_MeshPart0
+    400074: triglifo.008_MeshPart1
+    2300000: doric column.000
+    2300002: doric column.001
+    2300004: doric column.002
+    2300006: doric column.003
+    2300008: doric column.004
+    2300010: doric column.005
+    2300012: doric column.006
+    2300014: doric column.007
+    2300016: doric column.008
+    2300018: doric_column.001
+    2300020: doric_column.002
+    2300022: doric_column.003
+    2300024: doric_column.004
+    2300026: doric_column.005
+    2300028: doric_column.006
+    2300030: doric_column.007
+    2300032: doric_column.008
+    2300034: doric_column.009
+    2300036: doric_column.010
+    2300038: doric_column.011
+    2300040: doric_column.012
+    2300042: doric_column.013
+    2300044: doric_column.014
+    2300046: doric_column.015
+    2300048: doric_column.016
+    2300050: doric_column.017
+    2300052: doric_column.018
+    2300054: doric_column.019
+    2300056: doric_column.020
+    2300058: doric_column.021
+    2300060: doric_column.022
+    2300062: doric_column.023
+    2300064: doric_column.024
+    2300066: doric_column.025
+    2300068: triglifo.008_MeshPart0
+    2300070: triglifo.008_MeshPart1
+    3300000: doric column.000
+    3300002: doric column.001
+    3300004: doric column.002
+    3300006: doric column.003
+    3300008: doric column.004
+    3300010: doric column.005
+    3300012: doric column.006
+    3300014: doric column.007
+    3300016: doric column.008
+    3300018: doric_column.001
+    3300020: doric_column.002
+    3300022: doric_column.003
+    3300024: doric_column.004
+    3300026: doric_column.005
+    3300028: doric_column.006
+    3300030: doric_column.007
+    3300032: doric_column.008
+    3300034: doric_column.009
+    3300036: doric_column.010
+    3300038: doric_column.011
+    3300040: doric_column.012
+    3300042: doric_column.013
+    3300044: doric_column.014
+    3300046: doric_column.015
+    3300048: doric_column.016
+    3300050: doric_column.017
+    3300052: doric_column.018
+    3300054: doric_column.019
+    3300056: doric_column.020
+    3300058: doric_column.021
+    3300060: doric_column.022
+    3300062: doric_column.023
+    3300064: doric_column.024
+    3300066: doric_column.025
+    3300068: triglifo.008_MeshPart0
+    3300070: triglifo.008_MeshPart1
+    4300000: doric column.008
+    4300002: doric column.007
+    4300004: doric column.006
+    4300006: doric column.005
+    4300008: doric column.004
+    4300010: doric column.003
+    4300012: doric column.002
+    4300014: doric column.000
+    4300016: doric column.001
+    4300018: triglifo.008_MeshPart0
+    4300020: triglifo.008_MeshPart1
+    4300022: doric_column.025
+    6400000: doric column.000
+    6400002: doric column.001
+    6400004: doric column.002
+    6400006: doric column.003
+    6400008: doric column.004
+    6400010: doric column.005
+    6400012: doric column.006
+    6400014: doric column.007
+    6400016: doric column.008
+    6400018: doric_column.001
+    6400020: doric_column.002
+    6400022: doric_column.003
+    6400024: doric_column.004
+    6400026: doric_column.005
+    6400028: doric_column.006
+    6400030: doric_column.007
+    6400032: doric_column.008
+    6400034: doric_column.009
+    6400036: doric_column.010
+    6400038: doric_column.011
+    6400040: doric_column.012
+    6400042: doric_column.013
+    6400044: doric_column.014
+    6400046: doric_column.015
+    6400048: doric_column.016
+    6400050: doric_column.017
+    6400052: doric_column.018
+    6400054: doric_column.019
+    6400056: doric_column.020
+    6400058: doric_column.021
+    6400060: doric_column.022
+    6400062: doric_column.023
+    6400064: doric_column.024
+    6400066: doric_column.025
+    6400068: triglifo.008_MeshPart0
+    6400070: triglifo.008_MeshPart1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
