@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: fd317ef6192cd214f8ddad6eba02568b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: corinthian_column
+    100002: corinthian_column.001
+    100004: corinthian_column.003
+    100006: corinthian_column.004
+    100008: corinthian_column.005
+    100010: corinthian_column.006
+    100012: corinthian_column.007
+    100014: corinthian_column.008
+    100016: corinthian_column.009
+    100018: corinthian_column.010
+    100020: corinthian_column.011
+    100022: corinthian_column.012
+    100024: Cube.003
+    100026: Mesh1
+    100028: //RootNode
+    400000: corinthian_column
+    400002: corinthian_column.001
+    400004: corinthian_column.003
+    400006: corinthian_column.004
+    400008: corinthian_column.005
+    400010: corinthian_column.006
+    400012: corinthian_column.007
+    400014: corinthian_column.008
+    400016: corinthian_column.009
+    400018: corinthian_column.010
+    400020: corinthian_column.011
+    400022: corinthian_column.012
+    400024: Cube.003
+    400026: Mesh1
+    400028: //RootNode
+    2300000: corinthian_column
+    2300002: corinthian_column.001
+    2300004: corinthian_column.003
+    2300006: corinthian_column.004
+    2300008: corinthian_column.005
+    2300010: corinthian_column.006
+    2300012: corinthian_column.007
+    2300014: corinthian_column.008
+    2300016: corinthian_column.009
+    2300018: corinthian_column.010
+    2300020: corinthian_column.011
+    2300022: corinthian_column.012
+    2300024: Cube.003
+    2300026: Mesh1
+    3300000: corinthian_column
+    3300002: corinthian_column.001
+    3300004: corinthian_column.003
+    3300006: corinthian_column.004
+    3300008: corinthian_column.005
+    3300010: corinthian_column.006
+    3300012: corinthian_column.007
+    3300014: corinthian_column.008
+    3300016: corinthian_column.009
+    3300018: corinthian_column.010
+    3300020: corinthian_column.011
+    3300022: corinthian_column.012
+    3300024: Cube.003
+    3300026: Mesh1
+    4300000: corinthian_column.012
+    4300002: corinthian_column.011
+    4300004: corinthian_column.003
+    4300006: corinthian_column.004
+    4300008: corinthian_column.010
+    4300010: corinthian_column.009
+    4300012: corinthian_column.008
+    4300014: corinthian_column.007
+    4300016: corinthian_column.006
+    4300018: corinthian_column.005
+    4300020: corinthian_column.001
+    4300022: Mesh1
+    4300024: corinthian_column
+    4300026: Cube.003
+    6400000: corinthian_column
+    6400002: corinthian_column.001
+    6400004: corinthian_column.003
+    6400006: corinthian_column.004
+    6400008: corinthian_column.005
+    6400010: corinthian_column.006
+    6400012: corinthian_column.007
+    6400014: corinthian_column.008
+    6400016: corinthian_column.009
+    6400018: corinthian_column.010
+    6400020: corinthian_column.011
+    6400022: corinthian_column.012
+    6400024: Cube.003
+    6400026: Mesh1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

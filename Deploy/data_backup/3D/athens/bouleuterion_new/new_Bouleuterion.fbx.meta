@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 4d600411561e0964e97959d25033f2bb
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: interior_walls
+    100002: ionic column.000
+    100004: ionic column.001
+    100006: ionic column.002
+    100008: ionic column.003
+    100010: ionic column.004
+    100012: ionic column.005
+    100014: ionic column.006
+    100016: ionic column.007
+    100018: ionic column.008
+    100020: ionic column.009
+    100022: ionic column.010
+    100024: ionic column.011
+    100026: //RootNode
+    400000: interior_walls
+    400002: ionic column.000
+    400004: ionic column.001
+    400006: ionic column.002
+    400008: ionic column.003
+    400010: ionic column.004
+    400012: ionic column.005
+    400014: ionic column.006
+    400016: ionic column.007
+    400018: ionic column.008
+    400020: ionic column.009
+    400022: ionic column.010
+    400024: ionic column.011
+    400026: //RootNode
+    2300000: interior_walls
+    2300002: ionic column.000
+    2300004: ionic column.001
+    2300006: ionic column.002
+    2300008: ionic column.003
+    2300010: ionic column.004
+    2300012: ionic column.005
+    2300014: ionic column.006
+    2300016: ionic column.007
+    2300018: ionic column.008
+    2300020: ionic column.009
+    2300022: ionic column.010
+    2300024: ionic column.011
+    2300026: //RootNode
+    3300000: interior_walls
+    3300002: ionic column.000
+    3300004: ionic column.001
+    3300006: ionic column.002
+    3300008: ionic column.003
+    3300010: ionic column.004
+    3300012: ionic column.005
+    3300014: ionic column.006
+    3300016: ionic column.007
+    3300018: ionic column.008
+    3300020: ionic column.009
+    3300022: ionic column.010
+    3300024: ionic column.011
+    3300026: //RootNode
+    4300000: ionic column.011
+    4300002: ionic column.010
+    4300004: ionic column.009
+    4300006: ionic column.008
+    4300008: ionic column.007
+    4300010: ionic column.006
+    4300012: ionic column.005
+    4300014: ionic column.004
+    4300016: ionic column.003
+    4300018: ionic column.002
+    4300020: ionic column.000
+    4300022: interior_walls
+    4300024: ionic column.001
+    6400000: interior_walls
+    6400002: ionic column.000
+    6400004: ionic column.001
+    6400006: ionic column.002
+    6400008: ionic column.003
+    6400010: ionic column.004
+    6400012: ionic column.005
+    6400014: ionic column.006
+    6400016: ionic column.007
+    6400018: ionic column.008
+    6400020: ionic column.009
+    6400022: ionic column.010
+    6400024: ionic column.011
+    6400026: //RootNode
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

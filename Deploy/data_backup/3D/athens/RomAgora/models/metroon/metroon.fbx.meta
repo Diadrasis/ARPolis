@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: 457ef07323ebbe34b9fde4790c0fa12e
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: doric_column.000
+    100002: doric_column.001
+    100004: doric_column.002
+    100006: doric_column.003
+    100008: doric_column.004
+    100010: doric_column.005
+    100012: doric_column.006
+    100014: doric_column.007
+    100016: doric_column.008
+    100018: doric_column.009
+    100020: doric_column.010
+    100022: doric_column.011
+    100024: ionic column.000
+    100026: ionic column.001
+    100028: //RootNode
+    100030: roof1
+    100032: Wall_end
+    100034: Wall_end.001
+    400000: doric_column.000
+    400002: doric_column.001
+    400004: doric_column.002
+    400006: doric_column.003
+    400008: doric_column.004
+    400010: doric_column.005
+    400012: doric_column.006
+    400014: doric_column.007
+    400016: doric_column.008
+    400018: doric_column.009
+    400020: doric_column.010
+    400022: doric_column.011
+    400024: ionic column.000
+    400026: ionic column.001
+    400028: //RootNode
+    400030: roof1
+    400032: Wall_end
+    400034: Wall_end.001
+    2300000: doric_column.000
+    2300002: doric_column.001
+    2300004: doric_column.002
+    2300006: doric_column.003
+    2300008: doric_column.004
+    2300010: doric_column.005
+    2300012: doric_column.006
+    2300014: doric_column.007
+    2300016: doric_column.008
+    2300018: doric_column.009
+    2300020: doric_column.010
+    2300022: doric_column.011
+    2300024: ionic column.000
+    2300026: ionic column.001
+    2300028: roof1
+    2300030: Wall_end
+    2300032: Wall_end.001
+    3300000: doric_column.000
+    3300002: doric_column.001
+    3300004: doric_column.002
+    3300006: doric_column.003
+    3300008: doric_column.004
+    3300010: doric_column.005
+    3300012: doric_column.006
+    3300014: doric_column.007
+    3300016: doric_column.008
+    3300018: doric_column.009
+    3300020: doric_column.010
+    3300022: doric_column.011
+    3300024: ionic column.000
+    3300026: ionic column.001
+    3300028: roof1
+    3300030: Wall_end
+    3300032: Wall_end.001
+    4300000: doric_column.011
+    4300002: doric_column.010
+    4300004: doric_column.009
+    4300006: doric_column.008
+    4300008: doric_column.007
+    4300010: doric_column.006
+    4300012: doric_column.005
+    4300014: doric_column.004
+    4300016: doric_column.003
+    4300018: doric_column.002
+    4300020: doric_column.001
+    4300022: ionic column.001
+    4300024: roof1
+    4300026: ionic column.000
+    4300028: doric_column.000
+    4300030: Wall_end.001
+    4300032: Wall_end
+    6400000: doric_column.000
+    6400002: doric_column.001
+    6400004: doric_column.002
+    6400006: doric_column.003
+    6400008: doric_column.004
+    6400010: doric_column.005
+    6400012: doric_column.006
+    6400014: doric_column.007
+    6400016: doric_column.008
+    6400018: doric_column.009
+    6400020: doric_column.010
+    6400022: doric_column.011
+    6400024: ionic column.000
+    6400026: ionic column.001
+    6400028: roof1
+    6400030: Wall_end
+    6400032: Wall_end.001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

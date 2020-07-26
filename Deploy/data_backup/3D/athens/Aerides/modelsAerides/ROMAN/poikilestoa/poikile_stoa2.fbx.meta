@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: 0caedc8f9d87bd14aae22e2f64bb2b57
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: doric_column.000
+    100002: doric_column.001
+    100004: doric_column.002
+    100006: doric_column.003
+    100008: doric_column.004
+    100010: doric_column.005
+    100012: doric_column.006
+    100014: doric_column.007
+    100016: doric_column.013
+    100018: doric_column.014
+    100020: doric_column.015
+    100022: doric_column.016
+    100024: doric_column.017
+    100026: doric_column.018
+    100028: doric_column.019
+    100030: doric_column.020
+    100032: doric_column.021
+    100034: doric_column.022
+    100036: doric_column.023
+    100038: doric_column.024
+    100040: doric_column.025
+    100042: doric_column.026
+    100044: doric_column.027
+    100046: ionic column
+    100048: ionic column10
+    100050: ionic column11
+    100052: ionic column2
+    100054: ionic column3
+    100056: ionic column4
+    100058: ionic column5
+    100060: ionic column6
+    100062: ionic column7
+    100064: ionic column8
+    100066: ionic column9
+    100068: //RootNode
+    100070: triglifo.108
+    100072: triglifo.108_MeshPart0
+    100074: triglifo.108_MeshPart1
+    400000: doric_column.000
+    400002: doric_column.001
+    400004: doric_column.002
+    400006: doric_column.003
+    400008: doric_column.004
+    400010: doric_column.005
+    400012: doric_column.006
+    400014: doric_column.007
+    400016: doric_column.013
+    400018: doric_column.014
+    400020: doric_column.015
+    400022: doric_column.016
+    400024: doric_column.017
+    400026: doric_column.018
+    400028: doric_column.019
+    400030: doric_column.020
+    400032: doric_column.021
+    400034: doric_column.022
+    400036: doric_column.023
+    400038: doric_column.024
+    400040: doric_column.025
+    400042: doric_column.026
+    400044: doric_column.027
+    400046: ionic column
+    400048: ionic column10
+    400050: ionic column11
+    400052: ionic column2
+    400054: ionic column3
+    400056: ionic column4
+    400058: ionic column5
+    400060: ionic column6
+    400062: ionic column7
+    400064: ionic column8
+    400066: ionic column9
+    400068: //RootNode
+    400070: triglifo.108
+    400072: triglifo.108_MeshPart0
+    400074: triglifo.108_MeshPart1
+    2300000: doric_column.000
+    2300002: doric_column.001
+    2300004: doric_column.002
+    2300006: doric_column.003
+    2300008: doric_column.004
+    2300010: doric_column.005
+    2300012: doric_column.006
+    2300014: doric_column.007
+    2300016: doric_column.013
+    2300018: doric_column.014
+    2300020: doric_column.015
+    2300022: doric_column.016
+    2300024: doric_column.017
+    2300026: doric_column.018
+    2300028: doric_column.019
+    2300030: doric_column.020
+    2300032: doric_column.021
+    2300034: doric_column.022
+    2300036: doric_column.023
+    2300038: doric_column.024
+    2300040: doric_column.025
+    2300042: doric_column.026
+    2300044: doric_column.027
+    2300046: ionic column
+    2300048: ionic column10
+    2300050: ionic column11
+    2300052: ionic column2
+    2300054: ionic column3
+    2300056: ionic column4
+    2300058: ionic column5
+    2300060: ionic column6
+    2300062: ionic column7
+    2300064: ionic column8
+    2300066: ionic column9
+    2300068: triglifo.108_MeshPart0
+    2300070: triglifo.108_MeshPart1
+    3300000: doric_column.000
+    3300002: doric_column.001
+    3300004: doric_column.002
+    3300006: doric_column.003
+    3300008: doric_column.004
+    3300010: doric_column.005
+    3300012: doric_column.006
+    3300014: doric_column.007
+    3300016: doric_column.013
+    3300018: doric_column.014
+    3300020: doric_column.015
+    3300022: doric_column.016
+    3300024: doric_column.017
+    3300026: doric_column.018
+    3300028: doric_column.019
+    3300030: doric_column.020
+    3300032: doric_column.021
+    3300034: doric_column.022
+    3300036: doric_column.023
+    3300038: doric_column.024
+    3300040: doric_column.025
+    3300042: doric_column.026
+    3300044: doric_column.027
+    3300046: ionic column
+    3300048: ionic column10
+    3300050: ionic column11
+    3300052: ionic column2
+    3300054: ionic column3
+    3300056: ionic column4
+    3300058: ionic column5
+    3300060: ionic column6
+    3300062: ionic column7
+    3300064: ionic column8
+    3300066: ionic column9
+    3300068: triglifo.108_MeshPart0
+    3300070: triglifo.108_MeshPart1
+    4300000: triglifo.108_MeshPart0
+    4300002: triglifo.108_MeshPart1
+    4300004: ionic column11
+    4300006: doric_column.027
+    4300008: doric_column.026
+    4300010: doric_column.025
+    4300012: doric_column.024
+    4300014: doric_column.023
+    4300016: doric_column.022
+    4300018: doric_column.021
+    4300020: doric_column.020
+    4300022: doric_column.019
+    4300024: doric_column.018
+    4300026: doric_column.017
+    4300028: doric_column.016
+    4300030: doric_column.015
+    4300032: doric_column.014
+    4300034: doric_column.013
+    4300036: doric_column.007
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
