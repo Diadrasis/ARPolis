@@ -35,6 +35,15 @@ namespace ARPolis.Data
             return string.Empty;
         }
 
+        public List<TourPoiEntity> tourPoiEntities;
+
+        public List<PoiEntity> pois;
+
+        public void InitPOIs()
+        {
+
+        }
+
         public List<EventEntity> events;
 
         public void InitEvents()

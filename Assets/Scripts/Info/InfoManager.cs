@@ -98,7 +98,7 @@ namespace ARPolis.Data
                 for (int i = 0; i < areaAthens.topics.Count; i++)
                 {
                     //topic folder url
-                    string topicFolder = folderDataAthens + StaticData.FolderTopic(areaAthens.topics[i].id);
+                    string topicFolder = folderDataAthens + StaticData.FolderTopic(areaAthens.topics[i].id); //Debug.Log(topicFolder);
 
                     #region get tours 
                     //tours file url
@@ -299,7 +299,7 @@ namespace ARPolis.Data
 
                     #endregion
 
-                    areaAthens.topics[i].InitTours();
+                    areaAthens.topics[i].InitTours(areaAthens.id);
                 }
                 
                 yield return new WaitForEndOfFrame();

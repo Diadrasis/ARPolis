@@ -19,14 +19,38 @@ namespace ARPolis.UI
 
         public RectTransform[] allRects;
 
+        public RectTransform rectScrollContainer, rectScrollImages;
+        public int pageID;
+
         private void OnEnable()
         {
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
             GlobalActionsUI.OnLangChanged += SetTextInfo;
+            GlobalActionsUI.OnTourItemPageChanged += OnTourItemPageChanged;
             btnShowPoisOnMap.onClick.AddListener(SelectTourPois);
+            btnShowPoisOnMap.onClick.AddListener(ScrollResetPosition);
         }
 
-        void SelectTourPois()
+        void OnTourItemPageChanged()
+        {
+            rectScrollContainer.parent.GetComponent<ScrollRect>().enabled = false;
+            rectScrollImages.parent.GetComponent<ScrollRect>().enabled = false;
+            ScrollResetPosition();
+        }
+
+        private void ScrollResetPosition()
+        {
+            Vector3 pos = rectScrollContainer.localPosition;
+            pos.y = 0f;
+            rectScrollContainer.localPosition = pos;
+            Vector3 pos2 = rectScrollImages.localPosition;
+            pos2.x = 0f;
+            rectScrollImages.localPosition = pos2;
+            rectScrollContainer.parent.GetComponent<ScrollRect>().enabled = true;
+            rectScrollImages.parent.GetComponent<ScrollRect>().enabled = true;
+        }
+
+        private void SelectTourPois()
         {
             InfoManager.Instance.tourNowID = tourID;
             GlobalActionsUI.OnShowPoisOnMap?.Invoke();
@@ -63,13 +87,13 @@ namespace ARPolis.UI
             return string.Empty;
         }
 
-        void RefreshContainer(GameObject gb)
+        private void RefreshContainer(GameObject gb)
         {
             Debug.Log("tours item refresh");
             RefreshElements();
         }
 
-        void RefreshElements() { foreach (RectTransform rt in allRects) LayoutRebuilder.ForceRebuildLayoutImmediate(rt); }
+        private void RefreshElements() { foreach (RectTransform rt in allRects) LayoutRebuilder.ForceRebuildLayoutImmediate(rt); }
 
         public void DestroyItem() { Destroy(gameObject); }
 
@@ -77,6 +101,7 @@ namespace ARPolis.UI
         {
             GlobalActionsUI.OnToggleTarget -= RefreshContainer;
             GlobalActionsUI.OnLangChanged -= SetTextInfo;
+            GlobalActionsUI.OnTourItemPageChanged -= OnTourItemPageChanged;
             btnShowPoisOnMap.onClick.RemoveAllListeners();
         }
 
@@ -84,6 +109,7 @@ namespace ARPolis.UI
         {
             GlobalActionsUI.OnToggleTarget -= RefreshContainer;
             GlobalActionsUI.OnLangChanged -= SetTextInfo;
+            GlobalActionsUI.OnTourItemPageChanged -= OnTourItemPageChanged;
             btnShowPoisOnMap.onClick.RemoveAllListeners();
         }
     }

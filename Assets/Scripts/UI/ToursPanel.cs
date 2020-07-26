@@ -26,6 +26,7 @@ namespace ARPolis.UI
         private void Awake()
         {
             snapCustom = containerParent.transform.parent.GetComponent<ScrollSnapCustom>();
+            snapCustom.OnSelectionChangeStartEvent.AddListener(OnTourItemPageChanged);
 
             GlobalActionsUI.OnShowTopicTours += ShowTopicTours;
             GlobalActionsUI.OnHideTopicTours += HideTopicTours;
@@ -34,6 +35,11 @@ namespace ARPolis.UI
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
 
             animToursPanel.gameObject.SetActive(false);
+        }
+
+        private void OnTourItemPageChanged()
+        {
+            GlobalActionsUI.OnTourItemPageChanged?.Invoke();
         }
 
         private void ShowTopicTours()
@@ -62,6 +68,7 @@ namespace ARPolis.UI
                 tourItem.infoGR = topicEntity.tours[i].infoGR;
                 tourItem.infoEN = topicEntity.tours[i].infoEN;
                 tourItem.topicID = topicEntity.tours[i].id;
+                tourItem.pageID = i;
                 tourItem.SetTextInfo();
             }
 

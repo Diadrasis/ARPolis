@@ -33,7 +33,6 @@ namespace ARPolis.UI
             return string.Empty;
         }
 
-
         private void OnEnable()
         {
             GlobalActionsUI.OnToggleTarget += RefreshContainer;

@@ -46,9 +46,11 @@ namespace ARPolis.Data
         #endregion
 
 
-        public void InitTours()
+        public void InitTours(string areaID)
         {
             if (jsonClassTours.Count <= 0) { Debug.Log("No tours found!"); return; }
+
+            #region get topic tours
 
             tours = new List<TourEntity>();
 
@@ -117,8 +119,15 @@ namespace ARPolis.Data
 
             }
 
+            #endregion
+
+            #region get infos
+
             for (int t = 0; t < tours.Count; t++)
             {
+                //Debug.Log("tour id = " + tours[t].id);
+
+                #region events
 
                 tours[t].events = new List<EventEntity>();
 
@@ -181,7 +190,107 @@ namespace ARPolis.Data
 
                     tours[t].events.Add(eventEntity);
                 }
+
+                #endregion
+
+                #region tour - pois
+
+                tours[t].tourPoiEntities = new List<TourPoiEntity>();
+
+                for(int tp=0; tp< jsonClassTourPois.Count; tp++)
+                {
+                    //skip if topic id is different
+                    if (jsonClassTourPois[tp].topic_ID != tours[t].topicID && jsonClassTourPois[tp].tour_ID != tours[t].id) continue;
+
+                    TourPoiEntity tourPoiEntity = new TourPoiEntity();
+                    tourPoiEntity.topicID = jsonClassTourPois[tp].topic_ID;
+                    tourPoiEntity.tourID = jsonClassTourPois[tp].tour_ID;
+                    tourPoiEntity.poiID = jsonClassTourPois[tp].poi_ID;
+
+                    tours[t].tourPoiEntities.Add(tourPoiEntity);
+                }
+
+                #endregion
+
+                #region pois
+
+                tours[t].pois = new List<PoiEntity>();
+
+                //init pois
+                for (int x = 0; x < tours[t].tourPoiEntities.Count; x++)
+                {
+                    //skip if topic id is different
+                    if (tours[t].tourPoiEntities[x].topicID != tours[t].topicID) continue;
+                    //skip if tour id is different
+                    if (tours[t].tourPoiEntities[x].tourID != tours[t].id) continue;
+
+                    JsonClassPoi jsonClassPoi = jsonClassPois.Find(b => b.poi_ID == tours[t].tourPoiEntities[x].poiID);
+
+                    PoiEntity poiEntity = new PoiEntity();
+                    poiEntity.infoGR = new PoiLanguange();
+                    poiEntity.infoEN = new PoiLanguange();
+
+                    poiEntity.id = jsonClassPoi.poi_ID;
+                    poiEntity.tourID = tours[t].tourPoiEntities[x].tourID;// tours[t].id;
+                    poiEntity.topicID = jsonClassPoi.topic_ID;
+                    poiEntity.areaID = areaID;
+
+                    poiEntity.photos = new List<string>();
+                    poiEntity.videos = new List<string>();
+                    poiEntity.testimonies = new List<string>();
+                    poiEntity.events = new List<string>();
+
+                    foreach (JsonClassPoi val in jsonClassPois)
+                    {
+                        if (val.poi_ID == poiEntity.id)
+                        {
+                            if (val.attribute_ID == "1")//Τίτλος
+                            {
+                                poiEntity.infoGR.name = val.attribute_Value;
+                            }
+                            else if (val.attribute_ID == "3")//Συνοπτική Περιγραφή
+                            {
+                                poiEntity.infoGR.shortdesc = val.attribute_Value;
+                            }
+                            else if (val.attribute_ID == "5")//Ιστορική Ανασκόπηση
+                            {
+                                poiEntity.infoGR.historicalReview = val.attribute_Value;
+                            }
+                            else if (val.attribute_ID == "2")//Title
+                            {
+                                poiEntity.infoEN.name = val.attribute_Value;
+                            }
+                            else if (val.attribute_ID == "4")//Tour Short Description
+                            {
+                                poiEntity.infoEN.shortdesc = val.attribute_Value;
+                            }
+                            else if (val.attribute_ID == "6")//Historical Review
+                            {
+                                poiEntity.infoEN.historicalReview = val.attribute_Value;
+                            }
+                            else if (val.attribute_ID == "20" && val.attribute_Label == "Θέση")//Position
+                            {
+                                poiEntity.pos = new Vector2(val.X, val.Y);
+                            }
+                            else if (val.attribute_ID == "25")//testimonies
+                            {
+                                poiEntity.testimonies.Add(val.attribute_Value);
+                            }
+                            else if (val.attribute_ID == "20" && val.attribute_Label == "Εικόνα")//photos
+                            {
+                                poiEntity.photos.Add(val.attribute_Value);
+                            }
+                        }
+                    }
+
+                    tours[t].pois.Add(poiEntity);
+
+                }
+
+                #endregion
             }
+
+            #endregion
 
         }
 

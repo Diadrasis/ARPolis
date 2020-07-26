@@ -9,7 +9,7 @@ namespace StaGeUnityTools
     {
 
         public RectTransform target, kanvas;
-        public bool isWidthRelative, isHeightRelative;
+        public bool isWidthRelative, isHeightRelative, delayRefresh;
 
         [HideInInspector]
         public float widthPercent, heightPercent, fixedWidth, fixedHeight;
@@ -37,6 +37,10 @@ namespace StaGeUnityTools
 
         private void Start()
         {
+            if (delayRefresh)
+            {
+                Invoke("DelayInit", 0.1f);
+            }
             if (transform.parent.GetComponent<AutoFitToCanvas>() != null)
             {
                 Invoke("DelayInit", 1f);
