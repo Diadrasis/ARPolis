@@ -35,13 +35,25 @@ namespace ARPolis.Data
             return string.Empty;
         }
 
-        public List<TourPoiEntity> tourPoiEntities;
+        public List<TourPoiEntity> tourPoiEntities;//do we need this data???
 
         public List<PoiEntity> pois;
+        public List<DigitalExhibitObject> digitalExhibitImages;
+        public List<DigitalExhibitObject> digitalExhibitAudios;
+        public List<DigitalExhibitObject> digitalExhibitVideos;
+        public List<DigitalExhibitObject> digitalExhibitNarrations;
+
 
         public void InitPOIs()
         {
-
+            foreach(PoiEntity poi in pois)
+            {
+                poi.digitalExhibitImages = new List<DigitalExhibitObject>();
+                foreach (string s in poi.images)
+                {
+                    poi.digitalExhibitImages.Add(digitalExhibitImages.Find(b => b.id == s));
+                }
+            }
         }
 
         public List<EventEntity> events;

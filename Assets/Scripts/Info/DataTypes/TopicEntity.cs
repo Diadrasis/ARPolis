@@ -235,7 +235,7 @@ namespace ARPolis.Data
                     poiEntity.topicID = jsonClassPoi.topic_ID;
                     poiEntity.areaID = areaID;
 
-                    poiEntity.photos = new List<string>();
+                    poiEntity.images = new List<string>();
                     poiEntity.videos = new List<string>();
                     poiEntity.testimonies = new List<string>();
                     poiEntity.events = new List<string>();
@@ -268,7 +268,7 @@ namespace ARPolis.Data
                             {
                                 poiEntity.infoEN.historicalReview = val.attribute_Value;
                             }
-                            else if (val.attribute_ID == "20" && val.attribute_Label == "Θέση")//Position
+                            else if ((val.X != 0 && val.Y != 0) || val.attribute_ID == "10")//Position
                             {
                                 poiEntity.pos = new Vector2(val.X, val.Y);
                             }
@@ -278,14 +278,68 @@ namespace ARPolis.Data
                             }
                             else if (val.attribute_ID == "20" && val.attribute_Label == "Εικόνα")//photos
                             {
-                                poiEntity.photos.Add(val.attribute_Value);
+                                poiEntity.images.Add(val.attribute_Value);
                             }
                         }
                     }
 
-                    tours[t].pois.Add(poiEntity);
+                    if (poiEntity.pos != Vector2.zero) tours[t].pois.Add(poiEntity);
 
                 }
+
+                #endregion
+
+                #region digital exhibits
+
+                //get files for tour and pois
+
+                List<string> uniqueExhibitIds = new List<string>();
+                tours[t].digitalExhibitImages = new List<DigitalExhibitObject>();
+
+                foreach(JsonClassDigitalExhibit exhibit in jsonClassDigitalExhibits)
+                {
+                    //skip if topic id is different
+                    if (exhibit.topic_ID != id) continue;
+
+                    if (!uniqueExhibitIds.Contains(exhibit.exhibit_ID))
+                    {
+                        uniqueExhibitIds.Add(exhibit.exhibit_ID);
+                    }
+                }
+
+                tours[t].digitalExhibitImages = new List<DigitalExhibitObject>();
+                tours[t].digitalExhibitNarrations = new List<DigitalExhibitObject>();
+                tours[t].digitalExhibitVideos = new List<DigitalExhibitObject>();
+                tours[t].digitalExhibitAudios = new List<DigitalExhibitObject>();
+
+                foreach (string uniqueID in uniqueExhibitIds)
+                {
+                    DigitalExhibitObject digitalExhibit = new DigitalExhibitObject();
+                    digitalExhibit.infoGR = new DigitalExhibitInfo();
+                    digitalExhibit.infoEng = new DigitalExhibitInfo();
+                    digitalExhibit.id = uniqueID;
+
+
+                    List<JsonClassDigitalExhibit> dglist = jsonClassDigitalExhibits.FindAll(b => b.exhibit_ID == uniqueID);
+
+                    foreach(JsonClassDigitalExhibit dg in dglist)
+                    {
+                        if(dg.attribute_ID == "1") { digitalExhibit.infoGR.title = dg.attribute_Value; }
+                        else if (dg.attribute_ID == "3") { digitalExhibit.infoGR.label = dg.attribute_Value; }
+                        else if (dg.attribute_ID == "9") { digitalExhibit.sourceLabel = dg.attribute_Value; }
+                        else if (dg.attribute_ID == "30") {
+                            digitalExhibit.fileName = dg.attribute_Value;
+                            digitalExhibit.type = DigitalExhibitObject.Type.IMAGE;
+                        }
+
+                        if (digitalExhibit.type == DigitalExhibitObject.Type.IMAGE) tours[t].digitalExhibitImages.Add(digitalExhibit);
+                    }
+
+                }
+
+                //set exhibits for pois
+                tours[t].InitPOIs();
+
 
                 #endregion
             }
@@ -293,6 +347,7 @@ namespace ARPolis.Data
             #endregion
 
         }
+
 
     }
 

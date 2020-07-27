@@ -44,14 +44,14 @@ namespace ARPolis.UI
 
         private void ShowTopicTours()
         {
-            if (DestroyPreviousTopics()) CreateTopics();
+            if (DestroyPreviousTours()) CreateTours();
             animToursPanel.gameObject.SetActive(true);
             animToursPanel.SetBool("show", true);
             AppManager.Instance.SetMode(AppManager.AppMode.TOUR_SELECTION);
 
         }
 
-        private void CreateTopics()
+        private void CreateTours()
         {
 
             topicEntity = InfoManager.Instance.GetActiveTopic();
@@ -65,18 +65,16 @@ namespace ARPolis.UI
             {
                 Transform trTour = Instantiate(prefabTour, containerParent);
                 TourItem tourItem = trTour.GetComponent<TourItem>();
-                tourItem.infoGR = topicEntity.tours[i].infoGR;
-                tourItem.infoEN = topicEntity.tours[i].infoEN;
-                tourItem.topicID = topicEntity.tours[i].id;
+                tourItem.Init(topicEntity.tours[i]);
                 tourItem.pageID = i;
-                tourItem.SetTextInfo();
             }
 
             RefreshContainer(null);
         }
 
-        private bool DestroyPreviousTopics()
+        private bool DestroyPreviousTours()
         {
+            //if it is the same topic, no need to destroy
             if (topicEntity == InfoManager.Instance.GetActiveTopic())
             {
                 //if (B.isEditor) Debug.Log("same topic selected - keeping items");
@@ -84,16 +82,15 @@ namespace ARPolis.UI
             }
 
             TourItem[] items = containerParent.GetComponentsInChildren<TourItem>(true);
-            if (items.Length <= 0)
-            {
-                //if (B.isEditor) Debug.Log("no tour items to destroy");
-                return true;
-            }
+            //no tours - we need to create
+            if (items.Length <= 0) return true;
+            //if it is the same topic, no need to destroy
             if (items[0].topicID == InfoManager.Instance.topicNowID)
             {
                 //if (B.isEditor) Debug.Log("same topic - avoid destroying items");
                 return false;
             }
+            //new topic selected - destroy tours
             foreach (TourItem item in items) item.DestroyItem();
 
             //reset scroll
@@ -103,10 +100,8 @@ namespace ARPolis.UI
 
             return true;
         }
-
             
         void ResetScrollSnap() { snapCustom.enabled = true; }
-
 
         private void SetTextInfos()
         {

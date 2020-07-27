@@ -37,10 +37,10 @@ namespace ARPolis.UI
         {
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
             GlobalActionsUI.OnLangChanged += SetTextInfo;
-            btnShowTours.onClick.AddListener(SelectTourID);
+            btnShowTours.onClick.AddListener(SelectTopicID);
         }
 
-        void SelectTourID()
+        void SelectTopicID()
         {
             InfoManager.Instance.topicNowID = topicID;
             GlobalActionsUI.OnShowTopicTours?.Invoke();

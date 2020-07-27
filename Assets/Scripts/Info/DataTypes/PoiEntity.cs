@@ -10,9 +10,14 @@ namespace ARPolis.Data
     public class PoiEntity
     {
         public string id, tourID, topicID, areaID, narrationID, soundID;
-        public List<string> photos, videos, testimonies, events;
+        public List<string> images, videos, testimonies, events;
         public Vector2 pos;
         public PoiLanguange infoGR, infoEN;
+
+        public List<DigitalExhibitObject> digitalExhibitImages;
+        public List<DigitalExhibitObject> digitalExhibitAudios;
+        public List<DigitalExhibitObject> digitalExhibitVideos;
+        public List<DigitalExhibitObject> digitalExhibitNarrations;
 
         public string GetTitle()
         {
