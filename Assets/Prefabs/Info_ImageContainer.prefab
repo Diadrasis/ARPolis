@@ -98,7 +98,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467460905133696062}
-  - component: {fileID: 467460905133696063}
   m_Layer: 5
   m_Name: Info_ImageContainer
   m_TagString: Untagged
@@ -126,24 +125,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 930, y: 576}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &467460905133696063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 467460905133696057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e4a63d028f8564ca52a0161a95bcce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 467460905133696062}
-  kanvas: {fileID: 0}
-  isWidthRelative: 0
-  isHeightRelative: 0
-  widthPercent: 100
-  heightPercent: 100
-  isMovable: 0
-  isVisibleOnStart: 0
-  sideMode: 1

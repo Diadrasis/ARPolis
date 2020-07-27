@@ -17,6 +17,9 @@ namespace ARPolis.UI
         public delegate void ActionPoi(string poiID, string topicID);
         public static ActionPoi OnPoiSelected;
 
+        public delegate void PageSnapAction(int pageId);
+        public static PageSnapAction OnTourPageChanged;
+
         public delegate void UIAction();
         public static UIAction OnIntroStart, OnIntroFinished, 
                                OnShowMenuAreas, OnHideMenuAreas,

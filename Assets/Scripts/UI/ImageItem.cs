@@ -15,13 +15,19 @@ namespace ARPolis.UI
         public RawImage img;
         public AspectRatioFitter ratioFitter;
         public Text txtLabel, txtSource;
+        string imageName, topicID;
 
-        public void Init(string name, string topicID, string label, string source)
+        public void Init(string name, string topic_ID, string label, string source)
         {
             txtLabel.text = label;
             txtSource.text = source;
-            StartCoroutine(LoadImage(name, topicID));
+            imageName = name;
+            topicID = topic_ID;
+            //StartCoroutine(LoadImage(name, topic_ID));
+            Invoke("DelaySetImage", 0.1f);
         }
+
+        void DelaySetImage() { StartCoroutine(LoadImage(imageName, topicID)); }
 
         private IEnumerator LoadImage(string filename, string topicID)
         {
@@ -35,15 +41,16 @@ namespace ARPolis.UI
             if (InfoManager.Instance.jsonFolder == InfoManager.LoadJsonFolder.STREAMING_ASSETS)
             {
                 imageFile = Path.Combine(Application.streamingAssetsPath, imageFile);
+                Debug.Log(imageFile);
 
-//                if(!imageFile.EndsWith)
+                //                if(!imageFile.EndsWith)
 
-                CoroutineWithData cd = new CoroutineWithData(this, StaticData.LoadJsonData<JsonClassTopic>(imageFile));
+                CoroutineWithData cd = new CoroutineWithData(this, StaticData.LoadTextureData<Texture2D>(imageFile));
                 yield return cd.Coroutine;
                 if (cd.result == null) { Debug.LogWarning("Error reading " + imageFile); }
                 else
                 {
-                    img.texture = cd.result as Texture2D;
+                    img.texture = (Texture2D)cd.result;
 
                     ratioFitter.aspectRatio = (float)img.texture.width / (float)img.texture.height;
 

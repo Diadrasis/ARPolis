@@ -115,6 +115,28 @@ namespace ARPolis.Data
             }
         }
 
+        public static IEnumerator LoadTextureData<T>(string filename)//, List<T> t)
+        {
+            byte[] imgData;
+            Texture2D tex = new Texture2D(2, 2);
+
+            UnityWebRequest www = UnityWebRequest.Get(filename);
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+                yield return null;
+            }
+            else
+            {
+                imgData = www.downloadHandler.data;
+                //Load raw Data into Texture2D 
+                tex.LoadImage(imgData);
+                yield return tex;
+            }
+        }
+
         private static string LoadResourceTextfile(string filename)
         {
             string filePath = folderJsons + filename;//.Replace(".json", "");

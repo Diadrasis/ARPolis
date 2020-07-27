@@ -31,6 +31,7 @@ namespace ARPolis.UI
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
             GlobalActionsUI.OnLangChanged += SetTextInfo;
             GlobalActionsUI.OnTourItemPageChanged += OnTourItemPageChanged;
+            GlobalActionsUI.OnTourPageChanged += OnTourItemPageChanged;
             btnShowPoisOnMap.onClick.AddListener(SelectTourPois);
             btnShowPoisOnMap.onClick.AddListener(ScrollResetPosition);
         }
@@ -44,21 +45,31 @@ namespace ARPolis.UI
             topicID =tour.id;
             tourID = tour.id;
             SetTextInfo();
-            //CreateImages();
+            CreateImages();
         }
 
         void CreateImages()
         {
             for(int i=0; i<3; i++)
             {
+                int rand = Random.Range(0, tourEntity.digitalExhibitImages.Count);
+                DigitalExhibitObject dgImage = tourEntity.digitalExhibitImages[rand];
                 Transform pImg = Instantiate(imageItemPrefab, rectScrollImages);
                 ImageItem item = pImg.GetComponent<ImageItem>();
-                item.Init(tourEntity.digitalExhibitImages[i].fileName, tourEntity.topicID, tourEntity.digitalExhibitImages[i].GetLabel(), tourEntity.digitalExhibitImages[i].sourceLabel);
+                item.Init(dgImage.fileName, tourEntity.topicID, dgImage.GetLabel(), dgImage.sourceLabel);
             }
         }
 
         void OnTourItemPageChanged()
         {
+            rectScrollContainer.parent.GetComponent<ScrollRect>().enabled = false;
+            rectScrollImages.parent.GetComponent<ScrollRect>().enabled = false;
+            ScrollResetPosition();
+        }
+
+        void OnTourItemPageChanged(int id)
+        {
+            if (pageID == id) return;
             rectScrollContainer.parent.GetComponent<ScrollRect>().enabled = false;
             rectScrollImages.parent.GetComponent<ScrollRect>().enabled = false;
             ScrollResetPosition();
@@ -129,6 +140,7 @@ namespace ARPolis.UI
             GlobalActionsUI.OnToggleTarget -= RefreshContainer;
             GlobalActionsUI.OnLangChanged -= SetTextInfo;
             GlobalActionsUI.OnTourItemPageChanged -= OnTourItemPageChanged;
+            GlobalActionsUI.OnTourPageChanged -= OnTourItemPageChanged;
             btnShowPoisOnMap.onClick.RemoveAllListeners();
         }
 
@@ -137,6 +149,7 @@ namespace ARPolis.UI
             GlobalActionsUI.OnToggleTarget -= RefreshContainer;
             GlobalActionsUI.OnLangChanged -= SetTextInfo;
             GlobalActionsUI.OnTourItemPageChanged -= OnTourItemPageChanged;
+            GlobalActionsUI.OnTourPageChanged -= OnTourItemPageChanged;
             btnShowPoisOnMap.onClick.RemoveAllListeners();
         }
 
