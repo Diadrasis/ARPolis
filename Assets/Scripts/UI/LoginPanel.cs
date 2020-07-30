@@ -18,12 +18,16 @@ namespace ARPolis.UI
         public Toggle toggleRememberUser;
         public Text txtMessageLogin, txtMessageSignUp;
         public GameObject panelSelectSignInUp, panelSignIn, panelSignUp, loginPanel;
-        Animator animLogin;
+        Animator animLogin, animSignUp, animSignIn;
+        VerticalLayoutGroup verticalLayoutGroupLoginPage;
 
         private void Awake()
         {
             animLogin = loginPanel.GetComponent<Animator>();
-
+            animSignUp = panelSignUp.GetComponent<Animator>();
+            animSignIn = panelSignIn.GetComponent<Animator>();
+            verticalLayoutGroupLoginPage = loginPanel.GetComponent<VerticalLayoutGroup>();
+            verticalLayoutGroupLoginPage.enabled = false;
             ServerController.Instance.Init();
 
             inpSignInUser.inputType = InputField.InputType.Standard;
@@ -66,17 +70,32 @@ namespace ARPolis.UI
             btnCancelSignIn.onClick.AddListener(CancelSignInUser);
             btnCancelSignUp.onClick.AddListener(CancelSignUpUser);
 
-            PanelSignTypeSelectShow();
 
             GlobalActionsUI.OnPanelSignUpCancel += PanelSignTypeSelectShow;
             GlobalActionsUI.OnSignUpSubmit += PanelSignTypeSelectShow;
             GlobalActionsUI.OnLoginShow += ShowLogin;
             GlobalActionsUI.OnShowMenuAreas += HideLogin;
+
+            panelSignUp.SetActive(true);
+            panelSignIn.SetActive(true);
+        }
+
+        private IEnumerator Start()
+        {
+            PanelSignTypeSelectShow();            
+            yield return new WaitForSeconds(0.15f);
+            panelSignUp.SetActive(false);
+            //panelSignIn.SetActive(false);
+            verticalLayoutGroupLoginPage.enabled = true;
+            yield break;
         }
 
         void ShowLogin() {
             loginPanel.SetActive(true);
             animLogin.SetBool("show", true);
+
+            ShowSignInPanel();
+
             AppManager.Instance.SetMode(AppManager.AppMode.LOGIN);
         }
         void HideLogin() { StartCoroutine(DelayCloseLoginPanel()); }
@@ -85,39 +104,56 @@ namespace ARPolis.UI
             animLogin.SetBool("show", false);
             yield return new WaitForSeconds(0.7f);
             loginPanel.SetActive(false);
+            panelSignUp.SetActive(false);
+            panelSignIn.SetActive(false);
         }
 
         void PanelSignTypeSelectShow() {
-            panelSelectSignInUp.SetActive(true);
-            panelSignUp.SetActive(false);
-            panelSignIn.SetActive(false);
+            //panelSelectSignInUp.SetActive(true);
+            panelSignIn.SetActive(true);
+            animSignIn.SetBool("show", true);
         }
 
         void ShowSignInPanel() {
             if (B.isEditor) Debug.LogWarning("open sign in panel");
             panelSignIn.SetActive(true);
-            panelSignUp.SetActive(false);
-            panelSelectSignInUp.SetActive(false);
+            animSignIn.SetBool("show", true);
+            animSignUp.SetBool("show", false);
+            Invoke("HideSignUpPanel", 0.7f);
+            //panelSelectSignInUp.SetActive(false);
         }
+
+        void HideSignUpPanel() { panelSignUp.SetActive(false); }
+        void HideSignInPanel() { panelSignIn.SetActive(false); }
 
         void CancelSignInUser()
         {
-            panelSignIn.SetActive(false);
-            panelSignUp.SetActive(false);
-            panelSelectSignInUp.SetActive(true);
+           // animSignIn.SetBool("show", false);
+            //Invoke("HideSignInPanel", 0.7f);
+           // animSignUp.SetBool("show", false);
+           // Invoke("HideSignUpPanel", 0.7f);
+            //panelSelectSignInUp.SetActive(true);
         }
 
         void ShowSignUpPanel() {
             if (B.isEditor) Debug.LogWarning("open sign up panel");
             panelSignUp.SetActive(true);
-            panelSelectSignInUp.SetActive(false);
+            animSignUp.SetBool("show", true);
+            // panelSelectSignInUp.SetActive(false);
+            animSignIn.SetBool("show", false);
+            Invoke("HideSignInPanel", 0.7f);
         }
 
         void CancelSignUpUser()
         {
-            panelSignIn.SetActive(false);
-            panelSignUp.SetActive(false);
-            panelSelectSignInUp.SetActive(true);
+            //animSignIn.SetBool("show", false);
+            //Invoke("HideSignInPanel", 0.7f);
+
+            panelSignIn.SetActive(true);
+            animSignIn.SetBool("show", true);
+            animSignUp.SetBool("show", false);
+            Invoke("HideSignUpPanel", 0.7f);
+            //panelSelectSignInUp.SetActive(true);
         }
 
         void ServerLoginUser()
@@ -196,7 +232,7 @@ namespace ARPolis.UI
 
         void ShowMessage(string val)
         {
-            txtMessageLogin.text = AppData.FindTermValue(val);
+            txtMessageLogin.text = AppData.Instance.FindTermValue(val);
             txtMessageLogin.gameObject.SetActive(true);
             StartCoroutine(HideMessageDelayded());
         }
@@ -212,7 +248,7 @@ namespace ARPolis.UI
 
         void ShowSignUpMessage(string val)
         {
-            txtMessageSignUp.text = AppData.FindTermValue(val);
+            txtMessageSignUp.text = AppData.Instance.FindTermValue(val);
             txtMessageSignUp.gameObject.SetActive(true);
             StartCoroutine(HideSignUpMessageDelayded());
         }

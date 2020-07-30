@@ -32,8 +32,9 @@ namespace ARPolis.Info
 
         ContentSizeFitter sizeFitter;
 
-        private void Start()
+        private void Awake()
         {
+            ChangeLanguange();
         }
 
         void OnEnable()
@@ -110,7 +111,7 @@ namespace ARPolis.Info
             //find text from terms xml with the name of transform if exists
             if (myText)
             {
-                string term = AppData.FindTermValue(termToFind);
+                string term = AppData.Instance.FindTermValue(termToFind);
                 if (useCaps) term = term.ToUpper();
                 myText.text = term;
 

@@ -34,7 +34,7 @@ namespace ARPolis.Data
         {
             if (hasInit) { if (B.isEditor) Debug.LogWarning("Initializing Aborted!"); return; }
 
-            if (B.isEditor) Debug.LogWarning("Initializing Info Data");
+            //if (B.isEditor) Debug.LogWarning("Initializing Info Data");
 
             hasInit = true;
             jsonFolder = LoadJsonFolder.STREAMING_ASSETS;
@@ -306,7 +306,7 @@ namespace ARPolis.Data
             }
             #endregion
             
-            InitApp.OnDataLoaded?.Invoke();
+            //InitApp.OnDataLoaded?.Invoke();
 
             yield break;
         }

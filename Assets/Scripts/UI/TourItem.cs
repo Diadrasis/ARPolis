@@ -26,6 +26,8 @@ namespace ARPolis.UI
 
         public Transform imageItemPrefab;
 
+        public GameObject panelPhotos;
+
         private void OnEnable()
         {
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
@@ -50,6 +52,12 @@ namespace ARPolis.UI
 
         void CreateImages()
         {
+            if (tourEntity.digitalExhibitImages.Count <= 0)
+            {
+                panelPhotos.SetActive(false);
+                Invoke("RefreshElements", 0.15f);
+                return;
+            }
             for(int i=0; i<3; i++)
             {
                 int rand = Random.Range(0, tourEntity.digitalExhibitImages.Count);
@@ -127,7 +135,7 @@ namespace ARPolis.UI
 
         private void RefreshContainer(GameObject gb)
         {
-            Debug.Log("tours item refresh");
+            //Debug.Log("tours item refresh");
             RefreshElements();
         }
 

@@ -101,7 +101,7 @@ namespace ARPolis.UI
         {
             //reset text to current languange
             termAreaNameValue = "athens";
-            txtMenuAreaName.text = AppData.FindTermValue(termAreaNameValue);
+            txtMenuAreaName.text = AppData.Instance.FindTermValue(termAreaNameValue);
         }
 
         public void QuitApp()
@@ -128,7 +128,7 @@ namespace ARPolis.UI
             {
                 termAreaNameValue = "athens";
             }
-            txtMenuAreaName.text = AppData.FindTermValue(termAreaNameValue);
+            txtMenuAreaName.text = AppData.Instance.FindTermValue(termAreaNameValue);
         }
 
         void ChangeLanguage()
@@ -141,11 +141,11 @@ namespace ARPolis.UI
             PlayerPrefs.SetString("Lang", StaticData.lang);
             PlayerPrefs.Save();
             //get terms
-            AppData.Init();
+            AppData.Instance.Init();
             GlobalActionsUI.OnLangChanged?.Invoke();
 
             //change area names
-            txtMenuAreaName.text = AppData.FindTermValue(termAreaNameValue);
+            txtMenuAreaName.text = AppData.Instance.FindTermValue(termAreaNameValue);
         }
 
         void ShowAthensMenu()

@@ -26,6 +26,8 @@ namespace ARPolis
         {
             Debug.Log("APP MANAGER INIT");
             B.Init();
+            AppData.Instance.Init();
+
             GlobalActionsUI.OnShowMenuAreas += SetModeMenu;
         }
 
@@ -48,7 +50,6 @@ namespace ARPolis
                 case AppMode.NULL:
                     break;
                 case AppMode.INTRO:
-                    AppData.Init();
                     InfoManager.Instance.Init();
                     OnInit?.Invoke();
                     break;

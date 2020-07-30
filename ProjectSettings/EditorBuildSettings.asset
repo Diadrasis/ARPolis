@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/#Main.unity
     guid: 0375a5457fed12344a7a3b7171deb32e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/#Main_2.unity
     guid: 33a7196a75cb5c34ea3e454cee1aedc5
+  - enabled: 1
+    path: Assets/Scenes/Terpsi.unity
+    guid: efa47892f529fa046a8d274594a51322
   m_configObjects: {}

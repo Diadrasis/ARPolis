@@ -12,29 +12,32 @@ namespace ARPolis
     {
         AsyncOperation loadAsync;
 
-        public delegate void InitAction();
-        public static InitAction OnDataLoaded;
+        //public delegate void InitAction();
+        //public static InitAction OnDataLoaded;
 
-        bool isDataLoaded;
+        //bool isDataLoaded;
 
         private void Awake()
         {
-            StaticData.lang = PlayerPrefs.GetString("Lang");
+            //B.Init();
+
+            //StaticData.lang = PlayerPrefs.GetString("Lang");
+
             //get terms
-            AppData.Init();
+            //AppData.Instance.Init();
 
-            OnDataLoaded += DataLoaded;
-            isDataLoaded = false;
+            //OnDataLoaded += DataLoaded;
+            //isDataLoaded = false;
 
-            InfoManager.Instance.Init();
+            //InfoManager.Instance.Init();
         }
 
-        void DataLoaded() { isDataLoaded = true; }
+        //void DataLoaded() { isDataLoaded = true; }
 
         IEnumerator Start()
         {
-            while (!isDataLoaded) yield return null;
-            yield return new WaitForSeconds(0.25f);
+           // while (!isDataLoaded) yield return null;
+            yield return new WaitForSeconds(0.5f);
             loadAsync = SceneManager.LoadSceneAsync(1);//, LoadSceneMode.Additive);
             while (!loadAsync.isDone)
             {

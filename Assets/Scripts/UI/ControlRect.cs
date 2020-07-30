@@ -12,11 +12,12 @@ public class ControlRect : MonoBehaviour
 
     Vector2 totalSize;
 
-    void Start()
+    void OnEnable()
     {
         myRect = GetComponent<RectTransform>();
 
-        SetRectSize();
+        //SetRectSize();
+        Invoke("SetRectSize", 0.15f);
     }
 
     [ContextMenu("Set Size")]

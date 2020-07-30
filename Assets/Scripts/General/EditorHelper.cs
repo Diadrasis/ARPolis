@@ -16,7 +16,7 @@ namespace StaGeUnityTools
 #if !UNITY_EDITOR
             this.enabled = false;
             return;
-#endif
+#else
 
             B.isEditor = false;
             B.isMobile = false;
@@ -41,6 +41,8 @@ namespace StaGeUnityTools
                     B.isEditor = true;
                     break;
             }
+
+#endif
         }
 
     }

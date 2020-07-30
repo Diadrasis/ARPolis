@@ -35,26 +35,26 @@ namespace ARPolis.UI
             
             if (InfoManager.Instance.jsonFolder == InfoManager.LoadJsonFolder.RESOURCES)
             {
-                
+                //null
             }
             else
             if (InfoManager.Instance.jsonFolder == InfoManager.LoadJsonFolder.STREAMING_ASSETS)
             {
                 imageFile = Path.Combine(Application.streamingAssetsPath, imageFile);
-                Debug.Log(imageFile);
-
-                //                if(!imageFile.EndsWith)
+                //Debug.Log(imageFile);
 
                 CoroutineWithData cd = new CoroutineWithData(this, StaticData.LoadTextureData<Texture2D>(imageFile));
                 yield return cd.Coroutine;
-                if (cd.result == null) { Debug.LogWarning("Error reading " + imageFile); }
+                if (cd.result == null) {
+                    img.texture = StaticData.GetImageNull();
+                    Debug.LogWarning("Error reading " + imageFile);
+                }
                 else
                 {
                     img.texture = (Texture2D)cd.result;
-
-                    ratioFitter.aspectRatio = (float)img.texture.width / (float)img.texture.height;
-
                 }
+
+                ratioFitter.aspectRatio = (float)img.texture.width / (float)img.texture.height;
             }
         }
 

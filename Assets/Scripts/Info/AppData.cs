@@ -11,68 +11,73 @@ using ARPolis.Data;
 namespace ARPolis.Info
 {
 
-    public class AppData
+    public class AppData : Singleton<AppData>
     {
-        public static XmlDocument termXml;
-        public static List<Term> textTerms = new List<Term>();
-        static string[] savedTermsXml;// = PlayerPrefsX.GetStringArray("fromServer"+xml);
+        protected AppData() { }
+
+        private XmlDocument termXml;
+        private List<Term> textTerms = new List<Term>();
+        //static string[] savedTermsXml;// = PlayerPrefsX.GetStringArray("fromServer"+xml);
 
         public delegate void DataReadAction();
         public static DataReadAction OnDataReaded;
 
-        public static void Init()
+        public void Init()
         {
+            Debug.Log("AppData.Init()");
 
-            savedTermsXml = PlayerPrefsX.GetStringArray("fromServer_terms");
+            //savedTermsXml = PlayerPrefsX.GetStringArray("fromServer_terms");
 
-            if (savedTermsXml.Length <= 0)
-            {
+            //if (savedTermsXml.Length <= 0)
+            //{
                 //load terms and help
                 termXml = new XmlDocument();
                 TextAsset terms = (TextAsset)Resources.Load("XML/terms");
                 termXml.LoadXml(Regex.Replace(terms.text, "(<!--(.*?)-->)", string.Empty));
-            }
-            else
-            {
+            //}
+            //else
+            //{
                 //check local saved xml version
-                termXml = new XmlDocument();
-                string textAsset = string.Empty;
+                //termXml = new XmlDocument();
+                //string textAsset = string.Empty;
 
-                for (int x = 0; x < savedTermsXml.Length; x++)
-                {
-                    textAsset += savedTermsXml[x];
-                }
+                //for (int x = 0; x < savedTermsXml.Length; x++)
+                //{
+                //    textAsset += savedTermsXml[x];
+                //}
 
-                string localExcludedComments = Regex.Replace(textAsset, "(<!--(.*?)-->)", string.Empty);
-                termXml.LoadXml(localExcludedComments);
-            }
+                //string localExcludedComments = Regex.Replace(textAsset, "(<!--(.*?)-->)", string.Empty);
+                //termXml.LoadXml(localExcludedComments);
+            //}
+
+            //Debug.Log(termXml.InnerText);
 
             ReadTerms();
         }
 
         //read all terms
-        public static void ReadTerms()
+        private void ReadTerms()
         {
             // Clear previous loaded Terms
+            textTerms = new List<Term>();
             textTerms.Clear();
-            Term myTerm;
             XmlNodeList termList = termXml.GetElementsByTagName("term");
 
             foreach (XmlNode term in termList)
             {
-                myTerm = new Term();
+                Term myTerm = new Term();
                 myTerm.Name = term["name"].InnerText;
                 myTerm.Text = term["value"][StaticData.lang].InnerText.Replace("\\n", "\n").Replace("&amp;", "&");
                 textTerms.Add(myTerm);
             }
 
-            if (B.isRealEditor) Debug.LogWarning("terms are " + textTerms.Count.ToString());
+            Debug.LogWarning("terms are " + textTerms.Count.ToString());
 
             OnDataReaded?.Invoke();
 
         }
 
-        public static string FindTermValue(string name)
+        public string FindTermValue(string name)
         {
             for (int i = 0; i < textTerms.Count; i++)
             {

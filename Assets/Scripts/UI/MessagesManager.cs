@@ -68,14 +68,14 @@ namespace ARPolis
             iconImage.sprite = sprQuitApp;
             iconImage.gameObject.SetActive(true);
             txtTitle.text = string.Empty;// AppData.FindTermValue(StaticData.termGpsOffTitle);
-            txtDesc.text = AppData.FindTermValue(StaticData.termQuitAppDesc);
+            txtDesc.text = AppData.Instance.FindTermValue(StaticData.termQuitAppDesc);
 
             btnOK.onClick.AddListener(() => QuitApp());
-            txtBtnOK.text = AppData.FindTermValue(StaticData.termBtnOK);
+            txtBtnOK.text = AppData.Instance.FindTermValue(StaticData.termBtnOK);
             btnOK.gameObject.SetActive(true);
 
             btnAction2.onClick.AddListener(() => HidePanel());
-            txtBtnAction2.text = AppData.FindTermValue(StaticData.termBtnCancel);
+            txtBtnAction2.text = AppData.Instance.FindTermValue(StaticData.termBtnCancel);
             btnAction2.gameObject.SetActive(true);
 
             btnAction1.gameObject.SetActive(false);
@@ -139,17 +139,17 @@ namespace ARPolis
 
             iconImage.sprite = sprOffSite;
             iconImage.gameObject.SetActive(true);
-            txtTitle.text = AppData.FindTermValue(StaticData.termGpsOffTitle);
-            txtDesc.text = AppData.FindTermValue(StaticData.termGpsOffDesc);
+            txtTitle.text = AppData.Instance.FindTermValue(StaticData.termGpsOffTitle);
+            txtDesc.text = AppData.Instance.FindTermValue(StaticData.termGpsOffDesc);
 
             btnOK.onClick.AddListener(() => HidePanel());
-            txtBtnOK.text = AppData.FindTermValue(StaticData.termBtnOK);
+            txtBtnOK.text = AppData.Instance.FindTermValue(StaticData.termBtnOK);
             btnOK.gameObject.SetActive(true);
 
             if (B.isAndroid || B.isEditor)
             {
                 btnAction2.onClick.AddListener(() => AndroidBridge.OpenIntent(IntentNames.GPS_SETTINGS));
-                txtBtnAction2.text = AppData.FindTermValue(StaticData.termBtnEnableGps);
+                txtBtnAction2.text = AppData.Instance.FindTermValue(StaticData.termBtnEnableGps);
                 btnAction2.gameObject.SetActive(true);
             }
 
@@ -167,11 +167,11 @@ namespace ARPolis
 
             iconImage.sprite = sprOffSite;
             iconImage.gameObject.SetActive(true);
-            txtTitle.text = AppData.FindTermValue(StaticData.termGpsFarTitle);
-            txtDesc.text = AppData.FindTermValue(StaticData.termGpsFarDesc);
+            txtTitle.text = AppData.Instance.FindTermValue(StaticData.termGpsFarTitle);
+            txtDesc.text = AppData.Instance.FindTermValue(StaticData.termGpsFarDesc);
 
             btnOK.onClick.AddListener(() => HidePanel());
-            txtBtnOK.text = AppData.FindTermValue(StaticData.termBtnOK);
+            txtBtnOK.text = AppData.Instance.FindTermValue(StaticData.termBtnOK);
             btnOK.gameObject.SetActive(true);
 
             btnAction2.gameObject.SetActive(false);
@@ -189,11 +189,11 @@ namespace ARPolis
 
             iconImage.sprite = sprOffSite;
             iconImage.gameObject.SetActive(true);
-            txtTitle.text = AppData.FindTermValue(StaticData.termGpsNearTitle);
-            txtDesc.text = AppData.FindTermValue(StaticData.termGpsNearDesc);
+            txtTitle.text = AppData.Instance.FindTermValue(StaticData.termGpsNearTitle);
+            txtDesc.text = AppData.Instance.FindTermValue(StaticData.termGpsNearDesc);
 
             btnOK.onClick.AddListener(() => HidePanel());
-            txtBtnOK.text = AppData.FindTermValue(StaticData.termBtnOK);
+            txtBtnOK.text = AppData.Instance.FindTermValue(StaticData.termBtnOK);
             btnOK.gameObject.SetActive(true);
 
             btnAction2.gameObject.SetActive(false);

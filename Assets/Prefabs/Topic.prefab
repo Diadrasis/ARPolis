@@ -95,6 +95,7 @@ MonoBehaviour:
   kanvas: {fileID: 6323742504736243421}
   isWidthRelative: 0
   isHeightRelative: 0
+  delayRefresh: 0
   widthPercent: 82
   heightPercent: 0
   fixedWidth: 0
@@ -187,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &673143303834544268
 RectTransform:
   m_ObjectHideFlags: 0
@@ -202,10 +203,10 @@ RectTransform:
   m_Father: {fileID: 1212358582272859398}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 262.5, y: -37.5}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8560365617564801697
 CanvasRenderer:
@@ -280,7 +281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 122.5, y: 0}
+  m_AnchoredPosition: {x: 145.5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8121874354136229886
@@ -323,7 +324,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u039E\u03B5\u03BD\u03B1\u03B3\u03AE\u03C3\u03B5\u03B9\u03C2"
+  m_Text: "\u039E\u03B5\u03BD\u03B1\u03B3\u03AE\u03C3\u03B5\u03B9\u03C2 (6)"
 --- !u!114 &1973255811403651921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,7 +764,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1055, y: 75}
+  m_SizeDelta: {x: 1055, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6323742504305266383
 CanvasRenderer:
@@ -870,7 +871,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: fca1130a344ec0f4995751f6c20b5074, type: 3}
-    m_FontSize: 45
+    m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -880,7 +881,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.2
   m_Text: 'It is a long established fact that a reader will be distracted by the
     readable content of a page when looking at its layout. The point of using Lorem
     Ipsum is that it has a more-or-less normal distribution of letters, '
@@ -914,6 +915,7 @@ MonoBehaviour:
   kanvas: {fileID: 6323742504736243421}
   isWidthRelative: 0
   isHeightRelative: 0
+  delayRefresh: 0
   widthPercent: 82
   heightPercent: 0
   fixedWidth: 0
@@ -955,8 +957,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 95, y: 0}
-  m_SizeDelta: {x: -230, y: 150}
+  m_AnchoredPosition: {x: 87.5, y: 0}
+  m_SizeDelta: {x: -215, y: 150}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &6323742504557340646
 CanvasRenderer:
@@ -992,7 +994,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 103
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
