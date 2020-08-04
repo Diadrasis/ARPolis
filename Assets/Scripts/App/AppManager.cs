@@ -94,7 +94,8 @@ namespace ARPolis
                 case AppMode.LOGIN:
                     break;
                 case AppMode.AREA_SELECTION:
-                    GlobalActionsUI.OnHideMenuAreas?.Invoke();
+                    //GlobalActionsUI.OnHideMenuAreas?.Invoke();
+                    MenuPanel.OnQuitApp?.Invoke();
                     break;
                 case AppMode.TOPIC_SELECTION:
                     GlobalActionsUI.OnHideAreaTopics?.Invoke();

@@ -67,10 +67,10 @@ namespace ARPolis
 
             iconImage.sprite = sprQuitApp;
             iconImage.gameObject.SetActive(true);
-            txtTitle.text = string.Empty;// AppData.FindTermValue(StaticData.termGpsOffTitle);
-            txtDesc.text = AppData.Instance.FindTermValue(StaticData.termQuitAppDesc);
+            txtTitle.text = AppData.Instance.FindTermValue(StaticData.termLogoutTitle);
+            txtDesc.text = AppData.Instance.FindTermValue(StaticData.termLogoutDesc);
 
-            btnOK.onClick.AddListener(() => QuitApp());
+            btnOK.onClick.AddListener(() => LogoutUser());// QuitApp());
             txtBtnOK.text = AppData.Instance.FindTermValue(StaticData.termBtnOK);
             btnOK.gameObject.SetActive(true);
 
@@ -92,6 +92,13 @@ namespace ARPolis
 #else
             Application.Quit();
 #endif
+        }
+
+        void LogoutUser()
+        {
+            //GlobalActionsUI.OnHideMenuAreas?.Invoke();
+            GlobalActionsUI.OnLogoutUser?.Invoke();
+            HidePanel();
         }
 
         void ShowGpsMessageOnUser()

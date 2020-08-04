@@ -32,6 +32,9 @@ namespace ARPolis.Data
         public static string termQuitAppTitle = "msgQuitAppTitle";
         public static string termQuitAppDesc = "msgQuitAppDesc";
 
+        public static string termLogoutTitle = "msgLogoutTitle";
+        public static string termLogoutDesc = "msgLogoutDesc";
+
         public static string termPasswordsMismatch = "passwordsMismatch";
         public static string termUsernameEmptyField = "usernameEmptyField";
         public static string termPasswordEmptyField = "passwordEmptyField";

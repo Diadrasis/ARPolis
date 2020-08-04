@@ -53,6 +53,11 @@ namespace ARPolis.Data
             return GetActiveArea().topics.Find(b => b.id == topicNowID);
         }
 
+        public int GetTopicToursLength(int topicID)
+        {
+            return areaAthens.topics[topicID].tours.Count;
+        }
+
 
         private IEnumerator ReadAllData()
         {

@@ -1,4 +1,5 @@
 ﻿using ARPolis.Data;
+using ARPolis.Info;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ namespace ARPolis.UI
         public Image logo;
         public Text txtTitle, txtDesc;
         public Button btnShowTours;
+        public AutoSetLanguange setLanguangeTours;
 
         public TopicLanguange infoGR, infoEN;
         public string areaID, topicID;
@@ -36,7 +38,7 @@ namespace ARPolis.UI
         private void OnEnable()
         {
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
-            GlobalActionsUI.OnLangChanged += SetTextInfo;
+            GlobalActionsUI.OnLangChanged += SetTopicInfo;
             btnShowTours.onClick.AddListener(SelectTopicID);
         }
 
@@ -46,10 +48,23 @@ namespace ARPolis.UI
             GlobalActionsUI.OnShowTopicTours?.Invoke();
         }
 
-        public void SetTextInfo()
+        public void SetTopicInfo()
         {
             txtTitle.text = GetTitle();
             txtDesc.text = GetDesc();
+        }
+
+        public void SetTitlteColor(Color titleColor) { txtTitle.color = titleColor; }
+
+        public void SetLogo(Sprite spr)
+        {
+            logo.sprite = spr;
+        }
+
+        public void SetNumberOfTours(string total)
+        {
+            setLanguangeTours.stringToAdd = " (" + total +")";
+            setLanguangeTours.Init();
         }
 
         void RefreshContainer(GameObject gb)
@@ -62,14 +77,14 @@ namespace ARPolis.UI
         private void OnDisable()
         {
             GlobalActionsUI.OnToggleTarget -= RefreshContainer;
-            GlobalActionsUI.OnLangChanged -= SetTextInfo;
+            GlobalActionsUI.OnLangChanged -= SetTopicInfo;
             btnShowTours.onClick.RemoveAllListeners();
         }
 
         private void OnDestroy()
         {
             GlobalActionsUI.OnToggleTarget -= RefreshContainer;
-            GlobalActionsUI.OnLangChanged -= SetTextInfo;
+            GlobalActionsUI.OnLangChanged -= SetTopicInfo;
             btnShowTours.onClick.RemoveAllListeners();
         }
 

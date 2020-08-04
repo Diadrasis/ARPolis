@@ -18,6 +18,9 @@ namespace ARPolis.UI
 
         public Text txtAreaName, txtShortDesc;
 
+        public Color colTopic1, colTopic2, colTopic3, colTopic4;
+        public Sprite sprTopic1, sprTopic2, sprTopic3, sprTopic4;
+
         AreaEntity areaEntity;
 
         private void Awake()
@@ -56,7 +59,44 @@ namespace ARPolis.UI
                 topicItem.infoGR = areaEntity.topics[i].infoGR;
                 topicItem.infoEN = areaEntity.topics[i].infoEN;
                 topicItem.topicID = areaEntity.topics[i].id;
-                topicItem.SetTextInfo();
+                topicItem.SetTopicInfo();
+                topicItem.SetTitlteColor(TitleTopicColor(i));
+                topicItem.SetLogo(LogoTopicSprite(i));
+                topicItem.SetNumberOfTours(InfoManager.Instance.GetTopicToursLength(i).ToString());
+            }
+        }
+
+        Sprite LogoTopicSprite(int indx)
+        {
+            switch (indx)
+            {
+                case 0:
+                    return sprTopic1;
+                case 1:
+                    return sprTopic2;
+                case 2:
+                    return sprTopic3;
+                case 3:
+                    return sprTopic4;
+                default:
+                    return sprTopic1;
+            }
+        }
+
+        Color TitleTopicColor(int indx)
+        {
+            switch (indx)
+            {
+                case 0:
+                    return colTopic1;
+                case 1:
+                    return colTopic2;
+                case 2:
+                    return colTopic3;
+                case 3:
+                    return colTopic4;
+                default:
+                    return colTopic1;
             }
         }
 

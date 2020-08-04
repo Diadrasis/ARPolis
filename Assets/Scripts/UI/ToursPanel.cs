@@ -19,9 +19,14 @@ namespace ARPolis.UI
 
         public Text txtTopicTitle, txtShortDesc;
 
+        public Image logoTour;
+
         TopicEntity topicEntity;
 
         public ScrollSnapCustom snapCustom;
+
+        public Color colTopic1, colTopic2, colTopic3, colTopic4;
+        public Sprite sprTopic1, sprTopic2, sprTopic3, sprTopic4;
 
         private void Awake()
         {
@@ -36,6 +41,7 @@ namespace ARPolis.UI
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
 
             animToursPanel.gameObject.SetActive(false);
+            animToursPanel.speed = 0.5f;
         }
 
         private void OnTourItemPageChanged()
@@ -54,7 +60,6 @@ namespace ARPolis.UI
             animToursPanel.gameObject.SetActive(true);
             animToursPanel.SetBool("show", true);
             AppManager.Instance.SetMode(AppManager.AppMode.TOUR_SELECTION);
-
         }
 
         private void CreateTours()
@@ -66,12 +71,15 @@ namespace ARPolis.UI
             if (topicEntity.tours.Count <= 0) { if (B.isEditor) Debug.Log("no tour items"); return; }
 
             SetTextInfos();
-            
+            logoTour.sprite = LogoTopicSprite(topicEntity.id);
+
+
             for (int i = 0; i < topicEntity.tours.Count; i++)
             {
                 Transform trTour = Instantiate(prefabTour, containerParent);
                 TourItem tourItem = trTour.GetComponent<TourItem>();
                 tourItem.Init(topicEntity.tours[i]);
+                tourItem.SetTourColor(TitleTopicColor(topicEntity.id));
                 tourItem.pageID = i;
             }
 
@@ -141,6 +149,41 @@ namespace ARPolis.UI
             Debug.Log("tours panel refresh");
             foreach (RectTransform rt in rectsForRefresh) LayoutRebuilder.ForceRebuildLayoutImmediate(rt);
         }
+
+        Sprite LogoTopicSprite(string id)
+        {
+            switch (id)
+            {
+                case "1":
+                    return sprTopic1;
+                case "2":
+                    return sprTopic2;
+                case "3":
+                    return sprTopic3;
+                case "4":
+                    return sprTopic4;
+                default:
+                    return sprTopic1;
+            }
+        }
+
+        Color TitleTopicColor(string id)
+        {
+            switch (id)
+            {
+                case "1":
+                    return colTopic1;
+                case "2":
+                    return colTopic2;
+                case "3":
+                    return colTopic3;
+                case "4":
+                    return colTopic4;
+                default:
+                    return colTopic1;
+            }
+        }
+
 
     }
 

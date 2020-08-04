@@ -15,7 +15,8 @@ namespace ARPolis.UI
         public string tourID, topicID;
         public TourLanguange infoGR, infoEN;
 
-        public Text txtTitle, txtDesc, txtShortText;
+        public TMPro.TextMeshProUGUI txtTitle, txtDesc, txtShortText;
+        
 
         public Button btnShowPoisOnMap;
 
@@ -27,6 +28,8 @@ namespace ARPolis.UI
         public Transform imageItemPrefab;
 
         public GameObject panelPhotos;
+
+        public Image colorTourImage, colorBtnNext, colorBtnPrev;
 
         private void OnEnable()
         {
@@ -49,6 +52,8 @@ namespace ARPolis.UI
             SetTextInfo();
             CreateImages();
         }
+
+        public void SetTourColor(Color col) { colorTourImage.color = col; colorBtnNext.color = col; colorBtnPrev.color = col; }
 
         void CreateImages()
         {

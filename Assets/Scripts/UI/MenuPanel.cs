@@ -63,6 +63,7 @@ namespace ARPolis.UI
 
             GlobalActionsUI.OnShowMenuAreas += ShowMenu;
             GlobalActionsUI.OnHideMenuAreas += HideMenu;
+            GlobalActionsUI.OnLogoutUser += LogOutUser;
 
             GlobalActionsUI.OnHideAreaTopics += HideSideMenuIfVisible;
             GlobalActionsUI.OnHideTopicTours += HideSideMenuIfVisible;
@@ -151,6 +152,7 @@ namespace ARPolis.UI
         void ShowAthensMenu()
         {
             if (B.isRealEditor) Debug.Log("ShowAthensMenu");
+            btnLanguage.gameObject.SetActive(false);
             InfoManager.Instance.areaNowID = "1";
             GlobalActionsUI.OnShowAreaTopics?.Invoke();
         }
@@ -317,6 +319,9 @@ namespace ARPolis.UI
 
         void ShowMenu()
         {
+            if (B.isEditor) Debug.Log("ShowMenu");
+
+            btnLanguage.gameObject.SetActive(true);
             menuPanel.SetActive(true);
             animMenuPanel.SetBool("show", true);
             panelTopBarTransition.ShowPanel();
@@ -325,11 +330,24 @@ namespace ARPolis.UI
 
         void HideMenu()
         {
+            if (B.isEditor) Debug.Log("HideMenu");
+
             if (AppManager.Instance.isSideMenuOpen)
             {
                 ToggleSideMenu();
                 return;
             }
+            GlobalActionsUI.OnLoginShow?.Invoke();
+            animMenuPanel.SetBool("show", false);
+            panelTopBarTransition.HidePanel();
+            StartCoroutine(DelayHide());
+        }
+
+        void LogOutUser()
+        {
+            if (B.isEditor) Debug.Log("LogOutUser");
+
+            HideSideMenuIfVisible();
             GlobalActionsUI.OnLoginShow?.Invoke();
             animMenuPanel.SetBool("show", false);
             panelTopBarTransition.HidePanel();
@@ -348,6 +366,7 @@ namespace ARPolis.UI
         {
             yield return new WaitForSeconds(0.75f);
             menuPanel.SetActive(false);
+            btnLanguage.gameObject.SetActive(false);
         }
 
         

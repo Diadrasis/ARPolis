@@ -1,4 +1,5 @@
 ﻿using ARPolis.Data;
+using ARPolis.Info;
 using StaGeUnityTools;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,20 +12,35 @@ namespace ARPolis.UI
 
     public class ImageItem : MonoBehaviour
     {
-
+        public Button btnSourceUrl;
         public RawImage img;
         public AspectRatioFitter ratioFitter;
         public Text txtLabel, txtSource;
         string imageName, topicID;
+        public string sourceURL;
 
         public void Init(string name, string topic_ID, string label, string source)
         {
             txtLabel.text = label;
-            txtSource.text = source;
+            sourceURL = source;
             imageName = name;
             topicID = topic_ID;
+            btnSourceUrl.onClick.AddListener(OpenSourceURL);
             //StartCoroutine(LoadImage(name, topic_ID));
             Invoke("DelaySetImage", 0.1f);
+        }
+
+        void OpenSourceURL()
+        {
+            if (string.IsNullOrEmpty(sourceURL)) {
+                btnSourceUrl.interactable = false;
+                txtSource.GetComponent<AutoSetLanguange>().enabled = false;
+                txtSource.text = sourceURL;
+                return;
+            }
+            //if (!sourceURL.StartsWith("htpp://") || !sourceURL.StartsWith("htpps://")) { btnSourceUrl.interactable = false; return; }
+
+            Application.OpenURL(sourceURL);
         }
 
         void DelaySetImage() { StartCoroutine(LoadImage(imageName, topicID)); }

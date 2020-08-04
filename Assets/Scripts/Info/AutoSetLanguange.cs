@@ -14,6 +14,7 @@ namespace ARPolis.Info
         public bool useCaps = false;
 
         private Text myText;
+        private TMPro.TextMeshProUGUI txt;
         public string myLang;
         public string termToFind;
 
@@ -51,7 +52,9 @@ namespace ARPolis.Info
                 //}
             }
             if (myText == null) { myText = GetComponent<Text>(); }
+            if (txt == null) { txt = GetComponent<TMPro.TextMeshProUGUI>(); }
             if (string.IsNullOrEmpty(termToFind) && myText) termToFind = myText.transform.name;
+            if (string.IsNullOrEmpty(termToFind) && txt) termToFind = txt.transform.name;
 
             //if (setFontSizeManually) {
             //	if(autoResizeTextFont)
@@ -95,11 +98,9 @@ namespace ARPolis.Info
 
         public void Init()
         {
-            if (myText)
-            {
-                myText.text = string.Empty;
-                ReplaceText();
-            }
+            if (myText) myText.text = string.Empty;
+            if (txt) txt.text = string.Empty;
+            ReplaceText();
 
             ReplaceImage();
         }
@@ -109,29 +110,29 @@ namespace ARPolis.Info
             if (!autoReplaceText) return;
 
             //find text from terms xml with the name of transform if exists
-            if (myText)
+            string term = AppData.Instance.FindTermValue(termToFind);
+            if (useCaps) term = term.ToUpper();
+            if (myText) myText.text = term;
+            if (txt) txt.text = term;
+
+            //if (autoResizeTextFont)
+            //{
+            //	myText.fontSize = appSettings.fontSize_keimeno;
+            //}
+
+            if (!string.IsNullOrEmpty(stringToAdd))
             {
-                string term = AppData.Instance.FindTermValue(termToFind);
-                if (useCaps) term = term.ToUpper();
-                myText.text = term;
-
-                //if (autoResizeTextFont)
-                //{
-                //	myText.fontSize = appSettings.fontSize_keimeno;
-                //}
-
-                if (!string.IsNullOrEmpty(stringToAdd))
+                if (changeLineForStringToAdd)
                 {
-                    if (changeLineForStringToAdd)
-                    {
-                        myText.text += "\n" + stringToAdd;
-                    }
-                    else
-                    {
-                        myText.text += stringToAdd;
-                    }
-
+                    if (myText) myText.text += "\n" + stringToAdd;
+                    if (txt) txt.text += "\n" + stringToAdd;
                 }
+                else
+                {
+                    if (myText) myText.text += stringToAdd;
+                    if (txt) txt.text += stringToAdd;
+                }
+
             }
         }
 

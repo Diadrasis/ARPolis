@@ -1,4 +1,25 @@
 <terms version="2.1">
+  <term>
+    <name>logout</name>
+    <value>
+      <gr><![CDATA[Αποσύνδεση]]></gr>
+      <en><![CDATA[Logout]]></en>
+    </value>
+  </term>
+  <term>
+    <name>msgLogoutTitle</name>
+    <value>
+      <gr><![CDATA[Αποσύνδεση Χρήστη]]></gr>
+      <en><![CDATA[User Logout]]></en>
+    </value>
+  </term>
+  <term>
+    <name>msgLogoutDesc</name>
+    <value>
+      <gr><![CDATA[Αποσύνδεση απο την εφαρμογή;]]></gr>
+      <en><![CDATA[Are you sure you want to sign out?]]></en>
+    </value>
+  </term>
 	<term>
 		<name>internetError</name>
 		<value>
@@ -13,6 +34,14 @@
 			<en><![CDATA[Region\nof interest]]></en>
 		</value>
 	</term>
+  <term>
+    <name>loading_data</name>
+    <value>
+      <gr>
+        <![CDATA[Παρακαλώ περιμένετε.\nΦόρτωση δεδομένων...]]></gr>
+      <en><![CDATA[Please wait\nLoading resources...]]></en>
+    </value>
+  </term>
   <term>
     <name>sourceLabel</name>
     <value>
