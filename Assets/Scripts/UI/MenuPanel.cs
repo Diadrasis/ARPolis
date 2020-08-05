@@ -12,7 +12,7 @@ namespace ARPolis.UI
 
     public class MenuPanel : MonoBehaviour
     {
-        public Animator animMenuPanel;
+        public Animator animMenuPanel, animMapMaskHide;
         public GameObject menuPanel, btnPrevCity, btnNextCity, creditsExtraButtonsPanel;
         /// <summary>
         /// scroll snap town images (menu)
@@ -24,7 +24,7 @@ namespace ARPolis.UI
 
         public Button btnToggleSite, btnToggleSideMenu, btnCloseSideMenuBehind,
                       btnQuitApp, btnCredits, btnAthensMenu, btnNafpaktosMenu, btnHerakleionMenu,
-                      btnLanguage;
+                      btnLanguage, btnGamification, btnShowMapPois;
 
         public Image iconBtnLanguage, iconBtnMenu;
 
@@ -33,10 +33,15 @@ namespace ARPolis.UI
         public delegate void ButtonAction();
         public static ButtonAction OnUserClickOnSiteModeNotAble, OnQuitApp;
 
-        public PanelTransitionClass panelSideMenuTransition, panelTopBarTransition;
+        public PanelTransitionClass panelSideMenuTransition, panelTopBarTransition, panelBottomBarTour;
+
+        public Button btnBottomBarGame, btnBottomBarMap, btnBottomBarSavePoi;
 
         public GameObject[] extraCreditsButtons;
         public Transform arrowCredits;
+
+        void ShowTopicTours() { SetBottomBarButtonsForTour(); panelBottomBarTour.ShowPanel(); }
+        void HideTopicTours() { panelBottomBarTour.HidePanel(); }
 
         private void Awake()
         {
@@ -60,6 +65,9 @@ namespace ARPolis.UI
                 //change icon
                 iconBtnLanguage.sprite = isEng ? sprEng : sprGR;
             }
+
+            GlobalActionsUI.OnShowTopicTours += ShowTopicTours;
+            GlobalActionsUI.OnHideTopicTours += HideTopicTours;
 
             GlobalActionsUI.OnShowMenuAreas += ShowMenu;
             GlobalActionsUI.OnHideMenuAreas += HideMenu;
@@ -95,14 +103,62 @@ namespace ARPolis.UI
 
             snapCustom.OnSelectionPageChangedEvent.AddListener(OnPageChangeEnd);
 
-            
+
+            btnShowMapPois.onClick.AddListener(ShowMap);
+
+
+        }
+
+        void ShowMap()
+        {
+            InfoManager.Instance.ShowPois();
+            GlobalActionsUI.OnShowPoisOnMap?.Invoke();
+            AppManager.Instance.SetMode(AppManager.AppMode.MAP);
+            OnShowMapHideMenuPanel();
+            ShowBackgroundPanel(false);
+            SetBottomBarButtonsForPoi();
+        }
+
+        void SetBottomBarButtonsForTour() {
+            btnBottomBarGame.gameObject.SetActive(true);
+            btnBottomBarMap.gameObject.SetActive(true);
+            btnBottomBarSavePoi.gameObject.SetActive(false);
+        }
+        void SetBottomBarButtonsForPoi() {
+            btnBottomBarGame.gameObject.SetActive(false);
+            btnBottomBarMap.gameObject.SetActive(true);
+            btnBottomBarSavePoi.gameObject.SetActive(true);
         }
 
         private void Start()
         {
+            ShowBackgroundPanel(true);
+
             //reset text to current languange
             termAreaNameValue = "athens";
             txtMenuAreaName.text = AppData.Instance.FindTermValue(termAreaNameValue);
+        }
+
+        /// <summary>
+        /// this panel is covering map panel
+        /// </summary>
+        /// <param name="val"></param>
+        void ShowBackgroundPanel(bool val) {
+            if (!val)
+            {
+                StartCoroutine(DelayDisablePanel(animMapMaskHide.gameObject));
+            }
+            else
+            {
+                animMapMaskHide.gameObject.SetActive(true);
+            }
+            animMapMaskHide.SetBool("show", val);
+        }
+
+        IEnumerator DelayDisablePanel(GameObject gb)
+        {
+            yield return new WaitForSeconds(0.7f);
+            gb.SetActive(false);
         }
 
         public void QuitApp()
@@ -320,7 +376,7 @@ namespace ARPolis.UI
         void ShowMenu()
         {
             if (B.isEditor) Debug.Log("ShowMenu");
-
+            ShowBackgroundPanel(true);
             btnLanguage.gameObject.SetActive(true);
             menuPanel.SetActive(true);
             animMenuPanel.SetBool("show", true);
@@ -338,8 +394,19 @@ namespace ARPolis.UI
                 return;
             }
             GlobalActionsUI.OnLoginShow?.Invoke();
-            animMenuPanel.SetBool("show", false);
             panelTopBarTransition.HidePanel();
+            HideMenuPanel();
+        }
+
+        void OnShowMapHideMenuPanel()
+        {
+            HideSideMenuIfVisible();
+            HideMenuPanel();
+        }
+
+        void HideMenuPanel()
+        {
+            animMenuPanel.SetBool("show", false);
             StartCoroutine(DelayHide());
         }
 
@@ -349,9 +416,8 @@ namespace ARPolis.UI
 
             HideSideMenuIfVisible();
             GlobalActionsUI.OnLoginShow?.Invoke();
-            animMenuPanel.SetBool("show", false);
             panelTopBarTransition.HidePanel();
-            StartCoroutine(DelayHide());
+            HideMenuPanel();
         }
 
         void HideSideMenuIfVisible()

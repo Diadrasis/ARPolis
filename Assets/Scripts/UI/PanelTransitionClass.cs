@@ -66,11 +66,12 @@ namespace StaGeUnityTools
 
         public void TogglePanelAppearance()
         {
-            if(targetRect.anchoredPosition == panelHiddenPosition) { ShowPanel(); } else { HidePanel(); }
+            if (moveMode == MoveMode.Hidden) { ShowPanel(); } else { HidePanel(); }
         }
 
         public void HidePanel()
         {
+            //if (moveMode == MoveMode.Hidden) return;
             moveMode = MoveMode.Hidden;
             StartCoroutine(HideLerpPanel());
         }
@@ -90,12 +91,14 @@ namespace StaGeUnityTools
 
         public void ShowPanel()
         {
+            if (moveMode == MoveMode.Full) return;
             moveMode = MoveMode.Full;
             StartCoroutine(ShowLerpPanel(panelInitPosition, true));
         }
 
         public void ShowPercentagePanel()
         {
+            if (moveMode == MoveMode.Percentage) return;
             moveMode = MoveMode.Percentage;
             StartCoroutine(ShowLerpPanel(panelPercentagePosition, false));
         }

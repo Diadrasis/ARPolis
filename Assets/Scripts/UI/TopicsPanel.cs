@@ -31,8 +31,12 @@ namespace ARPolis.UI
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
             GlobalActionsUI.OnLangChanged += ChangeLanguange;
 
+            GlobalActionsUI.OnShowPoisOnMap += HideTopicsPanel;
+
             animTopicsPanel.gameObject.SetActive(false);
         }
+
+        
 
         void ShowAreaTopics()
         {
@@ -140,6 +144,11 @@ namespace ARPolis.UI
             if (AppManager.Instance.isSideMenuOpen)  return;
 
             GlobalActionsUI.OnShowMenuAreas?.Invoke();
+            HideTopicsPanel();
+        }
+
+        void HideTopicsPanel()
+        {
             animTopicsPanel.SetBool("show", false);
             StartCoroutine(DelayHideTopics());
         }

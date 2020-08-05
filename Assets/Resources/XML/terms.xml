@@ -182,11 +182,25 @@
 			<en><![CDATA[Return]]></en>
 		</value>
 	</term>
+  <term>
+    <name>gameHelp</name>
+    <value>
+      <gr><![CDATA[ΠΑΙΧΝΙΔΙ]]></gr>
+      <en><![CDATA[GAME]]></en>
+    </value>
+  </term>
+  <term>
+    <name>save_poi</name>
+    <value>
+      <gr><![CDATA[ΑΠΟΘΗΚΕΥΣΗ]]></gr>
+      <en><![CDATA[SAVE]]></en>
+    </value>
+  </term>
 	<term>
 		<name>mapHelp</name>
 		<value>
-			<gr><![CDATA[Χάρτης]]></gr>
-			<en><![CDATA[Map]]></en>
+			<gr><![CDATA[ΧΑΡΤΗΣ]]></gr>
+			<en><![CDATA[MAP]]></en>
 		</value>
 	</term>
 	<term>

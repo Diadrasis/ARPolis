@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -603,6 +603,7 @@ GameObject:
   - component: {fileID: 6323742504220647799}
   - component: {fileID: 6323742504220647793}
   - component: {fileID: 6323742504220647792}
+  - component: {fileID: 8477054884290568965}
   m_Layer: 5
   m_Name: TopicTitle
   m_TagString: Untagged
@@ -739,6 +740,30 @@ MonoBehaviour:
   rectParent: {fileID: 6323742504130035885}
   toggleTarget: {fileID: 6323742504736243422}
   isOn: 0
+--- !u!114 &8477054884290568965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323742504220647795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e4a63d028f8564ca52a0161a95bcce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 6323742504220647794}
+  kanvas: {fileID: 0}
+  isWidthRelative: 0
+  isHeightRelative: 0
+  delayRefresh: 0
+  widthPercent: 95
+  heightPercent: 0
+  fixedWidth: 0
+  fixedHeight: 150
+  isMovable: 0
+  isVisibleOnStart: 0
+  sideMode: 0
 --- !u!1 &6323742504305266378
 GameObject:
   m_ObjectHideFlags: 0

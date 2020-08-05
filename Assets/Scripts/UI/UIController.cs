@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ARPolis.UI
 {
 
     public class UIController : MonoBehaviour
-    { 
+    {
+
 
         private void Awake()
         {

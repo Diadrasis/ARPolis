@@ -14,7 +14,7 @@ namespace ARPolis.UI
         public delegate void ActionObjectlUI(GameObject gb);
         public static ActionObjectlUI OnToggleTarget;
 
-        public delegate void ActionPoi(string poiID, string topicID);
+        public delegate void ActionPoi(string poiID);
         public static ActionPoi OnPoiSelected;
 
         public delegate void PageSnapAction(int pageId);
@@ -26,9 +26,9 @@ namespace ARPolis.UI
                                OnShowAreaTopics, OnHideAreaTopics, 
                                OnShowTopicTours, OnHideTopicTours,
                                OnTourItemPageChanged,
-                               OnShowPoisOnMap, OnHideMap,
+                               OnShowPoisOnMap, OnHideMap, OnInfoPoiShow,
                                OnLoginShow, OnLogoutUser,
-                               OnInfoAreaShow, OnInfoPoiShow, OnMessageHide;
+                               OnInfoAreaShow, OnMessageHide;
 
     }
 

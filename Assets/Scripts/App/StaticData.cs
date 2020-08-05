@@ -13,7 +13,9 @@ namespace ARPolis.Data
         public static string lang = "gr";
 
         public static string imageNull = "images/image_null";
+        public static string imageEmpty = "images/image_empty";
         public static Texture2D GetImageNull() { return Resources.Load<Texture2D>(imageNull); }
+        public static Texture2D GetImageEmpty() { return Resources.Load<Texture2D>(imageEmpty); }
 
         #region terms
 

@@ -106,6 +106,8 @@ namespace ARPolis
                     GlobalActionsUI.OnToggleHideAll?.Invoke();
                     break;
                 case AppMode.MAP:
+                   // GlobalActionsUI.OnShowAreaTopics?.Invoke();
+                    GlobalActionsUI.OnShowTopicTours?.Invoke();
                     break;
                 case AppMode.MAP_INFO_AREA:
                     break;

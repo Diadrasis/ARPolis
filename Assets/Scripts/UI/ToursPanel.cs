@@ -31,12 +31,15 @@ namespace ARPolis.UI
         private void Awake()
         {
             snapCustom = containerParent.transform.parent.GetComponent<ScrollSnapCustom>();
-            //snapCustom.OnSelectionChangeStartEvent.AddListener(OnTourItemPageChanged);
+            snapCustom.OnSelectionPageChangedEvent.AddListener(OnTourItemPageStartChange);
             snapCustom.OnSelectionChangeEndEvent.AddListener(OnTourItemPageChanged);
 
             GlobalActionsUI.OnShowTopicTours += ShowTopicTours;
             GlobalActionsUI.OnHideTopicTours += HideTopicTours;
             GlobalActionsUI.OnLangChanged += ChangeLanguange;
+
+            GlobalActionsUI.OnShowPoisOnMap += HideTourPanel;
+            GlobalActionsUI.OnShowPoisOnMap += StopRestartSnap;
 
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
 
@@ -49,6 +52,13 @@ namespace ARPolis.UI
             GlobalActionsUI.OnTourItemPageChanged?.Invoke();
         }
 
+        //GLOBALLY SET CURRENT TOUR ID
+        private void OnTourItemPageStartChange(int pageNo)
+        {
+            InfoManager.Instance.tourNowID = topicEntity.tours[pageNo].id;
+        }
+
+        //RESET OTHER TOUR PAGES ELEMENTS POSITIONS
         private void OnTourItemPageChanged(int pageNo)
         {
             GlobalActionsUI.OnTourPageChanged?.Invoke(pageNo);
@@ -60,6 +70,7 @@ namespace ARPolis.UI
             animToursPanel.gameObject.SetActive(true);
             animToursPanel.SetBool("show", true);
             AppManager.Instance.SetMode(AppManager.AppMode.TOUR_SELECTION);
+            snapCustom.RestartOnEnable = true;
         }
 
         private void CreateTours()
@@ -72,6 +83,7 @@ namespace ARPolis.UI
 
             SetTextInfos();
             logoTour.sprite = LogoTopicSprite(topicEntity.id);
+            InfoManager.Instance.tourNowID = topicEntity.tours[0].id;
 
 
             for (int i = 0; i < topicEntity.tours.Count; i++)
@@ -134,9 +146,17 @@ namespace ARPolis.UI
             if (AppManager.Instance.isSideMenuOpen) return;
 
             GlobalActionsUI.OnShowAreaTopics?.Invoke();
+            HideTourPanel();
+        }
+
+        void HideTourPanel()
+        {
             animToursPanel.SetBool("show", false);
             StartCoroutine(DelayHideTopics());
         }
+
+        //keep tour page when user returns from map
+        void StopRestartSnap() { snapCustom.RestartOnEnable = false; }
 
         private IEnumerator DelayHideTopics()
         {

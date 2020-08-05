@@ -9,9 +9,9 @@ namespace ARPolis.Map
     public class MapController : MonoBehaviour
     {
 
-        //private readonly string mapboxAccessToken = "pk.eyJ1IjoibWJlc3NhIiwiYSI6ImNrNXpheXJjajBkNmgzb3FnYnU1ZnlvcTgifQ.9BQc4FBIa6zvjYDIWO2Wew";
-        //private readonly string mapboxMapId = "ck5zbgb6n3eq91jovzkesihm8";
-        //private readonly string mapbocUserId = "mbessa";
+        //private readonly string mapboxAccessToken = "pk.eyJ1Ijoic3RhZ2UiLCJhIjoiY2lrNmtyN2lvMDB1ZHBpa3N3YnZjOHdrNCJ9.MeQ4hTL5aNkJ_02D8_Ppww";
+        //private readonly string mapboxMapId = "ck626iopt0s1m1ip3nn2o6a26";
+        //private readonly string mapbocUserId = "stage";
 
         //Athens
         Vector2 mapInitPos = new Vector2(23.6729876618352f, 37.8665345360163f);
@@ -149,6 +149,12 @@ namespace ARPolis.Map
             //}
         }
 
+        public void ClearMap()
+        {
+            OnlineMapsDrawingElementManager.RemoveAllItems();
+            CustomMarkerEngineGUI.RemoveAllMarkers();
+        }
+
         public void ZoomOnMarkers(bool isAuto)
         {
             if (B.isRealEditor) Debug.LogWarning("### ZoomOnMarkers ###");
@@ -173,11 +179,11 @@ namespace ARPolis.Map
 
                 zoom -= 1;
 
-                if (OnlineMaps.instance.position == center)
-                {
-                    ResetMapZoomPos();
-                    return;
-                }
+                //if (OnlineMaps.instance.position == center)
+                //{
+                //    ResetMapZoomPos();
+                //    return;
+                //}
 
                 OnlineMaps.instance.position = center;
                 OnlineMaps.instance.zoom = zoom;

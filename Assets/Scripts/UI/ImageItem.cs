@@ -2,7 +2,6 @@
 using ARPolis.Info;
 using StaGeUnityTools;
 using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,8 +15,20 @@ namespace ARPolis.UI
         public RawImage img;
         public AspectRatioFitter ratioFitter;
         public Text txtLabel, txtSource;
-        string imageName, topicID;
-        public string sourceURL;
+        string imageName;
+        public string sourceURL, topicID;
+
+        public AutoFitToCanvas fitImage, fitLabel, fitSource; 
+
+        public void InitNull()
+        {
+            btnSourceUrl.gameObject.SetActive(false);
+            fitLabel.gameObject.SetActive(false);
+            fitImage.heightPercent = 100f;
+            img.texture = StaticData.GetImageEmpty();
+            ratioFitter.aspectRatio = (float)img.texture.width / (float)img.texture.height;
+            fitImage.ManualDelayInit();
+        }
 
         public void Init(string name, string topic_ID, string label, string source)
         {
@@ -25,21 +36,38 @@ namespace ARPolis.UI
             sourceURL = source;
             imageName = name;
             topicID = topic_ID;
-            btnSourceUrl.onClick.AddListener(OpenSourceURL);
-            //StartCoroutine(LoadImage(name, topic_ID));
-            Invoke("DelaySetImage", 0.1f);
-        }
+            if (string.IsNullOrEmpty(sourceURL))
+            {
+                btnSourceUrl.gameObject.SetActive(false);
+                if (!string.IsNullOrEmpty(label))
+                {
+                    fitImage.heightPercent = 70f;
+                    fitLabel.heightPercent = 30f;
+                    fitLabel.ManualDelayInit();
+                }
+                else
+                {
+                    fitLabel.gameObject.SetActive(false);
+                    fitImage.heightPercent = 100f;
+                }
 
-        void OpenSourceURL()
-        {
-            if (string.IsNullOrEmpty(sourceURL)) {
+                fitImage.ManualDelayInit();
+
+
                 btnSourceUrl.interactable = false;
                 txtSource.GetComponent<AutoSetLanguange>().enabled = false;
                 txtSource.text = sourceURL;
-                return;
-            }
-            //if (!sourceURL.StartsWith("htpp://") || !sourceURL.StartsWith("htpps://")) { btnSourceUrl.interactable = false; return; }
 
+            }
+            else
+            {
+                btnSourceUrl.onClick.AddListener(OpenSourceURL);
+            }
+            Invoke("DelaySetImage", 0.1f);
+        }
+
+        private void OpenSourceURL()
+        {
             Application.OpenURL(sourceURL);
         }
 
@@ -51,7 +79,7 @@ namespace ARPolis.UI
             
             if (InfoManager.Instance.jsonFolder == InfoManager.LoadJsonFolder.RESOURCES)
             {
-                //null
+                //null for now
             }
             else
             if (InfoManager.Instance.jsonFolder == InfoManager.LoadJsonFolder.STREAMING_ASSETS)
@@ -73,6 +101,8 @@ namespace ARPolis.UI
                 ratioFitter.aspectRatio = (float)img.texture.width / (float)img.texture.height;
             }
         }
+
+        public void DestroyItem() { Destroy(gameObject); }
 
     }
 

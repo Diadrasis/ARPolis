@@ -1,10 +1,12 @@
-﻿using ARPolis.UI;
+﻿using ARPolis.Map;
+using ARPolis.UI;
 using StaGeUnityTools;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UI.Extensions;
 
 namespace ARPolis.Data
@@ -56,6 +58,39 @@ namespace ARPolis.Data
         public int GetTopicToursLength(int topicID)
         {
             return areaAthens.topics[topicID].tours.Count;
+        }
+
+        public PoiEntity GetPoiEntity(string id)
+        {
+            return areaAthens.topics.Find(b => b.id == topicNowID).tours.Find(t => t.id == tourNowID).pois.Find(p => p.id == id);
+        }
+
+        public void ShowPois()//(string topicID, string tourID)
+        {
+            MapController mapController = FindObjectOfType<MapController>();
+            mapController.ClearMap();
+
+            //List<PoiEntity> poiEntities = areaAthens.topics.Find(b => b.id == topicID).tours.Find(t => t.id == tourID).pois;
+            TourEntity tourEntityNow = areaAthens.topics.Find(b => b.id == topicNowID).tours.Find(t => t.id == tourNowID);
+            List<PoiEntity> poiEntities = tourEntityNow.pois;
+
+            for (int i=0; i<poiEntities.Count; i++)
+            {
+                //skip if pos is null
+                if (poiEntities[i].pos == Vector2.zero) continue;
+
+                CustomMarkerGUI marker = CustomMarkerEngineGUI.AddMarker(poiEntities[i].pos, "");
+                marker.transform.name = poiEntities[i].GetTitle();
+
+                PoiItem poiItem = marker.gameObject.AddComponent<PoiItem>();
+                poiItem.poiID = poiEntities[i].id;
+                poiItem.Init();
+
+                //if (showPoisWithDelay) yield return new WaitForSeconds(0.25f);
+
+            }
+           
+            mapController.ZoomOnMarkers(false);
         }
 
 
