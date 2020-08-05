@@ -104,9 +104,26 @@ namespace ARPolis.UI
             snapCustom.OnSelectionPageChangedEvent.AddListener(OnPageChangeEnd);
 
 
-            btnShowMapPois.onClick.AddListener(ShowMap);
+            btnShowMapPois.onClick.AddListener(HidePoiInfo);
+        }
 
-
+        void HidePoiInfo() {
+            if(StaticData.isPoiInfoVisible == 0)
+            {
+                ShowMap();
+            }
+            else if (StaticData.isPoiInfoVisible == 1)
+            {
+                GlobalActionsUI.OnInfoPoiJustHide?.Invoke();
+            }
+            else if (StaticData.isPoiInfoVisible == 2)
+            {
+                GlobalActionsUI.OnInfoPoiJustHide?.Invoke();
+            }
+            else
+            {
+                ShowMap();
+            }
         }
 
         void ShowMap()

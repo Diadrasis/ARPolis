@@ -12,10 +12,12 @@ namespace ARPolis.UI
     {
 
         public string poiID;
+        RawImage img;
 
         public void Init()
         {
             Button btn = GetComponent<Button>();
+            img = GetComponent<RawImage>();
 
             if (btn)
             {
@@ -25,7 +27,7 @@ namespace ARPolis.UI
             }
         }
 
-
+        public void SetImage(Texture2D spr) { if (img) img.texture = spr; }
 
     }
 

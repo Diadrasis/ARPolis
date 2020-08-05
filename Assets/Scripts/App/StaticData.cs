@@ -9,65 +9,69 @@ namespace ARPolis.Data
 
     public class StaticData
     {
+        public static int isPoiInfoVisible = 0;
 
         public static string lang = "gr";
 
-        public static string imageNull = "images/image_null";
-        public static string imageEmpty = "images/image_empty";
+        private static readonly string imageNull = "images/image_null";
+        private static readonly string imageEmpty = "images/image_empty";
         public static Texture2D GetImageNull() { return Resources.Load<Texture2D>(imageNull); }
         public static Texture2D GetImageEmpty() { return Resources.Load<Texture2D>(imageEmpty); }
 
+        private static readonly string poiFolder = "poiIcons/";
+        public static Texture2D GetPoiIcon(string topicID) { return Resources.Load<Texture2D>(poiFolder + topicID); }
+
         #region terms
 
-        public static string termGpsOffTitle = "msgMenuGpsOffTitle";
-        public static string termGpsOffDesc = "msgMenuGpsOffDesc";
-        public static string termBtnEnableGps = "msgMenuGpsOffOpenSettings";
-        public static string termBtnOK = "term_OK";
-        public static string termBtnCancel = "term_Cancel";
-        public static string termGpsFarTitle = "msgMenuGpsFarTitle";
-        public static string termGpsFarDesc = "msgMenuGpsFarDesc";
-        public static string termGpsNearTitle = "msgMenuGpsNearTitle";
-        public static string termGpsNearDesc = "msgMenuGpsNearDesc";
-        public static string termGpsInsideTitle = "msgMenuGpsInsideTitle";
-        public static string termGpsInsideDesc = "msgMenuGpsIndideDesc";
+        public static readonly string termGpsOffTitle = "msgMenuGpsOffTitle";
+        public static readonly string termGpsOffDesc = "msgMenuGpsOffDesc";
+        public static readonly string termBtnEnableGps = "msgMenuGpsOffOpenSettings";
+        public static readonly string termBtnOK = "term_OK";
+        public static readonly string termBtnCancel = "term_Cancel";
+        public static readonly string termGpsFarTitle = "msgMenuGpsFarTitle";
+        public static readonly string termGpsFarDesc = "msgMenuGpsFarDesc";
+        public static readonly string termGpsNearTitle = "msgMenuGpsNearTitle";
+        public static readonly string termGpsNearDesc = "msgMenuGpsNearDesc";
+        public static readonly string termGpsInsideTitle = "msgMenuGpsInsideTitle";
+        public static readonly string termGpsInsideDesc = "msgMenuGpsIndideDesc";
 
-        public static string termQuitAppTitle = "msgQuitAppTitle";
-        public static string termQuitAppDesc = "msgQuitAppDesc";
+        public static readonly string termQuitAppTitle = "msgQuitAppTitle";
+        public static readonly string termQuitAppDesc = "msgQuitAppDesc";
 
-        public static string termLogoutTitle = "msgLogoutTitle";
-        public static string termLogoutDesc = "msgLogoutDesc";
+        public static readonly string termLogoutTitle = "msgLogoutTitle";
+        public static readonly string termLogoutDesc = "msgLogoutDesc";
 
-        public static string termPasswordsMismatch = "passwordsMismatch";
-        public static string termUsernameEmptyField = "usernameEmptyField";
-        public static string termPasswordEmptyField = "passwordEmptyField";
+        public static readonly string termPasswordsMismatch = "passwordsMismatch";
+        public static readonly string termUsernameEmptyField = "usernameEmptyField";
+        public static readonly string termPasswordEmptyField = "passwordEmptyField";
 
         #endregion
 
         #region JSONS
 
         //areas
-        public static string folderAthens = "athens/";
+        public static readonly string folderAthens = "athens/";
         //topics
         public static string FolderTopic(string id) { return "topic_" + id + "/"; }
 
         //files folders
-        public static string folderNarrations = "narrations/";
-        public static string folderModels = "3D/";
-        public static string folderImages = "images/";
-        public static string folderAudio = "audio/";
-        public static string folderVideos = "videos/";
-        public static string folderJsons = "data/";
+        public static readonly string folderNarrations = "narrations/";
+        public static readonly string folderModels = "3D/";
+        public static readonly string folderImages = "images/";
+        public static readonly string folderAudio = "audio/";
+        public static readonly string folderVideos = "videos/";
+        public static readonly string folderJsons = "data/";
 
         //json files - common names for all area & topics
-        public static string jsonTopicsFileURL = "exportTopics";
-        public static string jsonDigitalExhibitsFileURL = "exportDigitalExhibits";
-        public static string jsonPersonsFileURL = "exportPersons";
-        public static string jsonPOIsFileURL = "exportPOI";
-        public static string jsonTestimoniesFileURL = "exportTestimony";
-        public static string jsonTourFileURL = "exportTour";
-        public static string jsonPoiTestimonyFileURL = "PoiTestimony";
-        public static string jsonTourPoiFileURL = "TourPoi";
-        public static string jsonEventsFileURL = "exportEvents";
+        public static readonly string jsonTopicsFileURL = "exportTopics";
+        public static readonly string jsonDigitalExhibitsFileURL = "exportDigitalExhibits";
+        public static readonly string jsonPersonsFileURL = "exportPersons";
+        public static readonly string jsonPOIsFileURL = "exportPOI";
+        public static readonly string jsonTestimoniesFileURL = "exportTestimony";
+        public static readonly string jsonTourFileURL = "exportTour";
+        public static readonly string jsonPoiTestimonyFileURL = "PoiTestimony";
+        public static readonly string jsonTourPoiFileURL = "TourPoi";
+        public static readonly string jsonEventsFileURL = "exportEvents";
 
         /// <summary>
         /// Loads list of objects reading a json file

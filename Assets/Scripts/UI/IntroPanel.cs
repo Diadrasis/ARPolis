@@ -8,11 +8,12 @@ namespace ARPolis.UI
     public class IntroPanel : MonoBehaviour
     {
         public Animator animInfoPanel, animAppLogo, animEspaLogo, animCompanyLogo;
-        public GameObject infoPanel;
+        public GameObject infoPanel, panelBack;
 
         private void Awake()
         {
             GlobalActionsUI.OnIntroStart += StartIntro;
+            panelBack.SetActive(true);
         }
 
         void StartIntro()
@@ -35,6 +36,7 @@ namespace ARPolis.UI
             yield return new WaitForSeconds(0.5f);
             animCompanyLogo.SetBool("show", true);
             yield return new WaitForSeconds(2.5f);
+            panelBack.SetActive(false);
             animCompanyLogo.SetBool("show", false);
             yield return new WaitForSeconds(1.5f);
             animAppLogo.SetBool("show", false);

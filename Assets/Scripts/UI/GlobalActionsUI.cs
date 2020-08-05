@@ -26,7 +26,7 @@ namespace ARPolis.UI
                                OnShowAreaTopics, OnHideAreaTopics, 
                                OnShowTopicTours, OnHideTopicTours,
                                OnTourItemPageChanged,
-                               OnShowPoisOnMap, OnHideMap, OnInfoPoiShow,
+                               OnShowPoisOnMap, OnHideMap, OnInfoPoiShow, OnInfoPoiJustHide,
                                OnLoginShow, OnLogoutUser,
                                OnInfoAreaShow, OnMessageHide;
 

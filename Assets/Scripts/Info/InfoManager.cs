@@ -85,6 +85,7 @@ namespace ARPolis.Data
                 PoiItem poiItem = marker.gameObject.AddComponent<PoiItem>();
                 poiItem.poiID = poiEntities[i].id;
                 poiItem.Init();
+                poiItem.SetImage(StaticData.GetPoiIcon(topicNowID));
 
                 //if (showPoisWithDelay) yield return new WaitForSeconds(0.25f);
 

@@ -27,10 +27,16 @@ namespace ARPolis.UI
 
         public ScrollSnapCustom snapCustom;
 
+        public Image[] panelColors;
+
+        public Color colTopic1, colTopic2, colTopic3, colTopic4;
+
         private void Awake()
         {
             GlobalActionsUI.OnPoiSelected += OnSelectPoi;
             GlobalActionsUI.OnShowTopicTours += HideInfo;
+            GlobalActionsUI.OnInfoPoiJustHide += HideInfo;
+
             //dragButton.GetComponent<EventTrigger>().OnEndDrag?.Invoke(OnDragEnd);
         }
 
@@ -48,6 +54,8 @@ namespace ARPolis.UI
         private void OnSelectPoi(string poiID)
         {
             poiEntityNow = InfoManager.Instance.GetPoiEntity(poiID);
+
+            ChangePanelColor(InfoManager.Instance.topicNowID);
 
             txtTitle.text = poiEntityNow.GetTitle();
             txtShortDesc.text = poiEntityNow.GetShortDesc();
@@ -132,7 +140,7 @@ namespace ARPolis.UI
 
         private void RefreshElements() { foreach (RectTransform rt in allRects) LayoutRebuilder.ForceRebuildLayoutImmediate(rt); }
 
-        private void ShowPreviewInfo() { ShowButtonArrow(true); SetArrowUp(true); transitionClass.ShowPercentagePanel(); }
+        private void ShowPreviewInfo() { ShowButtonArrow(true); SetArrowUp(true); transitionClass.ShowPercentagePanel(); StaticData.isPoiInfoVisible = 1; }
 
         public void ToggleFullInfo() {
 
@@ -145,10 +153,11 @@ namespace ARPolis.UI
                 ShowButtonArrow(true);
                 SetArrowUp(false);
                 transitionClass.ShowPanel();
+                StaticData.isPoiInfoVisible = 2;
             }
         }
 
-        private void HideInfo() { ShowButtonArrow(false); SetArrowUp(true); transitionClass.HidePanel();}
+        private void HideInfo() { ShowButtonArrow(false); SetArrowUp(true); transitionClass.HidePanel(); StaticData.isPoiInfoVisible = 0; }
 
         private void ShowButtonArrow(bool val) { btnArrow.SetActive(val); dragButton.SetActive(val); }
 
@@ -158,6 +167,30 @@ namespace ARPolis.UI
             rot.z = val ? 90f : -90f;
             trArrow.localEulerAngles = rot;
         }
+
+        void ChangePanelColor(string topicID)
+        {
+            Color col = PanelColor(topicID);
+            foreach (Image img in panelColors) img.color = col;
+        }
+
+        Color PanelColor(string id)
+        {
+            switch (id)
+            {
+                case "1":
+                    return colTopic1;
+                case "2":
+                    return colTopic2;
+                case "3":
+                    return colTopic3;
+                case "4":
+                    return colTopic4;
+                default:
+                    return colTopic1;
+            }
+        }
+
     }
 
 }
