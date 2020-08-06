@@ -51,7 +51,10 @@ namespace StaGeUnityTools
 
         public void ManualDelayInit() { Invoke("DelayInit", 0.1f); }
 
-        void DelayInit() { Debug.Log("Delay Inited!!"); Init(); }
+        void DelayInit() {
+            //Debug.Log("Delay Inited!!");
+            Init();
+        }
 
         public void Init()
         {

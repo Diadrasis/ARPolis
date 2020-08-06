@@ -22,6 +22,7 @@ namespace ARPolis.UI
         public Sprite sprTopic1, sprTopic2, sprTopic3, sprTopic4;
 
         AreaEntity areaEntity;
+        string topicsLang;
 
         private void Awake()
         {
@@ -41,6 +42,7 @@ namespace ARPolis.UI
         void ShowAreaTopics()
         {
             if (DestroyPreviousTopics()) CreateTopics();
+            topicsLang = StaticData.lang;
             animTopicsPanel.gameObject.SetActive(true);
             animTopicsPanel.SetBool("show", true);
             AppManager.Instance.SetMode(AppManager.AppMode.TOPIC_SELECTION);
@@ -106,6 +108,12 @@ namespace ARPolis.UI
 
         private bool DestroyPreviousTopics()
         {
+            if(topicsLang != StaticData.lang)
+            {
+                DestroyAllItems();
+                return true;
+            }
+
             if (areaEntity == InfoManager.Instance.GetActiveArea())
             {
                 //if (B.isEditor) Debug.Log("same area selected - keeping items");
@@ -125,6 +133,12 @@ namespace ARPolis.UI
             }
             foreach (TopicItem item in items) item.DestroyItem();
             return true;
+        }
+
+        void DestroyAllItems()
+        {
+            TopicItem[] items = containerParent.GetComponentsInChildren<TopicItem>(true);
+            foreach (TopicItem item in items) item.DestroyItem();
         }
 
         private void SetTextInfos()
