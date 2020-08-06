@@ -226,7 +226,7 @@ namespace StaGeUnityTools
 
 
         //Save Data
-        public static void saveData (string dataToSave, string dataFileName, Ext fileExtension)
+        public static void SaveData (string dataToSave, string dataFileName, Ext fileExtension)
 		{
 			string tempPath = getPath_MultiPlatform ();
 
@@ -266,7 +266,7 @@ namespace StaGeUnityTools
 
         }
 
-        public static void saveImage(byte[] myBytes, string dataFileName)
+        public static void SaveImage(byte[] myBytes, string dataFileName)
         {
             string tempPath = getPath_MultiPlatform();
 
@@ -296,7 +296,7 @@ namespace StaGeUnityTools
 
         #region DELETE FILE
 
-        public static bool deleteData (string dataFileName, Ext fileExtension)
+        public static bool DeleteData (string dataFileName, Ext fileExtension)
 		{
 			bool success = false;
 
@@ -330,7 +330,7 @@ namespace StaGeUnityTools
 		}
 
 
-        public static bool deleteFileWithExtencionInName(string dataFileName)
+        public static bool DeleteFileWithExtencionInName(string dataFileName)
         {
             bool success = false;
 
@@ -373,7 +373,7 @@ namespace StaGeUnityTools
         #region LOAD FILE
 
         ///Load file from application persistentDataPath
-        public static T loadData<T> (string dataFileName, Ext fileExtension)
+        public static T LoadData<T> (string dataFileName, Ext fileExtension)
 		{
 			string tempPath = getPath_MultiPlatform (); //Path.Combine(Application.persistentDataPath, "data");
 			tempPath = Path.Combine (tempPath, dataFileName + myExtension (fileExtension));

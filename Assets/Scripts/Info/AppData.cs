@@ -21,10 +21,17 @@ namespace ARPolis.Info
 
         public delegate void DataReadAction();
         public static DataReadAction OnDataReaded;
+        private static bool hasInit;
 
         public void Init()
         {
-            Debug.Log("AppData.Init()");
+            if(B.isEditor) Debug.Log("AppData.Init()");
+
+            if (hasInit)
+            {
+                ReadTerms();
+                return;
+            }
 
             //savedTermsXml = PlayerPrefsX.GetStringArray("fromServer_terms");
 
@@ -53,6 +60,8 @@ namespace ARPolis.Info
             //Debug.Log(termXml.InnerText);
 
             ReadTerms();
+
+            hasInit = true;
         }
 
         //read all terms

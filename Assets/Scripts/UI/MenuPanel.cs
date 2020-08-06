@@ -150,7 +150,7 @@ namespace ARPolis.UI
         private void Start()
         {
             ShowBackgroundPanel(true);
-
+            AppData.Instance.Init();
             //reset text to current languange
             termAreaNameValue = "athens";
             txtMenuAreaName.text = AppData.Instance.FindTermValue(termAreaNameValue);

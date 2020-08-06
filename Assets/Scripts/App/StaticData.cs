@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -102,27 +103,58 @@ namespace ARPolis.Data
             }
         }
 
+        private static bool ISiOS()
+        {
+            return Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.OSXEditor || Application.platform == RuntimePlatform.OSXPlayer;
+        }
+
         public static IEnumerator LoadJsonData<T>(string filename)//, List<T> t)
         {
-            UnityWebRequest www = UnityWebRequest.Get(filename);
-            yield return www.SendWebRequest();
-
-            if (www.isNetworkError || www.isHttpError)
+            if (ISiOS())
             {
-                Debug.Log(www.error);
-                yield return null;
-            }
-            else
-            {
-                string jsonData = www.downloadHandler.text;
-                if (string.IsNullOrEmpty(jsonData) || jsonData.Length < 10)
+                FileInfo fInfo = new FileInfo(filename);
+                if (fInfo == null || !fInfo.Exists)
                 {
+                    Debug.Log("NOT FOUND: " + filename);
                     yield return null;
                 }
                 else
                 {
-                    jsonData = FixJsonItems(www.downloadHandler.text);
-                    yield return JsonHelper.FromJson<T>(jsonData).ToList();
+                    string myjsondata = File.ReadAllText(fInfo.FullName);
+                    if (myjsondata.Length > 10)
+                    {
+                        myjsondata = FixJsonItems(myjsondata);
+                        yield return JsonHelper.FromJson<T>(myjsondata).ToList();
+                    }
+                    else
+                    {
+                        Debug.Log("empty - NOT FOUND: " + filename);
+                        yield return null;
+                    }
+                }
+            }
+            else {
+
+                UnityWebRequest www = UnityWebRequest.Get(filename);
+                yield return www.SendWebRequest();
+
+                if (www.isNetworkError || www.isHttpError)
+                {
+                    Debug.Log(www.error);
+                    yield return null;
+                }
+                else
+                {
+                    string jsonData = www.downloadHandler.text;
+                    if (string.IsNullOrEmpty(jsonData) || jsonData.Length < 10)
+                    {
+                        yield return null;
+                    }
+                    else
+                    {
+                        jsonData = FixJsonItems(www.downloadHandler.text);
+                        yield return JsonHelper.FromJson<T>(jsonData).ToList();
+                    }
                 }
             }
         }
@@ -132,20 +164,27 @@ namespace ARPolis.Data
             byte[] imgData;
             Texture2D tex = new Texture2D(2, 2);
 
-            UnityWebRequest www = UnityWebRequest.Get(filename);
-            yield return www.SendWebRequest();
-
-            if (www.isNetworkError || www.isHttpError)
+            if (ISiOS())
             {
-                Debug.Log(www.error);
-                yield return null;
+                yield return LoadTexture(filename);
             }
             else
             {
-                imgData = www.downloadHandler.data;
-                //Load raw Data into Texture2D 
-                tex.LoadImage(imgData);
-                yield return tex;
+                UnityWebRequest www = UnityWebRequest.Get(filename);
+                yield return www.SendWebRequest();
+
+                if (www.isNetworkError || www.isHttpError)
+                {
+                    Debug.Log(www.error);
+                    yield return null;
+                }
+                else
+                {
+                    imgData = www.downloadHandler.data;
+                    //Load raw Data into Texture2D 
+                    tex.LoadImage(imgData);
+                    yield return tex;
+                }
             }
         }
 
@@ -167,6 +206,30 @@ namespace ARPolis.Data
         {
             value = "{\"Items\":" + value + "}";
             return value;
+        }
+
+        /// <summary>
+        /// Load a PNG or JPG file from disk to a Texture2D
+        /// Returns null if load fails
+        /// </summary>
+        static Texture2D LoadTexture(string FilePath)
+        {
+
+            Texture2D Tex2D;
+            byte[] FileData;
+
+            if (File.Exists(FilePath))
+            {
+                FileData = File.ReadAllBytes(FilePath);
+                Tex2D = new Texture2D(2, 2);           // Create new "empty" texture
+                if (Tex2D.LoadImage(FileData))           // Load the imagedata into the texture (size is set automatically)
+                    return Tex2D;                 // If data = readable -> return texture
+            }
+#if UNITY_EDITOR
+            Debug.LogWarning("image from " + FilePath + " is null");
+#endif
+
+            return null;                     // Return null if load failed
         }
 
         #endregion

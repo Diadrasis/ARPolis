@@ -120,9 +120,14 @@ namespace ARPolis.Data
             {
                 topicsAthens = Path.Combine(Application.streamingAssetsPath, topicsAthens);
                 topicsAthens += ".json";
+                
                 CoroutineWithData cd = new CoroutineWithData(this, StaticData.LoadJsonData<JsonClassTopic>(topicsAthens));
                 yield return cd.Coroutine;
-                if (cd.result == null) { Debug.LogWarning("Error reading " + topicsAthens); }
+                if (cd.result == null) {
+                    Debug.LogWarning("Error reading " + topicsAthens);
+                    //stop
+                    yield break;
+                }
                 else {
                     areaAthens.jsonClassTopics = cd.result as List<JsonClassTopic>;
 

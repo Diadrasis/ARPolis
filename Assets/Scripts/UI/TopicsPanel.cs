@@ -51,7 +51,7 @@ namespace ARPolis.UI
 
             areaEntity = InfoManager.Instance.GetActiveArea();
 
-            if (areaEntity == null) { if (B.isEditor) Debug.Log("Null Area"); return; }
+            if (areaEntity == null || areaEntity.topics == null) { if (B.isEditor) Debug.Log("Null Area"); return; }
             if (areaEntity.topics.Count <= 0) { if (B.isEditor) Debug.Log("no topic items"); return; }
 
             SetTextInfos();
