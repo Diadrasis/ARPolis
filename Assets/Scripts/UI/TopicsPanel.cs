@@ -33,6 +33,7 @@ namespace ARPolis.UI
             GlobalActionsUI.OnLangChanged += ChangeLanguange;
 
             GlobalActionsUI.OnShowPoisOnMap += HideTopicsPanel;
+            GlobalActionsUI.OnLogoutUser += HideTopicsPanel;
 
             animTopicsPanel.gameObject.SetActive(false);
         }

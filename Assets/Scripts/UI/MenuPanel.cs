@@ -430,11 +430,15 @@ namespace ARPolis.UI
         void LogOutUser()
         {
             if (B.isEditor) Debug.Log("LogOutUser");
-
+            GlobalActionsUI.OnToggleHideAll?.Invoke();
+            animMapMaskHide.gameObject.SetActive(true);
+            animMapMaskHide.SetBool("show", true);
             HideSideMenuIfVisible();
-            GlobalActionsUI.OnLoginShow?.Invoke();
             panelTopBarTransition.HidePanel();
+            panelBottomBarTour.HidePanel();
             HideMenuPanel();
+            GlobalActionsUI.OnLoginShow?.Invoke();
+
         }
 
         void HideSideMenuIfVisible()

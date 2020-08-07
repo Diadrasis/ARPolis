@@ -28,6 +28,8 @@ namespace ARPolis.UI
         public Color colTopic1, colTopic2, colTopic3, colTopic4;
         public Sprite sprTopic1, sprTopic2, sprTopic3, sprTopic4;
 
+        private string toursLang;
+
         private void Awake()
         {
             snapCustom = containerParent.transform.parent.GetComponent<ScrollSnapCustom>();
@@ -40,6 +42,8 @@ namespace ARPolis.UI
 
             GlobalActionsUI.OnShowPoisOnMap += HideTourPanel;
             GlobalActionsUI.OnShowPoisOnMap += StopRestartSnap;
+
+            GlobalActionsUI.OnLogoutUser += HideTourPanel;
 
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
 
@@ -67,6 +71,7 @@ namespace ARPolis.UI
         private void ShowTopicTours()
         {
             if (DestroyPreviousTours()) CreateTours();
+            toursLang = StaticData.lang;
             animToursPanel.gameObject.SetActive(true);
             animToursPanel.SetBool("show", true);
             AppManager.Instance.SetMode(AppManager.AppMode.TOUR_SELECTION);
@@ -100,6 +105,12 @@ namespace ARPolis.UI
 
         private bool DestroyPreviousTours()
         {
+            if (toursLang != StaticData.lang)
+            {
+                DestroyAllItems();
+                return true;
+            }
+
             //if it is the same topic, no need to destroy
             if (topicEntity == InfoManager.Instance.GetActiveTopic())
             {
@@ -126,7 +137,13 @@ namespace ARPolis.UI
 
             return true;
         }
-            
+
+        void DestroyAllItems()
+        {
+            TourItem[] items = containerParent.GetComponentsInChildren<TourItem>(true);
+            foreach (TourItem item in items) item.DestroyItem();
+        }
+
         void ResetScrollSnap() { snapCustom.enabled = true; }
 
         private void SetTextInfos()

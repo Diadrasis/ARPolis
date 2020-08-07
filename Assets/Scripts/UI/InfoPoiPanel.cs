@@ -31,11 +31,15 @@ namespace ARPolis.UI
 
         public Color colTopic1, colTopic2, colTopic3, colTopic4;
 
+        private string poiLang;
+
         private void Awake()
         {
             GlobalActionsUI.OnPoiSelected += OnSelectPoi;
             GlobalActionsUI.OnShowTopicTours += HideInfo;
             GlobalActionsUI.OnInfoPoiJustHide += HideInfo;
+
+            GlobalActionsUI.OnLogoutUser += HideInfo;
 
             //dragButton.GetComponent<EventTrigger>().OnEndDrag?.Invoke(OnDragEnd);
         }
@@ -65,7 +69,9 @@ namespace ARPolis.UI
 
             //get images
             if (DestroyPreviousImages()) CreateImages();
-            
+
+            poiLang = StaticData.lang;
+
             //get testimony
 
             ScrollResetPosition();
@@ -102,6 +108,12 @@ namespace ARPolis.UI
 
         private bool DestroyPreviousImages()
         {
+            if (poiLang != StaticData.lang)
+            {
+                DestroyAllItems();
+                return true;
+            }
+
             //if it is the same topic, no need to destroy
             if (poiEntityNow.id == InfoManager.Instance.poiNowID)
             {
@@ -121,6 +133,12 @@ namespace ARPolis.UI
             Invoke("ResetScrollSnap", 0.1f);
 
             return true;
+        }
+
+        void DestroyAllItems()
+        {
+            ImageItem[] items = rectImagesContainer.GetComponentsInChildren<ImageItem>(true);
+            foreach (ImageItem item in items) item.DestroyItem();
         }
 
         void ResetScrollSnap() { snapCustom.enabled = true; }
