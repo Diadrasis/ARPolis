@@ -33,6 +33,10 @@ namespace ARPolis.Info
 
         ContentSizeFitter sizeFitter;
 
+        [Space]
+        public bool isCreditsPerson;
+        public int creditPersonValue;//0 = property, 1 = name
+
         private void Awake()
         {
             ChangeLanguange();
@@ -109,11 +113,23 @@ namespace ARPolis.Info
         {
             if (!autoReplaceText) return;
 
-            //find text from terms xml with the name of transform if exists
-            string term = AppData.Instance.FindTermValue(termToFind);
-            if (useCaps) term = term.ToUpper();
-            if (myText) myText.text = term;
-            if (txt) txt.text = term;
+            if (isCreditsPerson)
+            {
+                string term = AppData.Instance.FindPersonCreditName(termToFind);
+                if(creditPersonValue==1) term = AppData.Instance.FindPersonCreditProperty(termToFind);
+                if (useCaps) term = term.ToUpper();
+                if (myText) myText.text = term;
+                if (txt) txt.text = term;
+            }
+            else
+            {
+
+                //find text from terms xml with the name of transform if exists
+                string term = AppData.Instance.FindTermValue(termToFind);
+                if (useCaps) term = term.ToUpper();
+                if (myText) myText.text = term;
+                if (txt) txt.text = term;
+            }
 
             //if (autoResizeTextFont)
             //{

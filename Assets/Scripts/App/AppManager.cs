@@ -13,7 +13,7 @@ namespace ARPolis
     {
         protected AppManager() { }
 
-        public enum AppMode { NULL, INTRO, LOGIN, TOPIC_SELECTION, AREA_SELECTION, TOUR_SELECTION, MAP, MAP_INFO_AREA, MAP_INFO_POI, MESSAGE, EXIT }
+        public enum AppMode { NULL, INTRO, LOGIN, TOPIC_SELECTION, AREA_SELECTION, TOUR_SELECTION, MAP, MAP_INFO_AREA, MAP_INFO_POI, MESSAGE, EXIT, CREDITS }
         public AppMode appMode = AppMode.NULL;
         public AppMode modeMessage = AppMode.NULL;
 
@@ -22,6 +22,8 @@ namespace ARPolis
         public delegate void AppAction();
         public static AppAction OnInit, OnExit, OnMessage;
 
+        MenuPanel menuPanel;
+
         private void Awake()
         {
             Debug.Log("APP MANAGER INIT");
@@ -29,6 +31,8 @@ namespace ARPolis
             AppData.Instance.Init();
 
             GlobalActionsUI.OnShowMenuAreas += SetModeMenu;
+
+            menuPanel = FindObjectOfType<MenuPanel>();
         }
 
         void Start()
@@ -71,6 +75,8 @@ namespace ARPolis
                     break;
                 case AppMode.TOUR_SELECTION:
                     break;
+                case AppMode.CREDITS:
+                    break;
                 default:
                     break;
             }
@@ -95,18 +101,38 @@ namespace ARPolis
                     break;
                 case AppMode.AREA_SELECTION:
                     //GlobalActionsUI.OnHideMenuAreas?.Invoke();
+                    if (isSideMenuOpen)
+                    {
+                        menuPanel.HideSideMenu();
+                        return;
+                    }
                     MenuPanel.OnQuitApp?.Invoke();
                     break;
                 case AppMode.TOPIC_SELECTION:
+                    if (isSideMenuOpen)
+                    {
+                        menuPanel.HideSideMenu();
+                        return;
+                    }
                     GlobalActionsUI.OnHideAreaTopics?.Invoke();
                     GlobalActionsUI.OnToggleHideAll?.Invoke();
                     break;
                 case AppMode.TOUR_SELECTION:
+                    if (isSideMenuOpen)
+                    {
+                        menuPanel.HideSideMenu();
+                        return;
+                    }
                     GlobalActionsUI.OnHideTopicTours?.Invoke();
                     GlobalActionsUI.OnToggleHideAll?.Invoke();
                     break;
                 case AppMode.MAP:
-                   // GlobalActionsUI.OnShowAreaTopics?.Invoke();
+                    if (isSideMenuOpen)
+                    {
+                        menuPanel.HideSideMenu();
+                        return;
+                    }
+                    // GlobalActionsUI.OnShowAreaTopics?.Invoke();
                     GlobalActionsUI.OnShowTopicTours?.Invoke();
                     break;
                 case AppMode.MAP_INFO_AREA:
@@ -116,6 +142,8 @@ namespace ARPolis
                 case AppMode.MESSAGE:
                     break;
                 case AppMode.EXIT:
+                    break;
+                case AppMode.CREDITS:
                     break;
                 default:
                     break;

@@ -32,6 +32,8 @@ namespace StaGeUnityTools
         public enum MoveMode { Hidden, Percentage, Full}
         public MoveMode moveMode = MoveMode.Hidden;
 
+        public bool isVisible;
+
         private float GetViewPercentage() { return movePercentage / 100f; }
         Vector2 panelInitPosition, panelHiddenPosition, panelPercentagePosition;
 
@@ -86,6 +88,7 @@ namespace StaGeUnityTools
             }
             targetRect.anchoredPosition = panelHiddenPosition;
             OnHide?.Invoke();
+            isVisible = false;
             yield break;
         }
 
@@ -113,6 +116,7 @@ namespace StaGeUnityTools
             }
             targetRect.anchoredPosition = vectorTarget;
             if (isFull) { OnShowFull?.Invoke(); } else { OnShowPercentage?.Invoke(); }
+            isVisible = true;
             yield break;
         }
 

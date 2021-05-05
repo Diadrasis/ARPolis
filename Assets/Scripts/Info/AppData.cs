@@ -15,8 +15,9 @@ namespace ARPolis.Info
     {
         protected AppData() { }
 
-        private XmlDocument termXml;
+        private XmlDocument termXml, creditsXml;
         private List<Term> textTerms = new List<Term>();
+        private List<PersonCredit> personCredits = new List<PersonCredit>();
         //static string[] savedTermsXml;// = PlayerPrefsX.GetStringArray("fromServer"+xml);
 
         public delegate void DataReadAction();
@@ -29,6 +30,7 @@ namespace ARPolis.Info
 
             if (hasInit)
             {
+                ReadCredits();
                 ReadTerms();
                 return;
             }
@@ -44,25 +46,51 @@ namespace ARPolis.Info
             //}
             //else
             //{
-                //check local saved xml version
-                //termXml = new XmlDocument();
-                //string textAsset = string.Empty;
+            //check local saved xml version
+            //termXml = new XmlDocument();
+            //string textAsset = string.Empty;
 
-                //for (int x = 0; x < savedTermsXml.Length; x++)
-                //{
-                //    textAsset += savedTermsXml[x];
-                //}
+            //for (int x = 0; x < savedTermsXml.Length; x++)
+            //{
+            //    textAsset += savedTermsXml[x];
+            //}
 
-                //string localExcludedComments = Regex.Replace(textAsset, "(<!--(.*?)-->)", string.Empty);
-                //termXml.LoadXml(localExcludedComments);
+            //string localExcludedComments = Regex.Replace(textAsset, "(<!--(.*?)-->)", string.Empty);
+            //termXml.LoadXml(localExcludedComments);
             //}
 
             //Debug.Log(termXml.InnerText);
 
+            creditsXml = new XmlDocument();
+            TextAsset creditsPersons = (TextAsset)Resources.Load("XML/credits");
+            creditsXml.LoadXml(Regex.Replace(creditsPersons.text, "(<!--(.*?)-->)", string.Empty));
+
+            ReadCredits();
             ReadTerms();
 
             hasInit = true;
         }
+
+        private void ReadCredits()
+        {
+            // Clear previous loaded Terms
+            personCredits = new List<PersonCredit>();
+            personCredits.Clear();
+            XmlNodeList personList = creditsXml.GetElementsByTagName("person");
+
+            foreach (XmlNode person in personList)
+            {
+                PersonCredit myPerson = new PersonCredit();
+                myPerson.Id = person["id"].InnerText;
+                myPerson.Name = person["name"][StaticData.lang].InnerText.Replace("\\n", "\n").Replace("&amp;", "&");
+                myPerson.Text = person["idiotita"][StaticData.lang].InnerText.Replace("\\n", "\n").Replace("&amp;", "&");
+                personCredits.Add(myPerson);
+            }
+
+            Debug.LogWarning("credits are " + personCredits.Count.ToString());
+
+        }
+
 
         //read all terms
         private void ReadTerms()
@@ -95,6 +123,24 @@ namespace ARPolis.Info
             return string.Empty;
         }
 
+
+        public string FindPersonCreditName(string id)
+        {
+            for (int i = 0; i < personCredits.Count; i++)
+            {
+                if (personCredits[i].Id == id) return personCredits[i].Name;
+            }
+            return string.Empty;
+        }
+
+        public string FindPersonCreditProperty(string id)
+        {
+            for (int i = 0; i < personCredits.Count; i++)
+            {
+                if (personCredits[i].Id == id) return personCredits[i].Text;
+            }
+            return string.Empty;
+        }
 
     }
 

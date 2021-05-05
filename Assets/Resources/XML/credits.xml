@@ -1,0 +1,114 @@
+<credits version="1.0">
+	<persons>
+		<person>
+      <id>manager</id>
+			<name>
+				<gr>Γιάννης Λαδάς</gr>
+				<en>Giannis Ladas</en>
+			</name>
+			<idiotita>
+				<gr>Υπεύθυνος Έργου</gr>
+				<en>Project Manager</en>
+			</idiotita>
+		</person>
+		<person>
+      <id>developer</id>
+			<name>
+				<gr>Στάθης Γεωργίου
+Αριστέα Κοντογιάννη
+Σωτήρης Αυγέρης
+Ιωάννα Βασιλοπούλου</gr>
+				<en>Stathis Georgiou
+Aristea Kontogiannis
+Sotiris Avgeris
+Ioanna Vasilopoulou</en>
+			</name>
+			<idiotita>
+				<gr>Προγραμματισμός</gr>
+				<en>Programming</en>
+			</idiotita>
+		</person>
+		<person>
+      <id>modeler</id>
+			<name>
+				<gr>Δημήτρης Τσαλκάνης
+Γαρυφαλλιά Κοτζιά
+Νίκος Ραδαίος
+Γαρβιήλ Γκουρδόγλου</gr>
+				<en>Dimitris Tsalkanis
+Faye Kotzia
+Nikos Radaios
+Gavril Gkourdoglou</en>
+			</name>
+			<idiotita>
+				<gr>3D Αναπαραστάσεις</gr>
+				<en>3D Reconstructions</en>
+			</idiotita>
+		</person>
+		<person>
+      <id>graphics</id>
+			<name>
+				<gr>Τέρψη Κρεμαλή
+Μαργαρίτα Σιμοπούλου</gr>
+				<en>Terpsi Kremali
+Margarita Simopoulou</en>
+			</name>
+			<idiotita>
+				<gr>Γραφιστική Επιμέλεια</gr>
+				<en>Graphic Design</en>
+			</idiotita>
+		</person>
+		<person>
+      <id>coordination</id>
+			<name>
+				<gr>Μαρία Λεωνίδα
+Αγγελική Δούσμανη</gr>
+				<en>Maria Leonida
+Aggeliki Dousmani</en>
+			</name>
+			<idiotita>
+				<gr>Οργάνωση Παραγωγής</gr>
+				<en>Project Coordination</en>
+			</idiotita>
+		</person>
+		<person>
+      <id>supervision</id>
+      <name>
+				<gr>Αφροδίτη Καμάρα
+Κλεοπάτρα Φέρλα</gr>
+				<en>Afroditi Kamara
+Kleopatra Ferla</en>
+			</name>
+			<idiotita>
+				<gr>Επιστημονική Επιμέλεια</gr>
+				<en>Scientific Supervision</en>
+			</idiotita>
+		</person>
+		<person>
+      <id>narration</id>
+			<name>
+				<gr>Μαρία Λεωνίδα</gr>
+				<en>Maria Leonida</en>
+			</name>
+			<idiotita>
+				<gr>Αφήγηση</gr>
+				<en>Narration</en>
+			</idiotita>
+		</person>
+		<person>
+      <id>multimedia</id>
+			<name>
+				<gr>Μαρία Λεωνίδα
+Κωνσταντίνος Κατσαντώνης
+Ανδρομάχη Βρακατσέλη</gr>
+				<en>Maria Leonida
+Konstantinos Katsantonis
+Andromachi Vrakatseli</en>
+			</name>
+			<idiotita>
+				<gr>Πολυμεσικό Περιεχομένου</gr>
+				<en>Multimedia Content</en>
+			</idiotita>
+		</person>
+	</persons>
+</credits>

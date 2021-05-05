@@ -33,12 +33,19 @@ namespace ARPolis.UI
         public delegate void ButtonAction();
         public static ButtonAction OnUserClickOnSiteModeNotAble, OnQuitApp;
 
-        public PanelTransitionClass panelSideMenuTransition, panelTopBarTransition, panelBottomBarTour;
+        public PanelTransitionClass panelSideMenuTransition, panelTopBarTransition, panelBottomBarTour, panelCreditsPeople;
 
         public Button btnBottomBarGame, btnBottomBarMap, btnBottomBarSavePoi;
 
         public GameObject[] extraCreditsButtons;
         public Transform arrowCredits;
+        public Button btnCreditsPeople;
+
+        void ShowCreditsPeople()
+        {
+            panelSideMenuTransition.HidePanel();
+            panelCreditsPeople.ShowPanel();
+        }
 
         void ShowTopicTours() { SetBottomBarButtonsForTour(); panelBottomBarTour.ShowPanel(); }
         void HideTopicTours() { panelBottomBarTour.HidePanel(); }
@@ -46,6 +53,8 @@ namespace ARPolis.UI
         private void Awake()
         {
             menuPanel.SetActive(true);
+
+            btnCreditsPeople.onClick.AddListener(ShowCreditsPeople);
 
             if (!PlayerPrefs.HasKey("Lang"))
             {
@@ -278,6 +287,17 @@ namespace ARPolis.UI
         //    if (Input.GetKeyDown(KeyCode.Alpha3)) { snapCustom.SetCustomPage(2); }
         //}
 
+        public void HideSideMenu()
+        {
+            iconBtnMenu.rectTransform.sizeDelta = new Vector2(100f, 100f);
+            iconBtnMenu.sprite = sprMenuOn;
+            panelSideMenuTransition.HidePanel();
+            btnCloseSideMenuBehind.gameObject.SetActive(false);
+            AppManager.Instance.isSideMenuOpen = false;
+            StartCoroutine(DelayShowButtons(extraCreditsButtons, false));
+            arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
+        }
+
         void ToggleExtraButtonsCredits()
         {
             foreach (GameObject gb in extraCreditsButtons) gb.SetActive(false);
@@ -310,6 +330,13 @@ namespace ARPolis.UI
         {
             if (B.isRealEditor) Debug.Log("ToggleSideMenu");
 
+            if (panelCreditsPeople.isVisible)
+            {
+                panelCreditsPeople.HidePanel();
+                panelSideMenuTransition.ShowPanel();
+                return;
+            }
+
             if (iconBtnMenu.sprite == sprMenuOff)
             {
                 //hide panel
@@ -319,6 +346,8 @@ namespace ARPolis.UI
                 panelSideMenuTransition.HidePanel();
                 btnCloseSideMenuBehind.gameObject.SetActive(false);
                 AppManager.Instance.isSideMenuOpen = false;
+                StartCoroutine(DelayShowButtons(extraCreditsButtons, false));
+                arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
             }
             else
             {
