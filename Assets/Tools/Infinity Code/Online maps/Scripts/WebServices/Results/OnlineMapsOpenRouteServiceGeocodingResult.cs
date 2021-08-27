@@ -110,9 +110,9 @@ public class OnlineMapsOpenRouteServiceGeocodingResult
         public string distance;
 
         /// <summary>
-        /// Value range: 0-1 For reverse geocoding: Based on the distance. \n
-        /// The closer a result is to the queried point, the higher the confidence. \n
-        /// For normal geocoding: Based on the comparison of the query and the result. \n 
+        /// Value range: 0-1 For reverse geocoding: Based on the distance. <br/>
+        /// The closer a result is to the queried point, the higher the confidence. <br/>
+        /// For normal geocoding: Based on the comparison of the query and the result. <br/> 
         /// The closer a result is to the query, the higher the confidence.
         /// </summary>
         public double confidence;

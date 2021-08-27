@@ -7,7 +7,7 @@ using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// This class is used to search for a location by address.\n
+/// This class is used to search for a location by address.<br/>
 /// https://developers.google.com/maps/documentation/geocoding/intro
 /// </summary>
 public class OnlineMapsGoogleGeocoding : OnlineMapsTextWebService
@@ -220,27 +220,27 @@ public class OnlineMapsGoogleGeocoding : OnlineMapsTextWebService
     public class GeocodingParams : RequestParams
     {
         /// <summary>
-        /// The street address that you want to geocode, in the format used by the national postal service of the country concerned. \n
+        /// The street address that you want to geocode, in the format used by the national postal service of the country concerned.<br/>
         /// Additional address elements such as business names and unit, suite or floor numbers should be avoided.
         /// </summary>
         public string address;
 
         /// <summary>
-        /// A component filter for which you wish to obtain a geocode. \n
-        /// See Component Filtering for more information. \n
-        /// https://developers.google.com/maps/documentation/geocoding/intro?hl=en#ComponentFiltering \n
+        /// A component filter for which you wish to obtain a geocode.<br/>
+        /// See Component Filtering for more information. <br/>
+        /// https://developers.google.com/maps/documentation/geocoding/intro?hl=en#ComponentFiltering <br/>
         /// The components filter will also be accepted as an optional parameter if an address is provided. 
         /// </summary>
         public string components;
 
         /// <summary>
-        /// The bounding box of the viewport within which to bias geocode results more prominently. \n
+        /// The bounding box of the viewport within which to bias geocode results more prominently. <br/>
         /// This parameter will only influence, not fully restrict, results from the geocoder.
         /// </summary>
         public OnlineMapsGeoRect bounds;
 
         /// <summary>
-        /// The region code, specified as a ccTLD ("top-level domain") two-character value. \n
+        /// The region code, specified as a ccTLD ("top-level domain") two-character value. <br/>
         /// This parameter will only influence, not fully restrict, results from the geocoder.
         /// </summary>
         public string region;
@@ -257,7 +257,7 @@ public class OnlineMapsGoogleGeocoding : OnlineMapsTextWebService
         /// Constructor
         /// </summary>
         /// <param name="address">
-        /// The street address that you want to geocode, in the format used by the national postal service of the country concerned. \n
+        /// The street address that you want to geocode, in the format used by the national postal service of the country concerned. <br/>
         /// Additional address elements such as business names and unit, suite or floor numbers should be avoided.
         /// </param>
         public GeocodingParams(string address)
@@ -299,30 +299,30 @@ public class OnlineMapsGoogleGeocoding : OnlineMapsTextWebService
         public double? latitude;
 
         /// <summary>
-        /// The place ID of the place for which you wish to obtain the human-readable address. \n
-        /// The place ID is a unique identifier that can be used with other Google APIs. \n
-        /// For example, you can use the placeID returned by the Google Maps Roads API to get the address for a snapped point. \n
-        /// For more information about place IDs, see the place ID overview. \n
+        /// The place ID of the place for which you wish to obtain the human-readable address. <br/>
+        /// The place ID is a unique identifier that can be used with other Google APIs. <br/>
+        /// For example, you can use the placeID returned by the Google Maps Roads API to get the address for a snapped point. <br/>
+        /// For more information about place IDs, see the place ID overview. <br/>
         /// The place ID may only be specified if the request includes an API key or a Google Maps APIs Premium Plan client ID. 
         /// </summary>
         public string placeId;
 
         /// <summary>
-        /// One or more address types, separated by a pipe (|). \n
-        /// Examples of address types: country, street_address, postal_code. \n
-        /// For a full list of allowable values, see the address types on this page:\n
-        /// https://developers.google.com/maps/documentation/geocoding/intro?hl=en#Types \n
-        /// Specifying a type will restrict the results to this type. \n
-        /// If multiple types are specified, the API will return all addresses that match any of the types. \n
+        /// One or more address types, separated by a pipe (|). <br/>
+        /// Examples of address types: country, street_address, postal_code. <br/>
+        /// For a full list of allowable values, see the address types on this page:<br/>
+        /// https://developers.google.com/maps/documentation/geocoding/intro?hl=en#Types <br/>
+        /// Specifying a type will restrict the results to this type. <br/>
+        /// If multiple types are specified, the API will return all addresses that match any of the types. <br/>
         /// Note: This parameter is available only for requests that include an API key or a client ID.
         /// </summary>
         public string result_type;
 
         /// <summary>
-        /// One or more location types, separated by a pipe (|). \n
-        /// https://developers.google.com/maps/documentation/geocoding/intro?hl=en#ReverseGeocoding \n
-        /// Specifying a type will restrict the results to this type. \n
-        /// If multiple types are specified, the API will return all addresses that match any of the types. \n
+        /// One or more location types, separated by a pipe (|). <br/>
+        /// https://developers.google.com/maps/documentation/geocoding/intro?hl=en#ReverseGeocoding <br/>
+        /// Specifying a type will restrict the results to this type. <br/>
+        /// If multiple types are specified, the API will return all addresses that match any of the types. <br/>
         /// Note: This parameter is available only for requests that include an API key or a client ID.
         /// </summary>
         public string location_type;
@@ -374,10 +374,10 @@ public class OnlineMapsGoogleGeocoding : OnlineMapsTextWebService
         /// <summary>
         /// Constructor
         /// </summary>
-        /// <param name="placeId">The place ID of the place for which you wish to obtain the human-readable address. \n
-        /// The place ID is a unique identifier that can be used with other Google APIs. \n
-        /// For example, you can use the placeID returned by the Google Maps Roads API to get the address for a snapped point. \n
-        /// For more information about place IDs, see the place ID overview. \n
+        /// <param name="placeId">The place ID of the place for which you wish to obtain the human-readable address. <br/>
+        /// The place ID is a unique identifier that can be used with other Google APIs. <br/>
+        /// For example, you can use the placeID returned by the Google Maps Roads API to get the address for a snapped point. <br/>
+        /// For more information about place IDs, see the place ID overview. <br/>
         /// The place ID may only be specified if the request includes an API key or a Google Maps APIs Premium Plan client ID. 
         /// </param>
         public ReverseGeocodingParams(string placeId)

@@ -93,6 +93,15 @@ public enum OnlineMapsMarker2DMode
     billboard
 }
 
+public enum OnlineMapsOSMOverpassServer
+{
+    main = 0,
+    main2 = 1,
+    french = 2,
+    taiwan = 3,
+    kumiSystems = 4,
+}
+
 public enum OnlineMapsPositionRangeType
 {
     center,

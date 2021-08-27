@@ -16,6 +16,9 @@ using System.IO;
 
 public partial class OnlineMapsCache
 {
+    public delegate bool OnGetFromCustomCacheDelegate(string key, out byte[] bytes);
+    public static OnGetFromCustomCacheDelegate OnGetFromCustomCache;
+
     /// <summary>
     /// Rate of unloaded tiles from the file cache (0-1).
     /// </summary>
@@ -39,11 +42,21 @@ public partial class OnlineMapsCache
         }
     }
 
+    /// <summary>
+    /// Saves data in custom cache by the key.
+    /// </summary>
+    /// <param name="key">The unique key of the value.</param>
+    /// <param name="bytes">The value to be stored.</param>
     public static void Add(string key, byte[] bytes = null)
     {
         if (_instance != null) _instance.AddItem(key, bytes);
     }
 
+    /// <summary>
+    /// Saves data in custom cache by the key.
+    /// </summary>
+    /// <param name="key">The unique key of the value.</param>
+    /// <param name="bytes">The value to be stored.</param>
     public void AddItem(string key, byte[] bytes = null)
     {
         if (string.IsNullOrEmpty(key) || bytes == null) return;
@@ -73,6 +86,11 @@ public partial class OnlineMapsCache
 #endif
     }
 
+    /// <summary>
+    /// Returns value from custom cache by key.
+    /// </summary>
+    /// <param name="key">The unique key of the value.</param>
+    /// <returns>Value of null.</returns>
     public static byte[] Get(string key)
     {
         return _instance != null ? _instance.GetItem(key) : null;
@@ -108,9 +126,21 @@ public partial class OnlineMapsCache
 #endif
     }
 
+    /// <summary>
+    /// Returns value from custom cache by key.
+    /// </summary>
+    /// <param name="key">The unique key of the value.</param>
+    /// <returns>Value of null.</returns>
     public byte[] GetItem(string key)
     {
         if (string.IsNullOrEmpty(key)) return null;
+
+        if (OnGetFromCustomCache != null)
+        {
+            byte[] bytes;
+            if (OnGetFromCustomCache(key, out bytes)) return bytes;
+        }
+
         if (customCacheAtlas == null) LoadCustomCacheAtlas();
         return customCacheAtlas.GetItem(this, key);
     }

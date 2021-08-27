@@ -7,35 +7,34 @@ using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// This class is used to search for a route by address or coordinates.\n
-/// You can create a new instance using OnlineMapsGoogleDirections.Find.\n
+/// This class is used to search for a route by address or coordinates.<br/>
+/// You can create a new instance using OnlineMapsGoogleDirections.Find.<br/>
 /// https://developers.google.com/maps/documentation/directions/intro
 /// </summary>
 public class OnlineMapsGoogleDirections : OnlineMapsTextWebService
 {
+    /// <summary>
+    /// Request parameters.
+    /// </summary>
     public Params requestParams;
 
     protected OnlineMapsGoogleDirections()
     {
-        
+
     }
+
+    /// <summary>
+    /// Constructor
+    /// </summary>
+    /// <param name="key">Google API key</param>
+    /// <param name="origin">The address (string), coordinates (Vector2), or place ID (string prefixed with place_id:) from which you wish to calculate directions.</param>
+    /// <param name="destination">The address (string), coordinates (Vector2), or place ID (string prefixed with place_id:) to which you wish to calculate directions.</param>
     public OnlineMapsGoogleDirections(string key, object origin, object destination)
     {
         requestParams = new Params(origin, destination)
         {
             key = key
         };
-    }
-
-    protected OnlineMapsGoogleDirections(string origin, string destination, bool alternatives = false)
-    {
-        _status = OnlineMapsQueryStatus.downloading;
-        StringBuilder url = new StringBuilder();
-        url.AppendFormat("https://maps.googleapis.com/maps/api/directions/xml?origin={0}&destination={1}&sensor=false", OnlineMapsWWW.EscapeURL(origin), OnlineMapsWWW.EscapeURL(destination));
-        if (alternatives) url.Append("&alternatives=true");
-        if (OnlineMapsKeyManager.hasGoogleMaps) url.Append("&key=").Append(OnlineMapsKeyManager.GoogleMaps());
-        www = new OnlineMapsWWW(url);
-        www.OnComplete += OnRequestComplete;
     }
 
     private OnlineMapsGoogleDirections(Params p)
@@ -173,14 +172,14 @@ public class OnlineMapsGoogleDirections : OnlineMapsTextWebService
         public Mode? mode;
 
         /// <summary>
-        /// Specifies an IEnumerate of waypoints. Waypoints alter a route by routing it through the specified location(s). \n
-        /// The maximum number of waypoints is 8. \n
+        /// Specifies an IEnumerate of waypoints. Waypoints alter a route by routing it through the specified location(s).<br/>
+        /// The maximum number of waypoints is 8. <br/>
         /// Each waypoint can be specified as a coordinates (Vector2), an encoded polyline (string prefixed with enc:), a place ID (string prefixed with place_id:), or an address which will be geocoded. 
         /// </summary>
         public IEnumerable waypoints;
 
         /// <summary>
-        /// If set to true, specifies that the Directions service may provide more than one route alternative in the response. \n
+        /// If set to true, specifies that the Directions service may provide more than one route alternative in the response.<br/>
         /// Note that providing route alternatives may increase the response time from the server.
         /// </summary>
         public bool alternatives;
@@ -201,7 +200,7 @@ public class OnlineMapsGoogleDirections : OnlineMapsTextWebService
         public string region;
 
         /// <summary>
-        /// Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC. \n
+        /// Specifies the desired time of arrival for transit directions, in seconds since midnight, January 1, 1970 UTC.<br/>
         /// You can specify either departure_time or arrival_time, but not both. 
         /// </summary>
         public long? arrival_time;
@@ -227,7 +226,7 @@ public class OnlineMapsGoogleDirections : OnlineMapsTextWebService
         public TransitMode? transit_mode;
 
         /// <summary>
-        /// Specifies preferences for transit routes. Using this parameter, you can bias the options returned, rather than accepting the default best route chosen by the API. \n
+        /// Specifies preferences for transit routes. Using this parameter, you can bias the options returned, rather than accepting the default best route chosen by the API.<br/>
         /// This parameter may only be specified for transit directions.
         /// </summary>
         public TransitRoutingPreference? transit_routing_preference;
@@ -235,7 +234,7 @@ public class OnlineMapsGoogleDirections : OnlineMapsTextWebService
         private object _departure_time;
 
         /// <summary>
-        /// Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC. \n
+        /// Specifies the desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC.<br/>
         /// Alternatively, you can specify a value of now, which sets the departure time to the current time.
         /// </summary>
         public object departure_time
@@ -306,8 +305,8 @@ public class OnlineMapsGoogleDirections : OnlineMapsTextWebService
         bicycling,
 
         /// <summary>
-        /// Requests directions via public transit routes (where available). \n
-        /// If you set the mode to transit, you can optionally specify either a departure_time or an arrival_time. \n
+        /// Requests directions via public transit routes (where available).<br/>
+        /// If you set the mode to transit, you can optionally specify either a departure_time or an arrival_time.<br/>
         /// If neither time is specified, the departure_time defaults to now (that is, the departure time defaults to the current time). 
         /// </summary>
         transit

@@ -4,7 +4,7 @@
 using System.Text;
 
 /// <summary>
-/// Class to work with QQ Search.\n
+/// Class to work with QQ Search.<br/>
 /// http://lbs.qq.com/webservice_v1/guide-search.html
 /// </summary>
 public class OnlineMapsQQSearch:OnlineMapsTextWebService
@@ -47,13 +47,13 @@ public class OnlineMapsQQSearch:OnlineMapsTextWebService
     public class Params
     {
         /// <summary>
-        /// Filter criteria.\n
+        /// Filter criteria.<br/>
         /// http://lbs.qq.com/webservice_v1/guide-search.html#filter_detail
         /// </summary>
         public string filter;
 
         /// <summary>
-        /// Sort by.\n
+        /// Sort by.<br/>
         /// http://lbs.qq.com/webservice_v1/guide-search.html#orderby_detail
         /// </summary>
         public string orderby;
@@ -82,7 +82,7 @@ public class OnlineMapsQQSearch:OnlineMapsTextWebService
         /// </summary>
         /// <param name="region">Retrieves the region name, city name, such as Beijing.</param>
         /// <param name="auto_extend">
-        /// TRUE: the current city search results, then automatically expand the scope; \n
+        /// TRUE: the current city search results, then automatically expand the scope; <br/>
         /// FALSE: Search only in the current city.
         /// </param>
         /// <param name="lng">Longitude of the center location.</param>

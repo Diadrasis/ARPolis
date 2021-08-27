@@ -6,9 +6,8 @@ using UnityEngine;
 using Object = UnityEngine.Object;
 
 /// <summary>
-/// 3D marker class.\n
-/// <strong>Can be used only when the source display - Texture or Tileset.</strong>\n
-/// To create a new 3D marker use OnlineMapsControlBase3D.AddMarker3D.
+/// 3D marker class.<br/>
+/// <strong>Can be used only when the source display - Texture or Tileset.</strong>
 /// </summary>
 [Serializable]
 public class OnlineMapsMarker3D : OnlineMapsMarkerBase
@@ -26,7 +25,7 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
     public OnlineMapsAltitudeType altitudeType = OnlineMapsAltitudeType.absolute;
 
     /// <summary>
-    /// Need to check the map boundaries? \n
+    /// Need to check the map boundaries?<br/>
     /// It allows you to make 3D markers, which are active outside the map.
     /// </summary>
     public bool checkMapBoundaries = true;
@@ -86,6 +85,16 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
                 if (OnEnabledChange != null) OnEnabledChange(this);
             }
         }
+    }
+
+    protected OnlineMapsElevationManagerBase elevationManager
+    {
+        get { return control.elevationManager; }
+    }
+
+    protected bool hasElevation
+    {
+        get { return elevationManager != null && elevationManager.enabled; }
     }
 
     /// <summary>
@@ -180,7 +189,11 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
     {
         base.DestroyInstance();
 
-        if (instance != null) OnlineMapsUtils.Destroy(instance);
+        if (instance != null)
+        {
+            OnlineMapsUtils.Destroy(instance);
+            instance = null;
+        }
     }
 
     /// <summary>
@@ -207,7 +220,8 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
 
         instance.layer = parent.gameObject.layer;
         instance.AddComponent<OnlineMapsMarker3DInstance>().marker = this;
-        visible = false;
+        _visible = false;
+        instance.SetActive(false);
         inited = true;
 
         control = map.control as OnlineMapsControlBase3D;
@@ -245,7 +259,7 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
     /// <param name="zoom">Map zoom</param>
     public void Reinit(double tlx, double tly, double brx, double bry, int zoom)
     {
-        if (instance)
+        if (instance != null)
         {
             Transform parent = instance.transform.parent;
             OnlineMapsUtils.Destroy(instance);
@@ -285,6 +299,7 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
     /// <param name="zoom">Zoom of the map</param>
     public override void Update(double tlx, double tly, double brx, double bry, int zoom)
     {
+        if (control == null) control = OnlineMapsControlBase3D.instance;
         if (control.meshFilter == null) return;
         double ttlx, ttly, tbrx, tbry;
         map.GetTileCorners(out ttlx, out ttly, out tbrx, out tbry, zoom);
@@ -309,7 +324,7 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
     public void Update(Bounds bounds, double tlx, double tly, double brx, double bry, int zoom, double ttlx, double ttly, double tbrx, double tbry, float bestYScale)
     {
         if (!enabled) return;
-        if (instance == null) Init(map.transform);
+        if (instance == null) Init(control.marker3DManager.container);
 
         if (!range.InRange(zoom)) visible = false;
         else if (OnCheckMapBoundaries != null) visible = OnCheckMapBoundaries();
@@ -374,24 +389,24 @@ public class OnlineMapsMarker3D : OnlineMapsMarkerBase
         Vector3 oldPosition = instance.transform.localPosition;
         float y = 0;
 
-        bool elevationActive = OnlineMapsElevationManagerBase.useElevation;
+        bool elevationActive = hasElevation;
 
         if (altitude.HasValue)
         {
             float yScale = OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry);
             y = altitude.Value;
-            if (altitudeType == OnlineMapsAltitudeType.relative && tsControl != null && elevationActive) y += OnlineMapsElevationManagerBase.GetUnscaledElevation(px, pz, tlx, tly, brx, bry);
+            if (altitudeType == OnlineMapsAltitudeType.relative && tsControl != null && elevationActive) y += elevationManager.GetUnscaledElevationValue(px, pz, tlx, tly, brx, bry);
             y *= yScale;
 
             if (tsControl != null && elevationActive)
             {
-                if (OnlineMapsElevationManagerBase.instance.bottomMode == OnlineMapsElevationBottomMode.minValue) y -= OnlineMapsElevationManagerBase.instance.minValue * bestYScale;
-                y *= OnlineMapsElevationManagerBase.instance.scale;
+                if (elevationManager.bottomMode == OnlineMapsElevationBottomMode.minValue) y -= elevationManager.minValue * bestYScale;
+                y *= elevationManager.scale;
             }
         }
         else if (tsControl != null && elevationActive)
         {
-            y = OnlineMapsElevationManagerBase.GetElevation(px, pz, bestYScale, tlx, tly, brx, bry);
+            y = elevationManager.GetElevationValue(px, pz, bestYScale, tlx, tly, brx, bry);
         }
 
         Vector3 newPosition = new Vector3((float)px, y, (float)pz);

@@ -12,11 +12,11 @@ public class OnlineMapsBingMapsTiledElevationManagerEditor : OnlineMapsTiledElev
     {
         if (keyManager == null)
         {
-            EditorGUILayout.HelpBox("Potential problem detected:\n.Cannot find Online Maps Key Manager component.", MessageType.Warning);
+            EditorGUILayout.HelpBox("Potential problem detected:\nCannot find Online Maps Key Manager component.", MessageType.Warning);
         }
         else if (string.IsNullOrEmpty(keyManager.bingMaps))
         {
-            EditorGUILayout.HelpBox("Potential problem detected:\n.Online Maps Key Manager / Bing Maps is empty.", MessageType.Warning);
+            EditorGUILayout.HelpBox("Potential problem detected:\nOnline Maps Key Manager / Bing Maps is empty.", MessageType.Warning);
         }
     }
 

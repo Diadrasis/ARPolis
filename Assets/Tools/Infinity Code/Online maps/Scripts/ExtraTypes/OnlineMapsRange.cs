@@ -20,14 +20,14 @@ public class OnlineMapsRange
     public float min = float.MinValue;
 
     /// <summary>
-    /// Maximum limit.\n
-    /// Uses in inpector.
+    /// Maximum limit.<br/>
+    /// Uses in inspector.
     /// </summary>
     public float maxLimit = OnlineMaps.MAXZOOM;
 
     /// <summary>
-    /// Minimum limit.\n
-    /// Uses in inpector.
+    /// Minimum limit.<br/>
+    /// Uses in inspector.
     /// </summary>
     public float minLimit = OnlineMaps.MINZOOM;
 

@@ -2,9 +2,9 @@
 /*   https://infinity-code.com   */
 
 /// <summary>
-/// AMap search response object.\n
-/// Note: Descriptions of the fields are translated from Chinese using Google Translate and can be translated incorrectly. \n
-/// If you confused in the description of field, please read the official AMap documentation.\n
+/// AMap search response object.<br/>
+/// Note: Descriptions of the fields are translated from Chinese using Google Translate and can be translated incorrectly. <br/>
+/// If you confused in the description of field, please read the official AMap documentation.<br/>
 /// http://lbs.amap.com/api/webservice/guide/api/search/#introduce
 /// </summary>
 public class OnlineMapsAMapSearchResult
@@ -15,8 +15,8 @@ public class OnlineMapsAMapSearchResult
     public int status;
 
     /// <summary>
-    /// Returns the status description.\n
-    /// When status is 0, info returns the cause of the error, otherwise it returns "OK".\n
+    /// Returns the status description.<br/>
+    /// When status is 0, info returns the cause of the error, otherwise it returns "OK".<br/>
     /// http://lbs.amap.com/api/webservice/info/
     /// </summary>
     public string info;
@@ -86,7 +86,7 @@ public class OnlineMapsAMapSearchResult
         public string website; // Undocumented
 
         /// <summary>
-        /// The province of POI the code.\n
+        /// The province of POI the code.<br/>
         /// The following data is a list of poi details, extensions = all to return; extensions = base does not return.
         /// </summary>
         public string pcode;

@@ -69,7 +69,7 @@ public class OnlineMapsMarkerBufferDrawer : OnlineMapsMarker2DDrawer
         double mx, my;
         marker.GetPosition(out mx, out my);
 
-        int maxX = 1 << bufferZoom;
+        long maxX = 1 << bufferZoom;
 
         bool isEntireWorld = map.buffer.renderState.width == maxX * s;
         bool isBiggestThatBuffer = map.buffer.renderState.width + 512 == maxX * s;

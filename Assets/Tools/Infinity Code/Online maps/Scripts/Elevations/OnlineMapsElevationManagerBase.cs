@@ -77,6 +77,7 @@ public abstract class OnlineMapsElevationManagerBase : MonoBehaviour
 
     private OnlineMaps _map;
     private OnlineMapsControlBaseDynamicMesh _control;
+    protected Vector2 _sizeInScene;
 
     #endregion
 
@@ -120,7 +121,7 @@ public abstract class OnlineMapsElevationManagerBase : MonoBehaviour
 
     protected Vector2 sizeInScene
     {
-        get { return control.sizeInScene; }
+        get { return _sizeInScene; }
     }
 
     /// <summary>
@@ -195,7 +196,7 @@ public abstract class OnlineMapsElevationManagerBase : MonoBehaviour
         return (float)Math.Min(map.width / dx, map.height / dy) / 1000;
     }
 
-    protected abstract float GetElevationValue(double x, double z, float yScale, double tlx, double tly, double brx, double bry);
+    public abstract float GetElevationValue(double x, double z, float yScale, double tlx, double tly, double brx, double bry);
 
     /// <summary>
     /// Returns the scaled elevation value for a point in the scene relative to left-top corner of the map.
@@ -282,7 +283,7 @@ public abstract class OnlineMapsElevationManagerBase : MonoBehaviour
         return 0;
     }
 
-    protected abstract float GetUnscaledElevationValue(double x, double z, double tlx, double tly, double brx, double bry);
+    public abstract float GetUnscaledElevationValue(double x, double z, double tlx, double tly, double brx, double bry);
 
     /// <summary>
     /// Returns the unscaled elevation value for a coordinate.

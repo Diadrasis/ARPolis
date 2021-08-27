@@ -16,7 +16,7 @@ public class OnlineMapsGPXObject
     public string version = "1.1";
 
     /// <summary>
-    /// Name or URL of the software that created your GPX document. \n
+    /// Name or URL of the software that created your GPX document.<br/>
     /// This allows others to inform the creator of a GPX instance document that fails to validate.
     /// </summary>
     public string creator = "OnlineMaps";
@@ -353,7 +353,7 @@ public class OnlineMapsGPXObject
     }
 
     /// <summary>
-    /// Information about the GPX file, author, and copyright restrictions goes in the metadata section. \n
+    /// Information about the GPX file, author, and copyright restrictions goes in the metadata section.<br/>
     /// Providing rich, meaningful information about your GPX files allows others to search for and use your GPS data. 
     /// </summary>
     public class Meta
@@ -632,7 +632,7 @@ public class OnlineMapsGPXObject
         public string type;
 
         /// <summary>
-        /// A Track Segment holds a list of Track Points which are logically connected in order. \n
+        /// A Track Segment holds a list of Track Points which are logically connected in order.<br/>
         /// To represent a single GPS track where GPS reception was lost, or the GPS receiver was turned off, start a new Track Segment for each continuous span of track data.
         /// </summary>
         public List<TrackSegment> segments;
@@ -687,7 +687,7 @@ public class OnlineMapsGPXObject
     }
 
     /// <summary>
-    /// A Track Segment holds a list of Track Points which are logically connected in order. \n
+    /// A Track Segment holds a list of Track Points which are logically connected in order.<br/>
     /// To represent a single GPS track where GPS reception was lost, or the GPS receiver was turned off, start a new Track Segment for each continuous span of track data. 
     /// </summary>
     public class TrackSegment
@@ -742,9 +742,9 @@ public class OnlineMapsGPXObject
         public double? elevation;
 
         /// <summary>
-        /// Creation/modification timestamp for element. \n
-        /// Date and time in are in Univeral Coordinated Time (UTC), not local time! \n
-        /// Conforms to ISO 8601 specification for date/time representation. \n
+        /// Creation/modification timestamp for element.<br/>
+        /// Date and time in are in Univeral Coordinated Time (UTC), not local time!<br/>
+        /// Conforms to ISO 8601 specification for date/time representation.<br/>
         /// Fractional seconds are allowed for millisecond timing in tracklogs.
         /// </summary>
         public DateTime? time;
@@ -755,8 +755,8 @@ public class OnlineMapsGPXObject
         public double? geoidheight;
 
         /// <summary>
-        /// The GPS name of the waypoint. This field will be transferred to and from the GPS. \n
-        /// GPX does not place restrictions on the length of this field or the characters contained in it. \n
+        /// The GPS name of the waypoint. This field will be transferred to and from the GPS.<br/>
+        /// GPX does not place restrictions on the length of this field or the characters contained in it.<br/>
         /// It is up to the receiving application to validate the field before sending it to the GPS.
         /// </summary>
         public string name;

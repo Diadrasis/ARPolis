@@ -1485,26 +1485,26 @@ public static class OnlineMapsUtils
 
     private static float TriangulateArea(float[] points, int countVertices)
     {
-        int n = countVertices;
         float A = 0.0f;
-        for (int p = n - 1, q = 0; q < n; p = q++)
+        int n = countVertices * 2;
+        for (int p = n - 2, q = 0; q < n; p = q - 2)
         {
-            float pvx = points[p * 2];
-            float pvy = points[p * 2 + 1];
-            float qvx = points[q * 2];
-            float qvy = points[q * 2 + 1];
+            float pvx = points[p];
+            float pvy = points[p + 1];
+            float qvx = points[q++];
+            float qvy = points[q++];
 
             A += pvx * qvy - qvx * pvy;
         }
         return A * 0.5f;
     }
 
-    private static bool TriangulateInsideTriangle(Vector2 A, Vector2 B, Vector2 C, Vector2 P)
+    private static bool TriangulateInsideTriangle(Vector2 a, Vector2 b, Vector2 c, Vector2 p)
     {
-        float bp = (C.x - B.x) * (P.y - B.y) - (C.y - B.y) * (P.x - B.x);
-        float ap = (B.x - A.x) * (P.y - A.y) - (B.y - A.y) * (P.x - A.x);
-        float cp = (A.x - C.x) * (P.y - C.y) - (A.y - C.y) * (P.x - C.x);
-        return bp > 0.0f && cp > 0.0f && ap > 0.0f;
+        float bp = (c.x - b.x) * (p.y - b.y) - (c.y - b.y) * (p.x - b.x);
+        float ap = (b.x - a.x) * (p.y - a.y) - (b.y - a.y) * (p.x - a.x);
+        float cp = (a.x - c.x) * (p.y - c.y) - (a.y - c.y) * (p.x - c.x);
+        return bp >= 0.0f && cp >= 0.0f && ap >= 0.0f;
     }
 
     private static bool TriangulateInsideTriangle(float ax, float ay, float bx, float by, float cx, float cy, float px, float py)
@@ -1512,7 +1512,7 @@ public static class OnlineMapsUtils
         float bp = (cx - bx) * (py - by) - (cy - by) * (px - bx);
         float ap = (bx - ax) * (py - ay) - (by - ay) * (px - ax);
         float cp = (ax - cx) * (py - cy) - (ay - cy) * (px - cx);
-        return (bp >= 0.0f) && (cp >= 0.0f) && (ap >= 0.0f);
+        return bp >= 0.0f && cp >= 0.0f && ap >= 0.0f;
     }
 
     private static bool TriangulateSnip(List<Vector2> points, int u, int v, int w, int n, int[] V)
@@ -1531,18 +1531,25 @@ public static class OnlineMapsUtils
 
     private static bool TriangulateSnip(float[] points, int u, int v, int w, int n, int[] V)
     {
-        float ax = points[V[u] * 2];
-        float ay = points[V[u] * 2 + 1];
-        float bx = points[V[v] * 2];
-        float by = points[V[v] * 2 + 1];
-        float cx = points[V[w] * 2];
-        float cy = points[V[w] * 2 + 1];
+        int iu = V[u] * 2;
+        int iv = V[v] * 2;
+        int iw = V[w] * 2;
+
+        float ax = points[iu];
+        float ay = points[iu + 1];
+        float bx = points[iv];
+        float by = points[iv + 1];
+        float cx = points[iw];
+        float cy = points[iw + 1];
 
         if (Mathf.Epsilon > (bx - ax) * (cy - ay) - (by - ay) * (cx - ax)) return false;
+
         for (int p = 0; p < n; p++)
         {
             if (p == u || p == v || p == w) continue;
-            if (TriangulateInsideTriangle(ax, ay, bx, by, cx, cy, points[V[p] * 2], points[V[p] * 2 + 1])) return false;
+            
+            int ip = V[p] * 2;
+            if (TriangulateInsideTriangle(ax, ay, bx, by, cx, cy, points[ip], points[ip + 1])) return false;
         }
         return true;
     }

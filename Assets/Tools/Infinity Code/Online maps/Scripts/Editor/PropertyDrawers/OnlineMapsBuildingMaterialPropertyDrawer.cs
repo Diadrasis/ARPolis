@@ -15,8 +15,8 @@ public class OnlineMapsBuildingMaterialPropertyDrawer : PropertyDrawer
     {
         EditorGUI.BeginProperty(position, label, property);
 
-        if (GUI.Button(new Rect(position.x, position.y, 20, 16),  "X")) isRemoved = true;
-        EditorGUI.LabelField(new Rect(position.x + 30, position.y, position.width - 30, position.height), label);
+        EditorGUI.LabelField(new Rect(position.x, position.y, position.width - 30, 16), label);
+        if (GUI.Button(new Rect(position.xMax - 20, position.y, 20, 16), "X")) isRemoved = true;
 
         try
         {

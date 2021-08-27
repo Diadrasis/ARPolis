@@ -99,6 +99,8 @@ public class OnlineMapsMapboxElevationManager : OnlineMapsTiledElevationManager<
         tile.loaded = true;
         needUpdateMinMax = true;
 
+        CheckAllTilesLoaded();
+
         map.Redraw();
     }
 
@@ -114,8 +116,6 @@ public class OnlineMapsMapboxElevationManager : OnlineMapsTiledElevationManager<
 
     public override void StartDownloadElevationTile(Tile tile)
     {
-        if (TryLoadFromCache(tile)) return;
-
         string token = !string.IsNullOrEmpty(accessToken) ? accessToken : OnlineMapsKeyManager.Mapbox();
         string url = "https://api.mapbox.com/v4/mapbox.terrain-rgb/" + tile.zoom + "/" + tile.x + "/" + tile.y + ".pngraw?access_token=" + token;
         OnlineMapsWWW www = new OnlineMapsWWW(url);

@@ -5,7 +5,7 @@ using System;
 using UnityEngine;
 
 /// <summary>
-/// Software JPEG decoder.\n
+/// Software JPEG decoder.<br/>
 /// Is used when there are problems in iOS.
 /// </summary>
 public class OnlineMapsJPEGDecoder

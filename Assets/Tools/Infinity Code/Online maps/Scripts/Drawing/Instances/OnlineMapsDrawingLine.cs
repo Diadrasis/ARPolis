@@ -48,7 +48,7 @@ public class OnlineMapsDrawingLine : OnlineMapsDrawingElement
     }
 
     /// <summary>
-    /// Texture of line.\n
+    /// Texture of line.<br/>
     /// Uses only in tileset.
     /// </summary>
     public Texture2D texture
@@ -62,9 +62,9 @@ public class OnlineMapsDrawingLine : OnlineMapsDrawingElement
     }
 
     /// <summary>
-    /// IEnumerable of points of the line. Geographic coordinates.\n
-    /// Can be:\n
-    /// IEnumerable<Vector2>, where X - longitide, Y - latitude, \n
+    /// IEnumerable of points of the line. Geographic coordinates.<br/>
+    /// Can be:<br/>
+    /// IEnumerable<Vector2>, where X - longitide, Y - latitude, <br/>
     /// IEnumerable<float> or IEnumerable<double>, where values (lng, lat, lng, lat... etc).
     /// </summary>
     public IEnumerable points
@@ -80,7 +80,7 @@ public class OnlineMapsDrawingLine : OnlineMapsDrawingElement
 
     protected override bool splitToPieces
     {
-        get { return followRelief && OnlineMapsElevationManagerBase.isActive; }
+        get { return followRelief && hasElevation; }
     }
 
     /// <summary>
@@ -108,8 +108,8 @@ public class OnlineMapsDrawingLine : OnlineMapsDrawingElement
     /// Creates a new line.
     /// </summary>
     /// <param name="points">
-    /// IEnumerable of points of the line. Geographic coordinates.\n
-    /// The values can be of type: Vector2, float, double.\n
+    /// IEnumerable of points of the line. Geographic coordinates.<br/>
+    /// The values can be of type: Vector2, float, double.<br/>
     /// If values float or double, the value should go in pairs(longitude, latitude).
     /// </param>
     public OnlineMapsDrawingLine(IEnumerable points):this()
@@ -122,8 +122,8 @@ public class OnlineMapsDrawingLine : OnlineMapsDrawingElement
     /// Creates a new line.
     /// </summary>
     /// <param name="points">
-    /// IEnumerable of points of the line. Geographic coordinates.\n
-    /// The values can be of type: Vector2, float, double.\n
+    /// IEnumerable of points of the line. Geographic coordinates.<br/>
+    /// The values can be of type: Vector2, float, double.<br/>
     /// If values float or double, the value should go in pairs(longitude, latitude).
     /// </param>
     /// <param name="color">Color of the line.</param>
@@ -137,7 +137,7 @@ public class OnlineMapsDrawingLine : OnlineMapsDrawingElement
     /// </summary>
     /// <param name="points">
     /// IEnumerable of points of the line. Geographic coordinates.
-    /// The values can be of type: Vector2, float, double.\n
+    /// The values can be of type: Vector2, float, double.<br/>
     /// If values float or double, the value should go in pairs(longitude, latitude).
     /// </param>
     /// <param name="color">Color of the line.</param>

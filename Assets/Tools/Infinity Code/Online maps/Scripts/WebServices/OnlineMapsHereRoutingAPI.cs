@@ -8,7 +8,7 @@ using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// HERE Routing API is a web service API that offers easy and fast routing for several regions in the world. \n
+/// HERE Routing API is a web service API that offers easy and fast routing for several regions in the world. <br/>
 /// https://developer.here.com/rest-apis/documentation/routing/topics/resource-calculate-route.html
 /// </summary>
 public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
@@ -59,7 +59,7 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
     /// </summary>
     /// <param name="apiKey">A 43-byte Base64 URL-safe encoded string used for the authentication of the client application.</param>
     /// <param name="waypoints">
-    /// List of waypoints that define a route. The first element marks the start, the last the end point.\n
+    /// List of waypoints that define a route. The first element marks the start, the last the end point.<br/>
     /// Waypoints in between are interpreted as via points.
     /// </param>
     /// <param name="mode">The routing mode determines how the route is calculated.</param>
@@ -83,7 +83,7 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
     /// <param name="app_id">A 20 bytes Base64 URL-safe encoded string used for the authentication of the client application.</param>
     /// <param name="app_code">A 20 bytes Base64 URL-safe encoded string used for the authentication of the client application. </param>
     /// <param name="waypoints">
-    /// List of waypoints that define a route. The first element marks the start, the last the end point.\n
+    /// List of waypoints that define a route. The first element marks the start, the last the end point.<br/>
     /// Waypoints in between are interpreted as via points.
     /// </param>
     /// <param name="mode">The routing mode determines how the route is calculated.</param>
@@ -108,7 +108,7 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
     /// <param name="app_code">A 20 bytes Base64 URL-safe encoded string used for the authentication of the client application. </param>
     /// <param name="apiKey">A 43-byte Base64 URL-safe encoded string used for the authentication of the client application.</param>
     /// <param name="waypoints">
-    /// List of waypoints that define a route. The first element marks the start, the last the end point.\n
+    /// List of waypoints that define a route. The first element marks the start, the last the end point.<br/>
     /// Waypoints in between are interpreted as via points.
     /// </param>
     /// <param name="mode">The routing mode determines how the route is calculated.</param>
@@ -189,7 +189,7 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public double? altitude;
 
         /// <summary>
-        /// Matching Links are selected within the specified TransitRadius, in meters. \n
+        /// Matching Links are selected within the specified TransitRadius, in meters. <br/>
         /// For example to drive past a city without necessarily going into the city center you can specify the coordinates of the center and a TransitRadius of 5000m.
         /// </summary>
         public int? transitRadius;
@@ -228,12 +228,12 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// LinkWaypoint defines a waypoint by LinkId and optional Spot value. \n
-    /// Spot is defined as the fractional distance from the link's reference-node to the non-reference node, with a value between 0 and 1. \n
-    /// When no Spot value nor DisplayPosition is given in request then default value 0.5 is assumed\n
-    /// The optional display position of the waypoint defines where the location is displayed on a map.\n
-    /// It denotes the center of the location and is not navigable, i.e.it is not located on a link in the routing network in contrast to the navigation positions of a location. \n
-    /// The display position allows the routing engine to decide whether the waypoint is located on the left or on the right-hand side of the route.\n
+    /// LinkWaypoint defines a waypoint by LinkId and optional Spot value. <br/>
+    /// Spot is defined as the fractional distance from the link's reference-node to the non-reference node, with a value between 0 and 1. <br/>
+    /// When no Spot value nor DisplayPosition is given in request then default value 0.5 is assumed<br/>
+    /// The optional display position of the waypoint defines where the location is displayed on a map.<br/>
+    /// It denotes the center of the location and is not navigable, i.e.it is not located on a link in the routing network in contrast to the navigation positions of a location. <br/>
+    /// The display position allows the routing engine to decide whether the waypoint is located on the left or on the right-hand side of the route.<br/>
     /// </summary>
     public class LinkWaypoint : Waypoint
     {
@@ -263,7 +263,7 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public string linkId;
 
         /// <summary>
-        /// Optional relative position of the location along the link with a value between 0 and 1. 
+        /// Optional relative position of the location along the link with a value between 0 and 1. <br/>
         /// When no spot value nor display position is given in the request then default value 0.5 is assumed.
         /// </summary>
         public string spot;
@@ -323,44 +323,44 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public bool avoidSeasonalClosures;
 
         /// <summary>
-        /// Time when travel is expected to start. \n
-        /// Traffic speed and incidents are taken into account when calculating the route. \n
+        /// Time when travel is expected to start. <br/>
+        /// Traffic speed and incidents are taken into account when calculating the route. <br/>
         /// You can use now to specify the current time. Specify either departure or arrival, not both.
         /// </summary>
         public string departure;
 
         /// <summary>
-        /// Time when travel is expected to end. \n
+        /// Time when travel is expected to end. <br/>
         /// Specify either departure or arrival, not both.
         /// </summary>
         public string arrival;
 
         /// <summary>
-        /// Maximum number of alternative routes that will be calculated and returned. \n
-        /// Alternative routes can be unavailable, thus they are not guaranteed to be returned. \n
-        /// If at least one via point is used in a route request, returning alternative routes is not supported. \n
+        /// Maximum number of alternative routes that will be calculated and returned. <br/>
+        /// Alternative routes can be unavailable, thus they are not guaranteed to be returned. <br/>
+        /// If at least one via point is used in a route request, returning alternative routes is not supported. <br/>
         /// 0 stands for "no alternative routes", i.e. only best route is returned.
         /// </summary>
         public int? alternatives;
 
         /// <summary>
-        /// Defines the measurement system used in instruction text. \n
-        /// When imperial is selected, units used are based on the language specified in the request. \n
+        /// Defines the measurement system used in instruction text. <br/>
+        /// When imperial is selected, units used are based on the language specified in the request. <br/>
         /// Defaults to metric when not specified.
         /// </summary>
         public MetricSystem? metricSystem;
 
         /// <summary>
-        /// If the view bounds are given in the request then only route shape points which fit into these bounds will be returned. \n
-        /// The route shape beyond the view bounds is reduced to the points which are referenced by links, legs or maneuvers. \n
+        /// If the view bounds are given in the request then only route shape points which fit into these bounds will be returned. <br/>
+        /// The route shape beyond the view bounds is reduced to the points which are referenced by links, legs or maneuvers. <br/>
         /// A common use case for this is the drag and drop scenario where the client is only interested in a rough visual update of the route in the currently visible bounds.
         /// </summary>
         public GeoRect viewBounds;
 
         /// <summary>
-        /// Specifies the resolution of the view and a possible snap resolution in meters per pixel in the response. \n
-        /// You must specify a whole, positive integer.\n
-        /// If you specify only one value, then this value defines the view resolution only.\n
+        /// Specifies the resolution of the view and a possible snap resolution in meters per pixel in the response. <br/>
+        /// You must specify a whole, positive integer.<br/>
+        /// If you specify only one value, then this value defines the view resolution only.<br/>
         /// You can use snap resolution to adjust waypoint links to the resolution of the client display.
         /// </summary>
         public string resolution;
@@ -371,9 +371,9 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public InstructionFormat? instructionFormat;
 
         /// <summary>
-        /// A list of languages for all textual information, the first supported language is used. \n
-        /// If there are no matching supported languages the response is an error. \n
-        /// Defaults to en-us.\n
+        /// A list of languages for all textual information, the first supported language is used. <br/>
+        /// If there are no matching supported languages the response is an error. <br/>
+        /// Defaults to en-us.<br/>
         /// See <see href="https://developer.here.com/rest-apis/documentation/routing/topics/resource-param-type-languages.html#languages">Languages</see> for a list of supported languages. 
         /// </summary>
         public string language;
@@ -384,38 +384,38 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public Representation? representation;
 
         /// <summary>
-        /// Define which attributes are included in the response as part of the data representation of the route. \n
+        /// Define which attributes are included in the response as part of the data representation of the route. <br/>
         /// Defaults to waypoints, summary, legs and additionally lines if publicTransport or publicTransportTimeTable mode is used. 
         /// </summary>
         public RouteAttributes? routeAttributes;
 
         /// <summary>
-        /// Define which attributes are included in the response as part of the data representation of the route legs. \n
+        /// Define which attributes are included in the response as part of the data representation of the route legs. <br/>
         /// Defaults to maneuvers, waypoint, length, travelTime.
         /// </summary>
         public LegAttributes? legAttributes;
 
         /// <summary>
-        /// Define which attributes are included in the response as part of the data representation of the route maneuvers. \n
+        /// Define which attributes are included in the response as part of the data representation of the route maneuvers. <br/>
         /// Defaults to position, length, travelTime.
         /// </summary>
         public ManeuverAttributes? maneuverAttributes;
 
         /// <summary>
-        /// Define which attributes are included in the response as part of the data representation of the route links. \n
+        /// Define which attributes are included in the response as part of the data representation of the route links. <br/>
         /// Defaults to shape, speedLimit.
         /// </summary>
         public LinkAttributes? linkAttributes;
 
         /// <summary>
-        /// Sequence of attribute keys of the fields that are included in public transport line elements. \n
+        /// Sequence of attribute keys of the fields that are included in public transport line elements. <br/>
         /// If not specified, defaults to lineForeground, lineBackground.
         /// </summary>
         public LineAttributes? lineAttributes;
 
         /// <summary>
-        /// Specifies the desired tolerances for generalizations of the base route geometry. \n
-        /// Tolerances are given in degrees of longitude or latitude on a spherical approximation of the Earth. \n
+        /// Specifies the desired tolerances for generalizations of the base route geometry. <br/>
+        /// Tolerances are given in degrees of longitude or latitude on a spherical approximation of the Earth. <br/>
         /// One meter is approximately equal to 0:00001 degrees at typical latitudes.
         /// </summary>
         public double[] generalizationtolerances;
@@ -426,9 +426,9 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public VehicleType vehicleType;
 
         /// <summary>
-        /// Restricts number of changes in a public transport route to a given value. \n
-        /// The parameter does not filter resulting alternatives. \n
-        /// Instead, it affects route calculation so that only routes containing at most the given number of changes are considered. \n
+        /// Restricts number of changes in a public transport route to a given value. <br/>
+        /// The parameter does not filter resulting alternatives. <br/>
+        /// Instead, it affects route calculation so that only routes containing at most the given number of changes are considered. <br/>
         /// The provided value must be between 0 and 10.
         /// </summary>
         public int? maxNumberOfChanges;
@@ -439,29 +439,29 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public PublicTransportType? avoidTransportTypes;
 
         /// <summary>
-        /// Allows to prefer or avoid public transport routes with longer walking distances. \n
-        /// A value > 1.0 means a slower walking speed and will prefer routes with less walking distance. \n
+        /// Allows to prefer or avoid public transport routes with longer walking distances. <br/>
+        /// A value > 1.0 means a slower walking speed and will prefer routes with less walking distance. <br/>
         /// The provided value must be between 0.01 and 100.
         /// </summary>
         public double? walkTimeMultiplier;
 
         /// <summary>
-        /// Specifies speed which will be used by a service as a walking speed for pedestrian routing (meters per second). \n
-        /// This parameter affects pedestrian, publicTransport and publicTransportTimetable modes. \n
+        /// Specifies speed which will be used by a service as a walking speed for pedestrian routing (meters per second). <br/>
+        /// This parameter affects pedestrian, publicTransport and publicTransportTimetable modes. <br/>
         /// The provided value must be between 0.5 and 2.
         /// </summary>
         public double? walkSpeed;
 
         /// <summary>
-        /// Allows the user to specify a maximum distance to the start and end stations of a public transit route. \n
-        /// Only valid for publicTransport and publicTransportTimetable routes. \n
+        /// Allows the user to specify a maximum distance to the start and end stations of a public transit route. <br/>
+        /// Only valid for publicTransport and publicTransportTimetable routes. <br/>
         /// The provided value must be between 0 and 6000. 
         /// </summary>
         public int? walkRadius;
 
         /// <summary>
-        /// Enables the change maneuver in the route response, which indicates a public transit line change. \n
-        /// In the absence of this maneuver, each line change is represented with a pair of subsequent enter and leave maneuvers. \n
+        /// Enables the change maneuver in the route response, which indicates a public transit line change. <br/>
+        /// In the absence of this maneuver, each line change is represented with a pair of subsequent enter and leave maneuvers. <br/>
         /// We recommend enabling combineChange behavior wherever possible, to simplify client-side development.
         /// </summary>
         public bool combineChange;
@@ -472,7 +472,7 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public TruckType? truckType;
 
         /// <summary>
-        /// Truck routing only, specifies number of trailers pulled by a vehicle. \n
+        /// Truck routing only, specifies number of trailers pulled by a vehicle. <br/>
         /// The provided value must be between 0 and 4. Defaults to 0. 
         /// </summary>
         public int? trailersCount;
@@ -483,44 +483,44 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public HazardousGoodType? shippedHazardousGoods;
 
         /// <summary>
-        /// Truck routing only, vehicle weight including trailers and shipped goods, in tons. \n
+        /// Truck routing only, vehicle weight including trailers and shipped goods, in tons. <br/>
         /// The provided value must be between 0 and 1000.
         /// </summary>
         public int? limitedWeight;
 
         /// <summary>
-        /// Truck routing only, vehicle weight per axle in tons. \n
+        /// Truck routing only, vehicle weight per axle in tons. <br/>
         /// The provided value must be between 0 and 1000.
         /// </summary>
         public int? weightPerAxle;
 
         /// <summary>
-        /// Truck routing only, vehicle height in meters. \n
+        /// Truck routing only, vehicle height in meters. <br/>
         /// The provided value must be between 0 and 50.
         /// </summary>
         public int? height;
 
         /// <summary>
-        /// Truck routing only, vehicle width in meters. \n
+        /// Truck routing only, vehicle width in meters. <br/>
         /// The provided value must be between 0 and 50.
         /// </summary>
         public int? width;
 
         /// <summary>
-        /// Truck routing only, vehicle length in meters. \n
+        /// Truck routing only, vehicle length in meters. <br/>
         /// The provided value must be between 0 and 300.
         /// </summary>
         public int? length;
 
         /// <summary>
-        /// Specifies the tunnel category to restrict certain route links. \n
+        /// Specifies the tunnel category to restrict certain route links. <br/>
         /// The route will pass only through tunnels of a less strict category.
         /// </summary>
         public string tunnelCategory;
 
         /// <summary>
-        /// If set to true, all shapes inside routing response will consist of 3 values instead of 2. \n
-        /// Third value will be elevation. If there are no elevation data available for given shape point, elevation will be interpolated from surrounding points. \n
+        /// If set to true, all shapes inside routing response will consist of 3 values instead of 2. <br/>
+        /// Third value will be elevation. If there are no elevation data available for given shape point, elevation will be interpolated from surrounding points. <br/>
         /// In case there is no elevation data available for any of the shape points, elevation will be 0.0.
         /// </summary>
         public bool returnelevation;
@@ -656,19 +656,19 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public Feature feature;
 
         /// <summary>
-        /// RoutingType provides identifiers for different optimizations which can be applied during the route calculation. \n
+        /// RoutingType provides identifiers for different optimizations which can be applied during the route calculation. <br/>
         /// Selecting the routing type affects which constraints, speed attributes and weights are taken into account during route calculation.
         /// </summary>
         public enum Type
         {
             /// <summary>
-            /// Route calculation from start to destination optimizing based on the travel time. \n
+            /// Route calculation from start to destination optimizing based on the travel time. <br/>
             /// Depending on the provided traffic mode of the request, this travel time can be determined with or without traffic information.
             /// </summary>
             fastest,
 
             /// <summary>
-            /// Route calculation from start to destination disregarding any traffic conditions. \n
+            /// Route calculation from start to destination disregarding any traffic conditions. <br/>
             /// In this mode, the distance of the route is minimized. 
             /// </summary>
             shortest
@@ -685,8 +685,8 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
             car,
 
             /// <summary>
-            /// Route calculation for a pedestrian. \n
-            /// As one effect, maneuvers will be optimized for walking, i.e. segments will consider actions relevant for pedestrians and maneuver instructions will contain texts suitable for a walking person. \n
+            /// Route calculation for a pedestrian. <br/>
+            /// As one effect, maneuvers will be optimized for walking, i.e. segments will consider actions relevant for pedestrians and maneuver instructions will contain texts suitable for a walking person. <br/>
             /// This mode disregards any traffic information. 
             /// </summary>
             pedestrian,
@@ -697,26 +697,26 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
             carHOV,
 
             /// <summary>
-            /// Route calculation using public transport lines and walking parts to get to stations. \n
+            /// Route calculation using public transport lines and walking parts to get to stations. <br/>
             /// It is based on static map data, so the results are not aligned with officially published timetable. 
             /// </summary>
             publicTransport,
 
             /// <summary>
-            /// Route calculation using public transport lines and walking parts to get to stations. \n
-            /// This mode uses additional officially published timetable information to provide most precise routes and times. \n
+            /// Route calculation using public transport lines and walking parts to get to stations. <br/>
+            /// This mode uses additional officially published timetable information to provide most precise routes and times. <br/>
             /// In case the timetable data is unavailable, the service will use estimated results based on static map data (same as from publicTransport mode). 
             /// </summary>
             publicTransportTimeTable,
 
             /// <summary>
-            /// Route calculation for trucks. \n
+            /// Route calculation for trucks. <br/>
             /// This mode considers truck limitations on links and uses different speed assumptions when calculating the route. 
             /// </summary>
             truck,
 
             /// <summary>
-            /// Route calculation for bicycles. \n
+            /// Route calculation for bicycles. <br/>
             /// This mode uses the bicycle speed on links dedicated for both cars and pedestrians and the pedestrian speed for the roads that are only for pedestrians. 
             /// </summary>
             bicycle
@@ -725,37 +725,37 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public enum TrafficMode
         {
             /// <summary>
-            /// No departure time provided: This behavior is deprecated and will return error in the future. \n
-            /// * Static time based restrictions: Ignored \n
-            /// * Real-time traffic closures: Valid for entire length of route. \n
-            /// * Real-time traffic flow events: Speed at calculation time used for entire length of route. \n
-            /// * Historical and predictive traffic speed: Ignored \n
-            /// Departure time provided: \n
-            /// * Static time based restrictions: Avoided if road would be traversed within validity period of the restriction. \n
-            /// * Real-time traffic closures: Avoided if road would be traversed within validity period of the incident. \n
-            /// * Real-time traffic flow events: Speed used if road would be traversed within validity period of the flow event. \n
-            /// * Historical and predictive traffic: Used.  \n
+            /// No departure time provided: This behavior is deprecated and will return error in the future. <br/>
+            /// * Static time based restrictions: Ignored <br/>
+            /// * Real-time traffic closures: Valid for entire length of route. <br/>
+            /// * Real-time traffic flow events: Speed at calculation time used for entire length of route. <br/>
+            /// * Historical and predictive traffic speed: Ignored <br/>
+            /// Departure time provided: <br/>
+            /// * Static time based restrictions: Avoided if road would be traversed within validity period of the restriction. <br/>
+            /// * Real-time traffic closures: Avoided if road would be traversed within validity period of the incident. <br/>
+            /// * Real-time traffic flow events: Speed used if road would be traversed within validity period of the flow event. <br/>
+            /// * Historical and predictive traffic: Used.
             /// </summary>
             enabled,
 
             /// <summary>
-            /// No departure time provided: \n
-            /// * Static time based restrictions: Ignored \n
-            /// * Real-time traffic closures: Ignored. \n
-            /// * Real-time traffic flow speed: Ignored. \n
-            /// * Historical and predictive traffic: Ignored \n
-            /// Departure time provided: \n
-            /// * Static time based restrictions: Avoided if road would be traversed within validity period of the restriction. \n
-            /// * Real-time traffic closures: Valid for entire length of route. \n
-            /// * Real-time traffic flow speed: Ignored. \n
-            /// * Historical and predictive traffic: Ignored \n
-            /// Note: Difference between traffic disabled and enabled affects only the calculation of the route.  \n
-            /// Traffic time of the route will still be calculated for all routes using the same rules as for traffic:enabled. \n
+            /// No departure time provided: <br/>
+            /// * Static time based restrictions: Ignored <br/>
+            /// * Real-time traffic closures: Ignored. <br/>
+            /// * Real-time traffic flow speed: Ignored. <br/>
+            /// * Historical and predictive traffic: Ignored <br/>
+            /// Departure time provided: <br/>
+            /// * Static time based restrictions: Avoided if road would be traversed within validity period of the restriction. <br/>
+            /// * Real-time traffic closures: Valid for entire length of route. <br/>
+            /// * Real-time traffic flow speed: Ignored. <br/>
+            /// * Historical and predictive traffic: Ignored <br/>
+            /// Note: Difference between traffic disabled and enabled affects only the calculation of the route.  <br/>
+            /// Traffic time of the route will still be calculated for all routes using the same rules as for traffic:enabled.
             /// </summary>
             disabled,
 
             /// <summary>
-            /// Let the service automatically apply traffic related constraints that are suitable for the selected routing type, transport mode, and departure time. \n
+            /// Let the service automatically apply traffic related constraints that are suitable for the selected routing type, transport mode, and departure time. <br/>
             /// Also user entitlements will be taken into consideration. 
             /// </summary>
             defaults
@@ -780,13 +780,13 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
             public enum Weight
             {
                 /// <summary>
-                /// The routing engine guarantees that the route does not contain strictly excluded features. \n
+                /// The routing engine guarantees that the route does not contain strictly excluded features. <br/>
                 /// If the condition cannot be fulfilled no route is returned. 
                 /// </summary>
                 strictExclude = -3,
 
                 /// <summary>
-                /// The routing engine does not consider links containing the corresponding feature. \n
+                /// The routing engine does not consider links containing the corresponding feature. <br/>
                 /// If no route can be found because of these limitations the condition is weakened. 
                 /// </summary>
                 softExclude = -2,
@@ -838,11 +838,11 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// StreetWaypoint defines a waypoint by street position and name. \n
-    /// The street name helps select the right road in complex intersection scenarios such as a bridge crossing another road. \n
-    /// A common use case for this scenario is when the user specifies a waypoint by selecting a place or a location after a search.\n
-    /// The optional display position of the waypoint defines where the location is displayed on a map. \n
-    /// It denotes the center of the location and is not navigable, i.e.it is not located on a link in the routing network in contrast to the navigation positions of a location. \n
+    /// StreetWaypoint defines a waypoint by street position and name. <br/>
+    /// The street name helps select the right road in complex intersection scenarios such as a bridge crossing another road. <br/>
+    /// A common use case for this scenario is when the user specifies a waypoint by selecting a place or a location after a search.<br/>
+    /// The optional display position of the waypoint defines where the location is displayed on a map. <br/>
+    /// It denotes the center of the location and is not navigable, i.e.it is not located on a link in the routing network in contrast to the navigation positions of a location. <br/>
     /// The display position allows the routing engine to decide whether the waypoint is located on the left or on the right-hand side of the route.
     /// </summary>
     public class StreetWaypoint : Waypoint
@@ -926,7 +926,7 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         public EngineType engineType = EngineType.gasoline;
 
         /// <summary>
-        /// The average fuel consumption, measured in liters per 100km. \n
+        /// The average fuel consumption, measured in liters per 100km. <br/>
         /// Affects CO2 emission only in case of combustion engines (diesel and gasoline). 
         /// </summary>
         public double? averageConsumption;
@@ -962,8 +962,8 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
     public abstract class Waypoint
     {
         /// <summary>
-        /// 180 degree turns are allowed for stopOver but not for passThrough. \n
-        /// Waypoints defined through a drag-n-drop action should be marked as pass-through. \n
+        /// 180 degree turns are allowed for stopOver but not for passThrough. <br/>
+        /// Waypoints defined through a drag-n-drop action should be marked as pass-through. <br/>
         /// PassThrough waypoints will not appear in the list of maneuvers. 
         /// </summary>
         public Type? type;
@@ -1203,7 +1203,7 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         roadName = 128,
 
         /// <summary>
-        /// Indicates whether the link should include the timezone. \n
+        /// Indicates whether the link should include the timezone. <br/>
         /// Note: Requesting timezone information is known to slowndown response.
         /// </summary>
         [ShortName("tz")]
@@ -1470,27 +1470,27 @@ public class OnlineMapsHereRoutingAPI: OnlineMapsTextWebService
         display,
 
         /// <summary>
-        /// Drag and Drop mode to be used during drag and drop (re-routing) actions. \n
+        /// Drag and Drop mode to be used during drag and drop (re-routing) actions. <br/>
         /// The response will only contain the shape of the route restricted to the view bounds provided in the representation options.
         /// </summary>
         dragNDrop,
 
         /// <summary>
-        /// Navigation mode to provide all information necessary to support a navigation device. \n
-        /// This mode activates the most extensive data response as all link information will be included in the response to allow a detailed display while navigating.\n
+        /// Navigation mode to provide all information necessary to support a navigation device. <br/>
+        /// This mode activates the most extensive data response as all link information will be included in the response to allow a detailed display while navigating.<br/>
         /// RouteId will not be calculated in this mode however, unless it is additionally requested.
         /// </summary>
         navigation,
 
         /// <summary>
-        /// Paging mode that will be used when incrementally loading links while navigating along the route. \n
+        /// Paging mode that will be used when incrementally loading links while navigating along the route. <br/>
         /// The response will be limited to link information.
         /// </summary>
         linkPaging,
 
         /// <summary>
-        /// Turn by turn mode to provide all information necessary to support turn by turn. \n
-        /// This mode activates all data needed for navigation excluding any redundancies. \n
+        /// Turn by turn mode to provide all information necessary to support turn by turn. <br/>
+        /// This mode activates all data needed for navigation excluding any redundancies. <br/>
         /// RouteId will not be calculated in this mode however, unless it is additionally requested.
         /// </summary>
         turnByTurn

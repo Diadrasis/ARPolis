@@ -662,6 +662,7 @@ public class OnlineMapsJSON
     /// <returns>JSON</returns>
     public static OnlineMapsJSONItem Serialize(object obj)
     {
+        if (obj is Action) return new OnlineMapsJSONValue(obj, OnlineMapsJSONValue.ValueType.NULL);
 #if !UNITY_WP_8_1 || UNITY_EDITOR
         if (obj == null || obj is DBNull) return new OnlineMapsJSONValue(obj, OnlineMapsJSONValue.ValueType.NULL);
 #else

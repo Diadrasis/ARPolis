@@ -21,22 +21,22 @@ public class OnlineMapsGooglePlacesResult
     public string icon;
 
     /// <summary>
-    /// Unique stable identifier denoting this place. \n
-    /// This identifier may not be used to retrieve information about this place, but is guaranteed to be valid across sessions. \n
-    /// It can be used to consolidate data about this place, and to verify the identity of a place across separate searches. \n
+    /// Unique stable identifier denoting this place. <br/>
+    /// This identifier may not be used to retrieve information about this place, but is guaranteed to be valid across sessions. <br/>
+    /// It can be used to consolidate data about this place, and to verify the identity of a place across separate searches. <br/>
     /// Note: The id is now deprecated in favor of place_id.
     /// </summary>
     public string id;
 
     /// <summary>
-    /// Human-readable address of this place. \n
-    /// Often this address is equivalent to the "postal address". \n
+    /// Human-readable address of this place. <br/>
+    /// Often this address is equivalent to the "postal address". <br/>
     /// The formatted_address property is only returned for a Text Search.
     /// </summary>
     public string formatted_address;
 
     /// <summary>
-    /// Human-readable name for the returned result. \n
+    /// Human-readable name for the returned result. <br/>
     /// For establishment results, this is usually the business name.
     /// </summary>
     public string name;
@@ -47,36 +47,36 @@ public class OnlineMapsGooglePlacesResult
     public string place_id;
 
     /// <summary>
-    /// Unique token that you can use to retrieve additional information about this place in a Place Details request. \n
-    /// Although this token uniquely identifies the place, the converse is not true. \n
-    /// A place may have many valid reference tokens. \n
-    /// It's not guaranteed that the same token will be returned for any given place across different searches. \n
+    /// Unique token that you can use to retrieve additional information about this place in a Place Details request. <br/>
+    /// Although this token uniquely identifies the place, the converse is not true. <br/>
+    /// A place may have many valid reference tokens. <br/>
+    /// It's not guaranteed that the same token will be returned for any given place across different searches. <br/>
     /// Note: The reference is now deprecated in favor of place_id.
     /// </summary>
     public string reference;
 
     /// <summary>
-    /// Array of feature types describing the given result. \n
+    /// Array of feature types describing the given result. <br/>
     /// XML responses include multiple type elements if more than one type is assigned to the result.
     /// </summary>
     public string[] types;
 
     /// <summary>
-    /// Feature name of a nearby location. \n
-    /// Often this feature refers to a street or neighborhood within the given results. \n
+    /// Feature name of a nearby location. <br/>
+    /// Often this feature refers to a street or neighborhood within the given results. <br/>
     /// The vicinity property is only returned for a Nearby Search.
     /// </summary>
     public string vicinity;
 
     /// <summary>
-    /// The price level of the place, on a scale of 0 to 4.  \n
-    /// The exact amount indicated by a specific value will vary from region to region. \n
-    /// Price levels are interpreted as follows: \n
-    /// -1 - Unknown \n
-    /// 0 - Free \n
-    /// 1 - Inexpensive \n
-    /// 2 - Moderate \n
-    /// 3 - Expensive \n
+    /// The price level of the place, on a scale of 0 to 4.  <br/>
+    /// The exact amount indicated by a specific value will vary from region to region. <br/>
+    /// Price levels are interpreted as follows: <br/>
+    /// -1 - Unknown <br/>
+    /// 0 - Free <br/>
+    /// 1 - Inexpensive <br/>
+    /// 2 - Moderate <br/>
+    /// 3 - Expensive <br/>
     /// 4 - Very Expensive
     /// </summary>
     public int price_level = -1;
@@ -102,8 +102,8 @@ public class OnlineMapsGooglePlacesResult
     public string[] weekday_text;
 
     /// <summary>
-    /// Array of photo objects, each containing a reference to an image. \n
-    /// A Place Search will return at most one photo object. \n
+    /// Array of photo objects, each containing a reference to an image. <br/>
+    /// A Place Search will return at most one photo object. <br/>
     /// Performing a Place Details request on the place may return up to ten photos.
     /// </summary>
     public Photo[] photos;
@@ -210,18 +210,18 @@ public class OnlineMapsGooglePlacesResult
         /// </summary>
         /// <param name="key">Google Maps API Key.</param>
         /// <param name="maxWidth">
-        /// Specifies the maximum desired width, in pixels, of the image returned by the Place Photos service. \n
-        /// If the image is smaller than the values specified, the original image will be returned. \n
-        /// If the image is larger in either dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original aspect ratio. \n
+        /// Specifies the maximum desired width, in pixels, of the image returned by the Place Photos service. <br/>
+        /// If the image is smaller than the values specified, the original image will be returned. <br/>
+        /// If the image is larger in either dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original aspect ratio. <br/>
         /// maxWidth accept an integer between 1 and 1600.
         /// </param>
         /// <param name="maxHeight">
-        /// Specifies the maximum desired height, in pixels, of the image returned by the Place Photos service. \n
-        /// If the image is smaller than the values specified, the original image will be returned. \n
-        /// If the image is larger in either dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original aspect ratio. \n
-        /// maxHeight accept an integer between 1 and 1600.\n
+        /// Specifies the maximum desired height, in pixels, of the image returned by the Place Photos service. <br/>
+        /// If the image is smaller than the values specified, the original image will be returned. <br/>
+        /// If the image is larger in either dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original aspect ratio. <br/>
+        /// maxHeight accept an integer between 1 and 1600.
         /// </param>
-        /// <returns></returns>
+        /// <returns>Instance of a request</returns>
         public OnlineMapsGooglePlacePhoto Download(string key, int? maxWidth = null, int? maxHeight = null)
         {
             if (!maxWidth.HasValue) maxWidth = width;

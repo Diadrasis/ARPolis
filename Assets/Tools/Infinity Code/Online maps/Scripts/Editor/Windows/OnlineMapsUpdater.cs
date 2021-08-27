@@ -8,8 +8,10 @@ using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Networking;
 using Debug = UnityEngine.Debug;
 
 public class OnlineMapsUpdater : EditorWindow 
@@ -171,6 +173,20 @@ public class OnlineMapsUpdater : EditorWindow
         foreach (OnlineMapsXML node in xml) updates.Add(new OnlineMapsUpdateItem(node));
     }
 
+    private static string Unescape(string str)
+    {
+        return Regex.Replace(str, @"&(\w+);", delegate(Match match)
+        {
+            string v = match.Groups[1].Value;
+            if (v == "amp") return "&";
+            if (v == "lt") return "<";
+            if (v == "gt") return ">";
+            if (v == "quot") return "\"";
+            if (v == "apos") return "'";
+            return match.Value;
+        });
+    }
+
     private void OnEnable()
     {
         if (EditorPrefs.HasKey(invoiceNumberKey)) invoiceNumber = EditorPrefs.GetString(invoiceNumberKey);
@@ -265,7 +281,7 @@ public class OnlineMapsUpdater : EditorWindow
         {
             version = node.Get<string>("Version");
             type = node.Get<int>("Type");
-            changelog = node.Get<string>("ChangeLog");
+            changelog = Unescape(node.Get<string>("ChangeLog"));
             download = node.Get<string>("Download");
             date = node.Get<string>("Date");
 

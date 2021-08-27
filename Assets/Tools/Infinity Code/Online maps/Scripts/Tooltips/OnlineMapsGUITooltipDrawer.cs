@@ -147,6 +147,9 @@ public class OnlineMapsGUITooltipDrawer: OnlineMapsTooltipDrawerBase
         map.GetCorners(out tlx, out tly, out brx, out bry);
         if (brx < tlx) brx += 360;
 
+        float widthScale = tsControl.sizeInScene.x / map.width / 2;
+        float heightScale = tsControl.sizeInScene.y / map.height / 2;
+
         foreach (OnlineMapsMarker marker in control.markerManager)
         {
             if (string.IsNullOrEmpty(marker.label)) continue;
@@ -160,13 +163,49 @@ public class OnlineMapsGUITooltipDrawer: OnlineMapsTooltipDrawerBase
             else if (OnlineMapsMarkerBase.OnMarkerDrawTooltip != null) OnlineMapsMarkerBase.OnMarkerDrawTooltip(marker);
             else
             {
-                Vector3 p1 = tsControl.GetWorldPositionWithElevation(mx, my, tlx, tly, brx, bry);
-                Vector3 p2 = p1 + new Vector3(0, 0, tsControl.sizeInScene.y / map.height * marker.height * marker.scale);
+                Vector3 pivotPoint = tsControl.GetWorldPositionWithElevation(mx, my, tlx, tly, brx, bry);
+                Vector3 centerPoint = pivotPoint;
 
-                Vector2 screenPoint1 = tsControl.activeCamera.WorldToScreenPoint(p1);
-                Vector2 screenPoint2 = tsControl.activeCamera.WorldToScreenPoint(p2);
+                float xOffset = widthScale * marker.width * marker.scale;
+                float zOffset = heightScale * marker.height * marker.scale;
 
-                float yOffset = (screenPoint1.y - screenPoint2.y) * map.transform.localScale.x - 10;
+                if (marker.align == OnlineMapsAlign.BottomLeft ||
+                    marker.align == OnlineMapsAlign.Left ||
+                    marker.align == OnlineMapsAlign.TopLeft)
+                {
+                    centerPoint.x += xOffset;
+                }
+                else if (marker.align == OnlineMapsAlign.BottomRight ||
+                         marker.align == OnlineMapsAlign.Right ||
+                         marker.align == OnlineMapsAlign.TopRight)
+                {
+                    centerPoint.x -= xOffset;
+                }
+
+                if (marker.align == OnlineMapsAlign.Top ||
+                    marker.align == OnlineMapsAlign.TopLeft ||
+                    marker.align == OnlineMapsAlign.TopRight)
+                {
+                    centerPoint.z += zOffset;
+                }
+                else if (marker.align == OnlineMapsAlign.BottomLeft ||
+                         marker.align == OnlineMapsAlign.Bottom ||
+                         marker.align == OnlineMapsAlign.BottomRight)
+                {
+                    centerPoint.z -= zOffset;
+                }
+
+                bool useRotation = marker.align != OnlineMapsAlign.Center && Math.Abs(marker.rotation) > float.Epsilon;
+                if (useRotation) centerPoint = Quaternion.Euler(0, marker.rotation * 360, 0) * (centerPoint - pivotPoint) + pivotPoint;
+
+                Vector3 topPoint = centerPoint + new Vector3(0, 0, zOffset);
+
+                if (useRotation) topPoint = Quaternion.Euler(0, marker.rotation * -360, 0) * (centerPoint - topPoint) + centerPoint;
+
+                Vector2 screenPoint1 = tsControl.activeCamera.WorldToScreenPoint(centerPoint);
+                Vector2 screenPoint2 = tsControl.activeCamera.WorldToScreenPoint(topPoint);
+
+                float yOffset = (screenPoint1 - screenPoint2).magnitude * map.transform.localScale.x - 10;
 
                 OnGUITooltip(style, marker.label, screenPoint1 + new Vector2(0, yOffset));
             }

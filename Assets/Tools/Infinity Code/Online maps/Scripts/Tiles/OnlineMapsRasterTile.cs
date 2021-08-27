@@ -52,6 +52,7 @@ public class OnlineMapsRasterTile : OnlineMapsTile
     private string _trafficURL;
     private byte[] labelData;
     private Color32[] labelColors;
+    public Color32[] mergedColors;
 
 
     /// <summary>
@@ -61,6 +62,7 @@ public class OnlineMapsRasterTile : OnlineMapsTile
     {
         get
         {
+            if (mergedColors != null) return mergedColors;
             if (_colors != null) return _colors;
             return defaultColors;
         }
@@ -149,9 +151,9 @@ public class OnlineMapsRasterTile : OnlineMapsTile
         {
             _colors = texture.GetPixels32();
             MergeColors();
-            t.SetPixels32(_colors);
+            t.SetPixels32(mergedColors);
             texture = t;
-            _colors = null;
+            mergedColors = null;
         }
     }
 
@@ -203,7 +205,10 @@ public class OnlineMapsRasterTile : OnlineMapsTile
             trafficTexture = null;
         }
 
+        mapType = null;
+        _trafficProvider = null;
         _colors = null;
+        mergedColors = null;
         labelData = null;
         labelColors = null;
         OnSetColor = null;
@@ -281,6 +286,8 @@ public class OnlineMapsRasterTile : OnlineMapsTile
             if (status != OnlineMapsTileStatus.error && status != OnlineMapsTileStatus.disposed)
             {
                 texture = tileTexture;
+                OnlineMapsTileSetControl tsControl = map.control as OnlineMapsTileSetControl;
+                if (tsControl != null && tsControl.compressTextures) texture.Compress(true);
                 status = OnlineMapsTileStatus.loaded;
             }
         }
@@ -300,16 +307,23 @@ public class OnlineMapsRasterTile : OnlineMapsTile
         {
             if (status == OnlineMapsTileStatus.error || status == OnlineMapsTileStatus.disposed) return;
             if (labelColors == null || _colors == null || labelColors.Length != _colors.Length) return;
+            
+            Color32[] mColors = new Color32[_colors.Length];
 
             for (int i = 0; i < _colors.Length; i++)
             {
-                float a = labelColors[i].a;
-                if (Math.Abs(a) > float.Epsilon)
+                Color32 lColor = labelColors[i];
+                float a = lColor.a;
+                if (a > 0)
                 {
-                    labelColors[i].a = 1;
-                    _colors[i] = Color32.Lerp(_colors[i], labelColors[i], a);
+                    mColors[i] = Color32.Lerp(_colors[i], lColor, a);
+                    mColors[i].a = 255;
                 }
+                else mColors[i] = _colors[i];
             }
+
+            mergedColors = mColors;
+            labelColors = null;
         }
         catch
         {

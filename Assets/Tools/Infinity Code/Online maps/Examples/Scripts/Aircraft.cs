@@ -15,6 +15,9 @@ namespace InfinityCode.OnlineMapsDemos
         public Vector3 cameraOffset = new Vector3(-10, -3, 0);
 
         public float tiltSpeed = 1;
+        public float altitudeChangeSpeed = 100;
+        public AnimationCurve altitudeZoomCurve = AnimationCurve.Linear(0, 19, 1, 13);
+        public float maxAltitude = 4000; // meters
 
         private double px, py;
         public float tilt = 0;
@@ -42,7 +45,7 @@ namespace InfinityCode.OnlineMapsDemos
             map.GetPosition(out px, out py);
         }
 
-        void Update()
+        private void Update()
         {
             const float maxTilt = 50;
 
@@ -59,6 +62,15 @@ namespace InfinityCode.OnlineMapsDemos
                 float tiltOffset = Time.deltaTime * tiltSpeed * maxTilt;
                 if (Mathf.Abs(tilt) > tiltOffset) tilt -= tiltOffset * Mathf.Sign(tilt);
                 else tilt = 0;
+            }
+
+            if (Input.GetKey(KeyCode.W))
+            {
+                altitude += altitudeChangeSpeed * Time.deltaTime;
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                altitude -= altitudeChangeSpeed * Time.deltaTime;
             }
 
             tilt = Mathf.Clamp(tilt, -maxTilt, maxTilt);
@@ -87,12 +99,17 @@ namespace InfinityCode.OnlineMapsDemos
             px += ox;
             py += oy;
 
-            map.SetPosition(px, py);
+            map.SetPositionAndZoom(px, py, altitudeZoomCurve.Evaluate(altitude / maxAltitude));
 
             Vector3 pos = transform.position;
             pos.y = altitude;
             if (elevationManager != null) pos.y *= OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry) * elevationManager.scale;
             transform.position = pos;
+
+            Vector2 distance = OnlineMapsUtils.DistanceBetweenPoints(map.topLeftPosition, map.bottomRightPosition);
+            OnlineMapsControlBaseDynamicMesh.instance.sizeInScene = distance * 1000;
+            Vector3 d = transform.position - OnlineMapsControlBaseDynamicMesh.instance.center;
+            map.transform.position = new Vector3(d.x, map.transform.position.y, d.z);
 
             Camera.main.transform.position = transform.position - transform.rotation * cameraOffset;
             Camera.main.transform.LookAt(transform);

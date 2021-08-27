@@ -11,6 +11,8 @@ namespace InfinityCode.OnlineMapsExamples
     [AddComponentMenu("Infinity Code/Online Maps/Examples (API Usage)/ResetCameraRotationExample")]
     public class ResetCameraRotationExample : MonoBehaviour
     {
+        public Vector2 defaultRotation = Vector2.zero;
+
         /// <summary>
         /// Time of animation (sec).
         /// </summary>
@@ -62,8 +64,8 @@ namespace InfinityCode.OnlineMapsExamples
 
             // Update the rotation of camera.
             float f = animationCurve.Evaluate(t);
-            cameraOrbit.rotation.x = Mathf.Lerp(camX, 0, f);
-            cameraOrbit.rotation.y = Mathf.Lerp(camY, 0, f);
+            cameraOrbit.rotation.x = Mathf.LerpAngle(camX, defaultRotation.x, f);
+            cameraOrbit.rotation.y = Mathf.Lerp(camY, defaultRotation.y, f);
         }
     }
 }

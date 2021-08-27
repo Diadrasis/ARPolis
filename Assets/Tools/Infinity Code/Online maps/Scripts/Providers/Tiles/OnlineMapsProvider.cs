@@ -151,10 +151,10 @@ public class OnlineMapsProvider
     }
 
     /// <summary>
-    /// Gets an instance of a map type by ID.\n
-    /// ID - providerID or providerID(dot)typeID.\n
-    /// If the typeID is not specified returns the first map type of provider.
-    /// If the provider ID is not found, returns the first map type of the first provider.
+    /// Gets an instance of a map type by ID.<br/>
+    /// ID - providerID or providerID(dot)typeID.<br/>
+    /// If the typeID is not specified returns the first map type of provider.<br/>
+    /// If the provider ID is not found, returns the first map type of the first provider.<br/>
     /// Example: nokia or google.satellite
     /// </summary>
     /// <param name="mapTypeID">ID of map type</param>
@@ -287,7 +287,7 @@ public class OnlineMapsProvider
                         urlWithoutLabels = "https://khm{rnd0-3}.googleapis.com/kh?v={version}&hl={lng}&x={x}&y={y}&z={zoom}",
                         extraFields = new []
                         {
-                            new ExtraField("Tile version", "version", "865")
+                            new ExtraField("Tile version", "version", "902")
                         }
                     },
                     new MapType(RELIEF)
@@ -381,9 +381,34 @@ public class OnlineMapsProvider
                     new MapType("19century", "19th century") { variantWithLabels = "army2-m" }, 
                 }
             }, 
+            new OnlineMapsProvider("nationalmap", "National Map")
+            {
+                url = "https://basemap.nationalmap.gov/arcgis/rest/services/{variant}/MapServer/tile/{z}/{y}/{x}",
+                //hasLabels = true,
+                _types = new []
+                {
+                    new MapType("USGSHydroCached")
+                    {
+                        variantWithLabels = "USGSHydroCached"
+                    }, 
+                    new MapType("USGSImagery")
+                    {
+                        variantWithoutLabels = "USGSImageryOnly",
+                        variantWithLabels = "USGSImageryTopo"
+                    }, 
+                    new MapType("USGSShadedReliefOnly")
+                    {
+                        variantWithoutLabels = "USGSShadedReliefOnly"
+                    }, 
+                    new MapType("USGSTopo")
+                    {
+                        variantWithLabels = "USGSTopo"
+                    }
+                }
+            }, 
             new OnlineMapsProvider("nokia", "Nokia Maps (here.com)")
             {
-                url = "https://{rnd1-4}.{prop2}.maps.cit.api.here.com/maptile/2.1/{prop}/newest/{variant}/{zoom}/{x}/{y}/256/png8?lg={lng}&app_id={appid}&app_code={appcode}",
+                url = "https://{rnd1-4}.{prop2}.maps.api.here.com/maptile/2.1/{prop}/newest/{variant}/{zoom}/{x}/{y}/256/png8?lg={lng}&app_id={appid}&app_code={appcode}",
                 twoLetterLanguage = false,
                 hasLanguage = true,
                 labelsEnabled = true,
@@ -630,6 +655,7 @@ public class OnlineMapsProvider
                     new MapType("AMap Terrain") { urlWithLabels = "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={zoom}" },
                     new MapType("MtbMap") { urlWithLabels = "http://tile.mtbmap.cz/mtbmap_tiles/{z}/{x}/{y}.png" },
                     new MapType("HikeBike") { urlWithLabels = "https://a.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png" },
+                    new MapType("Waze") { urlWithLabels = "https://worldtiles{rnd1-4}.waze.com/tiles/{z}/{x}/{y}.png" },
                 }
             }, 
             new OnlineMapsProvider("Custom")

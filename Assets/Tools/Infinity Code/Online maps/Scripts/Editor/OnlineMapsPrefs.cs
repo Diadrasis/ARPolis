@@ -50,6 +50,7 @@ public static class OnlineMapsPrefs
                 {
                     try
                     {
+                        OnlineMaps.isPlaying = false;
                         IOnlineMapsSavableComponent[] savableComponents = map.GetComponents<IOnlineMapsSavableComponent>();
                         OnlineMapsSavableItem[] savableItems = savableComponents.SelectMany(c => c.GetSavableItems()).ToArray();
                         if (savableItems.Length != 0)

@@ -111,6 +111,9 @@ public class OnlineMapsMarkerBase: IOnlineMapsInteractiveElement
     private IOnlineMapsInteractiveElementManager _manager;
     private bool _isDraggable;
 
+    /// <summary>
+    /// Get customFields dictionary.
+    /// </summary>
     public Dictionary<string, object> customFields
     {
         get
@@ -120,6 +123,11 @@ public class OnlineMapsMarkerBase: IOnlineMapsInteractiveElement
         }
     }
 
+    /// <summary>
+    /// Get or set a value in the customFields dictionary by key.
+    /// </summary>
+    /// <param name="key">Field key.</param>
+    /// <returns>Field value.</returns>
     public object this[string key]
     {
         get

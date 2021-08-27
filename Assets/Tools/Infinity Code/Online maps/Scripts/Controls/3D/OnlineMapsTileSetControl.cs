@@ -36,6 +36,11 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
     public OnlineMapsColliderType colliderType = OnlineMapsColliderType.fullMesh;
 
     /// <summary>
+    /// Compress texture to reduce memory usage.
+    /// </summary>
+    public bool compressTextures = true;
+
+    /// <summary>
     /// Plane by using which the map is dragged. Exists only during drag.
     /// </summary>
     public Plane? dragPlane;
@@ -81,6 +86,12 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
     private int[] triangles;
     private Vector2[] uv;
     private Vector3[] vertices;
+    private bool hasTrafficProp;
+    private bool hasOverlayBackProp;
+    private bool hasOverlayBackAlphaProp;
+    private bool hasOverlayFrontProp;
+    private bool hasOverlayFrontAlphaProp;
+    private MeshProps meshProps;
 
     #endregion
     #endregion
@@ -109,6 +120,96 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
     #endregion
 
     #region Methods
+
+    private void CacheMaterialProperties()
+    {
+        Material fMaterial = rendererInstance.materials[0];
+        hasTrafficProp = fMaterial.HasProperty("_TrafficTex");
+        hasOverlayBackProp = fMaterial.HasProperty("_OverlayBackTex");
+        hasOverlayBackAlphaProp = fMaterial.HasProperty("_OverlayBackAlpha");
+        hasOverlayFrontProp = fMaterial.HasProperty("_OverlayFrontTex");
+        hasOverlayFrontAlphaProp = fMaterial.HasProperty("_OverlayFrontAlpha");
+    }
+
+    private void GenerateTileVertices(MeshProps p, int x, int y, int i)
+    {
+        float sizeInSceneX = -sizeInScene.x;
+        float sizeInSceneZ = sizeInScene.y;
+        bool useElevation = hasElevation;
+        float fy = 0;
+
+        double spx = p.startPosX - x * p.subMeshSizeX;
+        double spz = p.startPosZ + y * p.subMeshSizeY;
+
+        int subMeshVX = p.subMeshVX;
+        int subMeshVZ = p.subMeshVZ;
+        double uvX = p.uvX;
+        double uvZ = p.uvZ;
+        double cellSizeX = p.cellSizeX;
+        double cellSizeY = p.cellSizeY;
+
+        Vector3 v1 = new Vector3();
+        Vector2 v2 = new Vector2();
+
+        for (int ty = 0; ty <= subMeshVZ; ty++)
+        {
+            double uvy = 1 - uvZ * ty;
+            double pz = spz + ty * cellSizeY;
+
+            if (pz < 0)
+            {
+                uvy = uvZ * ((pz + cellSizeY) / cellSizeY - 1) + uvy;
+                pz = 0;
+            }
+            else if (pz > sizeInSceneZ)
+            {
+                uvy = uvZ * ((pz - sizeInSceneZ) / cellSizeY) + uvy;
+                pz = sizeInSceneZ;
+            }
+
+            for (int tx = 0; tx <= subMeshVX; tx++)
+            {
+                double uvx = uvX * tx;
+                double px = spx - tx * cellSizeX;
+
+                if (px > 0)
+                {
+                    uvx = uvX * (px - cellSizeX) / cellSizeX + uvx + uvX;
+                    px = 0;
+                }
+                else if (px < sizeInSceneX)
+                {
+                    uvx = uvX * ((px - sizeInSceneX) / cellSizeX - 1) + uvx + uvX;
+                    px = sizeInSceneX;
+                }
+
+                v1.x = (float) px;
+                v1.z = (float) pz;
+
+                float fux = (float) uvx;
+                float fuy = (float) uvy;
+
+                if (useElevation)
+                {
+                    v1.y = fy = elevationManager.GetElevationValue(px, pz, p.yScale, p.tlx, p.tly, p.brx, p.bry);
+                    if (fy < p.minY) p.minY = fy;
+                    if (fy > p.maxY) p.maxY = fy;
+                }
+
+                if (fux < 0) fux = 0;
+                else if (fux > 1) fux = 1;
+
+                if (fuy < 0) fuy = 0;
+                else if (fuy > 1) fuy = 1;
+
+                v2.x = fux;
+                v2.y = fuy;
+
+                vertices[i] = v1;
+                uv[i++] = v2;
+            }
+        }
+    }
 
     public override bool GetCoords(Vector2 position, out double lng, out double lat)
     {
@@ -154,10 +255,10 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         int countY = map.buffer.renderState.height / OnlineMapsUtils.tileSize;
 
         double px, py;
-        map.GetTilePosition(out px, out py);
+        map.GetTilePosition(out px, out py, map.buffer.renderState.zoom);
         px += countX * r.x * zoomCoof;
         py -= countY * r.y * zoomCoof;
-        map.projection.TileToCoordinates(px, py, map.zoom, out px, out py);
+        map.projection.TileToCoordinates(px, py, map.buffer.renderState.zoom, out px, out py);
         return new Vector2((float) px, (float) py);
     }
 
@@ -191,6 +292,19 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         return true;
     }
 
+    private Texture GetEmptyTileTexture()
+    {
+        if (map.defaultTileTexture != null) return map.defaultTileTexture;
+        if (OnlineMapsRasterTile.emptyColorTexture != null) return OnlineMapsRasterTile.emptyColorTexture;
+        
+        Texture tileTexture = OnlineMapsRasterTile.emptyColorTexture = new Texture2D(1, 1, TextureFormat.ARGB32, mipmapForTiles);
+        tileTexture.name = "Empty Texture";
+        OnlineMapsRasterTile.emptyColorTexture.SetPixel(0, 0, map.emptyColor);
+        OnlineMapsRasterTile.emptyColorTexture.Apply(false);
+
+        return tileTexture;
+    }
+
     public override Vector2 GetScreenPosition(double lng, double lat)
     {
         double px, py;
@@ -203,13 +317,40 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
 
         double tlx, tly, brx, bry;
         map.GetCorners(out tlx, out tly, out brx, out bry);
+
         float elevationScale = OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry);
         float elevation = 0;
-        if (OnlineMapsElevationManagerBase.useElevation) elevation = OnlineMapsElevationManagerBase.GetElevation(cpx, cpy, elevationScale, tlx, tly, brx, bry);
+        if (hasElevation) elevation = elevationManager.GetElevationValue(cpx, cpy, elevationScale, tlx, tly, brx, bry);
         Vector3 worldPos = transform.position + transform.rotation * new Vector3((float)(cpx * transform.lossyScale.x), elevation * transform.lossyScale.y, (float)(cpy * transform.lossyScale.z));
 
         Camera cam = activeCamera != null? activeCamera: Camera.main;
         return cam.WorldToScreenPoint(worldPos);
+    }
+
+    private OnlineMapsTile GetTargetTile(OnlineMapsTile tile)
+    {
+        if (tile == null || tile.status == OnlineMapsTileStatus.loaded) return tile;
+
+        int tx = tile.x;
+        int ty = tile.y;
+
+        int zoom = tile.zoom;
+        int z = zoom;
+
+        while (z > 0)
+        {
+            z--;
+
+            int s = 1 << (zoom - z);
+            int ctx = tx / s;
+            int cty = ty / s;
+
+            OnlineMapsTile t;
+            map.tileManager.GetTile(z, ctx, cty, out t);
+            if (t != null && t.status == OnlineMapsTileStatus.loaded) return t;
+        }
+
+        return null;
     }
 
     public override bool GetTile(Vector2 position, out double tx, out double ty)
@@ -285,12 +426,22 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
 
         if (tilesetMesh == null)
         {
-            meshFilter = gameObject.AddComponent<MeshFilter>();
-            MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
+            meshFilter = gameObject.GetComponent<MeshFilter>();
+            if (meshFilter == null) meshFilter = gameObject.AddComponent<MeshFilter>();
+            MeshRenderer meshRenderer = gameObject.GetComponent<MeshRenderer>();
+            if (meshRenderer == null) meshRenderer = gameObject.AddComponent<MeshRenderer>();
             meshRenderer.hideFlags = HideFlags.HideInInspector;
 
-            if (colliderType == OnlineMapsColliderType.fullMesh || colliderType == OnlineMapsColliderType.simpleMesh) meshCollider = gameObject.AddComponent<MeshCollider>();
-            else if (colliderType == OnlineMapsColliderType.box || colliderType == OnlineMapsColliderType.flatBox) boxCollider = gameObject.AddComponent<BoxCollider>();
+            if (colliderType == OnlineMapsColliderType.fullMesh || colliderType == OnlineMapsColliderType.simpleMesh)
+            {
+                meshCollider = gameObject.GetComponent<MeshCollider>();
+                if (meshCollider == null) meshCollider = gameObject.AddComponent<MeshCollider>();
+            }
+            else if (colliderType == OnlineMapsColliderType.box || colliderType == OnlineMapsColliderType.flatBox)
+            {
+                boxCollider = gameObject.GetComponent<BoxCollider>();
+                if (boxCollider == null) boxCollider = gameObject.AddComponent<BoxCollider>();
+            }
 
             tilesetMesh = new Mesh {name = "Tileset"};
         }
@@ -306,7 +457,7 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         int subMeshVX = 1;
         int subMeshVZ = 1;
 
-        if (elevationManager != null)
+        if (hasElevation)
         {
             if (w1 < elevationResolution) subMeshVX = elevationResolution % w1 == 0 ? elevationResolution / w1 : elevationResolution / w1 + 1;
             if (h1 < elevationResolution) subMeshVZ = elevationResolution % h1 == 0 ? elevationResolution / h1 : elevationResolution / h1 + 1;
@@ -348,7 +499,8 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
 
         triangles = null;
 
-        gameObject.GetComponent<Renderer>().materials = materials;
+        rendererInstance.materials = materials;
+        CacheMaterialProperties();
 
         tilesetMesh.MarkDynamic();
         tilesetMesh.RecalculateBounds();
@@ -450,7 +602,7 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         Mesh simpleMesh = new Mesh();
         simpleMesh.MarkDynamic();
 
-        int res = OnlineMapsElevationManagerBase.useElevation ? 6 : 1;
+        int res = hasElevation ? 6 : 1;
         int r2 = res + 1;
         Vector3[] vertices = new Vector3[r2 * r2];
         int[] triangles = new int[res * res * 6];
@@ -497,30 +649,6 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         InitMapMesh();
     }
 
-    protected override void OnMapBasePress()
-    {
-        base.OnMapBasePress();
-
-        if (isMapDrag)
-        {
-            if (OnlineMapsElevationManagerBase.isActive && OnlineMapsElevationManagerBase.instance.zoomRange.InRange(map.zoom) && dragPlane == null)
-            {
-                RaycastHit hit;
-                if (cl.Raycast(activeCamera.ScreenPointToRay(GetInputPosition()), out hit, OnlineMapsUtils.maxRaycastDistance))
-                {
-                    dragPlane = new Plane(Vector3.up, new Vector3(0, hit.point.y, 0));
-                }
-            }
-        }
-    }
-
-    protected override void OnMapBaseRelease()
-    {
-        base.OnMapBaseRelease();
-
-        dragPlane = null;
-    }
-
     protected override void OnDestroyLate()
     {
         base.OnDestroyLate();
@@ -538,6 +666,30 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         vertices = null;
     }
 
+    protected override void OnMapBasePress()
+    {
+        base.OnMapBasePress();
+
+        if (isMapDrag)
+        {
+            if (hasElevation && elevationManager.zoomRange.InRange(map.zoom) && dragPlane == null)
+            {
+                RaycastHit hit;
+                if (cl.Raycast(activeCamera.ScreenPointToRay(GetInputPosition()), out hit, OnlineMapsUtils.maxRaycastDistance))
+                {
+                    dragPlane = new Plane(Vector3.up, new Vector3(0, hit.point.y, 0));
+                }
+            }
+        }
+    }
+
+    protected override void OnMapBaseRelease()
+    {
+        base.OnMapBaseRelease();
+
+        dragPlane = null;
+    }
+
     protected override void ReinitMapMesh()
     {
         int width = map.width;
@@ -549,7 +701,7 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         int subMeshVX = 1;
         int subMeshVZ = 1;
 
-        if (OnlineMapsElevationManagerBase.isActive)
+        if (hasElevation)
         {
             if (w1 < elevationResolution) subMeshVX = elevationResolution % w1 == 0 ? elevationResolution / w1 : elevationResolution / w1 + 1;
             if (h1 < elevationResolution) subMeshVZ = elevationResolution % h1 == 0 ? elevationResolution / h1 : elevationResolution / h1 + 1;
@@ -561,6 +713,7 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         bufferPosition = null;
 
         Material[] materials = rendererInstance.materials;
+        CacheMaterialProperties();
 
         vertices = new Vector3[w * h * (subMeshVX + 1) * (subMeshVZ + 1)];
         uv = new Vector2[vertices.Length];
@@ -679,6 +832,210 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         });
     }
 
+    private void SetBackOverlayTexture(OnlineMapsTile tile, Material material)
+    {
+        if (!hasOverlayBackProp) return;
+
+        Vector2 overlayTextureOffset = Vector2.zero;
+        Vector2 overlayTextureScale = Vector2.one;
+        Texture2D overlayTexture = (tile as OnlineMapsRasterTile).overlayBackTexture;
+
+        int zoom = tile.zoom;
+        int tx = tile.x;
+        int ty = tile.y;
+
+        if (overlayTexture == null)
+        {
+            OnlineMapsRasterTile t = tile.parent as OnlineMapsRasterTile;
+
+            while (t != null)
+            {
+                if (t.overlayBackTexture != null)
+                {
+                    int s = 1 << (zoom - t.zoom);
+                    float scale2 = 1f / s;
+                    overlayTextureOffset.x = tx % s * scale2;
+                    overlayTextureOffset.y = (s - ty % s - 1) * scale2;
+                    overlayTextureScale = new Vector2(scale2, scale2);
+
+                    overlayTexture = t.overlayBackTexture;
+                    break;
+                }
+
+                t = t.parent as OnlineMapsRasterTile;
+            }
+        }
+
+        material.SetTexture("_OverlayBackTex", overlayTexture);
+        material.SetTextureOffset("_OverlayBackTex", overlayTextureOffset);
+        material.SetTextureScale("_OverlayBackTex", overlayTextureScale);
+
+        if (hasOverlayBackAlphaProp) material.SetFloat("_OverlayBackAlpha", tile.overlayBackAlpha);
+    }
+
+    private void SetEmptyMaterials(Material material)
+    {
+        if (map.defaultTileTexture != null) material.mainTexture = map.defaultTileTexture;
+        else
+        {
+            if (OnlineMapsRasterTile.emptyColorTexture == null)
+            {
+                OnlineMapsRasterTile.emptyColorTexture = new Texture2D(1, 1, TextureFormat.ARGB32, mipmapForTiles);
+                OnlineMapsRasterTile.emptyColorTexture.name = "Empty Texture";
+                OnlineMapsRasterTile.emptyColorTexture.SetPixel(0, 0, map.emptyColor);
+                OnlineMapsRasterTile.emptyColorTexture.Apply(false);
+            }
+
+            material.mainTexture = OnlineMapsRasterTile.emptyColorTexture;
+        }
+
+        if (hasTrafficProp) material.SetTexture("_TrafficTex", null);
+        if (hasOverlayBackProp) material.SetTexture("_OverlayBackTex", null);
+        if (hasOverlayFrontProp) material.SetTexture("_OverlayFrontTex", null);
+    }
+
+    private void SetFrontOverlayTexture(OnlineMapsTile tile, Material material)
+    {
+        if (!hasOverlayFrontProp) return;
+
+        Texture2D overlayTexture = (tile as OnlineMapsRasterTile).overlayFrontTexture;
+        if (drawingMode == OnlineMapsTilesetDrawingMode.overlay && overlayTexture == null)
+        {
+            if (tile.status == OnlineMapsTileStatus.loaded && tile.drawingChanged)
+            {
+                if (overlayFrontBuffer == null) overlayFrontBuffer = new Color32[OnlineMapsUtils.sqrTileSize];
+                else
+                {
+                    for (int k = 0; k < OnlineMapsUtils.sqrTileSize; k++) overlayFrontBuffer[k] = new Color32();
+                }
+
+                foreach (OnlineMapsDrawingElement drawingElement in drawingElementManager)
+                {
+                    drawingElement.Draw(overlayFrontBuffer, new OnlineMapsVector2i(tile.x, tile.y), OnlineMapsUtils.tileSize, OnlineMapsUtils.tileSize, tile.zoom, false);
+                }
+
+                if (tile.overlayFrontTexture == null)
+                {
+                    tile.overlayFrontTexture = new Texture2D(OnlineMapsUtils.tileSize, OnlineMapsUtils.tileSize, TextureFormat.ARGB32, mipmapForTiles);
+                    tile.overlayFrontTexture.wrapMode = TextureWrapMode.Clamp;
+                }
+
+                tile.overlayFrontTexture.SetPixels32(overlayFrontBuffer);
+                tile.overlayFrontTexture.Apply(false);
+            }
+        }
+
+        Vector2 overlayTextureOffset = Vector2.zero;
+        Vector2 overlayTextureScale = Vector2.one;
+
+        int zoom = tile.zoom;
+        int tx = tile.x;
+        int ty = tile.y;
+        
+        if (overlayTexture == null)
+        {
+            OnlineMapsRasterTile t = tile.parent as OnlineMapsRasterTile;
+
+            while (t != null)
+            {
+                if (t.overlayFrontTexture != null)
+                {
+                    int s = 1 << (zoom - t.zoom);
+                    float scale2 = 1f / s;
+                    overlayTextureOffset.x = tx % s * scale2;
+                    overlayTextureOffset.y = (s - ty % s - 1) * scale2;
+                    overlayTextureScale = new Vector2(scale2, scale2);
+
+                    overlayTexture = t.overlayFrontTexture;
+                    break;
+                }
+
+                t = t.parent as OnlineMapsRasterTile;
+            }
+        }
+
+        material.SetTexture("_OverlayFrontTex", overlayTexture);
+        material.SetTextureOffset("_OverlayFrontTex", overlayTextureOffset);
+        material.SetTextureScale("_OverlayFrontTex", overlayTextureScale);
+
+        if (hasOverlayFrontAlphaProp) material.SetFloat("_OverlayFrontAlpha", tile.overlayFrontAlpha);
+    }
+
+    private void SetTileMaterials(OnlineMapsTile tile, OnlineMapsTile targetTile, Texture tileTexture, bool sendEvent, Material material, Vector2 offset, float scale)
+    {
+        if (targetTile == null)
+        {
+            SetEmptyMaterials(material);
+            return;
+        }
+
+        if (tileTexture == null)
+        {
+            tileTexture = GetEmptyTileTexture();
+            sendEvent = false;
+        }
+
+        material.mainTextureOffset = offset;
+        material.mainTextureScale = new Vector2(scale, scale);
+
+        if (material.mainTexture != tileTexture)
+        {
+            material.mainTexture = tileTexture;
+            if (sendEvent && OnChangeMaterialTexture != null) OnChangeMaterialTexture(targetTile, material);
+        }
+
+        SetTrafficTexture(targetTile, material);
+        SetBackOverlayTexture(tile, material);
+        SetFrontOverlayTexture(tile, material);
+
+        if (OnDrawTile != null) OnDrawTile(targetTile, material);
+    }
+
+    private void SetTrafficTexture(OnlineMapsTile tile, Material material)
+    {
+        if (!hasTrafficProp) return;
+
+        if (!map.traffic)
+        {
+            material.SetTexture("_TrafficTex", null);
+            return;
+        }
+
+        Vector2 trafficTextureOffset = material.mainTextureOffset;
+        Vector2 trafficTextureScale = material.mainTextureScale;
+        Texture2D trafficTexture = (tile as OnlineMapsRasterTile).trafficTexture;
+
+        int zoom = tile.zoom;
+        int tx = tile.x;
+        int ty = tile.y;
+
+        if (trafficTexture == null)
+        {
+            OnlineMapsRasterTile t = tile.parent as OnlineMapsRasterTile;
+
+            while (t != null)
+            {
+                if (t.trafficTexture != null)
+                {
+                    int s = 1 << (zoom - t.zoom);
+                    float scale2 = 1f / s;
+                    trafficTextureOffset.x = tx % s * scale2;
+                    trafficTextureOffset.y = (s - ty % s - 1) * scale2;
+                    trafficTextureScale = new Vector2(scale2, scale2);
+
+                    trafficTexture = t.trafficTexture;
+                    break;
+                }
+
+                t = t.parent as OnlineMapsRasterTile;
+            }
+        }
+
+        material.SetTexture("_TrafficTex", trafficTexture);
+        material.SetTextureOffset("_TrafficTex", trafficTextureOffset);
+        material.SetTextureScale("_TrafficTex", trafficTextureScale);
+    }
+
     public override void UpdateControl()
     {
         base.UpdateControl();
@@ -703,6 +1060,8 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
 
     private void UpdateMapMesh()
     {
+        if (OnUpdateMeshBefore != null) OnUpdateMeshBefore();
+
         int zoom = map.buffer.renderState.zoom;
 
         int w1 = map.buffer.renderState.width / OnlineMapsUtils.tileSize;
@@ -711,7 +1070,13 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         int subMeshVX = 1;
         int subMeshVZ = 1;
 
-        if (OnlineMapsElevationManagerBase.isActive)
+        if (elevationManager == null)
+        {
+            elevationManager = GetComponent<OnlineMapsElevationManagerBase>();
+            if (elevationManager == null) elevationManager = OnlineMapsElevationManagerBase.instance;
+        }
+
+        if (hasElevation)
         {
             if (w1 < elevationResolution) subMeshVX = elevationResolution % w1 == 0 ? elevationResolution / w1 : elevationResolution / w1 + 1;
             if (h1 < elevationResolution) subMeshVZ = elevationResolution % h1 == 0 ? elevationResolution / h1 : elevationResolution / h1 + 1;
@@ -722,11 +1087,8 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         double subMeshSizeX = sizeInScene.x / w1;
         double subMeshSizeY = sizeInScene.y / h1;
 
-        double tlx, tly, brx, bry;
-        map.buffer.GetCorners(out tlx, out tly, out brx, out bry);
         double px = map.buffer.renderState.longitude;
         double py = map.buffer.renderState.latitude;
-        //map.GetPosition(out px, out py);
 
         double tlpx, tlpy;
 
@@ -747,52 +1109,55 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         double startPosX = subMeshSizeX * posX;
         double startPosZ = -subMeshSizeY * posY;
 
+        double tlx, tly, brx, bry;
+        map.buffer.GetCorners(out tlx, out tly, out brx, out bry);
+
         float yScale = OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry);
 
         int w = w1 + 2;
         int h = h1 + 2;
 
-        Material[] materials = rendererInstance.materials;
-
         if (vertices.Length != w * h * (subMeshVX + 1) * (subMeshVZ + 1))
         {
             ReinitMapMesh();
-            materials = rendererInstance.materials;
+            CacheMaterialProperties();
         }
 
-        Material fMaterial = materials[0];
+        Material[] materials = rendererInstance.materials;
 
-        bool hasTraffic = fMaterial.HasProperty("_TrafficTex");
-        bool hasOverlayBack = fMaterial.HasProperty("_OverlayBackTex");
-        bool hasOverlayBackAlpha = fMaterial.HasProperty("_OverlayBackAlpha");
-        bool hasOverlayFront = fMaterial.HasProperty("_OverlayFrontTex");
-        bool hasOverlayFrontAlpha = fMaterial.HasProperty("_OverlayFrontAlpha");
+        if (meshProps == null) meshProps = new MeshProps();
 
-        float minY = float.PositiveInfinity;
-        float maxY = float.NegativeInfinity;
+        meshProps.Set(subMeshSizeX, subMeshSizeY, subMeshVX, subMeshVZ);
+        meshProps.w = w;
+        meshProps.h = h;
+        meshProps.startPosX = startPosX;
+        meshProps.startPosZ = startPosZ;
+        meshProps.yScale = yScale;
+        meshProps.tlx = tlx;
+        meshProps.tly = tly;
+        meshProps.brx = brx;
+        meshProps.bry = bry;
 
         for (int y = 0; y < h; y++)
         {
             for (int x = 0; x < w; x++)
             {
-                UpdateMapSubMesh(
-                    x, y, w, h, subMeshSizeX, subMeshSizeY, subMeshVX, subMeshVZ, startPosX, startPosZ, yScale, 
-                    tlx, tly, brx, bry, materials, ref minY, ref maxY, 
-                    hasTraffic, hasOverlayBack, hasOverlayBackAlpha, hasOverlayFront, hasOverlayFrontAlpha
-                );
+                UpdateMapSubMesh(x, y, meshProps, materials);
             }
         }
+
+        if (!hasElevation) meshProps.minY = meshProps.maxY = 0;
 
         tilesetMesh.vertices = vertices;
         tilesetMesh.uv = uv;
 
         tilesetMesh.RecalculateBounds();
 
-        if (OnlineMapsElevationManagerBase.isActive || firstUpdate)
+        if (hasElevation || firstUpdate)
         {
             if (meshCollider != null)
             {
-                if (firstUpdate || elevationManager.zoomRange.InRange(zoom))
+                if (firstUpdate || hasElevation && elevationManager.zoomRange.InRange(zoom))
                 {
                     colliderWithElevation = true;
                     if (colliderType == OnlineMapsColliderType.fullMesh)
@@ -815,254 +1180,68 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
             }
             else if (boxCollider != null)
             {
-                boxCollider.center = new Vector3(-sizeInScene.x / 2, (minY + maxY) / 2, sizeInScene.y / 2);
-                boxCollider.size = new Vector3(sizeInScene.x, colliderType == OnlineMapsColliderType.box ? maxY - minY : 0, sizeInScene.y);
+                boxCollider.center = new Vector3(-sizeInScene.x / 2, (meshProps.minY + meshProps.maxY) / 2, sizeInScene.y / 2);
+                boxCollider.size = new Vector3(sizeInScene.x, colliderType == OnlineMapsColliderType.box ? meshProps.maxY - meshProps.minY : 0, sizeInScene.y);
             }
 
             firstUpdate = false;
         }
 
         if (OnMeshUpdated != null) OnMeshUpdated();
+        if (OnUpdateMeshAfter != null) OnUpdateMeshAfter();
     }
 
-    private void UpdateMapSubMesh(int x, int y, int w, int h, double subMeshSizeX, double subMeshSizeY, int subMeshVX, int subMeshVZ, double startPosX, double startPosZ, float yScale, double tlx, double tly, double brx, double bry, Material[] materials, ref float minY, ref float maxY, bool hasTraffic, bool hasOverlayBack, bool hasOverlayBackAlpha, bool hasOverlayFront, bool hasOverlayFrontAlpha)
+    private void UpdateMapSubMesh(int x, int y, MeshProps p, Material[] materials)
     {
-        int mi = x + y * w;
-        int i = mi * (subMeshVX + 1) * (subMeshVZ + 1);
+        int mi = x + y * p.w;
+        int i = mi * (p.subMeshVX + 1) * (p.subMeshVZ + 1);
 
-        double cellSizeX = subMeshSizeX / subMeshVX;
-        double cellSizeY = subMeshSizeY / subMeshVZ;
-
-        double uvX = 1.0 / subMeshVX;
-        double uvZ = 1.0 / subMeshVZ;
-
-        int bx = x + bufferPosition.x;
-        int by = y + bufferPosition.y;
+        int tx = x + bufferPosition.x;
+        int ty = y + bufferPosition.y;
 
         int zoom = map.buffer.renderState.zoom;
         int maxX = 1 << zoom;
 
-        if (bx >= maxX) bx -= maxX;
-        if (bx < 0) bx += maxX;
+        if (tx >= maxX) tx -= maxX;
+        if (tx < 0) tx += maxX;
 
         OnlineMapsTile tile;
-        map.tileManager.GetTile(zoom, bx, by, out tile);
+        map.tileManager.GetTile(zoom, tx, ty, out tile);
 
-        OnlineMapsTile currentTile = tile;
-        if (currentTile != null && currentTile.status != OnlineMapsTileStatus.loaded) currentTile = null;
         Vector2 offset = Vector2.zero;
         float scale = 1;
-        int z = zoom;
+        Texture tileTexture = null;
 
-        Texture tileTexture = currentTile != null ? currentTile.texture : null;
+        OnlineMapsTile targetTile = GetTargetTile(tile);
         bool sendEvent = true;
 
-        while ((currentTile == null || tileTexture == null) && z > 0)
+        if (targetTile != null)
         {
-            z--;
-
-            int s = 1 << (zoom - z);
-            int ctx = bx / s;
-            int cty = by / s;
-            OnlineMapsTile t;
-            map.tileManager.GetTile(z, ctx, cty, out t);
-            if (t != null && t.status == OnlineMapsTileStatus.loaded)
+            if (tile != targetTile)
             {
-                currentTile = t;
-                tileTexture = t.texture;
-                scale = 1f / s;
-                offset.x = bx % s * scale;
-                offset.y = (s - by % s - 1) * scale;
                 sendEvent = false;
-                break;
+                int s = 1 << (zoom - targetTile.zoom);
+                tileTexture = targetTile.texture;
+                scale = 1f / s;
+                offset.x = tx % s * scale;
+                offset.y = (s - ty % s - 1) * scale;
             }
+            else tileTexture = tile.texture;
         }
 
-        bool needGetElevation = OnlineMapsElevationManagerBase.useElevation;
-
-        float fy = 0;
-        double spx = startPosX - x * subMeshSizeX;
-        double spz = startPosZ + y * subMeshSizeY;
-        float tilesizeX = sizeInScene.x;
-        float tilesizeZ = sizeInScene.y;
-
-        for (int ty = 0; ty <= subMeshVZ; ty++)
-        {
-            double uvy = 1 - uvZ * ty;
-            double pz = spz + ty * cellSizeY;
-
-            if (pz < 0)
-            {
-                uvy = uvZ * ((pz + cellSizeY) / cellSizeY - 1) + uvy;
-                pz = 0;
-            }
-            else if (pz > tilesizeZ)
-            {
-                uvy = uvZ * ((pz - tilesizeZ) / cellSizeY) + uvy;
-                pz = tilesizeZ;
-            }
-
-            for (int tx = 0; tx <= subMeshVX; tx++)
-            {
-                double uvx = uvX * tx;
-                double px = spx - tx * cellSizeX; 
-
-                if (px > 0)
-                {
-                    uvx = uvX * (px - cellSizeX) / cellSizeX + uvx + uvX;
-                    px = 0;
-                }
-                else if (px < -tilesizeX)
-                {
-                    uvx = uvX * ((px + tilesizeX) / cellSizeX - 1) + uvx + uvX;
-                    px = -tilesizeX;
-                }
-
-                if (needGetElevation) fy = OnlineMapsElevationManagerBase.GetElevation(px, pz, yScale, tlx, tly, brx, bry);
-
-                float fx = (float) px;
-                float fz = (float) pz;
-
-                float fux = (float) uvx;
-                float fuy = (float) uvy;
-
-                if (fy < minY) minY = fy;
-                if (fy > maxY) maxY = fy;
-
-                if (fux < 0) fux = 0;
-                else if (fux > 1) fux = 1;
-
-                if (fuy < 0) fuy = 0;
-                else if (fuy > 1) fuy = 1;
-
-                vertices[i] = new Vector3(fx, fy, fz);
-                uv[i++] = new Vector2(fux, fuy);
-            }
-        }
+        GenerateTileVertices(p, x, y, i);
 
         Material material = materials[mi];
         material.hideFlags = HideFlags.HideInInspector;
 
-        if (currentTile != null)
-        {
-            bool hasTileTexture = tileTexture != null;
-            if (!hasTileTexture)
-            {
-                if (map.defaultTileTexture != null) tileTexture = map.defaultTileTexture;
-                else if (OnlineMapsRasterTile.emptyColorTexture != null) tileTexture = OnlineMapsRasterTile.emptyColorTexture;
-                else
-                {
-                    tileTexture = OnlineMapsRasterTile.emptyColorTexture = new Texture2D(1, 1, TextureFormat.ARGB32, mipmapForTiles);
-                    tileTexture.name = "Empty Texture";
-                    OnlineMapsRasterTile.emptyColorTexture.SetPixel(0, 0, map.emptyColor);
-                    OnlineMapsRasterTile.emptyColorTexture.Apply(false);
-                }
-
-                sendEvent = false;
-            }
-
-            material.mainTextureOffset = offset;
-            material.mainTextureScale = new Vector2(scale, scale);
-
-            if (material.mainTexture != tileTexture)
-            {
-                material.mainTexture = tileTexture;
-                if (sendEvent && OnChangeMaterialTexture != null) OnChangeMaterialTexture(currentTile, material); 
-            }
-
-            if (hasTraffic && map.traffic)
-            {
-                Vector2 trafficTextureOffset = material.mainTextureOffset;
-                Vector2 trafficTextureScale = material.mainTextureScale;
-                Texture2D trafficTexture = (currentTile as OnlineMapsRasterTile).trafficTexture;
-                if (trafficTexture == null)
-                {
-                    OnlineMapsRasterTile t = currentTile.parent as OnlineMapsRasterTile;
-
-                    while (t != null)
-                    {
-                        if (t.trafficTexture != null)
-                        {
-                            int s = 1 << (zoom - t.zoom);
-                            float scale2 = 1f / s;
-                            trafficTextureOffset.x = bx % s * scale2;
-                            trafficTextureOffset.y = (s - by % s - 1) * scale2;
-                            trafficTextureScale = new Vector2(scale2, scale2);
-
-                            trafficTexture = t.trafficTexture;
-                            break;
-                        }
-                        t = t.parent as OnlineMapsRasterTile;
-                    }
-                }
-                material.SetTexture("_TrafficTex", trafficTexture);
-                material.SetTextureOffset("_TrafficTex", trafficTextureOffset);
-                material.SetTextureScale("_TrafficTex", trafficTextureScale);
-            }
-            if (hasOverlayBack)
-            {
-                material.SetTexture("_OverlayBackTex", currentTile.overlayBackTexture);
-                material.SetTextureOffset("_OverlayBackTex", material.mainTextureOffset);
-                material.SetTextureScale("_OverlayBackTex", material.mainTextureScale);
-            }
-            if (hasOverlayBackAlpha) material.SetFloat("_OverlayBackAlpha", currentTile.overlayBackAlpha);
-            if (hasOverlayFront)
-            {
-                if (drawingMode == OnlineMapsTilesetDrawingMode.overlay)
-                {
-                    if (currentTile.status == OnlineMapsTileStatus.loaded && (currentTile.drawingChanged || currentTile.overlayFrontTexture == null))
-                    {
-                        if (overlayFrontBuffer == null) overlayFrontBuffer = new Color32[OnlineMapsUtils.sqrTileSize];
-                        else
-                        {
-                            for (int k = 0; k < OnlineMapsUtils.sqrTileSize; k++) overlayFrontBuffer[k] = new Color32();
-                        }
-                        foreach (OnlineMapsDrawingElement drawingElement in drawingElementManager)
-                        {
-                            drawingElement.Draw(overlayFrontBuffer, new OnlineMapsVector2i(currentTile.x, currentTile.y), OnlineMapsUtils.tileSize, OnlineMapsUtils.tileSize, currentTile.zoom, false);
-                        }
-                        if (currentTile.overlayFrontTexture == null)
-                        {
-                            currentTile.overlayFrontTexture = new Texture2D(OnlineMapsUtils.tileSize, OnlineMapsUtils.tileSize, TextureFormat.ARGB32, mipmapForTiles);
-                            currentTile.overlayFrontTexture.wrapMode = TextureWrapMode.Clamp;
-                        }
-                        currentTile.overlayFrontTexture.SetPixels32(overlayFrontBuffer);
-                        currentTile.overlayFrontTexture.Apply(false);
-                    }
-                }
-
-                material.SetTexture("_OverlayFrontTex", currentTile.overlayFrontTexture);
-                material.SetTextureOffset("_OverlayFrontTex", material.mainTextureOffset);
-                material.SetTextureScale("_OverlayFrontTex", material.mainTextureScale);
-            }
-            if (hasOverlayFrontAlpha) material.SetFloat("_OverlayFrontAlpha", currentTile.overlayFrontAlpha);
-            if (OnDrawTile != null) OnDrawTile(currentTile, material);
-        }
-        else
-        {
-            if (map.defaultTileTexture != null) material.mainTexture = map.defaultTileTexture;
-            else
-            {
-                if (OnlineMapsRasterTile.emptyColorTexture == null)
-                {
-                    OnlineMapsRasterTile.emptyColorTexture = new Texture2D(1, 1, TextureFormat.ARGB32, mipmapForTiles);
-                    OnlineMapsRasterTile.emptyColorTexture.name = "Empty Texture";
-                    OnlineMapsRasterTile.emptyColorTexture.SetPixel(0, 0, map.emptyColor);
-                    OnlineMapsRasterTile.emptyColorTexture.Apply(false);
-                }
-
-                material.mainTexture = OnlineMapsRasterTile.emptyColorTexture;
-            }
-
-            if (hasTraffic) material.SetTexture("_TrafficTex", null);
-            if (hasOverlayBack) material.SetTexture("_OverlayBackTex", null);
-            if (hasOverlayFront) material.SetTexture("_OverlayFrontTex", null);
-        }
+        SetTileMaterials(tile, targetTile, tileTexture, sendEvent, material, offset, scale);
     }
 
     private void UpdateSimpleMeshCollider(float yScale, double tlx, double tly, double brx, double bry)
     {
-        int res = OnlineMapsElevationManagerBase.useElevation ? 6 : 1;
+        bool elevationActive = hasElevation;
+
+        int res = elevationActive ? 6 : 1;
         int r2 = res + 1;
 
         Vector3[] vertices = new Vector3[r2 * r2];
@@ -1072,8 +1251,6 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         int[] triangles = new int[res * res * 6];
         int ti = 0;
 
-        bool elevationActive = OnlineMapsElevationManagerBase.useElevation;
-
         for (int y = 0; y < r2; y++)
         {
             for (int x = 0; x < r2; x++)
@@ -1082,7 +1259,7 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
                 float pz = sy * y;
 
                 float py = 0;
-                if (elevationActive) py = OnlineMapsElevationManagerBase.GetElevation(px, pz, yScale, tlx, tly, brx, bry);
+                if (elevationActive) py = elevationManager.GetElevationValue(px, pz, yScale, tlx, tly, brx, bry);
 
                 vertices[y * r2 + x] = new Vector3(sx * x, py, sy * y);
 
@@ -1124,6 +1301,37 @@ public class OnlineMapsTileSetControl : OnlineMapsControlBaseDynamicMesh
         fullMesh,
         simpleMesh,
         flatBox
+    }
+
+    public class MeshProps
+    {
+        public double cellSizeX, cellSizeY;
+        public double uvX, uvZ;
+        public double subMeshSizeX, subMeshSizeY;
+        public int subMeshVX, subMeshVZ;
+        public int w, h;
+        public double startPosX, startPosZ;
+        public float yScale;
+        public float minY = float.PositiveInfinity;
+        public float maxY = float.NegativeInfinity;
+        public double tlx, tly, brx, bry;
+
+        public void Set(double subMeshSizeX, double subMeshSizeY, int subMeshVX, int subMeshVZ)
+        {
+            this.subMeshSizeX = subMeshSizeX;
+            this.subMeshSizeY = subMeshSizeY;
+            this.subMeshVX = subMeshVX;
+            this.subMeshVZ = subMeshVZ;
+
+            cellSizeX = subMeshSizeX / subMeshVX;
+            cellSizeY = subMeshSizeY / subMeshVZ;
+
+            uvX = 1.0 / subMeshVX;
+            uvZ = 1.0 / subMeshVZ;
+
+            minY = float.PositiveInfinity;
+            maxY = float.NegativeInfinity;
+        }
     }
 
     #endregion

@@ -7,9 +7,9 @@ using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// The Google Places API allows you to query for place information on a variety of categories, such as: establishments, prominent points of interest, geographic locations, and more. \n
-/// You can search for places either by proximity or a text string. \n
-/// A Place Search returns a list of places along with summary information about each place.\n
+/// The Google Places API allows you to query for place information on a variety of categories, such as: establishments, prominent points of interest, geographic locations, and more. <br/>
+/// You can search for places either by proximity or a text string. <br/>
+/// A Place Search returns a list of places along with summary information about each place.<br/>
 /// https://developers.google.com/places/web-service/search
 /// </summary>
 public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
@@ -35,45 +35,45 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// A Nearby Search lets you search for places within a specified area. \n
+    /// A Nearby Search lets you search for places within a specified area. <br/>
     /// You can refine your search request by supplying keywords or specifying the type of place you are searching for.
     /// </summary>
     /// <param name="lnglat">The longitude/latitude around which to retrieve place information. </param>
     /// <param name="radius">
-    /// Defines the distance (in meters) within which to return place results. \n
+    /// Defines the distance (in meters) within which to return place results. <br/>
     /// The maximum allowed radius is 50 000 meters.
     /// </param>
     /// <param name="key">
-    /// Your application's API key. \n
-    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. \n
+    /// Your application's API key. <br/>
+    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. <br/>
     /// Visit the Google APIs Console to create an API Project and obtain your key.
     /// </param>
     /// <param name="keyword">A term to be matched against all content that Google has indexed for this place, including but not limited to name, type, and address, as well as customer reviews and other third-party content.</param>
     /// <param name="name">
-    /// One or more terms to be matched against the names of places, separated with a space character. \n
-    /// Results will be restricted to those containing the passed name values. \n
-    /// Note that a place may have additional names associated with it, beyond its listed name. \n
-    /// The API will try to match the passed name value against all of these names. \n
+    /// One or more terms to be matched against the names of places, separated with a space character. <br/>
+    /// Results will be restricted to those containing the passed name values. <br/>
+    /// Note that a place may have additional names associated with it, beyond its listed name. <br/>
+    /// The API will try to match the passed name value against all of these names. <br/>
     /// As a result, places may be returned in the results whose listed names do not match the search term, but whose associated names do.
     /// </param>
     /// <param name="types">
-    /// Restricts the results to places matching at least one of the specified types. \n
-    /// Types should be separated with a pipe symbol (type1|type2|etc).\n
-    /// See the list of supported types:\n
+    /// Restricts the results to places matching at least one of the specified types. <br/>
+    /// Types should be separated with a pipe symbol (type1|type2|etc).<br/>
+    /// See the list of supported types:<br/>
     /// https://developers.google.com/places/documentation/supported_types
     /// </param>
     /// <param name="minprice">
-    /// Restricts results to only those places within the specified range. \n
-    /// Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. \n
+    /// Restricts results to only those places within the specified range. <br/>
+    /// Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. <br/>
     /// The exact amount indicated by a specific value will vary from region to region.
     /// </param>
     /// <param name="maxprice">
-    /// Restricts results to only those places within the specified range. \n
-    /// Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. \n
+    /// Restricts results to only those places within the specified range. <br/>
+    /// Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. <br/>
     /// The exact amount indicated by a specific value will vary from region to region.
     /// </param>
     /// <param name="opennow">
-    /// Returns only those places that are open for business at the time the query is sent. \n
+    /// Returns only those places that are open for business at the time the query is sent. <br/>
     /// Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
     /// </param>
     /// <param name="rankBy">Specifies the order in which results are listed.</param>
@@ -96,12 +96,12 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// A Nearby Search lets you search for places within a specified area. \n
+    /// A Nearby Search lets you search for places within a specified area. <br/>
     /// You can refine your search request by supplying keywords or specifying the type of place you are searching for.
     /// </summary>
     /// <param name="key">
-    /// Your application's API key. \n
-    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. \n
+    /// Your application's API key. <br/>
+    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. <br/>
     /// Visit the Google APIs Console to create an API Project and obtain your key.
     /// </param>
     /// <param name="p">The object containing the request parameters.</param>
@@ -112,44 +112,44 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// Returns information about a set of places based on a string — for example "pizza in New York" or "shoe stores near Ottawa". \n
-    /// The service responds with a list of places matching the text string and any location bias that has been set. \n
+    /// Returns information about a set of places based on a string — for example "pizza in New York" or "shoe stores near Ottawa". <br/>
+    /// The service responds with a list of places matching the text string and any location bias that has been set. <br/>
     /// The search response will include a list of places.
     /// </summary>
     /// <param name="query">
-    /// The text string on which to search, for example: "restaurant". \n
+    /// The text string on which to search, for example: "restaurant". <br/>
     /// The Google Places service will return candidate matches based on this string and order the results based on their perceived relevance.
     /// </param>
     /// <param name="key">
-    /// Your application's API key. \n
-    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. \n
+    /// Your application's API key. <br/>
+    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. <br/>
     /// Visit the Google APIs Console to create an API Project and obtain your key.
     /// </param>
     /// <param name="lnglat">The longitude/latitude around which to retrieve place information.</param>
     /// <param name="radius">
-    /// Defines the distance (in meters) within which to bias place results. \n
-    /// The maximum allowed radius is 50 000 meters. \n
+    /// Defines the distance (in meters) within which to bias place results. <br/>
+    /// The maximum allowed radius is 50 000 meters. <br/>
     /// Results inside of this region will be ranked higher than results outside of the search circle; however, prominent results from outside of the search radius may be included.
     /// </param>
     /// <param name="language">The language code, indicating in which language the results should be returned, if possible. </param>
     /// <param name="types">
-    /// Restricts the results to places matching at least one of the specified types. \n
-    /// Types should be separated with a pipe symbol (type1|type2|etc). \n
-    /// See the list of supported types:\n
+    /// Restricts the results to places matching at least one of the specified types. <br/>
+    /// Types should be separated with a pipe symbol (type1|type2|etc). <br/>
+    /// See the list of supported types:<br/>
     /// https://developers.google.com/maps/documentation/places/supported_types
     /// </param>
     /// <param name="minprice">
-    /// Restricts results to only those places within the specified price level. \n
-    /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. \n
+    /// Restricts results to only those places within the specified price level. <br/>
+    /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. <br/>
     /// The exact amount indicated by a specific value will vary from region to region.
     /// </param>
     /// <param name="maxprice">
-    /// Restricts results to only those places within the specified price level. \n
-    /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. \n
+    /// Restricts results to only those places within the specified price level. <br/>
+    /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. <br/>
     /// The exact amount indicated by a specific value will vary from region to region.
     /// </param>
     /// <param name="opennow">
-    /// Returns only those places that are open for business at the time the query is sent. \n
+    /// Returns only those places that are open for business at the time the query is sent. <br/>
     /// Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
     /// </param>
     /// <returns>Query instance to the Google API.</returns>
@@ -171,13 +171,13 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// Returns information about a set of places based on a string — for example "pizza in New York" or "shoe stores near Ottawa". \n
-    /// The service responds with a list of places matching the text string and any location bias that has been set. \n
+    /// Returns information about a set of places based on a string — for example "pizza in New York" or "shoe stores near Ottawa". <br/>
+    /// The service responds with a list of places matching the text string and any location bias that has been set. <br/>
     /// The search response will include a list of places.
     /// </summary>
     /// <param name="key">
-    /// Your application's API key. \n
-    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. \n
+    /// Your application's API key. <br/>
+    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. <br/>
     /// Visit the Google APIs Console to create an API Project and obtain your key.
     /// </param>
     /// <param name="p">The object containing the request parameters.</param>
@@ -188,45 +188,45 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// The Google Places API Radar Search Service allows you to search for up to 200 places at once, but with less detail than is typically returned from a Text Search or Nearby Search request. \n
+    /// The Google Places API Radar Search Service allows you to search for up to 200 places at once, but with less detail than is typically returned from a Text Search or Nearby Search request. <br/>
     /// With Radar Search, you can create applications that help users identify specific areas of interest within a geographic area.
     /// </summary>
     /// <param name="lnglat">The longitude/latitude around which to retrieve place information.</param>
     /// <param name="radius">
-    /// Defines the distance (in meters) within which to return place results. \n
+    /// Defines the distance (in meters) within which to return place results. <br/>
     /// The maximum allowed radius is 50 000 meters.
     /// </param>
     /// <param name="key">
-    /// Your application's API key. \n
-    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. \n
+    /// Your application's API key. <br/>
+    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. <br/>
     /// Visit the Google APIs Console to create an API Project and obtain your key.
     /// </param>
     /// <param name="keyword">A term to be matched against all content that Google has indexed for this place, including but not limited to name, type, and address, as well as customer reviews and other third-party content.</param>
     /// <param name="name">
-    /// One or more terms to be matched against the names of places, separated by a space character. \n
-    /// Results will be restricted to those containing the passed name values. \n
-    /// Note that a place may have additional names associated with it, beyond its listed name. \n
-    /// The API will try to match the passed name value against all of these names. \n
+    /// One or more terms to be matched against the names of places, separated by a space character. <br/>
+    /// Results will be restricted to those containing the passed name values. <br/>
+    /// Note that a place may have additional names associated with it, beyond its listed name. <br/>
+    /// The API will try to match the passed name value against all of these names. <br/>
     /// As a result, places may be returned in the results whose listed names do not match the search term, but whose associated names do.
     /// </param>
     /// <param name="types">
-    /// Restricts the results to places matching at least one of the specified types. \n
-    /// Types should be separated with a pipe symbol (type1|type2|etc). \n
-    /// See the list of supported types:\n
+    /// Restricts the results to places matching at least one of the specified types. <br/>
+    /// Types should be separated with a pipe symbol (type1|type2|etc). <br/>
+    /// See the list of supported types:<br/>
     /// https://developers.google.com/maps/documentation/places/supported_types
     /// </param>
     /// <param name="minprice">
-    /// Restricts results to only those places within the specified price level. \n
-    /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. \n
+    /// Restricts results to only those places within the specified price level. <br/>
+    /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. <br/>
     /// The exact amount indicated by a specific value will vary from region to region.
     /// </param>
     /// <param name="maxprice">
-    /// Restricts results to only those places within the specified price level. \n
-    /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. \n
+    /// Restricts results to only those places within the specified price level. <br/>
+    /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. <br/>
     /// The exact amount indicated by a specific value will vary from region to region.
     /// </param>
     /// <param name="opennow">
-    /// Returns only those places that are open for business at the time the query is sent. \n
+    /// Returns only those places that are open for business at the time the query is sent. <br/>
     /// Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
     /// </param>
     /// <returns>Query instance to the Google API.</returns>
@@ -247,12 +247,12 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// The Google Places API Radar Search Service allows you to search for up to 200 places at once, but with less detail than is typically returned from a Text Search or Nearby Search request. \n
+    /// The Google Places API Radar Search Service allows you to search for up to 200 places at once, but with less detail than is typically returned from a Text Search or Nearby Search request. <br/>
     /// With Radar Search, you can create applications that help users identify specific areas of interest within a geographic area.
     /// </summary>
     /// <param name="key">
-    /// Your application's API key. \n
-    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. \n
+    /// Your application's API key. <br/>
+    /// This key identifies your application for purposes of quota management and so that places added from your application are made immediately available to your app. <br/>
     /// Visit the Google APIs Console to create an API Project and obtain your key.
     /// </param>
     /// <param name="p">The object containing the request parameters.</param>
@@ -278,9 +278,9 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
     /// </summary>
     /// <param name="response">Response of Google API.</param>
     /// <param name="nextPageToken">
-    /// Contains a token that can be used to return up to 20 additional results.\n
-    /// A next_page_token will not be returned if there are no additional results to display.\n
-    /// The maximum number of results that can be returned is 60.\n
+    /// Contains a token that can be used to return up to 20 additional results.<br/>
+    /// A next_page_token will not be returned if there are no additional results to display.<br/>
+    /// The maximum number of results that can be returned is 60.<br/>
     /// There is a short delay between when a next_page_token is issued, and when it will become valid.
     /// </param>
     /// <returns>Array of result.</returns>
@@ -334,7 +334,7 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         public double? latitude;
 
         /// <summary>
-        /// Defines the distance (in meters) within which to return place results. \n
+        /// Defines the distance (in meters) within which to return place results. <br/>
         /// The maximum allowed radius is 50 000 meters.
         /// </summary>
         public int? radius;
@@ -345,38 +345,43 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         public string keyword;
 
         /// <summary>
-        /// One or more terms to be matched against the names of places, separated with a space character. \n
-        /// Results will be restricted to those containing the passed name values. \n
-        /// Note that a place may have additional names associated with it, beyond its listed name. \n
-        /// The API will try to match the passed name value against all of these names. \n
+        /// The language code, indicating in which language the results should be returned, if possible. 
+        /// </summary>
+        public string language;
+
+        /// <summary>
+        /// One or more terms to be matched against the names of places, separated with a space character. <br/>
+        /// Results will be restricted to those containing the passed name values. <br/>
+        /// Note that a place may have additional names associated with it, beyond its listed name. <br/>
+        /// The API will try to match the passed name value against all of these names. <br/>
         /// As a result, places may be returned in the results whose listed names do not match the search term, but whose associated names do.
         /// </summary>
         public string name;
 
         /// <summary>
-        /// Restricts the results to places matching the specified type. \n
-        /// Only one type may be specified (if more than one type is provided, all types following the first entry are ignored).
-        /// See the list of supported types:\n
+        /// Restricts the results to places matching the specified type. <br/>
+        /// Only one type may be specified (if more than one type is provided, all types following the first entry are ignored).<br/>
+        /// See the list of supported types:<br/>
         /// https://developers.google.com/places/documentation/supported_types
         /// </summary>
         public string types;
 
         /// <summary>
-        /// Restricts results to only those places within the specified range. \n
-        /// Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. \n
+        /// Restricts results to only those places within the specified range. <br/>
+        /// Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. <br/>
         /// The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
         public int? minprice;
 
         /// <summary>
-        /// Restricts results to only those places within the specified range. \n
-        /// Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. \n
+        /// Restricts results to only those places within the specified range. <br/>
+        /// Valid values range between 0 (most affordable) to 4 (most expensive), inclusive. <br/>
         /// The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
         public int? maxprice;
 
         /// <summary>
-        /// Returns only those places that are open for business at the time the query is sent. \n
+        /// Returns only those places that are open for business at the time the query is sent. <br/>
         /// Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
         /// </summary>
         public bool? opennow;
@@ -387,13 +392,13 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         public OnlineMapsFindPlacesRankBy? rankBy;
 
         /// <summary>
-        /// Returns the next 20 results from a previously run search. \n
+        /// Returns the next 20 results from a previously run search. <br/>
         /// Setting a pagetoken parameter will execute a search with the same parameters used previously — all parameters other than pagetoken will be ignored. 
         /// </summary>
         public string pagetoken;
 
         /// <summary>
-        /// Add this parameter (just the parameter name, with no associated value) to restrict your search to locations that are Zagat selected businesses.\n 
+        /// Add this parameter (just the parameter name, with no associated value) to restrict your search to locations that are Zagat selected businesses.<br/>
         /// This parameter must not include a true or false value. The zagatselected parameter is experimental, and is only available to Google Places API customers with a Premium Plan license.
         /// </summary>
         public bool? zagatselected;
@@ -422,7 +427,7 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         /// <param name="longitude">The longitude around which to retrieve place information.</param>
         /// <param name="latitude">The latitude around which to retrieve place information.</param>
         /// <param name="radius">
-        /// Defines the distance (in meters) within which to return place results. \n
+        /// Defines the distance (in meters) within which to return place results. <br/>
         /// The maximum allowed radius is 50 000 meters.
         /// </param>
         public NearbyParams(double longitude, double latitude, int radius)
@@ -437,7 +442,7 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         /// </summary>
         /// <param name="lnglat">The longitude/latitude around which to retrieve place information.</param>
         /// <param name="radius">
-        /// Defines the distance (in meters) within which to return place results. \n
+        /// Defines the distance (in meters) within which to return place results. <br/>
         /// The maximum allowed radius is 50 000 meters.
         /// </param>
         public NearbyParams(Vector2 lnglat, int radius)
@@ -450,7 +455,7 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         /// Constructor
         /// </summary>
         /// <param name="pagetoken">
-        /// Returns the next 20 results from a previously run search. \n
+        /// Returns the next 20 results from a previously run search. <br/>
         /// Setting a pagetoken parameter will execute a search with the same parameters used previously — all parameters other than pagetoken will be ignored. 
         /// </param>
         public NearbyParams(string pagetoken)
@@ -468,6 +473,7 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
             }
             if (radius.HasValue) url.Append("&radius=").Append(radius.Value);
             if (!string.IsNullOrEmpty(keyword)) url.Append("&keyword=").Append(keyword);
+            if (!string.IsNullOrEmpty(language)) url.Append("&language=").Append(language);
             if (!string.IsNullOrEmpty(name)) url.Append("&name=").Append(name);
             if (!string.IsNullOrEmpty(types)) url.Append("&types=").Append(types);
             if (minprice.HasValue) url.Append("&minprice=").Append(minprice.Value);
@@ -485,7 +491,7 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
     public class TextParams : RequestParams
     {
         /// <summary>
-        /// The text string on which to search, for example: "restaurant". \n
+        /// The text string on which to search, for example: "restaurant". <br/>
         /// The Google Places service will return candidate matches based on this string and order the results based on their perceived relevance.
         /// </summary>
         public string query;
@@ -501,8 +507,8 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         public double? latitude;
 
         /// <summary>
-        /// Defines the distance (in meters) within which to bias place results. \n
-        /// The maximum allowed radius is 50 000 meters. \n
+        /// Defines the distance (in meters) within which to bias place results. <br/>
+        /// The maximum allowed radius is 50 000 meters. <br/>
         /// Results inside of this region will be ranked higher than results outside of the search circle; however, prominent results from outside of the search radius may be included.
         /// </summary>
         public int? radius;
@@ -513,41 +519,41 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         public string language;
 
         /// <summary>
-        /// Restricts the results to places matching at least one of the specified types. \n
-        /// Types should be separated with a pipe symbol (type1|type2|etc). \n
-        /// See the list of supported types:\n
+        /// Restricts the results to places matching at least one of the specified types. <br/>
+        /// Types should be separated with a pipe symbol (type1|type2|etc). <br/>
+        /// See the list of supported types:<br/>
         /// https://developers.google.com/maps/documentation/places/supported_types
         /// </summary>
         public string types;
 
         /// <summary>
-        /// Restricts results to only those places within the specified price level. \n
-        /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. \n
+        /// Restricts results to only those places within the specified price level. <br/>
+        /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. <br/>
         /// The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
         public int? minprice;
 
         /// <summary>
-        /// Restricts results to only those places within the specified price level. \n
-        /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. \n
+        /// Restricts results to only those places within the specified price level. <br/>
+        /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. <br/>
         /// The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
         public int? maxprice;
 
         /// <summary>
-        /// Returns only those places that are open for business at the time the query is sent. \n
+        /// Returns only those places that are open for business at the time the query is sent. <br/>
         /// Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
         /// </summary>
         public bool? opennow;
 
         /// <summary>
-        /// Returns the next 20 results from a previously run search. \n
+        /// Returns the next 20 results from a previously run search. <br/>
         /// Setting a pagetoken parameter will execute a search with the same parameters used previously — all parameters other than pagetoken will be ignored. 
         /// </summary>
         public string pagetoken;
 
         /// <summary>
-        /// Add this parameter (just the parameter name, with no associated value) to restrict your search to locations that are Zagat selected businesses.\n 
+        /// Add this parameter (just the parameter name, with no associated value) to restrict your search to locations that are Zagat selected businesses.<br/>
         /// This parameter must not include a true or false value. The zagatselected parameter is experimental, and is only available to Google Places API customers with a Premium Plan license.
         /// </summary>
         public bool? zagatselected;
@@ -574,7 +580,7 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         /// Contstructor
         /// </summary>
         /// <param name="query">
-        /// The text string on which to search, for example: "restaurant". \n
+        /// The text string on which to search, for example: "restaurant". <br/>
         /// The Google Places service will return candidate matches based on this string and order the results based on their perceived relevance.
         /// </param>
         public TextParams(string query)
@@ -618,7 +624,7 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         public double? latitude;
 
         /// <summary>
-        /// Defines the distance (in meters) within which to return place results. \n
+        /// Defines the distance (in meters) within which to return place results. <br/>
         /// The maximum allowed radius is 50 000 meters.
         /// </summary>
         public int? radius;
@@ -629,44 +635,44 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         public string keyword;
 
         /// <summary>
-        /// One or more terms to be matched against the names of places, separated by a space character. \n
-        /// Results will be restricted to those containing the passed name values. \n
-        /// Note that a place may have additional names associated with it, beyond its listed name. \n
-        /// The API will try to match the passed name value against all of these names. \n
+        /// One or more terms to be matched against the names of places, separated by a space character. <br/>
+        /// Results will be restricted to those containing the passed name values. <br/>
+        /// Note that a place may have additional names associated with it, beyond its listed name. <br/>
+        /// The API will try to match the passed name value against all of these names. <br/>
         /// As a result, places may be returned in the results whose listed names do not match the search term, but whose associated names do.
         /// </summary>
         public string name;
 
         /// <summary>
-        /// Restricts the results to places matching at least one of the specified types. \n
-        /// Types should be separated with a pipe symbol (type1|type2|etc). \n
-        /// See the list of supported types:\n
+        /// Restricts the results to places matching at least one of the specified types. <br/>
+        /// Types should be separated with a pipe symbol (type1|type2|etc). <br/>
+        /// See the list of supported types:<br/>
         /// https://developers.google.com/maps/documentation/places/supported_types
         /// </summary>
         public string types;
 
         /// <summary>
-        /// Restricts results to only those places within the specified price level. \n
-        /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. \n
+        /// Restricts results to only those places within the specified price level. <br/>
+        /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. <br/>
         /// The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
         public int? minprice;
 
         /// <summary>
-        /// Restricts results to only those places within the specified price level. \n
-        /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. \n
+        /// Restricts results to only those places within the specified price level. <br/>
+        /// Valid values are in the range from 0 (most affordable) to 4 (most expensive), inclusive. <br/>
         /// The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
         public int? maxprice;
 
         /// <summary>
-        /// Returns only those places that are open for business at the time the query is sent. \n
+        /// Returns only those places that are open for business at the time the query is sent. <br/>
         /// Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
         /// </summary>
         public bool? opennow;
 
         /// <summary>
-        /// Add this parameter (just the parameter name, with no associated value) to restrict your search to locations that are Zagat selected businesses.\n 
+        /// Add this parameter (just the parameter name, with no associated value) to restrict your search to locations that are Zagat selected businesses.<br/>
         /// This parameter must not include a true or false value. The zagatselected parameter is experimental, and is only available to Google Places API customers with a Premium Plan license.
         /// </summary>
         public bool? zagatselected;
@@ -695,7 +701,7 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         /// <param name="longitude">The longitude around which to retrieve place information.</param>
         /// <param name="latitude">The latitude around which to retrieve place information.</param>
         /// <param name="radius">
-        /// Defines the distance (in meters) within which to return place results. \n
+        /// Defines the distance (in meters) within which to return place results. <br/>
         /// The maximum allowed radius is 50 000 meters.
         /// </param>
         public RadarParams(double longitude, double latitude, int radius)
@@ -710,7 +716,7 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
         /// </summary>
         /// <param name="lnglat">The longitude/latitude around which to retrieve place information.</param>
         /// <param name="radius">
-        /// Defines the distance (in meters) within which to return place results. \n
+        /// Defines the distance (in meters) within which to return place results. <br/>
         /// The maximum allowed radius is 50 000 meters.
         /// </param>
         public RadarParams(Vector2 lnglat, int radius)
@@ -744,14 +750,14 @@ public class OnlineMapsGooglePlaces: OnlineMapsTextWebService
     public enum OnlineMapsFindPlacesRankBy
     {
         /// <summary>
-        /// This option sorts results based on their importance. \n
-        /// Ranking will favor prominent places within the specified area. \n
+        /// This option sorts results based on their importance. <br/>
+        /// Ranking will favor prominent places within the specified area. <br/>
         /// Prominence can be affected by a place's ranking in Google's index, global popularity, and other factors. 
         /// </summary>
         prominence,
 
         /// <summary>
-        /// This option sorts results in ascending order by their distance from the specified location. \n
+        /// This option sorts results in ascending order by their distance from the specified location. <br/>
         /// When distance is specified, one or more of keyword, name, or types is required.
         /// </summary>
         distance

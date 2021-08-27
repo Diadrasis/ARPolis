@@ -6,7 +6,7 @@ using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// AMap Search provides many kinds of querying POI information, including keyword search, peripheral search, polygon search and ID query.\n
+/// AMap Search provides many kinds of querying POI information, including keyword search, peripheral search, polygon search and ID query.<br/>
 /// http://lbs.amap.com/api/webservice/guide/api/search/#introduce
 /// </summary>
 public class OnlineMapsAMapSearch: OnlineMapsTextWebService
@@ -64,21 +64,21 @@ public class OnlineMapsAMapSearch: OnlineMapsTextWebService
     public class TextParams : Params
     {
         /// <summary>
-        /// Query keywords.\n
+        /// Query keywords.<br/>
         /// Multiple keywords are separated by "|"
         /// </summary>
         public string keywords;
 
         /// <summary>
-        /// Query POI type.\n
-        /// Multiple types are separated by "|".\n
+        /// Query POI type.<br/>
+        /// Multiple types are separated by "|".<br/>
         /// http://a.amap.com/lbs/static/zip/AMap_API_Table.zip
         /// </summary>
         public string types;
 
         /// <summary>
-        /// Check the city.\n
-        /// Optional values: city Chinese, Chinese spelling, citycode, adcode.\n
+        /// Check the city.<br/>
+        /// Optional values: city Chinese, Chinese spelling, citycode, adcode.<br/>
         /// Such as: Beijing / beijing / 010/110000
         /// </summary>
         public string city;
@@ -94,7 +94,7 @@ public class OnlineMapsAMapSearch: OnlineMapsTextWebService
         public bool children = false;
 
         /// <summary>
-        /// Each page records data.\n
+        /// Each page records data.<br/>
         /// It is strongly recommended not to exceed 25, if more than 25 may cause access error.
         /// </summary>
         public int? offset;
@@ -105,21 +105,21 @@ public class OnlineMapsAMapSearch: OnlineMapsTextWebService
         public int? page;
 
         /// <summary>
-        /// POI number of the building.\n
+        /// POI number of the building.<br/>
         /// After building POI is introduced, only in the building within the search.
         /// </summary>
         public string building;
 
         /// <summary>
-        /// Search for floors.\n
-        /// Returns the keyword search results for the current floor in the building if the building id + floor is passed in.\n
-        /// If only the floor, the return parameters incomplete advice.\n
+        /// Search for floors.<br/>
+        /// Returns the keyword search results for the current floor in the building if the building id + floor is passed in.<br/>
+        /// If only the floor, the return parameters incomplete advice.<br/>
         /// If the building id + floor, the floor does not have the corresponding search results, will return to the contents of the building.
         /// </summary>
         public int? floor;
 
         /// <summary>
-        /// Returns the result control.\n
+        /// Returns the result control.<br/>
         /// This item returns the basic address information by default; the value returns all address information, nearby POIs, roads, and road intersections.
         /// </summary>
         public string extensions;
@@ -182,27 +182,27 @@ public class OnlineMapsAMapSearch: OnlineMapsTextWebService
     public class AroundParams : Params
     {
         /// <summary>
-        /// Query keywords.\n
+        /// Query keywords.<br/>
         /// Multiple keywords are separated by "|".
         /// </summary>
         public string keywords;
 
         /// <summary>
-        /// Query the POI type.\n
-        /// Multiple keywords are separated by "|".\n
+        /// Query the POI type.<br/>
+        /// Multiple keywords are separated by "|".<br/>
         /// http://a.amap.com/lbs/static/zip/AMap_API_Table.zip
         /// </summary>
         public string types;
 
         /// <summary>
-        /// Check the city.\n
-        /// Optional values: city Chinese, Chinese spelling, citycode, adcode\n
+        /// Check the city.<br/>
+        /// Optional values: city Chinese, Chinese spelling, citycode, adcode<br/>
         /// Such as: Beijing / beijing / 010/110000
         /// </summary>
         public string city;
 
         /// <summary>
-        ///  The radius of the query.\n
+        ///  The radius of the query.<br/>
         /// The value ranges from 0 to 50000, in meters.
         /// </summary>
         public int? raduis;
@@ -213,7 +213,7 @@ public class OnlineMapsAMapSearch: OnlineMapsTextWebService
         public string sortrule;
 
         /// <summary>
-        /// Each page records data.\n
+        /// Each page records data.<br/>
         /// The maximum number of records per page is 25. Out of range The maximum value is returned.
         /// </summary>
         public int? offset;
@@ -224,7 +224,7 @@ public class OnlineMapsAMapSearch: OnlineMapsTextWebService
         public int? page;
 
         /// <summary>
-        /// Returns the result control.\n
+        /// Returns the result control.<br/>
         /// This item returns the basic address information by default; the value returns all address information, nearby POIs, roads, and road intersections.
         /// </summary>
         public string extensions;
@@ -283,19 +283,19 @@ public class OnlineMapsAMapSearch: OnlineMapsTextWebService
     public class PolygonParams : Params
     {
         /// <summary>
-        /// Query keywords.\n
+        /// Query keywords.<br/>
         /// Multiple keywords are separated by "|".
         /// </summary>
         public string keywords;
 
         /// <summary>
-        /// Query POI type.\n
+        /// Query POI type.<br/>
         /// Multiple types are separated by "|".
         /// </summary>
         public string types;
 
         /// <summary>
-        /// Each page records data.\n
+        /// Each page records data.<br/>
         /// The maximum number of records per page is 25. Out of range Return to the maximum value.
         /// </summary>
         public int? offset;
@@ -306,7 +306,7 @@ public class OnlineMapsAMapSearch: OnlineMapsTextWebService
         public int? page;
 
         /// <summary>
-        /// Returns the result control.\n
+        /// Returns the result control.<br/>
         /// This basic default return address information; the value of all the return address information, nearby POI, road and road intersection information.
         /// </summary>
         public string extensions;

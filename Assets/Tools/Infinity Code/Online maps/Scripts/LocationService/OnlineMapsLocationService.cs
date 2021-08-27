@@ -4,14 +4,11 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
-#if UNITY_2018_3_OR_NEWER
 using UnityEngine.Android;
-#endif
 
 /// <summary>
-/// Controls map using GPS.\n
-/// Online Maps Location Service is a wrapper for Unity Location Service.\n
+/// Controls map using GPS.<br/>
+/// Online Maps Location Service is a wrapper for Unity Location Service.<br/>
 /// http://docs.unity3d.com/ScriptReference/LocationService.html
 /// </summary>
 [Serializable]
@@ -36,6 +33,15 @@ public class OnlineMapsLocationService : OnlineMapsLocationServiceGenericBase<On
     private List<LastPositionItem> lastPositions;
     private double lastLocationInfoTimestamp;
     private bool isPermissionRequested = false;
+    private double _distance;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public double distance
+    {
+        get { return _distance; }
+    }
 
     public override bool IsLocationServiceRunning()
     {
@@ -62,11 +68,12 @@ public class OnlineMapsLocationService : OnlineMapsLocationServiceGenericBase<On
     /// Starts location service updates. Last location coordinates could be.
     /// </summary>
     /// <param name="desiredAccuracyInMeters">
-    /// Desired service accuracy in meters. \n
-    /// Using higher value like 500 usually does not require to turn GPS chip on and thus saves battery power. \n
-    /// Values like 5-10 could be used for getting best accuracy. Default value is 10 meters.</param>
+    /// Desired service accuracy in meters. <br/>
+    /// Using higher value like 500 usually does not require to turn GPS chip on and thus saves battery power.<br/>
+    /// Values like 5-10 could be used for getting best accuracy. Default value is 10 meters.
+    /// </param>
     /// <param name="updateDistanceInMeters">
-    /// The minimum distance (measured in meters) a device must move laterally before Input.location property is updated. \n
+    /// The minimum distance (measured in meters) a device must move laterally before Input.location property is updated. <br/>
     /// Higher values like 500 imply less overhead.
     /// </param>
     public void StartLocationService(float? desiredAccuracyInMeters = null, float? updateDistanceInMeters = null)
@@ -88,7 +95,7 @@ public class OnlineMapsLocationService : OnlineMapsLocationServiceGenericBase<On
         {
             if (requestPermissionRuntime && !isPermissionRequested)
             {
-#if UNITY_2018_3_OR_NEWER && PLATFORM_ANDROID
+#if PLATFORM_ANDROID
                 if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
                 {
                     isPermissionRequested = true;
@@ -108,20 +115,33 @@ public class OnlineMapsLocationService : OnlineMapsLocationServiceGenericBase<On
 
     public override void UpdateSpeed()
     {
-        if (Input.location.status != LocationServiceStatus.Running) return;
+        float longitude, latitude;
+        double timestamp;
+        if (!useGPSEmulator)
+        {
+            if (Input.location.status != LocationServiceStatus.Running) return;
 
-        LocationInfo lastData = Input.location.lastData;
-        if (Math.Abs(lastLocationInfoTimestamp - lastData.timestamp) < double.Epsilon) return;
+            LocationInfo lastData = Input.location.lastData;
+            timestamp = lastData.timestamp;
+            if (Math.Abs(lastLocationInfoTimestamp - timestamp) < double.Epsilon) return;
 
-        float longitude = lastData.longitude; 
-        float latitude = lastData.latitude;
+            longitude = lastData.longitude;
+            latitude = lastData.latitude;
+
+            lastLocationInfoTimestamp = timestamp;
+        }
+        else
+        {
+            timestamp = Time.time;
+            longitude = emulatorPosition.x;
+            latitude = emulatorPosition.y;
+        }
+
         if (OnGetLocation != null) OnGetLocation(out longitude, out latitude);
-
-        lastLocationInfoTimestamp = lastData.timestamp;
 
         if (lastPositions == null) lastPositions = new List<LastPositionItem>();
 
-        lastPositions.Add(new LastPositionItem(longitude, latitude, lastData.timestamp));
+        lastPositions.Add(new LastPositionItem(longitude, latitude, timestamp));
         while (lastPositions.Count > maxPositionCount) lastPositions.RemoveAt(0);
 
         if (lastPositions.Count < 2)
@@ -135,9 +155,9 @@ public class OnlineMapsLocationService : OnlineMapsLocationServiceGenericBase<On
 
         double dx, dy;
         OnlineMapsUtils.DistanceBetweenPoints(p1.lng, p1.lat, p2.lng, p2.lat, out dx, out dy);
-        double distance = Math.Sqrt(dx * dx + dy * dy);
+        _distance = Math.Sqrt(dx * dx + dy * dy);
         double time = (p2.timestamp - p1.timestamp) / 3600;
-        _speed = Mathf.Abs((float) (distance / time));
+        _speed = Mathf.Abs((float) (_distance / time));
     }
 
     internal struct LastPositionItem

@@ -9,9 +9,7 @@ using System.Threading;
 #endif
 
 /// <summary>
-/// 2D marker class.\n
-/// To add 2D marker use OnlineMaps.AddMarker.\n
-/// To remove a marker use OnlineMaps.RemoveMarker.
+/// 2D marker class.
 /// </summary>
 [Serializable]
 public class OnlineMapsMarker : OnlineMapsMarkerBase
@@ -22,7 +20,7 @@ public class OnlineMapsMarker : OnlineMapsMarkerBase
     public OnlineMapsAlign align = OnlineMapsAlign.Bottom;
 
     /// <summary>
-    /// Specifies to OnlineMapsBuffer that the marker is available for drawing.\n
+    /// Specifies to OnlineMapsBuffer that the marker is available for drawing.<br/>
     /// <strong>Please do not use.</strong>
     /// </summary>
     public bool locked;
@@ -197,9 +195,9 @@ public class OnlineMapsMarker : OnlineMapsMarkerBase
     }
 
     /// <summary>
-    /// Texture marker. \n
-    /// Texture format: ARGB32.\n
-    /// <strong>Must enable "Read / Write enabled".</strong>\n
+    /// Texture marker. <br/>
+    /// Texture format: ARGB32.<br/>
+    /// <strong>Must enable "Read / Write enabled".</strong><br/>
     /// After changing the texture you need to call OnlineMapsMarker.Init.
     /// </summary>
     public Texture2D texture

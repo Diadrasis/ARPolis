@@ -289,6 +289,7 @@ MonoBehaviour:
   activeTexture: {fileID: 0}
   allowZoom: 1
   allowUserControl: 1
+  checkScreenSizeForWheelZoom: 1
   drawingElementManager: {fileID: 0}
   isMapDrag: 0
   invertTouchZoom: 0
@@ -298,6 +299,7 @@ MonoBehaviour:
   zoomMode: 0
   zoomSensitivity: 1
   activeCamera: {fileID: 0}
+  elevationManager: {fileID: 0}
   marker2DMode: 0
   marker2DSize: 100
   marker3DManager: {fileID: 0}
@@ -309,6 +311,7 @@ MonoBehaviour:
   markerShader: {fileID: 30, guid: 0000000000000000f000000000000000, type: 0}
   sizeInScene: {x: 1024, y: 1024}
   colliderType: 1
+  compressTextures: 1
   drawingsGameObject: {fileID: 0}
   drawingMode: 0
   drawingShader: {fileID: 4800000, guid: 07fd051d8972c7a4bac96bfa8038d08b, type: 3}
@@ -333,13 +336,14 @@ MonoBehaviour:
   defaultTileTexture: {fileID: 0}
   dispatchEvents: 1
   emptyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  height: 512
+  height: 1024
   labels: 1
   language: en
   lockRedraw: 0
   needRedraw: 1
   notInteractUnderGUI: 1
-  mapType: nokia.satellite
+  mapType: nokia.map
+  osmServer: 0
   proxyURL: http://service.infinity-code.com/redirect.php?
   redrawOnPlay: 0
   renderInThread: 0
@@ -356,7 +360,7 @@ MonoBehaviour:
   useCurrentZoomTiles: 0
   useProxy: 1
   useSoftwareJPEGDecoder: 0
-  width: 512
+  width: 1024
   _activeTypeSettings: 09Anonymous225106App ID11008App Code110
   _zoom: 3
   latitude: 0
@@ -1211,7 +1215,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: de8a1a9ecb8902c469a0226227d41faa, type: 3}
+  m_Texture: {fileID: 2800000, guid: a5e39ea583c1a8840a6a3dfb0a89b71b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

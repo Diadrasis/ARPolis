@@ -220,7 +220,7 @@ public class OnlineMapsMarkerFlatDrawer : OnlineMapsMarker2DMeshDrawer
 
         Matrix4x4 matrix = new Matrix4x4();
         int meshIndex = 0;
-        bool elevationActive = OnlineMapsElevationManagerBase.useElevation;
+        bool elevationActive = hasElevation;
         index = -1;
         foreach (OnlineMapsMarker marker in markers)
         {
@@ -288,7 +288,7 @@ public class OnlineMapsMarkerFlatDrawer : OnlineMapsMarker2DMeshDrawer
                 if (!tilesetBounds.Intersects(new Bounds(markerCenter, markerSize))) continue;
             }
 
-            float y = elevationActive? OnlineMapsElevationManagerBase.GetElevation((rx1 + rx2) / 2, (ry1 + ry2) / 2, yScale, tlx, tly, brx, bry): 0;
+            float y = elevationActive? elevationManager.GetElevationValue((rx1 + rx2) / 2, (ry1 + ry2) / 2, yScale, tlx, tly, brx, bry): 0;
             float yOffset = useOffsetY ? offsets[index] : 0;
 
             p1.y = p2.y = p3.y = p4.y = y + yOffset;

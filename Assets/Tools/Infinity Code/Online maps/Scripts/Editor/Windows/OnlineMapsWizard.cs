@@ -42,7 +42,7 @@ public class OnlineMapsWizard : EditorWindow
     private int providerIndex;
     private OnlineMapsProvider[] providers;
     private string[] providersTitle;
-    private string proxyURL = "http://service.infinity-code.com/redirect.php?";
+    private string proxyURL = "https://service.infinity-code.com/redirect.php?";
     private bool showCustomProviderTokens;
     private OnlineMapsSource source;
     private bool traffic;
@@ -99,50 +99,52 @@ public class OnlineMapsWizard : EditorWindow
         Type[] types = typeof(OnlineMaps).Assembly.GetTypes();
         foreach (Type t in types)
         {
-            if (t.IsSubclassOf(typeof(OnlineMapsControlBase)) && !t.IsAbstract)
+            if (!t.IsSubclassOf(typeof(OnlineMapsControlBase)) || t.IsAbstract) continue;
+#if !NGUI
+            if (t == typeof(OnlineMapsNGUITextureControl)) continue;
+#endif
+
+            string fullName = t.FullName;
+            if (fullName.StartsWith("OnlineMaps")) fullName = fullName.Substring(10);
+
+            int controlIndex = fullName.IndexOf("Control");
+            fullName = fullName.Insert(controlIndex, " ");
+
+            int textureIndex = fullName.IndexOf("Texture");
+            if (textureIndex > 0) fullName = fullName.Insert(textureIndex, " ");
+
+            Control control = new Control(fullName, t);
+
+            if (t.IsSubclassOf(typeof(OnlineMapsControlBase2D))) controls2D.Add(control);
+            else
             {
-                string fullName = t.FullName;
-                if (fullName.StartsWith("OnlineMaps")) fullName = fullName.Substring(10);
+                if (t == typeof(OnlineMapsTileSetControl)) default3DIndex = controls3D.Count;
+                controls3D.Add(control);
+            }
 
-                int controlIndex = fullName.IndexOf("Control");
-                fullName = fullName.Insert(controlIndex, " ");
+            if (t == typeof(OnlineMapsUIImageControl) || t == typeof(OnlineMapsUIRawImageControl)) control.steps.Add(DrawUGUIParent);
+            else if (t == typeof(OnlineMapsNGUITextureControl)) control.steps.Add(DrawNGUIParent);
+            if (t.IsSubclassOf(typeof(OnlineMapsControlBase3D))) control.steps.Add(DrawCamera);
+            if (t.IsSubclassOf(typeof(OnlineMapsControlBaseDynamicMesh))) control.steps.Add(DrawMeshSize);
+            if (t == typeof(OnlineMapsTileSetControl)) control.steps.Add(DrawMaterialsAndShaders);
 
-                int textureIndex = fullName.IndexOf("Texture");
-                if (textureIndex > 0) fullName = fullName.Insert(textureIndex, " ");
-
-                Control control = new Control(fullName, t);
-
-                if (t.IsSubclassOf(typeof(OnlineMapsControlBase2D))) controls2D.Add(control);
-                else
+            object[] controlHelperAttibutes = t.GetCustomAttributes(typeof(OnlineMapsWizardControlHelperAttribute), true);
+            if (controlHelperAttibutes.Length > 0)
+            {
+                control.resultType = (controlHelperAttibutes[0] as OnlineMapsWizardControlHelperAttribute).resultType;
+                if (control.resultType == OnlineMapsTarget.texture)
                 {
-                    if (t == typeof(OnlineMapsTileSetControl)) default3DIndex = controls3D.Count;
-                    controls3D.Add(control);
+                    control.steps.Add(DrawTextureSize);
                 }
+            }
 
-                if (t == typeof(OnlineMapsUIImageControl) || t == typeof(OnlineMapsUIRawImageControl)) control.steps.Add(DrawUGUIParent);
-                else if (t == typeof(OnlineMapsNGUITextureControl)) control.steps.Add(DrawNGUIParent);
-                if (t.IsSubclassOf(typeof(OnlineMapsControlBase3D))) control.steps.Add(DrawCamera);
-                if (t.IsSubclassOf(typeof(OnlineMapsControlBaseDynamicMesh))) control.steps.Add(DrawMeshSize);
-                if (t == typeof(OnlineMapsTileSetControl)) control.steps.Add(DrawMaterialsAndShaders);
+            foreach (IPlugin plugin in plugins)
+            {
+                Type requiredType = null;
+                if (plugin is Plugin) requiredType = (plugin as Plugin).attribute.requiredType;
+                else if (plugin is PluginGroup) requiredType = (plugin as PluginGroup).plugins[0].attribute.requiredType;
 
-                object[] controlHelperAttibutes = t.GetCustomAttributes(typeof(OnlineMapsWizardControlHelperAttribute), true);
-                if (controlHelperAttibutes.Length > 0)
-                {
-                    control.resultType = (controlHelperAttibutes[0] as OnlineMapsWizardControlHelperAttribute).resultType;
-                    if (control.resultType == OnlineMapsTarget.texture)
-                    {
-                        control.steps.Add(DrawTextureSize);
-                    }
-                }
-
-                foreach (IPlugin plugin in plugins)
-                {
-                    Type requiredType = null;
-                    if (plugin is Plugin) requiredType = (plugin as Plugin).attribute.requiredType;
-                    else if (plugin is PluginGroup) requiredType = (plugin as PluginGroup).plugins[0].attribute.requiredType;
-
-                    if (t.IsSubclassOf(requiredType)) control.plugins.Add(plugin);
-                }
+                if (t.IsSubclassOf(requiredType)) control.plugins.Add(plugin);
             }
         }
 
@@ -216,6 +218,7 @@ public class OnlineMapsWizard : EditorWindow
 
             if (control.useSprite)
             {
+
                 if (!string.IsNullOrEmpty(texturePath))
                 {
                     TextureImporter textureImporter = AssetImporter.GetAtPath(texturePath) as TextureImporter;
@@ -228,6 +231,7 @@ public class OnlineMapsWizard : EditorWindow
                 if (component is OnlineMapsSpriteRendererControl)
                 {
                     SpriteRenderer spriteRenderer = go.GetComponent<SpriteRenderer>();
+                    Debug.Log(spriteRenderer);
                     spriteRenderer.sprite = sprite;
                     go.AddComponent<BoxCollider>();
                 }
@@ -619,7 +623,7 @@ public class OnlineMapsWizard : EditorWindow
 
 #if UNITY_2019_1_OR_NEWER
         bool useSRP = UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset != null;
-#else 
+#else
         bool useSRP = false;
 #endif
 
@@ -689,7 +693,7 @@ public class OnlineMapsWizard : EditorWindow
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Debug.LogException(e);
                 return;
             }
             Close();

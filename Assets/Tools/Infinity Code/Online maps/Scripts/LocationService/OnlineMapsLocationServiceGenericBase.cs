@@ -2,7 +2,7 @@
 /*   https://infinity-code.com   */
 
 /// <summary>
-/// Controls map using Location Service.\n
+/// Controls map using Location Service.
 /// </summary>
 public abstract class OnlineMapsLocationServiceGenericBase<T> : OnlineMapsLocationServiceBase where T : OnlineMapsLocationServiceGenericBase<T>
 {

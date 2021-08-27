@@ -37,6 +37,9 @@ namespace InfinityCode.OnlineMapsExamples
         {
             // Show response in console.
             Debug.Log(s);
+
+            OnlineMapsGoogleGeocodingResult[] results = OnlineMapsGoogleGeocoding.GetResults(s);
+            if (results.Length > 0) Debug.Log(results[0].formatted_address);
         }
     }
 }

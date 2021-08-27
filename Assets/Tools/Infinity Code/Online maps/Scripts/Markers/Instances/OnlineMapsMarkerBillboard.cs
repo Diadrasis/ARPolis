@@ -62,7 +62,7 @@ public class OnlineMapsMarkerBillboard : OnlineMapsMarkerInstanceBase
     {
         transform.LookAt(OnlineMapsControlBase3D.instance.activeCamera.transform.position);
         Vector3 euler = transform.rotation.eulerAngles;
-        euler.y = 0;
+        euler.y = (marker as OnlineMapsMarker).rotationDegree;
         transform.rotation = Quaternion.Euler(euler);
     }
 

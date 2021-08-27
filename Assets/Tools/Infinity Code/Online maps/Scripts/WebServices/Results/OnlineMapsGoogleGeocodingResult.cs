@@ -15,23 +15,23 @@ public class OnlineMapsGoogleGeocodingResult
     public AddressComponent[] address_components;
 
     /// <summary>
-    /// Array indicates the type of the returned result. \n
-    /// This array contains a set of zero or more tags identifying the type of feature returned in the result. \n
+    /// Array indicates the type of the returned result. <br/>
+    /// This array contains a set of zero or more tags identifying the type of feature returned in the result. <br/>
     /// For example, a geocode of "Chicago" returns "locality" which indicates that "Chicago" is a city, and also returns "political" which indicates it is a political entity.
     /// </summary>
     public string[] types;
 
     /// <summary>
-    /// String containing the human-readable address of this location. \n
-    /// Often this address is equivalent to the "postal address," which sometimes differs from country to country. \n
-    /// (Note that some countries, such as the United Kingdom, do not allow distribution of true postal addresses due to licensing restrictions.) \n
-    /// This address is generally composed of one or more address components. \n
+    /// String containing the human-readable address of this location. <br/>
+    /// Often this address is equivalent to the "postal address," which sometimes differs from country to country. <br/>
+    /// (Note that some countries, such as the United Kingdom, do not allow distribution of true postal addresses due to licensing restrictions.) <br/>
+    /// This address is generally composed of one or more address components. <br/>
     /// For example, the address "111 8th Avenue, New York, NY" contains separate address components for "111" (the street number, "8th Avenue" (the route), "New York" (the city) and "NY" (the US state).
     /// </summary>
     public string formatted_address;
 
     /// <summary>
-    /// Array denoting all the localities contained in a postal code. \n
+    /// Array denoting all the localities contained in a postal code. <br/>
     /// This is only present when the result is a postal code that contains multiple localities. 
     /// </summary>
     public string[] postcode_localities;
@@ -47,13 +47,13 @@ public class OnlineMapsGoogleGeocodingResult
     public string geometry_location_type;
 
     /// <summary>
-    /// Recommended viewport for displaying the returned result, specified as latitude,longitude values defining the northeast corner of the viewport bounding box. \n
+    /// Recommended viewport for displaying the returned result, specified as latitude,longitude values defining the northeast corner of the viewport bounding box. <br/>
     /// Generally the viewport is used to frame a result when displaying it to a user.
     /// </summary>
     public Vector2 geometry_viewport_northeast;
 
     /// <summary>
-    /// Recommended viewport for displaying the returned result, specified as latitude,longitude values defining the southwest corner of the viewport bounding box. \n
+    /// Recommended viewport for displaying the returned result, specified as latitude,longitude values defining the southwest corner of the viewport bounding box. <br/>
     /// Generally the viewport is used to frame a result when displaying it to a user.
     /// </summary>
     public Vector2 geometry_viewport_southwest;
@@ -64,21 +64,21 @@ public class OnlineMapsGoogleGeocodingResult
     public string place_id;
 
     /// <summary>
-    /// (optionally returned)\n
-    /// Stores latitude,longitude values defining the northeast corner the bounding box which can fully contain the returned result. \n
+    /// (optionally returned)<br/>
+    /// Stores latitude,longitude values defining the northeast corner the bounding box which can fully contain the returned result. <br/>
     /// Note that these bounds may not match the recommended viewport.
     /// </summary>
     public Vector2 geometry_bounds_northeast;
 
     /// <summary>
-    /// (optionally returned)\n
-    /// Stores latitude,longitude values defining the southwest corner the bounding box which can fully contain the returned result. \n
+    /// (optionally returned)<br/>
+    /// Stores latitude,longitude values defining the southwest corner the bounding box which can fully contain the returned result. <br/>
     /// Note that these bounds may not match the recommended viewport.
     /// </summary>
     public Vector2 geometry_bounds_southwest;
 
     /// <summary>
-    /// Indicates that the geocoder did not return an exact match for the original request, though it was able to match part of the requested address. \n
+    /// Indicates that the geocoder did not return an exact match for the original request, though it was able to match part of the requested address.<br/>
     /// You may wish to examine the original request for misspellings and/or an incomplete address.
     /// </summary>
     public bool partial_match;
@@ -148,7 +148,7 @@ public class OnlineMapsGoogleGeocodingResult
         public string long_name;
 
         /// <summary>
-        /// Abbreviated textual name for the address component, if available. \n
+        /// Abbreviated textual name for the address component, if available. <br/>
         /// For example, an address component for the state of Alaska may have a long_name of "Alaska" and a short_name of "AK" using the 2-letter postal abbreviation.
         /// </summary>
         public string short_name;

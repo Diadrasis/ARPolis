@@ -7,31 +7,35 @@ using UnityEngine;
 [CustomEditor(typeof (OnlineMapsTileSetControl), true)]
 public class OnlineMapsTilesetControlEditor : OnlineMapsControlBaseDynamicMeshEditor<OnlineMapsTileSetControl>
 {
-    private bool showShaders;
+    private SerializedProperty checkMarker2DVisibility;
+    private SerializedProperty colliderType;
+    private SerializedProperty compressTextures;
     private Shader defaultTilesetShader;
-    private SerializedProperty pCheckMarker2DVisibility;
-    private SerializedProperty pTileMaterial;
-    private SerializedProperty pMarkerMaterial;
-    private SerializedProperty pTilesetShader;
-    private SerializedProperty pMarkerShader;
-    private SerializedProperty pDrawingShader;
-    private SerializedProperty pColliderType;
-    private SerializedProperty pMipmapForTiles;
-    private SerializedProperty pSizeInScene;
+    private SerializedProperty drawingShader;
+    private SerializedProperty elevationResolution;
+    private SerializedProperty markerMaterial;
+    private SerializedProperty markerShader;
+    private SerializedProperty mipmapForTiles;
+    private bool showShaders;
+    private SerializedProperty sizeInScene;
+    private SerializedProperty tileMaterial;
+    private SerializedProperty tilesetShader;
 
     protected override void CacheSerializedFields()
     {
         base.CacheSerializedFields();
 
-        pCheckMarker2DVisibility = serializedObject.FindProperty("checkMarker2DVisibility");
-        pTileMaterial = serializedObject.FindProperty("tileMaterial");
-        pMarkerMaterial = serializedObject.FindProperty("markerMaterial");
-        pTilesetShader = serializedObject.FindProperty("tilesetShader");
-        pMarkerShader = serializedObject.FindProperty("markerShader");
-        pDrawingShader = serializedObject.FindProperty("drawingShader");
-        pColliderType = serializedObject.FindProperty("colliderType");
-        pMipmapForTiles = serializedObject.FindProperty("_mipmapForTiles");
-        pSizeInScene = serializedObject.FindProperty("sizeInScene");
+        checkMarker2DVisibility = serializedObject.FindProperty("checkMarker2DVisibility");
+        tileMaterial = serializedObject.FindProperty("tileMaterial");
+        markerMaterial = serializedObject.FindProperty("markerMaterial");
+        tilesetShader = serializedObject.FindProperty("tilesetShader");
+        markerShader = serializedObject.FindProperty("markerShader");
+        drawingShader = serializedObject.FindProperty("drawingShader");
+        colliderType = serializedObject.FindProperty("colliderType");
+        mipmapForTiles = serializedObject.FindProperty("_mipmapForTiles");
+        sizeInScene = serializedObject.FindProperty("sizeInScene");
+        compressTextures = serializedObject.FindProperty("compressTextures");
+        elevationResolution = serializedObject.FindProperty("elevationResolution");
     }
 
     private void CheckCameraDistance()
@@ -59,12 +63,12 @@ public class OnlineMapsTilesetControlEditor : OnlineMapsControlBaseDynamicMeshEd
     {
         if (EditorApplication.isPlaying) return;
 
-        if (pColliderType.enumValueIndex != (int) OnlineMapsTileSetControl.OnlineMapsColliderType.box && pColliderType.enumValueIndex != (int) OnlineMapsTileSetControl.OnlineMapsColliderType.flatBox) return;
+        if (colliderType.enumValueIndex != (int) OnlineMapsTileSetControl.OnlineMapsColliderType.box && colliderType.enumValueIndex != (int) OnlineMapsTileSetControl.OnlineMapsColliderType.flatBox) return;
 
         EditorGUILayout.BeginVertical(GUI.skin.box);
 
         EditorGUILayout.HelpBox("Potential problem detected:\nWhen using BoxCollider, can be a problem in interaction with a map with elevation.", MessageType.Warning);
-        if (GUILayout.Button("Set Collider Type - Full Mesh")) pColliderType.enumValueIndex = (int) OnlineMapsTileSetControl.OnlineMapsColliderType.fullMesh;
+        if (GUILayout.Button("Set Collider Type - Full Mesh")) colliderType.enumValueIndex = (int) OnlineMapsTileSetControl.OnlineMapsColliderType.fullMesh;
 
         EditorGUILayout.EndVertical();
     }
@@ -75,9 +79,9 @@ public class OnlineMapsTilesetControlEditor : OnlineMapsControlBaseDynamicMeshEd
 
 #if UNITY_2019_1_OR_NEWER
         if (UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset == null) return;
-        bool wrongTileset = pTilesetShader.objectReferenceValue == defaultTilesetShader;
-        bool wrongMarker = pMarkerShader.objectReferenceValue != null && (pMarkerShader.objectReferenceValue as Shader).name == "Transparent/Diffuse";
-        bool wrongDrawing = pDrawingShader.objectReferenceValue != null && (pDrawingShader.objectReferenceValue as Shader).name == "Infinity Code/Online Maps/Tileset DrawingElement";
+        bool wrongTileset = tilesetShader.objectReferenceValue == defaultTilesetShader;
+        bool wrongMarker = markerShader.objectReferenceValue != null && (markerShader.objectReferenceValue as Shader).name == "Transparent/Diffuse";
+        bool wrongDrawing = drawingShader.objectReferenceValue != null && (drawingShader.objectReferenceValue as Shader).name == "Infinity Code/Online Maps/Tileset DrawingElement";
 
         if (!wrongTileset && !wrongMarker && !wrongDrawing) return;
 
@@ -89,17 +93,17 @@ public class OnlineMapsTilesetControlEditor : OnlineMapsControlBaseDynamicMeshEd
             if (wrongTileset)
             {
                 string[] assets = AssetDatabase.FindAssets("TilesetPBRShader");
-                if (assets.Length > 0) pTilesetShader.objectReferenceValue = AssetDatabase.LoadAssetAtPath<Shader>(AssetDatabase.GUIDToAssetPath(assets[0]));
+                if (assets.Length > 0) tilesetShader.objectReferenceValue = AssetDatabase.LoadAssetAtPath<Shader>(AssetDatabase.GUIDToAssetPath(assets[0]));
             }
             if (wrongMarker)
             {
                 string[] assets = AssetDatabase.FindAssets("TilesetPBRMarkerShader");
-                if (assets.Length > 0) pMarkerShader.objectReferenceValue = AssetDatabase.LoadAssetAtPath<Shader>(AssetDatabase.GUIDToAssetPath(assets[0]));
+                if (assets.Length > 0) markerShader.objectReferenceValue = AssetDatabase.LoadAssetAtPath<Shader>(AssetDatabase.GUIDToAssetPath(assets[0]));
             }
             if (wrongDrawing)
             {
                 string[] assets = AssetDatabase.FindAssets("TilesetPBRDrawingElement");
-                if (assets.Length > 0) pDrawingShader.objectReferenceValue = AssetDatabase.LoadAssetAtPath<Shader>(AssetDatabase.GUIDToAssetPath(assets[0]));
+                if (assets.Length > 0) drawingShader.objectReferenceValue = AssetDatabase.LoadAssetAtPath<Shader>(AssetDatabase.GUIDToAssetPath(assets[0]));
             }
         }
 
@@ -107,20 +111,14 @@ public class OnlineMapsTilesetControlEditor : OnlineMapsControlBaseDynamicMeshEd
 #endif
     }
 
-    private void CheckPBR()
+    private void DrawElevationResolution()
     {
-        if (EditorApplication.isPlaying) return;
-
-#if UNITY_2019_1_OR_NEWER
-        if (UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset == null || control.GetComponent<OnlineMapsPBR>() != null) return;
-
-        EditorGUILayout.BeginVertical(GUI.skin.box);
-
-        EditorGUILayout.HelpBox("Potential problem detected:\nUsed Scriptable Render Pipeline without PBR Bridge. The map may not be displayed correctly.", MessageType.Warning);
-        if (GUILayout.Button("Fix")) control.gameObject.AddComponent<OnlineMapsPBR>();
-
-        EditorGUILayout.EndVertical();
-#endif
+        EditorGUI.BeginChangeCheck();
+        EditorGUILayout.PropertyField(elevationResolution, new GUIContent("Displayed Elevation Resolution"));
+        if (EditorGUI.EndChangeCheck())
+        {
+            elevationResolution.intValue = Mathf.Clamp(elevationResolution.intValue, 16, 128);
+        }
     }
 
     private void DrawMoveCamera()
@@ -149,12 +147,12 @@ public class OnlineMapsTilesetControlEditor : OnlineMapsControlBaseDynamicMeshEd
 
         warningLayoutItem.Create("checkCameraDistance", CheckCameraDistance);
 
-        rootLayoutItem.Create(pSizeInScene).priority = -1;
-        rootLayoutItem["marker2DMode"].Create(pCheckMarker2DVisibility).OnValidateDraw += () => pMarker2DMode.enumValueIndex == (int)OnlineMapsMarker2DMode.flat;
-        rootLayoutItem.Create(pColliderType).disabledInPlaymode = true;
+        rootLayoutItem.Create(sizeInScene).priority = -1;
+        rootLayoutItem["marker2DMode"].Create(checkMarker2DVisibility).OnValidateDraw += () => pMarker2DMode.enumValueIndex == (int)OnlineMapsMarker2DMode.flat;
+        rootLayoutItem.Create(colliderType).disabledInPlaymode = true;
         rootLayoutItem.Create("colliderWarning", CheckColliderType);
         rootLayoutItem.Create("SRPWarning", CheckSRP).priority = -2;
-        rootLayoutItem.Create("PBRWarning", CheckPBR).priority = -2;
+        rootLayoutItem.Create("elevationResolution", DrawElevationResolution);
 
         GenerateMaterialsLayout();
 
@@ -168,21 +166,22 @@ public class OnlineMapsTilesetControlEditor : OnlineMapsControlBaseDynamicMeshEd
         mats.drawGroupBorder = true;
         mats.OnValidateDrawChilds += () => showShaders;
         mats.action += () => { showShaders = GUILayout.Toggle(showShaders, "Materials & Shaders", EditorStyles.foldout); };
-        mats.Create(pTileMaterial);
-        mats.Create(pMarkerMaterial);
-        mats.Create(pTilesetShader).OnChanged += () =>
+        mats.Create(tileMaterial);
+        mats.Create(markerMaterial);
+        mats.Create(tilesetShader).OnChanged += () =>
         {
-            if (pTilesetShader.objectReferenceValue == null) pTilesetShader.objectReferenceValue = defaultTilesetShader;
+            if (tilesetShader.objectReferenceValue == null) tilesetShader.objectReferenceValue = defaultTilesetShader;
         };
-        mats.Create(pMarkerShader).OnChanged += () =>
+        mats.Create(markerShader).OnChanged += () =>
         {
-            if (pMarkerShader.objectReferenceValue == null) pMarkerShader.objectReferenceValue = Shader.Find("Transparent/Diffuse");
+            if (markerShader.objectReferenceValue == null) markerShader.objectReferenceValue = Shader.Find("Transparent/Diffuse");
         };
-        mats.Create(pDrawingShader).OnChanged += () =>
+        mats.Create(drawingShader).OnChanged += () =>
         {
-            if (pDrawingShader.objectReferenceValue == null) pDrawingShader.objectReferenceValue = Shader.Find("Infinity Code/Online Maps/Tileset DrawingElement");
+            if (drawingShader.objectReferenceValue == null) drawingShader.objectReferenceValue = Shader.Find("Infinity Code/Online Maps/Tileset DrawingElement");
         };
-        mats.Create(pMipmapForTiles);
+        mats.Create(mipmapForTiles);
+        mats.Create(compressTextures);
     }
 
     protected override void OnEnableLate()
@@ -191,9 +190,9 @@ public class OnlineMapsTilesetControlEditor : OnlineMapsControlBaseDynamicMeshEd
 
         defaultTilesetShader = Shader.Find("Infinity Code/Online Maps/Tileset Cutout");
 
-        if (pTilesetShader.objectReferenceValue == null) pTilesetShader.objectReferenceValue = defaultTilesetShader;
-        if (pMarkerShader.objectReferenceValue == null) pMarkerShader.objectReferenceValue = Shader.Find("Transparent/Diffuse");
-        if (pDrawingShader.objectReferenceValue == null) pDrawingShader.objectReferenceValue = Shader.Find("Infinity Code/Online Maps/Tileset DrawingElement");
+        if (tilesetShader.objectReferenceValue == null) tilesetShader.objectReferenceValue = defaultTilesetShader;
+        if (markerShader.objectReferenceValue == null) markerShader.objectReferenceValue = Shader.Find("Transparent/Diffuse");
+        if (drawingShader.objectReferenceValue == null) drawingShader.objectReferenceValue = Shader.Find("Infinity Code/Online Maps/Tileset DrawingElement");
     }
 
     private void OnSceneGUI()
@@ -201,7 +200,11 @@ public class OnlineMapsTilesetControlEditor : OnlineMapsControlBaseDynamicMeshEd
         if (OnlineMaps.isPlaying) return;
 
         OnlineMaps map = control.GetComponent<OnlineMaps>();
-        if (map == null) return;
+        if (map == null)
+        {
+            Debug.Log("No Map");
+            return;
+        }
         Quaternion rotation = map.transform.rotation;
         Vector3 scale = map.transform.lossyScale;
         Vector3[] points = new Vector3[5];

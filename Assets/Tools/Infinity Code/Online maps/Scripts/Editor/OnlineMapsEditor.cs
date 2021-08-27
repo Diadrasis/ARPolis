@@ -87,6 +87,8 @@ public class OnlineMapsEditor : Editor
     private GUIContent[] cTrafficProviders;
     private int trafficProviderIndex;
     private SerializedProperty pCustomTrafficProviderURL;
+    private SerializedProperty pOSMServer;
+    private SerializedProperty pDragMarkerHoldingCTRL;
 
     public static GUIStyle warningStyle
     {
@@ -117,7 +119,8 @@ public class OnlineMapsEditor : Editor
                 ig == 6 || 
                 ig >= 15 && ig <= 18 ||
                 ig == 20 || 
-                ig >= 22 && ig <= 24) continue;
+                ig >= 22 && ig <= 24 ||
+                ig == 26) continue;
 
             string currentDefinitions = PlayerSettings.GetScriptingDefineSymbolsForGroup(g);
             List<string> directives = currentDefinitions.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries).Distinct().ToList();
@@ -156,6 +159,7 @@ public class OnlineMapsEditor : Editor
         pShowMarkerTooltip = serializedObject.FindProperty("showMarkerTooltip");
         pUseSoftwareJPEGDecoder = serializedObject.FindProperty("useSoftwareJPEGDecoder");
         pActiveTypeSettings = serializedObject.FindProperty("_activeTypeSettings");
+        pDragMarkerHoldingCTRL = serializedObject.FindProperty("dragMarkerHoldingCTRL");
 
 #if !UNITY_WEBGL
         pRenderInThread = serializedObject.FindProperty("renderInThread");
@@ -165,6 +169,7 @@ public class OnlineMapsEditor : Editor
 #endif
         pNotInteractUnderGUI = serializedObject.FindProperty("notInteractUnderGUI");
         pStopPlayingWhenScriptsCompile = serializedObject.FindProperty("stopPlayingWhenScriptsCompile");
+        pOSMServer = serializedObject.FindProperty("osmServer");
 
         cWidth = new GUIContent("Width (pixels)");
         cHeight = new GUIContent("Height (pixels)");
@@ -345,13 +350,26 @@ public class OnlineMapsEditor : Editor
 
         OnlineMapsEditorUtils.PropertyField(pTooltipTexture, cTooltipTexture, "Tooltip background texture");
         OnlineMapsEditorUtils.PropertyField(pShowMarkerTooltip, "Tooltip display rule");
+        OnlineMapsEditorUtils.PropertyField(pDragMarkerHoldingCTRL, "Hold CTRL and press on the marker to drag the item.");
 
         EditorGUIUtility.labelWidth = oldWidth;
     }
 
     private void DrawCacheGUI(ref bool dirty)
     {
-        if (pSource.enumValueIndex == (int)OnlineMapsSource.Resources || !GUILayout.Button("Cache tiles to Resources")) return;
+        if (pSource.enumValueIndex == (int)OnlineMapsSource.Resources) return;
+        if (!GUILayout.Button("Cache tiles to Resources")) return;
+
+        OnlineMapsTileSetControl tsControl = control as OnlineMapsTileSetControl;
+        if (tsControl != null && tsControl.compressTextures)
+        {
+            if (EditorUtility.DisplayDialog("Error", "To cache tiles, do the following:\n1.Enter to edit mode (stop the game).\n2.Tileset / Materials & Shaders / Compress Textures - OFF.\n3.Run the game and press the button again.\nAfter caching, you can enable texture compression again.", "Stop Game", "Cancel"))
+            {
+                EditorApplication.isPlaying = false;
+            }
+            return;
+        }
+
 
         lock (OnlineMapsTile.lockTiles)
         {
@@ -719,7 +737,11 @@ public class OnlineMapsEditor : Editor
                         if (ef.token != "version") return false;
                         return true;
                     }) as OnlineMapsProvider.ExtraField;
-                    if (version != null) version.value = match.Groups[1].Value;
+                    if (version != null)
+                    {
+                        version.value = match.Groups[1].Value;
+                        EditorUtility.SetDirty(target);
+                    }
                 }
             }
         }
@@ -851,6 +873,9 @@ public class OnlineMapsEditor : Editor
 
         OnlineMapsEditorUtils.PropertyField(pNotInteractUnderGUI, "Should Online Maps ignore clicks if an IMGUI or uGUI element is under the cursor?");
         OnlineMapsEditorUtils.PropertyField(pStopPlayingWhenScriptsCompile, "Should Online Maps stop playing when recompiling scripts?");
+        EditorGUI.BeginChangeCheck();
+        OnlineMapsEditorUtils.PropertyField(pOSMServer, new GUIContent("Overpass Server"));
+        if (EditorGUI.EndChangeCheck() && EditorApplication.isPlaying) OnlineMapsOSMAPIQuery.InitOSMServer((OnlineMapsOSMOverpassServer)pOSMServer.enumValueIndex);
 
         EditorGUIUtility.labelWidth = oldWidth;
 

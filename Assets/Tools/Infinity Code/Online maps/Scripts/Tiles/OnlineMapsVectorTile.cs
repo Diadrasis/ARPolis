@@ -155,7 +155,7 @@ public abstract class OnlineMapsVectorTile : OnlineMapsTile
 
                     if (cmd == Commands.MoveTo && geomTmp.Count > 0)
                     {
-                        geomOut.Add(geomTmp);
+                        geomOut.Add(geomTmp.ToList());
                         geomTmp.Clear();
                     }
 
@@ -172,7 +172,7 @@ public abstract class OnlineMapsVectorTile : OnlineMapsTile
 
                 if (geomTmp.Count > 0)
                 {
-                    geomOut.Add(geomTmp);
+                    geomOut.Add(geomTmp.ToList());
                     geomTmp.Clear();
                 }
 
@@ -181,7 +181,7 @@ public abstract class OnlineMapsVectorTile : OnlineMapsTile
             else if (cmd == Commands.ClosePath && geomType == GeomType.POLYGON && geomTmp.Count > 0) geomTmp.Add(geomTmp[0]);
         }
 
-        if (geomTmp.Count > 0) geomOut.Add(geomTmp);
+        if (geomTmp.Count > 0) geomOut.Add(geomTmp.ToList());
         return geomOut;
     }
 

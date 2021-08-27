@@ -23,6 +23,11 @@ public abstract class OnlineMapsControlBase3D: OnlineMapsControlBase
     public Camera activeCamera;
 
     /// <summary>
+    /// Reference to the elevation manager
+    /// </summary>
+    public OnlineMapsElevationManagerBase elevationManager;
+
+    /// <summary>
     /// Mode of 2D markers. Bake in texture or Billboard.
     /// </summary>
     public OnlineMapsMarker2DMode marker2DMode = OnlineMapsMarker2DMode.flat;
@@ -107,7 +112,7 @@ public abstract class OnlineMapsControlBase3D: OnlineMapsControlBase
 
         Vector2 inputPosition = GetInputPosition();
 
-        if (map.showMarkerTooltip == OnlineMapsShowMarkerTooltip.onHover)
+        if (map.showMarkerTooltip == OnlineMapsShowMarkerTooltip.onHover && !map.blockAllInteractions)
         {
             OnlineMapsMarkerInstanceBase markerInstance = GetBillboardMarkerFromScreen(inputPosition);
             if (markerInstance != null)
@@ -186,6 +191,7 @@ public abstract class OnlineMapsControlBase3D: OnlineMapsControlBase
         base.OnEnableLate();
 
         marker3DManager = GetComponent<OnlineMapsMarker3DManager>();
+        elevationManager = GetComponent<OnlineMapsElevationManagerBase>();
 
         OnlineMapsMarker3DManager.Init();
         marker3DDrawer = new OnlineMapsMarker3DDrawer(this);

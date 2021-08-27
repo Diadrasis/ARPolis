@@ -62,8 +62,6 @@ public class OnlineMapsBingMapsTiledElevationManager : OnlineMapsTiledElevationM
 
     public override void StartDownloadElevationTile(Tile tile)
     {
-        if (TryLoadFromCache(tile)) return;
-
         double lx, ty, rx, by;
         map.projection.TileToCoordinates(tile.x, tile.y, tile.zoom, out lx, out ty);
         map.projection.TileToCoordinates(tile.x + 1, tile.y + 1, tile.zoom, out rx, out @by);

@@ -161,6 +161,7 @@ MonoBehaviour:
   needRedraw: 1
   notInteractUnderGUI: 1
   mapType: arcgis.worldimagery
+  osmServer: 0
   proxyURL: http://service.infinity-code.com/redirect.php?
   redrawOnPlay: 1
   renderInThread: 0
@@ -716,7 +717,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: de8a1a9ecb8902c469a0226227d41faa, type: 3}
+  m_Texture: {fileID: 2800000, guid: a5e39ea583c1a8840a6a3dfb0a89b71b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

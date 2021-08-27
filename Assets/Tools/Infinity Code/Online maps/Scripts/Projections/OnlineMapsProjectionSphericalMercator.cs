@@ -13,7 +13,7 @@ public class OnlineMapsProjectionSphericalMercator:OnlineMapsProjection
         double sy = Math.Sin(lat * DEG2RAD);
         lng = (lng + 180) / 360;
         lat = 0.5 - Math.Log((1 + sy) / (1 - sy)) / PI4;
-        int mapSize = OnlineMapsUtils.tileSize << zoom;
+        long mapSize = (long)OnlineMapsUtils.tileSize << zoom;
         double px = lng * mapSize + 0.5;
         double py = lat * mapSize + 0.5;
 
@@ -28,7 +28,7 @@ public class OnlineMapsProjectionSphericalMercator:OnlineMapsProjection
 
     public override void TileToCoordinates(double tx, double ty, int zoom, out double lng, out double lat)
     {
-        double mapSize = OnlineMapsUtils.tileSize << zoom;
+        double mapSize = (long)OnlineMapsUtils.tileSize << zoom;
         lng = 360 * (OnlineMapsUtils.Repeat(tx * OnlineMapsUtils.tileSize, 0, mapSize - 1) / mapSize - 0.5);
         lat = 90 - 360 * Math.Atan(Math.Exp((OnlineMapsUtils.Clip(ty * OnlineMapsUtils.tileSize, 0, mapSize - 1) / mapSize - 0.5) * PI2)) / Math.PI;
     }

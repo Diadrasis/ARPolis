@@ -9,7 +9,7 @@ using System.Threading;
 #endif
 
 /// <summary>
-/// This class manages the background threads.\n
+/// This class manages the background threads.<br/>
 /// <strong>Please do not use it if you do not know what you're doing.</strong>
 /// </summary>
 public class OnlineMapsThreadManager

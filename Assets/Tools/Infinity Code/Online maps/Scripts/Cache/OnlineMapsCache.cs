@@ -33,7 +33,6 @@ public partial class OnlineMapsCache:MonoBehaviour, IOnlineMapsSavableComponent
     [Obsolete("Use OnlineMapsTileManager.OnStartDownloadTile")]
     public Action<OnlineMapsTile> OnStartDownloadTile;
 
-    private OnlineMaps map;
     private OnlineMapsSavableItem[] savableItems;
 
     /// <summary>
@@ -83,10 +82,9 @@ public partial class OnlineMapsCache:MonoBehaviour, IOnlineMapsSavableComponent
 
     private void OnDestroy()
     {
+        OnlineMaps.OnPreloadTiles -= OnPreloadTiles;
         OnlineMapsTileManager.OnLoadFromCache -= OnStartDownloadTileM;
-        OnlineMapsTileManager.OnPreloadTiles -= OnPreloadTiles;
         OnlineMapsTile.OnTileDownloaded -= OnTileDownloaded;
-        map = null;
     }
 
     private void OnDisable()
@@ -109,7 +107,7 @@ public partial class OnlineMapsCache:MonoBehaviour, IOnlineMapsSavableComponent
         _instance = this;
     }
 
-    private void OnPreloadTiles()
+    private void OnPreloadTiles(OnlineMaps map)
     {
         lock (OnlineMapsTile.lockTiles)
         {
@@ -166,11 +164,8 @@ public partial class OnlineMapsCache:MonoBehaviour, IOnlineMapsSavableComponent
 
     private void Start()
     {
-        map = OnlineMaps.instance;
-        if (map == null) map = FindObjectOfType<OnlineMaps>();
-
         OnlineMapsTileManager.OnLoadFromCache += OnStartDownloadTileM;
-        OnlineMapsTileManager.OnPreloadTiles += OnPreloadTiles;
+        OnlineMaps.OnPreloadTiles += OnPreloadTiles;
         OnlineMapsTile.OnTileDownloaded += OnTileDownloaded;
     }
 

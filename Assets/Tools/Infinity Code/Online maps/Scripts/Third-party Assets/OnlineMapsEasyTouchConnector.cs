@@ -12,6 +12,8 @@ using UnityEngine;
 public class OnlineMapsEasyTouchConnector:MonoBehaviour
 {
 #if EASYTOUCH
+    public OnlineMapsRawImageTouchForwarder forwarder;
+
     private Vector2 speed = Vector2.one;
 
     private OnlineMapsControlBase control;
@@ -34,7 +36,12 @@ public class OnlineMapsEasyTouchConnector:MonoBehaviour
         control.isMapDrag = false;
         float delta = gesture.deltaPinch / 100;
         if (control.zoomMode == OnlineMapsZoomMode.center) OnlineMaps.instance.floatZoom += delta;
-        else control.ZoomOnPoint(delta, gesture.position);
+        else
+        {
+            Vector2 pos = gesture.position;
+            if (forwarder != null) pos = forwarder.ForwarderToMapSpace(pos);
+            control.ZoomOnPoint(delta, pos);
+        }
     }
 
     private void Start()

@@ -173,14 +173,14 @@ public class OnlineMapsWhat3Words:OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// Returns a blend of the three most relevant 3 word address candidates for a given location, based on a full or partial 3 word address. \n
+    /// Returns a blend of the three most relevant 3 word address candidates for a given location, based on a full or partial 3 word address. <br/>
     /// The specified 3 word address may either be a full 3 word address or a partial 3 word address containing the first 2 words in full and at least 1 character of the 3rd word.StandardBlend provides the search logic that powers the search box on map.what3words.com and in the what3words mobile apps.
     /// </summary>
     /// <param name="key">A valid API key</param>
     /// <param name="addr">The full or partial 3 word address to obtain blended candidates for. At minimum this must be the first two complete words plus at least one character from the third word</param>
     /// <param name="multilingual">
-    /// StandardBlend is provided via 2 variant resources; single language and multilingual. \n
-    /// The single language standardblend resource requires a language to be specified.The input full or partial 3 word address will be interpreted as being in the specified language and all results will be in this language. \n
+    /// StandardBlend is provided via 2 variant resources; single language and multilingual. <br/>
+    /// The single language standardblend resource requires a language to be specified.The input full or partial 3 word address will be interpreted as being in the specified language and all results will be in this language. <br/>
     /// The multilingual standardblend-ml resource can accept an optional language. If specified, this will ensure that the standardblend-ml resource will look for results in this language, in addition to any other languages that yield relevant results.
     /// </param>
     /// <param name="lang">If specified, this parameter must be a supported 3 word address language as an ISO 639-1 2 letter code.</param>

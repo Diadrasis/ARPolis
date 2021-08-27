@@ -16,9 +16,9 @@ public class OnlineMapsHereRoutingAPIResult
     public MetaInfo metaInfo;
 
     /// <summary>
-    /// Contains the calculated path across a navigable link network, as specified in the request. \n
-    /// Routes contain navigation instructions for a single trip as: \n
-    /// waypoints (fixed locations) and route legs (sections of the route between waypoints). \n
+    /// Contains the calculated path across a navigable link network, as specified in the request. <br/>
+    /// Routes contain navigation instructions for a single trip as: <br/>
+    /// waypoints (fixed locations) and route legs (sections of the route between waypoints). <br/>
     /// Each response may also include information about the route itself, such as its overall shape, map location, or a summary description. 
     /// </summary>
     public Route[] routes;
@@ -29,7 +29,7 @@ public class OnlineMapsHereRoutingAPIResult
     public string language;
 
     /// <summary>
-    /// Contains copyright information intended for the end user when route uses data provided by outside companies. 
+    /// Contains copyright information intended for the end user when route uses data provided by outside companies. <br/>
     /// Source attribution must be displayed together with a route according to terms and conditions of the API. 
     /// </summary>
     public SourceAttribution sourceAttribution;
@@ -93,21 +93,21 @@ public class OnlineMapsHereRoutingAPIResult
     }
 
     /// <summary>
-    /// A Route describes a distinct path through the navigable road network between two or more waypoints. \n
+    /// A Route describes a distinct path through the navigable road network between two or more waypoints. <br/>
     /// It consists of route legs, each of which is a path between two waypoints. 
     /// </summary>
     public class Route
     {
         /// <summary>
-        /// Permanent unique identifier of the route, generated based on route links. \n
-        /// Can be used to reproduce any previously calculated route. \n
+        /// Permanent unique identifier of the route, generated based on route links. <br/>
+        /// Can be used to reproduce any previously calculated route. <br/>
         /// If a RouteId is requested, but fails to be calculated for any reason(e.g. public transport enabled), then the RouteId element is not available in the response.The rest of the route is intact.
         /// </summary>
         public string routeId;
 
         /// <summary>
-        /// List of waypoints that have been defined when requesting for a route calculation. \n
-        /// The first waypoint is defined as the start of the route; the last waypoint marks the destination. \n
+        /// List of waypoints that have been defined when requesting for a route calculation. <br/>
+        /// The first waypoint is defined as the start of the route; the last waypoint marks the destination. <br/>
         /// Any points in between the two are considered via points. 
         /// </summary>
         public Waypoint[] waypoints;
@@ -118,9 +118,9 @@ public class OnlineMapsHereRoutingAPIResult
         public OnlineMapsHereRoutingAPI.RoutingMode mode;
 
         /// <summary>
-        /// Shape of the route as a polyline. \n
-        /// The accuracy might depend on the resolution specified in mpp (meters per pixel) when requesting the route. \n
-        /// In some use cases (like web portals), only the route's shape is required without the nested structure of a route and detailed knowledge of the links and LinkIds. \n
+        /// Shape of the route as a polyline. <br/>
+        /// The accuracy might depend on the resolution specified in mpp (meters per pixel) when requesting the route. <br/>
+        /// In some use cases (like web portals), only the route's shape is required without the nested structure of a route and detailed knowledge of the links and LinkIds. <br/>
         /// In this case, the shape does not need to be acquired by traversing the route's links, but can be represented using this attribute at route level. 
         /// </summary>
         public GeoCoordinate[] shape;
@@ -141,14 +141,14 @@ public class OnlineMapsHereRoutingAPIResult
         public PublicTransportLine[] publicTransportLines;
 
         /// <summary>
-        /// For public transport routes, a list of ticketing options for the provided route. \n
+        /// For public transport routes, a list of ticketing options for the provided route. <br/>
         /// Each option is a list of tickets covering those parts of the route for which ticketing information is supported. 
         /// </summary>
         public PublicTransportTickets[] publicTransportTickets;
 
         /// <summary>
-        /// Notes that are either related to the calculation (violated routing options) or that refer the route as a whole. \n
-        /// In addition to these notes additional notes can be attached to maneuvers. \n
+        /// Notes that are either related to the calculation (violated routing options) or that refer the route as a whole. <br/>
+        /// In addition to these notes additional notes can be attached to maneuvers. <br/>
         /// The maneuver notes are usually related to the route segment following the maneuver and would be of interest when passing this segment. 
         /// </summary>
         public Note[] notes;
@@ -164,25 +164,25 @@ public class OnlineMapsHereRoutingAPIResult
         public SummaryByCountry[] summaryByCountries;
 
         /// <summary>
-        /// A simplified base polyline with a given tolerance parameter used to reduce the number of points. \n
+        /// A simplified base polyline with a given tolerance parameter used to reduce the number of points. <br/>
         /// The points in the base polyline are implicitly referenced by index. 
         /// </summary>
         public Generalization[] generalizations;
 
         /// <summary>
-        /// Maneuvers organized into sections based on TransportModeType. \n
+        /// Maneuvers organized into sections based on TransportModeType. <br/>
         /// It provides the user grouped itinerary summary and brief route instructions. 
         /// </summary>
         public ManueverGroup[] manueverGroups;
 
         /// <summary>
-        /// An incident describes a temporary event on a route. \n
+        /// An incident describes a temporary event on a route. <br/>
         /// It typically refers to a real world incident (accident, road construction, etc.) spanning on one or several subsequent links. 
         /// </summary>
         public Incident[] incidents;
 
         /// <summary>
-        /// Unique names within a route used to distinguish between alternative routes. 
+        /// Unique names within a route used to distinguish between alternative routes. <br/>
         /// They can be city names, road names or something else that makes the distinction possible. 
         /// </summary>
         public string label;
@@ -230,7 +230,7 @@ public class OnlineMapsHereRoutingAPIResult
         }
 
         /// <summary>
-        /// The service returns GeneralizationType in route responses for requests carrying the generalizationTolerances parameter. \n
+        /// The service returns GeneralizationType in route responses for requests carrying the generalizationTolerances parameter. <br/>
         /// The default is to not return any GeneralizationType. 
         /// </summary>
         public class Generalization
@@ -331,7 +331,7 @@ public class OnlineMapsHereRoutingAPIResult
         }
 
         /// <summary>
-        /// An incident describes a temporary event on a route. \n
+        /// An incident describes a temporary event on a route. <br/>
         /// It typically refers to a real world incident (accident, road construction, etc.) spanning on one or several subsequent links. 
         /// </summary>
         public class Incident
@@ -370,20 +370,20 @@ public class OnlineMapsHereRoutingAPIResult
         }
 
         /// <summary>
-        /// The service defines a route leg as the portion of a route between one waypoint and the next. \n
-        /// RouteLegType contains information about a route leg, such as the time required to traverse it, its shape, start and end point, as well as information about any sublegs contained in the leg due to the presence of passthrough waypoints. \n
+        /// The service defines a route leg as the portion of a route between one waypoint and the next. <br/>
+        /// RouteLegType contains information about a route leg, such as the time required to traverse it, its shape, start and end point, as well as information about any sublegs contained in the leg due to the presence of passthrough waypoints. <br/>
         /// Note: passThrough waypoints do not create explicit route legs, but instead create sublegs. The service provides subleg information within this type if any are present. 
         /// </summary>
         public class Leg
         {
             /// <summary>
-            /// Route waypoint that is located at the start of this route leg. \n
+            /// Route waypoint that is located at the start of this route leg. <br/>
             /// This waypoint matches one of the waypoints in the Route. 
             /// </summary>
             public Waypoint start;
 
             /// <summary>
-            /// Route waypoint that is located at the end of this route leg. \n
+            /// Route waypoint that is located at the end of this route leg. <br/>
             /// This waypoint matches one of the waypoints in the Route. 
             /// </summary>
             public Waypoint end;
@@ -394,7 +394,7 @@ public class OnlineMapsHereRoutingAPIResult
             public double length;
 
             /// <summary>
-            /// The time in seconds needed to travel along this route leg. \n
+            /// The time in seconds needed to travel along this route leg. <br/>
             /// Considers any available traffic information, if enabled and the authorized for the user. 
             /// </summary>
             public double travelTime;
@@ -435,7 +435,7 @@ public class OnlineMapsHereRoutingAPIResult
             public double trafficTime;
 
             /// <summary>
-            /// Estimated time in seconds spent on this leg, without considering traffic conditions. \n
+            /// Estimated time in seconds spent on this leg, without considering traffic conditions. <br/>
             /// The service may also account for additional time penalties, therefore this may be greater than the leg length divided by the base speed. 
             /// </summary>
             public double baseTime;
@@ -446,7 +446,7 @@ public class OnlineMapsHereRoutingAPIResult
             public Summary summary;
 
             /// <summary>
-            /// Distance and time summary information for any sub legs of this route leg. \n
+            /// Distance and time summary information for any sub legs of this route leg. <br/>
             /// The service defines sub legs where passThrough waypoints are used, so the list may be empty if no such waypoints exist within this route leg. 
             /// </summary>
             public Summary[] subLegSummary;
@@ -528,9 +528,9 @@ public class OnlineMapsHereRoutingAPIResult
             public int? lastPoint;
 
             /// <summary>
-            /// Estimated point in time when the maneuver should occur, based on the selected transport mode. Options include: \n
-            /// • Public transport: time at which the user is expected to begin this maneuver, see Public Transport Routing Mode for informations on how to compute the departure time of the line.\n
-            /// • Private transport: calculated departure time for the maneuver. \n
+            /// Estimated point in time when the maneuver should occur, based on the selected transport mode. Options include: <br/>
+            /// • Public transport: time at which the user is expected to begin this maneuver, see Public Transport Routing Mode for informations on how to compute the departure time of the line.<br/>
+            /// • Private transport: calculated departure time for the maneuver. <br/>
             /// In both cases the time is given in the timezone of the maneuver's starting position.
             /// </summary>
             public double? time;
@@ -559,8 +559,6 @@ public class OnlineMapsHereRoutingAPIResult
             /// Shape quality between current maneuver and the next one. Shape quality may vary depending on the transport mode chosen.
             /// </summary>
             public string shapeQuality;
-
-            // PrivateTransportManeuverType and PublicTransportManeuverType
 
             /// <summary>
             /// Code that identifies the action for this maneuver. Does not always indicate a direction. 
@@ -608,13 +606,13 @@ public class OnlineMapsHereRoutingAPIResult
             public string freewayJunction;
 
             /// <summary>
-            /// Traffic-enabled time. Estimated time in seconds spent on the segment following this maneuver, based on the TrafficSpeed. \n
+            /// Traffic-enabled time. Estimated time in seconds spent on the segment following this maneuver, based on the TrafficSpeed. <br/>
             /// The service may also account for additional time penalties, therefore this may be greater than the link length divided by the traffic speed. 
             /// </summary>
             public double trafficTime;
 
             /// <summary>
-            /// Estimated time in seconds spent on the segment following this maneuver, without considering traffic conditions, as it is based on the BaseSpeed. \n
+            /// Estimated time in seconds spent on the segment following this maneuver, without considering traffic conditions, as it is based on the BaseSpeed. <br/>
             /// The service may also account for additional time penalties, therefore this may be greater than the link length divided by the base speed. 
             /// </summary>
             public double baseTime;
@@ -650,26 +648,26 @@ public class OnlineMapsHereRoutingAPIResult
             public string line;
 
             /// <summary>
-            /// Reference key to the PublicTransportLine object for the target line. \n
-            /// This element is only provided in case of a "change" Maneuver (action == "Change" and if returning of "change" maneuvers has been requested using the "CombineChange" flag in PublicTransportProfile. \n
+            /// Reference key to the PublicTransportLine object for the target line. <br/>
+            /// This element is only provided in case of a "change" Maneuver (action == "Change" and if returning of "change" maneuvers has been requested using the "CombineChange" flag in PublicTransportProfile. <br/>
             /// To reduce data volume, the PublicTransport element is not directly embedded in the ManeuverType object, but is swapped out into the Route element. 
             /// </summary>
             public string toLine;
 
             /// <summary>
-            /// Name of the access point where the user has to enter or leave the public transport station. \n
+            /// Name of the access point where the user has to enter or leave the public transport station. <br/>
             /// Presence of this attribute depends on data availability.
             /// </summary>
             public string accessPointName;
 
             /// <summary>
-            /// Waiting time in seconds applicable to the current maneuver. \n
+            /// Waiting time in seconds applicable to the current maneuver. <br/>
             /// Represents time between start time of maneuver (attribute time) and actual transit departure time.
             /// </summary>
             public double waitTime;
 
             /// <summary>
-            /// When a public transport leg contains estimated times, this value contains the maximum deviation possible. \n
+            /// When a public transport leg contains estimated times, this value contains the maximum deviation possible. <br/>
             /// If any maneuver contains a value for this field, then the flag containsTimeEstimate will be listed in the publicTransportFlags list of the route summary.
             /// </summary>
             public double timeEstimatePrecision;
@@ -680,17 +678,17 @@ public class OnlineMapsHereRoutingAPIResult
             public string ticket;
 
             /// <summary>
-            /// Departure delay in seconds applicable to the current maneuver. \n
-            /// Represents the difference between the actual transit departure time taken from the real time information and the scheduled departure time. \n
-            /// The delay can have negative value, meaning that the public transport departed earlier than scheduled. \n
+            /// Departure delay in seconds applicable to the current maneuver. <br/>
+            /// Represents the difference between the actual transit departure time taken from the real time information and the scheduled departure time. <br/>
+            /// The delay can have negative value, meaning that the public transport departed earlier than scheduled. <br/>
             /// If the real time information is not available or the delay is zero, the DepartureDelay element is missing.
             /// </summary>
             public double departureDelay;
 
             /// <summary>
-            /// Arrival delay in seconds applicable to the current maneuver. \n
-            /// Represents the difference between the actual transit arrival time taken from the real time information and the scheduled arrival time. \n
-            /// The delay can have negative value, meaning that the public transport arrived earlier than scheduled. \n
+            /// Arrival delay in seconds applicable to the current maneuver. <br/>
+            /// Represents the difference between the actual transit arrival time taken from the real time information and the scheduled arrival time. <br/>
+            /// The delay can have negative value, meaning that the public transport arrived earlier than scheduled. <br/>
             /// If the real time information is not available or the delay is zero, the ArrivalDelay element is missing.
             /// </summary>
             public double arrivalDelay;
@@ -756,7 +754,7 @@ public class OnlineMapsHereRoutingAPIResult
             public class RoadShield
             {
                 /// <summary>
-                /// A string identifying the region where this road shield is used. \n
+                /// A string identifying the region where this road shield is used. <br/>
                 /// This may be used to differentiate roadshield images by country. 
                 /// </summary>
                 public string region;
@@ -841,7 +839,7 @@ public class OnlineMapsHereRoutingAPIResult
         }
 
         /// <summary>
-        /// Route notes are used to store additional information about the route. \n
+        /// Route notes are used to store additional information about the route. <br/>
         /// These notes can either be related to the calculation itself (like violated routing options) or to the characteristics of the route (like entering a toll road, passing a border, etc.). 
         /// </summary>
         public class Note
@@ -962,7 +960,7 @@ public class OnlineMapsHereRoutingAPIResult
             public string type;
 
             /// <summary>
-            /// Name of the transport line's type (such as "ICE", "TGV", etc.). \n
+            /// Name of the transport line's type (such as "ICE", "TGV", etc.). <br/>
             /// Note: This type is not officially supported.
             /// </summary>
             public string typeName;
@@ -996,7 +994,7 @@ public class OnlineMapsHereRoutingAPIResult
             }
 
             /// <summary>
-            /// Reference to an external resource (for example, a bitmap). \n
+            /// Reference to an external resource (for example, a bitmap). <br/>
             /// The client is responsible for retrieving the referenced resource. 
             /// </summary>
             public class ExternalResource
@@ -1049,7 +1047,7 @@ public class OnlineMapsHereRoutingAPIResult
                 public string stopName;
 
                 /// <summary>
-                /// The time in seconds required to travel from this stop to the next one using the public transport line specified in the Line element. \n
+                /// The time in seconds required to travel from this stop to the next one using the public transport line specified in the Line element. <br/>
                 /// Note that this value can be 0. 
                 /// </summary>
                 public double travelTime;
@@ -1133,7 +1131,7 @@ public class OnlineMapsHereRoutingAPIResult
         }
 
         /// <summary>
-        /// This type provides summary information for the entire route. \n
+        /// This type provides summary information for the entire route. <br/>
         /// This type of information includes travel time, distance, and descriptions of the overall route path. 
         /// </summary>
         public class Summary
@@ -1144,13 +1142,13 @@ public class OnlineMapsHereRoutingAPIResult
             public double distance;
 
             /// <summary>
-            /// Contains the travel time estimate in seconds for this element, considering traffic and transport mode. \n
+            /// Contains the travel time estimate in seconds for this element, considering traffic and transport mode. <br/>
             /// Based on the TrafficSpeed. The service may also account for additional time penalties, so this may be greater than the element length divided by the TrafficSpeed. 
             /// </summary>
             public double trafficTime;
 
             /// <summary>
-            /// Contains the travel time estimate in seconds for this element, considering transport mode but not traffic conditions. \n
+            /// Contains the travel time estimate in seconds for this element, considering transport mode but not traffic conditions. <br/>
             /// Based on the BaseSpeed. The service may also account for additional time penalties, therefore this may be greater than the element length divided by the BaseSpeed. 
             /// </summary>
             public double baseTime;
@@ -1176,8 +1174,8 @@ public class OnlineMapsHereRoutingAPIResult
             public int costFactor;
 
             /// <summary>
-            /// Estimation of the carbon dioxyde emmision for the given Route. \n
-            /// The value depends on the VehicleType request parameter which specifies the average fuel consumption per 100 km and the type of combustion engine (diesel or gasoline). \n
+            /// Estimation of the carbon dioxyde emmision for the given Route. <br/>
+            /// The value depends on the VehicleType request parameter which specifies the average fuel consumption per 100 km and the type of combustion engine (diesel or gasoline). <br/>
             /// Unit is kilograms with precision to three decimal places. 
             /// </summary>
             public double co2Emission;
@@ -1204,8 +1202,8 @@ public class OnlineMapsHereRoutingAPIResult
         }
 
         /// <summary>
-        /// Waypoints are points (including start and end points) along the route, based on input specified in the route request. \n
-        /// They can also be defined as passThrough, such as a case where the road changes names and no stopover action is required. \n 
+        /// Waypoints are points (including start and end points) along the route, based on input specified in the route request. <br/>
+        /// They can also be defined as passThrough, such as a case where the road changes names and no stopover action is required. <br/> 
         /// If the the request does not pass a coordinate when specifying the waypoint, the originalPosition attribute will not be filled.
         /// </summary>
         public class Waypoint
@@ -1216,15 +1214,15 @@ public class OnlineMapsHereRoutingAPIResult
             public string linkId;
 
             /// <summary>
-            /// If this waypoint is a start point, this will be mapped to the beginning of the link. \n
+            /// If this waypoint is a start point, this will be mapped to the beginning of the link. <br/>
             /// If used as destination point or via point, it will be mapped to the end of the link. 
             /// </summary>
             public GeoCoordinate mappedPosition;
 
             /// <summary>
-            /// Original position as it was specified in the corresponding request. \n
-            /// The value will depend on request construction: \n
-            /// If using a NavigationWaypointParameterType, the service will set OriginalPosition as the display position (if specified) or as the navigation position selected by the routing engine(if not specified in the request). \n
+            /// Original position as it was specified in the corresponding request. <br/>
+            /// The value will depend on request construction: <br/>
+            /// If using a NavigationWaypointParameterType, the service will set OriginalPosition as the display position (if specified) or as the navigation position selected by the routing engine(if not specified in the request). <br/>
             /// If using a GeoWaypointParameterType, the service will set the OriginalPosition as the position specified in the request.
             /// </summary>
             public GeoCoordinate originalPosition;
@@ -1235,7 +1233,7 @@ public class OnlineMapsHereRoutingAPIResult
             public string type;
 
             /// <summary>
-            /// Contains the relative position of the mapped location along the link, as the fractional distance between the link's reference node and the non-reference node. \n
+            /// Contains the relative position of the mapped location along the link, as the fractional distance between the link's reference node and the non-reference node. <br/>
             /// Ranges in value from 0 to 1. When no spot value nor display position is given in the request then default value 0.5 is assumed. 
             /// </summary>
             public double? spot;
@@ -1251,7 +1249,7 @@ public class OnlineMapsHereRoutingAPIResult
             public string mappedRoadName;
 
             /// <summary>
-            /// A label identifying this waypoint, generated by the routing service. \n
+            /// A label identifying this waypoint, generated by the routing service. <br/>
             /// Label is either a street name or a public transport stop, depending on the transport mode of the request. 
             /// </summary>
             public string label;
@@ -1287,8 +1285,8 @@ public class OnlineMapsHereRoutingAPIResult
     }
 
     /// <summary>
-    /// Source attribution contains information that must be displayed in the user interface of applications using Routing API. \n
-    /// Source attributions are produced, for example, when route is using information available through certain public transportation data providers. \n
+    /// Source attribution contains information that must be displayed in the user interface of applications using Routing API. <br/>
+    /// Source attributions are produced, for example, when route is using information available through certain public transportation data providers. <br/>
     /// Attribution contains localized ready-to-display string with HTML markup as well as structured information that could be used to get data without parsing attribution string.
     /// </summary>
     public class SourceAttribution
@@ -1345,7 +1343,7 @@ public class OnlineMapsHereRoutingAPIResult
             }
 
             /// <summary>
-            /// Contains information related specifically to data providers. \n
+            /// Contains information related specifically to data providers. <br/>
             /// Informaiton consists of ready-to-display text and structured information if any is available.
             /// </summary>
             public class Note

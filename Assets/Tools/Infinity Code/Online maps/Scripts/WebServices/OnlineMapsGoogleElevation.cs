@@ -6,9 +6,9 @@ using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// The Elevation API provides elevation data for all locations on the surface of the earth, including depth locations on the ocean floor (which return negative values). \n
-/// In those cases where Google does not possess exact elevation measurements at the precise location you request, the service will interpolate and return an averaged value using the four nearest locations.\n
-/// With the Elevation API, you can develop hiking and biking applications, mobile positioning applications, or low resolution surveying applications. \n
+/// The Elevation API provides elevation data for all locations on the surface of the earth, including depth locations on the ocean floor (which return negative values).<br/>
+/// In those cases where Google does not possess exact elevation measurements at the precise location you request, the service will interpolate and return an averaged value using the four nearest locations.<br/>
+/// With the Elevation API, you can develop hiking and biking applications, mobile positioning applications, or low resolution surveying applications. <br/>
 /// https://developers.google.com/maps/documentation/elevation/
 /// </summary>
 public class OnlineMapsGoogleElevation: OnlineMapsTextWebService
@@ -78,11 +78,11 @@ public class OnlineMapsGoogleElevation: OnlineMapsTextWebService
     /// Location on the earth from which to return elevation data.
     /// </param>
     /// <param name="key">
-    /// Your application's API key. \n
+    /// Your application's API key. <br/>
     /// This key identifies your application for purposes of quota management.
     /// </param>
     /// <param name="client">
-    /// Client ID identifies you as a Maps API for Work customer and enables support and purchased quota for your application. \n
+    /// Client ID identifies you as a Maps API for Work customer and enables support and purchased quota for your application.<br/>
     /// Requests made without a client ID are not eligible for Maps API for Work benefits.
     /// </param>
     /// <param name="signature">
@@ -101,11 +101,11 @@ public class OnlineMapsGoogleElevation: OnlineMapsTextWebService
     /// Locations on the earth from which to return elevation data.
     /// </param>
     /// <param name="key">
-    /// Your application's API key.\n
+    /// Your application's API key.<br/>
     /// This key identifies your application for purposes of quota management.
     /// </param>
     /// <param name="client">
-    /// Client ID identifies you as a Maps API for Work customer and enables support and purchased quota for your application.\n
+    /// Client ID identifies you as a Maps API for Work customer and enables support and purchased quota for your application.<br/>
     /// Requests made without a client ID are not eligible for Maps API for Work benefits.
     /// </param>
     /// <param name="signature">
@@ -122,15 +122,15 @@ public class OnlineMapsGoogleElevation: OnlineMapsTextWebService
     /// </summary>
     /// <param name="path">Path on the earth for which to return elevation data. </param>
     /// <param name="samples">
-    /// Specifies the number of sample points along a path for which to return elevation data. \n
+    /// Specifies the number of sample points along a path for which to return elevation data.<br/>
     /// The samples parameter divides the given path into an ordered set of equidistant points along the path.
     /// </param>
     /// <param name="key">
-    /// Your application's API key. \n
+    /// Your application's API key.<br/>
     /// This key identifies your application for purposes of quota management.
     /// </param>
     /// <param name="client">
-    /// Client ID identifies you as a Maps API for Work customer and enables support and purchased quota for your application. \n
+    /// Client ID identifies you as a Maps API for Work customer and enables support and purchased quota for your application.<br/>
     /// Requests made without a client ID are not eligible for Maps API for Work benefits.
     /// </param>
     /// <param name="signature">

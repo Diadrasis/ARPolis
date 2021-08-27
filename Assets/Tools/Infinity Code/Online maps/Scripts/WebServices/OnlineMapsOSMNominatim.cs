@@ -7,7 +7,7 @@ using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// This class is used to search OSM data by name and address and to generate synthetic addresses of OSM points (reverse geocoding).\n
+/// This class is used to search OSM data by name and address and to generate synthetic addresses of OSM points (reverse geocoding).<br/>
 /// http://wiki.openstreetmap.org/wiki/Nominatim
 ///  </summary>
 public class OnlineMapsOSMNominatim: OnlineMapsTextWebService
@@ -43,7 +43,7 @@ public class OnlineMapsOSMNominatim: OnlineMapsTextWebService
     /// </summary>
     /// <param name="query">Query string to search for.</param>
     /// <param name="acceptlanguage">
-    /// Preferred language order for showing search results, overrides the value specified in the "Accept-Language" HTTP header.\n
+    /// Preferred language order for showing search results, overrides the value specified in the "Accept-Language" HTTP header.<br/>
     /// Either uses standard rfc2616 accept-language string or a simple comma separated list of language codes.
     /// </param>
     /// <param name="limit">Limit the number of returned results.</param>
@@ -59,7 +59,7 @@ public class OnlineMapsOSMNominatim: OnlineMapsTextWebService
     /// </summary>
     /// <param name="location">The location to generate an address for.</param>
     /// <param name="acceptlanguage">
-    /// Preferred language order for showing search results, overrides the value specified in the "Accept-Language" HTTP header.\n
+    /// Preferred language order for showing search results, overrides the value specified in the "Accept-Language" HTTP header.<br/>
     /// Either uses standard rfc2616 accept-language string or a simple comma separated list of language codes.
     /// </param>
     /// <param name="addressdetails">Include a breakdown of the address into elements.</param>

@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 /// <summary>
 /// Class implements the basic functionality of drawing on the map.
@@ -53,8 +54,8 @@ public abstract class OnlineMapsDrawingElement: IOnlineMapsInteractiveElement
     public Action<OnlineMapsDrawingElement> OnRelease;
 
     /// <summary>
-    /// Need to check the map boundaries? \n
-    /// It allows you to make drawing element, which are active outside the map.\n
+    /// Need to check the map boundaries? <br/>
+    /// It allows you to make drawing element, which are active outside the map.<br/>
     /// </summary>
     public bool checkMapBoundaries = true;
 
@@ -67,6 +68,11 @@ public abstract class OnlineMapsDrawingElement: IOnlineMapsInteractiveElement
     /// Tooltip that is displayed when user hover on the drawing element.
     /// </summary>
     public string tooltip;
+
+    /// <summary>
+    /// The local Y position for the GameObject on Tileset.
+    /// </summary>
+    public float yOffset = 0;
 
     protected bool _visible = true;
     protected float bestElevationYScale;
@@ -83,6 +89,8 @@ public abstract class OnlineMapsDrawingElement: IOnlineMapsInteractiveElement
     private int _renderQueueOffset;
     private IOnlineMapsInteractiveElementManager _manager;
     private static List<Vector2> localPoints;
+    private OnlineMapsElevationManagerBase _elevationManager;
+    private bool elevationManagerInited = false;
 
     public object this[string key]
     {
@@ -129,6 +137,27 @@ public abstract class OnlineMapsDrawingElement: IOnlineMapsInteractiveElement
     protected virtual string defaultName
     {
         get { return "Drawing Element"; }
+    }
+
+    protected OnlineMapsElevationManagerBase elevationManager
+    {
+        get
+        {
+            if (!elevationManagerInited)
+            {
+                elevationManagerInited = true;
+
+                OnlineMapsControlBaseDynamicMesh control = manager.map.control as OnlineMapsControlBaseDynamicMesh;
+                if (control != null) _elevationManager = control.elevationManager;
+            }
+
+            return _elevationManager;
+        }
+    }
+
+    protected bool hasElevation
+    {
+        get { return elevationManager != null && elevationManager.enabled; }
     }
 
     public GameObject instance
@@ -310,7 +339,7 @@ public abstract class OnlineMapsDrawingElement: IOnlineMapsInteractiveElement
 
         int c = points.Count - 1;
         bool extraPointAdded = false;
-        bool elevationActive = OnlineMapsElevationManagerBase.useElevation;
+        bool elevationActive = hasElevation;
 
         for (int i = 0; i < points.Count; i++)
         {
@@ -354,8 +383,8 @@ public abstract class OnlineMapsDrawingElement: IOnlineMapsInteractiveElement
 
                 if (elevationActive)
                 {
-                    s1y = OnlineMapsElevationManagerBase.GetElevation(s1x, s1z, bestElevationYScale, tlx, tly, brx, bry);
-                    s2y = OnlineMapsElevationManagerBase.GetElevation(s2x, s2z, bestElevationYScale, tlx, tly, brx, bry);
+                    s1y = elevationManager.GetElevationValue(s1x, s1z, bestElevationYScale, tlx, tly, brx, bry);
+                    s2y = elevationManager.GetElevationValue(s2x, s2z, bestElevationYScale, tlx, tly, brx, bry);
                 }
 
                 s1 = new Vector3(s1x, s1y, s1z);
@@ -428,8 +457,8 @@ public abstract class OnlineMapsDrawingElement: IOnlineMapsInteractiveElement
 
                     if (elevationActive)
                     {
-                        s1y = OnlineMapsElevationManagerBase.GetElevation(is1x, is1z, bestElevationYScale, tlx, tly, brx, bry);
-                        s2y = OnlineMapsElevationManagerBase.GetElevation(is2x, is2z, bestElevationYScale, tlx, tly, brx, bry);
+                        s1y = elevationManager.GetElevationValue(is1x, is1z, bestElevationYScale, tlx, tly, brx, bry);
+                        s2y = elevationManager.GetElevationValue(is2x, is2z, bestElevationYScale, tlx, tly, brx, bry);
                     }
 
                     s1 = new Vector3(is1x, s1y, is1z);
@@ -447,8 +476,8 @@ public abstract class OnlineMapsDrawingElement: IOnlineMapsInteractiveElement
 
                     if (elevationActive)
                     {
-                        s1y = OnlineMapsElevationManagerBase.GetElevation(po1x, po1z, bestElevationYScale, tlx, tly, brx, bry);
-                        s2y = OnlineMapsElevationManagerBase.GetElevation(po2x, po2z, bestElevationYScale, tlx, tly, brx, bry);
+                        s1y = elevationManager.GetElevationValue(po1x, po1z, bestElevationYScale, tlx, tly, brx, bry);
+                        s2y = elevationManager.GetElevationValue(po2x, po2z, bestElevationYScale, tlx, tly, brx, bry);
                     }
 
                     s1 = new Vector3(po1x, s1y, po1z);
@@ -1163,7 +1192,7 @@ public abstract class OnlineMapsDrawingElement: IOnlineMapsInteractiveElement
         List<Vector2> localPoints = GetLocalPoints(points, closed, optimize);
         List<Vector2> activePoints = new List<Vector2>(localPoints.Count);
 
-        int maxX = 1 << manager.map.zoom;
+        long maxX = 1L << manager.map.zoom;
         float maxSize = maxX * OnlineMapsUtils.tileSize * control.sizeInScene.x / manager.map.width / manager.map.zoomCoof;
         float halfSize = maxSize / 2;
 
@@ -1323,13 +1352,14 @@ public abstract class OnlineMapsDrawingElement: IOnlineMapsInteractiveElement
 
         gameObject = new GameObject(name);
         gameObject.transform.parent = control.drawingsGameObject.transform;
-        gameObject.transform.localPosition = Vector3.zero;
+        gameObject.transform.localPosition = new Vector3(0, yOffset, 0);
         gameObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
         gameObject.transform.localScale = Vector3.one;
         gameObject.layer = control.drawingsGameObject.layer;
 
         MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
         MeshRenderer renderer = gameObject.AddComponent<MeshRenderer>();
+        renderer.shadowCastingMode = ShadowCastingMode.Off;
         mesh = new Mesh {name = name};
         meshFilter.mesh = mesh;
         materials = new Material[createBackgroundMaterial?2: 1];
@@ -1356,7 +1386,7 @@ public abstract class OnlineMapsDrawingElement: IOnlineMapsInteractiveElement
     }
 
     /// <summary>
-    /// It marks the elements changed.\n
+    /// It marks the elements changed.<br/>
     /// It is used for the Drawing API as an overlay.
     /// </summary>
     public static void MarkChanged()

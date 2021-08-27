@@ -66,21 +66,17 @@ namespace InfinityCode.OnlineMapsExamples
                 pz = map.floatZoom;
             }
             // If no interaction with the map.
-            else if (rsX * rsX + rsY * rsY > 0.001 || rsZ > 0.001)
+            else if (rsX * rsX + rsY * rsY > 0.01 || rsZ > 0.01)
             {
                 // Continue to move the map with the current speed.
-                double tx, ty;
-                map.GetTilePosition(out tx, out ty, 20);
-
-                tx += rsX;
-                ty += rsY;
+                ptx += rsX;
+                pty += rsY;
 
                 int max = 1 << 20;
-                if (tx >= max) tx -= max;
-                else if (tx < 0) tx += max;
+                if (ptx >= max) ptx -= max;
+                else if (ptx < 0) ptx += max;
 
-                map.SetTilePosition(tx, ty, 20);
-                //control.ZoomOnPoint(rsZ, lastScreenPoint);
+                map.SetTilePosition(ptx, pty, 20);
                 map.floatZoom += rsZ;
 
                 // Reduces the current speed.

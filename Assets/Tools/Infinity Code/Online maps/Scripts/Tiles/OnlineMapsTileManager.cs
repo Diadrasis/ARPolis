@@ -176,37 +176,51 @@ public class OnlineMapsTileManager
             return;
         }
 
-        if (!www.hasError && www.bytesDownloaded > 0)
+        if (www.hasError || www.bytesDownloaded <= 0)
         {
-            if (tile.map.control.resultIsTexture)
-            {
-                if (tile.OnLabelDownloadComplete()) tile.map.buffer.ApplyTile(tile);
-            }
-            else if (tile.trafficWWW != null && tile.map.traffic)
-            {
-                Texture2D trafficTexture = new Texture2D(256, 256, TextureFormat.ARGB32, false)
-                {
-                    wrapMode = TextureWrapMode.Clamp
-                };
-                if (tile.map.useSoftwareJPEGDecoder) OnlineMapsRasterTile.LoadTexture(trafficTexture, www.bytes);
-                else tile.trafficWWW.LoadImageIntoTexture(trafficTexture);
-                tile.trafficTexture = trafficTexture;
-            }
-
-            if (OnlineMapsTile.OnTrafficDownloaded != null) OnlineMapsTile.OnTrafficDownloaded(tile);
-
-            tile.map.Redraw();
+            tile.trafficWWW = null;
+            return;
         }
 
-        tile.trafficWWW = null;
+        if (tile.map.control.resultIsTexture)
+        {
+            if (tile.OnLabelDownloadComplete()) tile.map.buffer.ApplyTile(tile);
+        }
+        else if (tile.trafficWWW != null && tile.map.traffic)
+        {
+            Texture2D trafficTexture = new Texture2D(256, 256, TextureFormat.ARGB32, false)
+            {
+                wrapMode = TextureWrapMode.Clamp
+            };
+            if (tile.map.useSoftwareJPEGDecoder) OnlineMapsRasterTile.LoadTexture(trafficTexture, www.bytes);
+            else tile.trafficWWW.LoadImageIntoTexture(trafficTexture);
+
+            OnlineMapsTileSetControl tsControl = tile.map.control as OnlineMapsTileSetControl;
+            if (tsControl != null && tsControl.compressTextures) trafficTexture.Compress(true);
+
+            tile.trafficTexture = trafficTexture;
+        }
+
+        if (OnlineMapsTile.OnTrafficDownloaded != null) OnlineMapsTile.OnTrafficDownloaded(tile);
+
+        tile.map.Redraw();
+
+
     }
 
+    /// <summary>
+    /// Remove tile.
+    /// </summary>
+    /// <param name="tile">Tile</param>
     public void Remove(OnlineMapsTile tile)
     {
         unusedTiles.Add(tile);
         if (_dtiles.ContainsKey(tile.key)) _dtiles.Remove(tile.key);
     }
 
+    /// <summary>
+    /// Reset state of tile manager and dispose all tiles
+    /// </summary>
     public void Reset()
     {
         foreach (OnlineMapsTile tile in tiles) tile.Dispose();
@@ -214,6 +228,9 @@ public class OnlineMapsTileManager
         dTiles.Clear();
     }
 
+    /// <summary>
+    /// Start next downloads (if any).
+    /// </summary>
     public void StartDownloading()
     {
         if (tiles == null) return;
@@ -371,7 +388,7 @@ public class OnlineMapsTileManager
             {
                 (tile as OnlineMapsRasterTile).ApplyTexture(texture);
                 tile.map.buffer.ApplyTile(tile);
-                OnlineMapsUtils.Destroy(texture);
+                Resources.UnloadAsset(texture);
             }
             else
             {
@@ -409,6 +426,12 @@ public class OnlineMapsTileManager
         OnlineMapsWWW www = new OnlineMapsWWW(path);
         yield return www;
 
+        if (tile.map == null)
+        {
+            tile.MarkError();
+            yield break;
+        }
+
         if (www.hasError)
         {
             if (tile.map.source == OnlineMapsSource.StreamingAssets) tile.MarkError();
@@ -430,6 +453,10 @@ public class OnlineMapsTileManager
         else
         {
             tile.texture = texture;
+
+            OnlineMapsTileSetControl tsControl = tile.map.control as OnlineMapsTileSetControl;
+            if (tsControl != null && tsControl.compressTextures) texture.Compress(true);
+
             tile.status = OnlineMapsTileStatus.loaded;
         }
 

@@ -7,7 +7,7 @@ using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// The Google Maps Roads API identifies the roads a vehicle was traveling along and provides additional metadata about those roads, such as speed limits.\n
+/// The Google Maps Roads API identifies the roads a vehicle was traveling along and provides additional metadata about those roads, such as speed limits.<br/>
 /// https://developers.google.com/maps/documentation/roads/intro?hl=en
 /// </summary>
 public class OnlineMapsGoogleRoads:OnlineMapsTextWebService
@@ -175,19 +175,19 @@ public class OnlineMapsGoogleRoads:OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// This service returns the best-fit road geometry for a given set of GPS coordinates. \n
-    /// This service takes up to 100 GPS points collected along a route, and returns a similar set of data with the points snapped to the most likely roads the vehicle was traveling along. \n
-    /// Optionally, you can request that the points be interpolated, resulting in a path that smoothly follows the geometry of the road.\n
+    /// This service returns the best-fit road geometry for a given set of GPS coordinates. <br/>
+    /// This service takes up to 100 GPS points collected along a route, and returns a similar set of data with the points snapped to the most likely roads the vehicle was traveling along. <br/>
+    /// Optionally, you can request that the points be interpolated, resulting in a path that smoothly follows the geometry of the road.<br/>
     /// https://developers.google.com/maps/documentation/roads/snap
     /// </summary>
     /// <param name="key">Your application's API key. Your application must identify itself every time it sends a request to the Google Maps Roads API by including an API key with each request.</param>
     /// <param name="path">
-    /// The path to be snapped.\n
+    /// The path to be snapped.<br/>
     /// IEnumerable values can be float, double or Vector2.
     /// </param>
     /// <param name="interpolate">
-    /// Whether to interpolate a path to include all points forming the full road-geometry. \n
-    /// When true, additional interpolated points will also be returned, resulting in a path that smoothly follows the geometry of the road, even around corners and through tunnels. \n
+    /// Whether to interpolate a path to include all points forming the full road-geometry. <br/>
+    /// When true, additional interpolated points will also be returned, resulting in a path that smoothly follows the geometry of the road, even around corners and through tunnels. <br/>
     /// Interpolated paths will most likely contain more points than the original path.
     /// </param>
     /// <returns>Instance of request.</returns>
@@ -197,14 +197,14 @@ public class OnlineMapsGoogleRoads:OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// This service returns the posted speed limit for a road segment. \n
-    /// The Speed Limit service is only available to Google Maps APIs Premium Plan customers.\n
+    /// This service returns the posted speed limit for a road segment. <br/>
+    /// The Speed Limit service is only available to Google Maps APIs Premium Plan customers.<br/>
     /// https://developers.google.com/maps/documentation/roads/speed-limits?hl=en
     /// </summary>
     /// <param name="key">Your application's API key. Your application must identify itself every time it sends a request to the Google Maps Roads API by including an API key with each request.</param>
     /// <param name="path">
-    /// IEnumerable values can be float, double, Vector2 or string.\n
-    /// If values is string, it must contain placeId.\n
+    /// IEnumerable values can be float, double, Vector2 or string.<br/>
+    /// If values is string, it must contain placeId.<br/>
     /// If values is float, double or Vector2, it must contain coordinates.
     /// </param>
     /// <param name="units">Whether to return speed limits in kilometers or miles per hour. This can be set to either KPH or MPH.</param>
@@ -241,10 +241,10 @@ public class OnlineMapsGoogleRoads:OnlineMapsTextWebService
         public Location location;
 
         /// <summary>
-        /// An integer that indicates the corresponding value in the original request. \n
-        /// Each value in the request should map to a snapped value in the response. \n
-        /// However, if you've set interpolate=true, then it's possible that the response will contain more coordinates than the request. \n
-        /// Interpolated values will not have an originalIndex. \n
+        /// An integer that indicates the corresponding value in the original request. <br/>
+        /// Each value in the request should map to a snapped value in the response. <br/>
+        /// However, if you've set interpolate=true, then it's possible that the response will contain more coordinates than the request. <br/>
+        /// Interpolated values will not have an originalIndex. <br/>
         /// These values are indexed from 0, so a point with an originalIndex of 4 will be the snapped value of the 5th latitude/longitude passed to the path parameter.
         /// </summary>
         public int originalIndex;

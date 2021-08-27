@@ -44,7 +44,7 @@ public class OnlineMapsMarker3DDrawer : OnlineMapsMarkerDrawerBase
         map.projection.CoordinatesToTile(tlx, tly, zoom, out ttlx, out ttly);
         map.projection.CoordinatesToTile(brx, bry, zoom, out tbrx, out tbry);
 
-        int maxX = 1 << zoom;
+        long maxX = 1 << zoom;
 
         bool isEntireWorld = map.buffer.renderState.width == maxX * OnlineMapsUtils.tileSize;
         if (isEntireWorld && Math.Abs(tlx - brx) < 180)

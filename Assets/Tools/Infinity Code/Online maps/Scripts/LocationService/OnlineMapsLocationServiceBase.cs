@@ -5,7 +5,7 @@ using System;
 using UnityEngine;
 
 /// <summary>
-/// Controls map using Location Service (GPS and compass).\n
+/// Controls map using Location Service (GPS and compass).
 /// </summary>
 [OnlineMapsPlugin("Location Service", typeof(OnlineMapsControlBase))]
 public abstract class OnlineMapsLocationServiceBase : MonoBehaviour, IOnlineMapsSavableComponent
@@ -120,14 +120,14 @@ public abstract class OnlineMapsLocationServiceBase : MonoBehaviour, IOnlineMaps
     public OnlineMapsMarker3D.SizeType marker3DSizeType = OnlineMapsMarker3D.SizeType.scene;
 
     /// <summary>
-    /// The maximum number of stored positions./n
+    /// The maximum number of stored positions.<br/>
     /// It is used to calculate the speed.
     /// </summary>
     public int maxPositionCount = 3;
 
     /// <summary>
-    /// Current GPS coordinates.\n
-    /// <strong>Important: position not available Start, because GPS is not already initialized. \n
+    /// Current GPS coordinates.<br/>
+    /// <strong>Important: position not available Start, because GPS is not already initialized.<br/>
     /// Use OnLocationInited event, to determine the initialization of GPS.</strong>
     /// </summary>
     public Vector2 position = Vector2.zero;
@@ -143,8 +143,8 @@ public abstract class OnlineMapsLocationServiceBase : MonoBehaviour, IOnlineMaps
     public bool rotateCameraByCompass = false;
 
     /// <summary>
-    /// The heading in degrees relative to the geographic North Pole.\n
-    /// <strong>Important: position not available Start, because compass is not already initialized. \n
+    /// The heading in degrees relative to the geographic North Pole.<br/>
+    /// <strong>Important: position not available Start, because compass is not already initialized.<br/>
     /// Use OnCompassChanged event, to determine the initialization of compass.</strong>
     /// </summary>
     public float trueHeading = 0;
@@ -407,7 +407,7 @@ public abstract class OnlineMapsLocationServiceBase : MonoBehaviour, IOnlineMaps
 #if UNITY_EDITOR || !UNITY_WEBGL
             OnlineMapsWWW findByIPRequest = new OnlineMapsWWW("https://ipinfo.io/json");
 #else
-            OnlineMapsWWW findByIPRequest = new OnlineMapsWWW("http://service.infinity-code.com/getlocation.php");
+            OnlineMapsWWW findByIPRequest = new OnlineMapsWWW("https://service.infinity-code.com/getlocation.php");
 #endif
             findByIPRequest.OnComplete += OnFindLocationComplete;
         }
@@ -474,7 +474,7 @@ public abstract class OnlineMapsLocationServiceBase : MonoBehaviour, IOnlineMaps
 
             if (rotateCameraByCompass)
             {
-                if (_allowUpdatePosition) UpdateCameraRotation();
+                UpdateCameraRotation();
             }
 
             if (positionChanged)
@@ -514,21 +514,11 @@ public abstract class OnlineMapsLocationServiceBase : MonoBehaviour, IOnlineMaps
         OnlineMapsCameraOrbit co = OnlineMapsCameraOrbit.instance;
         if (co == null) return;
 
-        float value = co.rotation.y;
+        float value = Mathf.Repeat(co.rotation.y, 360);
+        float off = value - Mathf.Repeat(trueHeading, 360);
 
-        float off = value - trueHeading;
-        float step = 360 * Mathf.Sign(off);
-
-        int i = 10;
-        while (Mathf.Abs(off) > 180 && i > 0)
-        {
-            off -= step;
-            value += step;
-            i--;
-        }
-
-        if (trueHeading - value > 180) value += 360;
-        else if (trueHeading - value < -180) value -= 360;
+        if (off > 180) value -= 360;
+        else if (off < -180) value += 360;
 
         if (!(Math.Abs(trueHeading - value) >= float.Epsilon)) return;
 

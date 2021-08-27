@@ -7,7 +7,7 @@ using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// This class is used to search for a location by address using Bing Maps Location API.\n
+/// This class is used to search for a location by address using Bing Maps Location API.<br/>
 /// https://msdn.microsoft.com/en-us/library/ff701715.aspx
 /// </summary>
 public class OnlineMapsBingMapsLocation: OnlineMapsTextWebService

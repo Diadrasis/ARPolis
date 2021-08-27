@@ -17,6 +17,9 @@ public abstract class OnlineMapsControlBaseDynamicMesh : OnlineMapsControlBase3D
     /// </summary>
     public Action OnMeshUpdated;
 
+    public Action OnUpdateMeshAfter;
+    public Action OnUpdateMeshBefore;
+
     /// <summary>
     /// Type of checking 2D markers on visibility.
     /// </summary>
@@ -99,11 +102,11 @@ public abstract class OnlineMapsControlBaseDynamicMesh : OnlineMapsControlBase3D
     }
 
     /// <summary>
-    /// Reference to the elevation manager
+    /// Returns true when the elevation manager is available and enabled.
     /// </summary>
-    public OnlineMapsElevationManagerBase elevationManager
+    public bool hasElevation
     {
-        get { return OnlineMapsElevationManagerBase.instance; }
+        get { return elevationManager != null && elevationManager.enabled; }
     }
 
     public new static OnlineMapsControlBaseDynamicMesh instance
@@ -122,6 +125,8 @@ public abstract class OnlineMapsControlBaseDynamicMesh : OnlineMapsControlBase3D
 
     public override void GetPosition(double lng, double lat, out double px, out double py)
     {
+        const short tileSize = OnlineMapsUtils.tileSize;
+
         double dx, dy, dtx, dty;
         map.projection.CoordinatesToTile(lng, lat, map.zoom, out dx, out dy);
 
@@ -133,9 +138,9 @@ public abstract class OnlineMapsControlBaseDynamicMesh : OnlineMapsControlBase3D
         dy -= dty;
         int maxX = 1 << (map.zoom - 1);
         if (dx < -maxX) dx += maxX << 1;
-        if (dx < 0 && map.width == (1 << map.zoom) * OnlineMapsUtils.tileSize) dx += map.width / OnlineMapsUtils.tileSize;
-        px = dx * OnlineMapsUtils.tileSize / map.zoomCoof;
-        py = dy * OnlineMapsUtils.tileSize / map.zoomCoof;
+        if (dx < 0 && map.width == (1L << map.zoom) * tileSize) dx += map.width / tileSize;
+        px = dx * tileSize / map.zoomCoof;
+        py = dy * tileSize / map.zoomCoof;
     }
 
     public override Vector2 GetScreenPosition(double lng, double lat)
@@ -237,7 +242,7 @@ public abstract class OnlineMapsControlBaseDynamicMesh : OnlineMapsControlBase3D
         mx = -mx / map.width * sizeInScene.x;
         my = my / map.height * sizeInScene.y;
 
-        float y = OnlineMapsElevationManagerBase.useElevation? OnlineMapsElevationManagerBase.GetElevation(mx, my, OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry), tlx, tly, brx, bry): 0;
+        float y = hasElevation ? elevationManager.GetElevationValue(mx, my, OnlineMapsElevationManagerBase.GetBestElevationYScale(tlx, tly, brx, bry), tlx, tly, brx, bry) : 0;
 
         Vector3 offset = transform.rotation * new Vector3((float)mx, y, (float)my);
         offset.Scale(map.transform.lossyScale);

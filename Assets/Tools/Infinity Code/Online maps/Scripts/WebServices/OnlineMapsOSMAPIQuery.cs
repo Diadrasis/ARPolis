@@ -6,22 +6,19 @@ using System.Linq;
 using UnityEngine;
 
 /// <summary>
-/// This class is used to request to Open Street Map Overpass API.\n
-/// You can create a new instance using OnlineMapsOSMAPIQuery.Find.\n
-/// Open Street Map Overpass API documentation: http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide \n
-/// You can test your queries using: http://overpass-turbo.eu/ \n
+/// This class is used to request to Open Street Map Overpass API.<br/>
+/// You can create a new instance using OnlineMapsOSMAPIQuery.Find.<br/>
+/// Open Street Map Overpass API documentation: http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide <br/>
+/// You can test your queries using: http://overpass-turbo.eu/ 
 /// </summary>
 public class OnlineMapsOSMAPIQuery: OnlineMapsTextWebService
 {
-    /// <summary>
-    /// Constructor.
-    /// Use OnlineMapsOSMAPIQuery.Find for create request.
-    /// </summary>
-    /// <param name="data">Overpass QL request</param>
+    private static string osmURL = "https://overpass-api.de/api/interpreter?data=";
+
     private OnlineMapsOSMAPIQuery(string data)
     {
         _status = OnlineMapsQueryStatus.downloading;
-        string url = "https://overpass.kumi.systems/api/interpreter?data=" + OnlineMapsWWW.EscapeURL(data);
+        string url = osmURL + OnlineMapsWWW.EscapeURL(data);
         www = new OnlineMapsWWW(url);
         www.OnComplete += OnRequestComplete;
     }
@@ -34,6 +31,15 @@ public class OnlineMapsOSMAPIQuery: OnlineMapsTextWebService
     public static OnlineMapsOSMAPIQuery Find(string data)
     {
         return new OnlineMapsOSMAPIQuery(data);
+    }
+
+    public static void InitOSMServer(OnlineMapsOSMOverpassServer server)
+    {
+        if (server == OnlineMapsOSMOverpassServer.main) osmURL = "https://overpass-api.de/api/interpreter?data=";
+        else if (server == OnlineMapsOSMOverpassServer.main2) osmURL = "https://z.overpass-api.de/api/interpreter?data=";
+        else if (server == OnlineMapsOSMOverpassServer.french) osmURL = "https://overpass.openstreetmap.fr/api/interpreter?data=";
+        else if (server == OnlineMapsOSMOverpassServer.taiwan) osmURL = "https://overpass.nchc.org.tw/api/interpreter?data=";
+        else if (server == OnlineMapsOSMOverpassServer.kumiSystems) osmURL = "https://overpass.kumi.systems/api/interpreter?data=";
     }
 
     /// <summary>
@@ -183,7 +189,7 @@ public class OnlineMapsOSMAPIQuery: OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// Fast XML parser optimized for OSM response.\n
+    /// Fast XML parser optimized for OSM response.<br/>
     /// It has very limited support for XML and is not recommended for parsing any data except OSM response.
     /// </summary>
     public class OSMXMLNode

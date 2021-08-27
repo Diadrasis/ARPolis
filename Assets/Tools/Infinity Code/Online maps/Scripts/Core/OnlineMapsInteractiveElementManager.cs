@@ -177,7 +177,11 @@ public abstract class OnlineMapsInteractiveElementManager<T, U>: MonoBehaviour, 
     /// <param name="collection">Collection of items</param>
     public static void SetItems(IEnumerable<U> collection)
     {
-        if (instance != null) instance.items = new List<U>(collection);
+        if (instance != null)
+        {
+            instance.items = new List<U>(collection);
+            foreach (U el in instance.items) el.manager = instance;
+        }
     }
 
     /// <summary>

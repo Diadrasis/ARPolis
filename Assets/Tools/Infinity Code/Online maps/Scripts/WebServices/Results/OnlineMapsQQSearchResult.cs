@@ -7,10 +7,10 @@
 public class OnlineMapsQQSearchResult
 {
     /// <summary>
-    /// Status code, 0 is normal,\n
-    /// 310 request parameter information is wrong,\n
-    /// 311key format error,\n
-    /// 306 request has the support information please check the string,\n
+    /// Status code, 0 is normal,<br/>
+    /// 310 request parameter information is wrong,<br/>
+    /// 311key format error,<br/>
+    /// 306 request has the support information please check the string,<br/>
     /// 110 The request source is not authorized
     /// </summary>
     public int status;

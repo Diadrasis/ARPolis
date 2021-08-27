@@ -11,11 +11,13 @@ public class OnlineMapsEasyTouchConnectorEditor : Editor
 #if EASYTOUCH
     private OnlineMapsCameraOrbit cameraOrbit;
     private OnlineMapsEasyTouchConnector connector;
+    private SerializedProperty forwarder;
 
     private void OnEnable()
     {
         connector = target as OnlineMapsEasyTouchConnector;
         cameraOrbit = connector.GetComponent<OnlineMapsCameraOrbit>();
+        forwarder = serializedObject.FindProperty("forwarder");
     }
 #endif
 
@@ -29,8 +31,11 @@ public class OnlineMapsEasyTouchConnectorEditor : Editor
                 OnlineMapsEditor.AddCompilerDirective("EASYTOUCH");
             }
         }
-#else 
-        EditorGUILayout.HelpBox("This component does not require configuration.", MessageType.Info);
+#else
+        serializedObject.Update();
+        EditorGUILayout.PropertyField(forwarder);
+        serializedObject.ApplyModifiedProperties();
+
         if (cameraOrbit == null)
         {
             EditorGUILayout.HelpBox("To use twist and tilt gestures, add Online Maps Camera Orbit component.", MessageType.Warning);

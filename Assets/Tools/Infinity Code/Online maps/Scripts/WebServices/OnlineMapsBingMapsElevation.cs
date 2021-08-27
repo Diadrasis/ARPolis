@@ -7,7 +7,7 @@ using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// Use the Elevations API to get elevation information for a set of locations, polyline or area on the Earth.\n
+/// Use the Elevations API to get elevation information for a set of locations, polyline or area on the Earth.<br/>
 /// https://msdn.microsoft.com/en-us/library/jj158961.aspx
 /// </summary>
 public class OnlineMapsBingMapsElevation:OnlineMapsTextWebService
@@ -25,7 +25,7 @@ public class OnlineMapsBingMapsElevation:OnlineMapsTextWebService
     /// </summary>
     /// <param name="key">A Bing Maps Key.</param>
     /// <param name="points">
-    /// A set of coordinates on the Earth to use in elevation calculations.\n
+    /// A set of coordinates on the Earth to use in elevation calculations.<br/>
     /// IEnumerable values can be float, double or Vector2.
     /// </param>
     /// <param name="heights">Specifies which sea level model to use to calculate elevation.</param>
@@ -41,7 +41,7 @@ public class OnlineMapsBingMapsElevation:OnlineMapsTextWebService
     /// </summary>
     /// <param name="key">A Bing Maps Key.</param>
     /// <param name="points">
-    /// A set of coordinates on the Earth to use in elevation calculations.\n
+    /// A set of coordinates on the Earth to use in elevation calculations.<br/>
     /// IEnumerable values can be float, double or Vector2.
     /// </param>
     /// <param name="samples">Specifies the number of equally-spaced elevation values to provide along a polyline path.</param>
@@ -54,8 +54,8 @@ public class OnlineMapsBingMapsElevation:OnlineMapsTextWebService
     }
 
     /// <summary>
-    /// The rectangular area defined by the four bounding box coordinates is divided into rows and columns. \n
-    /// The edges of the bounding box account for two of the rows and two of the columns. 
+    /// The rectangular area defined by the four bounding box coordinates is divided into rows and columns.<br/>
+    /// The edges of the bounding box account for two of the rows and two of the columns. <br/>
     /// Elevations are returned for the vertices of the grid created by the rows and columns.
     /// </summary>
     /// <param name="key">A Bing Maps Key.</param>
@@ -78,7 +78,7 @@ public class OnlineMapsBingMapsElevation:OnlineMapsTextWebService
     /// </summary>
     /// <param name="key">A Bing Maps Key.</param>
     /// <param name="points">
-    /// A set of coordinates on the Earth to use in elevation calculations.\n
+    /// A set of coordinates on the Earth to use in elevation calculations.<br/>
     /// IEnumerable values can be float, double or Vector2.
     /// </param>
     /// <param name="output">Output format: JSON or XML</param>
@@ -135,7 +135,7 @@ public class OnlineMapsBingMapsElevation:OnlineMapsTextWebService
     /// <param name="response">Response string</param>
     /// <param name="outputType">Format of response string (JSON or XML)</param>
     /// <param name="array">
-    /// Reference to an array where the values will be stored.\n
+    /// Reference to an array where the values will be stored.<br/>
     /// Supports one-dimensional and two-dimensional arrays.
     /// </param>
     /// <returns>TRUE - success, FALSE - failed.</returns>

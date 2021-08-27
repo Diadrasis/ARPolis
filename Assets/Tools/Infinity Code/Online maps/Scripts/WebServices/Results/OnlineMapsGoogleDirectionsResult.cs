@@ -17,7 +17,7 @@ public class OnlineMapsGoogleDirectionsResult
     public string status;
 
     /// <summary>
-    /// When the status code is other than OK, there may be an additional error_message field within the Directions response object. \n
+    /// When the status code is other than OK, there may be an additional error_message field within the Directions response object. <br/>
     /// This field contains more detailed information about the reasons behind the given status code.
     /// </summary>
     public string error_message;
@@ -110,7 +110,7 @@ public class OnlineMapsGoogleDirectionsResult
         public string place_id;
 
         /// <summary>
-        /// Indicates that the geocoder did not return an exact match for the original request, though it was able to match part of the requested address. \n
+        /// Indicates that the geocoder did not return an exact match for the original request, though it was able to match part of the requested address. <br/>
         /// You may wish to examine the original request for misspellings and/or an incomplete address.
         /// </summary>
         public string partial_match;
@@ -326,7 +326,7 @@ public class OnlineMapsGoogleDirectionsResult
         public string summary;
 
         /// <summary>
-        /// Array which contains information about a leg of the route, between two locations within the given route. \n
+        /// Array which contains information about a leg of the route, between two locations within the given route. <br/>
         /// A separate leg will be present for each waypoint or destination specified.
         /// </summary>
         public Leg[] legs;
@@ -342,13 +342,13 @@ public class OnlineMapsGoogleDirectionsResult
         public int[] waypoint_order;
 
         /// <summary>
-        /// Single points object that holds an encoded polyline representation of the route. \n
+        /// Single points object that holds an encoded polyline representation of the route. <br/>
         /// This polyline is an approximate (smoothed) path of the resulting directions.
         /// </summary>
         public Vector2[] overview_polyline;
 
         /// <summary>
-        /// Single points object that holds an encoded polyline representation of the route. \n
+        /// Single points object that holds an encoded polyline representation of the route. <br/>
         /// This polyline is an approximate (smoothed) path of the resulting directions.
         /// </summary>
         public OnlineMapsVector2d[] overview_polylineD;
@@ -364,7 +364,7 @@ public class OnlineMapsGoogleDirectionsResult
         public string[] warnings;
 
         /// <summary>
-        /// If present, contains the total fare (that is, the total ticket costs) on this route. \n
+        /// If present, contains the total fare (that is, the total ticket costs) on this route. <br/>
         /// This property is only returned for transit requests and only for routes where fare information is available for all transit legs.
         /// </summary>
         public Fare fare;
@@ -641,13 +641,13 @@ public class OnlineMapsGoogleDirectionsResult
         public string headsign;
 
         /// <summary>
-        /// Expected number of seconds between departures from the same stop at this time. \n
+        /// Expected number of seconds between departures from the same stop at this time. <br/>
         /// For example, with a headway value of 600, you would expect a ten minute wait if you should miss your bus.
         /// </summary>
         public int headway;
 
         /// <summary>
-        /// Number of stops in this step, counting the arrival stop, but not the departure stop. \n
+        /// Number of stops in this step, counting the arrival stop, but not the departure stop. <br/>
         /// For example, if your directions involve leaving from Stop A, passing through stops B and C, and arriving at stop D, num_stops will return 3.
         /// </summary>
         public int num_stops;

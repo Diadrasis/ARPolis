@@ -10,6 +10,8 @@ using UnityEngine;
 
 public class OnlineMapsUContextActions : ActionItem, IValidatableLayoutItem
 {
+    private Vector2 lastPosition;
+
     protected override bool closeOnSelect
     {
         get { return false; }
@@ -17,6 +19,7 @@ public class OnlineMapsUContextActions : ActionItem, IValidatableLayoutItem
 
     protected override void Init()
     {
+        lastPosition = Input.mousePosition;
         Texture2D icon = OnlineMapsEditorUtils.LoadAsset<Texture2D>("Icons/Online-Maps-uContext.png", true);
         _guiContent = new GUIContent(icon, "Online Maps");
     }
@@ -35,12 +38,10 @@ public class OnlineMapsUContextActions : ActionItem, IValidatableLayoutItem
 
         double lng, lat;
 
-        Vector2 lastPosition = uContextMenu.lastInputPosition;
-
         OnlineMapsControlBase.instance.GetCoords(lastPosition, out lng, out lat);
 
         new OnlineMapsWWW(
-            "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&location=" + lng.ToString(OnlineMapsUtils.numberFormat) + "," + lat.ToString(OnlineMapsUtils.numberFormat)
+            "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&location=" + lng.ToString(OnlineMapsUtils.numberFormat) + "," + lat.ToString(OnlineMapsUtils.numberFormat)
         ).OnComplete += OnReverseGeocodeComplete;
     }
 
@@ -70,7 +71,7 @@ public class OnlineMapsUContextActions : ActionItem, IValidatableLayoutItem
     private void OnInputLocationName(string locationName)
     {
         new OnlineMapsWWW(
-            "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=pjson&address=" + OnlineMapsWWW.EscapeURL(locationName)
+            "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=pjson&address=" + OnlineMapsWWW.EscapeURL(locationName)
         ).OnComplete += OnGeocodeComplete;
     }
 

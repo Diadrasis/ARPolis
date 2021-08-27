@@ -7,14 +7,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using UnityEngine;
-
-#if UNITY_2018_3_OR_NEWER
 using UnityEngine.Networking;
-#endif
 
 /// <summary>
-/// The wrapper class for WWW.\n
-/// It allows you to control requests.\n
+/// The wrapper class for WWW.<br/>
+/// It allows you to control requests.<br/>
 /// To create is recommended to use OnlineMapsUtils.GetWWW.
 /// </summary>
 public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
@@ -54,11 +51,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
     private RequestType type;
     private IEnumerator waitResponse;
 
-#if UNITY_2018_3_OR_NEWER
     private UnityWebRequest www;
-#else
-    private WWW www;
-#endif
 
     #endregion
 
@@ -86,14 +79,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
     {
         get
         {
-            if (type == RequestType.www)
-            {
-#if UNITY_2018_3_OR_NEWER
-                return www.downloadHandler.data;
-#else
-                return www.bytes;
-#endif
-            }
+            if (type == RequestType.www) return www.downloadHandler.data;
             return _bytes;
         }
     }
@@ -105,14 +91,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
     {
         get
         {
-            if (type == RequestType.www)
-            {
-#if UNITY_2018_3_OR_NEWER
-                return (int)www.downloadedBytes;
-#else
-                return www.bytesDownloaded;
-#endif
-            }
+            if (type == RequestType.www) return (int) www.downloadedBytes;
             return _bytes != null ? _bytes.Length : 0;
         }
     }
@@ -203,14 +182,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
         {
             if (!isDone) throw new UnityException("WWW is not finished downloading yet");
 
-            if (type == RequestType.www)
-            {
-#if UNITY_2018_3_OR_NEWER
-                return www.GetResponseHeaders();
-#else
-                return www.responseHeaders;
-#endif
-            }
+            if (type == RequestType.www) return www.GetResponseHeaders();
             return ParseHTTPHeaderString(responseHeadersString);
         }
     }
@@ -222,14 +194,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
     {
         get
         {
-            if (type == RequestType.www)
-            {
-#if UNITY_2018_3_OR_NEWER
-                return www.downloadHandler.text;
-#else
-                return www.text;
-#endif
-            }
+            if (type == RequestType.www) return www.downloadHandler.text;
             return _bytes != null ? GetTextEncoder().GetString(_bytes, 0, _bytes.Length) : null;
         }
     }
@@ -262,12 +227,8 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
             return;
         }
 
-#if UNITY_2018_3_OR_NEWER
         www = UnityWebRequest.Get(this.url);
         www.SendWebRequest();
-#else
-        www = new WWW(this.url);
-#endif
 
         currentCoroutineBehaviour = coroutineBehaviour;
         currentCoroutineBehaviour.StartCoroutine(WaitResponse());
@@ -303,12 +264,9 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
         _id = reqID;
         if (type == RequestType.www)
         {
-#if UNITY_2018_3_OR_NEWER
             www = UnityWebRequest.Get(this.url);
             www.SendWebRequest();
-#else
-            www = new WWW(this.url);
-#endif
+
             currentCoroutineBehaviour = coroutineBehaviour;
             currentCoroutineBehaviour.StartCoroutine(WaitResponse());
         }
@@ -318,11 +276,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
     /// Constructor.
     /// </summary>
     /// <param name="www">WWW instance.</param>
-#if UNITY_2018_3_OR_NEWER
     private OnlineMapsWWW(UnityWebRequest www)
-#else
-    private OnlineMapsWWW(WWW www)
-#endif
     {
         SetURL(www.url);
         type = RequestType.www;
@@ -338,6 +292,38 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
         waitResponse = WaitResponse();
         currentCoroutineBehaviour = coroutineBehaviour;
         currentCoroutineBehaviour.StartCoroutine(waitResponse);
+    }
+
+    public OnlineMapsWWW(string url, string postData, Dictionary<string, string> headers = null)
+    {
+        SetURL(url);
+        type = RequestType.www;
+
+        if (OnValidate != null && !OnValidate(this.url))
+        {
+            currentCoroutineBehaviour = coroutineBehaviour;
+            currentCoroutineBehaviour.StartCoroutine(WaitCancel());
+            return;
+        }
+
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(postData);
+
+        www = new UnityWebRequest(this.url, "POST");
+        www.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        www.downloadHandler = new DownloadHandlerBuffer();
+
+        if (headers != null)
+        {
+            foreach (var pair in headers)
+            {
+                www.SetRequestHeader(pair.Key, pair.Value);
+            }
+        }
+
+        www.SendWebRequest();
+
+        currentCoroutineBehaviour = coroutineBehaviour;
+        currentCoroutineBehaviour.StartCoroutine(WaitResponse());
     }
 
     /// <summary>
@@ -358,11 +344,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
     /// <returns>Escaped string.</returns>
     public static string EscapeURL(string s)
     {
-#if UNITY_2018_3_OR_NEWER
         return UnityWebRequest.EscapeURL(s);
-#else
-        return WWW.EscapeURL(s);
-#endif
     }
 
     private void Finish()
@@ -371,15 +353,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
 
         if (!hasError)
         {
-#if UNITY_2018_3_OR_NEWER
             OnlineMapsLog.Info("Response: " + www.responseCode + " from " + url, OnlineMapsLog.Type.request);
-#else
-            string code;
-            if (www.responseHeaders != null && www.responseHeaders.TryGetValue("STATUS", out code))
-            {
-                OnlineMapsLog.Info("Response: " + code + " from " + url, OnlineMapsLog.Type.request);
-            }
-#endif
         }
         else
         {
@@ -429,14 +403,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
     {
         if (tex == null) throw new Exception("Texture is null");
 
-        if (type == RequestType.www)
-        {
-#if UNITY_2018_3_OR_NEWER
-            tex.LoadImage(bytes);
-#else
-            www.LoadImageIntoTexture(tex);
-#endif
-        }
+        if (type == RequestType.www) tex.LoadImage(bytes);
         else tex.LoadImage(_bytes);
     }
 
@@ -538,13 +505,6 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
         Finish();
     }
 
-#if !UNITY_2018_3_OR_NEWER
-    public static implicit operator OnlineMapsWWW(WWW val)
-    {
-        return new OnlineMapsWWW(val);
-    }
-#endif
-
 #endregion
 
     /// <summary>
@@ -553,7 +513,7 @@ public class OnlineMapsWWW: CustomYieldInstruction, IDisposable
     public enum RequestType
     {
         /// <summary>
-        /// The request will be processed independently.\n
+        /// The request will be processed independently.<br/>
         /// Use OnlineMapsUtils.OnGetWWW to process of request.
         /// </summary>
         direct,

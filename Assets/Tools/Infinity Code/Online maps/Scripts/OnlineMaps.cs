@@ -27,7 +27,7 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     /// <summary>
     /// The current version of Online Maps
     /// </summary>
-    public const string version = "3.7.3.1";
+    public const string version = "3.7.11.1";
 
     /// <summary>
     /// The minimum zoom level
@@ -37,7 +37,9 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     /// <summary>
     /// The maximum zoom level
     /// </summary>
-#if ONLINEMAPS_MAXZOOM_22
+#if ONLINEMAPS_MAXZOOM_23
+    public const int MAXZOOM = 23;
+#elif ONLINEMAPS_MAXZOOM_22
     public const int MAXZOOM = 22;
 #elif ONLINEMAPS_MAXZOOM_21
     public const int MAXZOOM = 21;
@@ -124,18 +126,23 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
 
     private static OnlineMaps _instance;
 
-#endregion
+    #endregion
 
-#region Public Fields
+    #region Public Fields
 
     /// <summary>
-    /// Allows drawing of map.\n
+    /// Allows drawing of map.<br/>
     /// <strong>
-    /// Important: The interaction with the map, add or remove markers and drawing elements, automatically allowed to redraw the map.\n
+    /// Important: The interaction with the map, add or remove markers and drawing elements, automatically allowed to redraw the map.<br/>
     /// Use lockRedraw, to prohibit the redrawing of the map.
     /// </strong>
     /// </summary>
     public bool allowRedraw;
+
+    /// <summary>
+    /// Allows you to block all user interactions with the map, markers, drawing elements. But you can still interact with the map using the API.
+    /// </summary>
+    public bool blockAllInteractions;
 
     /// <summary>
     /// Tiles for the specified number of parent levels will be loaded.
@@ -144,21 +151,21 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     public int countParentLevels = 5;
 
     /// <summary>
-    /// URL of custom provider.\n
-    /// Support tokens:\n
-    /// {x} - tile x\n
-    /// {y} - tile y\n
-    /// {zoom} - zoom level\n
+    /// URL of custom provider.<br/>
+    /// Support tokens:<br/>
+    /// {x} - tile x<br/>
+    /// {y} - tile y<br/>
+    /// {zoom} - zoom level<br/>
     /// {quad} - uniquely identifies a single tile at a particular level of detail.
     /// </summary>
     public string customProviderURL = "http://localhost/{zoom}/{y}/{x}";
 
     /// <summary>
-    /// URL of custom traffic provider.\n
-    /// Support tokens:\n
-    /// {x} - tile x\n
-    /// {y} - tile y\n
-    /// {zoom} - zoom level\n
+    /// URL of custom traffic provider.<br/>
+    /// Support tokens:<br/>
+    /// {x} - tile x<br/>
+    /// {y} - tile y<br/>
+    /// {zoom} - zoom level<br/>
     /// {quad} - uniquely identifies a single tile at a particular level of detail.
     /// </summary>
     public string customTrafficProviderURL = "http://localhost/{zoom}/{y}/{x}";
@@ -172,6 +179,11 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     /// Specifies whether to dispatch the event.
     /// </summary>
     public bool dispatchEvents = true;
+
+    /// <summary>
+    /// Drag marker while holding CTRL.
+    /// </summary>
+    public bool dragMarkerHoldingCTRL = false;
 
     /// <summary>
     /// Color, which is used until the tile is not loaded, unless specified field defaultTileTexture.
@@ -194,11 +206,8 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     public string language = "en";
 
     /// <summary>
-    /// Prohibits drawing of maps.\n
-    /// <strong>
-    /// Important: Do not forget to disable this restriction. \n
-    /// Otherwise, the map will never be redrawn.
-    /// </strong>
+    /// Prohibits drawing of maps.<br/>
+    /// <strong> Important: Do not forget to disable this restriction. Otherwise, the map will never be redrawn.</strong>
     /// </summary>
     public bool lockRedraw = false;
 
@@ -218,9 +227,14 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     public string mapType;
 
     /// <summary>
-    /// URL of the proxy server used for Webplayer platform.
+    /// Server for requests to the Open Street Map Overpass API.
     /// </summary>
-    public string proxyURL = "http://service.infinity-code.com/redirect.php?";
+    public OnlineMapsOSMOverpassServer osmServer = OnlineMapsOSMOverpassServer.main;
+
+    /// <summary>
+    /// URL of the proxy server used for WebGL platform.
+    /// </summary>
+    public string proxyURL = "https://service.infinity-code.com/redirect.php?";
 
     /// <summary>
     /// A flag that indicates whether to redraw the map at startup.
@@ -233,14 +247,12 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     public bool renderInThread = true;
 
     /// <summary>
-    /// Template path in Resources, from where the tiles will be loaded.\n
-    /// This field supports tokens.
+    /// Template path in Resources, from where the tiles will be loaded. This field supports tokens.
     /// </summary>
     public string resourcesPath = "OnlineMapsTiles/{zoom}/{x}/{y}";
 
     /// <summary>
-    /// Template path in Streaming Assets, from where the tiles will be loaded.\n
-    /// This field supports tokens.
+    /// Template path in Streaming Assets, from where the tiles will be loaded. This field supports tokens.
     /// </summary>
     public string streamingAssetsPath = "OnlineMapsTiles/{zoom}/{x}/{y}.png";
 
@@ -696,6 +708,8 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
                         OnlineMapsUtils.Destroy(rTile.trafficTexture);
                         rTile.trafficTexture = null;
                     }
+
+                    rTile.mergedColors = null;
                 }
             }
             else
@@ -709,6 +723,7 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
                         rTile.trafficTexture = null;
                     }
                     rTile.trafficWWW = null;
+                    rTile.mergedColors = null;
                 }
             }
             Redraw();
@@ -720,7 +735,7 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
         if (buffer.status != OnlineMapsBufferStatus.complete) return;
         if (buffer.needUnloadTiles) buffer.UnloadOldTiles();
 
-        OnlineMapsTile.UnloadUnusedTiles();
+        tileManager.UnloadUnusedTiles();
 
         if (allowRedraw)
         {
@@ -747,7 +762,7 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     public float CheckMapSize(float z)
     {
         int iz = Mathf.FloorToInt(z);
-        int max = (1 << iz) * OnlineMapsUtils.tileSize;
+        long max = (1L << iz) * OnlineMapsUtils.tileSize;
         if (max < width || max < height) return CheckMapSize(iz + 1);
 
         return z;
@@ -1151,11 +1166,11 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
         renderThread = null;
 #endif
 
-        if (tileManager != null)
+        /*if (tileManager != null)
         {
             tileManager.Dispose();
             tileManager = null;
-        }
+        }*/
 
         _control = null;
 
@@ -1188,6 +1203,8 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
         _traffic = traffic;
         _trafficProviderID = trafficProviderID;
         izoom = (int) _zoom;
+
+        OnlineMapsOSMAPIQuery.InitOSMServer(osmServer);
 
         UpdateCorners();
     }
@@ -1260,6 +1277,13 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
         if (control.resultIsTexture)
         {
             defaultColors = texture.GetPixels();
+#if UNITY_EDITOR
+            string path = AssetDatabase.GetAssetPath(texture);
+            if (!string.IsNullOrEmpty(path))
+            {
+                System.IO.File.WriteAllBytes(path, texture.EncodeToPNG());
+            }
+#endif
             json.Add("texture", texture);
         }
         else
@@ -1281,6 +1305,8 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
     /// <param name="lat">Latitude</param>
     public void SetPosition(double lng, double lat)
     {
+        if (Math.Abs(latitude - lat) < double.Epsilon && Math.Abs(longitude - lng) < double.Epsilon) return;
+
         if (width == 0 && height == 0)
         {
             if (control.resultIsTexture && texture != null)
@@ -1443,7 +1469,7 @@ public class OnlineMaps : MonoBehaviour, ISerializationCallbackReceiver, IOnline
         UpdateTopLeftPosition();
         UpdateBottonRightPosition();
 
-        int max = (1 << izoom) * OnlineMapsUtils.tileSize;
+        long max = (1L << izoom) * OnlineMapsUtils.tileSize;
         if (max == width && Mathf.Abs(zoomScale) < float.Epsilon)
         {
             double lng = longitude + 180;

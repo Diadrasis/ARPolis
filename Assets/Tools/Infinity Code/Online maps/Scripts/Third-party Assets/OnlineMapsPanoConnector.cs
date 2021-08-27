@@ -127,6 +127,11 @@ public class OnlineMapsPanoConnector : MonoBehaviour
 
 #if UPANO
     /// <summary>
+    /// The action that is called when the panorama is loaded
+    /// </summary>
+    public Action<Pano> OnLoaded;
+
+    /// <summary>
     /// Metadata for the panorama displayed
     /// </summary>
     public GoogleStreetViewMeta meta;
@@ -256,6 +261,18 @@ public class OnlineMapsPanoConnector : MonoBehaviour
 
         if (overlays == null) overlays = new Dictionary<ulong, Texture2D>();
 
+        if (map == null)
+        {
+            map = GetComponent<OnlineMaps>();
+            if (map == null) map = FindObjectOfType<OnlineMaps>();
+            if (map == null)
+            {
+                Debug.Log("Cannot find the map");
+                enabled = false;
+                return;
+            }
+        }
+
         foreach (KeyValuePair<ulong, Texture2D> pair in overlays)
         {
             if (!map.tileManager.dTiles.ContainsKey(pair.Key)) continue;
@@ -320,6 +337,8 @@ public class OnlineMapsPanoConnector : MonoBehaviour
             panoRenderer.pano.pan = pan;
 
             CreateDirections(directionManager);
+
+            if (OnLoaded != null) OnLoaded(panoRenderer.pano);
         }
 
         if (zoom < panoramaMaxZoom)
@@ -332,7 +351,6 @@ public class OnlineMapsPanoConnector : MonoBehaviour
 
     protected Transition GetTransition(GameObject prefab)
     {
-        Debug.Log("GetTransition");
         if (prefab != null)
         {
             GameObject go = Instantiate(prefab);
@@ -372,12 +390,6 @@ public class OnlineMapsPanoConnector : MonoBehaviour
         CloseImmediately();
     }
 
-    private void OnStartDownloadTile(OnlineMapsTile tile)
-    {
-        OnlineMapsTileManager.StartDownloadTile(tile);
-        StartDownloadOverlay(tile);
-    }
-
     private void OnTileDisposed(OnlineMapsTile tile)
     {
         if (!overlays.ContainsKey(tile.key)) return;
@@ -401,8 +413,6 @@ public class OnlineMapsPanoConnector : MonoBehaviour
 
     private void Start()
     {
-        map = GetComponent<OnlineMaps>();
-
         if (map.control.resultIsTexture && overlayLayer != OverlayLayer.traffic)
         {
             Debug.LogWarning("This Control only supports Overlay Layer - Traffic.");
@@ -456,7 +466,7 @@ public class OnlineMapsPanoConnector : MonoBehaviour
 
         www.OnComplete += delegate
         {
-            if (tile.status == OnlineMapsTileStatus.disposed) return;
+            if (tile.status == OnlineMapsTileStatus.disposed || map == null) return;
 
             Texture2D texture = new Texture2D(256, 256, TextureFormat.ARGB32, map.control.mipmapForTiles);
             www.LoadImageIntoTexture(texture);

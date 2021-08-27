@@ -1,6 +1,8 @@
 ﻿/*         INFINITY CODE         */
 /*   https://infinity-code.com   */
 
+using UnityEngine;
+
 /// <summary>
 /// Base class - singleton for elevation manager
 /// </summary>
@@ -37,6 +39,10 @@ public abstract class OnlineMapsElevationManager<T>: OnlineMapsElevationManagerB
     protected virtual void OnEnable()
     {
         _instance = (T)this;
+        if (control != null)
+        {
+            control.OnUpdateMeshBefore += UpdateSizeInScene;
+        }
         if (map != null) map.Redraw();
     }
 
@@ -52,5 +58,10 @@ public abstract class OnlineMapsElevationManager<T>: OnlineMapsElevationManagerB
     public virtual void SetElevationData(short[,] data)
     {
         
+    }
+
+    private void UpdateSizeInScene()
+    {
+        _sizeInScene = control.sizeInScene;
     }
 }

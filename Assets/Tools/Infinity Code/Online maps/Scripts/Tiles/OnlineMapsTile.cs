@@ -8,8 +8,8 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 
 /// <summary>
-/// This class of buffer tile image. \n
-/// <strong>Please do not use it if you do not know what you're doing.</strong> \n
+/// This class of buffer tile image. <br/>
+/// <strong>Please do not use it if you do not know what you're doing.</strong> <br/>
 /// Perform all operations with the map through other classes.
 /// </summary>
 public abstract class OnlineMapsTile
@@ -32,13 +32,13 @@ public abstract class OnlineMapsTile
     public static Func<OnlineMapsTile, string> OnGetStreamingAssetsPath;
 
     /// <summary>
-    /// The event which allows to intercept the replacement tokens in the url.\n
+    /// The event which allows to intercept the replacement tokens in the url.<br/>
     /// Return the value, or null - if you do not want to modify the value.
     /// </summary>
     public static Func<OnlineMapsTile, string, string> OnReplaceURLToken;
 
     /// <summary>
-    /// The event which allows to intercept the replacement tokens in the traffic url.\n
+    /// The event which allows to intercept the replacement tokens in the traffic url.<br/>
     /// Return the value, or null - if you do not want to modify the value.
     /// </summary>
     public static Func<OnlineMapsTile, string, string> OnReplaceTrafficURLToken;
@@ -523,7 +523,10 @@ public abstract class OnlineMapsTile
 
         foreach (OnlineMapsTile tile in map.tileManager.tiles)
         {
-            if (tile.status != OnlineMapsTileStatus.loaded && tile.status != OnlineMapsTileStatus.error) return;
+            if (tile.status != OnlineMapsTileStatus.loaded && tile.status != OnlineMapsTileStatus.error)
+            {
+                return;
+            }
         }
 
         OnAllTilesLoaded();

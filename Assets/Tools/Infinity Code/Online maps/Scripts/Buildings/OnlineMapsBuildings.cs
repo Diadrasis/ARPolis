@@ -38,14 +38,14 @@ public class OnlineMapsBuildings : MonoBehaviour, IOnlineMapsSavableComponent
     public Func<List<Vector3>, Vector3> OnCalculateBuildingCenter;
 
     /// <summary>
-    /// This event is triggered before create a building. \n
+    /// This event is triggered before create a building.<br/>
     /// Return TRUE - if you want to create this building, FALSE - avoid creating this building.
     /// </summary>
     public Predicate<OnlineMapsBuildingsNodeData> OnCreateBuilding;
 
     /// <summary>
-    /// This event is fired when the height of the building is unknown.\n
-    /// It allows you to control the height of buildings.\n
+    /// This event is fired when the height of the building is unknown.<br/>
+    /// It allows you to control the height of buildings.<br/>
     /// Return - the height of buildings.
     /// </summary>
     public Func<OnlineMapsOSMWay, float> OnGenerateBuildingHeight;
@@ -81,7 +81,7 @@ public class OnlineMapsBuildings : MonoBehaviour, IOnlineMapsSavableComponent
     public Action OnRequestSent;
 
     /// <summary>
-    /// This event is triggered before show a building. \n
+    /// This event is triggered before show a building.<br/>
     /// Return TRUE - if you want to show this building, FALSE - do not show this building.
     /// </summary>
     public Predicate<OnlineMapsBuildingBase> OnShowBuilding;
@@ -560,6 +560,7 @@ public class OnlineMapsBuildings : MonoBehaviour, IOnlineMapsSavableComponent
 
         buildings.Clear();
         unusedBuildings.Clear();
+        newBuildingsData.Clear();
     }
 
     private void RequestNewBuildings()
@@ -568,12 +569,8 @@ public class OnlineMapsBuildings : MonoBehaviour, IOnlineMapsSavableComponent
         map.projection.TileToCoordinates(topLeft.x, topLeft.y, map.zoom, out tlx, out tly);
         map.projection.TileToCoordinates(bottomRight.x, bottomRight.y, map.zoom, out brx, out bry);
 
-        requestData = String.Format("(way[{4}]({0},{1},{2},{3});relation[{4}]({0},{1},{2},{3}););out;>;out skel qt;", 
-            bry.ToString(OnlineMapsUtils.numberFormat), 
-            tlx.ToString(OnlineMapsUtils.numberFormat), 
-            tly.ToString(OnlineMapsUtils.numberFormat), 
-            brx.ToString(OnlineMapsUtils.numberFormat), 
-            "'building'");
+        requestData = string.Format(OnlineMapsUtils.numberFormat, "(way[{4}]({0},{1},{2},{3});relation[{4}]({0},{1},{2},{3}););out;>;out skel qt;", 
+            bry, tlx, tly, brx, "'building'");
         if (OnPrepareRequest != null) requestData = OnPrepareRequest(requestData, new Vector2((float)tlx, (float)tly), new Vector2((float)brx, (float)bry));
     }
 

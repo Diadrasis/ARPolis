@@ -11,8 +11,8 @@ using System.Threading;
 #endif
 
 /// <summary>
-/// This class is responsible for drawing the map.\n
-/// <strong>Please do not use it if you do not know what you're doing.</strong>\n
+/// This class is responsible for drawing the map.<br/>
+/// <strong>Please do not use it if you do not know what you're doing.</strong><br/>
 /// Perform all operations with the map through other classes.
 /// </summary>
 public class OnlineMapsBuffer
@@ -297,7 +297,7 @@ public class OnlineMapsBuffer
         map.projection.TileToCoordinates(tlx, tly, renderState.zoom, out tlx, out tly);
         map.projection.TileToCoordinates(brx, bry, renderState.zoom, out brx, out bry);
 
-        int max = (1 << renderState.zoom) * OnlineMapsUtils.tileSize;
+        long max = (1L << renderState.zoom) * OnlineMapsUtils.tileSize;
         if (max == renderState.width && Math.Abs(coof) < float.Epsilon)
         {
             double lng = renderState.longitude + 180;
@@ -410,7 +410,7 @@ public class OnlineMapsBuffer
             const int hs = s / 2;
             int sx = tile.x % 2 * hs;
             int sy = tile.y % 2 * hs;
-            if (SetBufferTileFromParent(tile, px, py, s / 2, sx, sy)) return new Rect(px, py, OnlineMapsUtils.tileSize, OnlineMapsUtils.tileSize);
+            if (SetBufferTileFromParent(tile, px, py, s / 2, sx, sy)) return new Rect(px, py, s, s);
         }
 
         OnlineMapsRasterTile rTile = tile as OnlineMapsRasterTile;
@@ -476,19 +476,40 @@ public class OnlineMapsBuffer
 
         lock (colors)
         {
-            for (int y = 0; y < size; y++)
+            if (size == hs)
             {
-                int oys = (ry - y) * s + sx;
-                int scaledY = y * scale + py;
-                for (int x = 0; x < size; x++)
+                for (int y = 0; y < hs; y++)
                 {
-                    Color32 clr = colors[oys + x];
-                    int scaledX = x * scale + px;
-
-                    for (int by = scaledY; by < scaledY + scale; by++)
+                    int oys = (ry - y) * s + sx;
+                    int bp = (y * 2 + py) * width + px;
+                    for (int x = 0; x < hs; x++)
                     {
-                        int bpy = by * width + scaledX;
-                        for (int bx = bpy; bx < bpy + scale; bx++) backBuffer[bx] = clr;
+                        Color32 clr = colors[oys + x];
+
+                        backBuffer[bp] = clr;
+                        backBuffer[bp + width] = clr;
+                        backBuffer[++bp] = clr;
+                        backBuffer[bp + width] = clr;
+                        bp++;
+                    }
+                }
+            }
+            else
+            {
+                for (int y = 0; y < size; y++)
+                {
+                    int oys = (ry - y) * s + sx;
+                    int scaledY = y * scale + py;
+                    for (int x = 0; x < size; x++)
+                    {
+                        Color32 clr = colors[oys + x];
+                        int scaledX = x * scale + px;
+
+                        for (int by = scaledY; by < scaledY + scale; by++)
+                        {
+                            int bpy = by * width + scaledX;
+                            for (int bx = bpy; bx < bpy + scale; bx++) backBuffer[bx] = clr;
+                        }
                     }
                 }
             }
@@ -612,36 +633,24 @@ public class OnlineMapsBuffer
         float zoomCoof = renderState.zoomCoof;
         int w = renderState.width;
         int h = renderState.height;
+        int bufferSize = height * width;
 
         for (int y = 0; y < h; y++)
         {
             float fy = y * zoomCoof + frontBufferPosition.y;
             int iy1 = (int) fy;
             int iyw1 = iy1 * width;
-            int iyw2 = iyw1 + width;
-            float ry = fy - iy1;
+            int iyw2 = iyw1 + width + 1;
+            if (iyw2 >= bufferSize - 1) continue;
+            
             int fby = (h - y - 1) * w;
+            float fx = frontBufferPosition.x;
 
             for (int x = 0; x < w; x++)
             {
-                float fx = x * zoomCoof + frontBufferPosition.x;
-                int ix1 = (int)fx;
-                int ix2 = ix1 + 1;
-                float rx = fx - ix1;
-                float rv = (rx + ry) * 0.5f;
-
-                int index1 = iyw1 + ix1;
-                int index2 = iyw2 + ix2;
-                if (index2 >= backBuffer.Length) index2 = index1;
-
-                Color32 clr1 = backBuffer[index1];
-                Color32 clr2 = backBuffer[index2];
-
-                clr1.r = (byte)((clr2.r - clr1.r) * rv + clr1.r);
-                clr1.g = (byte)((clr2.g - clr1.g) * rv + clr1.g);
-                clr1.b = (byte)((clr2.b - clr1.b) * rv + clr1.b);
-
-                frontBuffer[fby + x] = clr1;
+                Color32 clr1 = backBuffer[iyw1 + (int)fx];
+                frontBuffer[fby++] = clr1;
+                fx += zoomCoof;
             }
         }
     }
