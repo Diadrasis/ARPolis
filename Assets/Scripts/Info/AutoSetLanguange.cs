@@ -37,14 +37,11 @@ namespace ARPolis.Info
         public bool isCreditsPerson;
         public int creditPersonValue;//0 = property, 1 = name
 
-        private void Awake()
-        {
-            ChangeLanguange();
-        }
-
         void OnEnable()
         {
             AppData.OnDataReaded += ChangeLanguange;
+
+            ChangeLanguange();
 
             if (!sizeFitter) { sizeFitter = gameObject.GetComponent<ContentSizeFitter>(); }
             if (!myLayOut) myLayOut = GetComponent<LayoutElement>();

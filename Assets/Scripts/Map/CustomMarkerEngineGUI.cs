@@ -85,7 +85,7 @@ namespace ARPolis.Map
             marker.text = text;
             marker.lng = lng;
             marker.lat = lat;
-
+            marker.Init();// .pos = new Vector2((float)marker.lng, (float)marker.lat);
             markers.Add(marker);
             _instance.UpdateMarker(marker);
             return marker;

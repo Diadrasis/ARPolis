@@ -87,7 +87,7 @@ namespace ARPolis.Info
                 personCredits.Add(myPerson);
             }
 
-            Debug.LogWarning("credits are " + personCredits.Count.ToString());
+            //Debug.LogWarning("credits are " + personCredits.Count.ToString());
 
         }
 
@@ -108,7 +108,7 @@ namespace ARPolis.Info
                 textTerms.Add(myTerm);
             }
 
-            Debug.LogWarning("terms are " + textTerms.Count.ToString());
+            //Debug.LogWarning("terms are " + textTerms.Count.ToString());
 
             OnDataReaded?.Invoke();
 

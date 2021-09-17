@@ -1,13 +1,15 @@
-﻿using ARPolis.UI;
+﻿using ARPolis.Data;
+using ARPolis.UI;
 using StaGeUnityTools;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI.Extensions;
 
 namespace ARPolis.Map
 {
 
-    public class OnSiteManager : MonoBehaviour
+    public class OnSiteManager : Singleton<OnSiteManager>
     {
 
         public enum SiteMode { OFF, NEAR, FAR }
@@ -30,7 +32,14 @@ namespace ARPolis.Map
         public Vector2 userPosition;
         //PathInfoManager pathInfoManager;
         //CustomMarkerGUI markerOnNearestPath;
-        MapController mapController;
+
+
+        //Diadrasis
+        //37.979889, 23.724089
+
+        public bool UseDiadrasisOffice;
+
+        private bool wasNearPoiOnLastCheck;
 
         private void Awake()
         {
@@ -40,18 +49,17 @@ namespace ARPolis.Map
                 this.enabled = false;
                 return;
             }
-
-            mapController = FindObjectOfType<MapController>();
-            //pathInfoManager = FindObjectOfType<PathInfoManager>();
         }
 
-        void Start()
+        IEnumerator Start()
         {
+
+            Application.runInBackground = true;
 
             if (B.isDesctop)
             {
                 this.enabled = false;
-                return;
+                yield break;
             }
 
             //if (B.isMobileHaveGyro) { Input.gyro.enabled = true; }
@@ -68,6 +76,10 @@ namespace ARPolis.Map
 
             GlobalActionsUI.OnShowMenuAreas += SearchNearestPath;
 
+            yield return new WaitForSeconds(2f);
+
+            yield break;
+
         }
 
         void OnLocationInited()
@@ -81,13 +93,113 @@ namespace ARPolis.Map
             userPosition = OnlineMapsLocationService.instance.position;
         }
 
+        public void CheckPosition()
+        {
+            if (siteMode != SiteMode.OFF)
+            {
+                if (AppManager.Instance.appMode != AppManager.AppMode.MAP) return;
+                userPosition = OnlineMapsLocationService.instance.position;
+                OnGpsLocationChanged(userPosition);
+            }
+        }
+
         void OnGpsLocationChanged(Vector2 pos)
         {
             if (B.isRealEditor) Debug.Log("OnGpsLocationChanged");
             userPosition = pos;
-            SearchNearestPath();
+            ARManager.Instance.EnableButtonAR(false);
+
+            if (siteMode != SiteMode.NEAR) { SearchNearestPath(); }
+            else
+            {
+                if (AppManager.Instance.appMode != AppManager.AppMode.MAP) return;//check only if user is viewing map
+                if (CustomMarkerEngineGUI.markers.Count <= 0) return;//if no pois return
+                float minDist = Mathf.Infinity;
+                PoiEntity poiEntity = null;
+                foreach (CustomMarkerGUI marker in CustomMarkerEngineGUI.markers)
+                {
+                    float dist = GetDistanceBetweenPoints(userPosition, marker.pos);// new Vector2((float)marker.lng, (float)marker.lat));
+                    PoiItem poiItem = marker.GetComponent<PoiItem>();
+
+                    if (dist < minDist)
+                    {
+                        minDist = dist;
+                        poiEntity = poiItem.poiEntity;
+                    }
+                }
+
+                //convert km to meters
+                float triggerDist = 50f / 1000f;
+
+                if (minDist < triggerDist)//if dist < 50m 
+                {
+                    if (poiEntity != null)
+                    {
+                        Debug.Log("Near to " + poiEntity.id);
+                        Debug.Log("Near to " + poiEntity.infoGR.name);// GetTitle());
+
+                        Handheld.Vibrate();
+
+                        if (ARManager.Instance.IsAR_Enabled)
+                        {
+                            if (!ARManager.Instance.iconARbtn.activeSelf)
+                            {
+                                wasNearPoiOnLastCheck = true;
+                                ARManager.Instance.EnableButtonAR(true);
+                            }
+                        }
+                        else
+                        {
+                            //TODO 
+                            //show poi info panel
+                            GlobalActionsUI.OnPoiSelected?.Invoke(poiEntity.id);
+                        }
+                    }
+                }
+                else
+                {
+                    Handheld.Vibrate();
+
+                    if (ARManager.Instance.IsAR_Enabled)
+                    {
+                        ARManager.Instance.StopARSession();
+                        if (wasNearPoiOnLastCheck)
+                        {
+                            wasNearPoiOnLastCheck = false;
+                        }
+                    }
+                    else
+                    {
+                        //TODO 
+                        //hide poi info panel
+                        GlobalActionsUI.OnInfoPoiJustHide?.Invoke();
+                    }
+                }
+            }
             //CheckSiteMode();
         }
+
+        private IEnumerator Vibrate()
+        {
+            float interval = 0.05f;
+            WaitForSeconds wait = new WaitForSeconds(interval);
+            float t;
+
+            for (t = 0; t < 1; t += interval) // Change the end condition (t < 1) if you want
+            {
+                Handheld.Vibrate();
+                yield return wait;
+            }
+
+            yield return new WaitForSeconds(0.4f);
+
+            for (t = 0; t < 1; t += interval) // Change the end condition (t < 1) if you want
+            {
+                Handheld.Vibrate();
+                yield return wait;
+            }
+        }
+
 
         float GetDistanceBetweenPoints(Vector2 pA, Vector2 pB)
         {

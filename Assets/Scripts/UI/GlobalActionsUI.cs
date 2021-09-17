@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using ARPolis.Data;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,6 +18,9 @@ namespace ARPolis.UI
         public delegate void ActionPoi(string poiID);
         public static ActionPoi OnPoiSelected;
 
+        public delegate void ActionPoiData(PoiEntity poi = null);
+        public static ActionPoiData OnMyPlaceSelected;
+
         public delegate void PageSnapAction(int pageId);
         public static PageSnapAction OnTourPageChanged;
 
@@ -27,7 +31,7 @@ namespace ARPolis.UI
                                OnShowTopicTours, OnHideTopicTours,
                                OnTourItemPageChanged,
                                OnShowPoisOnMap, OnHideMap, OnInfoPoiShow, OnInfoPoiJustHide,
-                               OnLoginShow, OnLogoutUser,
+                               OnLoginShow, OnLogoutUser, OnUserLoggedIn, OnUserLoggedOut, OnLoginAnonymous,
                                OnInfoAreaShow, OnMessageHide;
 
     }

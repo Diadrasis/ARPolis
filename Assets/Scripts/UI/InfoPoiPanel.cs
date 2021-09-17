@@ -9,8 +9,9 @@ using UnityEngine.UI;
 namespace ARPolis.UI
 {
 
-    public class InfoPoiPanel : MonoBehaviour
+    public class InfoPoiPanel : Singleton<InfoPoiPanel>
     {
+        protected InfoPoiPanel() { }
 
         public TMPro.TextMeshProUGUI txtTitle, txtDesc, txtShortDesc;
         public Transform rectImagesContainer;
@@ -36,6 +37,7 @@ namespace ARPolis.UI
         private void Awake()
         {
             GlobalActionsUI.OnPoiSelected += OnSelectPoi;
+            GlobalActionsUI.OnMyPlaceSelected += OnMyPlaceSelected;
             GlobalActionsUI.OnShowTopicTours += HideInfo;
             GlobalActionsUI.OnInfoPoiJustHide += HideInfo;
 
@@ -53,11 +55,50 @@ namespace ARPolis.UI
         {
             trNextBack.SetActive(trNext.activeSelf);
             trPrevBack.SetActive(trPrev.activeSelf);
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                //areaAthens.topics.Find(b => b.id == topicNowID).tours.Find(t => t.id == tourNowID).pois.Find(p => p.id == id);
+                //OnSelectPoi(InfoManager.Instance.areaAthens.topics[0].tours[0].tourPoiEntities[0].poiID);
+            }
+        }
+
+        private void OnMyPlaceSelected(PoiEntity poi)
+        {
+            if (poi == null || !poi.Exists()) return;
+            //poiEntityNow = poi;
+
+            ChangePanelColor(poi.topicID);
+
+            txtTitle.text = poi.GetTitle();
+            txtShortDesc.text = poi.GetShortDesc();
+            txtDesc.text = poi.GetHistoricalReview();
+
+            //get poi data
+
+            //get images
+            if (DestroyPreviousImages()) CreateImages();
+
+            poiLang = StaticData.lang;
+
+            //get testimony
+
+            ScrollResetPosition();
+            RefreshElements();
+
+            //show panel
+            ShowPreviewInfo();
+
+            InfoManager.Instance.poiNowID = poi.id;
+
+            GlobalActionsUI.OnInfoPoiShow?.Invoke();//check saved status
         }
 
         private void OnSelectPoi(string poiID)
         {
             poiEntityNow = InfoManager.Instance.GetPoiEntity(poiID);
+
+            if (poiEntityNow == null || !poiEntityNow.Exists()) return;
 
             ChangePanelColor(InfoManager.Instance.topicNowID);
 
@@ -82,7 +123,7 @@ namespace ARPolis.UI
 
             InfoManager.Instance.poiNowID = poiID;
 
-            GlobalActionsUI.OnInfoPoiShow?.Invoke();//hide tours bootom bar
+            GlobalActionsUI.OnInfoPoiShow?.Invoke();//check saved status
         }
 
         void CreateImages()
@@ -175,7 +216,7 @@ namespace ARPolis.UI
             }
         }
 
-        private void HideInfo() { ShowButtonArrow(false); SetArrowUp(true); transitionClass.HidePanel(); StaticData.isPoiInfoVisible = 0; }
+        public void HideInfo() { ShowButtonArrow(false); SetArrowUp(true); transitionClass.HidePanel(); StaticData.isPoiInfoVisible = 0; }
 
         private void ShowButtonArrow(bool val) { btnArrow.SetActive(val); dragButton.SetActive(val); }
 
@@ -188,11 +229,11 @@ namespace ARPolis.UI
 
         void ChangePanelColor(string topicID)
         {
-            Color col = PanelColor(topicID);
+            Color col = TopicColor(topicID);
             foreach (Image img in panelColors) img.color = col;
         }
 
-        Color PanelColor(string id)
+        public Color TopicColor(string id)
         {
             switch (id)
             {

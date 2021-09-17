@@ -48,10 +48,13 @@ namespace ARPolis.Data
         {
             foreach(PoiEntity poi in pois)
             {
-                poi.digitalExhibitImages = new List<DigitalExhibitObject>();
-                foreach (string s in poi.images)
+                if (poi.images != null)
                 {
-                    poi.digitalExhibitImages.Add(digitalExhibitImages.Find(b => b.id == s));
+                    poi.digitalExhibitImages = new List<DigitalExhibitObject>();
+                    foreach (string s in poi.images)
+                    {
+                        poi.digitalExhibitImages.Add(digitalExhibitImages.Find(b => b.id == s));
+                    }
                 }
             }
         }

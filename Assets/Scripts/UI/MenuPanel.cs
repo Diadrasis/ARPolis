@@ -6,12 +6,15 @@ using ARPolis.Map;
 using StaGeUnityTools;
 using ARPolis.Info;
 using ARPolis.Data;
+using System.Linq;
 
 namespace ARPolis.UI
 {
 
-    public class MenuPanel : MonoBehaviour
+    public class MenuPanel : Singleton<MenuPanel>
     {
+        protected MenuPanel() { }
+
         public Animator animMenuPanel, animMapMaskHide;
         public GameObject menuPanel, btnPrevCity, btnNextCity, creditsExtraButtonsPanel;
         /// <summary>
@@ -33,13 +36,69 @@ namespace ARPolis.UI
         public delegate void ButtonAction();
         public static ButtonAction OnUserClickOnSiteModeNotAble, OnQuitApp;
 
-        public PanelTransitionClass panelSideMenuTransition, panelTopBarTransition, panelBottomBarTour, panelCreditsPeople;
+        public PanelTransitionClass panelSideMenuTransition, panelTopBarTransition, panelBottomBarTour, panelCreditsPeople, panelMyPlaces;
 
-        public Button btnBottomBarGame, btnBottomBarMap, btnBottomBarSavePoi;
+        public Button btnBottomBarGame, btnBottomBarMap, btnBottomBarSavePoi, btnBottomBarDeletePoi, btnBottomBarAR;
+        public GameObject btnARicon;
+
 
         public GameObject[] extraCreditsButtons;
         public Transform arrowCredits;
         public Button btnCreditsPeople;
+
+        [Space]
+        public Button btnMyPlaces;
+        public Transform myPlacesContainer;
+        public Transform myPlacePrefab;
+
+        public void CreateListOnUI(List<UserPlaceItem> userPlaces)
+        {
+            foreach(UserPlaceItem item in userPlaces)
+            {
+                Transform pl = Instantiate(myPlacePrefab, myPlacesContainer);
+                MyPlaceButton placeButton = pl.GetComponent<MyPlaceButton>();
+                if (placeButton == null) continue;
+                placeButton.Init(item);
+            }
+        }
+
+        public void DestroyListFromUI(List<UserPlaceItem> userPlaces)
+        {
+            List<MyPlaceButton> placeButtons = myPlacesContainer.GetComponentsInChildren<MyPlaceButton>().ToList();
+            placeButtons.ForEach(b => b.DestroyItem());
+        }
+
+        void ShowMyPlacesPanel()
+        {
+            panelSideMenuTransition.HidePanel();
+            panelMyPlaces.ShowPanel();
+        }
+
+        private void OnMyPlaceSelected(PoiEntity poi)
+        {
+            panelMyPlaces.HidePanel();
+            //instantly go to map panel
+            //we need all data in order to return back properly
+            InfoManager.Instance.SetInstantlyMyPlaceData(poi);
+            SetBottomBarButtonsForPoi();
+            panelBottomBarTour.ShowPanel();
+            ShowMap();
+        }
+
+        void OnInfoPoiShow()
+        {
+            if (OnSiteManager.Instance.siteMode == OnSiteManager.SiteMode.NEAR) return;
+            if (UserPlacesManager.Instance.IsThisPoiSaved(InfoManager.Instance.poiNowID))
+            {
+                btnBottomBarSavePoi.gameObject.SetActive(false);
+                btnBottomBarDeletePoi.gameObject.SetActive(true);
+            }
+            else
+            {
+                btnBottomBarSavePoi.gameObject.SetActive(true);
+                btnBottomBarDeletePoi.gameObject.SetActive(false);
+            }
+        }
 
         void ShowCreditsPeople()
         {
@@ -55,6 +114,8 @@ namespace ARPolis.UI
             menuPanel.SetActive(true);
 
             btnCreditsPeople.onClick.AddListener(ShowCreditsPeople);
+
+            btnMyPlaces.onClick.AddListener(ShowMyPlacesPanel);
 
             if (!PlayerPrefs.HasKey("Lang"))
             {
@@ -114,7 +175,15 @@ namespace ARPolis.UI
 
 
             btnShowMapPois.onClick.AddListener(HidePoiInfo);
+
+            GlobalActionsUI.OnMyPlaceSelected += OnMyPlaceSelected;
+            GlobalActionsUI.OnInfoPoiShow += OnInfoPoiShow;
+
+            GlobalActionsUI.OnLangChanged += SetLanguageButtonIcon;
+            SetLanguageButtonIcon();
         }
+
+        
 
         void HidePoiInfo() {
             if(StaticData.isPoiInfoVisible == 0)
@@ -143,17 +212,35 @@ namespace ARPolis.UI
             OnShowMapHideMenuPanel();
             ShowBackgroundPanel(false);
             SetBottomBarButtonsForPoi();
+
+            OnSiteManager.Instance.CheckPosition();
         }
 
         void SetBottomBarButtonsForTour() {
             btnBottomBarGame.gameObject.SetActive(true);
             btnBottomBarMap.gameObject.SetActive(true);
             btnBottomBarSavePoi.gameObject.SetActive(false);
+            btnBottomBarDeletePoi.gameObject.SetActive(false);
+            btnBottomBarAR.gameObject.SetActive(false);
+            btnARicon.SetActive(false);
         }
         void SetBottomBarButtonsForPoi() {
             btnBottomBarGame.gameObject.SetActive(false);
             btnBottomBarMap.gameObject.SetActive(true);
-            btnBottomBarSavePoi.gameObject.SetActive(true);
+            btnBottomBarDeletePoi.gameObject.SetActive(false);
+            if (OnSiteManager.Instance.siteMode != OnSiteManager.SiteMode.NEAR)
+            {
+                btnBottomBarSavePoi.gameObject.SetActive(true);
+                btnBottomBarAR.gameObject.SetActive(false);
+                btnARicon.SetActive(false);
+            }
+            else
+            {
+                btnBottomBarSavePoi.gameObject.SetActive(false);
+                btnBottomBarAR.gameObject.SetActive(true);
+                btnARicon.SetActive(false);
+                ARManager.Instance.EnableButtonAR(false);
+            }
         }
 
         private void Start()
@@ -163,6 +250,23 @@ namespace ARPolis.UI
             //reset text to current languange
             termAreaNameValue = "athens";
             txtMenuAreaName.text = AppData.Instance.FindTermValue(termAreaNameValue);
+
+            btnBottomBarSavePoi.onClick.AddListener(PoiSave);
+            btnBottomBarDeletePoi.onClick.AddListener(PoiDelete);
+        }
+
+        void PoiSave()
+        {
+            bool isSaved = UserPlacesManager.Instance.SaveCurrentPoi();
+            btnBottomBarDeletePoi.gameObject.SetActive(isSaved);
+            btnBottomBarSavePoi.gameObject.SetActive(!isSaved);
+        }
+
+        void PoiDelete()
+        {
+            bool isDeleted = UserPlacesManager.Instance.DeleteCurrentPoi();
+            btnBottomBarSavePoi.gameObject.SetActive(isDeleted);
+            btnBottomBarDeletePoi.gameObject.SetActive(!isDeleted);
         }
 
         /// <summary>
@@ -217,18 +321,30 @@ namespace ARPolis.UI
         void ChangeLanguage()
         {
             bool isEng = StaticData.lang == "en";
+
             //change icon
-            iconBtnLanguage.sprite = isEng ? sprGR : sprEng;
+            //iconBtnLanguage.sprite = isEng ? sprGR : sprEng;
+
             //change lang
             StaticData.lang = isEng ? "gr" : "en";
             PlayerPrefs.SetString("Lang", StaticData.lang);
             PlayerPrefs.Save();
+
             //get terms
             AppData.Instance.Init();
             GlobalActionsUI.OnLangChanged?.Invoke();
 
             //change area names
             txtMenuAreaName.text = AppData.Instance.FindTermValue(termAreaNameValue);
+        }
+
+        void SetLanguageButtonIcon()
+        {
+            // Get current language
+            bool isEng = StaticData.lang == "en";
+
+            // Change icon
+            iconBtnLanguage.sprite = isEng ? sprEng : sprGR;
         }
 
         void ShowAthensMenu()
@@ -337,8 +453,20 @@ namespace ARPolis.UI
                 return;
             }
 
+            if (panelMyPlaces.isVisible)
+            {
+                panelMyPlaces.HidePanel();
+                iconBtnMenu.rectTransform.sizeDelta = new Vector2(100f, 100f);
+                iconBtnMenu.sprite = sprMenuOn;
+                btnCloseSideMenuBehind.gameObject.SetActive(false);
+                AppManager.Instance.isSideMenuOpen = false;
+               // panelSideMenuTransition.ShowPanel();
+                return;
+            }
+
             if (iconBtnMenu.sprite == sprMenuOff)
             {
+                Debug.Log("1111");
                 //hide panel
                 //btnToggleSideMenu.image.sprite = sprMenuOn;
                 iconBtnMenu.rectTransform.sizeDelta = new Vector2(100f, 100f);
@@ -351,6 +479,7 @@ namespace ARPolis.UI
             }
             else
             {
+                Debug.Log("2222");
                 //show panel
                 //btnToggleSideMenu.image.sprite = sprMenuOff;
                 iconBtnMenu.rectTransform.sizeDelta = new Vector2(80f, 80f);
@@ -358,6 +487,8 @@ namespace ARPolis.UI
                 panelSideMenuTransition.ShowPanel();
                 btnCloseSideMenuBehind.gameObject.SetActive(true);
                 AppManager.Instance.isSideMenuOpen = true;
+
+                InfoPoiPanel.Instance.HideInfo();
             }
         }
 

@@ -8,7 +8,6 @@ using UnityEngine;
 
 namespace ARPolis
 {
-
     public class AppManager : Singleton<AppManager>
     {
         protected AppManager() { }
@@ -24,11 +23,26 @@ namespace ARPolis
 
         MenuPanel menuPanel;
 
+        #region Andrew Variables
+        public SurveyManager surveyManager;
+        [SerializeField]
+        public User currentUser;
+        #endregion
+
+        public string GetUserSaveKey()
+        {
+            return !UserExists() ? "" : "_" + currentUser.username +"_"+ currentUser.password;
+        }
+
+        private bool UserExists() { return currentUser != null && !string.IsNullOrWhiteSpace(currentUser.password) && !string.IsNullOrWhiteSpace(currentUser.username); }
+
         private void Awake()
         {
             Debug.Log("APP MANAGER INIT");
             B.Init();
             AppData.Instance.Init();
+            UserPlacesManager.Instance.Init();
+
 
             GlobalActionsUI.OnShowMenuAreas += SetModeMenu;
 
@@ -38,7 +52,11 @@ namespace ARPolis
         void Start()
         {
             SetMode(AppMode.INTRO);
+
+            GlobalActionsUI.OnLogoutUser += OnLogoutUser;
         }
+
+        void OnLogoutUser() { currentUser = null; }
 
         void SetModeMenu()
         {
@@ -149,8 +167,5 @@ namespace ARPolis
                     break;
             }
         }
-
     }
-
-
 }

@@ -30,6 +30,31 @@ namespace ARPolis.Data
 
         public string areaNowID, topicNowID, tourNowID, poiNowID;
 
+        public bool HasDataNow() {
+            return !string.IsNullOrWhiteSpace(areaNowID) && !string.IsNullOrWhiteSpace(topicNowID)
+                    && !string.IsNullOrWhiteSpace(tourNowID) && !string.IsNullOrWhiteSpace(poiNowID);
+        }
+
+        public bool IsUserPlaceItemNowExists(out UserPlaceItem userPlace)
+        {
+            userPlace = null;
+            if (!HasDataNow()) return false;
+
+            PoiEntity poi = GetPoiEntity(poiNowID);
+            if (poi == null || string.IsNullOrWhiteSpace(poi.id)) return false;
+
+            userPlace = new UserPlaceItem
+            {
+                placeName = poi.infoEN.name,
+                areaID = Instance.areaNowID,
+                topicID = Instance.topicNowID,
+                tourID = Instance.tourNowID,
+                poiID = Instance.poiNowID,
+
+            };
+            return true;
+        }
+
         private bool hasInit;
 
         public void Init()
@@ -50,6 +75,13 @@ namespace ARPolis.Data
             return null;
         }
 
+        public AreaEntity GetAreaWithID(string id)
+        {
+            if (id == "1") { return areaAthens; }
+
+            return null;
+        }
+
         public TopicEntity GetActiveTopic()
         {
             return GetActiveArea().topics.Find(b => b.id == topicNowID);
@@ -65,13 +97,26 @@ namespace ARPolis.Data
             return areaAthens.topics.Find(b => b.id == topicNowID).tours.Find(t => t.id == tourNowID).pois.Find(p => p.id == id);
         }
 
+        public PoiEntity GetPoiEntityFromMenu(string poiID, string tourID, string topicID, string areaID)
+        {
+            return GetAreaWithID(areaID).topics.Find(b => b.id == topicID).tours.Find(t => t.id == tourID).pois.Find(p => p.id == poiID);
+        }
+
+        public void SetInstantlyMyPlaceData(PoiEntity poi)
+        {
+            if (poi == null || !poi.Exists()) return;
+            areaNowID = poi.areaID;
+            topicNowID = poi.topicID;
+            tourNowID = poi.tourID;
+        }
+
         public void ShowPois()//(string topicID, string tourID)
         {
             MapController mapController = FindObjectOfType<MapController>();
             mapController.ClearMap();
 
             //List<PoiEntity> poiEntities = areaAthens.topics.Find(b => b.id == topicID).tours.Find(t => t.id == tourID).pois;
-            TourEntity tourEntityNow = areaAthens.topics.Find(b => b.id == topicNowID).tours.Find(t => t.id == tourNowID);
+            TourEntity tourEntityNow = GetActiveArea().topics.Find(b => b.id == topicNowID).tours.Find(t => t.id == tourNowID);
             List<PoiEntity> poiEntities = tourEntityNow.pois;
 
             for (int i=0; i<poiEntities.Count; i++)
@@ -84,11 +129,30 @@ namespace ARPolis.Data
 
                 PoiItem poiItem = marker.gameObject.AddComponent<PoiItem>();
                 poiItem.poiID = poiEntities[i].id;
+                poiItem.poiEntity = poiEntities[i];
                 poiItem.Init();
                 poiItem.SetImage(StaticData.GetPoiIcon(topicNowID));
 
                 //if (showPoisWithDelay) yield return new WaitForSeconds(0.25f);
 
+            }
+
+            if (OnSiteManager.Instance.UseDiadrasisOffice)//37.979889, 23.724089
+            {
+                CustomMarkerGUI marker = CustomMarkerEngineGUI.AddMarker(new Vector2(23.724089f, 37.979889f), "");
+                marker.transform.name = "Diadrasis";
+
+                PoiItem poiItem = marker.gameObject.AddComponent<PoiItem>();
+                poiItem.poiID = "578";
+                poiItem.poiEntity = new PoiEntity
+                {
+                    id= "578",
+                    infoGR = new PoiLanguange { name = "Διαδρασις"},
+                    infoEN = new PoiLanguange { name = "Diadrasis" },
+                    pos = new Vector2(23.724089f, 37.979889f)
+                };
+                poiItem.Init();
+                poiItem.SetImage(StaticData.GetPoiIcon(topicNowID));
             }
            
             mapController.ZoomOnMarkers(false);

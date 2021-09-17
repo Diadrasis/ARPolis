@@ -12,6 +12,7 @@ namespace ARPolis.UI
     {
 
         public string poiID;
+        public PoiEntity poiEntity;
         RawImage img;
 
         public void Init()

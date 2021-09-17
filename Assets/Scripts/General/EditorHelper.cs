@@ -12,7 +12,7 @@ namespace StaGeUnityTools
 
         void Awake()
         {
-            Camera.main.backgroundColor = Color.white;
+            if(Camera.main) Camera.main.backgroundColor = Color.white;
 #if !UNITY_EDITOR
             this.enabled = false;
             return;

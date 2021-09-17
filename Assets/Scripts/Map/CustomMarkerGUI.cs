@@ -43,11 +43,6 @@ namespace ARPolis.Map
         public Button btnMarker;
         public Image icon;
 
-        public List<Vector2> connectedActivitiesPositions = new List<Vector2>();
-
-        //public TmiActivityMarker activityMarker;
-        //public TmiPoiMarker poiMarker;
-
         public void Init()
         {
             icon = GetComponent<Image>();

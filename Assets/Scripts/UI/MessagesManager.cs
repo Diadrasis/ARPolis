@@ -21,7 +21,7 @@ namespace ARPolis
         public Text txtTitle, txtDesc;
         Text txtBtnOK, txtBtnAction1, txtBtnAction2;
         public Image iconImage;
-        public Sprite sprOffSite, sprOnSite, sprQuitApp;
+        public Sprite sprOffSite, sprOnSite, sprQuitApp, sprAR;
         public RectTransform rectPanel, rectContainer, rectButtons;
 
         public bool isIntroFinished;
@@ -51,6 +51,8 @@ namespace ARPolis
             GlobalActionsUI.OnShowMenuAreas += ShowGpsMessageOnIntro;
             MenuPanel.OnUserClickOnSiteModeNotAble += ShowGpsMessageOnUser;
             MenuPanel.OnQuitApp += ShowQuitAppWarning;
+
+            ARManager.Instance.OnCheckMessage += ShowARWarning;
 
             GlobalActionsUI.OnMessageHide += HidePanel;
         }
@@ -96,7 +98,6 @@ namespace ARPolis
 
         void LogoutUser()
         {
-            //GlobalActionsUI.OnHideMenuAreas?.Invoke();
             GlobalActionsUI.OnLogoutUser?.Invoke();
             HidePanel();
         }
@@ -211,6 +212,28 @@ namespace ARPolis
             ShowPanel();
         }
 
+        void ShowARWarning(string msg, bool showInstallButton)
+        {
+            panelMessage.SetActive(true);
+            AppManager.Instance.modeMessage = AppManager.AppMode.MESSAGE;
+
+            iconImage.sprite = sprAR;
+            iconImage.gameObject.SetActive(true);
+            txtTitle.text = "AR experience"; //AppData.Instance.FindTermValue(StaticData.termLogoutTitle);
+            txtDesc.text = msg;// AppData.Instance.FindTermValue(StaticData.termLogoutDesc);
+
+            btnOK.onClick.AddListener(() => HidePanel());
+            txtBtnOK.text = AppData.Instance.FindTermValue(StaticData.termBtnOK);
+            btnOK.gameObject.SetActive(true);
+
+            btnAction2.gameObject.SetActive(false);
+            btnAction1.gameObject.SetActive(false);
+
+            ForceRebuildLayout();
+
+            ShowPanel();
+        }
+
         void ShowPanel() { animPanel.SetBool("show", true); }
 
         void HidePanel() {
@@ -224,6 +247,7 @@ namespace ARPolis
             yield return new WaitForSeconds(0.5f);
             panelMessage.SetActive(false);
             AppManager.Instance.modeMessage = AppManager.AppMode.NULL;
+            ARManager.Instance.CheckARsupport(0.25f);
             yield break;
         }
 

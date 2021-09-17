@@ -196,6 +196,13 @@
       <en><![CDATA[SAVE]]></en>
     </value>
   </term>
+  <term>
+    <name>delete_poi</name>
+    <value>
+      <gr><![CDATA[ΑΦΑΙΡΕΣΗ]]></gr>
+      <en><![CDATA[REMOVE]]></en>
+    </value>
+  </term>
 	<term>
 		<name>mapHelp</name>
 		<value>
@@ -894,6 +901,118 @@
     <value>
       <gr><![CDATA[Η επιβεβαίωση κωδικού πρόσβασης δεν είναι ίδια με τον κωδικό πρόσβασης που εισαγάγατε]]></gr>
       <en><![CDATA[Your password and confirmation password do not match]]></en>
+    </value>
+  </term>
+  <term>
+    <name>surveyIntro</name>
+    <value>
+      <gr><![CDATA[Μερικές απλές ερωτήσεις για να μάθουμε περισσότερα για εσάς!]]></gr>
+      <en><![CDATA[A couple of simple questions, to learn more about you!]]></en>
+    </value>
+  </term>
+  <term>
+    <name>surveyOutro</name>
+    <value>
+      <gr><![CDATA[Ευχαριστούμε! Ευχόμαστε να διασκεδάσετε τη ξενάγηση σας!]]></gr>
+      <en><![CDATA[Thank you! Hope you enjoy your tour!]]></en>
+    </value>
+  </term>
+  <term>
+    <name>signInUserPlaceholder</name>
+    <value>
+      <gr><![CDATA[Όνομα χρήστη]]></gr>
+      <en><![CDATA[Username]]></en>
+    </value>
+  </term>
+  <term>
+    <name>signInPasswordPlaceholder</name>
+    <value>
+      <gr><![CDATA[Κωδικός]]></gr>
+      <en><![CDATA[Password]]></en>
+    </value>
+  </term>
+  <term>
+    <name>btnLoginSubmit</name>
+    <value>
+      <gr><![CDATA[Είσοδος]]></gr>
+      <en><![CDATA[Login]]></en>
+    </value>
+  </term>
+  <term>
+    <name>btnShowSignUp</name>
+    <value>
+      <gr><![CDATA[Εγγραφή]]></gr>
+      <en><![CDATA[Sign up]]></en>
+    </value>
+  </term>
+  <term>
+    <name>btnLoginAnonymous</name>
+    <value>
+      <gr><![CDATA[ΑΝΩΝΥΜΗ ΕΙΣΟΔΟΣ]]></gr>
+      <en><![CDATA[ANONYMOUS ENTRY]]></en>
+    </value>
+  </term>
+  <term>
+    <name>toggleRememberUser</name>
+    <value>
+      <gr><![CDATA[Θυμήσου με]]></gr>
+      <en><![CDATA[Remember me]]></en>
+    </value>
+  </term>
+  <term>
+    <name>btnSignUpSubmit</name>
+    <value>
+      <gr><![CDATA[Αποθήκευση]]></gr>
+      <en><![CDATA[Save]]></en>
+    </value>
+  </term>
+  <term>
+    <name>signUpPasswordCheck</name>
+    <value>
+      <gr><![CDATA[Επιβεβαίωση κωδικού]]></gr>
+      <en><![CDATA[Confirm password]]></en>
+    </value>
+  </term>
+  <term>
+    <name>userNotFound</name>
+    <value>
+      <gr><![CDATA[Ο χρήστης δεν βρέθηκε]]></gr>
+      <en><![CDATA[User not found]]></en>
+    </value>
+  </term>
+  <term>
+    <name>wrongPassword</name>
+    <value>
+      <gr><![CDATA[Λάθος κωδικός]]></gr>
+      <en><![CDATA[Wrong password]]></en>
+    </value>
+  </term>
+  <term>
+    <name>userAlreadyExists</name>
+    <value>
+      <gr><![CDATA[Ο χρήστης υπάρχει ήδη]]></gr>
+      <en><![CDATA[User already exists]]></en>
+    </value>
+  </term>
+  <term>
+    <name>signUpInput</name>
+    <value>
+      <gr><![CDATA[Θα θέλατε να κάνετε εγγραφή;]]></gr>
+      <en><![CDATA[Would you like to sign up?]]></en>
+    </value>
+  </term>
+  <term>
+    <name>btnSaveSurvey</name>
+    <value>
+      <gr><![CDATA[Συνέχεια]]></gr>
+      <en><![CDATA[Continue]]></en>
+    </value>
+  </term> 
+  <term>
+    <name>signUpComplete</name>
+    <value>
+      <gr><![CDATA[Η εγγραφή πραγματοποιήθηκε!]]></gr>
+      <en><![CDATA[Sign up complete!]]></en>
     </value>
   </term>
 </terms>

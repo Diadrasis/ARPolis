@@ -41,6 +41,8 @@ namespace ARPolis.Data
             return string.Empty;
         }
 
+        public bool Exists() { return !string.IsNullOrWhiteSpace(id); }
+
     }
 
     [Serializable]

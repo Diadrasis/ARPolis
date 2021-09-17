@@ -10,6 +10,9 @@ namespace ARPolis.UI
         public Animator animInfoPanel, animAppLogo, animEspaLogo, animCompanyLogo;
         public GameObject infoPanel, panelBack;
 
+        [Header("Editor Only")]
+        public bool ShowSplashScreen;
+
         private void Awake()
         {
             GlobalActionsUI.OnIntroStart += StartIntro;
@@ -18,6 +21,17 @@ namespace ARPolis.UI
 
         void StartIntro()
         {
+            if (Application.isEditor)
+            {
+                if (!ShowSplashScreen)
+                {
+                    panelBack.SetActive(false);
+                    //invoke end of intro
+                    GlobalActionsUI.OnIntroFinished?.Invoke();
+                    AppManager.Instance.SetMode(AppManager.AppMode.LOGIN);
+                    return;
+                }
+            }
             StartCoroutine(ShowIntro());
         }
 

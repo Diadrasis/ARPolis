@@ -46,6 +46,24 @@ namespace ARPolis.Data
         public static readonly string termUsernameEmptyField = "usernameEmptyField";
         public static readonly string termPasswordEmptyField = "passwordEmptyField";
 
+        public static readonly string surveyIntro = "surveyIntro";
+        public static readonly string surveyOutro = "surveyOutro";
+        public static readonly string signInUserPlaceholder = "signInUserPlaceholder";
+        public static readonly string signInPasswordPlaceholder = "signInPasswordPlaceholder";
+        public static readonly string btnLoginSubmit = "btnLoginSubmit";
+        public static readonly string toggleRememberUser = "toggleRememberUser";
+        public static readonly string btnShowSignUp = "btnShowSignUp";
+        public static readonly string btnLoginAnonymous = "btnLoginAnonymous";
+        public static readonly string signUpPasswordCheck = "signUpPasswordCheck";
+        public static readonly string btnSignUpSubmit = "btnSignUpSubmit";
+
+        public static readonly string userNotFound = "userNotFound"; 
+        public static readonly string wrongPassword = "wrongPassword";
+        public static readonly string userAlreadyExists = "userAlreadyExists";
+        public static readonly string signUpInput = "signUpInput";
+        public static readonly string btnSaveSurvey = "btnSaveSurvey";
+
+        public static readonly string signUpComplete = "signUpComplete";
         #endregion
 
         #region JSONS
