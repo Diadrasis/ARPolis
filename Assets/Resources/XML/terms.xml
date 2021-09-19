@@ -273,6 +273,7 @@
       <en><![CDATA[You can only navigate in offsite mode…]]></en>
     </value>
   </term>
+	<!--
 	<term>
 		<name>menuGpsOnNear</name>
 		<value>
@@ -280,18 +281,19 @@
 			<en><![CDATA[You are close to active areas!\nMove inside one of them in order  to be able to navigate in onsite mode…Until then, you can only navigate in offsite mode…]]></en>
 		</value>
 	</term>
+	-->
   <term>
     <name>msgMenuGpsNearTitle</name>
     <value>
-      <gr><![CDATA[Βρίσκεστε κοντά στις ενεργές περιοχές!]]></gr>
-      <en><![CDATA[You are close to active areas!]]></en>
+      <gr><![CDATA[Βρίσκεστε κοντά σε περιοχές ξενάγησης!]]></gr>
+      <en><![CDATA[You are close to toure areas!]]></en>
     </value>
   </term>
   <term>
     <name>msgMenuGpsNearDesc</name>
     <value>
-      <gr><![CDATA[Mετακινηθείτε σε μια από αυτές για να μπορέσετε να πλοηγηθείτε επτόπια. Μέχρι τότε, μπορείτε να πλοηγηθείτε απομακρυσμένα.]]></gr>
-      <en><![CDATA[Move inside one of them in order to be able to navigate in onsite mode. Until then, you can only navigate in offsite mode.]]></en>
+      <gr><![CDATA[Mετακινηθείτε σε μια από αυτές για να μπορέσετε να πλοηγηθείτε σε πραγματικό χρόνο. Μέχρι τότε, μπορείτε να πλοηγηθείτε απομακρυσμένα.]]></gr>
+      <en><![CDATA[Move inside one of them in order to be able to navigate in real time. Until then, you can only navigate in offsite mode.]]></en>
     </value>
   </term>
 	<term>
@@ -1015,4 +1017,40 @@
       <en><![CDATA[Sign up complete!]]></en>
     </value>
   </term>
+  <!--AR Related terms-->
+	<term>
+		<name>msgARCheckSupport</name>
+		<value>
+			<gr><![CDATA[έλεγχος υποστήριξης AR...]]></gr>
+			<en><![CDATA[Checking for AR support...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgARSupported</name>
+		<value>
+			<gr><![CDATA[Η συσκευή σας υποστηρίζει AR.]]></gr>
+			<en><![CDATA[Your device supports AR.]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgARNeedsUpdate</name>
+		<value>
+			<gr><![CDATA[Η συσκευή σας υποστηρίζει AR, αλλά το λογισμικό χρειάζεται ενημέρωση.\nΠροσπάθεια εγκατάστασης...]]></gr>
+			<en><![CDATA[Your device supports AR, but requires a software update.\nAttempting install...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgARUpdateFailed</name>
+		<value>
+			<gr><![CDATA[Η ενημέρωση του λογισμικού AR απέτυχε...]]></gr>
+			<en><![CDATA[The AR software update failed...]]></en>
+		</value>
+	</term>
+	<term>
+		<name>msgARNotSupported</name>
+		<value>
+			<gr><![CDATA[Η συσκευή σας δεν υποστηρίζει AR.]]></gr>
+			<en><![CDATA[Your device does not support AR.]]></en>
+		</value>
+	</term>
 </terms>

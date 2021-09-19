@@ -64,6 +64,14 @@ namespace ARPolis.Data
         public static readonly string btnSaveSurvey = "btnSaveSurvey";
 
         public static readonly string signUpComplete = "signUpComplete";
+
+        //AR related messages        
+        public static readonly string msgARCheckSupport = "msgARCheckSupport";
+        public static readonly string msgARSupported = "msgARSupported";
+        public static readonly string msgARNeedsUpdate = "msgARNeedsUpdate";
+        public static readonly string msgARUpdateFailed = "msgARUpdateFailed";
+        public static readonly string msgARNotSupported = "msgARNotSupported";
+        
         #endregion
 
         #region JSONS
