@@ -1,1 +1,1514 @@
-[{"id": 1, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 16, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Πλάτων, Φαίδρος, 246"},{"id": 2, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 44, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Τα είδη της αρετής κατά τον Αριστοτέλη"},{"id": 3, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 46, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Η ανθρώπινη κοινωνικότητα κατά τον Αριστοτέλη"},{"id": 4, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 99, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ποιος ήταν ο Σιμων"},{"id": 5, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 56, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ο Δημοσθένης μιλά για το Γυμνάσιο Κυνοσάργους"},{"id": 6, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 108, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ο Παυσανίας για το Λύκειο"},{"id": 7, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 58, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Περιγραφή Γυμνασίου Κυνοσάργους από τον Παυσανία"},{"id": 8, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 63, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Αντισθένης, απόφθεγμα"},{"id": 9, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 65, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Γιατί να προσέχουμε τους εχθρούς μας"},{"id": 10, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 85, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ευφυολογήματα του Αντισθένη"},{"id": 11, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 24, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Η επιγραφή της Ακαδημίας"},{"id": 12, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 80, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Επίγραμμα στον κοινό τάφο του Κράτητα και του Πολέμωνα"},{"id": 13, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 82, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Αναφορά στην Ακαδημία από το Διογένη Λαέρτιο"},{"id": 14, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 83, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ο Τίμων στον Πλάτωνα"},{"id": 15, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 84, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ο κόσμος των ιδεών στον Πλάτωνα"},{"id": 16, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 27, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ο Αδριανός μιλάει για τη βιβλιοθήκη του"},{"id": 17, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 22, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Η τετραφάρμακος του Επίκουρου"},{"id": 18, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 49, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Η ηδονή και ο πόνος"},{"id": 19, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 50, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Οι αισθήσεις"},{"id": 20, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 51, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Η σημασία της αυτάρκειας"},{"id": 21, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 52, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ζούμε μονάχα μια φορά"},{"id": 22, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 86, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ο Αθήναιος για τον Επίκουρο"},{"id": 23, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 68, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Απόφθεγμα Ζήνωνος"},{"id": 24, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 53, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ένα ξέρω, ότι δεν ξέρω τίποτε"},{"id": 25, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 39, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Επιτύμβιο επίγραμμα Πρόκλου και Συριανού"},{"id": 26, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 54, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Η αρετή ασπίδα για τον άνθρωπο"},{"id": 27, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 43, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Η πνευματικότητα του Πρόκλου"},{"id": 28, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 48, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ο άνθρωπος ον πολιτικό"},{"id": 29, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 47, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ο Αριστοτέλης για τη φιλία"},{"id": 30, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 88, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ο Αριστοτέλης για την παιδεία"},{"id": 31, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 87, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Ο κήπος: ένα κέντρο φιλοσοφικής συμβίωσης"},{"id": 32, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 15, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Πλάτων, Φαίδρος, 244"},{"id": 33, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 13, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Πλάτων, Φαίδρος,"},{"id": 34, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 19, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Πρόκλου, Πλατωνική Θεολογία"},{"id": 35, "topic_ID": 2, "attribute_ID": 1, "testimony_ID": 17, "attribute_Lang": "gr", "attribute_Label": "Τίτλος Μαρτυρίας", "attribute_Value": "Πρόκλου, Στοιχείωσις θεολογική"},{"id": 36, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 16, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "'Ολη ή ψυχή εξουσιάζει δλο τό άψυχο καί διατρέχει όλο\\nτόν ουρανό, πότε μέ τή μια πότε μέ τήν άλλη μορφή. Κι\\nεκείνη λοιπόν πού είναι τέλεια καί φτερωτή περνοδιαβαίνει \\nμέσα στάν αέρα κι εξουσιάζει τόν κόσμον δλον εκείνη πάλιν\\nπού θά χάση τά φτερά της φέρνεται μέ βία δώθε κεΐθε,\\nώς που νά πιασθη άπά κάτι στέρεο- έκεΐ μέσα πιά μένει,\\nπαίρνει γήινο σώμα πού, μ' εκείνης τή δύναμη, νομίζει πώς\\nκινεί τό ίδιο τόν εαυτό του• κι' αυτό τό δλο, σύδετο ψυχή\\nκαί σώμα, τό είπανε ζώο καί τοΰ έδωσαν τό παρανόμι θνητό.\\nΣέ ποιο δμως νά δώσωμε τό παρανόμι αθάνατο δέν έχομε\\nούτε ένα λόγο θεμελιωμένο μέ τή σκέψη μας, άλλα πλάθαμε,\\nχωρίς νά ιδούμε καί χωρίς νά νοιώσωμε καθαρά, τό θεό \\nένα αθάνατο ζώο, πού έχει καί ψυχή, πού έχει καί σώμα,\\nμά πού είναι τά δυο αυτά σ' δλους τους αιώνες σύδετα."},{"id": 37, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 44, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Tῆς τελείας ἀρετῆς εἴδη ἐστὶ τέτταρα· ἓν μὲν φρόνησις͵ ἓν δὲ δικαιοσύνη͵ ἄλλο δ΄ ἀνδρεία͵ τέταρτον σωφροσύνη. τούτων ἡ μὲν φρόνησις αἰτία τοῦ πράττειν ὀρθῶς τὰ πράγματα· ἡ δὲ δικαιοσύνη τοῦ ἐν ταῖς κοινωνίαις καὶ τοῖς συναλλάγμασι δικαιοπραγεῖν· ἡ δὲ ἀνδρεία τοῦ ἐν τοῖς κινδύνοις καὶ φοβεροῖς μὴ [ἐξίστασθαι] τρεῖν(δεν το βάζω στα πόδια)͵ ἀλλὰ μένειν· ἡ δὲ σωφροσύνη τοῦ κρατεῖν τῶν ἐπιθυμιῶν καὶ ὑπὸ μηδεμιᾶς ἡδονῆς δουλοῦσθαι͵ ἀλλὰ κοσμίως ζῆν.  (Αριστοτέλη, Περί Διαιρέσεων)\\nΤέσσερα είναι τα είδη της απόλυτης αρετής: ένα η φρόνηση, δεύτερο η δικαιοσύνη, άλλο η ανδρεία και τέταρτο η σωφροσύνη. Από αυτά, η φρόνηση μας κάνει να ενεργούμε σωστά, η δικαιοσύνη να ενεργούμε δίκαια στην κοινωνία και στις συναλλαγές μας, η ανδρεία να μην το βάζουμε στα πόδια την ώρα του κινδύνου και του φόβου και η σωφροσύνη να συγκρατούμε τις επιθυμίες μας και να μην υποδουλωνόμαστε σε καμία ηδονή, αλλά να ζούμε με κοσμιότητα."},{"id": 38, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 46, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "ὁ δὲ μὴ δυνάμενος κοινωνεῖν ἢ μηδὲν δεόμενος δι' αὐτάρκειαν οὐθὲν μέρος πόλεως, ὥστε ἢ θηρίον ἢ θεός.\\nΕκείνος δε που δε μπορεί να ζει μέσα στην κοινωνία με τους άλλους ή αυτός που δεν έχει ανάγκη από τίποτε, αυτός δεν έχει καμιά θέση στην πόλη, γιατί είναι ή θηρίο ή θεός.\\nΠολιτικά Α, 1253.a25, μετάφρ. Β. Μοσκόβης, Αριστοτέλους Πολιτικά. Ι–ΙΙ (1989)"},{"id": 39, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 99, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Σίμων Ἀθηναῖος, σκυτοτόμος. οὗτος ἐρχομένου Σωκράτους ἐπὶ τὸ ἐργαστήριον καὶ διαλεγομένου τινά, ὧν ἐμνημόνευεν ὑποσημειώσεις ἐποιεῖτο· ὅθεν σκυτικοὺς αὐτοῦ τοὺς διαλόγους καλοῦσιν. εἰσὶ δὲ τρεῖς καὶ τριάκοντα ἐν ἑνὶ φερόμενοι βιβλίῳ·\\nΣίμων Αθηναίος, παπουτσής. Όταν ο Σωκράτης πήγαινε στο μαγαζί του και διαλεγόταν με τους άλλους, ο Σίμων κρατούσε σημειώσεις που για το λόγο αυτό ονομάζονται 'σκυτικοί' (δηλαδή του παπουτσή). Είναι σε σύνολο 33 διάλογοι σε ένα βιβλίο (Διογ. Λαέρτ.)"},{"id": 40, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 56, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "[213] καὶ Ὠρείτας ἐκείνους, μέρος τέταρτον Εὐβοίας οἰκοῦντας, τὸν Χαρίδημον τοῦτον αὐτόν, ᾧ μήτηρ μὲν ὑπάρχει πολῖτις ἐκεῖ, πατὴρ δ᾽ οὐκ ἐρῶ τίς ἢ πόθεν （οὐδὲν γὰρ δεῖ πλείω τῶν ἀναγκαίων αὐτὸν ἐξετάζεσθαι）, ἀλλ᾽ ὅμως, τὸ ἥμισυ τοῦ γένους αὐτοῦ συμβαλλομένου, τοῦ ἡμίσεος μέχρι τῆς τήμερον ἡμέρας οὐκ ἠξιώκασιν, ἀλλ᾽ εἰς τοὺς νόθους ἐκεῖ συντελεῖ, καθάπερ ποτ᾽ ἐνθάδ᾽ εἰς Κυνόσαργες οἱ νόθοι (Δημοσθένης, 23.213)"},{"id": 41, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 108, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Λύκειον δὲ ἀπὸ μὲν Λύκου τοῦ Πανδίονος ἔχει τὸ ὄνομα, Ἀπόλλωνος δὲ ἱερὸν ἐξ ἀρχῆς τε εὐθὺς καὶ καθ᾽ ἡμᾶς ἐνομίζετο, Λύκειός τε ὁ θεὸς ἐνταῦθα ὠνομάσθη πρῶτον: λέγεται δὲ ὅτι καὶ Τερμίλαις, ἐς οὓς ἦλθεν ὁ Λύκος φεύγων Αἰγέα, καὶ τούτοις αἴτιός ἐστι Λυκίους ἀπ᾽ αὐτοῦ καλεῖσθαι.\\nΤο Λύκειο πήρε το όνομά του από τον Λύκο, γιο του Πανδίωνα. Ήταν εξαρχής ιερό του Απόλλωνα και νομίζουμε ότι ο θεός πήρε πρώτα εδώ την επωνυμία Λύκειος. Λέγεται δε ότι και οι Τερμίλες, προς τους οποίους κατέφυγε ο Λύκος διαφεύγοντας από τον Αινείεα, ονομάστηκαν στο εξής Λύκιοι από αυτόν."},{"id": 42, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 58, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "[3] ἔστι δὲ Ἡρακλέους ἱερὸν καλούμενον Κυνόσαργες: καὶ τὰ μὲν ἐς τὴν κύνα εἰδέναι τὴν λευκὴν ἐπιλεξαμένοις ἔστι τὸν χρησμόν, βωμοὶ δέ εἰσιν Ἡρακλέους τε καὶ Ἥβης, ἣν Διὸς παῖδα οὖσαν συνοικεῖν Ἡρακλεῖ νομίζουσιν: Ἀλκμήνης τε βωμὸς καὶ Ἰολάου πεποίηται, ὃς τὰ πολλὰ Ἡρακλεῖ συνεπόνησε τῶν ἔργων. Λύκειον δὲ ἀπὸ μὲν Λύκου τοῦ Πανδίονος ἔχει τὸ ὄνομα, Ἀπόλλωνος δὲ ἱερὸν ἐξ ἀρχῆς τε εὐθὺς καὶ καθ᾽ ἡμᾶς ἐνομίζετο, Λύκειός τε ὁ θεὸς ἐνταῦθα ὠνομάσθη πρῶτον: λέγεται δὲ ὅτι καὶ Τερμίλαις, ἐς οὓς ἦλθεν ὁ Λύκος φεύγων Αἰγέα, καὶ τούτοις αἴτιός ἐστι Λυκίους ἀπ᾽ αὐτοῦ καλεῖσθαι.\\n[3] Υπάρχει ένα ιερό του Ηρακλή που αποκαλείται Κυνόσαργες: υπάρχει μεν ο χρησμός της λευκής σκύλας για όσους θέλουν να γνωρίζουν την ιστορία, όμως εδώ βρίσκονται βωμοί του Ηρακλή και της Ήβης, η οποία ως κόρη του Δία συνοικούσε με τον Ηρακλή, αλλά έχουν κατασκευαστεί και βωμοί της Αλκμήνης και του Ιόλαου, ο οποίος βοήθησε τον Ηρακλή σε πολλούς από τους άθλους του."},{"id": 43, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 63, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Τὰς πόλεις ἀπόλλυσθαι, ὅταν μὴ δύνωνται τοὺς φαύλους ἀπὸ τῶν σπουδαίων διακρίνειν. \\nΤα κράτη καταστρέφονται όταν δεν υπάρχει διάκριση ανάμεσα στους κακούς και στους σπουδαίους άντρες. (Αντισθένης, απόφθεγμα 5)"},{"id": 44, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 65, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Προσέχειν τοῖς ἐχθροῖς· πρῶτοι γὰρ τῶν ἁμαρτημάτων αἰσθάνονται. - Αντισθένης, 12\\nΔώστε προσοχή στους εχθρούς σας, γιατί είναι οι πρώτοι που αντιλαμβάνονται τα λάθη σας.."},{"id": 45, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 85, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Ἐρωτώμενος διὰ τί ὀλίγους ἔχει μαθητάς, ἔφη, « Ὅτι ἀργυρέᾳ αὐτοὺς ἐκβάλλω ῥάβδῳ. » Ἐρωτηθεὶς διὰ τί πικρῶς τοῖς μαθηταῖς ἐπιπλήττει, « Καὶ οἱ ἰατροί, » φησί, « τοῖς κάμνουσιν. »\\n[Όταν τον ρώτησαν γιατί είχε λίγους μαθητές, απάντησε: 'γιατί χρησιμοποιώ ένα ασημένιο ραβδί για να τους ξετρυπώσω'. Όταν τον ρώτησαν γιατί έκανε τόσο πικρές παρατηρήσεις στους μαθητές του, απάντησε 'Κι οι γιατροί το ίδιο κάνουν με τους ασθενείς τους'."},{"id": 46, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 24, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Μηδείς ἀγεωμέτρητος εἰσίτω\\nΑυτό ήταν γραμμένο στον περίβολο της Ακαδημίας πάνω από τη θύρα που οδηγούσε στη σχολή."},{"id": 47, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 80, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Μνήματι τῷδε Κράτητα θεουδέα καὶ Πολέμωνα\\nἔννεπε κρύπτεσθαι, ξεῖνε, παρερχόμενος,\\nἄνδρας ὁμοφροσύνῃ μεγαλήτορας, ὧν ἄπο μῦθος\\nἱερὸς ἤϊσσεν δαιμονίου στόματος,\\nκαὶ βίοτος καθαρὸς σοφίας ἐπὶ θεῖον ἐκόσμει\\nαἰῶν' ἀστρέπτοις δόγμασι πειθόμενος.\\n[Ξένε, πες ότι στον τάφο αυτό αναπαύονται οι θεϊκοί Κράτης και Πολέμων, άνδρες που μεγαλούργησαν ομονοούντες, από τα χείλη των οποίων έρρεε ιερός λόγος και η ζωή τους, αγνή και γεμάτη σοφία, [πιστή σε δόγματα στέρεα, τους χάρισε τη λαμπρή αθανασία.]"},{"id": 48, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 82, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Διέγνω δὴ ὁ Πλάτων καὶ τοῖς Μάγοις συμμῖξαι· διὰ δὲ τοὺς τῆς Ἀσίας πολέμους ἀπέστη. Ἐπανελθὼν δὲ εἰς Ἀθήνας διέτριβεν ἐν Ἀκαδημείᾳ. Τὸ δ' ἐστὶ γυμνάσιον προάστειον ἀλσῶδες ἀπό τινος ἥρωος ὀνομασθὲν Ἑκαδήμου, καθὰ καὶ Εὔπολις ἐν Ἀστρατεύτοις φησίν·\\n\\nἘν εὐσκίοις δρόμοισιν Ἑκαδήμου θεοῦ. (Διογένης Λαέρτιος, Γ' 7)\\n[Ο Πλάτων λέγεται ότι σκόπευε να γνωρίσει και τους Μάγους, αλλά τον εμπόδισαν οι πόλεμοι στην Ασία. Με την επάνοδό του στην Αθήνα σύχναζε στα Ακαδήμεια. Αυτό είναι ένα γυμνάσιο σε αλσώδη τοποθεσία έξω από την πόλη, που πήρε το όνομά του από τον ήρωα Εκάδημο, σύμφωνα με τον Εύπολι στο έργο του 'Αστράτευτοι'. \\nΣτις σκιερές αλέες του θεού Εκάδημου."},{"id": 49, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 83, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Τῶν πάντων δ' ἡγεῖτο πλατίστακος, ἀλλ' ἀγορητὴς\\nἡδυεπής, τέττιξιν ἰσογράφος, οἵ θ' Ἑκαδήμου\\nδένδρει ἐφεζόμενοι ὄπα λειριόεσσαν ἱεῖσιν. (Διογένης Λαέρτιος, Γ' 8)\\n[Όλων αρχηγός ήταν ο πλάτων, που αγόρευε γλυκά, σαν τον τζίτζικα που είναι ακουμπισμένος στα δέντρα του άλσους του Ακάδημου και βγάζει ήχο γλυκό σαν τα κρίνα]"},{"id": 50, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 84, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Ὧν ἕνεκα καὶ Πλάτων ἔλεγεν ὅτι δεῖ τοὺς συνιδεῖν τὰς τοῦ παντὸς ἀρχὰς ἐπιθυμοῦντας πρῶτον μὲν αὐτὰς καθ' αὑτὰς διελέσθαι τὰς ἰδέας, οἷον ὁμοιότητα καὶ μονάδα καὶ πλῆθος καὶ μέγεθος καὶ στάσιν καὶ κίνησιν· δεύτερον αὐτὸ καθ' αὑτὸ τὸ καλὸν καὶ ἀγαθὸν καὶ δίκαιον καὶ τὰ τοιαῦτα ὑποθέσθαι.\\n\\n13 Τρίτον τῶν ἰδεῶν συνιδεῖν ὅσαι πρὸς ἀλλήλας εἰσίν, οἷον ἐπιστήμην ἢ μέγεθος ἢ δεσποτείαν (ἐνθυμουμένους ὅτι τὰ παρ' ἡμῖν διὰ τὸ μετέχειν ἐκείνων ὁμώνυμα ἐκείνοις ὑπάρχει· λέγω δὲ οἷον δίκαια μὲν ὅσα τοῦ δικαίου, καλὰ δὲ ὅσα τοῦ καλοῦ). ἔστι δὲ τῶν εἰδῶν ἓν ἕκαστον ἀίδιόν τε καὶ νόημα καὶ πρὸς τούτοις ἀπαθές. Διὸ καί φησιν ἐν τῇ φύσει τὰς ἰδέας ἑστάναι καθάπερ παραδείγματα, τὰ δ' ἄλλα ταύταις ἐοικέναι τούτων ὁμοιώματα καθεστῶτα. Ὁ τοίνυν Ἐπίχαρμος περί τε τοῦ ἀγαθοῦ καὶ περὶ τῶν ἰδεῶν οὕτω λέγει· (Διογένης Λαέρτιος, Γ' 12-13)\\n [Έτσι ο Πλάτων είπε ότι, αν επιθυμούμε να αντιληφθούμε τις αρχές που διέπουν το σύμπαν, θα πρέπει πρώτα να διακρίνουμε τις ίδιες τις ιδέες, π.χ. την ομοιότητα, την ενότητα και την πολυσχιδία, το μέγεθος, την αδράνεια και την κίνηση. Στη συνέχεια θα πρέπει να δεχτούμε την ύπαρξη της ομορφιάς, της καλοσύνης, της δικαιοσύνης κλπ, καθεμιά από τις οποίες υπάρχει αυτούσια. Κατά τρίτον, θα πρέπει να εξετάσουμε πόσες από τις ιδέες σχετίζονται με άλλες ιδέες, όπως η γνώση, η μεγαλοπρέπεια, ή η ιδιοκτησία και να θυμόμαστε ότι τα πράγματα που αντιλαμβανόμαστε εμπειρικά φέρουν το ίδιο όνομα όπως αυτές οι ιδέες γιατί αποτελούν μέρος τους. Εννοώ ότι τα πράγματα που μετέχουν της δικαιοσύνης είναι δίκαια, τα πράγματα που μετέχουν της ομορφιάς είναι όμορφα. Καθεμιά από τις ιδέες είναι αιώνια, είναι μια έννοια, και επιπλέον δεν μπορεί να αλλάξει. Έτσι, ο Πλάτων λέει ότι οι ιδέες αποτελούν στη φύση τα αρχέτυπα προς τα οποία όλα τα άλλα πράγματα έχουν συνάφεια γιατί είναι αντίγραφα αυτών των αρχετύπων.]\\nΔιογένης Λαέρτιος Γ΄12-13"},{"id": 51, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 27, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Το σπίτι τους βρισκόταν μερικά μέτρα από τη νέα βιβλιοθήκη με την οποία μόλις είχα προικίσει την Αθήνα και από την οποία δεν έλειπε τίποτε που θα μπορούσε να βοηθήσει το στοχασμό ή την ανάπαυση που προηγείται της πνευματικής δραστηριότητας, όπως αναπαυτικά καθίσματα, επαρκής θέρμανση τους συχνά δύσκολους χειμώνες, σκάλες που προσφέρουν εύκολη πρόσβαση στα βιβλιοστάσια, τον αλάβαστρο και το χρυσό μιας ήπιας και ήρεμης πολυτέλειας. Marguerite Yourcenar, Απομνημονεύματα Αδριανού."},{"id": 52, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 22, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Τετραφάρμακος ονομαζόταν αρχικά ένα μείγμα κεριού, λίπους, πίσσας και ρητίνης. Οι Επικούρειοι συνόψισαν τις 40 βασικές αρχές τους σε 4 και δανείστηκαν τον όρο για να συνοψίσουν τους κανόνες για την ανθρώπινη ευτυχία.\\nΆφοβον ο θεός, \\nανύποπτον ο θάνατος• \\nκαι ταγαθόν μεν εύκτητον, \\nτο δε δεινόν ευεκκαρτέρητον. \\nΦιλόδημος, Προς σοφιστάς, IV 10-14"},{"id": 53, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 49, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Ὅρος τοῦ μεγέθους τῶν ἡδονῶν ἡ παντὸς τοῦ ἀλγοῦντος ὑπεξαίρεσις. ὅπου δ΄ ἂν τὸ ἡδόμενον ἐνῇ͵ καθ΄ ὃν ἂν χρόνον ᾖ͵ οὐκ ἔστι τὸ ἀλγοῦν ἢ λυπούμενον ἢ τὸ συναμφότερον.\\nΌριο του μεγέθους των ηδονών είναι η εξάλειψη κάθε πόνου. Όπου είναι παρούσα η ηδονή και για όσο διάστημα είναι παρούσα, δεν υπάρχει τίποτε που να προξενεί πόνο ή λύπη ή και τα δύο μαζί. (Επίκουρος, Κύριαι Δόξαι, 3)"},{"id": 54, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 50, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Πᾶν ἀγαθὸν καὶ κακὸν ἐν αἰσθήσει· στέρησις δέ ἐστιν αἰσθήσεως ὁ θάνατος.\\nΚάθε καλό και κάθε κακό βρίσκεται στην αίσθηση, ενώ ο θάνατος είναι ακριβώς η στέρηση της αίσθησης. (Επίκουρος, Επιστολή προς Μενοικέα, 124)"},{"id": 55, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 51, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Καὶ τὴν αὐτάρκειαν δὲ ἀγαθὸν μέγα νομίζομεν͵ οὐχ ἵνα πάντως τοῖς ὀλίγοις χρώμεθα͵ ἀλλ΄ ὅπως ἐὰν μὴ ἔχωμεν τὰ πολλά͵ τοῖς ὀλίγοις ἀρκώμεθα͵ πεπεισμένοι γνησίως ὅτι ἥδιστα πολυτελείας ἀπολαύουσιν οἱ ἥκιστα ταύτης δεόμενοι͵ καὶ ὅτι τὸ μὲν φυσικὸν πᾶν εὐπόριστόν ἐστι͵ τὸ δὲ κενὸν δυσπόριστον.\\nΘεωρούμε ότι η αυτάρκεια είναι μέγιστο αγαθό, όχι για να χρησιμοποιούμε πάντοτε τα λίγα, αλλά για να μπορούμε, όταν δεν έχουμε πολλά, να αρκούμαστε στα λίγα, πιστεύοντας στ’ αλήθεια ότι την πολυτέλεια την απολαμβάνουν ηδονικότερα εκείνοι που την έχουν μικρότερη ανάγκη και ότι κάθε τι φυσικό το αποκτούμε εύκολα, ενώ το μάταιο δύσκολα. (Επίκουρος, Επιστολή προς Μενοικέα, 130)"},{"id": 56, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 52, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Γεγόναμεν ἅπαξ, δὶς δὲ οὐκ ἔστι γενέσθαι• δεῖ δὲ τὸν αἰῶνα μηκέτι εἶναι• σὺ δὲ οὐκ ὢν τῆς αὔριον κύριος ἀναβάλλῃ τὸ χαῖρον• ὁ δὲ βίος μελλησμῷ παραπόλλυται καὶ εἷς ἕκαστος ἡμῶν ἀσχολούμενος ἀποθνῄσκει.\\nΓεννηθήκαμε μια φορά και δεν γίνεται να γεννηθούμε και δεύτερη• και κατ’ ανάγκην δεν υπάρχει πια κάτι αιώνια. Όμως εσύ, που δεν εξουσιάζεις το αύριο, αναβάλλεις την ευτυχία σου: και η ζωή σπαταλιέται στις αναβολές κι ο καθένας μας πεθαίνει γεμάτος ασχολίες. (Επίκουρος, Προσφώνησις 14)"},{"id": 57, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 86, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Πολλοί ήταν αυτοί που κατηγορούσαν τον Επίκουρο ως ηδονιστή και έκφυλο. Ο Αθήναιος, ωστόσο, επέλεξε να αποκαταστήσει τη φήμη του, παρουσιάζοντας το εξής επίγραμμα:\\n12 ἄνθρωποι, μοχθεῖτε τὰ χείρονα, καὶ διὰ κέρδος\\nἄπληστοι νεικέων ἄρχετε καὶ πολέμων·\\nτᾶς φύσιος δ' ὁ πλοῦτος ὅρον τινὰ βαιὸν ἐπίσχει,\\nαἱ δὲ κεναὶ κρίσιες τὰν ἀπέραντον ὁδόν,\\nτοῦτο Νεοκλῆος πινυτὸν τέκος ἢ παρὰ Μουσέων\\nἔκλυεν ἢ Πυθοῦς ἐξ ἱερῶν τριπόδων.\\n[Οι θνητοί μοχθούν για ταπεινά πράγματα και αδιάκοπα αρχίζουν τη διαμάχη και τον πόλεμο για το κέρδος. Όμως ο πλούτος της φύσης έχει όρια ενώ οι ματαιόδοξες κρίσεις είναι ατελείωτες. Ο σοφός γιος του Νεοκλή άκουσε τις σοφίες αυτές από τις Μούσες ή από τον ιερό τρίποδα των Δελφών'. [Διογ. Λαέρτ. Ι' 12]"},{"id": 58, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 68, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "«Δύο ὦτα ἔχομεν, στόμα δὲ ἕν, ἵνα πλείονα μὲν ἀκούωμεν, ἥττονα δὲ λέγωμεν» δηλαδή «Έχουμε δυο αυτιά και ένα στόμα, για να ακούμε περισσότερα απ' όσα λέμε»."},{"id": 59, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 53, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Ἓν οἶδα ὅτι ουδὲν οἶδα (Ένα ξέρω, ότι τίποτα δεν ξέρω) (Πλάτωνας, Απολογία Σωκράτη)"},{"id": 60, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 39, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Πρόκλος ἐγὼ γενόμην Λύκιος γένος, ὃν Συριανὸς \\nἐνθάδ ̓ ἀμοιβὸν ἑῆς θρέψε διδασκαλίης. \\nξυνὸς δ ̓ ἀμφοτέρων ὅδε σώματα δέξατο τύμβος· \\nαἴθε δὲ καὶ ψυχὰς χῶρος ἕεις λελάχοι.\\nMarinus, Vita Procli, 36"},{"id": 61, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 54, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Οὐκ ἔστιν ἀνδρὶ ἀγαθῷ κακὸν οὐδὲν οὔτε ζῶντι οὔτε τελευτήσαντι. \\nΟ καλός άνθρωπος δεν παθαίνει τίποτα κακό, ούτε ζωντανός ούτε και νεκρός. (Πλάτωνας, Απολογία Σωκράτους)"},{"id": 62, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 43, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Κι έτσι η ψυχή του ευτυχούς αυτού άνδρα, συναρμοζόμενη από τα πάντα και προσθέτοντας στον εαυτό της, ζούσε σχεδόν εκτός του σώματός του και μόλις μετά βίας συγκρατούνταν πλέον από αυτό. Μαρίνος, Βίος Πρόκλου, 21."},{"id": 63, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 48, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Φύσει μέν ἐστιν ἄνθρωπος ζῷον πολιτικόν.\\nΟ άνθρωπος είναι από τη φύση του πολιτικό ον.\\nΑριστοτέλης, Πολιτικά Γ, 1278.b9"},{"id": 64, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 47, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "ἄνευ γὰρ φίλων οὐδεὶς ἕλοιτ' ἂν ζῆν, ἔχων τὰ λοιπὰ ἀγαθὰ πάντα·\\nΚανένας δεν θα ήθελε να ζει χωρίς φίλους κι αν ακόμη είχε στη διάθεσή του όλα τ' άλλα αγαθά.\\nΗθικά Νικομάχεια, 1155a 5, μετάφρ. Β. Μοσκόβης, Αριστοτέλους Ηθικά Νικομάχεια Ι–ΙΙ (1993)"},{"id": 65, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 88, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Τῆς παιδείας ἔφη τὰς μὲν ῥίζας εἶναι πικράς, τὸν δὲ καρπὸν γλυκύν.\\n[Οι ρίζες της εκπαίδευσης είναι πικρές, αλλά ο καρπός της είναι γλυκός] (Διογ. Λαέρτ. Ε' 18)"},{"id": 66, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 87, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Σε αντίθεση με άλλες φιλοσοφικές σχολές, όπου οι μαθητές σύχναζαν για κάποιες ώρες, ο Επίκουρος επέμενε ώστε οι μαθητές του να ζουν, να συμβιώνουν μέσα στον Κήπο. \\nοἳ καὶ πανταχόθεν πρὸς αὐτὸν ἀφικνοῦντο καὶ συνεβίουν αὐτῷ ἐν τῷ κήπῳ-καθά φησι καὶ \\n11 Ἀπολλόδωρος· ὃν καὶ ὀγδοήκοντα μνῶν πρίασθαι. Διοκλῆς δ' ἐν τῇ τρίτῃ τῆς ἐπιδρομῆς φησιν-εὐτελέστατα καὶ λιτότατα διαιτώμενοι· 'κοτύλῃ γοῦν,' φησίν, 'οἰνιδίου ἠρκοῦντο, τὸ δὲ πᾶν ὕδωρ ἦν αὐτοῖς ποτόν.'\\n[Οι φίλοι του έρχονταν σε αυτόν από όλα τα μέρη του ελληνικού κόσμου και ζούσαν μαζί με αυτόν στον κήπο του. Αυτό μαρτυρεί ο Απολλόδωρος, ο οποίος επίσης λέει ότι αγόρασε τον κήπο για ογδόντα μνες.  Και ο Διοκλής στο τρίτο βιβλίο της Επιτομής του αναφέρει ότι ζούσαν απλά και λιτοδίαιτα. \\nΣε κάθε εκδήλωση αρκούνταν σε ένα τέταρτο του λίτρου αραιωμένο κρασί και κατά τα άλλα έπιναν μόνο νερό.]"},{"id": 67, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 15, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Καί πρέπει νά λέει τ' ακόλουθα' πώς « δ έ ν ε ί ν α ι\\nα λ η θ ι ν ό ς ό λ ό γ ο ς » πού λέει, δτι πρέπει να χαρίζεται\\nκανείς πιο πολύ α' έναν πού δέν κατέχεται άπό έρωτα,\\nτήν ώρα πού έχει μπροστά του έναν εραστή, γιατί τάχα\\nό ένας είναι μανιακός, ένώ ό άλλος είναι φρόνιμος. 'Άν βέβαια\\nήταν όπλο νά είπη κανείς πώς ή μανία είναι κάτι κακό,\\nτότε ό προηγούμενος λόγος θά ήταν καλά είπωμένος• μά\\nέδώ τά μεγαλύτερα καλά μας έρχονται άπό τή μανία, πού\\nμας χαρίζεται σαν ένα θείο δώρο. Γιατί καί ή προφήτισσα\\nστους Δελφούς καί οί ιέρειες στή Δωδώνη, δταν τίς έπιασε \\nή μανία, έκαμαν στην 'Ελλάδα πολλά καί καλά καί σέ ανθρώπους\\nκαί σέ πόλεις, ένώ δταν ήτανε φρόνιμες έκαμαν λίγα\\nή καί τίποτε. Κι δν βέβαια άρχίσωμε νά λέμε καί γιά τή\\nΣίβυλλα καί γιά τους άλλους, δσοι μέ τή μαντική τέχνη προφήτεψαν\\nπολλά σέ πολλούς καί τους έκαμαν καλό στά μέλλον\\nτους, θά μακραίναμε τό λόγο μας λέγοντας πράγματα\\nφανερά στον καθένα."},{"id": 68, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 13, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Κάθονται στις όχθες του Ιλισσού και ο Φαίδρος ρωτάει τον Σωκράτη αν από το σημείο αυτό άρπαξε ο Βορέας την Ωρειθύια. Ο Σωκράτης του απαντά ότι μπορεί να ήταν κι αυτό το σημείο, αν κι έχουν ακουστεί κι άλλες απόψεις, όμως ο ίδιος δεν δίνει βάση σε αυτά τα πράγματα γιατί αυτό που τον ενδιαφέρει είναι να γνωρίσει τον εαυτό του κι όχι τη μυθολογία. \\nΣΩ:  Γι’ αυτό λοιπόν τα αφήνω αυτά όπως είναι και τα παραδέχομαι όπως όλος ο κόσμος και κάνω ό,τι τώρα δα έλεγα, νοιάζομαι όχι γι’ αυτά, αλλά για τον εαυτό μου, να ιδώ μην τυχόν είμαι κανένα θηρία μπερδεμένο και πιο φουσκωμένο και από τον Τυφώνα ή κανένα πιο ήμερο και πιο απλό ζώο, που του έχει τάξει η φύση να έχει μερδικό από κάποιο θεϊκό κι απλό κλήρο."},{"id": 69, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 19, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Αυτοί που μιλούν για τα θεϊκά πράγματα μέσω ενδείξεων (1) μιλούν είτε συμβολικά και μυθικά (1.1), είτε μέσω εικόνων (1.2), ενώ από όσους φανερώνουν τις σκέψεις τους χωρίς προκάλυμμα (ἀπαρακαλύπτως) (2), άλλοι εκφράζονται επιστημονικά και άλλοι σύμφωνα με την έμπνευση που στέλνουν οι θεοί. Ο πρώτος τρόπος, αυτός που προτίθεται να ανακοινώσει τα θεία μέσω συμβόλων (1.1), ανήκει στον Ορφέα και είναι γενικότερα ταιριαστός σε αυτούς που γράφουν τους μύθους των θεών, ενώ ο τρόπος των εικόνων (1.2) ανήκει στον Πυθαγόρα γιατί και τα μαθηματικά οι πυθαγόρειοι τα ανακάλυψαν για να τους υπενθυμίζουν τα θεία και προσπαθούσαν μέσω αυτών ως εικόνων να μεταβαίνουν σ’ εκείνα. […] Από την άλλη μεριά, ο ένθεος τρόπος, που εκφαίνει την ίδια την αλήθεια των θεών αυτή καθ᾽εαυτή (2.1), εμφανίζεται κατ᾽ εξοχήν στους πιο τέλειους θεουργούς – γιατί αυτοί δεν θεωρούν σωστό να παρουσιάζουν στους μαθητές τους τις θεϊκές τάξεις ή τις ιδιότητες των θεών μέσω κάποιων παραπετασμάτων αλλά εξαγγέλλουν τόσο τις δυνάμεις όσο και τις σειρές των θεών εμπνεόμενοι από τους ίδιους τους θεούς. Ο τρόπος, τέλος, ο επιστημονικός  βρίσκει το αποκορύφωμά του στη φιλοσοφία του Πλάτωνα."},{"id": 70, "topic_ID": 2, "attribute_ID": 3, "testimony_ID": 17, "attribute_Lang": "gr", "attribute_Label": "Μαρτυρία", "attribute_Value": "Πρόταση: Κάθε πλήθος μετέχει με κάποιο τρόπο στο ένα. Απόδειξη: Αν το πλήθος δεν μετέχει με κανένα τρόπο στο ένα, τότε ούτε το όλο πλήθος θα είναι ένα ούτε καθένα από τα πολλά από τα οποία αποτελείται, αλλά και το καθένα από αυτά θα είναι πλήθος, και αυτό θα συμβαίνει επ’ άπειρον, και το καθένα από αυτά τα άπειρα θα είναι εκ νέου ένα άπειρο πλήθος. Γιατί, αν το πλήθος δεν μετέχει με κανένα τρόπο σε κανένα ένα, ούτε συνολικά ως όλον ούτε επιμεριστικά με καθένα από τα μέλη του, τότε θα είναι εντελώς άπειρο κατά πάντα. Γιατί, όποιο κι αν πάρεις από τα πολλά, αυτό θα είναι είτε ένα είτε όχι ένα. Και αν δεν είναι ένα, τότε θα είναι είτε πολλά είτε τίποτε. Αλλά, αν το καθένα είναι τίποτε, τότε και το σύνολο θα είναι τίποτε. Κι αν το καθένα είναι πολλά, τότε το καθένα θα αποτελείται από άπειρες φορές άπειρα. Αυτά όμως είναι αδύνατα. Γιατί ούτε κανένα ον αποτελείται από άπειρες φορές άπειρα πράγματα (αφού από το άπειρο δεν υπάρχει κάτι περισσότερο, ενώ το σύνολο είναι περισσότερο από το καθένα μέλος του), ούτε είναι δυνατό να συντεθεί κάτι από το τίποτε. Συνεπώς, κάθε πλήθος μετέχει με κάποιον τρόπο στο ένα."},{"id": 71, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 16, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "14"},{"id": 72, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 44, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "45"},{"id": 73, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 46, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "45"},{"id": 74, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 99, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "81"},{"id": 75, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 56, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "64"},{"id": 76, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 58, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "59"},{"id": 77, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 63, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "64"},{"id": 78, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 65, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "64"},{"id": 79, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 85, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "81"},{"id": 80, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 24, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "25"},{"id": 81, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 80, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "81"},{"id": 82, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 82, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "81"},{"id": 83, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 83, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "81"},{"id": 84, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 84, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "81"},{"id": 85, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 27, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "28"},{"id": 86, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 22, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "23"},{"id": 87, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 49, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "23"},{"id": 88, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 50, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "23"},{"id": 89, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 51, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "23"},{"id": 90, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 52, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "23"},{"id": 91, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 86, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "81"},{"id": 92, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 68, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "69"},{"id": 93, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 53, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "14"},{"id": 94, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 39, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "18"},{"id": 95, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 54, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "14"},{"id": 96, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 43, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "18"},{"id": 97, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 48, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "45"},{"id": 98, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 47, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "45"},{"id": 99, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 88, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "81"},{"id": 100, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 87, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "81"},{"id": 101, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 15, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "14"},{"id": 102, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 13, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "14"},{"id": 103, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 19, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "18"},{"id": 104, "topic_ID": 2, "attribute_ID": 21, "testimony_ID": 17, "attribute_Lang": "multilang", "attribute_Label": "Πρόσωπο", "attribute_Value": "18"},{"id": 105, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 99, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Who was Simon"},{"id": 106, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 56, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Demosthenes talks about the Gymnasium at Cynosarges"},{"id": 107, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 108, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Pausanias' testimony on the Lyceum"},{"id": 108, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 58, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Description of the Gymnasium of Cynosarges by Pausanias"},{"id": 109, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 63, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Dictum by Antisthenes"},{"id": 110, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 65, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Why we have to take care of our enemies"},{"id": 111, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 85, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Wise sayings by Antisthenes"},{"id": 112, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 24, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "The inscription over the Academy"},{"id": 113, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 80, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Epigram on the common grave of Crates and Polemo"},{"id": 114, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 82, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Reference to the Academy by Diogenes Laertius"},{"id": 115, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 83, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Timo to Plato"},{"id": 116, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 84, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "The world of the ideas in Plato"},{"id": 117, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 27, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Hadrian talks about his library"},{"id": 118, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 22, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "The 'tetrapharmakos' (four-elements' remedy)"},{"id": 119, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 49, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Pleasure and pain"},{"id": 120, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 50, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "The senses"},{"id": 121, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 51, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "The importance of self-sufficiency"},{"id": 122, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 52, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "We only live once!"},{"id": 123, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 86, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Athenaeius on Epicurus"},{"id": 124, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 68, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Zeno's proverb"},{"id": 125, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 53, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "I know only one thing, that I dont know anything"},{"id": 126, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 39, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Funerary epigram of Proclus and Syrianus"},{"id": 127, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 54, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Virtue is a sheild for man"},{"id": 128, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 43, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Proclus' Spirituality"},{"id": 129, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 48, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Man is a political being"},{"id": 130, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 47, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Aristotle on friendship"},{"id": 131, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 88, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Aristotle on education"},{"id": 132, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 87, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "The garden: a centre of philosophic cohabitation"},{"id": 133, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 15, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Plato, Phaedrus 244"},{"id": 134, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 13, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Plato, Phaedrus 229"},{"id": 135, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 19, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Proclus, Platonic Theology"},{"id": 136, "topic_ID": 2, "attribute_ID": 2, "testimony_ID": 17, "attribute_Lang": "en", "attribute_Label": "Title", "attribute_Value": "Proclus, Theological Incarnation"},{"id": 137, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 99, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Simon the Athenian, a shoemaker, when Socrates came to his workshop and engaged in a dialogue, he kept notes of what the philosopher said. This is why these dialogues are called 'of the shoemaker'. They are 33 dialogues in one single book."},{"id": 138, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 56, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Those who dwell at the fourth part of Euboea are called 'Oreitae'; Charidemus was one of them, since his mother was a citizen of this area, but I'm not going to tell who his father was or where he was from (because we don't need to reveal more than it is necessary about him), but half of his breed is contributing, whereas the other half is not worth mentioning; this brings them to the condition of half-breed, as were once considered those who frequented the Cynosarges in this city."},{"id": 139, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 108, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "The Lyceum was called after Lycus, son of Pandion. Here was built since the beginning a sanctuary of Apollo and we thing that the god acquired here, for the first time, the attribut Lyceios. It is said that the Termilae, to whom Lycus took refuge when he was trying to escape from Aeneas, were since then called Lycians after him."},{"id": 140, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 58, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Τhere is a sanctuary by Hercules called Cynosarges: there is the omen of the white bitch for those who want to know the history, but here there are altars of Hercules and Hebe, Hercules' consort as daughter of Zeus, but there have been erected also altars for Alcmene and Iolaos, who helped Hercules in many of his brave deeds."},{"id": 141, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 63, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "The cities are destroyed when they cannot discern the impotent men from the great ones."},{"id": 142, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 65, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Beware of your enemies, they are the first to perceive your mistakes, Antisthenes, exc. 12."},{"id": 143, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 85, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "When he was asked why he had but a few students, he answered: 'Because I use a silver rod to dig them out'. When he was asked why he made so bitter remarks to his students, he answered: 'The doctors do the same with their patients'."},{"id": 144, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 24, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "'Nobody without knowledge of geometry should enter'\\nThis was written at the precinct of the Academy, over the gate leading to the school."},{"id": 145, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 80, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Passing stranger, say that in this tomb rest godlike Crates and Polemo, men magnanimus in concord, from whose inspired lips flowed sacred speech, and whose pure life of wisdom, in accordance with unswerving tenets, decked them for a bright immortality. [Loeb edition, from Lacus Curtius, http://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diogenes_Laertius/Lives_of_the_Eminent_Philosophers/4/Crates*.html)"},{"id": 146, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 82, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "[Plato also intended to make the acquaintance of the Magicians, but was prevented by the wars in Asia. Having returned to Athens he lived in the Academy, which is a gymnasium outside the walls, in a grove named after a certain hero, Hecademus, as is stated by Eupolis in his play named 'Shirkers'\\nIn the shaded alleys of the god Ecademos."},{"id": 147, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 83, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Among all of them leader was Plato, a big fish, but a sweet-voiced speaker, musical in voice as the cicadawho, perched on the trees of the Hecademus, pours forth a strain as delicate as a lilly\\n(http://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diogenes_Laertius/Lives_of_the_Eminent_Philosophers/3/Plato*.html)"},{"id": 148, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 84, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Hence Plato said that, if we wish to take in at one glance the principles underlying the universe, we must first distinguish the ideas by themselves, for example, likeness, unity and plurality, magnitude, rest and motion;   13 next we must assume the existence of beauty, goodness, justice and the like, each existing in and for itself; in the third place we must see how many of the ideas are relative to other ideas, as are knowledge, or magnitude, or ownership, remembering that the things within our experience bear the same names as those ideas because they partake of them; I mean that things which partake of justice are just, things which partake of beauty are beautiful. Each one of the ideas is eternal, it is a notion, and moreover is incapable of change. Hence Plato says that they stand in nature like archetypes, and that all things bear a resemblance to the ideas because they are copies of these archetypes.\\nDiogenes Laertius III 12-13 (Loeb edition, Lacus Curtius, http://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diogenes_Laertius/Lives_of_the_Eminent_Philosophers/3/Plato*.html)"},{"id": 149, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 27, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "'Their house was situated at a few meters' distance from the new library with which I had just endowed Athens and from which nothing was missing that could aid reflection or the relaxation which precedes intellectual activity, such as comfortable chairs, adequate heating during the often difficult winters, staircases offering easy access to the bookcases, the alabaster and the gold of a serene luxury'.\\nMarguerite Yourcenar, Memoirs of Hadrian"},{"id": 150, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 22, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Tetraphamakos was initially called a mixture of pitch, resin, tallow and wax; the Epicureans borrowed the term to define the four basic precepts (a compendium of the 40 Epicurean precepts) that guarantee human happiness. \\nDon't fear god\\ndon't perceive death\\nwhat is good is easy to get, \\nand the bad things are easy to endure. \\nPhilodemus, To the sophists, IV 10-14"},{"id": 151, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 49, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "The magnitude of pleasure reaches the limit in the removal of all pain. When pleasure is present, so long as it is uninterrupted, there is no pain either of body or of mind, or both together.\\nEpicurus, Principal Doctrines, 3, (transl. Classics.mit.edu)"},{"id": 152, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 50, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Every good and every bad thing is in the senses, whereas death is exactly the loss of senses. \\n(Epicurus, Letter to Menoikeus, 124)"},{"id": 153, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 51, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "We think that self-sufficiency is the greatest of goods, not in order to use always but a few things, but in order to be able to suffice ourselves to a few things when many are not extant; for we believe that luxury is enjoyed really and with greater pleasure those who need it the least, and that all things natural are easy to acquire, but the vain things are difficult to get. (Epicurus, Letter to Menoikeus, 130)."},{"id": 154, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 52, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "We were born once and we can't be born a second time. Therefore there is nothing eternal any more. But you, who cannot control tomorrow, you postpone your happiness: life is thrown away with postponing and each one dies full of 'activities' (Epicurus, Address, 14)"},{"id": 155, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 86, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Many were those who accused Epicurus for hedonism and depravity. Athenaaeus, however, attempted to restitute his reputation with the following epigram: \\n12 ἄνθρωποι, μοχθεῖτε τὰ χείρονα, καὶ διὰ κέρδος\\nἄπληστοι νεικέων ἄρχετε καὶ πολέμων·\\nτᾶς φύσιος δ' ὁ πλοῦτος ὅρον τινὰ βαιὸν ἐπίσχει,\\nαἱ δὲ κεναὶ κρίσιες τὰν ἀπέραντον ὁδόν,\\nτοῦτο Νεοκλῆος πινυτὸν τέκος ἢ παρὰ Μουσέων\\nἔκλυεν ἢ Πυθοῦς ἐξ ἱερῶν τριπόδων.\\n+The mortals strive for trivial things and incessantly start fighting over profit. But the wealth of nature has limits whereas the crisis of vanity have no end. The wise son of Neokles heard these words of wisdom from the Muses or from the sacred tripd of Delphi'. [Diog. Laert. X 12]"},{"id": 156, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 68, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "We have two ears, but one mouth, in order to hear more and say less."},{"id": 157, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 53, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "I know only one thing, that I dont know anything (Plato, Apology of Socrates)"},{"id": 158, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 39, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "I am Proclus, born in Lycia, whom Syrianus\\nfed with his own teaching\\na grave received both our bodies\\nas were our souls together\\n\\nMarinus, Life of Proclus, 36"},{"id": 159, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 54, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "For the virtuous man there is no harm, not in his life nor in his death. (Plato, Apology of Socrates)"},{"id": 160, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 43, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Thus, the soul of this happy man, consisting of everything and adding to itself, lived almost outside of his body and was barely withheld by it. (Marinus, Vita Procli)"},{"id": 161, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 48, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Due to his nature, man is a political being. \\nAristotle, Politics, III, 1278b9"},{"id": 162, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 47, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Nobody would chose to live without friends, even if he has all the other goods in life. \\n\\nEthics, Nikomachea, 1155a"},{"id": 163, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 88, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "The roots of education are bitter, but its fruit is sweet\\n\\n(Diog. Laert. V 18)"},{"id": 164, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 87, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "In contrast to other philosophical schools, where students used to spend some hours of the day, Epicure insisted that his students lived all together within the Garden. \\n'His friend came to him from all parts of the Greek world and lived with him in his garden. This is attested by Apollodoros, who says also that he bought the house for eighty mnae. And Diocles in the third book of his Epitome relates that they lived simply and frugally. In every feast they consumed only a quarter of a litre wine and other than that they drank only water.'"},{"id": 165, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 15, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "And I must say that this saying is not true, which teaches that when a lover is at hand the non-lover should be more favored, because the lover is insane, and the other sane. For if it were a simple fact that insanity is an evil, the saying would be true; but in reality the greatest of blessings come to us through madness, when it is sent as a gift of the gods. \\n(trans. N. Fowler, Cambridge MA, Harvard University Press, London 1925)"},{"id": 166, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 13, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Phaedrus\\nTell me, Socrates, is it not from some place along here by the Ilissus that Boreas is said to have carried off Oreithyia?\\n\\nSocrates\\nYes, that is the story.\\n\\nPhaedrus\\nWell, is it from here? The streamlet looks very pretty and pure and clear and fit for girls to play by.\\n[...]\\nSocrates\\n[...] If anyone disbelieves in these, and with a rustic sort of wisdom, undertakes to explain each in accordance with probability, he will need a great deal of leisure. But I have no leisure for them at all; and the reason, my friend, is this: I am not yet able, as the Delphic inscription has it, to know myself; so it seems to me ridiculous,when I do not yet know that, to investigate irrelevant things. And so I dismiss these matters and accepting the customary belief about them, as I was saying just now, I investigate not these things, but myself, to know whether I am a monster more complicated and more furious than Typhon or a gentler and simpler creature, to whom a divine and quiet lot is given by nature.\\n(Transl. H.N.Fowler, Cambridge MA. Harvard University Press and London 1925)"},{"id": 167, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 19, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Those who speak of divine things through indications (1) they speak either in a symbolic and mythical way (1.1) or though images (1.2), whereas from those who reveal their thoughts without a scruple (2) others express themselves in a scientific way and others according to the inspiration sent by the gods. The first way, which aims at announcing divinity through symbols belongs to Orpheus and is generally suitable for those writing the myths of the gods, whereas the way of images belongs to Pyghagoras, because both the mathematicians and the Pythagoreans discovered them in order to remind themselves of the divine worls and attempt, through them, to be transported to them. [...] On the other hand, the divine way which reveals the truth of the gods itself is apparent only in the most perfect theurgists, becaue they don't consider it right to present to their students the divine orders of the divine qualities through some curtains, but announce both the powers and the orders of gods inspired by the gods themselves. Finally, the scientific way finds its peak in Plato's philosophy'."},{"id": 168, "topic_ID": 2, "attribute_ID": 4, "testimony_ID": 17, "attribute_Lang": "en", "attribute_Label": "Testimony", "attribute_Value": "Each multitude partakes in some way to the One. If the multitude does not partake to the One in any way, then the multitude is not one nor is each of its consisting parts, but each one of those is a multitude and this shouls occur forever, and each one of this infinitums will be a new infinitum. For if the multitude does not partkae to any One, nor as a whole nor as parts, then it is completely endless in everything. for, if it is not one, then it is many or nothing."}]
+[
+  {
+    "id": 1,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 16,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Πλάτων, Φαίδρος, 246"
+  },
+  {
+    "id": 2,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 44,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Τα είδη της αρετής κατά τον Αριστοτέλη"
+  },
+  {
+    "id": 3,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 46,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η ανθρώπινη κοινωνικότητα κατά τον Αριστοτέλη"
+  },
+  {
+    "id": 4,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 99,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ποιος ήταν ο Σιμων"
+  },
+  {
+    "id": 5,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 56,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Δημοσθένης μιλά για το Γυμνάσιο Κυνοσάργους"
+  },
+  {
+    "id": 6,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 108,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Παυσανίας για το Λύκειο"
+  },
+  {
+    "id": 7,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 58,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Περιγραφή Γυμνασίου Κυνοσάργους από τον Παυσανία"
+  },
+  {
+    "id": 8,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 63,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Αντισθένης, απόφθεγμα"
+  },
+  {
+    "id": 9,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 65,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Γιατί να προσέχουμε τους εχθρούς μας"
+  },
+  {
+    "id": 10,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 85,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ευφυολογήματα του Αντισθένη"
+  },
+  {
+    "id": 11,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 24,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η επιγραφή της Ακαδημίας"
+  },
+  {
+    "id": 12,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 80,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Επίγραμμα στον κοινό τάφο του Κράτητα και του Πολέμωνα"
+  },
+  {
+    "id": 13,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 82,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Αναφορά στην Ακαδημία από το Διογένη Λαέρτιο"
+  },
+  {
+    "id": 14,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 83,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Τίμων στον Πλάτωνα"
+  },
+  {
+    "id": 15,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 84,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο κόσμος των ιδεών στον Πλάτωνα"
+  },
+  {
+    "id": 16,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 27,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Αδριανός μιλάει για τη βιβλιοθήκη του"
+  },
+  {
+    "id": 17,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 22,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η τετραφάρμακος του Επίκουρου"
+  },
+  {
+    "id": 18,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 49,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η ηδονή και ο πόνος"
+  },
+  {
+    "id": 19,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 50,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Οι αισθήσεις"
+  },
+  {
+    "id": 20,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 51,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η σημασία της αυτάρκειας"
+  },
+  {
+    "id": 21,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 52,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ζούμε μονάχα μια φορά"
+  },
+  {
+    "id": 22,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 86,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Αθήναιος για τον Επίκουρο"
+  },
+  {
+    "id": 23,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 68,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Απόφθεγμα Ζήνωνος"
+  },
+  {
+    "id": 24,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 53,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ένα ξέρω, ότι δεν ξέρω τίποτε"
+  },
+  {
+    "id": 25,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 39,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Επιτύμβιο επίγραμμα Πρόκλου και Συριανού"
+  },
+  {
+    "id": 26,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 54,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η αρετή ασπίδα για τον άνθρωπο"
+  },
+  {
+    "id": 27,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 43,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Η πνευματικότητα του Πρόκλου"
+  },
+  {
+    "id": 28,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 48,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο άνθρωπος ον πολιτικό"
+  },
+  {
+    "id": 29,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 47,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Αριστοτέλης για τη φιλία"
+  },
+  {
+    "id": 30,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 88,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο Αριστοτέλης για την παιδεία"
+  },
+  {
+    "id": 31,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 87,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Ο κήπος: ένα κέντρο φιλοσοφικής συμβίωσης"
+  },
+  {
+    "id": 32,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 15,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Πλάτων, Φαίδρος, 244"
+  },
+  {
+    "id": 33,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 13,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Πλάτων, Φαίδρος,"
+  },
+  {
+    "id": 34,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 19,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Πρόκλου, Πλατωνική Θεολογία"
+  },
+  {
+    "id": 35,
+    "topic_ID": 2,
+    "attribute_ID": 1,
+    "testimony_ID": 17,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Τίτλος Μαρτυρίας",
+    "attribute_Value": "Πρόκλου, Στοιχείωσις θεολογική"
+  },
+  {
+    "id": 36,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 16,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "'Ολη ή ψυχή εξουσιάζει δλο τό άψυχο καί διατρέχει όλο\\nτόν ουρανό, πότε μέ τή μια πότε μέ τήν άλλη μορφή. Κι\\nεκείνη λοιπόν πού είναι τέλεια καί φτερωτή περνοδιαβαίνει \\nμέσα στάν αέρα κι εξουσιάζει τόν κόσμον δλον εκείνη πάλιν\\nπού θά χάση τά φτερά της φέρνεται μέ βία δώθε κεΐθε,\\nώς που νά πιασθη άπά κάτι στέρεο- έκεΐ μέσα πιά μένει,\\nπαίρνει γήινο σώμα πού, μ' εκείνης τή δύναμη, νομίζει πώς\\nκινεί τό ίδιο τόν εαυτό του• κι' αυτό τό δλο, σύδετο ψυχή\\nκαί σώμα, τό είπανε ζώο καί τοΰ έδωσαν τό παρανόμι θνητό.\\nΣέ ποιο δμως νά δώσωμε τό παρανόμι αθάνατο δέν έχομε\\nούτε ένα λόγο θεμελιωμένο μέ τή σκέψη μας, άλλα πλάθαμε,\\nχωρίς νά ιδούμε καί χωρίς νά νοιώσωμε καθαρά, τό θεό \\nένα αθάνατο ζώο, πού έχει καί ψυχή, πού έχει καί σώμα,\\nμά πού είναι τά δυο αυτά σ' δλους τους αιώνες σύδετα."
+  },
+  {
+    "id": 37,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 44,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Tῆς τελείας ἀρετῆς εἴδη ἐστὶ τέτταρα· ἓν μὲν φρόνησις͵ ἓν δὲ δικαιοσύνη͵ ἄλλο δ΄ ἀνδρεία͵ τέταρτον σωφροσύνη. τούτων ἡ μὲν φρόνησις αἰτία τοῦ πράττειν ὀρθῶς τὰ πράγματα· ἡ δὲ δικαιοσύνη τοῦ ἐν ταῖς κοινωνίαις καὶ τοῖς συναλλάγμασι δικαιοπραγεῖν· ἡ δὲ ἀνδρεία τοῦ ἐν τοῖς κινδύνοις καὶ φοβεροῖς μὴ [ἐξίστασθαι] τρεῖν(δεν το βάζω στα πόδια)͵ ἀλλὰ μένειν· ἡ δὲ σωφροσύνη τοῦ κρατεῖν τῶν ἐπιθυμιῶν καὶ ὑπὸ μηδεμιᾶς ἡδονῆς δουλοῦσθαι͵ ἀλλὰ κοσμίως ζῆν.  (Αριστοτέλη, Περί Διαιρέσεων)\\nΤέσσερα είναι τα είδη της απόλυτης αρετής: ένα η φρόνηση, δεύτερο η δικαιοσύνη, άλλο η ανδρεία και τέταρτο η σωφροσύνη. Από αυτά, η φρόνηση μας κάνει να ενεργούμε σωστά, η δικαιοσύνη να ενεργούμε δίκαια στην κοινωνία και στις συναλλαγές μας, η ανδρεία να μην το βάζουμε στα πόδια την ώρα του κινδύνου και του φόβου και η σωφροσύνη να συγκρατούμε τις επιθυμίες μας και να μην υποδουλωνόμαστε σε καμία ηδονή, αλλά να ζούμε με κοσμιότητα."
+  },
+  {
+    "id": 38,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 46,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "ὁ δὲ μὴ δυνάμενος κοινωνεῖν ἢ μηδὲν δεόμενος δι' αὐτάρκειαν οὐθὲν μέρος πόλεως, ὥστε ἢ θηρίον ἢ θεός.\\nΕκείνος δε που δε μπορεί να ζει μέσα στην κοινωνία με τους άλλους ή αυτός που δεν έχει ανάγκη από τίποτε, αυτός δεν έχει καμιά θέση στην πόλη, γιατί είναι ή θηρίο ή θεός.\\nΠολιτικά Α, 1253.a25, μετάφρ. Β. Μοσκόβης, Αριστοτέλους Πολιτικά. Ι–ΙΙ (1989)"
+  },
+  {
+    "id": 39,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 99,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Σίμων Ἀθηναῖος, σκυτοτόμος. οὗτος ἐρχομένου Σωκράτους ἐπὶ τὸ ἐργαστήριον καὶ διαλεγομένου τινά, ὧν ἐμνημόνευεν ὑποσημειώσεις ἐποιεῖτο· ὅθεν σκυτικοὺς αὐτοῦ τοὺς διαλόγους καλοῦσιν. εἰσὶ δὲ τρεῖς καὶ τριάκοντα ἐν ἑνὶ φερόμενοι βιβλίῳ·\\nΣίμων Αθηναίος, παπουτσής. Όταν ο Σωκράτης πήγαινε στο μαγαζί του και διαλεγόταν με τους άλλους, ο Σίμων κρατούσε σημειώσεις που για το λόγο αυτό ονομάζονται 'σκυτικοί' (δηλαδή του παπουτσή). Είναι σε σύνολο 33 διάλογοι σε ένα βιβλίο (Διογ. Λαέρτ.)"
+  },
+  {
+    "id": 40,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 56,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "[213] καὶ Ὠρείτας ἐκείνους, μέρος τέταρτον Εὐβοίας οἰκοῦντας, τὸν Χαρίδημον τοῦτον αὐτόν, ᾧ μήτηρ μὲν ὑπάρχει πολῖτις ἐκεῖ, πατὴρ δ᾽ οὐκ ἐρῶ τίς ἢ πόθεν （οὐδὲν γὰρ δεῖ πλείω τῶν ἀναγκαίων αὐτὸν ἐξετάζεσθαι）, ἀλλ᾽ ὅμως, τὸ ἥμισυ τοῦ γένους αὐτοῦ συμβαλλομένου, τοῦ ἡμίσεος μέχρι τῆς τήμερον ἡμέρας οὐκ ἠξιώκασιν, ἀλλ᾽ εἰς τοὺς νόθους ἐκεῖ συντελεῖ, καθάπερ ποτ᾽ ἐνθάδ᾽ εἰς Κυνόσαργες οἱ νόθοι (Δημοσθένης, 23.213)"
+  },
+  {
+    "id": 41,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 108,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Λύκειον δὲ ἀπὸ μὲν Λύκου τοῦ Πανδίονος ἔχει τὸ ὄνομα, Ἀπόλλωνος δὲ ἱερὸν ἐξ ἀρχῆς τε εὐθὺς καὶ καθ᾽ ἡμᾶς ἐνομίζετο, Λύκειός τε ὁ θεὸς ἐνταῦθα ὠνομάσθη πρῶτον: λέγεται δὲ ὅτι καὶ Τερμίλαις, ἐς οὓς ἦλθεν ὁ Λύκος φεύγων Αἰγέα, καὶ τούτοις αἴτιός ἐστι Λυκίους ἀπ᾽ αὐτοῦ καλεῖσθαι.\\nΤο Λύκειο πήρε το όνομά του από τον Λύκο, γιο του Πανδίωνα. Ήταν εξαρχής ιερό του Απόλλωνα και νομίζουμε ότι ο θεός πήρε πρώτα εδώ την επωνυμία Λύκειος. Λέγεται δε ότι και οι Τερμίλες, προς τους οποίους κατέφυγε ο Λύκος διαφεύγοντας από τον Αινείεα, ονομάστηκαν στο εξής Λύκιοι από αυτόν."
+  },
+  {
+    "id": 42,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 58,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "[3] ἔστι δὲ Ἡρακλέους ἱερὸν καλούμενον Κυνόσαργες: καὶ τὰ μὲν ἐς τὴν κύνα εἰδέναι τὴν λευκὴν ἐπιλεξαμένοις ἔστι τὸν χρησμόν, βωμοὶ δέ εἰσιν Ἡρακλέους τε καὶ Ἥβης, ἣν Διὸς παῖδα οὖσαν συνοικεῖν Ἡρακλεῖ νομίζουσιν: Ἀλκμήνης τε βωμὸς καὶ Ἰολάου πεποίηται, ὃς τὰ πολλὰ Ἡρακλεῖ συνεπόνησε τῶν ἔργων. Λύκειον δὲ ἀπὸ μὲν Λύκου τοῦ Πανδίονος ἔχει τὸ ὄνομα, Ἀπόλλωνος δὲ ἱερὸν ἐξ ἀρχῆς τε εὐθὺς καὶ καθ᾽ ἡμᾶς ἐνομίζετο, Λύκειός τε ὁ θεὸς ἐνταῦθα ὠνομάσθη πρῶτον: λέγεται δὲ ὅτι καὶ Τερμίλαις, ἐς οὓς ἦλθεν ὁ Λύκος φεύγων Αἰγέα, καὶ τούτοις αἴτιός ἐστι Λυκίους ἀπ᾽ αὐτοῦ καλεῖσθαι.\\n[3] Υπάρχει ένα ιερό του Ηρακλή που αποκαλείται Κυνόσαργες: υπάρχει μεν ο χρησμός της λευκής σκύλας για όσους θέλουν να γνωρίζουν την ιστορία, όμως εδώ βρίσκονται βωμοί του Ηρακλή και της Ήβης, η οποία ως κόρη του Δία συνοικούσε με τον Ηρακλή, αλλά έχουν κατασκευαστεί και βωμοί της Αλκμήνης και του Ιόλαου, ο οποίος βοήθησε τον Ηρακλή σε πολλούς από τους άθλους του."
+  },
+  {
+    "id": 43,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 63,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Τὰς πόλεις ἀπόλλυσθαι, ὅταν μὴ δύνωνται τοὺς φαύλους ἀπὸ τῶν σπουδαίων διακρίνειν. \\nΤα κράτη καταστρέφονται όταν δεν υπάρχει διάκριση ανάμεσα στους κακούς και στους σπουδαίους άντρες. (Αντισθένης, απόφθεγμα 5)"
+  },
+  {
+    "id": 44,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 65,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Προσέχειν τοῖς ἐχθροῖς· πρῶτοι γὰρ τῶν ἁμαρτημάτων αἰσθάνονται. - Αντισθένης, 12\\nΔώστε προσοχή στους εχθρούς σας, γιατί είναι οι πρώτοι που αντιλαμβάνονται τα λάθη σας.."
+  },
+  {
+    "id": 45,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 85,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Ἐρωτώμενος διὰ τί ὀλίγους ἔχει μαθητάς, ἔφη, « Ὅτι ἀργυρέᾳ αὐτοὺς ἐκβάλλω ῥάβδῳ. » Ἐρωτηθεὶς διὰ τί πικρῶς τοῖς μαθηταῖς ἐπιπλήττει, « Καὶ οἱ ἰατροί, » φησί, « τοῖς κάμνουσιν. »\\n[Όταν τον ρώτησαν γιατί είχε λίγους μαθητές, απάντησε: 'γιατί χρησιμοποιώ ένα ασημένιο ραβδί για να τους ξετρυπώσω'. Όταν τον ρώτησαν γιατί έκανε τόσο πικρές παρατηρήσεις στους μαθητές του, απάντησε 'Κι οι γιατροί το ίδιο κάνουν με τους ασθενείς τους'."
+  },
+  {
+    "id": 46,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 24,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Μηδείς ἀγεωμέτρητος εἰσίτω\\nΑυτό ήταν γραμμένο στον περίβολο της Ακαδημίας πάνω από τη θύρα που οδηγούσε στη σχολή."
+  },
+  {
+    "id": 47,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 80,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Μνήματι τῷδε Κράτητα θεουδέα καὶ Πολέμωνα\\nἔννεπε κρύπτεσθαι, ξεῖνε, παρερχόμενος,\\nἄνδρας ὁμοφροσύνῃ μεγαλήτορας, ὧν ἄπο μῦθος\\nἱερὸς ἤϊσσεν δαιμονίου στόματος,\\nκαὶ βίοτος καθαρὸς σοφίας ἐπὶ θεῖον ἐκόσμει\\nαἰῶν' ἀστρέπτοις δόγμασι πειθόμενος.\\n[Ξένε, πες ότι στον τάφο αυτό αναπαύονται οι θεϊκοί Κράτης και Πολέμων, άνδρες που μεγαλούργησαν ομονοούντες, από τα χείλη των οποίων έρρεε ιερός λόγος και η ζωή τους, αγνή και γεμάτη σοφία, [πιστή σε δόγματα στέρεα, τους χάρισε τη λαμπρή αθανασία.]"
+  },
+  {
+    "id": 48,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 82,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Διέγνω δὴ ὁ Πλάτων καὶ τοῖς Μάγοις συμμῖξαι· διὰ δὲ τοὺς τῆς Ἀσίας πολέμους ἀπέστη. Ἐπανελθὼν δὲ εἰς Ἀθήνας διέτριβεν ἐν Ἀκαδημείᾳ. Τὸ δ' ἐστὶ γυμνάσιον προάστειον ἀλσῶδες ἀπό τινος ἥρωος ὀνομασθὲν Ἑκαδήμου, καθὰ καὶ Εὔπολις ἐν Ἀστρατεύτοις φησίν·\\n\\nἘν εὐσκίοις δρόμοισιν Ἑκαδήμου θεοῦ. (Διογένης Λαέρτιος, Γ' 7)\\n[Ο Πλάτων λέγεται ότι σκόπευε να γνωρίσει και τους Μάγους, αλλά τον εμπόδισαν οι πόλεμοι στην Ασία. Με την επάνοδό του στην Αθήνα σύχναζε στα Ακαδήμεια. Αυτό είναι ένα γυμνάσιο σε αλσώδη τοποθεσία έξω από την πόλη, που πήρε το όνομά του από τον ήρωα Εκάδημο, σύμφωνα με τον Εύπολι στο έργο του 'Αστράτευτοι'. \\nΣτις σκιερές αλέες του θεού Εκάδημου."
+  },
+  {
+    "id": 49,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 83,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Τῶν πάντων δ' ἡγεῖτο πλατίστακος, ἀλλ' ἀγορητὴς\\nἡδυεπής, τέττιξιν ἰσογράφος, οἵ θ' Ἑκαδήμου\\nδένδρει ἐφεζόμενοι ὄπα λειριόεσσαν ἱεῖσιν. (Διογένης Λαέρτιος, Γ' 8)\\n[Όλων αρχηγός ήταν ο πλάτων, που αγόρευε γλυκά, σαν τον τζίτζικα που είναι ακουμπισμένος στα δέντρα του άλσους του Ακάδημου και βγάζει ήχο γλυκό σαν τα κρίνα]"
+  },
+  {
+    "id": 50,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 84,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Ὧν ἕνεκα καὶ Πλάτων ἔλεγεν ὅτι δεῖ τοὺς συνιδεῖν τὰς τοῦ παντὸς ἀρχὰς ἐπιθυμοῦντας πρῶτον μὲν αὐτὰς καθ' αὑτὰς διελέσθαι τὰς ἰδέας, οἷον ὁμοιότητα καὶ μονάδα καὶ πλῆθος καὶ μέγεθος καὶ στάσιν καὶ κίνησιν· δεύτερον αὐτὸ καθ' αὑτὸ τὸ καλὸν καὶ ἀγαθὸν καὶ δίκαιον καὶ τὰ τοιαῦτα ὑποθέσθαι.\\n\\n13 Τρίτον τῶν ἰδεῶν συνιδεῖν ὅσαι πρὸς ἀλλήλας εἰσίν, οἷον ἐπιστήμην ἢ μέγεθος ἢ δεσποτείαν (ἐνθυμουμένους ὅτι τὰ παρ' ἡμῖν διὰ τὸ μετέχειν ἐκείνων ὁμώνυμα ἐκείνοις ὑπάρχει· λέγω δὲ οἷον δίκαια μὲν ὅσα τοῦ δικαίου, καλὰ δὲ ὅσα τοῦ καλοῦ). ἔστι δὲ τῶν εἰδῶν ἓν ἕκαστον ἀίδιόν τε καὶ νόημα καὶ πρὸς τούτοις ἀπαθές. Διὸ καί φησιν ἐν τῇ φύσει τὰς ἰδέας ἑστάναι καθάπερ παραδείγματα, τὰ δ' ἄλλα ταύταις ἐοικέναι τούτων ὁμοιώματα καθεστῶτα. Ὁ τοίνυν Ἐπίχαρμος περί τε τοῦ ἀγαθοῦ καὶ περὶ τῶν ἰδεῶν οὕτω λέγει· (Διογένης Λαέρτιος, Γ' 12-13)\\n [Έτσι ο Πλάτων είπε ότι, αν επιθυμούμε να αντιληφθούμε τις αρχές που διέπουν το σύμπαν, θα πρέπει πρώτα να διακρίνουμε τις ίδιες τις ιδέες, π.χ. την ομοιότητα, την ενότητα και την πολυσχιδία, το μέγεθος, την αδράνεια και την κίνηση. Στη συνέχεια θα πρέπει να δεχτούμε την ύπαρξη της ομορφιάς, της καλοσύνης, της δικαιοσύνης κλπ, καθεμιά από τις οποίες υπάρχει αυτούσια. Κατά τρίτον, θα πρέπει να εξετάσουμε πόσες από τις ιδέες σχετίζονται με άλλες ιδέες, όπως η γνώση, η μεγαλοπρέπεια, ή η ιδιοκτησία και να θυμόμαστε ότι τα πράγματα που αντιλαμβανόμαστε εμπειρικά φέρουν το ίδιο όνομα όπως αυτές οι ιδέες γιατί αποτελούν μέρος τους. Εννοώ ότι τα πράγματα που μετέχουν της δικαιοσύνης είναι δίκαια, τα πράγματα που μετέχουν της ομορφιάς είναι όμορφα. Καθεμιά από τις ιδέες είναι αιώνια, είναι μια έννοια, και επιπλέον δεν μπορεί να αλλάξει. Έτσι, ο Πλάτων λέει ότι οι ιδέες αποτελούν στη φύση τα αρχέτυπα προς τα οποία όλα τα άλλα πράγματα έχουν συνάφεια γιατί είναι αντίγραφα αυτών των αρχετύπων.]\\nΔιογένης Λαέρτιος Γ΄12-13"
+  },
+  {
+    "id": 51,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 27,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Το σπίτι τους βρισκόταν μερικά μέτρα από τη νέα βιβλιοθήκη με την οποία μόλις είχα προικίσει την Αθήνα και από την οποία δεν έλειπε τίποτε που θα μπορούσε να βοηθήσει το στοχασμό ή την ανάπαυση που προηγείται της πνευματικής δραστηριότητας, όπως αναπαυτικά καθίσματα, επαρκής θέρμανση τους συχνά δύσκολους χειμώνες, σκάλες που προσφέρουν εύκολη πρόσβαση στα βιβλιοστάσια, τον αλάβαστρο και το χρυσό μιας ήπιας και ήρεμης πολυτέλειας. Marguerite Yourcenar, Απομνημονεύματα Αδριανού."
+  },
+  {
+    "id": 52,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 22,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Τετραφάρμακος ονομαζόταν αρχικά ένα μείγμα κεριού, λίπους, πίσσας και ρητίνης. Οι Επικούρειοι συνόψισαν τις 40 βασικές αρχές τους σε 4 και δανείστηκαν τον όρο για να συνοψίσουν τους κανόνες για την ανθρώπινη ευτυχία.\\nΆφοβον ο θεός, \\nανύποπτον ο θάνατος• \\nκαι ταγαθόν μεν εύκτητον, \\nτο δε δεινόν ευεκκαρτέρητον. \\nΦιλόδημος, Προς σοφιστάς, IV 10-14"
+  },
+  {
+    "id": 53,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 49,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Ὅρος τοῦ μεγέθους τῶν ἡδονῶν ἡ παντὸς τοῦ ἀλγοῦντος ὑπεξαίρεσις. ὅπου δ΄ ἂν τὸ ἡδόμενον ἐνῇ͵ καθ΄ ὃν ἂν χρόνον ᾖ͵ οὐκ ἔστι τὸ ἀλγοῦν ἢ λυπούμενον ἢ τὸ συναμφότερον.\\nΌριο του μεγέθους των ηδονών είναι η εξάλειψη κάθε πόνου. Όπου είναι παρούσα η ηδονή και για όσο διάστημα είναι παρούσα, δεν υπάρχει τίποτε που να προξενεί πόνο ή λύπη ή και τα δύο μαζί. (Επίκουρος, Κύριαι Δόξαι, 3)"
+  },
+  {
+    "id": 54,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 50,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Πᾶν ἀγαθὸν καὶ κακὸν ἐν αἰσθήσει· στέρησις δέ ἐστιν αἰσθήσεως ὁ θάνατος.\\nΚάθε καλό και κάθε κακό βρίσκεται στην αίσθηση, ενώ ο θάνατος είναι ακριβώς η στέρηση της αίσθησης. (Επίκουρος, Επιστολή προς Μενοικέα, 124)"
+  },
+  {
+    "id": 55,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 51,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Καὶ τὴν αὐτάρκειαν δὲ ἀγαθὸν μέγα νομίζομεν͵ οὐχ ἵνα πάντως τοῖς ὀλίγοις χρώμεθα͵ ἀλλ΄ ὅπως ἐὰν μὴ ἔχωμεν τὰ πολλά͵ τοῖς ὀλίγοις ἀρκώμεθα͵ πεπεισμένοι γνησίως ὅτι ἥδιστα πολυτελείας ἀπολαύουσιν οἱ ἥκιστα ταύτης δεόμενοι͵ καὶ ὅτι τὸ μὲν φυσικὸν πᾶν εὐπόριστόν ἐστι͵ τὸ δὲ κενὸν δυσπόριστον.\\nΘεωρούμε ότι η αυτάρκεια είναι μέγιστο αγαθό, όχι για να χρησιμοποιούμε πάντοτε τα λίγα, αλλά για να μπορούμε, όταν δεν έχουμε πολλά, να αρκούμαστε στα λίγα, πιστεύοντας στ’ αλήθεια ότι την πολυτέλεια την απολαμβάνουν ηδονικότερα εκείνοι που την έχουν μικρότερη ανάγκη και ότι κάθε τι φυσικό το αποκτούμε εύκολα, ενώ το μάταιο δύσκολα. (Επίκουρος, Επιστολή προς Μενοικέα, 130)"
+  },
+  {
+    "id": 56,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 52,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Γεγόναμεν ἅπαξ, δὶς δὲ οὐκ ἔστι γενέσθαι• δεῖ δὲ τὸν αἰῶνα μηκέτι εἶναι• σὺ δὲ οὐκ ὢν τῆς αὔριον κύριος ἀναβάλλῃ τὸ χαῖρον• ὁ δὲ βίος μελλησμῷ παραπόλλυται καὶ εἷς ἕκαστος ἡμῶν ἀσχολούμενος ἀποθνῄσκει.\\nΓεννηθήκαμε μια φορά και δεν γίνεται να γεννηθούμε και δεύτερη• και κατ’ ανάγκην δεν υπάρχει πια κάτι αιώνια. Όμως εσύ, που δεν εξουσιάζεις το αύριο, αναβάλλεις την ευτυχία σου: και η ζωή σπαταλιέται στις αναβολές κι ο καθένας μας πεθαίνει γεμάτος ασχολίες. (Επίκουρος, Προσφώνησις 14)"
+  },
+  {
+    "id": 57,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 86,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Πολλοί ήταν αυτοί που κατηγορούσαν τον Επίκουρο ως ηδονιστή και έκφυλο. Ο Αθήναιος, ωστόσο, επέλεξε να αποκαταστήσει τη φήμη του, παρουσιάζοντας το εξής επίγραμμα:\\n12 ἄνθρωποι, μοχθεῖτε τὰ χείρονα, καὶ διὰ κέρδος\\nἄπληστοι νεικέων ἄρχετε καὶ πολέμων·\\nτᾶς φύσιος δ' ὁ πλοῦτος ὅρον τινὰ βαιὸν ἐπίσχει,\\nαἱ δὲ κεναὶ κρίσιες τὰν ἀπέραντον ὁδόν,\\nτοῦτο Νεοκλῆος πινυτὸν τέκος ἢ παρὰ Μουσέων\\nἔκλυεν ἢ Πυθοῦς ἐξ ἱερῶν τριπόδων.\\n[Οι θνητοί μοχθούν για ταπεινά πράγματα και αδιάκοπα αρχίζουν τη διαμάχη και τον πόλεμο για το κέρδος. Όμως ο πλούτος της φύσης έχει όρια ενώ οι ματαιόδοξες κρίσεις είναι ατελείωτες. Ο σοφός γιος του Νεοκλή άκουσε τις σοφίες αυτές από τις Μούσες ή από τον ιερό τρίποδα των Δελφών'. [Διογ. Λαέρτ. Ι' 12]"
+  },
+  {
+    "id": 58,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 68,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "«Δύο ὦτα ἔχομεν, στόμα δὲ ἕν, ἵνα πλείονα μὲν ἀκούωμεν, ἥττονα δὲ λέγωμεν» δηλαδή «Έχουμε δυο αυτιά και ένα στόμα, για να ακούμε περισσότερα απ' όσα λέμε»."
+  },
+  {
+    "id": 59,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 53,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Ἓν οἶδα ὅτι ουδὲν οἶδα (Ένα ξέρω, ότι τίποτα δεν ξέρω) (Πλάτωνας, Απολογία Σωκράτη)"
+  },
+  {
+    "id": 60,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 39,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Πρόκλος ἐγὼ γενόμην Λύκιος γένος, ὃν Συριανὸς \\nἐνθάδ ̓ ἀμοιβὸν ἑῆς θρέψε διδασκαλίης. \\nξυνὸς δ ̓ ἀμφοτέρων ὅδε σώματα δέξατο τύμβος· \\nαἴθε δὲ καὶ ψυχὰς χῶρος ἕεις λελάχοι.\\nMarinus, Vita Procli, 36"
+  },
+  {
+    "id": 61,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 54,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Οὐκ ἔστιν ἀνδρὶ ἀγαθῷ κακὸν οὐδὲν οὔτε ζῶντι οὔτε τελευτήσαντι. \\nΟ καλός άνθρωπος δεν παθαίνει τίποτα κακό, ούτε ζωντανός ούτε και νεκρός. (Πλάτωνας, Απολογία Σωκράτους)"
+  },
+  {
+    "id": 62,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 43,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Κι έτσι η ψυχή του ευτυχούς αυτού άνδρα, συναρμοζόμενη από τα πάντα και προσθέτοντας στον εαυτό της, ζούσε σχεδόν εκτός του σώματός του και μόλις μετά βίας συγκρατούνταν πλέον από αυτό. Μαρίνος, Βίος Πρόκλου, 21."
+  },
+  {
+    "id": 63,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 48,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Φύσει μέν ἐστιν ἄνθρωπος ζῷον πολιτικόν.\\nΟ άνθρωπος είναι από τη φύση του πολιτικό ον.\\nΑριστοτέλης, Πολιτικά Γ, 1278.b9"
+  },
+  {
+    "id": 64,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 47,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "ἄνευ γὰρ φίλων οὐδεὶς ἕλοιτ' ἂν ζῆν, ἔχων τὰ λοιπὰ ἀγαθὰ πάντα·\\nΚανένας δεν θα ήθελε να ζει χωρίς φίλους κι αν ακόμη είχε στη διάθεσή του όλα τ' άλλα αγαθά.\\nΗθικά Νικομάχεια, 1155a 5, μετάφρ. Β. Μοσκόβης, Αριστοτέλους Ηθικά Νικομάχεια Ι–ΙΙ (1993)"
+  },
+  {
+    "id": 65,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 88,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Τῆς παιδείας ἔφη τὰς μὲν ῥίζας εἶναι πικράς, τὸν δὲ καρπὸν γλυκύν.\\n[Οι ρίζες της εκπαίδευσης είναι πικρές, αλλά ο καρπός της είναι γλυκός] (Διογ. Λαέρτ. Ε' 18)"
+  },
+  {
+    "id": 66,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 87,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Σε αντίθεση με άλλες φιλοσοφικές σχολές, όπου οι μαθητές σύχναζαν για κάποιες ώρες, ο Επίκουρος επέμενε ώστε οι μαθητές του να ζουν, να συμβιώνουν μέσα στον Κήπο. \\nοἳ καὶ πανταχόθεν πρὸς αὐτὸν ἀφικνοῦντο καὶ συνεβίουν αὐτῷ ἐν τῷ κήπῳ-καθά φησι καὶ \\n11 Ἀπολλόδωρος· ὃν καὶ ὀγδοήκοντα μνῶν πρίασθαι. Διοκλῆς δ' ἐν τῇ τρίτῃ τῆς ἐπιδρομῆς φησιν-εὐτελέστατα καὶ λιτότατα διαιτώμενοι· 'κοτύλῃ γοῦν,' φησίν, 'οἰνιδίου ἠρκοῦντο, τὸ δὲ πᾶν ὕδωρ ἦν αὐτοῖς ποτόν.'\\n[Οι φίλοι του έρχονταν σε αυτόν από όλα τα μέρη του ελληνικού κόσμου και ζούσαν μαζί με αυτόν στον κήπο του. Αυτό μαρτυρεί ο Απολλόδωρος, ο οποίος επίσης λέει ότι αγόρασε τον κήπο για ογδόντα μνες.  Και ο Διοκλής στο τρίτο βιβλίο της Επιτομής του αναφέρει ότι ζούσαν απλά και λιτοδίαιτα. \\nΣε κάθε εκδήλωση αρκούνταν σε ένα τέταρτο του λίτρου αραιωμένο κρασί και κατά τα άλλα έπιναν μόνο νερό.]"
+  },
+  {
+    "id": 67,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 15,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Καί πρέπει νά λέει τ' ακόλουθα' πώς « δ έ ν ε ί ν α ι\\nα λ η θ ι ν ό ς ό λ ό γ ο ς » πού λέει, δτι πρέπει να χαρίζεται\\nκανείς πιο πολύ α' έναν πού δέν κατέχεται άπό έρωτα,\\nτήν ώρα πού έχει μπροστά του έναν εραστή, γιατί τάχα\\nό ένας είναι μανιακός, ένώ ό άλλος είναι φρόνιμος. 'Άν βέβαια\\nήταν όπλο νά είπη κανείς πώς ή μανία είναι κάτι κακό,\\nτότε ό προηγούμενος λόγος θά ήταν καλά είπωμένος• μά\\nέδώ τά μεγαλύτερα καλά μας έρχονται άπό τή μανία, πού\\nμας χαρίζεται σαν ένα θείο δώρο. Γιατί καί ή προφήτισσα\\nστους Δελφούς καί οί ιέρειες στή Δωδώνη, δταν τίς έπιασε \\nή μανία, έκαμαν στην 'Ελλάδα πολλά καί καλά καί σέ ανθρώπους\\nκαί σέ πόλεις, ένώ δταν ήτανε φρόνιμες έκαμαν λίγα\\nή καί τίποτε. Κι δν βέβαια άρχίσωμε νά λέμε καί γιά τή\\nΣίβυλλα καί γιά τους άλλους, δσοι μέ τή μαντική τέχνη προφήτεψαν\\nπολλά σέ πολλούς καί τους έκαμαν καλό στά μέλλον\\nτους, θά μακραίναμε τό λόγο μας λέγοντας πράγματα\\nφανερά στον καθένα."
+  },
+  {
+    "id": 68,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 13,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Κάθονται στις όχθες του Ιλισσού και ο Φαίδρος ρωτάει τον Σωκράτη αν από το σημείο αυτό άρπαξε ο Βορέας την Ωρειθύια. Ο Σωκράτης του απαντά ότι μπορεί να ήταν κι αυτό το σημείο, αν κι έχουν ακουστεί κι άλλες απόψεις, όμως ο ίδιος δεν δίνει βάση σε αυτά τα πράγματα γιατί αυτό που τον ενδιαφέρει είναι να γνωρίσει τον εαυτό του κι όχι τη μυθολογία. \\nΣΩ:  Γι’ αυτό λοιπόν τα αφήνω αυτά όπως είναι και τα παραδέχομαι όπως όλος ο κόσμος και κάνω ό,τι τώρα δα έλεγα, νοιάζομαι όχι γι’ αυτά, αλλά για τον εαυτό μου, να ιδώ μην τυχόν είμαι κανένα θηρία μπερδεμένο και πιο φουσκωμένο και από τον Τυφώνα ή κανένα πιο ήμερο και πιο απλό ζώο, που του έχει τάξει η φύση να έχει μερδικό από κάποιο θεϊκό κι απλό κλήρο."
+  },
+  {
+    "id": 69,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 19,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Αυτοί που μιλούν για τα θεϊκά πράγματα μέσω ενδείξεων (1) μιλούν είτε συμβολικά και μυθικά (1.1), είτε μέσω εικόνων (1.2), ενώ από όσους φανερώνουν τις σκέψεις τους χωρίς προκάλυμμα (ἀπαρακαλύπτως) (2), άλλοι εκφράζονται επιστημονικά και άλλοι σύμφωνα με την έμπνευση που στέλνουν οι θεοί. Ο πρώτος τρόπος, αυτός που προτίθεται να ανακοινώσει τα θεία μέσω συμβόλων (1.1), ανήκει στον Ορφέα και είναι γενικότερα ταιριαστός σε αυτούς που γράφουν τους μύθους των θεών, ενώ ο τρόπος των εικόνων (1.2) ανήκει στον Πυθαγόρα γιατί και τα μαθηματικά οι πυθαγόρειοι τα ανακάλυψαν για να τους υπενθυμίζουν τα θεία και προσπαθούσαν μέσω αυτών ως εικόνων να μεταβαίνουν σ’ εκείνα. […] Από την άλλη μεριά, ο ένθεος τρόπος, που εκφαίνει την ίδια την αλήθεια των θεών αυτή καθ᾽εαυτή (2.1), εμφανίζεται κατ᾽ εξοχήν στους πιο τέλειους θεουργούς – γιατί αυτοί δεν θεωρούν σωστό να παρουσιάζουν στους μαθητές τους τις θεϊκές τάξεις ή τις ιδιότητες των θεών μέσω κάποιων παραπετασμάτων αλλά εξαγγέλλουν τόσο τις δυνάμεις όσο και τις σειρές των θεών εμπνεόμενοι από τους ίδιους τους θεούς. Ο τρόπος, τέλος, ο επιστημονικός  βρίσκει το αποκορύφωμά του στη φιλοσοφία του Πλάτωνα."
+  },
+  {
+    "id": 70,
+    "topic_ID": 2,
+    "attribute_ID": 3,
+    "testimony_ID": 17,
+    "attribute_Lang": "gr",
+    "attribute_Label": "Μαρτυρία",
+    "attribute_Value": "Πρόταση: Κάθε πλήθος μετέχει με κάποιο τρόπο στο ένα. Απόδειξη: Αν το πλήθος δεν μετέχει με κανένα τρόπο στο ένα, τότε ούτε το όλο πλήθος θα είναι ένα ούτε καθένα από τα πολλά από τα οποία αποτελείται, αλλά και το καθένα από αυτά θα είναι πλήθος, και αυτό θα συμβαίνει επ’ άπειρον, και το καθένα από αυτά τα άπειρα θα είναι εκ νέου ένα άπειρο πλήθος. Γιατί, αν το πλήθος δεν μετέχει με κανένα τρόπο σε κανένα ένα, ούτε συνολικά ως όλον ούτε επιμεριστικά με καθένα από τα μέλη του, τότε θα είναι εντελώς άπειρο κατά πάντα. Γιατί, όποιο κι αν πάρεις από τα πολλά, αυτό θα είναι είτε ένα είτε όχι ένα. Και αν δεν είναι ένα, τότε θα είναι είτε πολλά είτε τίποτε. Αλλά, αν το καθένα είναι τίποτε, τότε και το σύνολο θα είναι τίποτε. Κι αν το καθένα είναι πολλά, τότε το καθένα θα αποτελείται από άπειρες φορές άπειρα. Αυτά όμως είναι αδύνατα. Γιατί ούτε κανένα ον αποτελείται από άπειρες φορές άπειρα πράγματα (αφού από το άπειρο δεν υπάρχει κάτι περισσότερο, ενώ το σύνολο είναι περισσότερο από το καθένα μέλος του), ούτε είναι δυνατό να συντεθεί κάτι από το τίποτε. Συνεπώς, κάθε πλήθος μετέχει με κάποιον τρόπο στο ένα."
+  },
+  {
+    "id": 71,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 16,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "14"
+  },
+  {
+    "id": 72,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 44,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "45"
+  },
+  {
+    "id": 73,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 46,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "45"
+  },
+  {
+    "id": 74,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 99,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "81"
+  },
+  {
+    "id": 75,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 56,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "64"
+  },
+  {
+    "id": 76,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 58,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "59"
+  },
+  {
+    "id": 77,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 63,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "64"
+  },
+  {
+    "id": 78,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 65,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "64"
+  },
+  {
+    "id": 79,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 85,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "81"
+  },
+  {
+    "id": 80,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 24,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "25"
+  },
+  {
+    "id": 81,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 80,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "81"
+  },
+  {
+    "id": 82,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 82,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "81"
+  },
+  {
+    "id": 83,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 83,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "81"
+  },
+  {
+    "id": 84,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 84,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "81"
+  },
+  {
+    "id": 85,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 27,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "28"
+  },
+  {
+    "id": 86,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 22,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "23"
+  },
+  {
+    "id": 87,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 49,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "23"
+  },
+  {
+    "id": 88,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 50,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "23"
+  },
+  {
+    "id": 89,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 51,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "23"
+  },
+  {
+    "id": 90,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 52,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "23"
+  },
+  {
+    "id": 91,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 86,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "81"
+  },
+  {
+    "id": 92,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 68,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "69"
+  },
+  {
+    "id": 93,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 53,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "14"
+  },
+  {
+    "id": 94,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 39,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "18"
+  },
+  {
+    "id": 95,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 54,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "14"
+  },
+  {
+    "id": 96,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 43,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "18"
+  },
+  {
+    "id": 97,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 48,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "45"
+  },
+  {
+    "id": 98,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 47,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "45"
+  },
+  {
+    "id": 99,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 88,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "81"
+  },
+  {
+    "id": 100,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 87,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "81"
+  },
+  {
+    "id": 101,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 15,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "14"
+  },
+  {
+    "id": 102,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 13,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "14"
+  },
+  {
+    "id": 103,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 19,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "18"
+  },
+  {
+    "id": 104,
+    "topic_ID": 2,
+    "attribute_ID": 21,
+    "testimony_ID": 17,
+    "attribute_Lang": "multilang",
+    "attribute_Label": "Πρόσωπο",
+    "attribute_Value": "18"
+  },
+  {
+    "id": 105,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 99,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Who was Simon"
+  },
+  {
+    "id": 106,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 56,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Demosthenes talks about the Gymnasium at Cynosarges"
+  },
+  {
+    "id": 107,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 108,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Pausanias' testimony on the Lyceum"
+  },
+  {
+    "id": 108,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 58,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Description of the Gymnasium of Cynosarges by Pausanias"
+  },
+  {
+    "id": 109,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 63,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Dictum by Antisthenes"
+  },
+  {
+    "id": 110,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 65,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Why we have to take care of our enemies"
+  },
+  {
+    "id": 111,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 85,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Wise sayings by Antisthenes"
+  },
+  {
+    "id": 112,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 24,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "The inscription over the Academy"
+  },
+  {
+    "id": 113,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 80,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Epigram on the common grave of Crates and Polemo"
+  },
+  {
+    "id": 114,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 82,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Reference to the Academy by Diogenes Laertius"
+  },
+  {
+    "id": 115,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 83,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Timo to Plato"
+  },
+  {
+    "id": 116,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 84,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "The world of the ideas in Plato"
+  },
+  {
+    "id": 117,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 27,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Hadrian talks about his library"
+  },
+  {
+    "id": 118,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 22,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "The 'tetrapharmakos' (four-elements' remedy)"
+  },
+  {
+    "id": 119,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 49,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Pleasure and pain"
+  },
+  {
+    "id": 120,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 50,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "The senses"
+  },
+  {
+    "id": 121,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 51,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "The importance of self-sufficiency"
+  },
+  {
+    "id": 122,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 52,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "We only live once!"
+  },
+  {
+    "id": 123,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 86,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Athenaeius on Epicurus"
+  },
+  {
+    "id": 124,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 68,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Zeno's proverb"
+  },
+  {
+    "id": 125,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 53,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "I know only one thing, that I dont know anything"
+  },
+  {
+    "id": 126,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 39,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Funerary epigram of Proclus and Syrianus"
+  },
+  {
+    "id": 127,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 54,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Virtue is a sheild for man"
+  },
+  {
+    "id": 128,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 43,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Proclus' Spirituality"
+  },
+  {
+    "id": 129,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 48,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Man is a political being"
+  },
+  {
+    "id": 130,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 47,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Aristotle on friendship"
+  },
+  {
+    "id": 131,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 88,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Aristotle on education"
+  },
+  {
+    "id": 132,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 87,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "The garden: a centre of philosophic cohabitation"
+  },
+  {
+    "id": 133,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 15,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Plato, Phaedrus 244"
+  },
+  {
+    "id": 134,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 13,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Plato, Phaedrus 229"
+  },
+  {
+    "id": 135,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 19,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Proclus, Platonic Theology"
+  },
+  {
+    "id": 136,
+    "topic_ID": 2,
+    "attribute_ID": 2,
+    "testimony_ID": 17,
+    "attribute_Lang": "en",
+    "attribute_Label": "Title",
+    "attribute_Value": "Proclus, Theological Incarnation"
+  },
+  {
+    "id": 137,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 99,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Simon the Athenian, a shoemaker, when Socrates came to his workshop and engaged in a dialogue, he kept notes of what the philosopher said. This is why these dialogues are called 'of the shoemaker'. They are 33 dialogues in one single book."
+  },
+  {
+    "id": 138,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 56,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Those who dwell at the fourth part of Euboea are called 'Oreitae'; Charidemus was one of them, since his mother was a citizen of this area, but I'm not going to tell who his father was or where he was from (because we don't need to reveal more than it is necessary about him), but half of his breed is contributing, whereas the other half is not worth mentioning; this brings them to the condition of half-breed, as were once considered those who frequented the Cynosarges in this city."
+  },
+  {
+    "id": 139,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 108,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "The Lyceum was called after Lycus, son of Pandion. Here was built since the beginning a sanctuary of Apollo and we thing that the god acquired here, for the first time, the attribut Lyceios. It is said that the Termilae, to whom Lycus took refuge when he was trying to escape from Aeneas, were since then called Lycians after him."
+  },
+  {
+    "id": 140,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 58,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Τhere is a sanctuary by Hercules called Cynosarges: there is the omen of the white bitch for those who want to know the history, but here there are altars of Hercules and Hebe, Hercules' consort as daughter of Zeus, but there have been erected also altars for Alcmene and Iolaos, who helped Hercules in many of his brave deeds."
+  },
+  {
+    "id": 141,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 63,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "The cities are destroyed when they cannot discern the impotent men from the great ones."
+  },
+  {
+    "id": 142,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 65,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Beware of your enemies, they are the first to perceive your mistakes, Antisthenes, exc. 12."
+  },
+  {
+    "id": 143,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 85,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "When he was asked why he had but a few students, he answered: 'Because I use a silver rod to dig them out'. When he was asked why he made so bitter remarks to his students, he answered: 'The doctors do the same with their patients'."
+  },
+  {
+    "id": 144,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 24,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "'Nobody without knowledge of geometry should enter'\\nThis was written at the precinct of the Academy, over the gate leading to the school."
+  },
+  {
+    "id": 145,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 80,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Passing stranger, say that in this tomb rest godlike Crates and Polemo, men magnanimus in concord, from whose inspired lips flowed sacred speech, and whose pure life of wisdom, in accordance with unswerving tenets, decked them for a bright immortality. [Loeb edition, from Lacus Curtius, http://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diogenes_Laertius/Lives_of_the_Eminent_Philosophers/4/Crates*.html)"
+  },
+  {
+    "id": 146,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 82,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "[Plato also intended to make the acquaintance of the Magicians, but was prevented by the wars in Asia. Having returned to Athens he lived in the Academy, which is a gymnasium outside the walls, in a grove named after a certain hero, Hecademus, as is stated by Eupolis in his play named 'Shirkers'\\nIn the shaded alleys of the god Ecademos."
+  },
+  {
+    "id": 147,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 83,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Among all of them leader was Plato, a big fish, but a sweet-voiced speaker, musical in voice as the cicadawho, perched on the trees of the Hecademus, pours forth a strain as delicate as a lilly\\n(http://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diogenes_Laertius/Lives_of_the_Eminent_Philosophers/3/Plato*.html)"
+  },
+  {
+    "id": 148,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 84,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Hence Plato said that, if we wish to take in at one glance the principles underlying the universe, we must first distinguish the ideas by themselves, for example, likeness, unity and plurality, magnitude, rest and motion;   13 next we must assume the existence of beauty, goodness, justice and the like, each existing in and for itself; in the third place we must see how many of the ideas are relative to other ideas, as are knowledge, or magnitude, or ownership, remembering that the things within our experience bear the same names as those ideas because they partake of them; I mean that things which partake of justice are just, things which partake of beauty are beautiful. Each one of the ideas is eternal, it is a notion, and moreover is incapable of change. Hence Plato says that they stand in nature like archetypes, and that all things bear a resemblance to the ideas because they are copies of these archetypes.\\nDiogenes Laertius III 12-13 (Loeb edition, Lacus Curtius, http://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diogenes_Laertius/Lives_of_the_Eminent_Philosophers/3/Plato*.html)"
+  },
+  {
+    "id": 149,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 27,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "'Their house was situated at a few meters' distance from the new library with which I had just endowed Athens and from which nothing was missing that could aid reflection or the relaxation which precedes intellectual activity, such as comfortable chairs, adequate heating during the often difficult winters, staircases offering easy access to the bookcases, the alabaster and the gold of a serene luxury'.\\nMarguerite Yourcenar, Memoirs of Hadrian"
+  },
+  {
+    "id": 150,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 22,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Tetraphamakos was initially called a mixture of pitch, resin, tallow and wax; the Epicureans borrowed the term to define the four basic precepts (a compendium of the 40 Epicurean precepts) that guarantee human happiness. \\nDon't fear god\\ndon't perceive death\\nwhat is good is easy to get, \\nand the bad things are easy to endure. \\nPhilodemus, To the sophists, IV 10-14"
+  },
+  {
+    "id": 151,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 49,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "The magnitude of pleasure reaches the limit in the removal of all pain. When pleasure is present, so long as it is uninterrupted, there is no pain either of body or of mind, or both together.\\nEpicurus, Principal Doctrines, 3, (transl. Classics.mit.edu)"
+  },
+  {
+    "id": 152,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 50,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Every good and every bad thing is in the senses, whereas death is exactly the loss of senses. \\n(Epicurus, Letter to Menoikeus, 124)"
+  },
+  {
+    "id": 153,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 51,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "We think that self-sufficiency is the greatest of goods, not in order to use always but a few things, but in order to be able to suffice ourselves to a few things when many are not extant; for we believe that luxury is enjoyed really and with greater pleasure those who need it the least, and that all things natural are easy to acquire, but the vain things are difficult to get. (Epicurus, Letter to Menoikeus, 130)."
+  },
+  {
+    "id": 154,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 52,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "We were born once and we can't be born a second time. Therefore there is nothing eternal any more. But you, who cannot control tomorrow, you postpone your happiness: life is thrown away with postponing and each one dies full of 'activities' (Epicurus, Address, 14)"
+  },
+  {
+    "id": 155,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 86,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Many were those who accused Epicurus for hedonism and depravity. Athenaaeus, however, attempted to restitute his reputation with the following epigram: \\n12 ἄνθρωποι, μοχθεῖτε τὰ χείρονα, καὶ διὰ κέρδος\\nἄπληστοι νεικέων ἄρχετε καὶ πολέμων·\\nτᾶς φύσιος δ' ὁ πλοῦτος ὅρον τινὰ βαιὸν ἐπίσχει,\\nαἱ δὲ κεναὶ κρίσιες τὰν ἀπέραντον ὁδόν,\\nτοῦτο Νεοκλῆος πινυτὸν τέκος ἢ παρὰ Μουσέων\\nἔκλυεν ἢ Πυθοῦς ἐξ ἱερῶν τριπόδων.\\n+The mortals strive for trivial things and incessantly start fighting over profit. But the wealth of nature has limits whereas the crisis of vanity have no end. The wise son of Neokles heard these words of wisdom from the Muses or from the sacred tripd of Delphi'. [Diog. Laert. X 12]"
+  },
+  {
+    "id": 156,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 68,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "We have two ears, but one mouth, in order to hear more and say less."
+  },
+  {
+    "id": 157,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 53,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "I know only one thing, that I dont know anything (Plato, Apology of Socrates)"
+  },
+  {
+    "id": 158,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 39,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "I am Proclus, born in Lycia, whom Syrianus\\nfed with his own teaching\\na grave received both our bodies\\nas were our souls together\\n\\nMarinus, Life of Proclus, 36"
+  },
+  {
+    "id": 159,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 54,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "For the virtuous man there is no harm, not in his life nor in his death. (Plato, Apology of Socrates)"
+  },
+  {
+    "id": 160,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 43,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Thus, the soul of this happy man, consisting of everything and adding to itself, lived almost outside of his body and was barely withheld by it. (Marinus, Vita Procli)"
+  },
+  {
+    "id": 161,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 48,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Due to his nature, man is a political being. \\nAristotle, Politics, III, 1278b9"
+  },
+  {
+    "id": 162,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 47,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Nobody would chose to live without friends, even if he has all the other goods in life. \\n\\nEthics, Nikomachea, 1155a"
+  },
+  {
+    "id": 163,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 88,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "The roots of education are bitter, but its fruit is sweet\\n\\n(Diog. Laert. V 18)"
+  },
+  {
+    "id": 164,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 87,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "In contrast to other philosophical schools, where students used to spend some hours of the day, Epicure insisted that his students lived all together within the Garden. \\n'His friend came to him from all parts of the Greek world and lived with him in his garden. This is attested by Apollodoros, who says also that he bought the house for eighty mnae. And Diocles in the third book of his Epitome relates that they lived simply and frugally. In every feast they consumed only a quarter of a litre wine and other than that they drank only water.'"
+  },
+  {
+    "id": 165,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 15,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "And I must say that this saying is not true, which teaches that when a lover is at hand the non-lover should be more favored, because the lover is insane, and the other sane. For if it were a simple fact that insanity is an evil, the saying would be true; but in reality the greatest of blessings come to us through madness, when it is sent as a gift of the gods. \\n(trans. N. Fowler, Cambridge MA, Harvard University Press, London 1925)"
+  },
+  {
+    "id": 166,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 13,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Phaedrus\\nTell me, Socrates, is it not from some place along here by the Ilissus that Boreas is said to have carried off Oreithyia?\\n\\nSocrates\\nYes, that is the story.\\n\\nPhaedrus\\nWell, is it from here? The streamlet looks very pretty and pure and clear and fit for girls to play by.\\n[...]\\nSocrates\\n[...] If anyone disbelieves in these, and with a rustic sort of wisdom, undertakes to explain each in accordance with probability, he will need a great deal of leisure. But I have no leisure for them at all; and the reason, my friend, is this: I am not yet able, as the Delphic inscription has it, to know myself; so it seems to me ridiculous,when I do not yet know that, to investigate irrelevant things. And so I dismiss these matters and accepting the customary belief about them, as I was saying just now, I investigate not these things, but myself, to know whether I am a monster more complicated and more furious than Typhon or a gentler and simpler creature, to whom a divine and quiet lot is given by nature.\\n(Transl. H.N.Fowler, Cambridge MA. Harvard University Press and London 1925)"
+  },
+  {
+    "id": 167,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 19,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Those who speak of divine things through indications (1) they speak either in a symbolic and mythical way (1.1) or though images (1.2), whereas from those who reveal their thoughts without a scruple (2) others express themselves in a scientific way and others according to the inspiration sent by the gods. The first way, which aims at announcing divinity through symbols belongs to Orpheus and is generally suitable for those writing the myths of the gods, whereas the way of images belongs to Pyghagoras, because both the mathematicians and the Pythagoreans discovered them in order to remind themselves of the divine worls and attempt, through them, to be transported to them. [...] On the other hand, the divine way which reveals the truth of the gods itself is apparent only in the most perfect theurgists, becaue they don't consider it right to present to their students the divine orders of the divine qualities through some curtains, but announce both the powers and the orders of gods inspired by the gods themselves. Finally, the scientific way finds its peak in Plato's philosophy'."
+  },
+  {
+    "id": 168,
+    "topic_ID": 2,
+    "attribute_ID": 4,
+    "testimony_ID": 17,
+    "attribute_Lang": "en",
+    "attribute_Label": "Testimony",
+    "attribute_Value": "Each multitude partakes in some way to the One. If the multitude does not partake to the One in any way, then the multitude is not one nor is each of its consisting parts, but each one of those is a multitude and this shouls occur forever, and each one of this infinitums will be a new infinitum. For if the multitude does not partkae to any One, nor as a whole nor as parts, then it is completely endless in everything. for, if it is not one, then it is many or nothing."
+  }
+]
