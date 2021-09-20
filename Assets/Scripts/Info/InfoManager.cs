@@ -173,7 +173,7 @@ namespace ARPolis.Data
             string folderDataAthens = StaticData.folderJsons + StaticData.folderAthens;
 
             #region get topics
-            string topicsAthens = folderDataAthens + StaticData.jsonTopicsFileURL;
+            string topicsAthens = folderDataAthens + StaticData.jsonTopicsFileURL; Debug.Log("topicsAthens = "+ topicsAthens);
             areaAthens.jsonClassTopics = new List<JsonClassTopic>();
             if (jsonFolder == LoadJsonFolder.RESOURCES)
             {
@@ -208,7 +208,7 @@ namespace ARPolis.Data
                 for (int i = 0; i < areaAthens.topics.Count; i++)
                 {
                     //topic folder url
-                    string topicFolder = folderDataAthens + StaticData.FolderTopic(areaAthens.topics[i].id); //Debug.Log(topicFolder);
+                    string topicFolder = folderDataAthens + StaticData.FolderTopic(areaAthens.topics[i].id); Debug.Log(i+" - topicFolder = "+topicFolder);
 
                     #region get tours 
                     //tours file url

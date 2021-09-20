@@ -63,7 +63,7 @@ namespace ARPolis.UI
             {
                 btnSourceUrl.onClick.AddListener(OpenSourceURL);
             }
-            Invoke("DelaySetImage", 0.1f);
+            Invoke(nameof(DelaySetImage), 0.1f);
         }
 
         private void OpenSourceURL()

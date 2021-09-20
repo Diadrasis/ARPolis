@@ -14,6 +14,8 @@ namespace ARPolis.Data
 
         public static string lang = "gr";
 
+        public static bool IsLangGR() { return lang == "gr"; }
+
         private static readonly string imageNull = "images/image_null";
         private static readonly string imageEmpty = "images/image_empty";
         public static Texture2D GetImageNull() { return Resources.Load<Texture2D>(imageNull); }
