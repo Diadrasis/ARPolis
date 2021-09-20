@@ -225,21 +225,19 @@ namespace ARPolis.UI
             btnARicon.SetActive(false);
         }
         void SetBottomBarButtonsForPoi() {
+            btnBottomBarSavePoi.gameObject.SetActive(true);
             btnBottomBarGame.gameObject.SetActive(false);
             btnBottomBarMap.gameObject.SetActive(true);
             btnBottomBarDeletePoi.gameObject.SetActive(false);
-            if (OnSiteManager.Instance.siteMode != OnSiteManager.SiteMode.NEAR)
+            btnBottomBarAR.gameObject.SetActive(false);
+            btnARicon.SetActive(false);
+            if (OnSiteManager.Instance.siteMode == OnSiteManager.SiteMode.NEAR)
             {
-                btnBottomBarSavePoi.gameObject.SetActive(true);
-                btnBottomBarAR.gameObject.SetActive(false);
-                btnARicon.SetActive(false);
-            }
-            else
-            {
-                btnBottomBarSavePoi.gameObject.SetActive(false);
-                btnBottomBarAR.gameObject.SetActive(true);
-                btnARicon.SetActive(false);
-                ARManager.Instance.EnableButtonAR(false);
+                if (ARManager.Instance.IsAR_Enabled)
+                {
+                    btnBottomBarAR.gameObject.SetActive(ARManager.Instance.IsAR_Enabled);
+                    ARManager.Instance.EnableButtonAR(false);
+                }
             }
         }
 
@@ -466,7 +464,6 @@ namespace ARPolis.UI
 
             if (iconBtnMenu.sprite == sprMenuOff)
             {
-                Debug.Log("1111");
                 //hide panel
                 //btnToggleSideMenu.image.sprite = sprMenuOn;
                 iconBtnMenu.rectTransform.sizeDelta = new Vector2(100f, 100f);
@@ -479,7 +476,6 @@ namespace ARPolis.UI
             }
             else
             {
-                Debug.Log("2222");
                 //show panel
                 //btnToggleSideMenu.image.sprite = sprMenuOff;
                 iconBtnMenu.rectTransform.sizeDelta = new Vector2(80f, 80f);
