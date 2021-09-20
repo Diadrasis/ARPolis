@@ -28,10 +28,15 @@ public class NativeOpenOtherApp : MonoBehaviour
 
     public void OpenApp()
     {
-        Debug.Log("open app "+arGameBundleID);
-        if (IsAndroidAppInstalled(arGameBundleID)) { Debug.Log("############### installed"); } 
+        //Debug.Log("open app "+arGameBundleID);
+#if UNITY_ANDROID && !UNITY_EDITOR
+        if (IsAndroidAppInstalled(arGameBundleID)) { /*Debug.Log("############### installed");*/ } 
         else { Application.OpenURL(arGameStoreURL); }
-        //OpenNewApp(arGameBundleID, arGameStoreURL);
+#elif UNITY_IOS
+        
+#else
+        Application.OpenURL(arGameStoreURL); 
+#endif
     }
 
     void OpenNewApp(string bundleId, string storeURL)// your target bundle id, google play store url
