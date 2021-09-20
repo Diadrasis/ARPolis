@@ -43,7 +43,6 @@ namespace ARPolis
             AppData.Instance.Init();
             UserPlacesManager.Instance.Init();
 
-
             GlobalActionsUI.OnShowMenuAreas += SetModeMenu;
 
             menuPanel = FindObjectOfType<MenuPanel>();

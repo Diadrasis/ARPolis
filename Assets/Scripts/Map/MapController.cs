@@ -53,6 +53,7 @@ namespace ARPolis.Map
 
         }
 
+
         void DragMapStarted()
         {
             OnMapDrag?.Invoke();

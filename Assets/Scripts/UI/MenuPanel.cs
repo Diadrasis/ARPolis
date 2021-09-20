@@ -83,11 +83,14 @@ namespace ARPolis.UI
             SetBottomBarButtonsForPoi();
             panelBottomBarTour.ShowPanel();
             ShowMap();
+            //OnInfoPoiShowCheckSaveState();
         }
 
-        void OnInfoPoiShow()
+        void OnInfoPoiShowCheckSaveState()
         {
-            if (OnSiteManager.Instance.siteMode == OnSiteManager.SiteMode.NEAR) return;
+            Debug.Log("OnInfoPoiShowCheckSaveState");
+            //if (AppManager.Instance.appMode != AppManager.AppMode.MAP) return;
+            if (ARManager.Instance.IsAR_Enabled) return;
             if (UserPlacesManager.Instance.IsThisPoiSaved(InfoManager.Instance.poiNowID))
             {
                 btnBottomBarSavePoi.gameObject.SetActive(false);
@@ -95,9 +98,20 @@ namespace ARPolis.UI
             }
             else
             {
+                btnBottomBarSavePoi.interactable = true;
                 btnBottomBarSavePoi.gameObject.SetActive(true);
                 btnBottomBarDeletePoi.gameObject.SetActive(false);
             }
+        }
+
+        public void OnInfoHideSetBottomsButtons()
+        {
+            Debug.Log("OnInfoHideSetBottomsButtons");
+            if (AppManager.Instance.appMode != AppManager.AppMode.MAP) return;
+            if (ARManager.Instance.IsAR_Enabled) return;
+            btnBottomBarSavePoi.interactable = false;
+            btnBottomBarSavePoi.gameObject.SetActive(true);
+            btnBottomBarDeletePoi.gameObject.SetActive(false);
         }
 
         void ShowCreditsPeople()
@@ -177,7 +191,7 @@ namespace ARPolis.UI
             btnShowMapPois.onClick.AddListener(HidePoiInfo);
 
             GlobalActionsUI.OnMyPlaceSelected += OnMyPlaceSelected;
-            GlobalActionsUI.OnInfoPoiShow += OnInfoPoiShow;
+            GlobalActionsUI.OnInfoPoiShow += OnInfoPoiShowCheckSaveState;
 
             GlobalActionsUI.OnLangChanged += SetLanguageButtonIcon;
             SetLanguageButtonIcon();
@@ -211,6 +225,7 @@ namespace ARPolis.UI
             AppManager.Instance.SetMode(AppManager.AppMode.MAP);
             OnShowMapHideMenuPanel();
             ShowBackgroundPanel(false);
+
             SetBottomBarButtonsForPoi();
 
             OnSiteManager.Instance.CheckPosition();
@@ -225,6 +240,7 @@ namespace ARPolis.UI
             btnARicon.SetActive(false);
         }
         void SetBottomBarButtonsForPoi() {
+           // Debug.Log("SetBottomBarButtonsForPoi");
             btnBottomBarSavePoi.gameObject.SetActive(true);
             btnBottomBarGame.gameObject.SetActive(false);
             btnBottomBarMap.gameObject.SetActive(true);

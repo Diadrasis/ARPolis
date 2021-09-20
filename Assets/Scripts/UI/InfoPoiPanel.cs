@@ -49,6 +49,9 @@ namespace ARPolis.UI
         private void Start()
         {
             ShowButtonArrow(false);
+
+            OnlineMaps.instance.OnChangeZoom += OnMapUserInteraction;
+            OnlineMaps.instance.OnChangePosition += OnMapUserInteraction;
         }
 
         private void Update()
@@ -216,7 +219,23 @@ namespace ARPolis.UI
             }
         }
 
-        public void HideInfo() { ShowButtonArrow(false); SetArrowUp(true); transitionClass.HidePanel(); StaticData.isPoiInfoVisible = 0; }
+        void OnMapUserInteraction()
+        {
+            Debug.Log("OnMapChangeZoom");
+            HideInfo();
+        }
+
+        public void HideInfo() {
+            if (transitionClass.moveMode == PanelTransitionClass.MoveMode.Hidden) return;
+            ShowButtonArrow(false); 
+            SetArrowUp(true); 
+            transitionClass.HidePanel(); 
+            StaticData.isPoiInfoVisible = 0;
+            InfoManager.Instance.poiNowID = string.Empty;
+            MenuPanel.Instance.OnInfoHideSetBottomsButtons();
+        }
+
+        public bool IsInfoPanelHidden() { return !transitionClass.isVisible; }
 
         private void ShowButtonArrow(bool val) { btnArrow.SetActive(val); dragButton.SetActive(val); }
 
