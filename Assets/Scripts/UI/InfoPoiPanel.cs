@@ -232,7 +232,6 @@ namespace ARPolis.UI
 
         void OnMapUserInteraction()
         {
-            Debug.Log("OnMapChangeZoom");
             HideInfo();
         }
 

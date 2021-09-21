@@ -55,11 +55,18 @@ namespace ARPolis.Data
             return true;
         }
 
-        private bool hasInit;
+        public bool hasInit;
 
+        [ContextMenu("ReadAllData")]
+        void EditorReadData()
+        {
+            hasInit = false;
+            areaAthens = null;
+            StartCoroutine(ReadAllData());
+        }
         public void Init()
         {
-            if (hasInit) { if (B.isEditor) Debug.LogWarning("Initializing Aborted!"); return; }
+            if (hasInit) { if (Application.isEditor) { Debug.LogWarning("Initializing Aborted!"); } return; }
 
             //if (B.isEditor) Debug.LogWarning("Initializing Info Data");
 
@@ -170,10 +177,10 @@ namespace ARPolis.Data
             areaAthens.infoEN.name = "Athens";
             areaAthens.infoGR.desc = "Ανακαλύψτε τις ιστορίες της Αθήνας μέσα απο διαφορετικές θεματικές ενότητες.";
             areaAthens.infoEN.desc = "Discover the stories of Athens through different thematic units.";
-            string folderDataAthens = StaticData.folderJsons + StaticData.folderAthens;
+            string folderDataAthens = Path.Combine(StaticData.folderJsons, StaticData.folderAthens); Debug.Log("topicsAthens = " + folderDataAthens);
 
             #region get topics
-            string topicsAthens = folderDataAthens + StaticData.jsonTopicsFileURL; Debug.Log("topicsAthens = "+ topicsAthens);
+            string topicsAthens = Path.Combine(folderDataAthens, StaticData.jsonTopicsFileURL); Debug.Log("topicsAthens = "+ topicsAthens);
             areaAthens.jsonClassTopics = new List<JsonClassTopic>();
             if (jsonFolder == LoadJsonFolder.RESOURCES)
             {
@@ -415,8 +422,10 @@ namespace ARPolis.Data
                 yield return new WaitForEndOfFrame();
             }
             #endregion
-            
+
             //InitApp.OnDataLoaded?.Invoke();
+
+            hasInit = true;
 
             yield break;
         }

@@ -2,6 +2,7 @@
 using StaGeUnityTools;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,9 +28,13 @@ namespace ARPolis.UI
 
         public Transform imageItemPrefab;
 
-        public GameObject panelPhotos;
+        public GameObject panelPhotos, panelNarration;
 
         public Image colorTourImage, colorBtnNext, colorBtnPrev;
+
+        [Space]
+        public Button btnPlayAudio;
+        public Button btnPauseAudio, ReplayAudio;
 
         private void OnEnable()
         {
@@ -51,6 +56,15 @@ namespace ARPolis.UI
             tourID = tour.id;
             SetTextInfo();
             CreateImages();
+            if (tourEntity.digitalExhibitNarrations.Count <= 0) { panelNarration.SetActive(false); }
+            else
+            {
+                string path = Path.Combine(Application.streamingAssetsPath, StaticData.folderNarrations);
+                string path2 = Path.Combine(path, StaticData.folderAthens);
+                string path3 = Path.Combine(path2, StaticData.FolderTopic(tourEntity.topicID));
+                string path4 = Path.Combine(path3, tourEntity.digitalExhibitNarrations[0].fileName); Debug.Log(path4);
+                btnPlayAudio.onClick.AddListener(()=>AudioManager.Instance.PlayNarration(path4));
+            }
         }
 
         public void SetTourColor(Color col) { colorTourImage.color = col; colorBtnNext.color = col; colorBtnPrev.color = col; }

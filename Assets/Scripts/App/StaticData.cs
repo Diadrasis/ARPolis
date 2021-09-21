@@ -110,16 +110,17 @@ namespace ARPolis.Data
         /// <returns></returns>
         public static T[] LoadDataFromJson<T>(string jsonFileName)
         {
-            string jsonDigDatas = FixJsonItems(LoadResourceTextfile(jsonFileName));
+            string jsonDigDatas = LoadResourceTextfile(jsonFileName);
 
-            if (string.IsNullOrEmpty(jsonDigDatas))
+            if (string.IsNullOrWhiteSpace(jsonDigDatas))
             {
                 Debug.Log("error reading " + jsonFileName);
                 return null;
             }
             else
             {
-                if(jsonDigDatas.Length < 10)
+                jsonDigDatas = FixJsonItems(jsonDigDatas);
+                if (jsonDigDatas.Length < 10)
                 {
                     Debug.Log("error on file " + jsonFileName);
                     return null;
@@ -218,13 +219,13 @@ namespace ARPolis.Data
 
         private static string LoadResourceTextfile(string filename)
         {
-            string filePath = folderJsons + filename;//.Replace(".json", "");
+            string filePath = Path.Combine(folderJsons, filename);//.Replace(".json", "");
 
             TextAsset targetFile = Resources.Load<TextAsset>(filePath);
 
             if (targetFile == null)
             {
-                Debug.LogWarning(filename + ".json is missing!!!");
+                Debug.LogWarning(filename + " is missing!!!");
                 return string.Empty;
             }
             return targetFile.text;
