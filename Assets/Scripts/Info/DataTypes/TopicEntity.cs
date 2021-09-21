@@ -28,7 +28,7 @@ namespace ARPolis.Data
 
         public List<TourEntity> tours;
 
-        public List<DigitalExhibitObject> allMultimedia;
+        public List<DigitalExhibitObject> allMultimedia;//list of multimedia files by merging common id values to 1 single multimedia file
 
         #region json files - all tours
         //[HideInInspector]
@@ -322,11 +322,6 @@ namespace ARPolis.Data
                     }
                 }
 
-                tours[t].digitalExhibitImages = new List<DigitalExhibitObject>();
-                tours[t].digitalExhibitNarrations = new List<DigitalExhibitObject>();
-                tours[t].digitalExhibitVideos = new List<DigitalExhibitObject>();
-                tours[t].digitalExhibitAudios = new List<DigitalExhibitObject>();
-
                 foreach (string uniqueID in uniqueExhibitIds)
                 {
                     DigitalExhibitObject digitalExhibit = new DigitalExhibitObject();
@@ -353,11 +348,9 @@ namespace ARPolis.Data
                             //Εικόνα - Αφήγηση
                             if (dg.attribute_Value == "Εικόνα") { 
                                 digitalExhibit.type = DigitalExhibitObject.Type.IMAGE;
-                                tours[t].digitalExhibitImages.Add(digitalExhibit);
                             }
                             else if (dg.attribute_Value == "Αφήγηση") { 
                                 digitalExhibit.type = DigitalExhibitObject.Type.NARRATION;
-                                tours[t].digitalExhibitNarrations.Add(digitalExhibit);
                             }
 
                         }
@@ -366,8 +359,7 @@ namespace ARPolis.Data
                     allMultimedia.Add(digitalExhibit);
                 }
 
-                //set exhibits for pois
-                tours[t].InitPOIs(this);
+                tours[t].Init(this);
 
 
                 #endregion

@@ -57,30 +57,19 @@ namespace ARPolis.UI
 
         void CreateImages()
         {
-            if (tourEntity.digitalExhibitImages.Count <= 0)
+            if (tourEntity.digitalExhibitImages.Count > 0)
             {
-                panelPhotos.SetActive(false);
-                Invoke("RefreshElements", 0.15f);
-                return;
-            }
-            if (tourEntity.images.Count > 0)
-            {
-                for(int a=0; a<tourEntity.images.Count; a++)
+                foreach(DigitalExhibitObject dgImage in tourEntity.digitalExhibitImages)
                 {
-                    DigitalExhibitObject dgImage = tourEntity.digitalExhibitImages.Find(b => b.id == tourEntity.images[a]);
                     Transform pImg = Instantiate(imageItemPrefab, rectScrollImages);
                     ImageItem item = pImg.GetComponent<ImageItem>();
                     item.Init(dgImage.fileName, tourEntity.topicID, dgImage.GetLabel(), dgImage.sourceLabel);
                 }
-                return;
             }
-            for(int i=0; i<3; i++)
+            else
             {
-                int rand = Random.Range(0, tourEntity.digitalExhibitImages.Count);
-                DigitalExhibitObject dgImage = tourEntity.digitalExhibitImages[rand];
-                Transform pImg = Instantiate(imageItemPrefab, rectScrollImages);
-                ImageItem item = pImg.GetComponent<ImageItem>();
-                item.Init(dgImage.fileName, tourEntity.topicID, dgImage.GetLabel(), dgImage.sourceLabel);
+                panelPhotos.SetActive(false);
+                Invoke(nameof(RefreshElements), 0.15f);
             }
         }
 

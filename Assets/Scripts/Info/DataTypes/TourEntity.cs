@@ -14,7 +14,7 @@ namespace ARPolis.Data
 
         public TourLanguange infoGR, infoEN;
 
-        public TopicEntity topicEntity;
+        private TopicEntity topicEntity;
 
         public string GetTitle()
         {
@@ -46,11 +46,58 @@ namespace ARPolis.Data
         public List<DigitalExhibitObject> digitalExhibitVideos;
         public List<DigitalExhibitObject> digitalExhibitNarrations;
 
+        DigitalExhibitObject GetMultimediaWithID(string id) { return string.IsNullOrWhiteSpace(id) ? null : topicEntity.allMultimedia.Find(b => b.id == id); }
 
-        public void InitPOIs(TopicEntity topic)
+        public void Init(TopicEntity topic)
         {
             topicEntity = topic;
+            if (topicEntity == null) { Debug.Log("NULL TOPIC, aborting initialization of tours..."); return; }
 
+            digitalExhibitImages = new List<DigitalExhibitObject>();
+            if (images.Count > 0)
+            {
+                foreach (string s in images)
+                {
+                    DigitalExhibitObject myImage = GetMultimediaWithID(s);
+                    if (myImage != null) digitalExhibitImages.Add(myImage);
+                }
+            }
+
+            digitalExhibitNarrations = new List<DigitalExhibitObject>();
+            if (narrations.Count > 0)
+            {
+                foreach (string s in narrations)
+                {
+                    DigitalExhibitObject myNarration = GetMultimediaWithID(s);
+                    if (myNarration != null) digitalExhibitNarrations.Add(myNarration);
+                }
+            }
+
+            digitalExhibitVideos = new List<DigitalExhibitObject>();
+            if (videos.Count > 0)
+            {
+                foreach (string s in videos)
+                {
+                    DigitalExhibitObject myVideo = GetMultimediaWithID(s);
+                    if (myVideo != null) digitalExhibitVideos.Add(myVideo);
+                }
+            }
+
+            digitalExhibitAudios = new List<DigitalExhibitObject>();
+            if (audios.Count > 0)
+            {
+                foreach (string s in audios)
+                {
+                    DigitalExhibitObject myAudio = GetMultimediaWithID(s);
+                    if (myAudio != null) digitalExhibitAudios.Add(myAudio);
+                }
+            }
+
+            InitPOIs();
+        }
+
+        public void InitPOIs()
+        {
             foreach(PoiEntity poi in pois)
             {
                 if (poi.images != null)
@@ -58,7 +105,8 @@ namespace ARPolis.Data
                     poi.digitalExhibitImages = new List<DigitalExhibitObject>();
                     foreach (string s in poi.images)
                     {
-                        if(!string.IsNullOrWhiteSpace(s)) poi.digitalExhibitImages.Add(topic.allMultimedia.Find(b => b.id == s));
+                        DigitalExhibitObject myImage = GetMultimediaWithID(s);
+                        if (myImage != null) poi.digitalExhibitImages.Add(myImage);
                     }
                 }
                 if (poi.videos != null)
@@ -66,7 +114,8 @@ namespace ARPolis.Data
                     poi.digitalExhibitVideos = new List<DigitalExhibitObject>();
                     foreach (string s in poi.videos)
                     {
-                        if (!string.IsNullOrWhiteSpace(s)) poi.digitalExhibitVideos.Add(topic.allMultimedia.Find(b => b.id == s));
+                        DigitalExhibitObject myVideo = GetMultimediaWithID(s);
+                        if (myVideo != null) poi.digitalExhibitVideos.Add(myVideo);
                     }
                 }
                 if (poi.testimonies != null)
@@ -74,7 +123,8 @@ namespace ARPolis.Data
                     poi.digitalExhibitTestimonies = new List<DigitalExhibitObject>();
                     foreach (string s in poi.testimonies)
                     {
-                        if (!string.IsNullOrWhiteSpace(s)) poi.digitalExhibitTestimonies.Add(topic.allMultimedia.Find(b => b.id == s));
+                        DigitalExhibitObject myTestimony = GetMultimediaWithID(s);
+                        if (myTestimony != null) poi.digitalExhibitTestimonies.Add(myTestimony);
                     }
                 }
             }

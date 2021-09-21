@@ -91,7 +91,7 @@ namespace ARPolis.UI
                 yield return cd.Coroutine;
                 if (cd.result == null) {
                     img.texture = StaticData.GetImageNull();
-                    Debug.LogWarning("Error reading " + imageFile);
+                    Debug.LogWarning("Error reading "+ filename+ " from " + imageFile);
                 }
                 else
                 {
