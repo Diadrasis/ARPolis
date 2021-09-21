@@ -17,7 +17,7 @@ namespace ARPolis.Data
         public List<DigitalExhibitObject> digitalExhibitImages;
         public List<DigitalExhibitObject> digitalExhibitAudios;
         public List<DigitalExhibitObject> digitalExhibitVideos;
-        public List<DigitalExhibitObject> digitalExhibitNarrations;
+        public List<DigitalExhibitObject> digitalExhibitTestimonies;
 
         public string GetTitle()
         {

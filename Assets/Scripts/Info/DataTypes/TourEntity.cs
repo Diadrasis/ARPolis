@@ -9,9 +9,12 @@ namespace ARPolis.Data
     [Serializable]
     public class TourEntity
     {
-        public string id, topicID, thesis, narrationID, soundID;
+        public string id, topicID, thesis;
+        public List<string> images, videos, audios, narrations;
 
         public TourLanguange infoGR, infoEN;
+
+        public TopicEntity topicEntity;
 
         public string GetTitle()
         {
@@ -44,8 +47,10 @@ namespace ARPolis.Data
         public List<DigitalExhibitObject> digitalExhibitNarrations;
 
 
-        public void InitPOIs()
+        public void InitPOIs(TopicEntity topic)
         {
+            topicEntity = topic;
+
             foreach(PoiEntity poi in pois)
             {
                 if (poi.images != null)
@@ -53,7 +58,23 @@ namespace ARPolis.Data
                     poi.digitalExhibitImages = new List<DigitalExhibitObject>();
                     foreach (string s in poi.images)
                     {
-                        poi.digitalExhibitImages.Add(digitalExhibitImages.Find(b => b.id == s));
+                        if(!string.IsNullOrWhiteSpace(s)) poi.digitalExhibitImages.Add(topic.allMultimedia.Find(b => b.id == s));
+                    }
+                }
+                if (poi.videos != null)
+                {
+                    poi.digitalExhibitVideos = new List<DigitalExhibitObject>();
+                    foreach (string s in poi.videos)
+                    {
+                        if (!string.IsNullOrWhiteSpace(s)) poi.digitalExhibitVideos.Add(topic.allMultimedia.Find(b => b.id == s));
+                    }
+                }
+                if (poi.testimonies != null)
+                {
+                    poi.digitalExhibitTestimonies = new List<DigitalExhibitObject>();
+                    foreach (string s in poi.testimonies)
+                    {
+                        if (!string.IsNullOrWhiteSpace(s)) poi.digitalExhibitTestimonies.Add(topic.allMultimedia.Find(b => b.id == s));
                     }
                 }
             }

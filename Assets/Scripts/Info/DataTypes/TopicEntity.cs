@@ -28,6 +28,8 @@ namespace ARPolis.Data
 
         public List<TourEntity> tours;
 
+        public List<DigitalExhibitObject> allMultimedia;
+
         #region json files - all tours
         //[HideInInspector]
         public List<JsonClassTour> jsonClassTours;
@@ -75,6 +77,10 @@ namespace ARPolis.Data
                 TourEntity tour = new TourEntity();
                 tour.infoGR = new TourLanguange();
                 tour.infoEN = new TourLanguange();
+                tour.images = new List<string>();
+                tour.narrations = new List<string>();
+                tour.videos = new List<string>();
+                tour.audios = new List<string>();
 
                 tour.id = jsonClassTours[i].tour_ID;
                 tour.topicID = id;
@@ -111,6 +117,14 @@ namespace ARPolis.Data
                         else if (val.attribute_ID == "6")//Tour Description
                         {
                             tour.infoEN.desc = val.attribute_Value;
+                        }
+                        else if (val.attribute_ID == "20")//Images
+                        {
+                            tour.images.Add(val.attribute_Value);
+                        }
+                        else if (val.attribute_ID == "21")//Narrations
+                        {
+                            tour.narrations.Add(val.attribute_Value);
                         }
                     }
                 }
@@ -276,7 +290,7 @@ namespace ARPolis.Data
                             {
                                 poiEntity.testimonies.Add(val.attribute_Value);
                             }
-                            else if (val.attribute_ID == "20" && val.attribute_Label == "Εικόνα")//photos
+                            else if (val.attribute_ID == "20")// && val.attribute_Label == "Εικόνα")//photos
                             {
                                 poiEntity.images.Add(val.attribute_Value);
                             }
@@ -291,10 +305,11 @@ namespace ARPolis.Data
 
                 #region digital exhibits
 
+                allMultimedia = new List<DigitalExhibitObject>();
+
                 //get files for tour and pois
 
                 List<string> uniqueExhibitIds = new List<string>();
-                tours[t].digitalExhibitImages = new List<DigitalExhibitObject>();
 
                 foreach(JsonClassDigitalExhibit exhibit in jsonClassDigitalExhibits)
                 {
@@ -324,21 +339,35 @@ namespace ARPolis.Data
 
                     foreach(JsonClassDigitalExhibit dg in dglist)
                     {
-                        if(dg.attribute_ID == "1") { digitalExhibit.infoGR.title = dg.attribute_Value; }
-                        else if (dg.attribute_ID == "3") { digitalExhibit.infoGR.label = dg.attribute_Value; }
-                        else if (dg.attribute_ID == "9") { digitalExhibit.sourceLabel = dg.attribute_Value; }
-                        else if (dg.attribute_ID == "30") {
+                        if(dg.attribute_ID == "1") { digitalExhibit.infoGR.title = dg.attribute_Value; }//Τίτλος
+                        else if (dg.attribute_ID == "2") { digitalExhibit.infoEng.title = dg.attribute_Value; }//Title
+                        else if (dg.attribute_ID == "3") { digitalExhibit.infoGR.label = dg.attribute_Value; }//Λεζάντα
+                        else if (dg.attribute_ID == "4") { digitalExhibit.infoEng.label = dg.attribute_Value; }//Label
+                        else if (dg.attribute_ID == "11") { digitalExhibit.sourceLabel = dg.attribute_Value; }//Πηγή
+                        else if (dg.attribute_ID == "30") //Αρχείο
+                        {
                             digitalExhibit.fileName = dg.attribute_Value;
-                            digitalExhibit.type = DigitalExhibitObject.Type.IMAGE;
                         }
+                        else if (dg.attribute_ID == "31") //Τύπος Αρχείου
+                        {
+                            //Εικόνα - Αφήγηση
+                            if (dg.attribute_Value == "Εικόνα") { 
+                                digitalExhibit.type = DigitalExhibitObject.Type.IMAGE;
+                                tours[t].digitalExhibitImages.Add(digitalExhibit);
+                            }
+                            else if (dg.attribute_Value == "Αφήγηση") { 
+                                digitalExhibit.type = DigitalExhibitObject.Type.NARRATION;
+                                tours[t].digitalExhibitNarrations.Add(digitalExhibit);
+                            }
 
-                        if (digitalExhibit.type == DigitalExhibitObject.Type.IMAGE) tours[t].digitalExhibitImages.Add(digitalExhibit);
+                        }
                     }
 
+                    allMultimedia.Add(digitalExhibit);
                 }
 
                 //set exhibits for pois
-                tours[t].InitPOIs();
+                tours[t].InitPOIs(this);
 
 
                 #endregion

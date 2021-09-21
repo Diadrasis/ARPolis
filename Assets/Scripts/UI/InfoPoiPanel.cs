@@ -133,21 +133,32 @@ namespace ARPolis.UI
         {
             if (poiEntityNow.digitalExhibitImages.Count <= 0)
             {
-                // panelPhotos.SetActive(false);
-                Transform pImg = Instantiate(prefabImage, rectScrollImages);
-                ImageItem item = pImg.GetComponent<ImageItem>();
-                item.InitNull();
-                Invoke("RefreshElements", 0.15f);
+                ShowNoImagesPanel();
                 return;
             }
-            
+
+            int total = 0;
             for (int i = 0; i < poiEntityNow.digitalExhibitImages.Count; i++)
             {
                 DigitalExhibitObject dgImage = poiEntityNow.digitalExhibitImages[i];
-                Transform pImg = Instantiate(prefabImage, rectScrollImages);
-                ImageItem item = pImg.GetComponent<ImageItem>();
-                item.Init(dgImage.fileName, poiEntityNow.topicID, dgImage.GetLabel(), dgImage.sourceLabel);
+                if (dgImage == null) { Debug.Log("NULL Multimedia content [IMAGE]"); }
+                else
+                {
+                    total++;
+                    Transform pImg = Instantiate(prefabImage, rectScrollImages);
+                    ImageItem item = pImg.GetComponent<ImageItem>();
+                    item.Init(dgImage.fileName, poiEntityNow.topicID, dgImage.GetLabel(), dgImage.sourceLabel);
+                }
             }
+            if (total <= 0) ShowNoImagesPanel();
+        }
+
+        void ShowNoImagesPanel()
+        {
+            Transform pImg = Instantiate(prefabImage, rectScrollImages);
+            ImageItem item = pImg.GetComponent<ImageItem>();
+            item.InitNull();
+            Invoke(nameof(RefreshElements), 0.15f);
         }
 
         private bool DestroyPreviousImages()

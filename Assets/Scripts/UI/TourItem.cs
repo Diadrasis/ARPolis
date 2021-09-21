@@ -63,6 +63,17 @@ namespace ARPolis.UI
                 Invoke("RefreshElements", 0.15f);
                 return;
             }
+            if (tourEntity.images.Count > 0)
+            {
+                for(int a=0; a<tourEntity.images.Count; a++)
+                {
+                    DigitalExhibitObject dgImage = tourEntity.digitalExhibitImages.Find(b => b.id == tourEntity.images[a]);
+                    Transform pImg = Instantiate(imageItemPrefab, rectScrollImages);
+                    ImageItem item = pImg.GetComponent<ImageItem>();
+                    item.Init(dgImage.fileName, tourEntity.topicID, dgImage.GetLabel(), dgImage.sourceLabel);
+                }
+                return;
+            }
             for(int i=0; i<3; i++)
             {
                 int rand = Random.Range(0, tourEntity.digitalExhibitImages.Count);
