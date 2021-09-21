@@ -220,6 +220,7 @@ namespace ARPolis.UI
 
         void ShowMap()
         {
+            AudioManager.Instance.StopAudio();
             InfoManager.Instance.ShowPois();
             GlobalActionsUI.OnShowPoisOnMap?.Invoke();
             AppManager.Instance.SetMode(AppManager.AppMode.MAP);

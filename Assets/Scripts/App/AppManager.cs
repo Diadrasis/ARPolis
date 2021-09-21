@@ -142,6 +142,7 @@ namespace ARPolis
                     }
                     GlobalActionsUI.OnHideTopicTours?.Invoke();
                     GlobalActionsUI.OnToggleHideAll?.Invoke();
+                    AudioManager.Instance.StopAudio();
                     break;
                 case AppMode.MAP:
                     if (isSideMenuOpen)
