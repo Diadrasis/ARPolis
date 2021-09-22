@@ -3,14 +3,12 @@ using UnityEngine;
 
 namespace ARPolis.Data
 {
-
-    [Serializable]
-    public class DigitalExhibitObject
+    public class MultimediaObject
     {
         public enum Type { NULL, IMAGE, NARRATION, VIDEO, SOUND, TESTIMONY }
         public Type type = Type.NULL;
-        public DigitalExhibitInfo infoGR, infoEng;
-        public string id, fileName, sourceLabel;
+        public MultimediaInfo infoGR, infoEng;
+        public string id, attributeID, fileName, sourceLabel;
 
         public string GetTitle()
         {
@@ -28,8 +26,7 @@ namespace ARPolis.Data
         }
     }
 
-    [Serializable]
-    public class DigitalExhibitInfo
+    public class MultimediaInfo
     {
         public string title, label;
     }

@@ -365,11 +365,11 @@ namespace ARPolis.Data
                     //pois file url
                     string topicDigitalExhibitsFile = topicFolder + StaticData.jsonDigitalExhibitsFileURL;
                     //create new list
-                    areaAthens.topics[i].jsonClassDigitalExhibits = new List<JsonClassDigitalExhibit>();
+                    areaAthens.topics[i].jsonClassDigitalExhibits = new List<JsonClassMultimedia>();
                     //fill list
                     if (jsonFolder == LoadJsonFolder.RESOURCES)
                     {
-                        areaAthens.topics[i].jsonClassDigitalExhibits = StaticData.LoadDataFromJson<JsonClassDigitalExhibit>(topicDigitalExhibitsFile).ToList();
+                        areaAthens.topics[i].jsonClassDigitalExhibits = StaticData.LoadDataFromJson<JsonClassMultimedia>(topicDigitalExhibitsFile).ToList();
                     }
                     else
                     if (jsonFolder == LoadJsonFolder.STREAMING_ASSETS)
@@ -377,12 +377,12 @@ namespace ARPolis.Data
                         topicDigitalExhibitsFile = Path.Combine(Application.streamingAssetsPath, topicDigitalExhibitsFile);
                         topicDigitalExhibitsFile += ".json";
 
-                        CoroutineWithData cd = new CoroutineWithData(this, StaticData.LoadJsonData<JsonClassDigitalExhibit>(topicDigitalExhibitsFile));
+                        CoroutineWithData cd = new CoroutineWithData(this, StaticData.LoadJsonData<JsonClassMultimedia>(topicDigitalExhibitsFile));
                         yield return cd.Coroutine;
                         if (cd.result == null) { Debug.LogWarning("Error reading " + topicDigitalExhibitsFile); }
                         else
                         {
-                            areaAthens.topics[i].jsonClassDigitalExhibits = cd.result as List<JsonClassDigitalExhibit>;
+                            areaAthens.topics[i].jsonClassDigitalExhibits = cd.result as List<JsonClassMultimedia>;
                         }
                     }
 

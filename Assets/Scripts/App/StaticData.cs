@@ -83,6 +83,14 @@ namespace ARPolis.Data
         //topics
         public static string FolderTopic(string id) { return "topic_" + id + "/"; }
 
+        public static string GetNarrationsTopicPath(string topicID)
+        {
+            string pathFolderNarrations = Path.Combine(Application.streamingAssetsPath, StaticData.folderNarrations);
+            pathFolderNarrations = Path.Combine(pathFolderNarrations, StaticData.folderAthens);
+            pathFolderNarrations = Path.Combine(pathFolderNarrations, StaticData.FolderTopic(topicID));
+            return pathFolderNarrations;
+        }
+
         //files folders
         public static readonly string folderNarrations = "narrations/";
         public static readonly string folderModels = "3D/";

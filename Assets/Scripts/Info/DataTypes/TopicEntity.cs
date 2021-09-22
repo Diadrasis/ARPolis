@@ -5,8 +5,6 @@ using UnityEngine;
 
 namespace ARPolis.Data
 {
-
-    [Serializable]
     public class TopicEntity
     {
         public string id, fotofilename;
@@ -28,22 +26,22 @@ namespace ARPolis.Data
 
         public List<TourEntity> tours;
 
-        public List<DigitalExhibitObject> allMultimedia;//list of multimedia files by merging common id values to 1 single multimedia file
+        public List<MultimediaObject> allMultimedia;//list of multimedia files by merging common id values to 1 single multimedia file
 
         #region json files - all tours
-        //[HideInInspector]
+        [HideInInspector]
         public List<JsonClassTour> jsonClassTours;
-        //[HideInInspector]
+        [HideInInspector]
         public List<JsonClassPoi> jsonClassPois;
-        //[HideInInspector]
+        [HideInInspector]
         public List<JsonClassTourPoi> jsonClassTourPois;
-        //[HideInInspector]
+        [HideInInspector]
         public List<JsonClassTestimony> jsonClassTestimonies;
-        //[HideInInspector]
+        [HideInInspector]
         public List<JsonClassPerson> jsonClassPersons;
-        //[HideInInspector]
-        public List<JsonClassDigitalExhibit> jsonClassDigitalExhibits;
-        //[HideInInspector]
+        [HideInInspector]
+        public List<JsonClassMultimedia> jsonClassDigitalExhibits;
+        [HideInInspector]
         public List<JsonClassEvent> jsonClassEvents;
         #endregion
 
@@ -78,7 +76,7 @@ namespace ARPolis.Data
                 tour.infoGR = new TourLanguange();
                 tour.infoEN = new TourLanguange();
                 tour.images = new List<string>();
-                tour.narrations = new List<string>();
+                tour.narrations = new List<TourNarration>();
                 tour.videos = new List<string>();
                 tour.audios = new List<string>();
 
@@ -122,9 +120,15 @@ namespace ARPolis.Data
                         {
                             tour.images.Add(val.attribute_Value);
                         }
-                        else if (val.attribute_ID == "21")//Narrations
+                        else if (val.attribute_ID == "21" || val.attribute_ID == "22")//Narrations GR/eng
                         {
-                            tour.narrations.Add(val.attribute_Value);
+                            tour.narrations.Add(
+                                new TourNarration
+                                {
+                                    attributeValue = val.attribute_Value,
+                                    attributeID = val.attribute_ID,
+                                    lang = val.attribute_Lang
+                                });
                         }
                     }
                 }
@@ -303,15 +307,13 @@ namespace ARPolis.Data
 
                 #endregion
 
-                #region digital exhibits
+                #region digital exhibits - multimedia files
 
-                allMultimedia = new List<DigitalExhibitObject>();
-
-                //get files for tour and pois
+                allMultimedia = new List<MultimediaObject>();
 
                 List<string> uniqueExhibitIds = new List<string>();
 
-                foreach(JsonClassDigitalExhibit exhibit in jsonClassDigitalExhibits)
+                foreach(JsonClassMultimedia exhibit in jsonClassDigitalExhibits)
                 {
                     //skip if topic id is different
                     if (exhibit.topic_ID != id) continue;
@@ -324,16 +326,18 @@ namespace ARPolis.Data
 
                 foreach (string uniqueID in uniqueExhibitIds)
                 {
-                    DigitalExhibitObject digitalExhibit = new DigitalExhibitObject();
-                    digitalExhibit.infoGR = new DigitalExhibitInfo();
-                    digitalExhibit.infoEng = new DigitalExhibitInfo();
+                    MultimediaObject digitalExhibit = new MultimediaObject();
+                    digitalExhibit.infoGR = new MultimediaInfo();
+                    digitalExhibit.infoEng = new MultimediaInfo();
                     digitalExhibit.id = uniqueID;
 
 
-                    List<JsonClassDigitalExhibit> dglist = jsonClassDigitalExhibits.FindAll(b => b.exhibit_ID == uniqueID);
+                    List<JsonClassMultimedia> dglist = jsonClassDigitalExhibits.FindAll(b => b.exhibit_ID == uniqueID);
 
-                    foreach(JsonClassDigitalExhibit dg in dglist)
+                    foreach(JsonClassMultimedia dg in dglist)
                     {
+                        digitalExhibit.attributeID = dg.attribute_ID;
+
                         if(dg.attribute_ID == "1") { digitalExhibit.infoGR.title = dg.attribute_Value; }//Τίτλος
                         else if (dg.attribute_ID == "2") { digitalExhibit.infoEng.title = dg.attribute_Value; }//Title
                         else if (dg.attribute_ID == "3") { digitalExhibit.infoGR.label = dg.attribute_Value; }//Λεζάντα
@@ -347,14 +351,16 @@ namespace ARPolis.Data
                         {
                             //Εικόνα - Αφήγηση
                             if (dg.attribute_Value == "Εικόνα") { 
-                                digitalExhibit.type = DigitalExhibitObject.Type.IMAGE;
+                                digitalExhibit.type = MultimediaObject.Type.IMAGE;
                             }
                             else if (dg.attribute_Value == "Αφήγηση") { 
-                                digitalExhibit.type = DigitalExhibitObject.Type.NARRATION;
+                                digitalExhibit.type = MultimediaObject.Type.NARRATION;
                             }
 
                         }
+
                     }
+
 
                     allMultimedia.Add(digitalExhibit);
                 }
@@ -372,7 +378,6 @@ namespace ARPolis.Data
 
     }
 
-    [Serializable]
     public struct TopicLanguange
     {
         public string title, desc;

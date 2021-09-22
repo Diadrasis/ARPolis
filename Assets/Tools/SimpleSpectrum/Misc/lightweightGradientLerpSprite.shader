@@ -4,6 +4,14 @@ Shader "SimpleSpectrum/lightweightGradientLerpSprite"
 {
     Properties
     {
+        //UI
+        _StencilComp("Stencil Comparison", Float) = 8
+        _Stencil("Stencil ID", Float) = 0
+        _StencilOp("Stencil Operation", Float) = 0
+        _StencilWriteMask("Stencil Write Mask", Float) = 255
+        _StencilReadMask("Stencil Read Mask", Float) = 255
+        _ColorMask("Color Mask", Float) = 15
+        //UI - end
 		_Color1("Color1", Color) = (1, 1, 1)
 		_Color2("Color2", Color) = (1, 1, 1)
 		_Val("Gradient Value", Float) = 0.5

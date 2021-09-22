@@ -5,8 +5,6 @@ using UnityEngine;
 
 namespace ARPolis.Data
 {
-
-    [Serializable]
     public class TourPoiEntity
     {
         public string poiID, tourID, topicID;

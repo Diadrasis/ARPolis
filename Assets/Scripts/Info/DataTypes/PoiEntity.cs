@@ -5,8 +5,6 @@ using UnityEngine;
 
 namespace ARPolis.Data
 {
-
-    [Serializable]
     public class PoiEntity
     {
         public string id, tourID, topicID, areaID, narrationID, soundID;
@@ -14,10 +12,10 @@ namespace ARPolis.Data
         public Vector2 pos;
         public PoiLanguange infoGR, infoEN;
 
-        public List<DigitalExhibitObject> digitalExhibitImages;
-        public List<DigitalExhibitObject> digitalExhibitAudios;
-        public List<DigitalExhibitObject> digitalExhibitVideos;
-        public List<DigitalExhibitObject> digitalExhibitTestimonies;
+        public List<MultimediaObject> digitalExhibitImages;
+        public List<MultimediaObject> digitalExhibitAudios;
+        public List<MultimediaObject> digitalExhibitVideos;
+        public List<MultimediaObject> digitalExhibitTestimonies;
 
         public string GetTitle()
         {
@@ -45,7 +43,6 @@ namespace ARPolis.Data
 
     }
 
-    [Serializable]
     public struct PoiLanguange
     {
         public string name, shortdesc, historicalReview;

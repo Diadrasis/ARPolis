@@ -140,7 +140,7 @@ namespace ARPolis.UI
             int total = 0;
             for (int i = 0; i < poiEntityNow.digitalExhibitImages.Count; i++)
             {
-                DigitalExhibitObject dgImage = poiEntityNow.digitalExhibitImages[i];
+                MultimediaObject dgImage = poiEntityNow.digitalExhibitImages[i];
                 if (dgImage == null) { Debug.Log("NULL Multimedia content [IMAGE]"); }
                 else
                 {

@@ -5,10 +5,9 @@ using UnityEngine;
 
 namespace ARPolis.Data
 {
-    [Serializable]
     public class AreaEntity
     {
-        public string id, fotofilename;
+        public string id;
         public AreaLanguange infoGR, infoEN;
         public string GetName()
         {
@@ -85,7 +84,6 @@ namespace ARPolis.Data
 
     }
 
-    [Serializable]
     public struct AreaLanguange
     {
         public string name, desc;

@@ -5,8 +5,6 @@ using UnityEngine;
 
 namespace ARPolis.Data
 {
-
-    [Serializable]
     public class EventEntity
     {
         public string id, topicID;
@@ -29,7 +27,6 @@ namespace ARPolis.Data
         }
     }
 
-    [Serializable]
     public struct EventLanguange
     {
         public string title, shortdesc;

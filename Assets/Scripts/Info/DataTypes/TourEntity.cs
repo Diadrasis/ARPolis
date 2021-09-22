@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace ARPolis.Data
 {
-
-    [Serializable]
     public class TourEntity
     {
         public string id, topicID, thesis;
-        public List<string> images, videos, audios, narrations;
+        public List<string> images, videos, audios;
+
+        public List<TourNarration> narrations = new List<TourNarration>();
 
         public TourLanguange infoGR, infoEN;
 
@@ -41,54 +41,63 @@ namespace ARPolis.Data
         public List<TourPoiEntity> tourPoiEntities;//do we need this data???
 
         public List<PoiEntity> pois;
-        public List<DigitalExhibitObject> digitalExhibitImages;
-        public List<DigitalExhibitObject> digitalExhibitAudios;
-        public List<DigitalExhibitObject> digitalExhibitVideos;
-        public List<DigitalExhibitObject> digitalExhibitNarrations;
+        public List<MultimediaObject> digitalExhibitImages;
+        public List<MultimediaObject> digitalExhibitAudios;
+        public List<MultimediaObject> digitalExhibitVideos;
+        public List<MultimediaObject> digitalExhibitNarrations;
 
-        DigitalExhibitObject GetMultimediaWithID(string id) { return string.IsNullOrWhiteSpace(id) ? null : topicEntity.allMultimedia.Find(b => b.id == id); }
+        public MultimediaObject GetNarrationLocalized()
+        {
+                TourNarration nar = narrations.Find(b => b.lang == StaticData.lang);
+                return topicEntity.allMultimedia.Find(b => b.id == nar.attributeValue);
+        }
+
+        private MultimediaObject GetMultimediaWithID(string id) { return string.IsNullOrWhiteSpace(id) ? null : topicEntity.allMultimedia.Find(b => b.id == id); }
 
         public void Init(TopicEntity topic)
         {
             topicEntity = topic;
             if (topicEntity == null) { Debug.Log("NULL TOPIC, aborting initialization of tours..."); return; }
 
-            digitalExhibitImages = new List<DigitalExhibitObject>();
+            digitalExhibitImages = new List<MultimediaObject>();
             if (images.Count > 0)
             {
                 foreach (string s in images)
                 {
-                    DigitalExhibitObject myImage = GetMultimediaWithID(s);
+                    MultimediaObject myImage = GetMultimediaWithID(s);
                     if (myImage != null) digitalExhibitImages.Add(myImage);
                 }
             }
 
-            digitalExhibitNarrations = new List<DigitalExhibitObject>();
+            digitalExhibitNarrations = new List<MultimediaObject>();
             if (narrations.Count > 0)
             {
-                foreach (string s in narrations)
+                foreach (TourNarration nar in narrations)
                 {
-                    DigitalExhibitObject myNarration = GetMultimediaWithID(s);
-                    if (myNarration != null) digitalExhibitNarrations.Add(myNarration);
+                    MultimediaObject myNarration = GetMultimediaWithID(nar.attributeValue);
+                    if (myNarration != null)
+                    {
+                        digitalExhibitNarrations.Add(myNarration);
+                    }
                 }
             }
 
-            digitalExhibitVideos = new List<DigitalExhibitObject>();
+            digitalExhibitVideos = new List<MultimediaObject>();
             if (videos.Count > 0)
             {
                 foreach (string s in videos)
                 {
-                    DigitalExhibitObject myVideo = GetMultimediaWithID(s);
+                    MultimediaObject myVideo = GetMultimediaWithID(s);
                     if (myVideo != null) digitalExhibitVideos.Add(myVideo);
                 }
             }
 
-            digitalExhibitAudios = new List<DigitalExhibitObject>();
+            digitalExhibitAudios = new List<MultimediaObject>();
             if (audios.Count > 0)
             {
                 foreach (string s in audios)
                 {
-                    DigitalExhibitObject myAudio = GetMultimediaWithID(s);
+                    MultimediaObject myAudio = GetMultimediaWithID(s);
                     if (myAudio != null) digitalExhibitAudios.Add(myAudio);
                 }
             }
@@ -102,28 +111,28 @@ namespace ARPolis.Data
             {
                 if (poi.images != null)
                 {
-                    poi.digitalExhibitImages = new List<DigitalExhibitObject>();
+                    poi.digitalExhibitImages = new List<MultimediaObject>();
                     foreach (string s in poi.images)
                     {
-                        DigitalExhibitObject myImage = GetMultimediaWithID(s);
+                        MultimediaObject myImage = GetMultimediaWithID(s);
                         if (myImage != null) poi.digitalExhibitImages.Add(myImage);
                     }
                 }
                 if (poi.videos != null)
                 {
-                    poi.digitalExhibitVideos = new List<DigitalExhibitObject>();
+                    poi.digitalExhibitVideos = new List<MultimediaObject>();
                     foreach (string s in poi.videos)
                     {
-                        DigitalExhibitObject myVideo = GetMultimediaWithID(s);
+                        MultimediaObject myVideo = GetMultimediaWithID(s);
                         if (myVideo != null) poi.digitalExhibitVideos.Add(myVideo);
                     }
                 }
                 if (poi.testimonies != null)
                 {
-                    poi.digitalExhibitTestimonies = new List<DigitalExhibitObject>();
+                    poi.digitalExhibitTestimonies = new List<MultimediaObject>();
                     foreach (string s in poi.testimonies)
                     {
-                        DigitalExhibitObject myTestimony = GetMultimediaWithID(s);
+                        MultimediaObject myTestimony = GetMultimediaWithID(s);
                         if (myTestimony != null) poi.digitalExhibitTestimonies.Add(myTestimony);
                     }
                 }
@@ -138,10 +147,14 @@ namespace ARPolis.Data
         }
     }
 
-    [Serializable]
     public struct TourLanguange
     {
         public string title, shortdesc, desc;
+    }
+
+    public struct TourNarration
+    {
+        public string attributeValue, attributeID, lang; 
     }
 
 }

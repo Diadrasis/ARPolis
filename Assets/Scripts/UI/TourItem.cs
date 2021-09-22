@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 namespace ARPolis.UI
 {
-
     public class TourItem : MonoBehaviour
     {
         TourEntity tourEntity;
@@ -36,6 +35,8 @@ namespace ARPolis.UI
         public Button btnPlayAudio;
         public Button btnPauseAudio, ReplayAudio;
 
+        private string pathFolderNarrations;
+
         private void OnEnable()
         {
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
@@ -56,14 +57,18 @@ namespace ARPolis.UI
             tourID = tour.id;
             SetTextInfo();
             CreateImages();
+
+            pathFolderNarrations = StaticData.GetNarrationsTopicPath(tourEntity.topicID);
+
             if (tourEntity.digitalExhibitNarrations.Count <= 0) { panelNarration.SetActive(false); }
             else
             {
-                string path = Path.Combine(Application.streamingAssetsPath, StaticData.folderNarrations);
-                string path2 = Path.Combine(path, StaticData.folderAthens);
-                string path3 = Path.Combine(path2, StaticData.FolderTopic(tourEntity.topicID));
-                string path4 = Path.Combine(path3, tourEntity.digitalExhibitNarrations[0].fileName); Debug.Log(path4);
-                btnPlayAudio.onClick.AddListener(()=>AudioManager.Instance.PlayNarration(path4));
+                MultimediaObject myNarration = tourEntity.GetNarrationLocalized();
+                if (myNarration != null)
+                {
+                    string filePath = Path.Combine(pathFolderNarrations, myNarration.fileName); /*Debug.Log(filePath);*/
+                    btnPlayAudio.onClick.AddListener(() => AudioManager.Instance.PlayNarration(filePath));
+                }
             }
         }
 
@@ -73,7 +78,7 @@ namespace ARPolis.UI
         {
             if (tourEntity.digitalExhibitImages.Count > 0)
             {
-                foreach(DigitalExhibitObject dgImage in tourEntity.digitalExhibitImages)
+                foreach(MultimediaObject dgImage in tourEntity.digitalExhibitImages)
                 {
                     Transform pImg = Instantiate(imageItemPrefab, rectScrollImages);
                     ImageItem item = pImg.GetComponent<ImageItem>();
