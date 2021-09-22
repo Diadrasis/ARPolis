@@ -34,6 +34,8 @@ namespace ARPolis.UI
 
         private string poiLang;
 
+        public Transform prefabAudioPanel;
+
         private void Awake()
         {
             GlobalActionsUI.OnPoiSelected += OnSelectPoi;
@@ -84,7 +86,14 @@ namespace ARPolis.UI
 
             poiLang = StaticData.lang;
 
-            //get testimony
+            //get testimonies
+            if(poi.digitalExhibitTestimonies.Count > 0)
+            {
+                for(int i= 0; i < poi.digitalExhibitTestimonies.Count; i++){
+                    //rectScrollContainer
+                    //Instantiate(prefabAudioPanel, rectScrollContainer);
+                }
+            }
 
             ScrollResetPosition();
             RefreshElements();
@@ -116,7 +125,16 @@ namespace ARPolis.UI
 
             poiLang = StaticData.lang;
 
-            //get testimony
+            //get testimonies
+            if(Application.isEditor) Debug.Log("Testimonies = " + poiEntityNow.digitalExhibitTestimonies.Count);
+            if (poiEntityNow.digitalExhibitTestimonies.Count > 0)
+            {
+                for (int i = 0; i < poiEntityNow.digitalExhibitTestimonies.Count; i++)
+                {
+                    //rectScrollContainer
+                    //Instantiate(prefabAudioPanel, rectScrollContainer);
+                }
+            }
 
             ScrollResetPosition();
             RefreshElements();
