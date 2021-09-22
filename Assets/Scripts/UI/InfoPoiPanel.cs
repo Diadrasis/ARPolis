@@ -149,6 +149,7 @@ namespace ARPolis.UI
 
         void CreateImages()
         {
+            if (poiEntityNow == null) return;
             if (poiEntityNow.digitalExhibitImages.Count <= 0)
             {
                 ShowNoImagesPanel();
