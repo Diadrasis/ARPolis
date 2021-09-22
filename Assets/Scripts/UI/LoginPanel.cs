@@ -416,17 +416,19 @@ namespace ARPolis.UI
 
         void ChangeLanguage()
         {
-            // Get current language
-            bool isEng = StaticData.lang == "en";
+            //// Get current language
+            //bool isEng = StaticData.lang == "en";
 
-            // Change lang
-            StaticData.lang = isEng ? "gr" : "en";
-            PlayerPrefs.SetString("Lang", StaticData.lang);
-            PlayerPrefs.Save();
+            //// Change lang
+            //StaticData.lang = isEng ? "gr" : "en";
+            //PlayerPrefs.SetString("Lang", StaticData.lang);
+            //PlayerPrefs.Save();
 
-            // Get terms
-            AppData.Instance.Init();
-            GlobalActionsUI.OnLangChanged?.Invoke();
+            //// Get terms
+            //AppData.Instance.Init();
+            //GlobalActionsUI.OnLangChanged?.Invoke();
+
+            MenuPanel.Instance.ChangeLanguage();
         }
 
         void SetLanguageButtonIcon()

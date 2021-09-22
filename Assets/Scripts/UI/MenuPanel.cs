@@ -344,7 +344,7 @@ namespace ARPolis.UI
             txtMenuAreaName.text = AppData.Instance.FindTermValue(termAreaNameValue);
         }
 
-        void ChangeLanguage()
+        public void ChangeLanguage()
         {
             bool isEng = StaticData.lang == "en";
 

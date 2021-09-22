@@ -1,5 +1,12 @@
 <terms version="2.1">
   <term>
+    <name>app_info</name>
+    <value>
+      <gr><![CDATA[Πληροφορίες]]></gr>
+      <en><![CDATA[Information]]></en>
+    </value>
+  </term>
+  <term>
     <name>meters</name>
     <value>
       <gr><![CDATA[μ.]]></gr>
