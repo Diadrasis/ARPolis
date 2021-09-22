@@ -1,5 +1,33 @@
 <terms version="2.1">
   <term>
+    <name>meters</name>
+    <value>
+      <gr><![CDATA[μ.]]></gr>
+      <en><![CDATA[m]]></en>
+    </value>
+  </term>
+  <term>
+    <name>km</name>
+    <value>
+      <gr><![CDATA[χλμ]]></gr>
+      <en><![CDATA[km]]></en>
+    </value>
+  </term>
+  <term>
+    <name>OnSiteDistance_Title</name>
+    <value>
+      <gr><![CDATA[Απόσταση ενεργοποίησης επιτόπιας πλοήγησης]]></gr>
+      <en><![CDATA[On-site mode enable distance]]></en>
+    </value>
+  </term>
+  <term>
+    <name>TriggerPoiDistance_Title</name>
+    <value>
+      <gr><![CDATA[Απόσταση ενεργοποίησης σημείου ενδιαφέροντος]]></gr>
+      <en><![CDATA[Poi trigger distance]]></en>
+    </value>
+  </term>
+  <term>
     <name>logout</name>
     <value>
       <gr><![CDATA[Αποσύνδεση]]></gr>

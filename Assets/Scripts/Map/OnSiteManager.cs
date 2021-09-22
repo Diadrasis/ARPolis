@@ -20,7 +20,6 @@ namespace ARPolis.Map
         public static ActionMessages OnGpsFar, OnGpsClose, OnCloseToPointOnPath, OnGpsOn, OnGpsOff,
                                      OnGpsNearNafpaktos, OnGpsNearAthens, OnGpsNearHerakleion;
 
-        public float maxKmDistanceForOnSiteMode = 5f;
 
         readonly Vector2 mountainCheckPoint = new Vector2(21.903f, 38.5635f);
         readonly Vector2 westCheckPointA = new Vector2(21.70192f, 38.4515f);
@@ -32,6 +31,10 @@ namespace ARPolis.Map
         public Vector2 userPosition;
         //PathInfoManager pathInfoManager;
         //CustomMarkerGUI markerOnNearestPath;
+
+        [Space]
+        public float maxKmDistanceForOnSiteMode = 5f;
+        public float triggerPoiDist = 50f;
 
 
         //Diadrasis
@@ -129,9 +132,9 @@ namespace ARPolis.Map
                 }
 
                 //convert km to meters
-                float triggerDist = 50f / 1000f;
+                triggerPoiDist = triggerPoiDist / 1000f;
 
-                if (minDist < triggerDist)//if dist < 50m 
+                if (minDist < triggerPoiDist)//if dist < 50m 
                 {
                     if (poiEntity != null)
                     {

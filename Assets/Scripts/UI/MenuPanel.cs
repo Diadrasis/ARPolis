@@ -36,7 +36,7 @@ namespace ARPolis.UI
         public delegate void ButtonAction();
         public static ButtonAction OnUserClickOnSiteModeNotAble, OnQuitApp;
 
-        public PanelTransitionClass panelSideMenuTransition, panelTopBarTransition, panelBottomBarTour, panelCreditsPeople, panelMyPlaces;
+        public PanelTransitionClass panelSideMenuTransition, panelTopBarTransition, panelBottomBarTour, panelCreditsPeople, panelMyPlaces, panelSettings;
 
         public Button btnBottomBarGame, btnBottomBarMap, btnBottomBarSavePoi, btnBottomBarDeletePoi, btnBottomBarAR;
         public GameObject btnARicon;
@@ -50,6 +50,9 @@ namespace ARPolis.UI
         public Button btnMyPlaces;
         public Transform myPlacesContainer;
         public Transform myPlacePrefab;
+
+        [Space]
+        public Button btnSettings;
 
         public void CreateListOnUI(List<UserPlaceItem> userPlaces)
         {
@@ -66,6 +69,12 @@ namespace ARPolis.UI
         {
             List<MyPlaceButton> placeButtons = myPlacesContainer.GetComponentsInChildren<MyPlaceButton>().ToList();
             placeButtons.ForEach(b => b.DestroyItem());
+        }
+
+        void ShowSettings()
+        {
+            panelSideMenuTransition.HidePanel();
+            panelSettings.ShowPanel();
         }
 
         void ShowMyPlacesPanel()
@@ -130,6 +139,8 @@ namespace ARPolis.UI
             btnCreditsPeople.onClick.AddListener(ShowCreditsPeople);
 
             btnMyPlaces.onClick.AddListener(ShowMyPlacesPanel);
+
+            btnSettings.onClick.AddListener(ShowSettings);
 
             if (!PlayerPrefs.HasKey("Lang"))
             {
@@ -465,6 +476,16 @@ namespace ARPolis.UI
             {
                 panelCreditsPeople.HidePanel();
                 panelSideMenuTransition.ShowPanel();
+                return;
+            }
+
+            if (panelSettings.isVisible)
+            {
+                panelSettings.HidePanel();
+                iconBtnMenu.rectTransform.sizeDelta = new Vector2(100f, 100f);
+                iconBtnMenu.sprite = sprMenuOn;
+                btnCloseSideMenuBehind.gameObject.SetActive(false);
+                AppManager.Instance.isSideMenuOpen = false;
                 return;
             }
 
