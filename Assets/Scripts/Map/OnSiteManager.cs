@@ -178,9 +178,9 @@ namespace ARPolis.Map
                 }
 
                 //convert km to meters
-                triggerPoiDist = triggerPoiDist / 1000f;
+                float finalDistanceCheck = triggerPoiDist / 1000f;
 
-                if (minDist < triggerPoiDist)//if dist < 50m 
+                if (minDist < finalDistanceCheck)//if dist < 50m 
                 {
                     if (poiEntity != null)
                     {
