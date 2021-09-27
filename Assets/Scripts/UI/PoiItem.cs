@@ -26,7 +26,12 @@ namespace ARPolis.UI
             if (icon) col = icon.color;
             iconSelected.enabled  =false;
             textSelected.enabled = false;
-            if (btn) btn.onClick.AddListener(() => GlobalActionsUI.OnPoiSelected?.Invoke(poiID));
+            if (btn) btn.onClick.AddListener(SelectPoi);
+        }
+
+        void SelectPoi()
+        {
+            if(AppManager.Instance.IsGpsNotInUse()) GlobalActionsUI.OnPoiSelected?.Invoke(poiID);
         }
 
         private void OnEnable()
@@ -39,6 +44,7 @@ namespace ARPolis.UI
         {
             GlobalActionsUI.OnPoiSelected -= OnPoiSelected;
             GlobalActionsUI.OnResetMarkersLabel -= ShowLabel;
+            if (btn) btn.onClick.RemoveAllListeners();
         }
 
         void ShowLabel()
