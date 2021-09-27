@@ -135,11 +135,12 @@ namespace ARPolis.Data
                 CustomMarkerGUI marker = CustomMarkerEngineGUI.AddMarker(poiEntities[i].pos, poiEntities[i].GetTitle(), OnSiteManager.Instance.markerContainer);
                 marker.transform.name = poiEntities[i].GetTitle();
 
-                PoiItem poiItem = marker.gameObject.AddComponent<PoiItem>();
+                PoiItem poiItem = marker.gameObject.GetComponent<PoiItem>();
                 poiItem.poiID = poiEntities[i].id;
                 poiItem.poiEntity = poiEntities[i];
                 poiItem.Init();
                 poiItem.SetImage(StaticData.GetPoiIcon(topicNowID));
+                poiItem.panelHideOtherMarkers = OnSiteManager.Instance.panelHideOtherMarkers;
 
                 //if (showPoisWithDelay) yield return new WaitForSeconds(0.25f);
 
@@ -150,7 +151,7 @@ namespace ARPolis.Data
                 CustomMarkerGUI marker = CustomMarkerEngineGUI.AddMarker(new Vector2(23.724089f, 37.979889f), "Diadrasis", OnSiteManager.Instance.markerContainer);
                 marker.transform.name = "Diadrasis";
 
-                PoiItem poiItem = marker.gameObject.AddComponent<PoiItem>();
+                PoiItem poiItem = marker.gameObject.GetComponent<PoiItem>();
                 poiItem.poiID = "578";
                 poiItem.poiEntity = new PoiEntity
                 {
@@ -161,6 +162,7 @@ namespace ARPolis.Data
                 };
                 poiItem.Init();
                 poiItem.SetImage(StaticData.GetPoiIcon(topicNowID));
+                poiItem.panelHideOtherMarkers = OnSiteManager.Instance.panelHideOtherMarkers;
             }
            
             mapController.ZoomOnMarkers(false);

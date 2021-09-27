@@ -1,4 +1,5 @@
 ﻿using ARPolis.Data;
+using ARPolis.Map;
 using StaGeUnityTools;
 using System.Collections;
 using System.Collections.Generic;
@@ -145,6 +146,8 @@ namespace ARPolis.UI
             InfoManager.Instance.poiNowID = poiID;
 
             GlobalActionsUI.OnInfoPoiShow?.Invoke();//check saved status
+
+
         }
 
         void CreateImages()
@@ -263,6 +266,8 @@ namespace ARPolis.UI
             InfoManager.Instance.poiNowID = string.Empty;
             MenuPanel.Instance.OnInfoHideSetBottomsButtons();
             GlobalActionsUI.OnPoiSelected?.Invoke("");
+            OnSiteManager.Instance.panelHideOtherMarkers.gameObject.SetActive(false);
+            GlobalActionsUI.OnResetMarkersLabel?.Invoke();
         }
 
         public bool IsInfoPanelHidden() { return !transitionClass.isVisible; }

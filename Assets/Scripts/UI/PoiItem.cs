@@ -13,54 +13,59 @@ namespace ARPolis.UI
 
         public string poiID;
         public PoiEntity poiEntity;
-        RawImage img;
-        public GameObject iconSelected, textSelected;
+        public RawImage icon, iconSelected;
+        public Image textSelected;
+        public Button btn;
         Color col;
+        [HideInInspector]
+        public RectTransform panelHideOtherMarkers;
+        public GameObject label;
+
         public void Init()
         {
-            Button btn = GetComponent<Button>();
-            img = GetComponent<RawImage>();
-            if (img) col = img.color;
-            iconSelected = transform.Find("iconSelected").gameObject;
-            iconSelected.SetActive(false);
-            textSelected = transform.Find("Text/textSelected").gameObject;
-            textSelected.SetActive(false);
-            if (btn)
-            {
-                //SaveAsVisited("west", poiInfo.poiID, btn, false);
-                btn.onClick.AddListener(() => GlobalActionsUI.OnPoiSelected?.Invoke(poiID));
-                //if (saveVisitedPlaces) btn.onClick.AddListener(() => SaveAsVisited("west", poiInfo.poiID, btn, true));
-            }
+            if (icon) col = icon.color;
+            iconSelected.enabled  =false;
+            textSelected.enabled = false;
+            if (btn) btn.onClick.AddListener(() => GlobalActionsUI.OnPoiSelected?.Invoke(poiID));
         }
 
         private void OnEnable()
         {
             GlobalActionsUI.OnPoiSelected += OnPoiSelected;
+            GlobalActionsUI.OnResetMarkersLabel += ShowLabel;
         }
 
         private void OnDisable()
         {
             GlobalActionsUI.OnPoiSelected -= OnPoiSelected;
+            GlobalActionsUI.OnResetMarkersLabel -= ShowLabel;
+        }
+
+        void ShowLabel()
+        {
+            label.SetActive(true);
         }
 
         void OnPoiSelected(string id)
         {
-            if (iconSelected) iconSelected.SetActive(poiID == id);
-                
-            if (poiID == id)
+            bool isThisPoi = poiID == id;
+            if (iconSelected) iconSelected.enabled = isThisPoi;
+            if (textSelected) textSelected.enabled = isThisPoi;
+            if (icon) icon.color = isThisPoi ? Color.white : col;
+
+            if (isThisPoi)
             {
+                panelHideOtherMarkers.SetAsLastSibling();
                 GetComponent<RectTransform>().SetAsLastSibling();//set to front in view
-                if (img) img.color = Color.white;
-                if (textSelected) textSelected.SetActive(true);
+                label.SetActive(true);
             }
             else {
                 GetComponent<RectTransform>().SetAsFirstSibling();//set to last in view
-                if (img) img.color = col; 
-                if (textSelected) textSelected.SetActive(false);
+                label.SetActive(false);
             }
         }
 
-        public void SetImage(Texture2D spr) { if (img) img.texture = spr; }
+        public void SetImage(Texture2D spr) { if (icon) icon.texture = spr; }
 
     }
 

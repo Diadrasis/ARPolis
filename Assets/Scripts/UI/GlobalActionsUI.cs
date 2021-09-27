@@ -10,7 +10,7 @@ namespace ARPolis.UI
     {
 
         public delegate void ActionUI();
-        public static ActionUI OnLangChanged, OnPanelSignUpCancel, OnSignUpSubmit, OnToggleHideAll, OnToggleRefreshUI;
+        public static ActionUI OnLangChanged, OnPanelSignUpCancel, OnSignUpSubmit, OnToggleHideAll, OnToggleRefreshUI, OnResetMarkersLabel;
 
         public delegate void ActionObjectlUI(GameObject gb);
         public static ActionObjectlUI OnToggleTarget;

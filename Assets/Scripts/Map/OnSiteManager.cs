@@ -51,6 +51,7 @@ namespace ARPolis.Map
         /// The container where markers will be created.
         /// </summary>
         public RectTransform markerContainer, markerUserContainer;
+        public RectTransform panelHideOtherMarkers;
 
         public void ShowMarkerPanels(bool val) {
             if (val)
@@ -61,8 +62,11 @@ namespace ARPolis.Map
             else
             {
                 markerUserContainer.gameObject.SetActive(false);
+                
             }
-            markerContainer.gameObject.SetActive(val); }
+            markerContainer.gameObject.SetActive(val);
+            panelHideOtherMarkers.gameObject.SetActive(false);
+        }
         public void ShowUserPanel(bool val) { markerUserContainer.gameObject.SetActive(val); }
 
         private void Awake()
@@ -72,6 +76,16 @@ namespace ARPolis.Map
             {
                 this.enabled = false;
                 return;
+            }
+
+            GlobalActionsUI.OnInfoPoiShow += OnInfoPoiShow;
+        }
+
+        void OnInfoPoiShow()
+        {
+            if(AppManager.Instance.appState == AppManager.AppState.MAP && !AppManager.Instance.IsGpsNotInUse())
+            {
+                panelHideOtherMarkers.gameObject.SetActive(true);
             }
         }
 
