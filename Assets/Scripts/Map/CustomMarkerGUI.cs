@@ -40,6 +40,8 @@ namespace ARPolis.Map
             }
         }
 
+        public void SetPosition(Vector2 pos) { lng = pos.x; lat = pos.y; }
+
         public Vector2 pos;
 
         public Button btnMarker;

@@ -8,12 +8,9 @@ namespace ARPolis.Map
     {
         private static CustomMarkerEngineGUI _instance;
         public static List<CustomMarkerGUI> markers;
+        public static CustomMarkerGUI markerUser;
 
-        /// <summary>
-        /// The container where markers will be created.
-        /// </summary>
-        public RectTransform markerContainer;
-
+        public static void ShowUserPanel() { }
         /// <summary>
         /// Prefab of UI Marker
         /// </summary>
@@ -59,9 +56,9 @@ namespace ARPolis.Map
         /// <param name="position">Marker coordinates</param>
         /// <param name="text">Marker text</param>
         /// <returns>Instance of the marker</returns>
-        public static CustomMarkerGUI AddMarker(Vector2 position, string text)
+        public static CustomMarkerGUI AddMarker(Vector2 position, string text, RectTransform parent)
         {
-            return AddMarker(position.x, position.y, text);
+            return AddMarker(position.x, position.y, text, parent);
         }
 
         /// <summary>
@@ -71,13 +68,13 @@ namespace ARPolis.Map
         /// <param name="lat">Latitude</param>
         /// <param name="text">Marker text</param>
         /// <returns>Instance of the marker</returns>
-        public static CustomMarkerGUI AddMarker(double lng, double lat, string text)
+        public static CustomMarkerGUI AddMarker(double lng, double lat, string text, RectTransform parent)
         {
             GameObject markerGameObject = Instantiate(_instance.markerPoiPrefab) as GameObject;
 
             markerGameObject.name = text;
 
-            (markerGameObject.transform as RectTransform).SetParent(_instance.markerContainer);
+            (markerGameObject.transform as RectTransform).SetParent(parent);// (_instance.markerContainer);
             markerGameObject.transform.localScale = Vector3.one;
             CustomMarkerGUI marker = markerGameObject.GetComponent<CustomMarkerGUI>();
             if (marker == null) marker = markerGameObject.AddComponent<CustomMarkerGUI>();
@@ -87,6 +84,27 @@ namespace ARPolis.Map
             marker.lat = lat;
             marker.Init();
             markers.Add(marker);
+            _instance.UpdateMarker(marker);
+            return marker;
+        }
+
+        public static CustomMarkerGUI AddUserMarker(Vector2 pos, string text, RectTransform parent)
+        {
+            GameObject markerGameObject = Instantiate(_instance.markerUserPrefab) as GameObject;
+
+            markerGameObject.name = text;
+
+            (markerGameObject.transform as RectTransform).SetParent(parent);// (_instance.markerUserContainer);
+            markerGameObject.transform.localScale = Vector3.one;
+            CustomMarkerGUI marker = markerGameObject.GetComponent<CustomMarkerGUI>();
+            if (marker == null) marker = markerGameObject.AddComponent<CustomMarkerGUI>();
+
+            marker.text = text;
+            marker.lng = pos.x;// lng;
+            marker.lat = pos.y;// lat;
+            marker.Init();
+            //markers.Add(marker);
+            markerUser = marker;
             _instance.UpdateMarker(marker);
             return marker;
         }
@@ -154,15 +172,15 @@ namespace ARPolis.Map
         {
             double tly, brx, bry, tlx;
             map.GetCorners(out tlx, out tly, out brx, out bry);
-
-            foreach (CustomMarkerGUI marker in markers) UpdateMarker(marker, tlx, tly, brx, bry);
+            if (markerUser != null) _instance.UpdateMarker(markerUser, tlx, tly, brx, bry);
+            foreach (CustomMarkerGUI marker in markers) _instance.UpdateMarker(marker, tlx, tly, brx, bry);
         }
 
         /// <summary>
         /// Updates the position of the specified marker
         /// </summary>
         /// <param name="marker">Marker</param>
-        private void UpdateMarker(CustomMarkerGUI marker)
+        public void UpdateMarker(CustomMarkerGUI marker)
         {
             double tlx, tly, brx, bry;
             map.GetCorners(out tlx, out tly, out brx, out bry);

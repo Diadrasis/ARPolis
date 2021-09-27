@@ -10,6 +10,7 @@ namespace ARPolis.UI
 {
     public class TourItem : MonoBehaviour
     {
+        [SerializeField]
         TourEntity tourEntity;
 
         public string tourID, topicID;
@@ -36,8 +37,6 @@ namespace ARPolis.UI
         public Button btnPauseAudio, ReplayAudio;
 
         private string pathFolderNarrations;
-
-        public AutoFitToCanvas[] autoFits;
 
         private void OnEnable()
         {
@@ -72,13 +71,6 @@ namespace ARPolis.UI
                     btnPlayAudio.onClick.AddListener(() => AudioManager.Instance.PlayNarration(filePath));
                 }
             }
-
-            //Invoke(nameof(DelayInit), 0.75f);
-        }
-
-        void DelayInit()
-        {
-            if (autoFits.Length > 0) foreach (AutoFitToCanvas autoFit in autoFits) autoFit.ManualDelayInitAgain();
         }
 
         public void SetTourColor(Color col) { colorTourImage.color = col; colorBtnNext.color = col; colorBtnPrev.color = col; }

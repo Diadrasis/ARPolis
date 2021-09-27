@@ -32,10 +32,6 @@ namespace ARPolis.Map
             return iconPois[0];
         }
 
-        void Start()
-        {
-
-        }
 
         public void InitMap()
         {

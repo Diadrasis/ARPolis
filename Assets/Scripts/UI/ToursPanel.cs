@@ -71,26 +71,24 @@ namespace ARPolis.UI
 
         private void ShowTopicTours()
         {
-            if (DestroyPreviousTours()) CreateTours();
             toursLang = StaticData.lang;
             animToursPanel.gameObject.SetActive(true);
             animToursPanel.SetBool("show", true);
             AppManager.Instance.SetMode(AppManager.AppState.TOUR_SELECTION);
             snapCustom.RestartOnEnable = true;
+            if (DestroyPreviousTours()) CreateTours();
         }
 
         private void CreateTours()
         {
-
             topicEntity = InfoManager.Instance.GetActiveTopic();
 
-            if (topicEntity == null) { if (B.isEditor) Debug.Log("Null Topic"); return; }
-            if (topicEntity.tours.Count <= 0) { if (B.isEditor) Debug.Log("no tour items"); return; }
+            if (topicEntity == null) { if (Application.isEditor) Debug.Log("Null Topic"); return; }
+            if (topicEntity.tours.Count <= 0) { if (Application.isEditor) Debug.Log("no tour items"); return; }
 
             SetTextInfos();
             logoTour.sprite = LogoTopicSprite(topicEntity.id);
             InfoManager.Instance.tourNowID = topicEntity.tours[0].id;
-
 
             for (int i = 0; i < topicEntity.tours.Count; i++)
             {
@@ -134,7 +132,7 @@ namespace ARPolis.UI
             //reset scroll
             snapCustom.enabled = false;
             snapCustom.RemoveAllChildren();
-            Invoke("ResetScrollSnap", 0.1f);
+            Invoke(nameof(ResetScrollSnap), 0.1f);
 
             return true;
         }

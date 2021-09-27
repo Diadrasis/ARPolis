@@ -28,7 +28,7 @@ namespace ARPolis.Data
 
         public AreaEntity areaAthens;
 
-        public string areaNowID, topicNowID, tourNowID, poiNowID;
+        public string areaNowID, topicNowID, tourNowID, poiNowID;                
 
         public bool HasDataNow() {
             return !string.IsNullOrWhiteSpace(areaNowID) && !string.IsNullOrWhiteSpace(topicNowID)
@@ -130,8 +130,9 @@ namespace ARPolis.Data
             {
                 //skip if pos is null
                 if (poiEntities[i].pos == Vector2.zero) continue;
+                if (string.IsNullOrWhiteSpace(poiEntities[i].GetTitle())) continue;
 
-                CustomMarkerGUI marker = CustomMarkerEngineGUI.AddMarker(poiEntities[i].pos, poiEntities[i].GetTitle());
+                CustomMarkerGUI marker = CustomMarkerEngineGUI.AddMarker(poiEntities[i].pos, poiEntities[i].GetTitle(), OnSiteManager.Instance.markerContainer);
                 marker.transform.name = poiEntities[i].GetTitle();
 
                 PoiItem poiItem = marker.gameObject.AddComponent<PoiItem>();
@@ -146,7 +147,7 @@ namespace ARPolis.Data
 
             if (OnSiteManager.Instance.UseDiadrasisOffice)//37.979889, 23.724089
             {
-                CustomMarkerGUI marker = CustomMarkerEngineGUI.AddMarker(new Vector2(23.724089f, 37.979889f), "Diadrasis");
+                CustomMarkerGUI marker = CustomMarkerEngineGUI.AddMarker(new Vector2(23.724089f, 37.979889f), "Diadrasis", OnSiteManager.Instance.markerContainer);
                 marker.transform.name = "Diadrasis";
 
                 PoiItem poiItem = marker.gameObject.AddComponent<PoiItem>();

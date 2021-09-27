@@ -36,6 +36,7 @@ namespace ARPolis.Map
         public float maxKmDistanceForOnSiteMode = 5f;
         public float triggerPoiDist = 50f;
 
+        public GameObject panelUserMarker;
 
         //Diadrasis
         //37.979889, 23.724089
@@ -43,6 +44,26 @@ namespace ARPolis.Map
         public bool UseDiadrasisOffice;
 
         private bool wasNearPoiOnLastCheck;
+
+        public CustomMarkerGUI markerUser;
+
+        /// <summary>
+        /// The container where markers will be created.
+        /// </summary>
+        public RectTransform markerContainer, markerUserContainer;
+
+        public void ShowMarkerPanels(bool val) {
+            if (val)
+            {
+                //show user marker if user wants on-site navigation
+                markerUserContainer.gameObject.SetActive(!AppManager.Instance.IsGpsNotInUse());
+            }
+            else
+            {
+                markerUserContainer.gameObject.SetActive(false);
+            }
+            markerContainer.gameObject.SetActive(val); }
+        public void ShowUserPanel(bool val) { markerUserContainer.gameObject.SetActive(val); }
 
         private void Awake()
         {
@@ -65,6 +86,7 @@ namespace ARPolis.Map
                 yield break;
             }
 
+
             //if (B.isMobileHaveGyro) { Input.gyro.enabled = true; }
 
             //if (!OnlineMapsLocationService.instance.IsLocationServiceRunning())
@@ -76,8 +98,6 @@ namespace ARPolis.Map
             OnlineMapsLocationService.instance.OnLocationInited += OnLocationInited;
             OnlineMapsLocationService.instance.OnLocationChanged += OnGpsLocationChanged;
             OnlineMapsLocationService.instance.OnFindLocationByIPComplete += OnFindLocationByIPComplete;
-
-            
 
             yield return new WaitForSeconds(2f);
 
@@ -103,6 +123,8 @@ namespace ARPolis.Map
                 if (AppManager.Instance.appState != AppManager.AppState.MAP) return;
                 userPosition = OnlineMapsLocationService.instance.position;
                 OnGpsLocationChanged(userPosition);
+            
+                if(markerUser==null) markerUser = CustomMarkerEngineGUI.AddUserMarker(userPosition, "", Instance.markerUserContainer);
             }
         }
 
@@ -116,7 +138,17 @@ namespace ARPolis.Map
             else
             {
                 if (AppManager.Instance.appState != AppManager.AppState.MAP) return;//check only if user is viewing map
+
                 if (CustomMarkerEngineGUI.markers.Count <= 0) return;//if no pois return
+
+                if (AppManager.Instance.IsGpsNotInUse()) return;
+
+                if (markerUser != null)
+                {
+                    markerUser.SetPosition(userPosition);
+                    CustomMarkerEngineGUI.instance.UpdateMarker(markerUser);
+                }
+
                 float minDist = Mathf.Infinity;
                 PoiEntity poiEntity = null;
                 foreach (CustomMarkerGUI marker in CustomMarkerEngineGUI.markers)
