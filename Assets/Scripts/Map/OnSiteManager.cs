@@ -108,7 +108,7 @@ namespace ARPolis.Map
 
         void OnGpsLocationChanged(Vector2 pos)
         {
-            if (B.isRealEditor) Debug.Log("OnGpsLocationChanged");
+            if (Application.isEditor) Debug.Log("OnGpsLocationChanged");
             userPosition = pos;
             ARManager.Instance.EnableButtonAR(false);
 
@@ -138,8 +138,11 @@ namespace ARPolis.Map
                 {
                     if (poiEntity != null)
                     {
-                        Debug.Log("Near to " + poiEntity.id);
-                        Debug.Log("Near to " + poiEntity.infoGR.name);// GetTitle());
+                        if (Application.isEditor)
+                        {
+                            Debug.Log("Near to " + poiEntity.id);
+                            Debug.Log("Near to " + poiEntity.infoGR.name);// GetTitle());
+                        }
 
                         Handheld.Vibrate();
 

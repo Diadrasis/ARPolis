@@ -1088,4 +1088,32 @@
 			<en><![CDATA[Your device does not support AR.]]></en>
 		</value>
 	</term>
+  <term>
+    <name>navigation_mode_selection</name>
+    <value>
+      <gr><![CDATA[Επιλογή πλοήγησης]]></gr>
+      <en><![CDATA[Select navigation]]></en>
+    </value>
+  </term>
+  <term>
+    <name>navigation_mode_offsite</name>
+    <value>
+      <gr><![CDATA[Απομακρυσμένη]]></gr>
+      <en><![CDATA[Off-Site]]></en>
+    </value>
+  </term>
+  <term>
+    <name>navigation_mode_onsite</name>
+    <value>
+      <gr><![CDATA[Επιτόπια]]></gr>
+      <en><![CDATA[On-Site]]></en>
+    </value>
+  </term>
+  <term>
+    <name>navigation_mode_onsite_ar</name>
+    <value>
+      <gr><![CDATA[Επιτόπια + AR]]></gr>
+      <en><![CDATA[On-Site + AR]]></en>
+    </value>
+  </term>
 </terms>

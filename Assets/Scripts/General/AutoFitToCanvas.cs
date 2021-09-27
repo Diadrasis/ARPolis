@@ -49,7 +49,8 @@ namespace StaGeUnityTools
             Init();
         }
 
-        public void ManualDelayInit() { Invoke("DelayInit", 0.1f); }
+        public void ManualDelayInit() { Invoke(nameof(DelayInit), 0.1f); }
+        public void ManualDelayInitAgain() { Invoke(nameof(DelayInit), 0.5f); }
 
         void DelayInit() {
             //Debug.Log("Delay Inited!!");

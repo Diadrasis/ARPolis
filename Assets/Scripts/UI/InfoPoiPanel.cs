@@ -262,6 +262,7 @@ namespace ARPolis.UI
             StaticData.isPoiInfoVisible = 0;
             InfoManager.Instance.poiNowID = string.Empty;
             MenuPanel.Instance.OnInfoHideSetBottomsButtons();
+            GlobalActionsUI.OnPoiSelected?.Invoke("");
         }
 
         public bool IsInfoPanelHidden() { return !transitionClass.isVisible; }

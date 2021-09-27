@@ -8216,14 +8216,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tourID: 
   topicID: 
-  infoGR:
-    title: 
-    shortdesc: 
-    desc: 
-  infoEN:
-    title: 
-    shortdesc: 
-    desc: 
   txtTitle: {fileID: 1764328719422552352}
   txtDesc: {fileID: 6129556008420741175}
   txtShortText: {fileID: 7754596653485815943}
@@ -8250,6 +8242,11 @@ MonoBehaviour:
   btnPlayAudio: {fileID: 7849643693011899191}
   btnPauseAudio: {fileID: 7849643691757194739}
   ReplayAudio: {fileID: 7849643692534486041}
+  autoFits:
+  - {fileID: 5793016951057739178}
+  - {fileID: 8386843738339359894}
+  - {fileID: 7653746798216226972}
+  - {fileID: 8672723545455219365}
 --- !u!1 &8672723546046461663
 GameObject:
   m_ObjectHideFlags: 0

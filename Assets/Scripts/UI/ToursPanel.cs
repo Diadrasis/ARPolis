@@ -28,6 +28,7 @@ namespace ARPolis.UI
         public Color colTopic1, colTopic2, colTopic3, colTopic4;
         public Sprite sprTopic1, sprTopic2, sprTopic3, sprTopic4;
 
+        [SerializeField]
         private string toursLang;
 
         private void Awake()

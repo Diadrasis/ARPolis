@@ -73,7 +73,12 @@ namespace ARPolis.Data
         public static readonly string msgARNeedsUpdate = "msgARNeedsUpdate";
         public static readonly string msgARUpdateFailed = "msgARUpdateFailed";
         public static readonly string msgARNotSupported = "msgARNotSupported";
-        
+
+        //nav modes
+        public static readonly string navModeOffsite = "navigation_mode_offsite";
+        public static readonly string navModeOnsite = "navigation_mode_onsite";
+        public static readonly string navModeOnsiteAR = "navigation_mode_onsite_ar";
+
         #endregion
 
         #region JSONS

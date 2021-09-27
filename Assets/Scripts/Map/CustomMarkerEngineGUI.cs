@@ -17,7 +17,7 @@ namespace ARPolis.Map
         /// <summary>
         /// Prefab of UI Marker
         /// </summary>
-        public GameObject markerPoiPrefab, markerActivityPrefab;
+        public GameObject markerPoiPrefab, markerUserPrefab;
 
         public Canvas canvas;
         public OnlineMaps map;
@@ -85,7 +85,7 @@ namespace ARPolis.Map
             marker.text = text;
             marker.lng = lng;
             marker.lat = lat;
-            marker.Init();// .pos = new Vector2((float)marker.lng, (float)marker.lat);
+            marker.Init();
             markers.Add(marker);
             _instance.UpdateMarker(marker);
             return marker;

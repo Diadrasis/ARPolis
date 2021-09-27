@@ -13,8 +13,9 @@ namespace ARPolis
     {
         protected AppManager() { }
 
-        public enum AppState { NULL, INTRO, LOGIN, TOPIC_SELECTION, AREA_SELECTION, TOUR_SELECTION, MAP, MAP_INFO_AREA, MAP_INFO_POI, MESSAGE, EXIT, CREDITS }
+        public enum AppState { NULL, INTRO, LOGIN, TOPIC_SELECTION, AREA_SELECTION, TOUR_SELECTION, MAP, MAP_INFO_AREA, MAP_INFO_POI, MESSAGE, EXIT, CREDITS, SETTINGS }
         public AppState appState = AppState.NULL;
+        public AppState appStateBefore = AppState.NULL;
         public AppState stateMessage = AppState.NULL;
 
         public enum NavigationMode { NULL, OFF_SITE, ON_SITE, ON_SITE_AR }
@@ -84,19 +85,19 @@ namespace ARPolis
         {
             if(OnSiteManager.Instance.siteMode == OnSiteManager.SiteMode.OFF)
             {
-                SetNavigationMode(NavigationMode.OFF_SITE);
+                AppSettings.Instance.CheckDropDownNavigation(0);// calls >> SetNavigationMode(NavigationMode.OFF_SITE);
                 MessagesManager.Instance.ShowMessageGpsOff();
             }
             else
             {
                 if(ARManager.Instance.arMode == ARManager.ARMode.NOT_SUPPORT)
                 {
-                    SetNavigationMode(NavigationMode.ON_SITE);
+                    AppSettings.Instance.CheckDropDownNavigation(1);// calls >> SetNavigationMode(NavigationMode.ON_SITE);
                     MessagesManager.Instance.ShowMessageGpsInsideArea("\n\n"+AppData.Instance.FindTermValue(StaticData.msgARNotSupported));
                 }
                 else
                 {
-                    SetNavigationMode(NavigationMode.ON_SITE_AR);
+                    AppSettings.Instance.CheckDropDownNavigation(2);// calls >> SetNavigationMode(NavigationMode.ON_SITE_AR);
                     MessagesManager.Instance.ShowMessageGpsInsideArea("\n\n" + AppData.Instance.FindTermValue(StaticData.msgARSupported));
                 }
                 
@@ -114,10 +115,10 @@ namespace ARPolis
                 case NavigationMode.OFF_SITE:
                     break;
                 case NavigationMode.ON_SITE:
-                    //try to find location again
+                    //try to find location again (?)
                     break;
                 case NavigationMode.ON_SITE_AR:
-                    //check ar mode
+                    //check ar mode again (?)
                     break;
                 default:
                     break;
@@ -126,7 +127,8 @@ namespace ARPolis
 
         public void SetMode(AppState mode)
         {
-            appState = mode;
+            appStateBefore = appState;
+            appState = mode;            
 
             switch (mode)
             {
@@ -225,6 +227,9 @@ namespace ARPolis
                 case AppState.EXIT:
                     break;
                 case AppState.CREDITS:
+                    break;
+                case AppState.SETTINGS:
+                    MenuPanel.Instance.ToggleSideMenu();
                     break;
                 default:
                     break;

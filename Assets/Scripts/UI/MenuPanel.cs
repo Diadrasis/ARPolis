@@ -75,6 +75,7 @@ namespace ARPolis.UI
         {
             panelSideMenuTransition.HidePanel();
             panelSettings.ShowPanel();
+            AppManager.Instance.SetMode(AppManager.AppState.SETTINGS);
         }
 
         void ShowMyPlacesPanel()
@@ -468,7 +469,7 @@ namespace ARPolis.UI
             yield break;
         }
 
-        void ToggleSideMenu()
+        public void ToggleSideMenu()
         {
             if (B.isRealEditor) Debug.Log("ToggleSideMenu");
 
@@ -486,6 +487,7 @@ namespace ARPolis.UI
                 iconBtnMenu.sprite = sprMenuOn;
                 btnCloseSideMenuBehind.gameObject.SetActive(false);
                 AppManager.Instance.isSideMenuOpen = false;
+                AppManager.Instance.appState = AppManager.Instance.appStateBefore;
                 return;
             }
 
@@ -537,7 +539,7 @@ namespace ARPolis.UI
                     AppManager.Instance.isUserPrefersOffSiteMode = false;
                     //go on-site
                     btnToggleSite.image.sprite = sprOnsite;
-                    ShowButtons(false);
+                    ShowArrowSelectAreasButtons(false);
                 }
                 else
                 {
@@ -549,11 +551,11 @@ namespace ARPolis.UI
                 AppManager.Instance.isUserPrefersOffSiteMode = true;
                 //go off-site
                 btnToggleSite.image.sprite = sprOffSite;
-                ShowButtons(true);
+                ShowArrowSelectAreasButtons(true);
             }
         }
 
-        void ShowButtons(bool val)
+        public void ShowArrowSelectAreasButtons(bool val)
         {
             scrollRect.enabled = val;
             snapCustom.Init();
@@ -573,7 +575,7 @@ namespace ARPolis.UI
             if (Application.isEditor) Debug.Log("SetStatusOffSite");
             btnToggleSite.image.sprite = sprOffSite;
             isAbleToChangeToOnSiteMode = false;
-            ShowButtons(true);
+            ShowArrowSelectAreasButtons(true);
         }
 
         void SetStatusOnSite()
@@ -581,7 +583,7 @@ namespace ARPolis.UI
             if (Application.isEditor) Debug.Log("SetStatusOnSite");
             btnToggleSite.image.sprite = sprOnsite;
             isAbleToChangeToOnSiteMode = true;
-            ShowButtons(false);
+            ShowArrowSelectAreasButtons(false);
         }
 
         void ShowMenu()

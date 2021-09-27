@@ -37,6 +37,8 @@ namespace ARPolis.UI
 
         private string pathFolderNarrations;
 
+        public AutoFitToCanvas[] autoFits;
+
         private void OnEnable()
         {
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
@@ -70,6 +72,13 @@ namespace ARPolis.UI
                     btnPlayAudio.onClick.AddListener(() => AudioManager.Instance.PlayNarration(filePath));
                 }
             }
+
+            //Invoke(nameof(DelayInit), 0.75f);
+        }
+
+        void DelayInit()
+        {
+            if (autoFits.Length > 0) foreach (AutoFitToCanvas autoFit in autoFits) autoFit.ManualDelayInitAgain();
         }
 
         public void SetTourColor(Color col) { colorTourImage.color = col; colorBtnNext.color = col; colorBtnPrev.color = col; }
