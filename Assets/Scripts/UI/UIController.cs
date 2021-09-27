@@ -22,7 +22,7 @@ namespace ARPolis.UI
             if (B.isEditor)
             {
                 GlobalActionsUI.OnIntroFinished?.Invoke();
-                AppManager.Instance.SetMode(AppManager.AppMode.LOGIN);
+                AppManager.Instance.SetMode(AppManager.AppState.LOGIN);
             }
             else
             {

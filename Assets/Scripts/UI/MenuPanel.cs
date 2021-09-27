@@ -116,7 +116,7 @@ namespace ARPolis.UI
         public void OnInfoHideSetBottomsButtons()
         {
             Debug.Log("OnInfoHideSetBottomsButtons");
-            if (AppManager.Instance.appMode != AppManager.AppMode.MAP) return;
+            if (AppManager.Instance.appState != AppManager.AppState.MAP) return;
             if (ARManager.Instance.IsAR_Enabled) return;
             btnBottomBarSavePoi.interactable = false;
             btnBottomBarSavePoi.gameObject.SetActive(true);
@@ -234,7 +234,7 @@ namespace ARPolis.UI
             AudioManager.Instance.StopAudio();
             InfoManager.Instance.ShowPois();
             GlobalActionsUI.OnShowPoisOnMap?.Invoke();
-            AppManager.Instance.SetMode(AppManager.AppMode.MAP);
+            AppManager.Instance.SetMode(AppManager.AppState.MAP);
             OnShowMapHideMenuPanel();
             ShowBackgroundPanel(false);
 
@@ -570,7 +570,7 @@ namespace ARPolis.UI
 
         void SetStatusOffSite()
         {
-            if (B.isRealEditor) Debug.Log("SetStatusOffSite");
+            if (Application.isEditor) Debug.Log("SetStatusOffSite");
             btnToggleSite.image.sprite = sprOffSite;
             isAbleToChangeToOnSiteMode = false;
             ShowButtons(true);
@@ -578,7 +578,7 @@ namespace ARPolis.UI
 
         void SetStatusOnSite()
         {
-            if (B.isRealEditor) Debug.Log("SetStatusOnSite");
+            if (Application.isEditor) Debug.Log("SetStatusOnSite");
             btnToggleSite.image.sprite = sprOnsite;
             isAbleToChangeToOnSiteMode = true;
             ShowButtons(false);
@@ -592,7 +592,7 @@ namespace ARPolis.UI
             menuPanel.SetActive(true);
             animMenuPanel.SetBool("show", true);
             panelTopBarTransition.ShowPanel();
-            AppManager.Instance.SetMode(AppManager.AppMode.AREA_SELECTION);
+            AppManager.Instance.SetMode(AppManager.AppState.AREA_SELECTION);
         }
 
         void HideMenu()

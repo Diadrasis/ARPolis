@@ -8,6 +8,7 @@ using UnityEngine.XR.ARFoundation;
 //using ARPolis.Android;
 using ARPolis.Data;
 using ARPolis.Info;
+using ARPolis.Map;
 //using ARPolis.Map;
 //using ARPolis.UI;
 
@@ -16,6 +17,9 @@ namespace ARPolis
 {
     public class ARManager : Singleton<ARManager>
     {
+
+        public enum ARMode { NOT_SUPPORT, SUPPORT }
+        public ARMode arMode = ARMode.NOT_SUPPORT;
 
         public Button btnStartAR, btnCloseAR, btnResetAR;
         public GameObject iconARbtn;
@@ -31,6 +35,9 @@ namespace ARPolis
         public delegate void ARaction(string msg = null, bool showInstallButton = false);
         public ARaction OnCheckMessage;
 
+        public delegate void ARCheckAction();
+        public ARCheckAction OnCheckStarted, OnCheckFinished;
+
         [Space]
         [SerializeField]
         Button btnInstall;
@@ -38,6 +45,20 @@ namespace ARPolis
         public ARSession arSession;
 
         public bool IsAR_Enabled;
+
+
+
+        private void Awake()
+        {
+            OnSiteManager.OnGpsFar += OnGpsFar;
+        }
+
+        void OnGpsFar()
+        {
+            IsAR_Enabled = false;
+            PauseAR();
+            camUI.cullingMask = maskDefault;
+        }
 
         void Start()
         {
@@ -48,11 +69,11 @@ namespace ARPolis
             btnCloseAR.onClick.AddListener(StopARSession);
         }
 
-        void PauseAR() { arSession.enabled = false; }
+        void PauseAR() { if(arSession) arSession.enabled = false; }
 
-        void ResumeAR() { arSession.enabled = true; }
+        void ResumeAR() { if (arSession) arSession.enabled = true; }
 
-        void ResetAR() { arSession.Reset(); }
+        void ResetAR() { if (arSession) arSession.Reset(); }
 
         public void EnableButtonAR(bool val) {
             iconARbtn.SetActive(val);
@@ -88,7 +109,8 @@ namespace ARPolis
 
         public void CheckARsupport(float wait_time)
         {
-            if(checkTimes==0) StartCoroutine(CheckSupport(wait_time));
+            OnCheckStarted?.Invoke();
+            StartCoroutine(CheckSupport(wait_time));
             checkTimes++;
         }
 
@@ -100,13 +122,13 @@ namespace ARPolis
             SetInstallButtonActive(false);
 
             Log("Checking for AR support...");
-            OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARCheckSupport));
+            //OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARCheckSupport));
 
             yield return ARSession.CheckAvailability();
 
             if (ARSession.state == ARSessionState.NeedsInstall)
             {
-                OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARNeedsUpdate));
+                //OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARNeedsUpdate));
                 Log("Your device supports AR, but requires a software update.");
                 Log("Attempting install...");
                 yield return ARSession.Install();
@@ -114,24 +136,28 @@ namespace ARPolis
 
             if (ARSession.state == ARSessionState.Ready)
             {
-                OnCheckMessage?.Invoke("Your device supports AR!");
+                //OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARSupported));
                 Log("Your device supports AR!");
                 Log("Starting AR session...");
 
                 IsAR_Enabled = true;
-                // To start the ARSession, we just need to enable it.
-                //arSession.enabled = true;
+                arMode = ARMode.SUPPORT;
+                AppManager.Instance.navigationAbilities = AppManager.NavigationAbilities.AR;
+                OnCheckFinished?.Invoke();
             }
             else
             {
                 switch (ARSession.state)
                 {
                     case ARSessionState.Unsupported:
-                        OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARNotSupported));
+                        //OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARNotSupported));
                         Log("Your device does not support AR.");
+                        arMode = ARMode.NOT_SUPPORT;
+                        AppManager.Instance.navigationAbilities = AppManager.NavigationAbilities.NULL;
+                        OnCheckFinished?.Invoke();
                         break;
                     case ARSessionState.NeedsInstall:
-                        OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARUpdateFailed), true);
+                        //OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARUpdateFailed), true);
                         Log("The software update failed, or you declined the update.");
 
                         // In this case, we enable a button which allows the user
@@ -141,9 +167,11 @@ namespace ARPolis
                 }
 
                 PauseAR();
+                arMode = ARMode.NOT_SUPPORT;
+                AppManager.Instance.navigationAbilities = AppManager.NavigationAbilities.NULL;
+                OnCheckFinished?.Invoke();
 
-                //OnCheckMessage?.Invoke("Your device does not support AR.");
-                OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARNotSupported));                
+                //OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARNotSupported));                
                 Log("[Start non-AR experience instead]");
                 //
                 // Start a non-AR fallback experience here...

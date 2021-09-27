@@ -28,7 +28,7 @@ namespace ARPolis.Map
         readonly Vector2 herakleionCheckPoint = new Vector2(25.133935f, 35.339641f);
         readonly Vector2 nafpaktosCheckPoint = new Vector2(21.829400f, 38.393076f);
 
-        public Vector2 userPosition;
+        public Vector2 userPosition = Vector2.zero;
         //PathInfoManager pathInfoManager;
         //CustomMarkerGUI markerOnNearestPath;
 
@@ -67,17 +67,17 @@ namespace ARPolis.Map
 
             //if (B.isMobileHaveGyro) { Input.gyro.enabled = true; }
 
-            if (!OnlineMapsLocationService.instance.IsLocationServiceRunning())
-            {
-                if (B.isRealEditor) Debug.Log("GPS OFF");
-                OnGpsOff?.Invoke();
-                siteMode = SiteMode.OFF;
-            }
+            //if (!OnlineMapsLocationService.instance.IsLocationServiceRunning())
+            //{
+            //    if (Application.isEditor) Debug.Log("GPS OFF");
+            //    OnGpsOff?.Invoke();
+            //    siteMode = SiteMode.OFF;
+            //}
             OnlineMapsLocationService.instance.OnLocationInited += OnLocationInited;
             OnlineMapsLocationService.instance.OnLocationChanged += OnGpsLocationChanged;
             OnlineMapsLocationService.instance.OnFindLocationByIPComplete += OnFindLocationByIPComplete;
 
-            GlobalActionsUI.OnShowMenuAreas += SearchNearestPath;
+            
 
             yield return new WaitForSeconds(2f);
 
@@ -100,7 +100,7 @@ namespace ARPolis.Map
         {
             if (siteMode != SiteMode.OFF)
             {
-                if (AppManager.Instance.appMode != AppManager.AppMode.MAP) return;
+                if (AppManager.Instance.appState != AppManager.AppState.MAP) return;
                 userPosition = OnlineMapsLocationService.instance.position;
                 OnGpsLocationChanged(userPosition);
             }
@@ -112,10 +112,10 @@ namespace ARPolis.Map
             userPosition = pos;
             ARManager.Instance.EnableButtonAR(false);
 
-            if (siteMode != SiteMode.NEAR) { SearchNearestPath(); }
+            if (siteMode != SiteMode.NEAR) { CheckUserDistance(); }
             else
             {
-                if (AppManager.Instance.appMode != AppManager.AppMode.MAP) return;//check only if user is viewing map
+                if (AppManager.Instance.appState != AppManager.AppState.MAP) return;//check only if user is viewing map
                 if (CustomMarkerEngineGUI.markers.Count <= 0) return;//if no pois return
                 float minDist = Mathf.Infinity;
                 PoiEntity poiEntity = null;
@@ -244,9 +244,31 @@ namespace ARPolis.Map
         #region Search OnSite Town
         
 
-        void SearchNearestPath()
+        public void CheckUserDistance()
         {
-            float calcStartTime = Time.timeSinceLevelLoad;
+
+            if(Application.platform == RuntimePlatform.WindowsEditor)
+            {
+                if (!OnlineMapsLocationService.instance.useGPSEmulator)
+                {
+                    if (Application.isEditor) Debug.Log("Editor - FAR AWAY!!");
+
+                    OnGpsOff?.Invoke();
+                    siteMode = SiteMode.OFF;
+                    return;
+                }
+            }
+            else if (Application.isMobilePlatform)
+            {
+                if (!OnlineMapsLocationService.instance.IsLocationServiceRunning())
+                {
+                    if (Application.isEditor) Debug.Log("FAR AWAY!!");
+
+                    OnGpsOff?.Invoke();
+                    siteMode = SiteMode.OFF;
+                    return;
+                }
+            }
 
             //0 = far
             //1 = Nafpaktos mountain
@@ -301,13 +323,23 @@ namespace ARPolis.Map
             {
                 //isNear = 0;
                 //message far away
-                if (B.isRealEditor) Debug.Log("FAR AWAY!!");
+                if (Application.isEditor) Debug.Log("FAR AWAY!!");
 
                 OnGpsFar?.Invoke();
                 siteMode = SiteMode.FAR;
                 return;
             }
 
+            if (isNear == 4)
+            {
+                if (Application.isEditor) Debug.Log("Near Athens!!");
+                OnGpsNearAthens?.Invoke();
+                siteMode = SiteMode.NEAR;
+            }
+
+            #region not in use
+            /*
+             * 
             //if (isNear == 0)
             //{
             //    //message far away
@@ -316,14 +348,14 @@ namespace ARPolis.Map
 
             if (isNear == 1)
             {
-                if (B.isRealEditor) Debug.Log("Near Nafpaktos Mountain!!");
+                if (Application.isEditor) Debug.Log("Near Nafpaktos Mountain!!");
                 //near mountain - find path and nearest point on path
 
                 OnGpsNearNafpaktos?.Invoke();
                 OnGpsClose?.Invoke();
                 siteMode = SiteMode.NEAR;
             }
-            else if (isNear == 2)
+            else if (Application.isEditor)
             {
                 if (B.isRealEditor) Debug.Log("Near Nafpaktos West!!");
                 OnGpsNearNafpaktos?.Invoke();
@@ -332,7 +364,7 @@ namespace ARPolis.Map
             }
             else if (isNear == 3)
             {
-                if (B.isRealEditor) Debug.Log("Near Nafpaktos Center!!");
+                if (Application.isEditor) Debug.Log("Near Nafpaktos Center!!");
                 OnGpsNearNafpaktos?.Invoke();
                 OnGpsClose?.Invoke();
                 siteMode = SiteMode.NEAR;
@@ -341,21 +373,23 @@ namespace ARPolis.Map
             }
             else if (isNear == 4)
             {
-                if (B.isRealEditor) Debug.Log("Near Athens!!");
+                if (Application.isEditor) Debug.Log("Near Athens!!");
                 OnGpsNearAthens?.Invoke();
                 OnGpsClose?.Invoke();
                 siteMode = SiteMode.NEAR;
             }
             else if (isNear == 5)
             {
-                if (B.isRealEditor) Debug.Log("Near Herakleion!!");
+                if (Application.isEditor) Debug.Log("Near Herakleion!!");
                 OnGpsNearHerakleion?.Invoke();
                 OnGpsClose?.Invoke();
                 siteMode = SiteMode.NEAR;
             }
+            */
+            #endregion
         }
 
-        
+
         #endregion
     }
 

@@ -12,8 +12,10 @@ using UnityEngine.UI;
 namespace ARPolis
 {
 
-    public class MessagesManager : MonoBehaviour
+    public class MessagesManager : Singleton<MessagesManager>
     {
+
+        protected MessagesManager() { }
 
         public Animator animPanel;
         GameObject panelMessage;
@@ -44,11 +46,11 @@ namespace ARPolis
             txtBtnAction1 = btnAction1.GetComponentInChildren<Text>();
             txtBtnAction2 = btnAction2.GetComponentInChildren<Text>();
 
-            OnSiteManager.OnGpsOff += GpsIsOff;
-            OnSiteManager.OnGpsOn += GpsIsOn;
-            OnSiteManager.OnGpsFar += GpsIsFar;
-            OnSiteManager.OnGpsClose += GpsIsNear;
-            GlobalActionsUI.OnShowMenuAreas += ShowGpsMessageOnIntro;
+            //OnSiteManager.OnGpsOff += GpsIsOff;
+            //OnSiteManager.OnGpsOn += GpsIsOn;
+            //OnSiteManager.OnGpsFar += GpsIsFar;
+            //OnSiteManager.OnGpsClose += GpsIsNear;
+            //GlobalActionsUI.OnShowMenuAreas += ShowGpsMessageOnIntro;
             MenuPanel.OnUserClickOnSiteModeNotAble += ShowGpsMessageOnUser;
             MenuPanel.OnQuitApp += ShowQuitAppWarning;
 
@@ -65,7 +67,7 @@ namespace ARPolis
         void ShowQuitAppWarning()
         {
             panelMessage.SetActive(true);
-            AppManager.Instance.modeMessage = AppManager.AppMode.MESSAGE;
+            AppManager.Instance.stateMessage = AppManager.AppState.MESSAGE;
 
             iconImage.sprite = sprQuitApp;
             iconImage.gameObject.SetActive(true);
@@ -140,10 +142,32 @@ namespace ARPolis
             yield break;
         }
 
-        void ShowMessageGpsOff()
+        public void ShowCustomMessage(string title_ID, string desc_ID)
         {
             panelMessage.SetActive(true);
-            AppManager.Instance.modeMessage = AppManager.AppMode.MESSAGE;
+            AppManager.Instance.stateMessage = AppManager.AppState.MESSAGE;
+
+            //iconImage.sprite = sprOffSite;
+            iconImage.gameObject.SetActive(false);
+            txtTitle.text = AppData.Instance.FindTermValue(title_ID);
+            txtDesc.text = AppData.Instance.FindTermValue(desc_ID);
+
+            btnOK.onClick.AddListener(() => HidePanel());
+            txtBtnOK.text = AppData.Instance.FindTermValue(StaticData.termBtnOK);
+            btnOK.gameObject.SetActive(true);
+
+            btnAction2.gameObject.SetActive(false);
+            btnAction1.gameObject.SetActive(false);
+
+            ForceRebuildLayout();
+
+            ShowPanel();
+        }
+
+        public void ShowMessageGpsOff()
+        {
+            panelMessage.SetActive(true);
+            AppManager.Instance.stateMessage = AppManager.AppState.MESSAGE;
 
             iconImage.sprite = sprOffSite;
             iconImage.gameObject.SetActive(true);
@@ -154,7 +178,7 @@ namespace ARPolis
             txtBtnOK.text = AppData.Instance.FindTermValue(StaticData.termBtnOK);
             btnOK.gameObject.SetActive(true);
 
-            if (B.isAndroid || B.isEditor)
+            if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.WindowsEditor)
             {
                 btnAction2.onClick.AddListener(() => AndroidBridge.OpenIntent(IntentNames.GPS_SETTINGS));
                 txtBtnAction2.text = AppData.Instance.FindTermValue(StaticData.termBtnEnableGps);
@@ -171,7 +195,7 @@ namespace ARPolis
         void ShowMessageGpsFar()
         {
             panelMessage.SetActive(true);
-            AppManager.Instance.modeMessage = AppManager.AppMode.MESSAGE;
+            AppManager.Instance.stateMessage = AppManager.AppState.MESSAGE;
 
             iconImage.sprite = sprOffSite;
             iconImage.gameObject.SetActive(true);
@@ -190,15 +214,15 @@ namespace ARPolis
             ShowPanel();
         }
 
-        void ShowMessageGpsInsideArea()
+        public void ShowMessageGpsInsideArea(string descAppend = "")
         {
             panelMessage.SetActive(true);
-            AppManager.Instance.modeMessage = AppManager.AppMode.MESSAGE;
+            AppManager.Instance.stateMessage = AppManager.AppState.MESSAGE;
 
-            iconImage.sprite = sprOffSite;
+            iconImage.sprite = sprOnSite;
             iconImage.gameObject.SetActive(true);
             txtTitle.text = AppData.Instance.FindTermValue(StaticData.termGpsNearTitle);
-            txtDesc.text = AppData.Instance.FindTermValue(StaticData.termGpsNearDesc);
+            txtDesc.text = AppData.Instance.FindTermValue(StaticData.termGpsNearDesc)+descAppend;
 
             btnOK.onClick.AddListener(() => HidePanel());
             txtBtnOK.text = AppData.Instance.FindTermValue(StaticData.termBtnOK);
@@ -215,7 +239,7 @@ namespace ARPolis
         void ShowARWarning(string msg, bool showInstallButton)
         {
             panelMessage.SetActive(true);
-            AppManager.Instance.modeMessage = AppManager.AppMode.MESSAGE;
+            AppManager.Instance.stateMessage = AppManager.AppState.MESSAGE;
 
             iconImage.sprite = sprAR;
             iconImage.gameObject.SetActive(true);
@@ -246,8 +270,7 @@ namespace ARPolis
         {
             yield return new WaitForSeconds(0.5f);
             panelMessage.SetActive(false);
-            AppManager.Instance.modeMessage = AppManager.AppMode.NULL;
-            ARManager.Instance.CheckARsupport(0.25f);
+            AppManager.Instance.stateMessage = AppManager.AppState.NULL;
             yield break;
         }
 

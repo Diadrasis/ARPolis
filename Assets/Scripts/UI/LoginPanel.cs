@@ -130,7 +130,7 @@ namespace ARPolis.UI
 
             ShowSignInPanel();
 
-            AppManager.Instance.SetMode(AppManager.AppMode.LOGIN);
+            AppManager.Instance.SetMode(AppManager.AppState.LOGIN);
         }
         void HideLogin() { StartCoroutine(DelayCloseLoginPanel()); }
         IEnumerator DelayCloseLoginPanel()

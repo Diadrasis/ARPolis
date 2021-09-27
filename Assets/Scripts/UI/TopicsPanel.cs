@@ -46,7 +46,7 @@ namespace ARPolis.UI
             topicsLang = StaticData.lang;
             animTopicsPanel.gameObject.SetActive(true);
             animTopicsPanel.SetBool("show", true);
-            AppManager.Instance.SetMode(AppManager.AppMode.TOPIC_SELECTION);
+            AppManager.Instance.SetMode(AppManager.AppState.TOPIC_SELECTION);
 
         }
         private void CreateTopics()

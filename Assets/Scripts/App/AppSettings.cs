@@ -11,6 +11,9 @@ namespace ARPolis
     public class AppSettings : MonoBehaviour
     {
 
+        public GameObject[] gpsItems;
+        public ToggleGroup toggleGroupNavigation;
+
         public Slider sliderOnSiteDistance, sliderTriggerPoiDistance;
         public TMPro.TextMeshProUGUI txtOnSiteDistance, txtTriggerPoiDistance;
         private readonly string _space = " ";

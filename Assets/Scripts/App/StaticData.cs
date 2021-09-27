@@ -34,7 +34,7 @@ namespace ARPolis.Data
         public static readonly string termGpsFarTitle = "msgMenuGpsFarTitle";
         public static readonly string termGpsFarDesc = "msgMenuGpsFarDesc";
         public static readonly string termGpsNearTitle = "msgMenuGpsNearTitle";
-        public static readonly string termGpsNearDesc = "msgMenuGpsNearDesc";
+        public static readonly string termGpsNearDesc = "menuGpsOnInside";//"msgMenuGpsNearDesc";
         public static readonly string termGpsInsideTitle = "msgMenuGpsInsideTitle";
         public static readonly string termGpsInsideDesc = "msgMenuGpsIndideDesc";
 

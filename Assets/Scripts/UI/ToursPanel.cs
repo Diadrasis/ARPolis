@@ -74,7 +74,7 @@ namespace ARPolis.UI
             toursLang = StaticData.lang;
             animToursPanel.gameObject.SetActive(true);
             animToursPanel.SetBool("show", true);
-            AppManager.Instance.SetMode(AppManager.AppMode.TOUR_SELECTION);
+            AppManager.Instance.SetMode(AppManager.AppState.TOUR_SELECTION);
             snapCustom.RestartOnEnable = true;
         }
 

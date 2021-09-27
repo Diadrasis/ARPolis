@@ -28,7 +28,7 @@ namespace ARPolis.UI
                     panelBack.SetActive(false);
                     //invoke end of intro
                     GlobalActionsUI.OnIntroFinished?.Invoke();
-                    AppManager.Instance.SetMode(AppManager.AppMode.LOGIN);
+                    AppManager.Instance.SetMode(AppManager.AppState.LOGIN);
                     return;
                 }
             }
@@ -61,7 +61,7 @@ namespace ARPolis.UI
 
             //invoke end of intro
             GlobalActionsUI.OnIntroFinished?.Invoke();
-            AppManager.Instance.SetMode(AppManager.AppMode.LOGIN);
+            AppManager.Instance.SetMode(AppManager.AppState.LOGIN);
 
             yield break;
         }

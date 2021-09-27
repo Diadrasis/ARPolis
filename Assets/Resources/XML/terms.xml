@@ -321,7 +321,7 @@
     <name>msgMenuGpsNearTitle</name>
     <value>
       <gr><![CDATA[Βρίσκεστε κοντά σε περιοχές ξενάγησης!]]></gr>
-      <en><![CDATA[You are close to toure areas!]]></en>
+      <en><![CDATA[You are close to tour areas!]]></en>
     </value>
   </term>
   <term>
@@ -334,8 +334,8 @@
 	<term>
 		<name>menuGpsOnInside</name>
 		<value>
-			<gr><![CDATA[Βρίσκεστε εντός ενεργής περιοχής, μπορείτε να πλοηγηθείτε επτόπια…]]></gr>
-			<en><![CDATA[You are inside an active area, you are able to navigate onsite ...]]></en>
+			<gr><![CDATA[Βρίσκεστε εντός ενεργής περιοχής, μπορείτε να πλοηγηθείτε επιτόπια.]]></gr>
+			<en><![CDATA[You are inside an active area, you are able to navigate onsite.]]></en>
 		</value>
 	</term>
   <term>
@@ -348,7 +348,7 @@
   <term>
     <name>msgMenuGpsIndideDesc</name>
     <value>
-      <gr><![CDATA[Μπορείτε να πλοηγηθείτε επτόπια.]]></gr>
+      <gr><![CDATA[Μπορείτε να πλοηγηθείτε επιτόπια.]]></gr>
       <en><![CDATA[You are able to navigate onsite.]]></en>
     </value>
   </term>
