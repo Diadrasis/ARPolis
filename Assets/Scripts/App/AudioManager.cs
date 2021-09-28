@@ -11,7 +11,7 @@ namespace ARPolis
         protected AudioManager() { }
 
         private AudioSource audioSource;
-        public Button btnNarrationNow;
+        public Button btnPlayNow, btnPauseNow, btnStopNow;
         private Coroutine coroutineDownloadAudio;
         private string currentFileName;
 
@@ -25,12 +25,17 @@ namespace ARPolis
         public void PlayNarration(string filename)
         {
             if(Application.isEditor) Debug.Log("PlayNarration " + filename);
-            if (string.IsNullOrWhiteSpace(filename)) return;
-            if (currentFileName == filename.Trim())
+            if (string.IsNullOrWhiteSpace(filename))
             {
-                if (audioSource.isPlaying) { StopAudio(); }
-                else { ReplayAudio(); }
+                if (btnPlayNow) btnPlayNow.gameObject.SetActive(true);
                 return;
+            }
+            if(currentFileName == filename.Trim()) {
+                if (btnPauseNow) { btnPauseNow.gameObject.SetActive(true); }
+                if (btnPlayNow) { btnPlayNow.gameObject.SetActive(false); }
+                if (btnStopNow) { btnStopNow.gameObject.SetActive(true); }
+                ResumePlay(); 
+                return; 
             }
             if (coroutineDownloadAudio != null) StopCoroutine(coroutineDownloadAudio);
             currentFileName = filename.Trim();
@@ -40,9 +45,34 @@ namespace ARPolis
         void PlayAudio(AudioClip clip)
         {
             coroutineDownloadAudio = null;
-            if (clip == null) return;
+            if (clip == null)
+            {
+                btnPlayNow.interactable = true;
+                Debug.Log("unable to play audio file... aborting");
+                currentFileName = string.Empty;
+                return;
+            }
             audioSource.clip = clip;
             audioSource.Play();
+
+            if (btnPauseNow) { btnPauseNow.gameObject.SetActive(true); }
+            if (btnPlayNow) { btnPlayNow.gameObject.SetActive(false); }
+            if (btnStopNow) { btnStopNow.gameObject.SetActive(true); }
+
+            Invoke(nameof(StopAudio), clip.length);
+        }
+
+        public void ResumePlay()
+        {
+            audioSource.Play();
+        }
+
+        public void PauseAudio() { 
+            audioSource.Pause(); 
+            if (btnPauseNow) { btnPauseNow.gameObject.SetActive(false); }
+            if (btnPlayNow) { btnPlayNow.gameObject.SetActive(true); }
+            if (btnStopNow) { btnStopNow.gameObject.SetActive(true); }
+
         }
 
         void ReplayAudio()
@@ -51,12 +81,18 @@ namespace ARPolis
             audioSource.Play();
         }
 
-        public void StopAudio() { audioSource.Stop(); }
+        public void StopAudio() {
+            //currentFileName = string.Empty; //>> bug: downloads file again
+            audioSource.Stop(); 
+            CancelInvoke();
+            if (btnPauseNow) { btnPauseNow.gameObject.SetActive(false); }
+            if (btnPlayNow) { btnPlayNow.gameObject.SetActive(true); }
+            if (btnStopNow) { btnStopNow.gameObject.SetActive(false); }
+        }
 
         private IEnumerator GetAudioStream(string uri, AudioType audioType, System.Action<AudioClip> callback)
         {
-            if (btnNarrationNow) btnNarrationNow.interactable = false;
-
+            btnPlayNow.interactable = false;
             using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(uri, audioType))
             {
                 DownloadHandlerAudioClip dlAudioHandler = new DownloadHandlerAudioClip(www.uri, audioType);
@@ -71,11 +107,31 @@ namespace ARPolis
                 }
                 else
                 {
-                    yield return new WaitUntil(() => dlAudioHandler.audioClip.loadState == AudioDataLoadState.Loaded);
-                    callback(dlAudioHandler.audioClip);
+                    float timeStart = Time.realtimeSinceStartup;
+                    //yield return new WaitUntil(() => dlAudioHandler.audioClip.loadState == AudioDataLoadState.Loaded);
+                    while(dlAudioHandler.audioClip.loadState == AudioDataLoadState.Loading || dlAudioHandler.audioClip.loadState == AudioDataLoadState.Unloaded)
+                    {
+                        float waitTime = Time.realtimeSinceStartup - timeStart;
+                        if (waitTime > 3f)
+                        {
+                            callback(null);
+                            yield break;
+                        }
+                        yield return null;
+                    }
+                    if (dlAudioHandler.audioClip.loadState == AudioDataLoadState.Failed)
+                    {
+                        Debug.Log("Failed to load audio file: " + uri);
+                        callback(null);
+                    }
+                    else
+                    {
+                        callback(dlAudioHandler.audioClip);
+                    }
                 }
             }
-            if (btnNarrationNow) btnNarrationNow.interactable = true;
+
+            btnPlayNow.interactable = true;
 
             yield break;
         }

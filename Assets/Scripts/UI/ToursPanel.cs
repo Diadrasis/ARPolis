@@ -216,7 +216,7 @@ namespace ARPolis.UI
 
         private void RefreshContainer(GameObject gb)
         {
-            Debug.Log("tours panel refresh");
+            //Debug.Log("tours panel refresh");
             foreach (RectTransform rt in rectsForRefresh) LayoutRebuilder.ForceRebuildLayoutImmediate(rt);
         }
 

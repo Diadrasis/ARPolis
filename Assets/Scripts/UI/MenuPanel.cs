@@ -400,7 +400,7 @@ namespace ARPolis.UI
 
         void ShowAthensMenu()
         {
-            if (B.isRealEditor) Debug.Log("ShowAthensMenu");
+            //if (B.isRealEditor) Debug.Log("ShowAthensMenu");
             btnLanguage.gameObject.SetActive(false);
             InfoManager.Instance.areaNowID = "1";
             GlobalActionsUI.OnShowAreaTopics?.Invoke();

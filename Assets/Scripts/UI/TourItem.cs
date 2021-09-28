@@ -34,7 +34,7 @@ namespace ARPolis.UI
 
         [Space]
         public Button btnPlayAudio;
-        public Button btnPauseAudio, ReplayAudio;
+        public Button btnPauseAudio, btnStopAudio;
 
         private string pathFolderNarrations;
 
@@ -68,12 +68,36 @@ namespace ARPolis.UI
                 if (myNarration != null)
                 {
                     string filePath = Path.Combine(pathFolderNarrations, myNarration.fileName); /*Debug.Log(filePath);*/
-                    btnPlayAudio.onClick.AddListener(() => AudioManager.Instance.PlayNarration(filePath));
+                    btnPlayAudio.onClick.AddListener(() => PlayNarration(filePath));
+                    btnPauseAudio.onClick.AddListener(AudioManager.Instance.PauseAudio);
+                    btnStopAudio.onClick.AddListener(AudioManager.Instance.StopAudio);
+                    btnPauseAudio.gameObject.SetActive(false);
+                    btnStopAudio.gameObject.SetActive(false);
+                    btnPlayAudio.gameObject.SetActive(true);
+                }
+                else
+                {
+                    panelNarration.SetActive(false);
                 }
             }
         }
 
-        public void SetTourColor(Color col) { colorTourImage.color = col; colorBtnNext.color = col; colorBtnPrev.color = col; }
+        void PlayNarration(string path)
+        {
+            AudioManager.Instance.btnPlayNow = btnPlayAudio;
+            AudioManager.Instance.btnPauseNow = btnPauseAudio;
+            AudioManager.Instance.btnStopNow = btnStopAudio;
+            AudioManager.Instance.PlayNarration(path);
+        }
+
+        public void SetTourColor(Color col) { 
+            colorTourImage.color = col; 
+            colorBtnNext.color = col; 
+            colorBtnPrev.color = col;
+            btnPlayAudio.image.color = col;
+            btnPauseAudio.image.color = col;
+            btnStopAudio.image.color = col;
+        }
 
         void CreateImages()
         {
@@ -184,6 +208,9 @@ namespace ARPolis.UI
             GlobalActionsUI.OnTourItemPageChanged -= OnTourItemPageChanged;
             GlobalActionsUI.OnTourPageChanged -= OnTourItemPageChanged;
             btnShowPoisOnMap.onClick.RemoveAllListeners();
+            btnPlayAudio.onClick.RemoveAllListeners();
+            btnPauseAudio.onClick.RemoveAllListeners();
+            btnStopAudio.onClick.RemoveAllListeners();
         }
 
     }
