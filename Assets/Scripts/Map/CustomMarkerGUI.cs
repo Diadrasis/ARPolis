@@ -34,7 +34,6 @@ namespace ARPolis.Map
             set
             {
                 if (textField != null) textField.text = value;
-                txt = GetComponentInChildren<TMPro.TextMeshProUGUI>();
                 if (txt != null) txt.text = value;
                 _text = value;
             }
@@ -53,7 +52,6 @@ namespace ARPolis.Map
             icon = GetComponent<Image>();
             btnMarker = GetComponent<Button>();
             pos = new Vector2((float)lng, (float)lat);
-            txt = GetComponentInChildren<TMPro.TextMeshProUGUI>();
         }
 
         /// <summary>

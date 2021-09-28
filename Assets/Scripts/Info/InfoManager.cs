@@ -141,6 +141,7 @@ namespace ARPolis.Data
                 poiItem.Init();
                 poiItem.SetImage(StaticData.GetPoiIcon(topicNowID));
                 poiItem.panelHideOtherMarkers = OnSiteManager.Instance.panelHideOtherMarkers;
+                poiItem.pos = poiEntities[i].pos;
 
                 //if (showPoisWithDelay) yield return new WaitForSeconds(0.25f);
 
@@ -163,6 +164,7 @@ namespace ARPolis.Data
                 poiItem.Init();
                 poiItem.SetImage(StaticData.GetPoiIcon(topicNowID));
                 poiItem.panelHideOtherMarkers = OnSiteManager.Instance.panelHideOtherMarkers;
+                poiItem.pos = new Vector2(23.724089f, 37.979889f);
             }
            
             mapController.ZoomOnMarkers(false);
