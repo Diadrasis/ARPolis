@@ -88,7 +88,7 @@ namespace ARPolis
         }
 
         [ContextMenu("Show Help")]
-        void ShowHelp()
+        public void ShowHelp()
         {
             if (animPages.Count <= 0) return;
             if (coroutine != null) StopCoroutine(coroutine);
