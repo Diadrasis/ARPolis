@@ -34,7 +34,7 @@ namespace ARPolis
             }
             if (coroutineDownloadAudio != null) StopCoroutine(coroutineDownloadAudio);
             currentFileName = filename.Trim();
-            coroutineDownloadAudio = StartCoroutine(GetAudioStream(currentFileName, AudioType.WAV, PlayAudio));
+            coroutineDownloadAudio = StartCoroutine(GetAudioStream(currentFileName, AudioType.OGGVORBIS, PlayAudio));
         }
 
         void PlayAudio(AudioClip clip)

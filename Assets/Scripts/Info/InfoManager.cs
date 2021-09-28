@@ -220,7 +220,8 @@ namespace ARPolis.Data
                 for (int i = 0; i < areaAthens.topics.Count; i++)
                 {
                     //topic folder url
-                    string topicFolder = folderDataAthens + StaticData.FolderTopic(areaAthens.topics[i].id); Debug.Log(i+" - topicFolder = "+topicFolder);
+                    string topicFolder = folderDataAthens + StaticData.FolderTopic(areaAthens.topics[i].id); 
+                    if(Application.isEditor) Debug.Log(i+" - topicFolder = "+topicFolder);
 
                     #region get tours 
                     //tours file url
@@ -238,7 +239,7 @@ namespace ARPolis.Data
                         topicToursFolder = Path.Combine(Application.streamingAssetsPath, topicToursFolder);
                         topicToursFolder += ".json";
 
-                        //Debug.Log(areaAthens.topics[i].id + " - "+topicToursFolder);
+                        if(Application.isEditor) Debug.Log(areaAthens.topics[i].id + " - "+topicToursFolder);
 
                         CoroutineWithData cd = new CoroutineWithData(this, StaticData.LoadJsonData<JsonClassTour>(topicToursFolder));
                         yield return cd.Coroutine;
@@ -246,7 +247,7 @@ namespace ARPolis.Data
                         else
                         {
                             areaAthens.topics[i].jsonClassTours = cd.result as List<JsonClassTour>;
-
+                            if (Application.isEditor) Debug.Log(areaAthens.topics[i].jsonClassTours.Count);
                             //areaAthens.topics[i].InitTours();
                         }
                     }
@@ -275,7 +276,9 @@ namespace ARPolis.Data
                         if (cd.result == null) { Debug.LogWarning("Error reading " + topicPoisFile); }
                         else
                         {
+                            if (Application.isEditor) Debug.Log(topicPoisFile);
                             areaAthens.topics[i].jsonClassPois = cd.result as List<JsonClassPoi>;
+                            if (Application.isEditor) Debug.Log(areaAthens.topics[i].jsonClassPois.Count);
                         }
                     }
 

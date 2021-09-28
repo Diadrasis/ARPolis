@@ -36,6 +36,7 @@ namespace ARPolis.UI
             snapCustom = containerParent.transform.parent.GetComponent<ScrollSnapCustom>();
             snapCustom.OnSelectionPageChangedEvent.AddListener(OnTourItemPageStartChange);
             snapCustom.OnSelectionChangeEndEvent.AddListener(OnTourItemPageChanged);
+            snapCustom.OnSelectionChangeStartEvent.AddListener(OnTourItemPageStartChanging);
 
             GlobalActionsUI.OnShowTopicTours += ShowTopicTours;
             GlobalActionsUI.OnHideTopicTours += HideTopicTours;
@@ -48,8 +49,16 @@ namespace ARPolis.UI
 
             GlobalActionsUI.OnToggleTarget += RefreshContainer;
 
+            GlobalActionsUI.OnLangChanged += OnLangChanged;
+
             animToursPanel.gameObject.SetActive(false);
             animToursPanel.speed = 0.5f;
+        }
+
+        private void OnLangChanged()
+        {
+            //toursLang = StaticData.lang;
+            DestroyPreviousTours();
         }
 
         private void OnTourItemPageChanged()
@@ -69,15 +78,28 @@ namespace ARPolis.UI
             GlobalActionsUI.OnTourPageChanged?.Invoke(pageNo);
         }
 
+        private void OnTourItemPageStartChanging()
+        {
+            AudioManager.Instance.StopAudio();
+        }
+
         private void ShowTopicTours()
         {
             toursLang = StaticData.lang;
             animToursPanel.gameObject.SetActive(true);
             animToursPanel.SetBool("show", true);
             AppManager.Instance.SetMode(AppManager.AppState.TOUR_SELECTION);
-            snapCustom.RestartOnEnable = true;
-            if (DestroyPreviousTours()) CreateTours();
+            if (DestroyPreviousTours())
+            {
+                CreateTours();
+                snapCustom.enabled = false;
+                snapCustom.RemoveAllChildren();
+                snapCustom.RestartOnEnable = true;
+                Invoke(nameof(ResetScrollSnap), 0.1f);
+            }
         }
+
+        public List<TourItem> tourPagesItems = new List<TourItem>();
 
         private void CreateTours()
         {
@@ -97,6 +119,7 @@ namespace ARPolis.UI
                 tourItem.Init(topicEntity.tours[i]);
                 tourItem.SetTourColor(TitleTopicColor(topicEntity.id));
                 tourItem.pageID = i;
+                tourPagesItems.Add(tourItem);
             }
 
             RefreshContainer(null);
@@ -104,6 +127,8 @@ namespace ARPolis.UI
 
         private bool DestroyPreviousTours()
         {
+            if (tourPagesItems.Count <= 0) return true;
+
             if (toursLang != StaticData.lang)
             {
                 DestroyAllItems();
@@ -113,21 +138,22 @@ namespace ARPolis.UI
             //if it is the same topic, no need to destroy
             if (topicEntity == InfoManager.Instance.GetActiveTopic())
             {
-                //if (B.isEditor) Debug.Log("same topic selected - keeping items");
+                if (Application.isEditor) Debug.Log("same topic selected - keeping items");
                 return false;
             }
 
-            TourItem[] items = containerParent.GetComponentsInChildren<TourItem>(true);
-            //no tours - we need to create
-            if (items.Length <= 0) return true;
+            //TourItem[] items = containerParent.GetComponentsInChildren<TourItem>(true);
+            ////no tours - we need to create
+            //if (items.Length <= 0) return true;
             //if it is the same topic, no need to destroy
-            if (items[0].topicID == InfoManager.Instance.topicNowID)
+            if (tourPagesItems[0].topicID == InfoManager.Instance.topicNowID)
             {
                 //if (B.isEditor) Debug.Log("same topic - avoid destroying items");
                 return false;
             }
             //new topic selected - destroy tours
-            foreach (TourItem item in items) item.DestroyItem();
+            //foreach (TourItem item in tourPagesItems) item.DestroyItem();
+            DestroyAllItems();
 
             //reset scroll
             snapCustom.enabled = false;
@@ -139,8 +165,10 @@ namespace ARPolis.UI
 
         void DestroyAllItems()
         {
-            TourItem[] items = containerParent.GetComponentsInChildren<TourItem>(true);
-            foreach (TourItem item in items) item.DestroyItem();
+            tourPagesItems.ForEach(b => b.DestroyItem());
+            tourPagesItems.Clear();            
+            //TourItem[] items = containerParent.GetComponentsInChildren<TourItem>(true);
+            //foreach (TourItem item in items) item.DestroyItem();
         }
 
         void ResetScrollSnap() { snapCustom.enabled = true; }

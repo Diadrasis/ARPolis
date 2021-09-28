@@ -239,6 +239,7 @@ namespace ARPolis
                 case AppState.EXIT:
                     break;
                 case AppState.CREDITS:
+                    MenuPanel.Instance.ToggleSideMenu();
                     break;
                 case AppState.SETTINGS:
                     MenuPanel.Instance.ToggleSideMenu();

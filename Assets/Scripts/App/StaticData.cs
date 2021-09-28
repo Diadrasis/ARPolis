@@ -179,8 +179,7 @@ namespace ARPolis.Data
 
                 UnityWebRequest www = UnityWebRequest.Get(filename);
                 yield return www.SendWebRequest();
-
-                if (www.isNetworkError || www.isHttpError)
+                if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError || www.result == UnityWebRequest.Result.DataProcessingError)
                 {
                     Debug.Log(www.error);
                     yield return null;
