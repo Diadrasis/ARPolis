@@ -59,11 +59,13 @@ namespace ARPolis
                     AppManager.Instance.SetNavigationMode(AppManager.NavigationMode.OFF_SITE);
                     gpsItems.ToList().ForEach(b => b.SetActive(false));
                     MenuPanel.Instance.ShowArrowSelectAreasButtons(true);
+                    MenuPanel.Instance.SetBottomBarButtonsForPoi();
                     break;
                 case 1:
                     //on-site
                     AppManager.Instance.SetNavigationMode(AppManager.NavigationMode.ON_SITE);
                     gpsItems.ToList().ForEach(b => b.SetActive(true));
+                    MenuPanel.Instance.SetBottomBarButtonsForPoi();
                     MenuPanel.Instance.ShowArrowSelectAreasButtons(false);
                     break;
                 case 2:
@@ -71,14 +73,17 @@ namespace ARPolis
                     AppManager.Instance.SetNavigationMode(AppManager.NavigationMode.ON_SITE_AR);
                     gpsItems.ToList().ForEach(b => b.SetActive(true));
                     MenuPanel.Instance.ShowArrowSelectAreasButtons(false);
+                    MenuPanel.Instance.SetBottomBarButtonsForPoi();
                     break;
                 default:
                     //off-site
                     AppManager.Instance.SetNavigationMode(AppManager.NavigationMode.OFF_SITE);
                     gpsItems.ToList().ForEach(b => b.SetActive(false));
                     MenuPanel.Instance.ShowArrowSelectAreasButtons(true);
+                    MenuPanel.Instance.SetBottomBarButtonsForPoi();
                     break;
             }
+
         }
 
         public void CheckDropDownNavigation(int val)
@@ -94,7 +99,7 @@ namespace ARPolis
             Toggle arToggle = toggles.ToList().Find(b => b.name.StartsWith("Item 2"));
             if (arToggle)
             {
-                arToggle.interactable = ARManager.Instance.arMode == ARManager.ARMode.SUPPORT;
+                arToggle.interactable = ARManager.Instance.arMode == ARManager.ARMode.SUPPORTED;
             }
         }
 

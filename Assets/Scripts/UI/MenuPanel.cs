@@ -98,9 +98,9 @@ namespace ARPolis.UI
 
         void OnInfoPoiShowCheckSaveState()
         {
-            Debug.Log("OnInfoPoiShowCheckSaveState");
-            //if (AppManager.Instance.appMode != AppManager.AppMode.MAP) return;
-            if (ARManager.Instance.IsAR_Enabled) return;
+            if(Application.isEditor) Debug.Log("OnInfoPoiShowCheckSaveState");
+            if (AppManager.Instance.navigationMode == AppManager.NavigationMode.ON_SITE_AR) return;
+            //if (ARManager.Instance.IsAR_Enabled) return;
             if (UserPlacesManager.Instance.IsThisPoiSaved(InfoManager.Instance.poiNowID))
             {
                 btnBottomBarSavePoi.gameObject.SetActive(false);
@@ -116,9 +116,9 @@ namespace ARPolis.UI
 
         public void OnInfoHideSetBottomsButtons()
         {
-            Debug.Log("OnInfoHideSetBottomsButtons");
+            if(Application.isEditor) Debug.Log("OnInfoHideSetBottomsButtons");
             if (AppManager.Instance.appState != AppManager.AppState.MAP) return;
-            if (ARManager.Instance.IsAR_Enabled) return;
+            if (ARManager.Instance.arMode == ARManager.ARMode.SUPPORTED) return;
             btnBottomBarSavePoi.interactable = false;
             btnBottomBarSavePoi.gameObject.SetActive(true);
             btnBottomBarDeletePoi.gameObject.SetActive(false);
@@ -252,21 +252,45 @@ namespace ARPolis.UI
             btnBottomBarAR.gameObject.SetActive(false);
             btnARicon.SetActive(false);
         }
-        void SetBottomBarButtonsForPoi() {
-           // Debug.Log("SetBottomBarButtonsForPoi");
-            btnBottomBarSavePoi.gameObject.SetActive(true);
-            btnBottomBarGame.gameObject.SetActive(false);
+        public void SetBottomBarButtonsForPoi() {
+            if(Application.isEditor) Debug.Log("SetBottomBarButtonsForPoi");
+
             btnBottomBarMap.gameObject.SetActive(true);
+
+            btnBottomBarSavePoi.gameObject.SetActive(false);
+            btnBottomBarSavePoi.interactable = InfoPoiPanel.Instance.transitionClass.isVisible;
+            btnBottomBarGame.gameObject.SetActive(false);
             btnBottomBarDeletePoi.gameObject.SetActive(false);
             btnBottomBarAR.gameObject.SetActive(false);
             btnARicon.SetActive(false);
+
             if (OnSiteManager.Instance.siteMode == OnSiteManager.SiteMode.NEAR)
             {
-                if (ARManager.Instance.IsAR_Enabled)
+                if (ARManager.Instance.arMode == ARManager.ARMode.SUPPORTED)
                 {
-                    btnBottomBarAR.gameObject.SetActive(ARManager.Instance.IsAR_Enabled);
-                    ARManager.Instance.EnableButtonAR(false);
+                    if (AppManager.Instance.navigationMode == AppManager.NavigationMode.ON_SITE_AR)//user may change this from settings
+                    {
+                        if (Application.isEditor) Debug.Log("SetBottomBarButtonsForPoi AR");
+                        btnBottomBarAR.gameObject.SetActive(true);
+                        ARManager.Instance.EnableButtonAR(false);
+                    }
+                    else
+                    {
+                        btnBottomBarSavePoi.gameObject.SetActive(true);
+                    }
                 }
+                else
+                {
+                    btnBottomBarSavePoi.gameObject.SetActive(true);
+                }
+            }
+            else if (OnSiteManager.Instance.siteMode == OnSiteManager.SiteMode.FAR)
+            {
+                btnBottomBarSavePoi.gameObject.SetActive(true);
+            }
+            else if (OnSiteManager.Instance.siteMode == OnSiteManager.SiteMode.OFF)
+            {
+                btnBottomBarSavePoi.gameObject.SetActive(true);
             }
         }
 

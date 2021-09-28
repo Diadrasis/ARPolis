@@ -92,7 +92,7 @@ namespace ARPolis
             }
             else
             {
-                if(ARManager.Instance.arMode == ARManager.ARMode.NOT_SUPPORT)
+                if(ARManager.Instance.arMode == ARManager.ARMode.NOT_SUPPORTED)
                 {
                     AppSettings.Instance.CheckDropDownNavigation(1);// calls >> SetNavigationMode(NavigationMode.ON_SITE);
                     MessagesManager.Instance.ShowMessageGpsInsideArea("\n\n"+AppData.Instance.FindTermValue(StaticData.msgARNotSupported));

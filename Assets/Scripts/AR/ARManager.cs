@@ -18,8 +18,8 @@ namespace ARPolis
     public class ARManager : Singleton<ARManager>
     {
 
-        public enum ARMode { NOT_SUPPORT, SUPPORT }
-        public ARMode arMode = ARMode.NOT_SUPPORT;
+        public enum ARMode { NOT_SUPPORTED, SUPPORTED }
+        public ARMode arMode = ARMode.NOT_SUPPORTED;
 
         public Button btnStartAR, btnCloseAR, btnResetAR;
         public GameObject iconARbtn;
@@ -44,25 +44,25 @@ namespace ARPolis
 
         public ARSession arSession;
 
-        public bool IsAR_Enabled;
+        [Header("Editor Only")]
+        public bool EditorSupportsAR;
 
 
 
         private void Awake()
         {
+            if (!Application.isEditor) EditorSupportsAR = false;
             OnSiteManager.OnGpsFar += OnGpsFar;
         }
 
         void OnGpsFar()
         {
-            IsAR_Enabled = false;
             PauseAR();
             camUI.cullingMask = maskDefault;
         }
 
         void Start()
         {
-            IsAR_Enabled = false;
             PauseAR();
             camUI.cullingMask = maskDefault;
             btnStartAR.onClick.AddListener(StartARSession);
@@ -110,7 +110,16 @@ namespace ARPolis
         public void CheckARsupport(float wait_time)
         {
             OnCheckStarted?.Invoke();
-            StartCoroutine(CheckSupport(wait_time));
+            if (Application.isEditor && EditorSupportsAR)
+            {
+                arMode = ARMode.SUPPORTED;
+                AppManager.Instance.navigationAbilities = AppManager.NavigationAbilities.AR;
+                OnCheckFinished?.Invoke();
+            }
+            else
+            {
+                StartCoroutine(CheckSupport(wait_time));
+            }
             checkTimes++;
         }
 
@@ -118,7 +127,6 @@ namespace ARPolis
         {
             yield return new WaitForSeconds(wTime);
 
-            IsAR_Enabled = false;
             SetInstallButtonActive(false);
 
             Log("Checking for AR support...");
@@ -140,8 +148,7 @@ namespace ARPolis
                 Log("Your device supports AR!");
                 Log("Starting AR session...");
 
-                IsAR_Enabled = true;
-                arMode = ARMode.SUPPORT;
+                arMode = ARMode.SUPPORTED;
                 AppManager.Instance.navigationAbilities = AppManager.NavigationAbilities.AR;
                 OnCheckFinished?.Invoke();
             }
@@ -152,7 +159,7 @@ namespace ARPolis
                     case ARSessionState.Unsupported:
                         //OnCheckMessage?.Invoke(AppData.Instance.FindTermValue(StaticData.msgARNotSupported));
                         Log("Your device does not support AR.");
-                        arMode = ARMode.NOT_SUPPORT;
+                        arMode = ARMode.NOT_SUPPORTED;
                         AppManager.Instance.navigationAbilities = AppManager.NavigationAbilities.NULL;
                         OnCheckFinished?.Invoke();
                         break;
@@ -167,7 +174,7 @@ namespace ARPolis
                 }
 
                 PauseAR();
-                arMode = ARMode.NOT_SUPPORT;
+                arMode = ARMode.NOT_SUPPORTED;
                 AppManager.Instance.navigationAbilities = AppManager.NavigationAbilities.NULL;
                 OnCheckFinished?.Invoke();
 
@@ -175,7 +182,6 @@ namespace ARPolis
                 Log("[Start non-AR experience instead]");
                 //
                 // Start a non-AR fallback experience here...
-                //
             }
         }
 

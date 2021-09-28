@@ -50,7 +50,7 @@ namespace ARPolis.Map
 
         public bool UseDiadrasisOffice;
 
-        private bool wasNearPoiOnLastCheck;
+        private bool UserWasNearPoiOnLastCheck;
 
         public CustomMarkerGUI markerUser;
 
@@ -187,7 +187,8 @@ namespace ARPolis.Map
                 //convert km to meters
                 float finalDistanceCheck = triggerPoiDist / 1000f;
 
-                if (minDist < finalDistanceCheck)//if dist < 50m 
+                //if user is near to any poi
+                if (minDist < finalDistanceCheck)
                 {
                     if (poiEntity != null)
                     {
@@ -199,37 +200,38 @@ namespace ARPolis.Map
 
                         Handheld.Vibrate();
 
-                        if (ARManager.Instance.IsAR_Enabled)
+                        if (AppManager.Instance.navigationMode == AppManager.NavigationMode.ON_SITE_AR)
                         {
-                            if (!ARManager.Instance.iconARbtn.activeSelf)
+                            if (ARManager.Instance.arMode == ARManager.ARMode.SUPPORTED)
                             {
-                                wasNearPoiOnLastCheck = true;
-                                ARManager.Instance.EnableButtonAR(true);
+                                if (!ARManager.Instance.iconARbtn.activeSelf)
+                                {
+                                    UserWasNearPoiOnLastCheck = true;
+                                    ARManager.Instance.EnableButtonAR(true);
+                                }
                             }
                         }
-                        else
+                        else if (AppManager.Instance.navigationMode == AppManager.NavigationMode.ON_SITE)
                         {
-                            //TODO 
                             //show poi info panel
                             GlobalActionsUI.OnPoiSelected?.Invoke(poiEntity.id);
                         }
                     }
                 }
-                else
+                else//if user is far from pois
                 {
-                    Handheld.Vibrate();
+                    if(UserWasNearPoiOnLastCheck) Handheld.Vibrate();//only once
+                    UserWasNearPoiOnLastCheck = false;
 
-                    if (ARManager.Instance.IsAR_Enabled)
+                    if (AppManager.Instance.navigationMode == AppManager.NavigationMode.ON_SITE_AR)
                     {
-                        ARManager.Instance.StopARSession();
-                        if (wasNearPoiOnLastCheck)
+                        if (ARManager.Instance.arMode == ARManager.ARMode.SUPPORTED)
                         {
-                            wasNearPoiOnLastCheck = false;
+                            ARManager.Instance.StopARSession();
                         }
                     }
                     else
                     {
-                        //TODO 
                         //hide poi info panel
                         GlobalActionsUI.OnInfoPoiJustHide?.Invoke();
                     }
