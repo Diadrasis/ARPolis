@@ -27,7 +27,7 @@ namespace ARPolis.UI
 
         public Button btnToggleSite, btnToggleSideMenu, btnCloseSideMenuBehind,
                       btnQuitApp, btnCredits, btnAthensMenu, btnNafpaktosMenu, btnHerakleionMenu,
-                      btnLanguage, btnGamification, btnShowMapPois;
+                      btnLanguage, btnGamification, btnShowMapPois, btnInstructions;
 
         public Image iconBtnLanguage, iconBtnMenu;
 
@@ -207,9 +207,15 @@ namespace ARPolis.UI
 
             GlobalActionsUI.OnLangChanged += SetLanguageButtonIcon;
             SetLanguageButtonIcon();
+
+            btnInstructions.onClick.AddListener(ShowInstructions);
         }
 
-        
+        void ShowInstructions()
+        {
+            AudioManager.Instance.StopAudio();
+            HelpController.Instance.ShowHelp();
+        }
 
         void HidePoiInfo() {
             if(StaticData.isPoiInfoVisible == 0)
