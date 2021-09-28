@@ -235,7 +235,13 @@ namespace ARPolis.UI
 
         private void RefreshElements() { foreach (RectTransform rt in allRects) LayoutRebuilder.ForceRebuildLayoutImmediate(rt); }
 
-        private void ShowPreviewInfo() { ShowButtonArrow(true); SetArrowUp(true); transitionClass.ShowPercentagePanel(); StaticData.isPoiInfoVisible = 1; }
+        private void ShowPreviewInfo() {
+            if (transitionClass.moveMode == PanelTransitionClass.MoveMode.Percentage) return;
+            ShowButtonArrow(true); 
+            SetArrowUp(true); 
+            transitionClass.ShowPercentagePanel(); 
+            StaticData.isPoiInfoVisible = 1; 
+        }
 
         public void ToggleFullInfo() {
 

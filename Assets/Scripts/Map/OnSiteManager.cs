@@ -36,7 +36,14 @@ namespace ARPolis.Map
         public float maxKmDistanceForOnSiteMode = 5f;
         public float triggerPoiDist = 50f;
 
+        [Space]
         public GameObject panelUserMarker;
+        [Space]
+        public float LabelsZoomVisibility = 17f;
+        public bool IsMarkerLabelAbleToShow() {
+            return LabelsZoomVisibility <= OnlineMaps.instance.floatZoom /*&& !InfoPoiPanel.Instance.transitionClass.isVisible*/; 
+        }
+        public bool OnPoiSelectAllowMapToMoveToPoiPosition = true;
 
         //Diadrasis
         //37.979889, 23.724089
@@ -83,7 +90,7 @@ namespace ARPolis.Map
 
         void OnInfoPoiShow()
         {
-            if(AppManager.Instance.appState == AppManager.AppState.MAP && !AppManager.Instance.IsGpsNotInUse())
+            if(AppManager.Instance.appState == AppManager.AppState.MAP /*&& !AppManager.Instance.IsGpsNotInUse()*/)
             {
                 panelHideOtherMarkers.gameObject.SetActive(true);
             }
