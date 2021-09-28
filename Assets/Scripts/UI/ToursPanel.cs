@@ -31,6 +31,9 @@ namespace ARPolis.UI
         [SerializeField]
         private string toursLang;
 
+        [SerializeField]
+        private Button btnNextTour, btnPrevTour;
+
         private void Awake()
         {
             snapCustom = containerParent.transform.parent.GetComponent<ScrollSnapCustom>();
@@ -53,6 +56,9 @@ namespace ARPolis.UI
 
             animToursPanel.gameObject.SetActive(false);
             animToursPanel.speed = 0.5f;
+
+            btnNextTour.onClick.AddListener(AudioManager.Instance.StopAudio);
+            btnPrevTour.onClick.AddListener(AudioManager.Instance.StopAudio);
         }
 
         private void OnLangChanged()
