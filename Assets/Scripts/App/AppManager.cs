@@ -90,7 +90,7 @@ namespace ARPolis
 
         void CheckDeviceCapabilities()
         {
-            Debug.Log("CheckDeviceCapabilities");
+           // Debug.Log("CheckDeviceCapabilities");
             OnSiteManager.Instance.CheckUserDistance();
             ARManager.Instance.CheckARsupport(0f);
         }

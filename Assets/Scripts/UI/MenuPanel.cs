@@ -25,7 +25,7 @@ namespace ARPolis.UI
         public Text txtMenuAreaName;
         private string termAreaNameValue;
 
-        public Button btnToggleSite, btnToggleSideMenu, btnCloseSideMenuBehind,
+        public Button btnToggleSite, btnToggleSideMenu, btnCloseSideMenuBehind, btnReturnMode,
                       btnQuitApp, btnCredits, btnAthensMenu, btnNafpaktosMenu, btnHerakleionMenu,
                       btnLanguage, btnGamification, btnShowMapPois, btnInstructions;
 
@@ -166,6 +166,7 @@ namespace ARPolis.UI
             GlobalActionsUI.OnHideTopicTours += HideTopicTours;
 
             GlobalActionsUI.OnShowMenuAreas += ShowMenu;
+            GlobalActionsUI.OnShowMenuAreasFromTopic += ShowMenu;
             GlobalActionsUI.OnHideMenuAreas += HideMenu;
             GlobalActionsUI.OnLogoutUser += LogOutUser;
 
@@ -182,7 +183,8 @@ namespace ARPolis.UI
 
             btnToggleSite.onClick.AddListener(() => ToggleSiteMode());
             btnToggleSideMenu.onClick.AddListener(() => ToggleSideMenu());
-            btnCloseSideMenuBehind.onClick.AddListener(() => AppManager.Instance.ReturnMode());
+            btnReturnMode.onClick.AddListener(() => UserReturn());
+            btnCloseSideMenuBehind.onClick.AddListener(() => UserReturn());
             btnCredits.onClick.AddListener(() => ToggleExtraButtonsCredits());
             btnQuitApp.onClick.AddListener(() => QuitApp());
 
@@ -209,6 +211,31 @@ namespace ARPolis.UI
             SetLanguageButtonIcon();
 
             btnInstructions.onClick.AddListener(ShowInstructions);
+        }
+
+        void UserReturn()
+        {
+            if (InfoPoiPanel.Instance.transitionClass.isVisible)
+            {
+                InfoPoiPanel.Instance.HideInfo();
+                return;
+            }
+            if (panelCreditsPeople.isVisible)
+            {
+                panelCreditsPeople.HidePanel();
+            }
+            if (panelMyPlaces.isVisible)
+            {
+                panelMyPlaces.HidePanel();
+            }
+            btnReturnMode.interactable = false;
+            AppManager.Instance.ReturnMode();
+            Invoke(nameof(ReturnButtonEnable), 0.5f);
+        }
+
+        public void ReturnButtonEnable()
+        {
+            btnReturnMode.interactable = true;
         }
 
         void ShowInstructions()
@@ -452,12 +479,12 @@ namespace ARPolis.UI
 
         #endregion
 
-        //private void Update()
-        //{
-        //    if (Input.GetKeyDown(KeyCode.Alpha1)) { snapCustom.SetCustomPage(0); }
-        //    if (Input.GetKeyDown(KeyCode.Alpha2)) { snapCustom.SetCustomPage(1); }
-        //    if (Input.GetKeyDown(KeyCode.Alpha3)) { snapCustom.SetCustomPage(2); }
-        //}
+#if UNITY_ANDROID || UNITY_EDITOR
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape)) { UserReturn(); }
+        }
+#endif
 
         public void HideSideMenu()
         {
