@@ -54,6 +54,11 @@ namespace ARPolis.UI
         [Space]
         public Button btnSettings;
 
+        [Header("Panel App Information")]
+        public GameObject panelInfo;
+        public Animator animPanelInfo;
+        public Button btnCloseAppInfo;
+
         public void CreateListOnUI(List<UserPlaceItem> userPlaces)
         {
             foreach(UserPlaceItem item in userPlaces)
@@ -212,6 +217,8 @@ namespace ARPolis.UI
             SetLanguageButtonIcon();
 
             btnInstructions.onClick.AddListener(ShowInstructions);
+            btnCloseAppInfo.onClick.AddListener(HideAppInfo);
+
         }
 
         void UserReturn()
@@ -502,10 +509,14 @@ namespace ARPolis.UI
         {
             if (Application.isEditor) Debug.Log("Show Privacy");
         }
+               
 
         void ShowAppInfo()
         {
             if (Application.isEditor) Debug.Log("Show App Info");
+
+            panelInfo.SetActive(true);
+            animPanelInfo.SetBool("show", true);
 
             #region not in use
             /*
@@ -525,6 +536,15 @@ namespace ARPolis.UI
             */
             #endregion
         }
+
+        void HideAppInfo()
+        {
+            animPanelInfo.SetBool("show", false);
+            float wait = 0.85f / animPanelInfo.speed;
+            Debug.Log("wait = " + wait);
+            Invoke(nameof(ClosePanelInfo), 0.8f); 
+        }
+        void ClosePanelInfo() { panelInfo.SetActive(false); }
 
         #region not in use
         /*
