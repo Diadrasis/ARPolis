@@ -1,5 +1,12 @@
 <terms version="2.1">
   <term>
+    <name>privacy</name>
+    <value>
+      <gr><![CDATA[Πολιτική Απορρήτου]]></gr>
+      <en><![CDATA[Privacy Policy]]></en>
+    </value>
+  </term>
+  <term>
     <name>app_info</name>
     <value>
       <gr><![CDATA[Πληροφορίες]]></gr>

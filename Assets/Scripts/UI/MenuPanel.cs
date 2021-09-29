@@ -16,7 +16,7 @@ namespace ARPolis.UI
         protected MenuPanel() { }
 
         public Animator animMenuPanel, animMapMaskHide;
-        public GameObject menuPanel, btnPrevCity, btnNextCity, creditsExtraButtonsPanel;
+        public GameObject menuPanel, btnPrevCity, btnNextCity;//, creditsExtraButtonsPanel;
         /// <summary>
         /// scroll snap town images (menu)
         /// </summary>
@@ -26,8 +26,8 @@ namespace ARPolis.UI
         private string termAreaNameValue;
 
         public Button btnToggleSite, btnToggleSideMenu, btnCloseSideMenuBehind, btnReturnMode,
-                      btnQuitApp, btnCredits, btnAthensMenu, btnNafpaktosMenu, btnHerakleionMenu,
-                      btnLanguage, btnGamification, btnShowMapPois, btnInstructions;
+                      btnQuitApp, btnInfo, btnAthensMenu, btnNafpaktosMenu, btnHerakleionMenu,
+                      btnLanguage, btnGamification, btnShowMapPois, btnInstructions, btnPrivacy;
 
         public Image iconBtnLanguage, iconBtnMenu;
 
@@ -42,8 +42,8 @@ namespace ARPolis.UI
         public GameObject btnARicon;
 
 
-        public GameObject[] extraCreditsButtons;
-        public Transform arrowCredits;
+        //public GameObject[] extraCreditsButtons;
+        //public Transform arrowCredits;
         public Button btnCreditsPeople;
 
         [Space]
@@ -181,20 +181,21 @@ namespace ARPolis.UI
             OnSiteManager.OnGpsNearHerakleion += OnGpsNearHerakleion;
             OnSiteManager.OnGpsNearNafpaktos += OnGpsNearNafpaktos;
 
-            btnToggleSite.onClick.AddListener(() => ToggleSiteMode());
-            btnToggleSideMenu.onClick.AddListener(() => ToggleSideMenu());
-            btnReturnMode.onClick.AddListener(() => UserReturn());
-            btnCloseSideMenuBehind.onClick.AddListener(() => UserReturn());
-            btnCredits.onClick.AddListener(() => ToggleExtraButtonsCredits());
-            btnQuitApp.onClick.AddListener(() => QuitApp());
+            btnToggleSite.onClick.AddListener(ToggleSiteMode);
+            btnToggleSideMenu.onClick.AddListener(ToggleSideMenu);
+            btnReturnMode.onClick.AddListener(UserReturn);
+            btnCloseSideMenuBehind.onClick.AddListener(UserReturn);
+            btnInfo.onClick.AddListener(ShowAppInfo);
+            btnPrivacy.onClick.AddListener(ShowPrivacy);
+            btnQuitApp.onClick.AddListener(QuitApp);
 
-            btnAthensMenu.onClick.AddListener(() => ShowAthensMenu());
-            btnNafpaktosMenu.onClick.AddListener(() => ShowNafpaktosMenu());
-            btnHerakleionMenu.onClick.AddListener(() => ShowHerakleionMenu());
+            btnAthensMenu.onClick.AddListener(ShowAthensMenu);
+            btnNafpaktosMenu.onClick.AddListener(ShowNafpaktosMenu);
+            btnHerakleionMenu.onClick.AddListener(ShowHerakleionMenu);
 
-            btnLanguage.onClick.AddListener(() => ChangeLanguage());
+            btnLanguage.onClick.AddListener(ChangeLanguage);
 
-            arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
+            //arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
 
             menuPanel.SetActive(false);
             panelTopBarTransition.HidePanel();
@@ -493,12 +494,21 @@ namespace ARPolis.UI
             panelSideMenuTransition.HidePanel();
             btnCloseSideMenuBehind.gameObject.SetActive(false);
             AppManager.Instance.isSideMenuOpen = false;
-            StartCoroutine(DelayShowButtons(extraCreditsButtons, false));
-            arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
+            //StartCoroutine(DelayShowButtons(extraCreditsButtons, false));
+            //arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
         }
 
-        void ToggleExtraButtonsCredits()
+        void ShowPrivacy()
         {
+            if (Application.isEditor) Debug.Log("Show Privacy");
+        }
+
+        void ShowAppInfo()
+        {
+            if (Application.isEditor) Debug.Log("Show App Info");
+
+            #region not in use
+            /*
             foreach (GameObject gb in extraCreditsButtons) gb.SetActive(false);
 
             if (!creditsExtraButtonsPanel.activeSelf)
@@ -512,8 +522,12 @@ namespace ARPolis.UI
                 StartCoroutine(DelayShowButtons(extraCreditsButtons, false));
                 arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
             }
+            */
+            #endregion
         }
 
+        #region not in use
+        /*
         IEnumerator DelayShowButtons(GameObject[] buttons, bool isOn)
         {
             foreach (GameObject gb in extraCreditsButtons)
@@ -524,6 +538,8 @@ namespace ARPolis.UI
             creditsExtraButtonsPanel.SetActive(isOn);
             yield break;
         }
+        */
+        #endregion
 
         public void ToggleSideMenu()
         {
@@ -567,8 +583,8 @@ namespace ARPolis.UI
                 panelSideMenuTransition.HidePanel();
                 btnCloseSideMenuBehind.gameObject.SetActive(false);
                 AppManager.Instance.isSideMenuOpen = false;
-                StartCoroutine(DelayShowButtons(extraCreditsButtons, false));
-                arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
+               // StartCoroutine(DelayShowButtons(extraCreditsButtons, false));
+                //arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
             }
             else
             {
