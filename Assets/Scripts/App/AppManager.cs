@@ -22,11 +22,15 @@ namespace ARPolis
         public NavigationMode navigationMode = NavigationMode.NULL;
 
         public bool IsGpsNotInUse() { return navigationMode == NavigationMode.NULL || navigationMode == NavigationMode.OFF_SITE; }
+        public bool IsGpsInUse() { return navigationMode == NavigationMode.ON_SITE || navigationMode == NavigationMode.ON_SITE_AR; }
 
         public enum NavigationAbilities { NULL, AR }
         public NavigationAbilities navigationAbilities = NavigationAbilities.NULL;
 
         public bool isSideMenuOpen, isUserPrefersOffSiteMode;
+        [Space]
+        public bool AllowPlaceClickWhileOnSite = true;
+
 
         public delegate void AppAction();
         public static AppAction OnInit, OnExit, OnMessage;
@@ -54,6 +58,7 @@ namespace ARPolis
             UserPlacesManager.Instance.Init();
 
             GlobalActionsUI.OnShowMenuAreas += SetModeMenu;
+            GlobalActionsUI.OnShowMenuAreasFromTopic += SetModeMenuFromTopics;
 
             ARManager.Instance.OnCheckFinished += OnDeviceCapabilitiesCheckFinished;
         }
@@ -72,13 +77,20 @@ namespace ARPolis
             SetMode(AppState.AREA_SELECTION);
 
             //check device capabilities
-            if (areaEntrances == 0) CheckDeviceCapabilities();
+            CheckDeviceCapabilities();
 
+            areaEntrances++;
+        }
+
+        void SetModeMenuFromTopics()
+        {
+            SetMode(AppState.AREA_SELECTION);
             areaEntrances++;
         }
 
         void CheckDeviceCapabilities()
         {
+            Debug.Log("CheckDeviceCapabilities");
             OnSiteManager.Instance.CheckUserDistance();
             ARManager.Instance.CheckARsupport(0f);
         }
@@ -89,6 +101,11 @@ namespace ARPolis
             {
                 AppSettings.Instance.CheckDropDownNavigation(0);// calls >> SetNavigationMode(NavigationMode.OFF_SITE);
                 MessagesManager.Instance.ShowMessageGpsOff();
+            }
+            else if (OnSiteManager.Instance.siteMode == OnSiteManager.SiteMode.FAR)
+            {
+                AppSettings.Instance.CheckDropDownNavigation(0);// calls >> SetNavigationMode(NavigationMode.OFF_SITE);
+                MessagesManager.Instance.ShowMessageGpsFar();
             }
             else
             {

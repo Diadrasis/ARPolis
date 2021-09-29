@@ -106,16 +106,6 @@ namespace ARPolis.Map
                 this.enabled = false;
                 yield break;
             }
-
-
-            //if (B.isMobileHaveGyro) { Input.gyro.enabled = true; }
-
-            //if (!OnlineMapsLocationService.instance.IsLocationServiceRunning())
-            //{
-            //    if (Application.isEditor) Debug.Log("GPS OFF");
-            //    OnGpsOff?.Invoke();
-            //    siteMode = SiteMode.OFF;
-            //}
             OnlineMapsLocationService.instance.OnLocationInited += OnLocationInited;
             OnlineMapsLocationService.instance.OnLocationChanged += OnGpsLocationChanged;
             OnlineMapsLocationService.instance.OnFindLocationByIPComplete += OnFindLocationByIPComplete;
@@ -309,7 +299,7 @@ namespace ARPolis.Map
             {
                 if (!OnlineMapsLocationService.instance.useGPSEmulator)
                 {
-                    if (Application.isEditor) Debug.Log("Editor - FAR AWAY!!");
+                    if (Application.isEditor) Debug.Log("GPS - OFF!!!");
 
                     OnGpsOff?.Invoke();
                     siteMode = SiteMode.OFF;
@@ -320,13 +310,15 @@ namespace ARPolis.Map
             {
                 if (!OnlineMapsLocationService.instance.IsLocationServiceRunning())
                 {
-                    if (Application.isEditor) Debug.Log("FAR AWAY!!");
+                    if (Application.isEditor) Debug.Log("GPS - OFF!!!");
 
                     OnGpsOff?.Invoke();
                     siteMode = SiteMode.OFF;
                     return;
                 }
             }
+
+            if (Application.isEditor) Debug.Log("Editor - checking gps distance for "+ userPosition);
 
             //0 = far
             //1 = Nafpaktos mountain
@@ -374,7 +366,9 @@ namespace ARPolis.Map
                 isNear = 5;
             }
 
-            //if (B.isRealEditor) Debug.Log("dist = " + dist);
+            if (Application.isEditor) Debug.Log("herakleionCheckPoint = " + herakleionCheckPoint);
+            if (Application.isEditor) Debug.Log("dist = " + dist);
+            if (Application.isEditor) Debug.Log("Near = " + isNear);
 
             //if distance is more than max km
             if (dist > maxKmDistanceForOnSiteMode)

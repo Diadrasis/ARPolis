@@ -98,7 +98,7 @@ namespace ARPolis.UI
 
         void OnInfoPoiShowCheckSaveState()
         {
-            if(Application.isEditor) Debug.Log("OnInfoPoiShowCheckSaveState");
+            //if(Application.isEditor) Debug.Log("OnInfoPoiShowCheckSaveState");
             if (AppManager.Instance.navigationMode == AppManager.NavigationMode.ON_SITE_AR) return;
             //if (ARManager.Instance.IsAR_Enabled) return;
             if (UserPlacesManager.Instance.IsThisPoiSaved(InfoManager.Instance.poiNowID))
@@ -116,7 +116,7 @@ namespace ARPolis.UI
 
         public void OnInfoHideSetBottomsButtons()
         {
-            if(Application.isEditor) Debug.Log("OnInfoHideSetBottomsButtons");
+            //if(Application.isEditor) Debug.Log("OnInfoHideSetBottomsButtons");
             if (AppManager.Instance.appState != AppManager.AppState.MAP) return;
             if (ARManager.Instance.arMode == ARManager.ARMode.SUPPORTED) return;
             btnBottomBarSavePoi.interactable = false;
@@ -259,7 +259,7 @@ namespace ARPolis.UI
             btnARicon.SetActive(false);
         }
         public void SetBottomBarButtonsForPoi() {
-            if(Application.isEditor) Debug.Log("SetBottomBarButtonsForPoi");
+            //if(Application.isEditor) Debug.Log("SetBottomBarButtonsForPoi");
 
             btnBottomBarMap.gameObject.SetActive(true);
 
@@ -276,7 +276,6 @@ namespace ARPolis.UI
                 {
                     if (AppManager.Instance.navigationMode == AppManager.NavigationMode.ON_SITE_AR)//user may change this from settings
                     {
-                        if (Application.isEditor) Debug.Log("SetBottomBarButtonsForPoi AR");
                         btnBottomBarAR.gameObject.SetActive(true);
                         ARManager.Instance.EnableButtonAR(false);
                     }

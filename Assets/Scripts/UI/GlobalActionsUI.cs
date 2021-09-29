@@ -16,7 +16,7 @@ namespace ARPolis.UI
         public static ActionObjectlUI OnToggleTarget;
 
         public delegate void ActionPoi(string poiID);
-        public static ActionPoi OnPoiSelected;
+        public static ActionPoi OnPoiSelected, OnPoiSelectWithDelay;
 
         public delegate void ActionPoiData(PoiEntity poi = null);
         public static ActionPoiData OnMyPlaceSelected;
@@ -26,7 +26,7 @@ namespace ARPolis.UI
 
         public delegate void UIAction();
         public static UIAction OnIntroStart, OnIntroFinished, 
-                               OnShowMenuAreas, OnHideMenuAreas,
+                               OnShowMenuAreas, OnShowMenuAreasFromTopic, OnHideMenuAreas,
                                OnShowAreaTopics, OnHideAreaTopics, 
                                OnShowTopicTours, OnHideTopicTours,
                                OnTourItemPageChanged,

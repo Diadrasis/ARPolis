@@ -33,6 +33,8 @@ namespace ARPolis.UI
         void LoginShow()
         {
             GlobalActionsUI.OnLoginShow?.Invoke();
+            //fix bug on start where some texts not translated correctly
+            GlobalActionsUI.OnLangChanged?.Invoke();
         }
     }
 

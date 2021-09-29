@@ -71,8 +71,8 @@ namespace ARPolis.UI
 
         private void OnMyPlaceSelected(PoiEntity poi)
         {
-            if (poi == null || !poi.Exists()) return;
-            //poiEntityNow = poi;
+            poiEntityNow = poi;
+            if (poiEntityNow == null || !poiEntityNow.Exists()) return;
 
             ChangePanelColor(poi.topicID);
 
@@ -105,6 +105,7 @@ namespace ARPolis.UI
             InfoManager.Instance.poiNowID = poi.id;
 
             GlobalActionsUI.OnInfoPoiShow?.Invoke();//check saved status
+            GlobalActionsUI.OnPoiSelectWithDelay?.Invoke(poi.id);
         }
 
         private void OnSelectPoi(string poiID)
@@ -146,8 +147,6 @@ namespace ARPolis.UI
             InfoManager.Instance.poiNowID = poiID;
 
             GlobalActionsUI.OnInfoPoiShow?.Invoke();//check saved status
-
-
         }
 
         void CreateImages()
@@ -192,9 +191,9 @@ namespace ARPolis.UI
             }
 
             //if it is the same topic, no need to destroy
-            if (poiEntityNow.id == InfoManager.Instance.poiNowID)
+            if (poiEntityNow != null && poiEntityNow.id == InfoManager.Instance.poiNowID)
             {
-                if (B.isEditor) Debug.Log("same poi selected - keeping items");
+                if (Application.isEditor) Debug.Log("same poi selected - keeping items");
                 return false;
             }
             ImageItem[] items = rectImagesContainer.GetComponentsInChildren<ImageItem>(true);

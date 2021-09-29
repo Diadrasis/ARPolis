@@ -37,6 +37,14 @@ namespace ARPolis
 
         void ShowPoiInfo()
         {
+            if (AppManager.Instance.IsGpsInUse())
+            {
+                if (!AppManager.Instance.AllowPlaceClickWhileOnSite)
+                {
+                    Debug.Log("[AppManager] AllowPlaceClickWhileOnSite = false");
+                    return;
+                }
+            }
             GlobalActionsUI.OnMyPlaceSelected?.Invoke(poi);
         }
 

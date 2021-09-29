@@ -96,10 +96,15 @@ namespace ARPolis
         {
             Debug.Log("CheckOptions");
             var toggles = dropDownNavigation.GetComponentsInChildren<Toggle>(true);
+            Toggle onsiteToggle = toggles.ToList().Find(b => b.name.StartsWith("Item 1"));
+            if (onsiteToggle)
+            {
+                onsiteToggle.interactable = OnSiteManager.Instance.siteMode == OnSiteManager.SiteMode.NEAR;
+            }
             Toggle arToggle = toggles.ToList().Find(b => b.name.StartsWith("Item 2"));
             if (arToggle)
             {
-                arToggle.interactable = ARManager.Instance.arMode == ARManager.ARMode.SUPPORTED;
+                arToggle.interactable = ARManager.Instance.arMode == ARManager.ARMode.SUPPORTED && OnSiteManager.Instance.siteMode == OnSiteManager.SiteMode.NEAR;
             }
         }
 

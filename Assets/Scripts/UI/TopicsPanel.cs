@@ -158,7 +158,7 @@ namespace ARPolis.UI
         {
             if (AppManager.Instance.isSideMenuOpen)  return;
 
-            GlobalActionsUI.OnShowMenuAreas?.Invoke();
+            GlobalActionsUI.OnShowMenuAreasFromTopic?.Invoke();
             HideTopicsPanel();
         }
 

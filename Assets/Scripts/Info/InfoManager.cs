@@ -182,10 +182,10 @@ namespace ARPolis.Data
             areaAthens.infoEN.name = "Athens";
             areaAthens.infoGR.desc = "Ανακαλύψτε τις ιστορίες της Αθήνας μέσα απο διαφορετικές θεματικές ενότητες.";
             areaAthens.infoEN.desc = "Discover the stories of Athens through different thematic units.";
-            string folderDataAthens = Path.Combine(StaticData.folderJsons, StaticData.folderAthens); Debug.Log("topicsAthens = " + folderDataAthens);
+            string folderDataAthens = Path.Combine(StaticData.folderJsons, StaticData.folderAthens); 
 
             #region get topics
-            string topicsAthens = Path.Combine(folderDataAthens, StaticData.jsonTopicsFileURL); Debug.Log("topicsAthens = "+ topicsAthens);
+            string topicsAthens = Path.Combine(folderDataAthens, StaticData.jsonTopicsFileURL);
             areaAthens.jsonClassTopics = new List<JsonClassTopic>();
             if (jsonFolder == LoadJsonFolder.RESOURCES)
             {
@@ -221,7 +221,6 @@ namespace ARPolis.Data
                 {
                     //topic folder url
                     string topicFolder = folderDataAthens + StaticData.FolderTopic(areaAthens.topics[i].id); 
-                    if(Application.isEditor) Debug.Log(i+" - topicFolder = "+topicFolder);
 
                     #region get tours 
                     //tours file url
@@ -239,16 +238,12 @@ namespace ARPolis.Data
                         topicToursFolder = Path.Combine(Application.streamingAssetsPath, topicToursFolder);
                         topicToursFolder += ".json";
 
-                        if(Application.isEditor) Debug.Log(areaAthens.topics[i].id + " - "+topicToursFolder);
-
                         CoroutineWithData cd = new CoroutineWithData(this, StaticData.LoadJsonData<JsonClassTour>(topicToursFolder));
                         yield return cd.Coroutine;
                         if (cd.result == null) { Debug.LogWarning("Error reading " + topicToursFolder); }
                         else
                         {
                             areaAthens.topics[i].jsonClassTours = cd.result as List<JsonClassTour>;
-                            if (Application.isEditor) Debug.Log(areaAthens.topics[i].jsonClassTours.Count);
-                            //areaAthens.topics[i].InitTours();
                         }
                     }
 
@@ -276,9 +271,7 @@ namespace ARPolis.Data
                         if (cd.result == null) { Debug.LogWarning("Error reading " + topicPoisFile); }
                         else
                         {
-                            if (Application.isEditor) Debug.Log(topicPoisFile);
                             areaAthens.topics[i].jsonClassPois = cd.result as List<JsonClassPoi>;
-                            if (Application.isEditor) Debug.Log(areaAthens.topics[i].jsonClassPois.Count);
                         }
                     }
 

@@ -59,6 +59,7 @@ namespace ARPolis.UI
         private void OnEnable()
         {
             GlobalActionsUI.OnPoiSelected += OnPoiSelected;
+            GlobalActionsUI.OnPoiSelectWithDelay += OnPoiSelected;
             GlobalActionsUI.OnResetMarkersLabel += ShowLabel;
             OnlineMaps.instance.OnChangeZoom += OnMapChangeZoom;
             if (btn) btn.onClick.AddListener(SelectPoi);
@@ -68,6 +69,7 @@ namespace ARPolis.UI
         private void OnDisable()
         {
             GlobalActionsUI.OnPoiSelected -= OnPoiSelected;
+            GlobalActionsUI.OnPoiSelectWithDelay -= OnPoiSelected;
             GlobalActionsUI.OnResetMarkersLabel -= ShowLabel;
             if(OnlineMaps.instance != null) OnlineMaps.instance.OnChangeZoom -= OnMapChangeZoom;
             if (btn) btn.onClick.RemoveAllListeners();

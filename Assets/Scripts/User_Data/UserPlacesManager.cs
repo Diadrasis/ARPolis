@@ -7,7 +7,6 @@ using UnityEngine;
 
 namespace ARPolis
 {
-
     public class UserPlacesManager : Singleton<UserPlacesManager>
     {
         protected UserPlacesManager() { }
@@ -26,7 +25,6 @@ namespace ARPolis
         public void Init()
         {
             //just create an instance
-
             if (Application.isEditor) Debug.LogWarning("[UserPlacesManager] Init");
         }
 
@@ -43,10 +41,7 @@ namespace ARPolis
             MenuPanel.Instance.CreateListOnUI(userPlaces);
         }
 
-        void OnLogoutUser()
-        {
-            ClearMyPlaces();
-        }
+        void OnLogoutUser() { ClearMyPlaces(); }
 
         private void ClearMyPlaces()
         {

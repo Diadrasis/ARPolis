@@ -50,7 +50,7 @@ namespace ARPolis
             //OnSiteManager.OnGpsOn += GpsIsOn;
             //OnSiteManager.OnGpsFar += GpsIsFar;
             //OnSiteManager.OnGpsClose += GpsIsNear;
-            //GlobalActionsUI.OnShowMenuAreas += ShowGpsMessageOnIntro;
+           // GlobalActionsUI.OnShowMenuAreas += ShowGpsMessageOnIntro;
             MenuPanel.OnUserClickOnSiteModeNotAble += ShowGpsMessageOnUser;
             MenuPanel.OnQuitApp += ShowQuitAppWarning;
 
@@ -192,7 +192,7 @@ namespace ARPolis
             ShowPanel();
         }
 
-        void ShowMessageGpsFar()
+        public void ShowMessageGpsFar()
         {
             panelMessage.SetActive(true);
             AppManager.Instance.stateMessage = AppManager.AppState.MESSAGE;
