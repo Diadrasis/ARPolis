@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4190530202581566821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4190530202581566820}
+  - component: {fileID: 4190530202581566827}
+  m_Layer: 0
+  m_Name: HelpController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4190530202581566820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4190530202581566821}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4190530202581566827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4190530202581566821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c37385b88a11034eaabeaeba9ad6c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPanel: {fileID: 0}
+  btnCloseHelp: {fileID: 0}
+  pageViewTime: 2.75
+  greekPages:
+  - {fileID: 2800000, guid: 75998a333835f804792c444e53a78283, type: 3}
+  - {fileID: 2800000, guid: d23cdfb8e4c40604382bd64971a3ccde, type: 3}
+  - {fileID: 2800000, guid: f336e30f39a9a80468facdac6cbb1fb0, type: 3}
+  - {fileID: 2800000, guid: e1e2ecb0a2a7d1b42acc5cbd2c14f1b6, type: 3}
+  - {fileID: 2800000, guid: ab9bfe1f9ec85d747a5d25bbe94ffb7c, type: 3}
+  - {fileID: 2800000, guid: 5ca1d41c41485f34b8d8373364eb7dfc, type: 3}
+  - {fileID: 2800000, guid: 27f5194b8bfa05844a5deb9debe9dc58, type: 3}
+  - {fileID: 2800000, guid: 68f253dc02d063c43b2ecc3933987a12, type: 3}
+  - {fileID: 2800000, guid: d2c35845d23d9254d9b0ccdad71b64f6, type: 3}
+  engPages:
+  - {fileID: 2800000, guid: f97e06233cafda44897d72b4279481f8, type: 3}
+  - {fileID: 2800000, guid: fd095d275f61c014f94d846b74e0d4d6, type: 3}
+  - {fileID: 2800000, guid: c74867a149d17f7419333b12519de2fa, type: 3}
+  - {fileID: 2800000, guid: f0aab8a529500064593b7edcc010eb7b, type: 3}
+  - {fileID: 2800000, guid: 7fe231ebeb8e58d41aa27693ca97e743, type: 3}
+  - {fileID: 2800000, guid: 73b43dc6d5eeb7643ac95ade73a5dadb, type: 3}
+  - {fileID: 2800000, guid: 70c0bee850d03cc47b64115a5b956ebe, type: 3}
+  - {fileID: 2800000, guid: 41939ea368916a84797bb76276ae5cd6, type: 3}
+  - {fileID: 2800000, guid: 39f95155bacf9b64496ec1e99ebd57d4, type: 3}
+  animPages: []
+  rawImages: []
+  currentPage: 0
