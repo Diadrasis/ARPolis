@@ -4,7 +4,7 @@
   </a>
   <br />
   
-  Privacy Policy
+ ## Privacy Policy
   
  ARPOLIS Copyright (C) 2020 DIADRASIS LADAS I & CO GP
 
