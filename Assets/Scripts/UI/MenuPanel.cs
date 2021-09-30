@@ -27,7 +27,7 @@ namespace ARPolis.UI
 
         public Button btnToggleSite, btnToggleSideMenu, btnCloseSideMenuBehind, btnReturnMode,
                       btnQuitApp, btnInfo, btnAthensMenu, btnNafpaktosMenu, btnHerakleionMenu,
-                      btnLanguage, btnGamification, btnShowMapPois, btnInstructions, btnPrivacy;
+                      btnLanguage, btnGamification, btnShowMapPois, btnInstructions, btnEula;
 
         public Image iconBtnLanguage, iconBtnMenu;
 
@@ -59,8 +59,8 @@ namespace ARPolis.UI
         public Animator animPanelInfo;
         public Button btnCloseAppInfo;
 
-        [Header("Panel Privacy Policy")]
-        public GameObject panelPrivacy;
+        [Header("Panel EULA")]
+        public GameObject panelEula;
 
 
         [Space]
@@ -200,7 +200,7 @@ namespace ARPolis.UI
             btnReturnMode.onClick.AddListener(UserReturn);
             btnCloseSideMenuBehind.onClick.AddListener(UserReturn);
             btnInfo.onClick.AddListener(ShowAppInfo);
-            btnPrivacy.onClick.AddListener(ShowPrivacy);
+            btnEula.onClick.AddListener(ShowEula);
             btnQuitApp.onClick.AddListener(QuitApp);
 
             btnAthensMenu.onClick.AddListener(ShowAthensMenu);
@@ -514,10 +514,10 @@ namespace ARPolis.UI
             //arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
         }
 
-        void ShowPrivacy()
+        void ShowEula()
         {
-            if (Application.isEditor) Debug.Log("Show Privacy");
-            panelPrivacy.SetActive(true);
+            if (Application.isEditor) Debug.Log("Show EULA");
+            panelEula.SetActive(true);
         }
                
 

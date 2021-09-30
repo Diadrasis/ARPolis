@@ -1,5 +1,12 @@
 <terms version="2.1">
   <term>
+    <name>eula</name>
+    <value>
+      <gr><![CDATA[Άδεια Χρήσης]]></gr>
+      <en><![CDATA[EULA]]></en>
+    </value>
+  </term>
+  <term>
     <name>privacy</name>
     <value>
       <gr><![CDATA[Πολιτική Απορρήτου]]></gr>
