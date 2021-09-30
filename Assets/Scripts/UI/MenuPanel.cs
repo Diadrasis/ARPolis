@@ -15,6 +15,9 @@ namespace ARPolis.UI
     {
         protected MenuPanel() { }
 
+        [Space]
+        public bool CitiesShowOnlyAthens = true;
+
         public Animator animMenuPanel, animMapMaskHide;
         public GameObject menuPanel, btnPrevCity, btnNextCity;//, creditsExtraButtonsPanel;
         /// <summary>
@@ -65,10 +68,109 @@ namespace ARPolis.UI
 
         [Space]
         public TMPro.TextMeshProUGUI txtAppVersion;
+       
+        private void Awake()
+        {
+            menuPanel.SetActive(true);            
+
+            txtAppVersion.text = "version: "+Application.version;
+
+            btnCreditsPeople.onClick.AddListener(ShowCreditsPeople);
+
+            btnMyPlaces.onClick.AddListener(ShowMyPlacesPanel);
+
+            btnSettings.onClick.AddListener(ShowSettings);
+
+            if (!PlayerPrefs.HasKey("Lang"))
+            {
+                if (Application.systemLanguage == SystemLanguage.English)
+                {
+                    if (StaticData.lang == "gr") ChangeLanguage();
+                }
+                else
+                {
+                    if (StaticData.lang == "en") ChangeLanguage();
+                }
+            }
+            else
+            {
+                StaticData.lang = PlayerPrefs.GetString("Lang");
+                bool isEng = StaticData.lang == "en";
+                //change icon
+                iconBtnLanguage.sprite = isEng ? sprEng : sprGR;
+            }
+
+            GlobalActionsUI.OnShowTopicTours += ShowTopicTours;
+            GlobalActionsUI.OnHideTopicTours += HideTopicTours;
+
+            GlobalActionsUI.OnShowMenuAreas += ShowMenu;
+            GlobalActionsUI.OnShowMenuAreasFromTopic += ShowMenu;
+            GlobalActionsUI.OnHideMenuAreas += HideMenu;
+            GlobalActionsUI.OnLogoutUser += LogOutUser;
+
+            GlobalActionsUI.OnHideAreaTopics += HideSideMenuIfVisible;
+            GlobalActionsUI.OnHideTopicTours += HideSideMenuIfVisible;
+
+            OnSiteManager.OnGpsOff += SetStatusOffSite;
+            OnSiteManager.OnGpsFar += SetStatusOffSite;
+            //OnSiteManager.OnGpsClose += SetStatusOnSite;
+
+            OnSiteManager.OnGpsNearAthens += OnGpsNearAthens;
+            OnSiteManager.OnGpsNearHerakleion += OnGpsNearHerakleion;
+            OnSiteManager.OnGpsNearNafpaktos += OnGpsNearNafpaktos;
+
+            btnToggleSite.onClick.AddListener(ToggleSiteMode);
+            btnToggleSideMenu.onClick.AddListener(ToggleSideMenu);
+            btnReturnMode.onClick.AddListener(UserReturn);
+            btnCloseSideMenuBehind.onClick.AddListener(UserReturn);
+            btnInfo.onClick.AddListener(ShowAppInfo);
+            btnEula.onClick.AddListener(ShowEula);
+            btnQuitApp.onClick.AddListener(QuitApp);
+
+            btnAthensMenu.onClick.AddListener(ShowAthensMenu);
+            btnNafpaktosMenu.onClick.AddListener(ShowNafpaktosMenu);
+            btnHerakleionMenu.onClick.AddListener(ShowHerakleionMenu);
+
+            btnLanguage.onClick.AddListener(ChangeLanguage);
+
+            //arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
+
+            menuPanel.SetActive(false);
+            panelTopBarTransition.HidePanel();
+
+            if (CitiesShowOnlyAthens)
+            {
+                ShowArrowSelectAreasButtons(false);
+                snapCustom.OnSelectionChangeEndEvent.RemoveAllListeners();
+                snapCustom.NextButton = null;
+                snapCustom.PrevButton = null;
+                btnNextCity.gameObject.SetActive(false);
+                btnPrevCity.gameObject.SetActive(false);
+                btnNafpaktosMenu.gameObject.SetActive(false);
+                btnHerakleionMenu.gameObject.SetActive(false);
+            }
+            else
+            {
+                snapCustom.OnSelectionPageChangedEvent.AddListener(OnPageChangeEnd);
+            }
+
+
+            btnShowMapPois.onClick.AddListener(HidePoiInfo);
+
+            GlobalActionsUI.OnMyPlaceSelected += OnMyPlaceSelected;
+            GlobalActionsUI.OnInfoPoiShow += OnInfoPoiShowCheckSaveState;
+
+            GlobalActionsUI.OnLangChanged += SetLanguageButtonIcon;
+            SetLanguageButtonIcon();
+
+            btnInstructions.onClick.AddListener(ShowInstructions);
+            btnCloseAppInfo.onClick.AddListener(HideAppInfo);
+
+        }
 
         public void CreateListOnUI(List<UserPlaceItem> userPlaces)
         {
-            foreach(UserPlaceItem item in userPlaces)
+            foreach (UserPlaceItem item in userPlaces)
             {
                 Transform pl = Instantiate(myPlacePrefab, myPlacesContainer);
                 MyPlaceButton placeButton = pl.GetComponent<MyPlaceButton>();
@@ -144,91 +246,6 @@ namespace ARPolis.UI
 
         void ShowTopicTours() { SetBottomBarButtonsForTour(); panelBottomBarTour.ShowPanel(); }
         void HideTopicTours() { panelBottomBarTour.HidePanel(); }
-
-        private void Awake()
-        {
-            menuPanel.SetActive(true);
-
-            txtAppVersion.text = "version: "+Application.version;
-
-            btnCreditsPeople.onClick.AddListener(ShowCreditsPeople);
-
-            btnMyPlaces.onClick.AddListener(ShowMyPlacesPanel);
-
-            btnSettings.onClick.AddListener(ShowSettings);
-
-            if (!PlayerPrefs.HasKey("Lang"))
-            {
-                if (Application.systemLanguage == SystemLanguage.English)
-                {
-                    if (StaticData.lang == "gr") ChangeLanguage();
-                }
-                else
-                {
-                    if (StaticData.lang == "en") ChangeLanguage();
-                }
-            }
-            else
-            {
-                StaticData.lang = PlayerPrefs.GetString("Lang");
-                bool isEng = StaticData.lang == "en";
-                //change icon
-                iconBtnLanguage.sprite = isEng ? sprEng : sprGR;
-            }
-
-            GlobalActionsUI.OnShowTopicTours += ShowTopicTours;
-            GlobalActionsUI.OnHideTopicTours += HideTopicTours;
-
-            GlobalActionsUI.OnShowMenuAreas += ShowMenu;
-            GlobalActionsUI.OnShowMenuAreasFromTopic += ShowMenu;
-            GlobalActionsUI.OnHideMenuAreas += HideMenu;
-            GlobalActionsUI.OnLogoutUser += LogOutUser;
-
-            GlobalActionsUI.OnHideAreaTopics += HideSideMenuIfVisible;
-            GlobalActionsUI.OnHideTopicTours += HideSideMenuIfVisible;
-
-            OnSiteManager.OnGpsOff += SetStatusOffSite;
-            OnSiteManager.OnGpsFar += SetStatusOffSite;
-            //OnSiteManager.OnGpsClose += SetStatusOnSite;
-
-            OnSiteManager.OnGpsNearAthens += OnGpsNearAthens;
-            OnSiteManager.OnGpsNearHerakleion += OnGpsNearHerakleion;
-            OnSiteManager.OnGpsNearNafpaktos += OnGpsNearNafpaktos;
-
-            btnToggleSite.onClick.AddListener(ToggleSiteMode);
-            btnToggleSideMenu.onClick.AddListener(ToggleSideMenu);
-            btnReturnMode.onClick.AddListener(UserReturn);
-            btnCloseSideMenuBehind.onClick.AddListener(UserReturn);
-            btnInfo.onClick.AddListener(ShowAppInfo);
-            btnEula.onClick.AddListener(ShowEula);
-            btnQuitApp.onClick.AddListener(QuitApp);
-
-            btnAthensMenu.onClick.AddListener(ShowAthensMenu);
-            btnNafpaktosMenu.onClick.AddListener(ShowNafpaktosMenu);
-            btnHerakleionMenu.onClick.AddListener(ShowHerakleionMenu);
-
-            btnLanguage.onClick.AddListener(ChangeLanguage);
-
-            //arrowCredits.localEulerAngles = new Vector3(0f, 0f, -90f);
-
-            menuPanel.SetActive(false);
-            panelTopBarTransition.HidePanel();
-
-            snapCustom.OnSelectionPageChangedEvent.AddListener(OnPageChangeEnd);
-
-
-            btnShowMapPois.onClick.AddListener(HidePoiInfo);
-
-            GlobalActionsUI.OnMyPlaceSelected += OnMyPlaceSelected;
-            GlobalActionsUI.OnInfoPoiShow += OnInfoPoiShowCheckSaveState;
-
-            GlobalActionsUI.OnLangChanged += SetLanguageButtonIcon;
-            SetLanguageButtonIcon();
-
-            btnInstructions.onClick.AddListener(ShowInstructions);
-            btnCloseAppInfo.onClick.AddListener(HideAppInfo);
-
-        }
 
         void UserReturn()
         {
@@ -657,16 +674,18 @@ namespace ARPolis.UI
             }
         }
 
+
         public void ShowArrowSelectAreasButtons(bool val)
         {
+            if (CitiesShowOnlyAthens) return;
             scrollRect.enabled = val;
             snapCustom.Init();
             //snapCustom.SetFirstPage();
             snapCustom.enabled = val;
             if (val == false)
             {
-                btnNextCity.SetActive(val);
-                btnPrevCity.SetActive(val);
+                btnNextCity.SetActive(false);
+                btnPrevCity.SetActive(false);
             }
         }
 
