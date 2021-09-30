@@ -59,6 +59,13 @@ namespace ARPolis.UI
         public Animator animPanelInfo;
         public Button btnCloseAppInfo;
 
+        [Header("Panel Privacy Policy")]
+        public GameObject panelPrivacy;
+
+
+        [Space]
+        public TMPro.TextMeshProUGUI txtAppVersion;
+
         public void CreateListOnUI(List<UserPlaceItem> userPlaces)
         {
             foreach(UserPlaceItem item in userPlaces)
@@ -141,6 +148,8 @@ namespace ARPolis.UI
         private void Awake()
         {
             menuPanel.SetActive(true);
+
+            txtAppVersion.text = "version: "+Application.version;
 
             btnCreditsPeople.onClick.AddListener(ShowCreditsPeople);
 
@@ -508,6 +517,7 @@ namespace ARPolis.UI
         void ShowPrivacy()
         {
             if (Application.isEditor) Debug.Log("Show Privacy");
+            panelPrivacy.SetActive(true);
         }
                
 

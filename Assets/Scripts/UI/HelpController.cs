@@ -30,10 +30,45 @@ namespace ARPolis
         [SerializeField]
         int currentPage = 0;
 
-
-
         private void Awake()
         {
+            #region Find UI elements
+            if (myPanel == null)
+            {
+                GameObject canv = GameObject.Find("Canvas");
+                if (canv)
+                {
+                    myPanel = canv.transform.Find("HelpPanel");
+                    if (myPanel)
+                    {
+                        if(btnCloseHelp == null)
+                        {
+                            Transform btn = myPanel.transform.Find("btnClose");
+                            if (btn)
+                            {
+                                btnCloseHelp = btn.GetComponent<Button>();
+                            }
+                            else
+                            {
+                                Debug.LogError("[HelpController] Error: missing UI elements!");
+                                return;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError("[HelpController] Error: missing UI elements!");
+                        return;
+                    }
+                }
+                else
+                {
+                    Debug.LogError("[HelpController] Error: missing UI elements!");
+                    return;
+                }
+            }
+            #endregion
+
             if (myPanel) animPages = myPanel.GetComponentsInChildren<Animator>(true).ToList();
             if (animPages.Count > 0)
             {
