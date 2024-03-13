@@ -86,12 +86,12 @@ namespace ARPolis
 
             OnLangChanged();
 
-            if (Application.isEditor)
-            {
-                CheckForErrors();
-            }
+#if UNITY_EDITOR
+            CheckForErrors();
+#endif
         }
 
+#if UNITY_EDITOR
         void CheckForErrors()
         {
             if (greekPages.Length != engPages.Length)
@@ -105,6 +105,7 @@ namespace ARPolis
                 UnityEditor.EditorApplication.isPlaying = false;
             }
         }
+#endif
 
         void OnLangChanged()
         {
